@@ -30,8 +30,7 @@
 #include <QtCore/QPointer>
 #include <QtCore/QString>
 
-struct KFind::Private
-{
+struct KFind::Private {
     Private(KFind *q)
         : q(q)
         , findDialog(0)
@@ -45,24 +44,27 @@ struct KFind::Private
 
     ~Private()
     {
-        if (dialog)
+        if (dialog) {
             dialog->deleteLater();
+        }
         dialog = 0;
         data.clear();
         delete emptyMatch;
         emptyMatch = 0;
     }
 
-    struct Match
-    {
+    struct Match {
         Match() : dataId(-1), index(-1), matchedLength(-1) {}
-        bool isNull() const { return index == -1; }
-        Match(int _dataId, int _index, int _matchedLength) :
-          dataId(_dataId),
-          index(_index),
-          matchedLength(_matchedLength)
+        bool isNull() const
         {
-            Q_ASSERT( index != -1 );
+            return index == -1;
+        }
+        Match(int _dataId, int _index, int _matchedLength) :
+            dataId(_dataId),
+            index(_index),
+            matchedLength(_matchedLength)
+        {
+            Q_ASSERT(index != -1);
         }
 
         int dataId;
@@ -70,13 +72,12 @@ struct KFind::Private
         int matchedLength;
     };
 
-    struct Data
-    {
+    struct Data {
         Data() : id(-1), dirty(false) { }
         Data(int id, const QString &text, bool dirty = false) :
-          id(id),
-          text(text),
-          dirty(dirty)
+            id(id),
+            text(text),
+            dirty(dirty)
         { }
 
         int     id;
@@ -84,7 +85,7 @@ struct KFind::Private
         bool    dirty;
     };
 
-    void init( const QString& pattern );
+    void init(const QString &pattern);
     void startNewIncrementalSearch();
 
     void _k_slotFindNext();
@@ -96,13 +97,13 @@ struct KFind::Private
     bool                  customIds : 1;
     bool                  patternChanged : 1;
     QString               matchedPattern;
-    QHash<QString,Match>  incrementalPath;
-    Match *               emptyMatch;
+    QHash<QString, Match>  incrementalPath;
+    Match                *emptyMatch;
     QList<Data>           data; // used like a vector, not like a linked-list
 
     QString pattern;
     QRegExp *regExp;
-    QDialog* dialog;
+    QDialog *dialog;
     long options;
     unsigned matches;
 

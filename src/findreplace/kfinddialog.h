@@ -83,7 +83,6 @@ class KTEXTWIDGETS_EXPORT KFindDialog : public QDialog
 
 public:
 
-
     /**
      * Construct a modal find dialog
      *
@@ -92,8 +91,8 @@ public:
      * @param findStrings The find history, see findHistory()
      * @param hasSelection Whether a selection exists
      */
-    explicit KFindDialog( QWidget *parent = 0, long options = 0,
-                 const QStringList &findStrings = QStringList(), bool hasSelection = false, bool replaceDialog = false );
+    explicit KFindDialog(QWidget *parent = 0, long options = 0,
+                         const QStringList &findStrings = QStringList(), bool hasSelection = false, bool replaceDialog = false);
 
     /**
      * Destructor.
@@ -108,7 +107,7 @@ public:
      * @param history The find history.
      * @see findHistory
      */
-    void setFindHistory( const QStringList &history );
+    void setFindHistory(const QStringList &history);
 
     /**
      * Returns the list of history items.
@@ -123,7 +122,7 @@ public:
      *
      * @param hasSelection true if a selection exists
      */
-    void setHasSelection( bool hasSelection );
+    void setHasSelection(bool hasSelection);
 
     /**
      * Hide/show the 'from cursor' option, depending
@@ -132,43 +131,43 @@ public:
      * @param hasCursor true if the application features a cursor
      * This is assumed to be the case by default.
      */
-    void setHasCursor( bool hasCursor );
+    void setHasCursor(bool hasCursor);
 
-     /**
-     * Enable/disable the 'Find backwards' option, depending
-     * on whether the application supports it.
-     *
-     * @param supports true if the application supports backwards find
-     * This is assumed to be the case by default.
-     */
-    void setSupportsBackwardsFind( bool supports );
+    /**
+    * Enable/disable the 'Find backwards' option, depending
+    * on whether the application supports it.
+    *
+    * @param supports true if the application supports backwards find
+    * This is assumed to be the case by default.
+    */
+    void setSupportsBackwardsFind(bool supports);
 
-     /**
-     * Enable/disable the 'Case sensitive' option, depending
-     * on whether the application supports it.
-     *
-     * @param supports true if the application supports case sensitive find
-     * This is assumed to be the case by default.
-     */
-    void setSupportsCaseSensitiveFind( bool supports );
+    /**
+    * Enable/disable the 'Case sensitive' option, depending
+    * on whether the application supports it.
+    *
+    * @param supports true if the application supports case sensitive find
+    * This is assumed to be the case by default.
+    */
+    void setSupportsCaseSensitiveFind(bool supports);
 
-     /**
-     * Enable/disable the 'Whole words only' option, depending
-     * on whether the application supports it.
-     *
-     * @param supports true if the application supports whole words only find
-     * This is assumed to be the case by default.
-     */
-    void setSupportsWholeWordsFind( bool supports );
+    /**
+    * Enable/disable the 'Whole words only' option, depending
+    * on whether the application supports it.
+    *
+    * @param supports true if the application supports whole words only find
+    * This is assumed to be the case by default.
+    */
+    void setSupportsWholeWordsFind(bool supports);
 
-     /**
-     * Enable/disable the 'Regular expression' option, depending
-     * on whether the application supports it.
-     *
-     * @param supports true if the application supports regular expression find
-     * This is assumed to be the case by default.
-     */
-    void setSupportsRegularExpressionFind( bool supports );
+    /**
+    * Enable/disable the 'Regular expression' option, depending
+    * on whether the application supports it.
+    *
+    * @param supports true if the application supports regular expression find
+    * This is assumed to be the case by default.
+    */
+    void setSupportsRegularExpressionFind(bool supports);
 
     /**
      * Set the options which are checked.
@@ -178,7 +177,7 @@ public:
      * @see options()
      * @see KFind::Options
      */
-    void setOptions( long options );
+    void setOptions(long options);
 
     /**
      * Returns the state of the options. Disabled options may be returned in
@@ -197,7 +196,7 @@ public:
     /**
      * Sets the pattern to find
      */
-    void setPattern ( const QString &pattern );
+    void setPattern(const QString &pattern);
 
     /**
      * Returns an empty widget which the user may fill with additional UI
@@ -212,23 +211,23 @@ Q_SIGNALS:
      * This signal is sent whenever one of the option checkboxes is toggled.
      * Call options() to get the new state of the checkboxes.
      */
-     void optionsChanged();
+    void optionsChanged();
 
 protected:
-    virtual void showEvent ( QShowEvent * );
+    virtual void showEvent(QShowEvent *);
 
 private:
     friend class KReplaceDialog;
     friend class KReplaceDialogPrivate;
     class KFindDialogPrivate;
-    KFindDialogPrivate* const d;
+    KFindDialogPrivate *const d;
 
-    Q_PRIVATE_SLOT( d, void _k_slotPlaceholdersAboutToShow() )
-    Q_PRIVATE_SLOT( d, void _k_slotOk() )
-    Q_PRIVATE_SLOT( d, void _k_slotSelectedTextToggled(bool) )
-    Q_PRIVATE_SLOT( d, void _k_showPatterns() )
-    Q_PRIVATE_SLOT( d, void _k_showPlaceholders() )
-    Q_PRIVATE_SLOT( d, void _k_textSearchChanged(const QString&) )
+    Q_PRIVATE_SLOT(d, void _k_slotPlaceholdersAboutToShow())
+    Q_PRIVATE_SLOT(d, void _k_slotOk())
+    Q_PRIVATE_SLOT(d, void _k_slotSelectedTextToggled(bool))
+    Q_PRIVATE_SLOT(d, void _k_showPatterns())
+    Q_PRIVATE_SLOT(d, void _k_showPlaceholders())
+    Q_PRIVATE_SLOT(d, void _k_textSearchChanged(const QString &))
 };
 
 #endif // KFINDDIALOG_H

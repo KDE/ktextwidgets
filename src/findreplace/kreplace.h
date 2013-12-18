@@ -113,7 +113,7 @@ public:
      * appears it has the right parent. Don't worry about deletion, KReplace
      * will notice if the find dialog is closed.
      */
-    KReplace(const QString &pattern, const QString &replacement, long options, QWidget *parent, QWidget* replaceDialog);
+    KReplace(const QString &pattern, const QString &replacement, long options, QWidget *parent, QWidget *replaceDialog);
 
     virtual ~KReplace();
 
@@ -146,7 +146,7 @@ public:
      * menu item while a find operation is under way. In that case, the
      * program may want to call setActiveWindow() on that dialog.
      */
-    QDialog* replaceNextDialog( bool create = false );
+    QDialog *replaceNextDialog(bool create = false);
 
     /**
      * Close the "replace next?" dialog. The application should do this when
@@ -172,8 +172,8 @@ public:
      * Not always the same as replacement.length(), when backreferences are used.
      * @return The index at which a match was found, or -1 if no match was found.
      */
-    static int replace( QString &text, const QString &pattern, const QString &replacement, int index, long options, int *replacedLength );
-    static int replace( QString &text, const QRegExp &pattern, const QString &replacement, int index, long options, int *replacedLength );
+    static int replace(QString &text, const QString &pattern, const QString &replacement, int index, long options, int *replacedLength);
+    static int replace(QString &text, const QRegExp &pattern, const QString &replacement, int index, long options, int *replacedLength);
 
     /**
      * Returns true if we should restart the search from scratch.
@@ -189,7 +189,7 @@ public:
      * and we could even be hitting the beginning of the document (so not all
      * matches have even been seen).
      */
-    virtual bool shouldRestart( bool forceAsking = false, bool showNumMatches = true ) const;
+    virtual bool shouldRestart(bool forceAsking = false, bool showNumMatches = true) const;
 
     /**
      * Displays the final dialog telling the user how many replacements were made.
@@ -217,10 +217,10 @@ Q_SIGNALS:
 
 private:
     friend class KReplacePrivate;
-    KReplacePrivate * const d;
+    KReplacePrivate *const d;
 
-    Q_PRIVATE_SLOT( d, void _k_slotSkip() )
-    Q_PRIVATE_SLOT( d, void _k_slotReplace() )
-    Q_PRIVATE_SLOT( d, void _k_slotReplaceAll() )
+    Q_PRIVATE_SLOT(d, void _k_slotSkip())
+    Q_PRIVATE_SLOT(d, void _k_slotReplace())
+    Q_PRIVATE_SLOT(d, void _k_slotReplaceAll())
 };
 #endif

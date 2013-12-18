@@ -26,13 +26,13 @@ class KRichTextEditTest : public QObject
 {
     Q_OBJECT
 
-    private Q_SLOTS:
-        void testLinebreaks();
-        void testUpdateLinkAdd();
-        void testUpdateLinkRemove();
-	void testHTMLLineBreaks();
-	void testHTMLOrderedLists();
-	void testHTMLUnorderedLists();
+private Q_SLOTS:
+    void testLinebreaks();
+    void testUpdateLinkAdd();
+    void testUpdateLinkRemove();
+    void testHTMLLineBreaks();
+    void testHTMLOrderedLists();
+    void testHTMLUnorderedLists();
 };
 
 #endif

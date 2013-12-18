@@ -132,7 +132,7 @@ private:
     void reformatBoundingItemSpacing();
     QTextCursor topOfSelection();
     QTextCursor bottomOfSelection();
-    void processList(QTextList* list);
+    void processList(QTextList *list);
     void reformatList(QTextBlock block);
     void reformatList();
 

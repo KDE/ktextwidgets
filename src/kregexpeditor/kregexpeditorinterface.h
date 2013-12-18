@@ -95,68 +95,68 @@
 class KRegExpEditorInterface
 {
 public:
-  /**
-   * returns the regular expression of the editor in Qt3 QRegExp
-   * syntax. Note, there is also a 'regexp' Qt property available.
-   */
-  virtual QString regExp() const = 0;
+    /**
+     * returns the regular expression of the editor in Qt3 QRegExp
+     * syntax. Note, there is also a 'regexp' Qt property available.
+     */
+    virtual QString regExp() const = 0;
 
-  virtual ~KRegExpEditorInterface(){}
+    virtual ~KRegExpEditorInterface() {}
 
 protected:
 // These are Q_SIGNALS: in classes that actually implement the interface.
 
-  /**
-   * This signal tells whether undo is available.
-   */
-  virtual void canUndo( bool ) = 0;
+    /**
+     * This signal tells whether undo is available.
+     */
+    virtual void canUndo(bool) = 0;
 
-  /**
-   * This signal tells whether redo is available.
-   */
-  virtual void canRedo( bool ) = 0;
+    /**
+     * This signal tells whether redo is available.
+     */
+    virtual void canRedo(bool) = 0;
 
-  /**
-   * This signal is emitted whenever the regular expression changes.
-   * The argument is true when the regular expression is different from
-   * the loaded regular expression and false when it is equal to the
-   * loaded regular expression.
-   */
-  virtual void changes( bool ) = 0;
+    /**
+     * This signal is emitted whenever the regular expression changes.
+     * The argument is true when the regular expression is different from
+     * the loaded regular expression and false when it is equal to the
+     * loaded regular expression.
+     */
+    virtual void changes(bool) = 0;
 
 public:
 // These are public Q_SLOTS: in classes that implement the interface.
 
- /**
-  * Set the regular expression for the editor. The syntax must be Qt3
-  * QRegExp syntax.
-  */
-  virtual void setRegExp( const QString &regexp ) = 0;
-  virtual void redo() = 0;
-  virtual void undo() = 0;
+    /**
+     * Set the regular expression for the editor. The syntax must be Qt3
+     * QRegExp syntax.
+     */
+    virtual void setRegExp(const QString &regexp) = 0;
+    virtual void redo() = 0;
+    virtual void undo() = 0;
 
-  /**
-   * Set text to use when showing matches. NOT IMPLEMENTED YET!
-   *
-   * This method is not yet implemented. In later version of the widget
-   * this method will be used to give the widget a text to show matches of
-   * the regular expression on.
-   */
-  virtual void setMatchText( const QString& ) = 0;
+    /**
+     * Set text to use when showing matches. NOT IMPLEMENTED YET!
+     *
+     * This method is not yet implemented. In later version of the widget
+     * this method will be used to give the widget a text to show matches of
+     * the regular expression on.
+     */
+    virtual void setMatchText(const QString &) = 0;
 
-  /**
-   * This method allows for future changes that will not break binary
-   * compatibility. DO NOT USE!
-   *
-   * KDE has a policy of keeping binary compatibility for all major
-   * version of KDE. This means that new methods can not be added to this
-   * API before KDE version 4.0.
-   *
-   * This method is an escape door for that.
-   *
-   * Conclusion: You should not use this method in this version of KDE!
-   */
-  virtual void doSomething( QString method, void* arguments ) = 0;
+    /**
+     * This method allows for future changes that will not break binary
+     * compatibility. DO NOT USE!
+     *
+     * KDE has a policy of keeping binary compatibility for all major
+     * version of KDE. This means that new methods can not be added to this
+     * API before KDE version 4.0.
+     *
+     * This method is an escape door for that.
+     *
+     * Conclusion: You should not use this method in this version of KDE!
+     */
+    virtual void doSomething(QString method, void *arguments) = 0;
 };
 
 Q_DECLARE_INTERFACE(KRegExpEditorInterface, "org.kde.KRegExpEditorInterface/1.0")

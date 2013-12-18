@@ -29,33 +29,39 @@ class KFind;
 
 class KFindRecorder : public QObject
 {
-	Q_OBJECT
+    Q_OBJECT
 
-	public:
-		KFindRecorder(const QStringList &text) :
-		  QObject(0),
-		  m_find(0),
-		  m_text(text),
-		  m_line(0)
-		{}
+public:
+    KFindRecorder(const QStringList &text) :
+        QObject(0),
+        m_find(0),
+        m_text(text),
+        m_line(0)
+    {}
 
-		void find(const QString &pattern, long options = 0);
-		bool findNext(const QString &pattern = QString());
+    void find(const QString &pattern, long options = 0);
+    bool findNext(const QString &pattern = QString());
 
-		void changeText(int line, const QString &text);
+    void changeText(int line, const QString &text);
 
-		const QStringList &hits() const { return m_hits; }
-		void clearHits() { m_hits.clear(); }
+    const QStringList &hits() const
+    {
+        return m_hits;
+    }
+    void clearHits()
+    {
+        m_hits.clear();
+    }
 
-	public Q_SLOTS:
-		void slotHighlight(const QString &text, int index, int matchedLength);
-		void slotHighlight(int id, int index, int matchedLengthlength);
+public Q_SLOTS:
+    void slotHighlight(const QString &text, int index, int matchedLength);
+    void slotHighlight(int id, int index, int matchedLengthlength);
 
-	private:
-		KFind                 *m_find;
-		QStringList            m_text;
-		int                   m_line;
-		QStringList            m_hits;
+private:
+    KFind                 *m_find;
+    QStringList            m_text;
+    int                   m_line;
+    QStringList            m_hits;
 };
 
 class TestKFind : public QObject

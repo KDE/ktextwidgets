@@ -52,22 +52,22 @@
 class KTEXTWIDGETS_EXPORT KTextEdit : public QTextEdit //krazy:exclude=qclasses
 {
     Q_OBJECT
-    Q_PROPERTY( QString clickMessage READ clickMessage WRITE setClickMessage )
-    Q_PROPERTY( bool checkSpellingEnabled READ checkSpellingEnabled WRITE setCheckSpellingEnabled )
-    Q_PROPERTY( QString spellCheckingLanguage READ spellCheckingLanguage WRITE setSpellCheckingLanguage )
+    Q_PROPERTY(QString clickMessage READ clickMessage WRITE setClickMessage)
+    Q_PROPERTY(bool checkSpellingEnabled READ checkSpellingEnabled WRITE setCheckSpellingEnabled)
+    Q_PROPERTY(QString spellCheckingLanguage READ spellCheckingLanguage WRITE setSpellCheckingLanguage)
 
-  public:
+public:
     /**
      * Constructs a KTextEdit object. See QTextEdit::QTextEdit
      * for details.
      */
-    explicit KTextEdit( const QString& text, QWidget *parent = 0 );
+    explicit KTextEdit(const QString &text, QWidget *parent = 0);
 
     /**
      * Constructs a KTextEdit object. See QTextEdit::QTextEdit
      * for details.
      */
-    explicit KTextEdit( QWidget *parent = 0 );
+    explicit KTextEdit(QWidget *parent = 0);
 
     /**
      * Destroys the KTextEdit object.
@@ -77,7 +77,7 @@ class KTEXTWIDGETS_EXPORT KTextEdit : public QTextEdit //krazy:exclude=qclasses
     /**
      * Reimplemented to set a proper "deactivated" background color.
      */
-    virtual void setReadOnly( bool readOnly );
+    virtual void setReadOnly(bool readOnly);
 
     /**
      * Turns background spell checking for this text edit on or off.
@@ -90,7 +90,7 @@ class KTEXTWIDGETS_EXPORT KTextEdit : public QTextEdit //krazy:exclude=qclasses
      * @see isReadOnly()
      * @see setReadOnly()
      */
-    virtual void setCheckSpellingEnabled( bool check );
+    virtual void setCheckSpellingEnabled(bool check);
 
     /**
      * Returns true if background spell checking is enabled for this text edit.
@@ -111,7 +111,7 @@ class KTEXTWIDGETS_EXPORT KTextEdit : public QTextEdit //krazy:exclude=qclasses
      * Always returns true by default.
      *
      */
-    virtual bool shouldBlockBeSpellChecked(const QString& block) const;
+    virtual bool shouldBlockBeSpellChecked(const QString &block) const;
 
     /**
      * Selects the characters at the specified position. Any previous
@@ -121,7 +121,7 @@ class KTEXTWIDGETS_EXPORT KTextEdit : public QTextEdit //krazy:exclude=qclasses
      * @param length The length of the selection, in number of characters
      * @param pos The position of the first character of the selection
      */
-    void highlightWord( int length, int pos );
+    void highlightWord(int length, int pos);
 
     /**
      * Allows to create a specific highlighter if reimplemented.
@@ -147,7 +147,7 @@ class KTEXTWIDGETS_EXPORT KTextEdit : public QTextEdit //krazy:exclude=qclasses
      * @see setHighlighter()
      * @see createHighlighter()
      */
-    Sonnet::Highlighter* highlighter() const;
+    Sonnet::Highlighter *highlighter() const;
 
     /**
      * Sets a custom backgound spell highlighter for this text edit.
@@ -176,7 +176,7 @@ class KTEXTWIDGETS_EXPORT KTextEdit : public QTextEdit //krazy:exclude=qclasses
      * Enable find replace action.
      * @since 4.1
      */
-    void enableFindReplace( bool enabled);
+    void enableFindReplace(bool enabled);
 
     /**
      * @return the spell checking language which was set by
@@ -184,7 +184,7 @@ class KTEXTWIDGETS_EXPORT KTextEdit : public QTextEdit //krazy:exclude=qclasses
      *         config dialog, or an empty string if that has never been called.
      * @since 4.2
      */
-    const QString& spellCheckingLanguage() const;
+    const QString &spellCheckingLanguage() const;
 
     /**
      * This makes the text edit display a grayed-out hinting text as long as
@@ -200,7 +200,6 @@ class KTEXTWIDGETS_EXPORT KTextEdit : public QTextEdit //krazy:exclude=qclasses
      */
     QString clickMessage() const;
 
-
     /**
      * @since 4.10
      */
@@ -213,33 +212,33 @@ class KTEXTWIDGETS_EXPORT KTextEdit : public QTextEdit //krazy:exclude=qclasses
 
     /**
      * @since 4.10
-     * create a modal spellcheck dialogbox and spellCheckingFinished signal we sent when 
+     * create a modal spellcheck dialogbox and spellCheckingFinished signal we sent when
      * we finish spell checking or spellCheckingCanceled signal when we cancel spell checking
      */
     void forceSpellChecking();
 
-  Q_SIGNALS:
+Q_SIGNALS:
     /**
      * emit signal when we activate or not autospellchecking
      *
      * @since 4.1
      */
-     void checkSpellingChanged( bool );
+    void checkSpellingChanged(bool);
 
-     /**
-      * Signal sends when spell checking is finished/stopped/completed
-      * @since 4.1
-      */
-     void spellCheckStatus(const QString &);
+    /**
+     * Signal sends when spell checking is finished/stopped/completed
+     * @since 4.1
+     */
+    void spellCheckStatus(const QString &);
 
-     /**
-      * Emitted when the user changes the language in the spellcheck dialog
-      * shown by checkSpelling() or when calling setSpellCheckingLanguage().
-      *
-      * @param language the new language the user selected
-      * @since 4.1
-      */
-     void languageChanged(const QString &language);
+    /**
+     * Emitted when the user changes the language in the spellcheck dialog
+     * shown by checkSpelling() or when calling setSpellCheckingLanguage().
+     *
+     * @param language the new language the user selected
+     * @since 4.1
+     */
+    void languageChanged(const QString &language);
 
     /**
      * Emitted before the context menu is displayed.
@@ -254,12 +253,12 @@ class KTEXTWIDGETS_EXPORT KTextEdit : public QTextEdit //krazy:exclude=qclasses
      * @param p the context menu about to be displayed
      * @since 4.5
      */
-    void aboutToShowContextMenu(QMenu* menu);
+    void aboutToShowContextMenu(QMenu *menu);
 
     /**
      * @since 4.10
      */
-    void spellCheckerAutoCorrect(const QString& currentWord, const QString& autoCorrectWord);
+    void spellCheckerAutoCorrect(const QString &currentWord, const QString &autoCorrectWord);
 
     /**
      * signal spellCheckingFinished is sent when we finish spell check or we click on "Terminate" button in sonnet dialogbox
@@ -268,12 +267,12 @@ class KTEXTWIDGETS_EXPORT KTextEdit : public QTextEdit //krazy:exclude=qclasses
     void spellCheckingFinished();
 
     /**
-     * signal spellCheckingCanceled is sent when we cancel spell checking. 
+     * signal spellCheckingCanceled is sent when we cancel spell checking.
      * @since 4.10
      */
     void spellCheckingCanceled();
 
-  public Q_SLOTS:
+public Q_SLOTS:
 
     /**
      * Set the spell check language which will be used for highlighting spelling
@@ -312,7 +311,7 @@ class KTEXTWIDGETS_EXPORT KTextEdit : public QTextEdit //krazy:exclude=qclasses
      */
     void replace();
 
-  protected Q_SLOTS:
+protected Q_SLOTS:
     /**
      * @since 4.1
      */
@@ -327,11 +326,11 @@ class KTEXTWIDGETS_EXPORT KTextEdit : public QTextEdit //krazy:exclude=qclasses
      */
     void slotSpeakText();
 
-  protected:
+protected:
     /**
      * Reimplemented to catch "delete word" shortcut events.
      */
-    virtual bool event(QEvent*);
+    virtual bool event(QEvent *);
 
     /**
      * Reimplemented to paint clickMessage.
@@ -342,13 +341,13 @@ class KTEXTWIDGETS_EXPORT KTextEdit : public QTextEdit //krazy:exclude=qclasses
     /**
      * Reimplemented for internal reasons
      */
-    virtual void keyPressEvent( QKeyEvent* );
+    virtual void keyPressEvent(QKeyEvent *);
 
     /**
      * Reimplemented to instantiate a KDictSpellingHighlighter, if
      * spellchecking is enabled.
      */
-    virtual void focusInEvent( QFocusEvent* );
+    virtual void focusInEvent(QFocusEvent *);
 
     /**
      * Deletes a word backwards from the current cursor position,
@@ -366,23 +365,23 @@ class KTEXTWIDGETS_EXPORT KTextEdit : public QTextEdit //krazy:exclude=qclasses
      * Reimplemented from QTextEdit to add spelling related items
      * when appropriate.
      */
-    virtual void contextMenuEvent( QContextMenuEvent* );
+    virtual void contextMenuEvent(QContextMenuEvent *);
 
-  private:
+private:
     class Private;
     Private *const d;
 
-    Q_PRIVATE_SLOT( d, void spellCheckerMisspelling( const QString&, int ) )
-    Q_PRIVATE_SLOT( d, void spellCheckerCorrected(const QString&, int,const QString&) )
-    Q_PRIVATE_SLOT( d, void spellCheckerCanceled())
-    Q_PRIVATE_SLOT( d, void spellCheckerAutoCorrect(const QString&,const QString&) )
-    Q_PRIVATE_SLOT( d, void spellCheckerFinished() )
-    Q_PRIVATE_SLOT( d, void undoableClear() )
-    Q_PRIVATE_SLOT( d, void toggleAutoSpellCheck() )
-    Q_PRIVATE_SLOT( d, void slotAllowTab() )
-    Q_PRIVATE_SLOT( d, void menuActivated( QAction* ) )
-    Q_PRIVATE_SLOT( d, void slotFindHighlight(const QString&, int, int))
-    Q_PRIVATE_SLOT( d, void slotReplaceText(const QString &, int, int, int))
+    Q_PRIVATE_SLOT(d, void spellCheckerMisspelling(const QString &, int))
+    Q_PRIVATE_SLOT(d, void spellCheckerCorrected(const QString &, int, const QString &))
+    Q_PRIVATE_SLOT(d, void spellCheckerCanceled())
+    Q_PRIVATE_SLOT(d, void spellCheckerAutoCorrect(const QString &, const QString &))
+    Q_PRIVATE_SLOT(d, void spellCheckerFinished())
+    Q_PRIVATE_SLOT(d, void undoableClear())
+    Q_PRIVATE_SLOT(d, void toggleAutoSpellCheck())
+    Q_PRIVATE_SLOT(d, void slotAllowTab())
+    Q_PRIVATE_SLOT(d, void menuActivated(QAction *))
+    Q_PRIVATE_SLOT(d, void slotFindHighlight(const QString &, int, int))
+    Q_PRIVATE_SLOT(d, void slotReplaceText(const QString &, int, int, int))
 };
 
 #endif // KTEXTEDIT_H

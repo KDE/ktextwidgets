@@ -45,7 +45,7 @@ class KRichTextWidget::Private
 {
 public:
     Private(KRichTextWidget *parent)
-            :   q(parent),
+        :   q(parent),
             painterActive(false),
             richTextEnabled(false), // It's only enabled when an action makes text rich.
             enableRichText(0),
@@ -82,7 +82,7 @@ public:
     QTextCharFormat painterFormat;
     bool painterActive;
 
-    QList<QAction*> richTextActionList;
+    QList<QAction *> richTextActionList;
 
     bool richTextEnabled;
     KToggleAction *enableRichText;
@@ -177,16 +177,16 @@ void KRichTextWidget::Private::init()
     q->setRichTextSupport(KRichTextWidget::FullSupport);
 }
 
-KRichTextWidget::KRichTextWidget(QWidget* parent)
-        : KRichTextEdit(parent),
-        d(new Private(this))
+KRichTextWidget::KRichTextWidget(QWidget *parent)
+    : KRichTextEdit(parent),
+      d(new Private(this))
 {
     d->init();
 }
 
-KRichTextWidget::KRichTextWidget(const QString& text, QWidget *parent)
-        : KRichTextEdit(text,parent),
-        d(new Private(this))
+KRichTextWidget::KRichTextWidget(const QString &text, QWidget *parent)
+    : KRichTextEdit(text, parent),
+      d(new Private(this))
 {
     d->init();
 }
@@ -227,7 +227,7 @@ QList<QAction *> KRichTextWidget::createActions()
     if (d->richTextSupport & SupportTextForegroundColor) {
         //Foreground Color
         d->action_text_foreground_color = new QAction(QIcon::fromTheme(QStringLiteral("format-stroke-color")),
-                                                      i18nc("@action", "Text &Color..."), this);
+                i18nc("@action", "Text &Color..."), this);
         d->action_text_foreground_color->setIconText(i18nc("@label stroke color", "Color"));
         d->richTextActionList.append((d->action_text_foreground_color));
         d->action_text_foreground_color->setObjectName(QStringLiteral("format_text_foreground_color"));
@@ -239,7 +239,7 @@ QList<QAction *> KRichTextWidget::createActions()
     if (d->richTextSupport & SupportTextBackgroundColor) {
         //Background Color
         d->action_text_background_color = new QAction(QIcon::fromTheme(QStringLiteral("format-fill-color")),
-                                                      i18nc("@action", "Text &Highlight..."), this);
+                i18nc("@action", "Text &Highlight..."), this);
         d->richTextActionList.append((d->action_text_background_color));
         d->action_text_foreground_color->setObjectName(QStringLiteral("format_text_background_color"));
         connect(d->action_text_background_color, SIGNAL(triggered()), this, SLOT(_k_setTextBackgroundColor()));
@@ -283,7 +283,7 @@ QList<QAction *> KRichTextWidget::createActions()
 
     if (d->richTextSupport & SupportItalic) {
         d->action_text_italic = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-italic")),
-                                                  i18nc("@action italicize selected text", "&Italic"), this);
+                i18nc("@action italicize selected text", "&Italic"), this);
         QFont italic;
         italic.setItalic(true);
         d->action_text_italic->setFont(italic);
@@ -298,7 +298,7 @@ QList<QAction *> KRichTextWidget::createActions()
 
     if (d->richTextSupport & SupportUnderline) {
         d->action_text_underline = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-underline")),
-                                                     i18nc("@action underline selected text", "&Underline"), this);
+                i18nc("@action underline selected text", "&Underline"), this);
         QFont underline;
         underline.setUnderline(true);
         d->action_text_underline->setFont(underline);
@@ -313,7 +313,7 @@ QList<QAction *> KRichTextWidget::createActions()
 
     if (d->richTextSupport & SupportStrikeOut) {
         d->action_text_strikeout = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-strikethrough")),
-                                                     i18nc("@action", "&Strike Out"), this);
+                i18nc("@action", "&Strike Out"), this);
         d->richTextActionList.append((d->action_text_strikeout));
         d->action_text_foreground_color->setObjectName(QStringLiteral("format_text_strikethrough"));
         d->action_text_strikeout->setShortcut(Qt::CTRL + Qt::Key_L);
@@ -326,7 +326,7 @@ QList<QAction *> KRichTextWidget::createActions()
     if (d->richTextSupport & SupportAlignment) {
         //Alignment
         d->action_align_left = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-justify-left")),
-                                                 i18nc("@action", "Align &Left"), this);
+                i18nc("@action", "Align &Left"), this);
         d->action_align_left->setIconText(i18nc("@label left justify", "Left"));
         d->richTextActionList.append((d->action_align_left));
         d->action_text_foreground_color->setObjectName(QStringLiteral("format_align_left"));
@@ -334,7 +334,7 @@ QList<QAction *> KRichTextWidget::createActions()
                 this, SLOT(alignLeft()));
 
         d->action_align_center = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-justify-center")),
-                                                   i18nc("@action", "Align &Center"), this);
+                i18nc("@action", "Align &Center"), this);
         d->action_align_center->setIconText(i18nc("@label center justify", "Center"));
         d->richTextActionList.append((d->action_align_center));
         d->action_text_foreground_color->setObjectName(QStringLiteral("format_align_center"));
@@ -342,7 +342,7 @@ QList<QAction *> KRichTextWidget::createActions()
                 this, SLOT(alignCenter()));
 
         d->action_align_right = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-justify-right")),
-                                                  i18nc("@action", "Align &Right"), this);
+                i18nc("@action", "Align &Right"), this);
         d->action_align_right->setIconText(i18nc("@label right justify", "Right"));
         d->richTextActionList.append((d->action_align_right));
         d->action_text_foreground_color->setObjectName(QStringLiteral("format_align_right"));
@@ -350,7 +350,7 @@ QList<QAction *> KRichTextWidget::createActions()
                 this, SLOT(alignRight()));
 
         d->action_align_justify = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-justify-fill")),
-                                                    i18nc("@action", "&Justify"), this);
+                i18nc("@action", "&Justify"), this);
         d->action_align_justify->setIconText(i18nc("@label justify fill", "Justify"));
         d->richTextActionList.append((d->action_align_justify));
         d->action_text_foreground_color->setObjectName(QStringLiteral("format_align_justify"));
@@ -371,7 +371,7 @@ QList<QAction *> KRichTextWidget::createActions()
 
     if (d->richTextSupport & SupportDirection) {
         d->action_direction_ltr = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-direction-ltr")),
-                                                    i18nc("@action", "Left-to-Right"), this);
+                i18nc("@action", "Left-to-Right"), this);
         d->action_direction_ltr->setIconText(i18nc("@label left-to-right", "Left-to-Right"));
         d->richTextActionList.append(d->action_direction_ltr);
         d->action_text_foreground_color->setObjectName(QStringLiteral("direction_ltr"));
@@ -379,7 +379,7 @@ QList<QAction *> KRichTextWidget::createActions()
                 this, SLOT(makeLeftToRight()));
 
         d->action_direction_rtl = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-direction-rtl")),
-                                                    i18nc("@action", "Right-to-Left"), this);
+                i18nc("@action", "Right-to-Left"), this);
         d->action_direction_rtl->setIconText(i18nc("@label right-to-left", "Right-to-Left"));
         d->richTextActionList.append(d->action_direction_rtl);
         d->action_text_foreground_color->setObjectName(QStringLiteral("direction_rtl"));
@@ -396,17 +396,17 @@ QList<QAction *> KRichTextWidget::createActions()
 
     if (d->richTextSupport & SupportChangeListStyle) {
         d->action_list_style = new KSelectAction(QIcon::fromTheme(QStringLiteral("format-list-unordered")),
-                                                 i18nc("@title:menu", "List Style"), this);
+                i18nc("@title:menu", "List Style"), this);
         QStringList listStyles;
         listStyles      << i18nc("@item:inmenu no list style", "None")
-        << i18nc("@item:inmenu disc list style", "Disc")
-        << i18nc("@item:inmenu circle list style", "Circle")
-        << i18nc("@item:inmenu square list style", "Square")
-        << i18nc("@item:inmenu numbered lists", "123")
-        << i18nc("@item:inmenu lowercase abc lists", "abc")
-        << i18nc("@item:inmenu uppercase abc lists", "ABC")
-        << i18nc("@item:inmenu lower case roman numerals", "i ii iii")
-        << i18nc("@item:inmenu upper case roman numerals", "I II III");
+                        << i18nc("@item:inmenu disc list style", "Disc")
+                        << i18nc("@item:inmenu circle list style", "Circle")
+                        << i18nc("@item:inmenu square list style", "Square")
+                        << i18nc("@item:inmenu numbered lists", "123")
+                        << i18nc("@item:inmenu lowercase abc lists", "abc")
+                        << i18nc("@item:inmenu uppercase abc lists", "ABC")
+                        << i18nc("@item:inmenu lower case roman numerals", "i ii iii")
+                        << i18nc("@item:inmenu upper case roman numerals", "I II III");
 
         d->action_list_style->setItems(listStyles);
         d->action_list_style->setCurrentItem(0);
@@ -448,7 +448,7 @@ QList<QAction *> KRichTextWidget::createActions()
 
     if (d->richTextSupport & SupportRuleLine) {
         d->action_insert_horizontal_rule = new QAction(QIcon::fromTheme(QStringLiteral("insert-horizontal-rule")),
-                                                       i18nc("@action", "Insert Rule Line"), this);
+                i18nc("@action", "Insert Rule Line"), this);
         d->richTextActionList.append((d->action_insert_horizontal_rule));
         d->action_text_foreground_color->setObjectName(QStringLiteral("insert_horizontal_rule"));
         connect(d->action_insert_horizontal_rule, SIGNAL(triggered()),
@@ -470,7 +470,7 @@ QList<QAction *> KRichTextWidget::createActions()
 
     if (d->richTextSupport & SupportFormatPainting) {
         d->action_format_painter = new KToggleAction(QIcon::fromTheme(QStringLiteral("draw-brush")),
-                                                     i18nc("@action", "Format Painter"), this);
+                i18nc("@action", "Format Painter"), this);
         d->richTextActionList.append((d->action_format_painter));
         d->action_text_foreground_color->setObjectName(QStringLiteral("format_painter"));
         connect(d->action_format_painter, SIGNAL(toggled(bool)),
@@ -491,14 +491,14 @@ QList<QAction *> KRichTextWidget::createActions()
 
     if (d->richTextSupport & SupportSuperScriptAndSubScript) {
         d->action_text_subscript = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-subscript")),
-                                                     i18nc("@action", "Subscript"), this);
+                i18nc("@action", "Subscript"), this);
         d->richTextActionList.append((d->action_text_subscript));
         d->action_text_foreground_color->setObjectName(QStringLiteral("format_text_subscript"));
         connect(d->action_text_subscript, SIGNAL(triggered(bool)),
                 this, SLOT(setTextSubScript(bool)));
 
         d->action_text_superscript = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-superscript")),
-                                                       i18nc("@action", "Superscript"), this);
+                i18nc("@action", "Superscript"), this);
         d->richTextActionList.append((d->action_text_superscript));
         d->action_text_foreground_color->setObjectName(QStringLiteral("format_text_superscript"));
         connect(d->action_text_superscript, SIGNAL(triggered(bool)),
@@ -526,8 +526,7 @@ QList<QAction *> KRichTextWidget::createActions()
 
 void KRichTextWidget::setActionsEnabled(bool enabled)
 {
-    Q_FOREACH(QAction* action, d->richTextActionList)
-    {
+    Q_FOREACH (QAction *action, d->richTextActionList) {
         action->setEnabled(enabled);
     }
     d->richTextEnabled = enabled;
@@ -547,8 +546,9 @@ void KRichTextWidget::Private::_k_updateCharFormatActions(const QTextCharFormat 
         action_font_family->setFont(f.family());
     }
     if (richTextSupport & SupportFontSize) {
-        if (f.pointSize() > 0)
+        if (f.pointSize() > 0) {
             action_font_size->setFontSize((int)f.pointSize());
+        }
     }
 
     if (richTextSupport & SupportBold) {
@@ -589,7 +589,6 @@ void KRichTextWidget::Private::_k_updateMiscActions()
         }
     }
 
-
     if (richTextSupport & SupportChangeListStyle) {
         if (q->textCursor().currentList()) {
             action_list_style->setCurrentItem(-q->textCursor().currentList()->format().style());
@@ -598,20 +597,19 @@ void KRichTextWidget::Private::_k_updateMiscActions()
         }
     }
 
-
-    if ( richTextSupport & SupportIndentLists ) {
-        if ( richTextEnabled ) {
-            action_list_indent->setEnabled( q->canIndentList() );
+    if (richTextSupport & SupportIndentLists) {
+        if (richTextEnabled) {
+            action_list_indent->setEnabled(q->canIndentList());
         } else {
-            action_list_indent->setEnabled( false );
+            action_list_indent->setEnabled(false);
         }
     }
 
-    if ( richTextSupport & SupportDedentLists ) {
-        if ( richTextEnabled ) {
-            action_list_dedent->setEnabled( q->canDedentList() );
+    if (richTextSupport & SupportDedentLists) {
+        if (richTextEnabled) {
+            action_list_dedent->setEnabled(q->canDedentList());
         } else {
-            action_list_dedent->setEnabled( false );
+            action_list_dedent->setEnabled(false);
         }
     }
 
@@ -699,5 +697,4 @@ void KRichTextWidget::updateActionStates()
     d->_k_updateCharFormatActions(currentCharFormat());
 }
 
-// kate: space-indent on; indent-width 4; encoding utf-8; replace-tabs on;
 #include "moc_krichtextwidget.cpp"

@@ -110,9 +110,7 @@ void KTextEdit_UnitTest::testPaste()
 //
 // }
 
-
 QTEST_MAIN(KTextEdit_UnitTest)
 
 #include "ktextedit_unittest.moc"
-
 

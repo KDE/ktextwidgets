@@ -213,14 +213,14 @@ public:
          * This is a KToggleAction. The status is automatically updated when
          * the text cursor is moved.
          */
-         SupportSuperScriptAndSubScript = 0x4000000,
+        SupportSuperScriptAndSubScript = 0x4000000,
 
 //         SupportChangeParagraphSpacing = 0x200000,
 
         /**
          * Action to change direction of text to Right-To-Left or Left-To-Right.
          */
-         SupportDirection = 0x8000000,
+        SupportDirection = 0x8000000,
 
         /**
          * Includes all above actions for full rich text support
@@ -242,7 +242,7 @@ public:
      *             HTML.
      * @param parent The parent widget
      */
-    explicit KRichTextWidget(const QString& text, QWidget *parent = 0);
+    explicit KRichTextWidget(const QString &text, QWidget *parent = 0);
 
     /**
      * @brief Destructor
@@ -341,7 +341,6 @@ protected:
      */
     virtual void mouseReleaseEvent(QMouseEvent *event);
 
-
 private:
     //@cond PRIVATE
     class Private;
@@ -361,4 +360,3 @@ Q_DECLARE_OPERATORS_FOR_FLAGS(KRichTextWidget::RichTextSupport)
 
 #endif
 
-// kate: space-indent on; indent-width 4; encoding utf-8; replace-tabs on;

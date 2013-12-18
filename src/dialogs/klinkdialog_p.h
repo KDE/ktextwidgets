@@ -56,7 +56,6 @@ public:
      */
     ~KLinkDialog();
 
-
     /**
      * Returns the link text shown in the dialog
      * @param linkText The initial text

@@ -24,7 +24,7 @@
 #include <QApplication>
 #include <QTest>
 
-int main( int argc, char **argv )
+int main(int argc, char **argv)
 {
     QApplication::setApplicationName(QLatin1String("ktextedittest"));
     QApplication app(argc, argv);
@@ -36,13 +36,12 @@ int main( int argc, char **argv )
     //QObject::connect(action, SIGNAL(triggered()), edit, SLOT(selectAll()));
 
     QFile file(QFINDTESTDATA(QLatin1String("ktextedittest.cpp")));
-    if ( file.open( QIODevice::ReadOnly ) )
-    {
-        edit->setPlainText( QLatin1String(file.readAll()) );
+    if (file.open(QIODevice::ReadOnly)) {
+        edit->setPlainText(QLatin1String(file.readAll()));
         file.close();
     }
 
-    edit->resize( 600, 600 );
+    edit->resize(600, 600);
     edit->show();
     return app.exec();
 }

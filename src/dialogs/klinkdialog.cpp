@@ -46,9 +46,8 @@ public:
 };
 //@endcond
 
-
 KLinkDialog::KLinkDialog(QWidget *parent)
-        : QDialog(parent), d(new KLinkDialogPrivate)
+    : QDialog(parent), d(new KLinkDialogPrivate)
 {
     setWindowTitle(i18n("Manage Link"));
     setModal(true);
@@ -95,15 +94,15 @@ void KLinkDialog::slotTextChanged(const QString &text)
 void KLinkDialog::setLinkText(const QString &linkText)
 {
     d->textLineEdit->setText(linkText);
-    if (!linkText.trimmed().isEmpty())
+    if (!linkText.trimmed().isEmpty()) {
         d->linkUrlLineEdit->setFocus();
+    }
 }
 
 void KLinkDialog::setLinkUrl(const QString &linkUrl)
 {
     d->linkUrlLineEdit->setText(linkUrl);
 }
-
 
 QString KLinkDialog::linkText() const
 {

@@ -110,8 +110,7 @@ class KTEXTWIDGETS_EXPORT KFind :
 public:
 
     /// the options
-    enum Options
-    {
+    enum Options {
         WholeWordsOnly = 1,     ///< Match whole words only.
         FromCursor = 2,         ///< Start from current cursor position.
         SelectedText = 4,       ///< Only search selected area.
@@ -122,7 +121,7 @@ public:
         // Note that KReplaceDialog uses 256 and 512
         // User extensions can use boolean options above this value.
         MinimumUserOption = 65536 ///< user options start with this bit
-    };    
+    };
     Q_DECLARE_FLAGS(SearchOptions, Options)
 
     /**
@@ -137,7 +136,7 @@ public:
      * appears it has the right parent. Don't worry about deletion, KFind
      * will notice if the find dialog is closed.
      */
-    KFind(const QString &pattern, long options, QWidget *parent, QWidget* findDialog);
+    KFind(const QString &pattern, long options, QWidget *parent, QWidget *findDialog);
     virtual ~KFind();
 
     enum Result { NoMatch, Match };
@@ -159,7 +158,7 @@ public:
      * means "process all the data", i.e. either 0 or data.length()-1 depending
      * on FindBackwards.
      */
-    void setData( const QString& data, int startPos = -1 );
+    void setData(const QString &data, int startPos = -1);
 
     /**
      * Call this when needData returns true, before calling find(). The use of
@@ -172,7 +171,7 @@ public:
      * means "process all the data", i.e. either 0 or data.length()-1 depending
      * on FindBackwards.
      */
-    void setData( int id, const QString& data, int startPos = -1 );
+    void setData(int id, const QString &data, int startPos = -1);
 
     /**
      * Walk the text fragment (e.g. text-processor line, kspread cell) looking for matches.
@@ -198,7 +197,7 @@ public:
      *
      * @see KFind::Options
      */
-    virtual void setOptions( long options );
+    virtual void setOptions(long options);
 
     /**
      * @return the pattern we're currently looking for
@@ -208,7 +207,7 @@ public:
     /**
      * Change the pattern we're looking for
      */
-    void setPattern( const QString& pattern );
+    void setPattern(const QString &pattern);
 
     /**
      * Return the number of matches found (i.e. the number of times
@@ -236,9 +235,9 @@ public:
      * @param index The starting index where the candidate match was found
      * @param matchedlength The length of the candidate match
      */
-    virtual bool validateMatch( const QString & text,
-                                int index,
-                                int matchedlength );
+    virtual bool validateMatch(const QString &text,
+                               int index,
+                               int matchedlength);
 
     /**
      * Returns true if we should restart the search from scratch.
@@ -253,7 +252,7 @@ public:
      * and we could even be hitting the beginning of the document (so not all
      * matches have even been seen).
      */
-    virtual bool shouldRestart( bool forceAsking = false, bool showNumMatches = true ) const;
+    virtual bool shouldRestart(bool forceAsking = false, bool showNumMatches = true) const;
 
     /**
      * Search the given string, and returns whether a match was found. If one is,
@@ -269,9 +268,9 @@ public:
      * @param matchedlength The length of the string that was matched
      * @return The index at which a match was found, or -1 if no match was found.
      */
-    static int find( const QString &text, const QString &pattern, int index, long options, int *matchedlength );
+    static int find(const QString &text, const QString &pattern, int index, long options, int *matchedlength);
 
-    static int find( const QString &text, const QRegExp &pattern, int index, long options, int *matchedlength );
+    static int find(const QString &text, const QRegExp &pattern, int index, long options, int *matchedlength);
 
     /**
      * Displays the final dialog saying "no match was found", if that was the case.
@@ -286,7 +285,7 @@ public:
      * menu item while a find operation is under way. In that case, the
      * program may want to call setActiveWindow() on that dialog.
      */
-    QDialog* findNextDialog( bool create = false );
+    QDialog *findNextDialog(bool create = false);
 
     /**
      * Close the "find next?" dialog. The application should do this when
@@ -360,18 +359,18 @@ Q_SIGNALS:
 
 protected:
 
-    QWidget* parentWidget() const;
-    QWidget* dialogsParent() const;
+    QWidget *parentWidget() const;
+    QWidget *dialogsParent() const;
 
 private:
     friend class KReplace;
     friend class KReplacePrivate;
 
     struct Private;
-    Private* const d;
+    Private *const d;
 
-    Q_PRIVATE_SLOT( d, void _k_slotFindNext() )
-    Q_PRIVATE_SLOT( d, void _k_slotDialogClosed() )
+    Q_PRIVATE_SLOT(d, void _k_slotFindNext())
+    Q_PRIVATE_SLOT(d, void _k_slotDialogClosed())
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(KFind::SearchOptions)

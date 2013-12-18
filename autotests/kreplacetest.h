@@ -29,15 +29,18 @@ class KReplaceTest : public QObject
 {
     Q_OBJECT
 public:
-    KReplaceTest( const QStringList& text, const QString &buttonName )
-        : QObject( 0L ), m_text( text ), m_replace( 0 ), m_buttonName( buttonName ) {}
+    KReplaceTest(const QStringList &text, const QString &buttonName)
+        : QObject(0L), m_text(text), m_replace(0), m_buttonName(buttonName) {}
 
-    void replace( const QString &pattern, const QString &replacement, long options );
+    void replace(const QString &pattern, const QString &replacement, long options);
     void print();
-    const QStringList& textLines() const { return m_text; }
+    const QStringList &textLines() const
+    {
+        return m_text;
+    }
 
 public Q_SLOTS:
-    void slotHighlight( const QString &, int, int );
+    void slotHighlight(const QString &, int, int);
     void slotReplaceNext();
     void slotReplace(const QString &text, int replacementIndex, int replacedLength, int matchedLength);
 
@@ -49,7 +52,7 @@ private:
 
     QStringList::Iterator m_currentPos;
     QStringList m_text;
-    KReplace* m_replace;
+    KReplace *m_replace;
     bool m_needEventLoop;
     QString m_buttonName;
 };

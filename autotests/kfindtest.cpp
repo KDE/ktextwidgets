@@ -28,83 +28,81 @@
 
 void KFindRecorder::changeText(int line, const QString &text)
 {
-	Q_ASSERT(line < m_text.count());
-	Q_ASSERT(m_find != 0);
+    Q_ASSERT(line < m_text.count());
+    Q_ASSERT(m_find != 0);
 
-	m_line = line;
-	m_text[line] = text;
-	m_find->setData(line, text);
+    m_line = line;
+    m_text[line] = text;
+    m_find->setData(line, text);
 }
 
 void KFindRecorder::find(const QString &pattern, long options)
 {
-	delete m_find;
-	m_find = new KFind(pattern, options, 0);
-        // Prevent dialogs from popping up
-        m_find->closeFindNextDialog();
+    delete m_find;
+    m_find = new KFind(pattern, options, 0);
+    // Prevent dialogs from popping up
+    m_find->closeFindNextDialog();
 
-	connect(m_find, SIGNAL(highlight(QString,int,int)),
-	                SLOT(slotHighlight(QString,int,int)));
-	connect(m_find, SIGNAL(highlight(int,int,int)),
-	                SLOT(slotHighlight(int,int,int)));
+    connect(m_find, SIGNAL(highlight(QString,int,int)),
+            SLOT(slotHighlight(QString,int,int)));
+    connect(m_find, SIGNAL(highlight(int,int,int)),
+            SLOT(slotHighlight(int,int,int)));
 
-	m_line = 0;
-	KFind::Result result = KFind::NoMatch;
-	do
-	{
-		if(options & KFind::FindIncremental)
-			m_find->setData(m_line, m_text[m_line]);
-		else
-			m_find->setData(m_text[m_line]);
+    m_line = 0;
+    KFind::Result result = KFind::NoMatch;
+    do {
+        if (options & KFind::FindIncremental) {
+            m_find->setData(m_line, m_text[m_line]);
+        } else {
+            m_find->setData(m_text[m_line]);
+        }
 
-		m_line++;
+        m_line++;
 
-		result = m_find->find();
-	} while(result == KFind::NoMatch && m_line < m_text.count());
+        result = m_find->find();
+    } while (result == KFind::NoMatch && m_line < m_text.count());
 }
 
 bool KFindRecorder::findNext(const QString &pattern)
 {
-	Q_ASSERT(m_find != 0);
+    Q_ASSERT(m_find != 0);
 
-	if(!pattern.isNull())
-	{
-		m_find->setPattern(pattern);
-	}
+    if (!pattern.isNull()) {
+        m_find->setPattern(pattern);
+    }
 
-	KFind::Result result = KFind::NoMatch;
-	do
-	{
-		//qDebug() << "m_line: " << m_line;
+    KFind::Result result = KFind::NoMatch;
+    do {
+        //qDebug() << "m_line: " << m_line;
 
-		result = m_find->find();
+        result = m_find->find();
 
-		if(result == KFind::NoMatch && m_line < m_text.count())
-		{
-			//qDebug() << "incrementing m_line...";
-			if(m_find->options() & KFind::FindIncremental)
-				m_find->setData(m_line, m_text[m_line]);
-			else
-				m_find->setData(m_text[m_line]);
+        if (result == KFind::NoMatch && m_line < m_text.count()) {
+            //qDebug() << "incrementing m_line...";
+            if (m_find->options() & KFind::FindIncremental) {
+                m_find->setData(m_line, m_text[m_line]);
+            } else {
+                m_find->setData(m_text[m_line]);
+            }
 
-			m_line++;
-		}
-	} while(result == KFind::NoMatch && m_line < m_text.count());
-	//qDebug() << "find next completed" << m_line;
+            m_line++;
+        }
+    } while (result == KFind::NoMatch && m_line < m_text.count());
+    //qDebug() << "find next completed" << m_line;
 
-        return result != KFind::NoMatch;
+    return result != KFind::NoMatch;
 }
 
 void KFindRecorder::slotHighlight(const QString &text, int index, int matchedLength)
 {
-	m_hits.append(QLatin1String("line: \"") + text + QLatin1String("\", index: ") + QString::number(index) +
-	              QLatin1String(", length: ") + QString::number(matchedLength) + QLatin1Char('\n'));
+    m_hits.append(QLatin1String("line: \"") + text + QLatin1String("\", index: ") + QString::number(index) +
+                  QLatin1String(", length: ") + QString::number(matchedLength) + QLatin1Char('\n'));
 }
 
 void KFindRecorder::slotHighlight(int id, int index, int matchedLength)
 {
-	m_hits.append(QLatin1String("line: \"") + m_text[id] + QLatin1String("\", index: ") + QString::number(index) +
-	              QLatin1String(", length: ") + QString::number(matchedLength) + QLatin1Char('\n'));
+    m_hits.append(QLatin1String("line: \"") + m_text[id] + QLatin1String("\", index: ") + QString::number(index) +
+                  QLatin1String(", length: ") + QString::number(matchedLength) + QLatin1Char('\n'));
 }
 
 ////

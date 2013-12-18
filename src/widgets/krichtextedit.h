@@ -82,7 +82,7 @@ public:
      *             HTML.
      * @param parent The parent widget
      */
-    explicit KRichTextEdit(const QString& text, QWidget *parent = 0);
+    explicit KRichTextEdit(const QString &text, QWidget *parent = 0);
 
     /**
      * Constructs a KRichTextEdit object.
@@ -122,7 +122,6 @@ public:
      */
     void setTextOrHtml(const QString &text);
 
-
     /**
      * Returns the text of the link at the current position or an empty string
      * if the cursor is not on a link.
@@ -149,7 +148,7 @@ public:
      * @param cursor The cursor to use to select the text.
      * @sa updateLink
      */
-    void selectLinkText(QTextCursor* cursor) const;
+    void selectLinkText(QTextCursor *cursor) const;
 
     /**
      * Convenience function to select the link text using the active cursor.
@@ -209,15 +208,15 @@ public Q_SLOTS:
 
     /**
      * Sets the direction of the current block to Right-To-Left
-	 *
-	 * @since 4.6
+     *
+     * @since 4.6
      */
     void makeRightToLeft();
 
     /**
      * Sets the direction of the current block to Left-To-Right
-	 *
-	 * @since 4.6
+     *
+     * @since 4.6
      */
     void makeLeftToRight();
 
@@ -347,7 +346,7 @@ public Q_SLOTS:
     /**
      * @since 4.10
      * Because of binary compatibility constraints, insertPlainText
-     * is not virtual. Therefore it must dynamically detect and call this slot.  
+     * is not virtual. Therefore it must dynamically detect and call this slot.
      */
     void insertPlainTextImplementation();
 
@@ -379,7 +378,5 @@ private:
     friend class KRichTextEditPrivate;
     //@endcond
 };
-
-
 
 #endif

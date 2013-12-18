@@ -41,22 +41,22 @@ class KFindDialog::KFindDialogPrivate
 public:
     KFindDialogPrivate(KFindDialog *q)
         : q(q),
-        regexpDialog(0),
-        regexpDialogQueryDone(false),
-        initialShowDone(false),
-        enabled(KFind::WholeWordsOnly | KFind::FromCursor |  KFind::SelectedText | KFind::CaseSensitive | KFind::FindBackwards | KFind::RegularExpression),
-        findExtension(0),
-        buttonBox(0)
-        {}
+          regexpDialog(0),
+          regexpDialogQueryDone(false),
+          initialShowDone(false),
+          enabled(KFind::WholeWordsOnly | KFind::FromCursor |  KFind::SelectedText | KFind::CaseSensitive | KFind::FindBackwards | KFind::RegularExpression),
+          findExtension(0),
+          buttonBox(0)
+    {}
 
-    void init( bool forReplace, const QStringList &findStrings, bool hasSelection );
+    void init(bool forReplace, const QStringList &findStrings, bool hasSelection);
 
     void _k_slotPlaceholdersAboutToShow();
     void _k_slotOk();
     void _k_slotSelectedTextToggled(bool);
     void _k_showPatterns();
     void _k_showPlaceholders();
-    void _k_textSearchChanged(const QString&);
+    void _k_textSearchChanged(const QString &);
 
     KFindDialog *q;
     QDialog *regexpDialog;
@@ -86,11 +86,11 @@ public:
 
     QGroupBox *replaceGrp;
     KHistoryComboBox *replace;
-    QCheckBox* backRef;
-    QPushButton* backRefItem;
+    QCheckBox *backRef;
+    QPushButton *backRefItem;
     QGridLayout *replaceLayout;
 
-    QCheckBox* promptOnReplace;
+    QCheckBox *promptOnReplace;
 
     QMenu *placeholders;
 };

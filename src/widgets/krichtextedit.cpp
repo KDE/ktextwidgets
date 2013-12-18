@@ -44,12 +44,14 @@ class KRichTextEditPrivate : public QObject
 {
 public:
     KRichTextEditPrivate(KRichTextEdit *parent)
-            : q(parent),
-            mMode(KRichTextEdit::Plain) {
+        : q(parent),
+          mMode(KRichTextEdit::Plain)
+    {
         nestedListHelper = new NestedListHelper(q);
     }
 
-    ~KRichTextEditPrivate() {
+    ~KRichTextEditPrivate()
+    {
         delete nestedListHelper;
     }
 
@@ -72,7 +74,6 @@ public:
     void mergeFormatOnWordOrSelection(const QTextCharFormat &format);
 
     void setTextCursor(QTextCursor &cursor);
-
 
     // Data members
 
@@ -107,22 +108,23 @@ void KRichTextEditPrivate::mergeFormatOnWordOrSelection(const QTextCharFormat &f
     wordEnd.movePosition(QTextCursor::EndOfWord);
 
     cursor.beginEditBlock();
-    if (!cursor.hasSelection() && cursor.position() != wordStart.position() && cursor.position() != wordEnd.position())
+    if (!cursor.hasSelection() && cursor.position() != wordStart.position() && cursor.position() != wordEnd.position()) {
         cursor.select(QTextCursor::WordUnderCursor);
+    }
     cursor.mergeCharFormat(format);
     q->mergeCurrentCharFormat(format);
     cursor.endEditBlock();
 }
 //@endcond
 
-KRichTextEdit::KRichTextEdit(const QString& text, QWidget *parent)
-        : KTextEdit(text, parent), d(new KRichTextEditPrivate(this))
+KRichTextEdit::KRichTextEdit(const QString &text, QWidget *parent)
+    : KTextEdit(text, parent), d(new KRichTextEditPrivate(this))
 {
     d->init();
 }
 
 KRichTextEdit::KRichTextEdit(QWidget *parent)
-        : KTextEdit(parent), d(new KRichTextEditPrivate(this))
+    : KTextEdit(parent), d(new KRichTextEditPrivate(this))
 {
     d->init();
 }
@@ -349,10 +351,11 @@ KRichTextEdit::Mode KRichTextEdit::textMode() const
 
 QString KRichTextEdit::textOrHtml() const
 {
-    if (textMode() == Rich)
+    if (textMode() == Rich) {
         return toCleanHtml();
-    else
+    } else {
         return toPlainText();
+    }
 }
 
 void KRichTextEdit::setTextOrHtml(const QString &text)
@@ -390,21 +393,25 @@ void KRichTextEdit::selectLinkText(QTextCursor *cursor) const
 
         // Move cursor to start of link
         while (cursor->charFormat().anchorHref() == aHref) {
-            if (cursor->atStart())
+            if (cursor->atStart()) {
                 break;
+            }
             cursor->setPosition(cursor->position() - 1);
         }
-        if (cursor->charFormat().anchorHref() != aHref)
+        if (cursor->charFormat().anchorHref() != aHref) {
             cursor->setPosition(cursor->position() + 1, QTextCursor::KeepAnchor);
+        }
 
         // Move selection to the end of the link
         while (cursor->charFormat().anchorHref() == aHref) {
-            if (cursor->atEnd())
+            if (cursor->atEnd()) {
                 break;
+            }
             cursor->setPosition(cursor->position() + 1, QTextCursor::KeepAnchor);
         }
-        if (cursor->charFormat().anchorHref() != aHref)
+        if (cursor->charFormat().anchorHref() != aHref) {
             cursor->setPosition(cursor->position() - 1, QTextCursor::KeepAnchor);
+        }
     } else if (cursor->hasSelection()) {
         // Nothing to to. Using the currently selected text as the link text.
     } else {
@@ -456,9 +463,9 @@ void KRichTextEdit::updateLink(const QString &linkUrl, const QString &linkText)
         QTextDocument defaultTextDocument;
         QTextCharFormat defaultCharFormat = defaultTextDocument.begin().charFormat();
 
-        format.setUnderlineStyle( defaultCharFormat.underlineStyle() );
-        format.setUnderlineColor( defaultCharFormat.underlineColor() );
-        format.setForeground( defaultCharFormat.foreground() );
+        format.setUnderlineStyle(defaultCharFormat.underlineStyle());
+        format.setUnderlineColor(defaultCharFormat.underlineColor());
+        format.setForeground(defaultCharFormat.foreground());
     }
 
     // Insert link text specified in dialog, otherwise write out url.
@@ -469,7 +476,6 @@ void KRichTextEdit::updateLink(const QString &linkUrl, const QString &linkText)
         _linkText = linkUrl;
     }
     cursor.insertText(_linkText, format);
-
 
     // Insert a space after the link if at the end of the block so that
     // typing some text after the link does not carry link formatting
@@ -514,7 +520,6 @@ void KRichTextEdit::keyPressEvent(QKeyEvent *event)
 //     d->nestedListHelper->handleAfterDropEvent( event );
 // }
 
-
 bool KRichTextEdit::canIndentList() const
 {
     return d->nestedListHelper->canIndent();
@@ -527,56 +532,56 @@ bool KRichTextEdit::canDedentList() const
 
 QString KRichTextEdit::toCleanHtml() const
 {
-  QString result = toHtml();
+    QString result = toHtml();
 
-  static const QString EMPTYLINEHTML = QLatin1String(
-  "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-  "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; \">&nbsp;</p>" );
+    static const QString EMPTYLINEHTML = QLatin1String(
+            "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+            "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; \">&nbsp;</p>");
 
-  // Qt inserts various style properties based on the current mode of the editor (underline, 
-  // bold, etc), but only empty paragraphs *also* have qt-paragraph-type set to 'empty'.
-  static const QString EMPTYLINEREGEX = QLatin1String(
-    "<p style=\"-qt-paragraph-type:empty;(.*)</p>" );
-  
-  static const QString OLLISTPATTERNQT = QLatin1String(
-  "<ol style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px;" );
+    // Qt inserts various style properties based on the current mode of the editor (underline,
+    // bold, etc), but only empty paragraphs *also* have qt-paragraph-type set to 'empty'.
+    static const QString EMPTYLINEREGEX = QLatin1String(
+            "<p style=\"-qt-paragraph-type:empty;(.*)</p>");
 
-  static const QString ULLISTPATTERNQT = QLatin1String(
-  "<ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px;" );
+    static const QString OLLISTPATTERNQT = QLatin1String(
+            "<ol style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px;");
 
-  static const QString ORDEREDLISTHTML = QLatin1String(
-  "<ol style=\"margin-top: 0px; margin-bottom: 0px;" );
+    static const QString ULLISTPATTERNQT = QLatin1String(
+            "<ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px;");
 
-  static const QString UNORDEREDLISTHTML = QLatin1String(
-  "<ul style=\"margin-top: 0px; margin-bottom: 0px;" );
+    static const QString ORDEREDLISTHTML = QLatin1String(
+            "<ol style=\"margin-top: 0px; margin-bottom: 0px;");
 
-  // fix 1 - empty lines should show as empty lines - MS Outlook treats margin-top:0px; as
-  // a non-existing line.
-  // Although we can simply remove the margin-top style property, we still get unwanted results
-  // if you have three or more empty lines. It's best to replace empty <p> elements with <p>&nbsp;</p>.
+    static const QString UNORDEREDLISTHTML = QLatin1String(
+                "<ul style=\"margin-top: 0px; margin-bottom: 0px;");
 
-  QRegExp emptyLineFinder( EMPTYLINEREGEX );
-  emptyLineFinder.setMinimal( true );
-  
-  // find the first occurrence
-  int offset = emptyLineFinder.indexIn( result, 0 );
-  while (offset != -1) {
-    // replace all the matching text with the new line text
-    result.replace( offset, emptyLineFinder.matchedLength(), EMPTYLINEHTML );
-    // advance the search offset to just beyond the last replace
-    offset += EMPTYLINEHTML.length();
-    // find the next occurrence
-    offset = emptyLineFinder.indexIn( result, offset );
-  }
-  
-  // fix 2a - ordered lists - MS Outlook treats margin-left:0px; as
-  // a non-existing number; e.g: "1. First item" turns into "First Item"
-  result.replace(OLLISTPATTERNQT, ORDEREDLISTHTML);
+    // fix 1 - empty lines should show as empty lines - MS Outlook treats margin-top:0px; as
+    // a non-existing line.
+    // Although we can simply remove the margin-top style property, we still get unwanted results
+    // if you have three or more empty lines. It's best to replace empty <p> elements with <p>&nbsp;</p>.
 
-  // fix 2b - unordered lists - MS Outlook treats margin-left:0px; as
-  // a non-existing bullet; e.g: "* First bullet" turns into "First Bullet"
-  result.replace(ULLISTPATTERNQT, UNORDEREDLISTHTML);
+    QRegExp emptyLineFinder(EMPTYLINEREGEX);
+    emptyLineFinder.setMinimal(true);
 
-  return result;
+    // find the first occurrence
+    int offset = emptyLineFinder.indexIn(result, 0);
+    while (offset != -1) {
+        // replace all the matching text with the new line text
+        result.replace(offset, emptyLineFinder.matchedLength(), EMPTYLINEHTML);
+        // advance the search offset to just beyond the last replace
+        offset += EMPTYLINEHTML.length();
+        // find the next occurrence
+        offset = emptyLineFinder.indexIn(result, offset);
+    }
+
+    // fix 2a - ordered lists - MS Outlook treats margin-left:0px; as
+    // a non-existing number; e.g: "1. First item" turns into "First Item"
+    result.replace(OLLISTPATTERNQT, ORDEREDLISTHTML);
+
+    // fix 2b - unordered lists - MS Outlook treats margin-left:0px; as
+    // a non-existing bullet; e.g: "* First bullet" turns into "First Bullet"
+    result.replace(ULLISTPATTERNQT, UNORDEREDLISTHTML);
+
+    return result;
 }
 
