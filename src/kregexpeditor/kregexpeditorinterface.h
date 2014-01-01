@@ -156,7 +156,7 @@ public:
      *
      * Conclusion: You should not use this method in this version of KDE!
      */
-    virtual void doSomething(QString method, void *arguments) = 0;
+    virtual void doSomething(const QString& method, void *arguments) = 0;
 };
 
 Q_DECLARE_INTERFACE(KRegExpEditorInterface, "org.kde.KRegExpEditorInterface/1.0")
