@@ -23,6 +23,8 @@ set(ktextwidgets_INCLUDES
 target_include_directories(KF5TextWidgets PUBLIC "$<BUILD_INTERFACE:${ktextwidgets_INCLUDES}>"
 )
 
+target_include_directories(KF5TextWidgets INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/ktextwidgets>" "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/KTextWidgets>")
+
 target_link_libraries(KF5TextWidgets
 PUBLIC
   Qt5::Widgets
@@ -43,19 +45,40 @@ set_target_properties(KF5TextWidgets PROPERTIES VERSION ${KTEXTWIDGETS_VERSION_S
                                                 EXPORT_NAME TextWidgets
 )
 
+ecm_generate_headers(
+  KRichTextEdit
+  KRichTextWidget
+  KTextEdit
+
+  RELATIVE widgets
+  MODULE_NAME KTextWidgets
+  REQUIRED_HEADERS KTextWidgets_HEADERS
+)
+ecm_generate_headers(
+  KFind
+  KFindDialog
+  KReplace
+  KReplaceDialog
+
+  RELATIVE findreplace
+  MODULE_NAME KTextWidgets
+  REQUIRED_HEADERS KTextWidgets_HEADERS
+)
+
+ecm_generate_headers(
+  KRegExpEditorInterface
+
+  RELATIVE kregexpeditor
+  MODULE_NAME KTextWidgets
+  REQUIRED_HEADERS KTextWidgets_HEADERS
+)
+install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/KTextWidgets DESTINATION ${INCLUDE_INSTALL_DIR} COMPONENT Devel)
+
 install(TARGETS KF5TextWidgets EXPORT KF5TextWidgetsTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES
-  findreplace/kfind.h
-  findreplace/kfinddialog.h
-  findreplace/kreplace.h
-  findreplace/kreplacedialog.h
-  kregexpeditor/kregexpeditorinterface.h
-  widgets/krichtextedit.h
-  widgets/krichtextwidget.h
-  widgets/ktextedit.h
   ${CMAKE_CURRENT_BINARY_DIR}/ktextwidgets_export.h
-  DESTINATION ${INCLUDE_INSTALL_DIR} COMPONENT Devel
+  ${KTextWidgets_HEADERS}
+  DESTINATION ${INCLUDE_INSTALL_DIR}/ktextwidgets COMPONENT Devel
 )
-
 install( FILES kregexpeditor/kregexpeditor.desktop DESTINATION ${SERVICETYPES_INSTALL_DIR} )
