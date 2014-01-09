@@ -147,7 +147,6 @@ public:
     bool showTabAction: 1;
     bool showAutoCorrectionButton: 1;
     QTextDocumentFragment originalDoc;
-    QString spellCheckingConfigFileName;
     QString spellCheckingLanguage;
     KTextDecorator *decorator;
     KFindDialog *findDlg;
@@ -633,7 +632,7 @@ void KTextEdit::contextMenuEvent(QContextMenuEvent *event)
 
 void KTextEdit::createHighlighter()
 {
-    setHighlighter(new Sonnet::Highlighter(this, d->spellCheckingConfigFileName));
+    setHighlighter(new Sonnet::Highlighter(this));
 }
 
 Sonnet::Highlighter *KTextEdit::highlighter() const
