@@ -33,8 +33,6 @@ class KRichTextEditPrivate;
 
 #include <ktextwidgets_export.h>
 
-#define HAVE_INSERTPLAINTEXT 1
-
 /**
  * The KRichTextEdit class provides a widget to edit and display rich text.
  *
