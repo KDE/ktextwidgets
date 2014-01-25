@@ -82,3 +82,7 @@ install(FILES
   DESTINATION ${INCLUDE_INSTALL_DIR}/KTextWidgets COMPONENT Devel
 )
 install( FILES kregexpeditor/kregexpeditor.desktop DESTINATION ${SERVICETYPES_INSTALL_DIR} )
+
+include(ECMGeneratePriFile)
+ecm_generate_pri_file(BASE_NAME KTextWidgets LIB_NAME KF5TextWidgets DEPS "widgets SonnetUi" FILENAME_VAR PRI_FILENAME)
+install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
