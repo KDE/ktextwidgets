@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.8.10.20130309)
 project(KTextWidgets)
 
 # ECM setup
-find_package(ECM 0.0.9 REQUIRED NO_MODULE)
+find_package(ECM 0.0.10 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
 
 include(KDEInstallDirs)
@@ -15,7 +15,7 @@ include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 include(CMakePackageConfigHelpers)
 
-set(KF5_VERSION "5.0.0")
+set(KF5_VERSION "4.96.0")
 
 ecm_setup_version(${KF5_VERSION}
                   VARIABLE_PREFIX KTEXTWIDGETS
