@@ -45,34 +45,33 @@ set_target_properties(KF5TextWidgets PROPERTIES VERSION ${KTEXTWIDGETS_VERSION_S
                                                 EXPORT_NAME TextWidgets
 )
 
-ecm_generate_headers(
+ecm_generate_headers(KTextWidgets_HEADERS
+  HEADER_NAMES
   KRichTextEdit
   KRichTextWidget
   KTextEdit
 
   RELATIVE widgets
-  MODULE_NAME KTextWidgets
   REQUIRED_HEADERS KTextWidgets_HEADERS
 )
-ecm_generate_headers(
+ecm_generate_headers(KTextWidgets_HEADERS
+  HEADER_NAMES
   KFind
   KFindDialog
   KReplace
   KReplaceDialog
 
   RELATIVE findreplace
-  MODULE_NAME KTextWidgets
   REQUIRED_HEADERS KTextWidgets_HEADERS
 )
 
-ecm_generate_headers(
+ecm_generate_headers(KTextWidgets_HEADERS
+  HEADER_NAMES
   KRegExpEditorInterface
 
   RELATIVE kregexpeditor
-  MODULE_NAME KTextWidgets
   REQUIRED_HEADERS KTextWidgets_HEADERS
 )
-install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/KTextWidgets DESTINATION ${INCLUDE_INSTALL_DIR} COMPONENT Devel)
 
 install(TARGETS KF5TextWidgets EXPORT KF5TextWidgetsTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
 
