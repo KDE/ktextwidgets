@@ -1,4 +1,5 @@
 include(ECMMarkAsTest)
+include(ECMMarkNonGuiExecutable)
 
 find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Test)
 
@@ -8,6 +9,7 @@ macro(ktextwidgets_unit_tests)
       add_test(ktextwidgets-${_testname} ${_testname})
       target_link_libraries(${_testname} Qt5::Test KF5::TextWidgets KF5::ConfigWidgets)
       ecm_mark_as_test(${_testname})
+      ecm_mark_nongui_executable(${_testname})
    endforeach()
 endmacro()
 
