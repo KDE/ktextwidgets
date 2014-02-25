@@ -20,7 +20,8 @@ set(KF5_VERSION "4.96.0")
 ecm_setup_version(${KF5_VERSION}
                   VARIABLE_PREFIX KTEXTWIDGETS
                   VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/ktextwidgets_version.h"
-                  PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5TextWidgetsConfigVersion.cmake")
+                  PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5TextWidgetsConfigVersion.cmake"
+                  SOVERSION 5)
 
 # Dependencies
 set(REQUIRED_QT_VERSION 5.2.0)
