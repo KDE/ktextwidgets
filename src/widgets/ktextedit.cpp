@@ -413,10 +413,14 @@ bool KTextEdit::Private::handleShortcut(const QKeyEvent *event)
         }
         return true;
     } else if (KStandardShortcut::deleteWordBack().contains(key)) {
-        parent->deleteWordBack();
+        if (!parent->isReadOnly()) {
+           parent->deleteWordBack();
+        }
         return true;
     } else if (KStandardShortcut::deleteWordForward().contains(key)) {
-        parent->deleteWordForward();
+        if (!parent->isReadOnly()) {
+            parent->deleteWordForward();
+        }
         return true;
     } else if (KStandardShortcut::backwardWord().contains(key)) {
         QTextCursor cursor = parent->textCursor();
