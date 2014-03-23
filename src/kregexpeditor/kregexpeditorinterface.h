@@ -148,13 +148,7 @@ public:
      * This method allows for future changes that will not break binary
      * compatibility. DO NOT USE!
      *
-     * KDE has a policy of keeping binary compatibility for all major
-     * version of KDE. This means that new methods can not be added to this
-     * API before KDE version 4.0.
-     *
-     * This method is an escape door for that.
-     *
-     * Conclusion: You should not use this method in this version of KDE!
+     * See http://techbase.kde.org/Policies/Binary_Compatibility_Issues_With_C++
      */
     virtual void doSomething(const QString& method, void *arguments) = 0;
 };
