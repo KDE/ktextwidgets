@@ -59,8 +59,8 @@ class QDialog;
  *          this, SLOT( slotFindNext() ) );
  * \endcode
  *
- * If you are using a non-modal find dialog (the recommended new way
- * in KDE-3.2), you should call right away m_find->closeFindNextDialog().
+ * If you are using a non-modal find dialog (recommended),
+ * you should call right away m_find->closeFindNextDialog().
  *
  *  Then initialize the variables determining the "current position"
  *  (to the cursor, if the option FromCursor is set,
