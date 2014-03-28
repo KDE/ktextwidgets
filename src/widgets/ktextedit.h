@@ -48,7 +48,9 @@
 class KTEXTWIDGETS_EXPORT KTextEdit : public QTextEdit //krazy:exclude=qclasses
 {
     Q_OBJECT
+    #ifndef KTEXTWIDGETS_NO_DEPRECATED
     Q_PROPERTY(QString clickMessage READ clickMessage WRITE setClickMessage)
+    #endif
     Q_PROPERTY(bool checkSpellingEnabled READ checkSpellingEnabled WRITE setCheckSpellingEnabled)
     Q_PROPERTY(QString spellCheckingLanguage READ spellCheckingLanguage WRITE setSpellCheckingLanguage)
 
@@ -186,15 +188,19 @@ public:
      * This makes the text edit display a grayed-out hinting text as long as
      * the user didn't enter any text. It is often used as indication about
      * the purpose of the text edit.
-     * @since 4.4
+     * @deprecated since 5.0, use QTextEdit::setPlaceholderText instead
      */
-    void setClickMessage(const QString &msg);
+#ifndef KTEXTWIDGETS_NO_DEPRECATED
+    inline KTEXTWIDGETS_DEPRECATED void setClickMessage(const QString &msg) {setPlaceholderText(msg);}
+#endif
 
     /**
      * @return the message set with setClickMessage
-     * @since 4.4
+     * @deprecated since 5.0, use QTextEdit::placeholderText instead
      */
-    QString clickMessage() const;
+#ifndef KTEXTWIDGETS_NO_DEPRECATED
+    inline KTEXTWIDGETS_DEPRECATED QString clickMessage() const {return placeholderText();}
+#endif
 
     /**
      * @since 4.10
@@ -327,12 +333,6 @@ protected:
      * Reimplemented to catch "delete word" shortcut events.
      */
     virtual bool event(QEvent *);
-
-    /**
-     * Reimplemented to paint clickMessage.
-     */
-    virtual void paintEvent(QPaintEvent *);
-    virtual void focusOutEvent(QFocusEvent *);
 
     /**
      * Reimplemented for internal reasons

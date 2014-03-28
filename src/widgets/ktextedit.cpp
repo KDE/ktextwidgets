@@ -80,14 +80,6 @@ public:
         KConfig sonnetKConfig(QLatin1String("sonnetrc"));
         KConfigGroup group(&sonnetKConfig, "Spelling");
         checkSpellingEnabled = group.readEntry("checkerEnabledByDefault", false);
-
-        // i18n: Placeholder text in text edit widgets is the text appearing
-        // before any user input, briefly explaining to the user what to type
-        // (e.g. "Enter message").
-        // By default the text is set in italic, which may not be appropriate
-        // for some languages and scripts (e.g. for CJK ideographs).
-        QString metaMsg = i18nc("Italic placeholder text in line edits: 0 no, 1 yes", "1");
-        italicizePlaceholder = (metaMsg.trimmed() != QString(QLatin1Char('0')));
     }
 
     ~Private()
@@ -129,8 +121,6 @@ public:
     void slotAllowTab();
     void menuActivated(QAction *action);
 
-    QRect clickMessageRect() const;
-
     void init();
 
     void checkSpelling(bool force);
@@ -138,8 +128,6 @@ public:
     QAction *autoSpellCheckAction;
     QAction *allowTab;
     QAction *spellCheckAction;
-    QString clickMessage;
-    bool italicizePlaceholder : 1;
     bool customPalette : 1;
 
     bool checkSpellingEnabled : 1;
@@ -301,13 +289,6 @@ void KTextEdit::Private::slotReplaceText(const QString &text, int replacementInd
         parent->ensureCursorVisible();
     }
     lastReplacedPosition = replacementIndex;
-}
-
-QRect KTextEdit::Private::clickMessageRect() const
-{
-    int margin = int(parent->document()->documentMargin());
-    QRect rect = parent->viewport()->rect().adjusted(margin, margin, -margin, -margin);
-    return parent->fontMetrics().boundingRect(rect, Qt::AlignTop | Qt::TextWordWrap, clickMessage);
 }
 
 void KTextEdit::Private::init()
@@ -1002,49 +983,6 @@ void KTextEdit::keyPressEvent(QKeyEvent *event)
     } else {
         QTextEdit::keyPressEvent(event);
     }
-}
-
-void KTextEdit::setClickMessage(const QString &msg)
-{
-    if (msg != d->clickMessage) {
-        if (!d->clickMessage.isEmpty()) {
-            viewport()->update(d->clickMessageRect());
-        }
-        d->clickMessage = msg;
-        if (!d->clickMessage.isEmpty()) {
-            viewport()->update(d->clickMessageRect());
-        }
-    }
-}
-
-QString KTextEdit::clickMessage() const
-{
-    return d->clickMessage;
-}
-
-void KTextEdit::paintEvent(QPaintEvent *ev)
-{
-    QTextEdit::paintEvent(ev);
-
-    if (!d->clickMessage.isEmpty() && document()->isEmpty()) {
-        QPainter p(viewport());
-
-        QFont f = font();
-        f.setItalic(d->italicizePlaceholder);
-        p.setFont(f);
-
-        QColor color(palette().color(viewport()->foregroundRole()));
-        color.setAlphaF(0.5);
-        p.setPen(color);
-
-        QRect cr = d->clickMessageRect();
-        p.drawText(cr, Qt::AlignTop | Qt::TextWordWrap, d->clickMessage);
-    }
-}
-
-void KTextEdit::focusOutEvent(QFocusEvent *ev)
-{
-    QTextEdit::focusOutEvent(ev);
 }
 
 void KTextEdit::showAutoCorrectButton(bool show)
