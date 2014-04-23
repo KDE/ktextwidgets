@@ -38,6 +38,7 @@ find_package(KF5WidgetsAddons ${KF5_VERSION} REQUIRED)
 find_package(KF5WindowSystem ${KF5_VERSION} REQUIRED)
 find_package(KF5Sonnet ${KF5_VERSION} REQUIRED)
 
+add_definitions(-DTRANSLATION_DOMAIN=\"ktextwidgets5\")
 add_subdirectory(src)
 add_subdirectory(tests)
 add_subdirectory(autotests)
