@@ -15,7 +15,8 @@ include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 include(ECMPackageConfigHelpers)
 
-set(KF5_VERSION "4.98.0")
+set(KF5_VERSION "4.98.0") # handled by release scripts # handled by release scripts
+set(KF5_DEP_VERSION "4.98.0") # handled by release scripts
 
 ecm_setup_version(${KF5_VERSION}
                   VARIABLE_PREFIX KTEXTWIDGETS
@@ -28,15 +29,15 @@ set(REQUIRED_QT_VERSION 5.2.0)
 
 find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets DBus)
 
-find_package(KF5Completion ${KF5_VERSION} REQUIRED)
-find_package(KF5Config ${KF5_VERSION} REQUIRED)
-find_package(KF5ConfigWidgets ${KF5_VERSION} REQUIRED)
-find_package(KF5I18n ${KF5_VERSION} REQUIRED)
-find_package(KF5IconThemes ${KF5_VERSION} REQUIRED)
-find_package(KF5Service ${KF5_VERSION} REQUIRED)
-find_package(KF5WidgetsAddons ${KF5_VERSION} REQUIRED)
-find_package(KF5WindowSystem ${KF5_VERSION} REQUIRED)
-find_package(KF5Sonnet ${KF5_VERSION} REQUIRED)
+find_package(KF5Completion ${KF5_DEP_VERSION} REQUIRED)
+find_package(KF5Config ${KF5_DEP_VERSION} REQUIRED)
+find_package(KF5ConfigWidgets ${KF5_DEP_VERSION} REQUIRED)
+find_package(KF5I18n ${KF5_DEP_VERSION} REQUIRED)
+find_package(KF5IconThemes ${KF5_DEP_VERSION} REQUIRED)
+find_package(KF5Service ${KF5_DEP_VERSION} REQUIRED)
+find_package(KF5WidgetsAddons ${KF5_DEP_VERSION} REQUIRED)
+find_package(KF5WindowSystem ${KF5_DEP_VERSION} REQUIRED)
+find_package(KF5Sonnet ${KF5_DEP_VERSION} REQUIRED)
 
 add_definitions(-DTRANSLATION_DOMAIN=\"ktextwidgets5\")
 add_subdirectory(src)
