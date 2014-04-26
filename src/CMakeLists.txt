@@ -23,7 +23,7 @@ set(ktextwidgets_INCLUDES
 target_include_directories(KF5TextWidgets PUBLIC "$<BUILD_INTERFACE:${ktextwidgets_INCLUDES}>"
 )
 
-target_include_directories(KF5TextWidgets INTERFACE "$<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}/KTextWidgets>")
+target_include_directories(KF5TextWidgets INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/KTextWidgets>")
 
 target_link_libraries(KF5TextWidgets
 PUBLIC
@@ -73,12 +73,12 @@ ecm_generate_headers(KTextWidgets_HEADERS
   REQUIRED_HEADERS KTextWidgets_HEADERS
 )
 
-install(TARGETS KF5TextWidgets EXPORT KF5TextWidgetsTargets ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF5TextWidgets EXPORT KF5TextWidgetsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/ktextwidgets_export.h
   ${KTextWidgets_HEADERS}
-  DESTINATION ${INCLUDE_INSTALL_DIR}/KTextWidgets COMPONENT Devel
+  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/KTextWidgets COMPONENT Devel
 )
 install( FILES kregexpeditor/kregexpeditor.desktop DESTINATION ${SERVICETYPES_INSTALL_DIR} )
 

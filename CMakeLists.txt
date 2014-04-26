@@ -60,7 +60,7 @@ install(FILES "${CMAKE_CURRENT_BINARY_DIR}/KF5TextWidgetsConfig.cmake"
        )
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/ktextwidgets_version.h
-        DESTINATION ${INCLUDE_INSTALL_DIR} COMPONENT Devel
+        DESTINATION ${KF5_INCLUDE_INSTALL_DIR} COMPONENT Devel
        )
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
