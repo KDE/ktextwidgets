@@ -13,4 +13,5 @@ ktextwidgets_unit_tests(
   kreplacetest
   krichtextedittest
   ktextedit_unittest
+  kpluralhandlingspinboxtest
 )

@@ -8,6 +8,7 @@ set(ktextwidgets_LIB_SRCS
   widgets/krichtextwidget.cpp
   widgets/ktextedit.cpp
   widgets/nestedlisthelper.cpp
+  widgets/kpluralhandlingspinbox.cpp
 )
 
 add_library(KF5TextWidgets ${ktextwidgets_LIB_SRCS})
@@ -29,10 +30,10 @@ target_link_libraries(KF5TextWidgets
 PUBLIC
   Qt5::Widgets
   KF5::SonnetUi
+  KF5::I18n
 PRIVATE
   Qt5::DBus
   KF5::SonnetCore
-  KF5::I18n
   KF5::Service
   KF5::ConfigWidgets
   KF5::WindowSystem
@@ -50,6 +51,7 @@ ecm_generate_headers(KTextWidgets_HEADERS
   KRichTextEdit
   KRichTextWidget
   KTextEdit
+  KPluralHandlingSpinBox
 
   RELATIVE widgets
   REQUIRED_HEADERS KTextWidgets_HEADERS
@@ -83,5 +85,5 @@ install(FILES
 install( FILES kregexpeditor/kregexpeditor.desktop DESTINATION ${SERVICETYPES_INSTALL_DIR} )
 
 include(ECMGeneratePriFile)
-ecm_generate_pri_file(BASE_NAME KTextWidgets LIB_NAME KF5TextWidgets DEPS "widgets SonnetUi" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KF5_INCLUDE_INSTALL_DIR}/KTextWidgets)
+ecm_generate_pri_file(BASE_NAME KTextWidgets LIB_NAME KF5TextWidgets DEPS "widgets SonnetUi I18n" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KF5_INCLUDE_INSTALL_DIR}/KTextWidgets)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
