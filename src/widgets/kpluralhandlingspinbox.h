@@ -48,7 +48,6 @@ public:
      * Use this to add a plural-aware suffix, e.g. by using ki18np("singular", "plural").
      */
     void setSuffix(const KLocalizedString &suffix);
-    using QSpinBox::setSuffix;
 private:
     class KPluralHandlingSpinBoxPrivate;
     friend class KPluralHandlingSpinBoxPrivate;

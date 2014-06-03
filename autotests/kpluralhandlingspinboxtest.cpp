@@ -67,13 +67,3 @@ void KPluralHandlingSpinBoxTest::shouldReturnEmptySuffix()
     QCOMPARE(spinbox.suffix(), QString());
 }
 
-void KPluralHandlingSpinBoxTest::shouldReturnDefaultSuffixWhenUseQSpinBoxDefaultSuffixFunction()
-{
-    KPluralHandlingSpinBox spinbox;
-    spinbox.setSuffix(QLatin1Literal("suffix"));
-    spinbox.setValue(2);
-    QCOMPARE(spinbox.suffix(), QLatin1String("suffix"));
-    spinbox.setValue(1);
-    QCOMPARE(spinbox.suffix(), QLatin1String("suffix"));
-}
-

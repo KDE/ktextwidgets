@@ -34,7 +34,6 @@ private Q_SLOTS:
     void shouldUsePlurialValueWhenUseValueSuperiorToOne();
     void shouldUseSingularValueWhenWeChangeValueAndFinishWithValueEqualOne();
     void shouldReturnEmptySuffix();
-    void shouldReturnDefaultSuffixWhenUseQSpinBoxDefaultSuffixFunction();
 };
 
 #endif // KPLURALHANDLINGSPINBOXTEST_H
