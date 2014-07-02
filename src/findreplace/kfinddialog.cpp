@@ -195,6 +195,8 @@ void KFindDialog::KFindDialogPrivate::init(bool forReplace, const QStringList &_
     find->setFocus();
     QPushButton *buttonOk = buttonBox->button(QDialogButtonBox::Ok);
     buttonOk->setEnabled(!q->pattern().isEmpty());
+    q->connect(buttonOk, SIGNAL(clicked()), q, SIGNAL(okClicked()));
+
     if (forReplace) {
         KGuiItem::assign(buttonOk, KGuiItem(i18n("&Replace"), QString(),
                                             i18n("Start replace"),

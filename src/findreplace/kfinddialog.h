@@ -213,6 +213,11 @@ Q_SIGNALS:
      */
     void optionsChanged();
 
+    /**
+     * This signal is sent when we click on Ok button.
+     */
+    void okClicked();
+
 protected:
     virtual void showEvent(QShowEvent *);
 
