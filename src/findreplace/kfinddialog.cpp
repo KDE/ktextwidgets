@@ -195,7 +195,6 @@ void KFindDialog::KFindDialogPrivate::init(bool forReplace, const QStringList &_
     find->setFocus();
     QPushButton *buttonOk = buttonBox->button(QDialogButtonBox::Ok);
     buttonOk->setEnabled(!q->pattern().isEmpty());
-    q->connect(buttonOk, SIGNAL(clicked()), q, SIGNAL(okClicked()));
 
     if (forReplace) {
         KGuiItem::assign(buttonOk, KGuiItem(i18n("&Replace"), QString(),
@@ -599,5 +598,6 @@ void KFindDialog::KFindDialogPrivate::_k_slotOk()
     if (q->windowModality() != Qt::NonModal) {
         q->accept();
     }
+    emit q->okClicked();
 }
 #include "moc_kfinddialog.cpp"
