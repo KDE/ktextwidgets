@@ -53,6 +53,7 @@ public:
 
     void _k_slotPlaceholdersAboutToShow();
     void _k_slotOk();
+    void _k_slotReject();
     void _k_slotSelectedTextToggled(bool);
     void _k_showPatterns();
     void _k_showPlaceholders();

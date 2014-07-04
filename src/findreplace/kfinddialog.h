@@ -202,9 +202,14 @@ Q_SIGNALS:
     void optionsChanged();
 
     /**
-     * This signal is sent when we click on Ok button.
+     * This signal is sent when the user clicks on Ok button.
      */
     void okClicked();
+
+    /**
+     * This signal is sent when the user clicks on Cancel button.
+     */
+    void cancelClicked();
 
 protected:
     virtual void showEvent(QShowEvent *);
@@ -217,6 +222,7 @@ private:
 
     Q_PRIVATE_SLOT(d, void _k_slotPlaceholdersAboutToShow())
     Q_PRIVATE_SLOT(d, void _k_slotOk())
+    Q_PRIVATE_SLOT(d, void _k_slotReject())
     Q_PRIVATE_SLOT(d, void _k_slotSelectedTextToggled(bool))
     Q_PRIVATE_SLOT(d, void _k_showPatterns())
     Q_PRIVATE_SLOT(d, void _k_showPlaceholders())

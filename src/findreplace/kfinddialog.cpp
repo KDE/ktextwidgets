@@ -144,7 +144,7 @@ void KFindDialog::KFindDialogPrivate::init(bool forReplace, const QStringList &_
     buttonBox = new QDialogButtonBox(q);
     buttonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Close);
     q->connect(buttonBox, SIGNAL(accepted()), q, SLOT(_k_slotOk()));
-    q->connect(buttonBox, SIGNAL(rejected()), q, SLOT(reject()));
+    q->connect(buttonBox, SIGNAL(rejected()), q, SLOT(_k_slotReject()));
     topLayout->addWidget(buttonBox);
 
     // We delay creation of these until needed.
@@ -600,4 +600,11 @@ void KFindDialog::KFindDialogPrivate::_k_slotOk()
     }
     emit q->okClicked();
 }
+
+void KFindDialog::KFindDialogPrivate::_k_slotReject()
+{
+    emit q->cancelClicked();
+    q->reject();
+}
+
 #include "moc_kfinddialog.cpp"
