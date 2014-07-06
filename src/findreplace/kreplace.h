@@ -25,7 +25,6 @@
 
 #include "ktextwidgets_export.h"
 
-class KReplaceNextDialog;
 class KReplacePrivate;
 
 /**

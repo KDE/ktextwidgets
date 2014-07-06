@@ -27,7 +27,6 @@
 #include <QtCore/QStringList>
 
 class KHistoryComboBox;
-class QComboBox;
 
 class QCheckBox;
 class QDialogButtonBox;
