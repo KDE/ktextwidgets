@@ -26,7 +26,6 @@
 #include <QClipboard>
 #include <QKeyEvent>
 #include <QMenu>
-#include <QPainter>
 #include <QScrollBar>
 #include <QTextCursor>
 #include <QTextDocumentFragment>

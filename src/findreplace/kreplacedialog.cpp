@@ -22,11 +22,10 @@
 #include "kfinddialog_p.h"
 
 #include <QCheckBox>
-#include <QGroupBox>
-#include <QLabel>
-#include <QLayout>
-#include <QLineEdit>
 #include <QtCore/QRegExp>
+#include <QLineEdit>
+#include <QGridLayout>
+#include <QGroupBox>
 
 #include <khistorycombobox.h>
 #include <klocalizedstring.h>

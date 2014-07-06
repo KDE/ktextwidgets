@@ -34,7 +34,6 @@
 #include <QPushButton>
 #include <QtCore/QRegExp>
 #include <QtCore/QHash>
-#include <QTextDocument>
 #include <QVBoxLayout>
 
 // #define DEBUG_FIND

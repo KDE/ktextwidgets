@@ -25,15 +25,14 @@
 #include "kregexpeditorinterface.h"
 
 #include <QCheckBox>
-#include <QCursor>
 #include <QDialogButtonBox>
 #include <QGroupBox>
 #include <QLabel>
-#include <QLayout>
 #include <QLineEdit>
 #include <QMenu>
 #include <QPushButton>
 #include <QtCore/QRegExp>
+#include <QGridLayout>
 
 #include <klocalizedstring.h>
 #include <kmessagebox.h>

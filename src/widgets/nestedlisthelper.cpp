@@ -25,7 +25,6 @@
 #include <QTextCursor>
 #include <QTextList>
 #include <QTextBlock>
-#include <QTextDocumentFragment>
 
 #include "ktextedit.h"
 
