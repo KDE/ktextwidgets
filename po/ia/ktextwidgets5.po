@@ -1,0 +1,600 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# g.sora <g.sora@tiscali.it>, 2010, 2011, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-07-24 08:50+0000\n"
+"PO-Revision-Date: 2013-10-16 14:03+0200\n"
+"Last-Translator: G.Sora <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-l10n-ia@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: dialogs/klinkdialog.cpp:52
+msgid "Manage Link"
+msgstr "Administra Ligamine"
+
+#: dialogs/klinkdialog.cpp:59
+msgid "Link Text:"
+msgstr "Connecte Texto:"
+
+#: dialogs/klinkdialog.cpp:62
+msgid "Link URL:"
+msgstr "Connecte URL:"
+
+#: findreplace/kfind.cpp:60
+msgid "Find Next"
+msgstr "Tu trova proxime"
+
+#: findreplace/kfind.cpp:65
+#, kde-format
+msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
+msgstr "<qt>Il trova proxime evento de '<b>%1</b>'?</qt>"
+
+#: findreplace/kfind.cpp:624 findreplace/kfind.cpp:643
+#, kde-format
+msgid "1 match found."
+msgid_plural "%1 matches found."
+msgstr[0] "1 objecto equal trovate"
+msgstr[1] "%1 objectos equal trovate."
+
+#: findreplace/kfind.cpp:626
+#, kde-format
+msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
+msgstr "<qt> Necun Objecto equal trovate pro '<b>%1</b>'.</qt>"
+
+#: findreplace/kfind.cpp:645
+#, kde-format
+msgid "No matches found for '<b>%1</b>'."
+msgstr "Necun Objecto Equal trovate pro '<b>%1</b>'."
+
+#: findreplace/kfind.cpp:649 findreplace/kreplace.cpp:387
+msgid "Beginning of document reached."
+msgstr "Attingite le summitate de le documento."
+
+#: findreplace/kfind.cpp:651 findreplace/kreplace.cpp:389
+msgid "End of document reached."
+msgstr "Attingite le fin de le documento"
+
+#: findreplace/kfind.cpp:659
+msgid "Continue from the end?"
+msgstr "Il continua ex le fin?"
+
+#: findreplace/kfind.cpp:660
+msgid "Continue from the beginning?"
+msgstr "Il continua ex le initio?"
+
+#: findreplace/kfinddialog.cpp:49
+msgid "Find Text"
+msgstr "Trova texto"
+
+#: findreplace/kfinddialog.cpp:84
+msgctxt "@title:group"
+msgid "Find"
+msgstr "Trova"
+
+#: findreplace/kfinddialog.cpp:87
+msgid "&Text to find:"
+msgstr "&Texto de trovar:"
+
+#: findreplace/kfinddialog.cpp:91
+msgid "Regular e&xpression"
+msgstr "E&xpression regular"
+
+#: findreplace/kfinddialog.cpp:92
+msgid "&Edit..."
+msgstr "&Edita..."
+
+#: findreplace/kfinddialog.cpp:101
+msgid "Replace With"
+msgstr "Reimplacia con"
+
+#: findreplace/kfinddialog.cpp:104
+msgid "Replace&ment text:"
+msgstr "Texto de rei&mplaciamento:"
+
+#: findreplace/kfinddialog.cpp:108
+msgid "Use p&laceholders"
+msgstr "Usa s&ubstitutos"
+
+#: findreplace/kfinddialog.cpp:109
+msgid "Insert Place&holder"
+msgstr "Inserta un su&bstituto"
+
+#: findreplace/kfinddialog.cpp:118
+msgid "Options"
+msgstr "Optiones"
+
+#: findreplace/kfinddialog.cpp:121
+msgid "C&ase sensitive"
+msgstr "Sensibile al differentia inter majus&culas e minusculas"
+
+#: findreplace/kfinddialog.cpp:122
+msgid "&Whole words only"
+msgstr "Sol&mente parolas integre"
+
+#: findreplace/kfinddialog.cpp:123
+msgid "From c&ursor"
+msgstr "Ex c&ursor"
+
+#: findreplace/kfinddialog.cpp:124
+msgid "Find &backwards"
+msgstr "Trova de &retro"
+
+#: findreplace/kfinddialog.cpp:125
+msgid "&Selected text"
+msgstr "Texto &selectionate"
+
+#: findreplace/kfinddialog.cpp:132
+msgid "&Prompt on replace"
+msgstr "&Demanda sur reimplaciamento"
+
+#: findreplace/kfinddialog.cpp:199
+msgid "&Replace"
+msgstr "&Reimplacia"
+
+#: findreplace/kfinddialog.cpp:200
+msgid "Start replace"
+msgstr "On initia reimplaciamento"
+
+#: findreplace/kfinddialog.cpp:201
+msgid ""
+"<qt>If you press the <b>Replace</b> button, the text you entered above is "
+"searched for within the document and any occurrence is replaced with the "
+"replacement text.</qt>"
+msgstr ""
+"<qt>Si tu pressa le button <b>Reimplacia</b>, le texto que tu insertava de "
+"supra esseva cercate inter le documento e omne evento es reimplaciate con le "
+"texto de reimplaciamento.</qt>"
+
+#: findreplace/kfinddialog.cpp:205
+msgid "&Find"
+msgstr "&Trova"
+
+#: findreplace/kfinddialog.cpp:206
+msgid "Start searching"
+msgstr "On Initia cerca"
+
+#: findreplace/kfinddialog.cpp:207
+msgid ""
+"<qt>If you press the <b>Find</b> button, the text you entered above is "
+"searched for within the document.</qt>"
+msgstr ""
+"<qt> Si tu pressa le button <b>Trova</b>, le texto que tu insertava de supra "
+"esseva cercate inter le documento.</qt>"
+
+#: findreplace/kfinddialog.cpp:213
+msgid ""
+"Enter a pattern to search for, or select a previous pattern from the list."
+msgstr ""
+"Inserta un modello de cerca, o tu selectiona un modello precedente ab le "
+"lista"
+
+#: findreplace/kfinddialog.cpp:216
+msgid "If enabled, search for a regular expression."
+msgstr "Si habilitate, il cerca un expression regular"
+
+#: findreplace/kfinddialog.cpp:218
+msgid "Click here to edit your regular expression using a graphical editor."
+msgstr ""
+"Ci tu pressa pro editar tu expression regular usante un editor graphic."
+
+#: findreplace/kfinddialog.cpp:220
+msgid "Enter a replacement string, or select a previous one from the list."
+msgstr "Inserta un catena de reimplaciamento, o tu selectiona uno ex le lista"
+
+#: findreplace/kfinddialog.cpp:222
+msgid ""
+"<qt>If enabled, any occurrence of <code><b>\\N</b></code>, where <code><b>N</"
+"b></code> is an integer number, will be replaced with the corresponding "
+"capture (\"parenthesized substring\") from the pattern.<p>To include (a "
+"literal <code><b>\\N</b></code> in your replacement, put an extra backslash "
+"in front of it, like <code><b>\\\\N</b></code>.</p></qt>"
+msgstr ""
+"<qt> Si habilitate, omne evento de <code><b>\\N</b></code>, ubi <code><b>N</"
+"b></code> es un numero integre, essera reimplaciate con le captura "
+"correspondente (\"subcatena inter parenthese) ex le modello.<p> Per includer "
+"un literal <code><b>\\N</b></code> in tu reimplaciamento, pone un extra "
+"backlash in front de illo, como <code><b>\\\\N</b></code>.</p></qt>"
+
+#: findreplace/kfinddialog.cpp:229
+msgid "Click for a menu of available captures."
+msgstr "Pressa per un menu de capturas disponibile."
+
+#: findreplace/kfinddialog.cpp:231
+msgid "Require word boundaries in both ends of a match to succeed."
+msgstr ""
+"Require limites de parola in ambes le fines de un modello per succeder."
+
+#: findreplace/kfinddialog.cpp:233
+msgid "Start searching at the current cursor location rather than at the top."
+msgstr ""
+"Starta le cerca a le location currente del cursor plus tosto que a le alto"
+
+#: findreplace/kfinddialog.cpp:235
+msgid "Only search within the current selection."
+msgstr "Solmente cerca inter le selection currente"
+
+#: findreplace/kfinddialog.cpp:237
+msgid ""
+"Perform a case sensitive search: entering the pattern 'Joe' will not match "
+"'joe' or 'JOE', only 'Joe'."
+msgstr ""
+"Executa un cerca con differentias inter majusculas e minusculas: insertar le "
+"modello  'Joe' non coincidera con  'joe' o 'JOE', sed sol 'Joe'. "
+
+#: findreplace/kfinddialog.cpp:240
+msgid "Search backwards."
+msgstr "Cerca de retro."
+
+#: findreplace/kfinddialog.cpp:242
+msgid "Ask before replacing each match found."
+msgstr "Demanda ante reimplaciar omne objecto equal trovate"
+
+#: findreplace/kfinddialog.cpp:454
+msgid "Any Character"
+msgstr "Omne Character"
+
+#: findreplace/kfinddialog.cpp:455
+msgid "Start of Line"
+msgstr "Initio de Linea"
+
+#: findreplace/kfinddialog.cpp:456
+msgid "End of Line"
+msgstr "Fin de Linea"
+
+#: findreplace/kfinddialog.cpp:457
+msgid "Set of Characters"
+msgstr "Insimul de Characteres"
+
+#: findreplace/kfinddialog.cpp:458
+msgid "Repeats, Zero or More Times"
+msgstr "Repite, Zero o Multe Vices"
+
+#: findreplace/kfinddialog.cpp:459
+msgid "Repeats, One or More Times"
+msgstr "Il Repite, uno o multe Vices"
+
+#: findreplace/kfinddialog.cpp:460
+msgid "Optional"
+msgstr "Optional"
+
+#: findreplace/kfinddialog.cpp:461
+msgid "Escape"
+msgstr "Escape"
+
+#: findreplace/kfinddialog.cpp:462
+msgid "TAB"
+msgstr "TAB"
+
+#: findreplace/kfinddialog.cpp:463
+msgid "Newline"
+msgstr "Nove Linea"
+
+#: findreplace/kfinddialog.cpp:464
+msgid "Carriage Return"
+msgstr "Retorno de carro"
+
+#: findreplace/kfinddialog.cpp:465
+msgid "White Space"
+msgstr "Spatio blanco"
+
+#: findreplace/kfinddialog.cpp:466
+msgid "Digit"
+msgstr "Cifra"
+
+#: findreplace/kfinddialog.cpp:568
+msgid "Complete Match"
+msgstr "Equalitate complete"
+
+#: findreplace/kfinddialog.cpp:573
+#, kde-format
+msgid "Captured Text (%1)"
+msgstr "Texto Capturate (%1)"
+
+#: findreplace/kfinddialog.cpp:581
+msgid "You must enter some text to search for."
+msgstr "Tu debe insertar alcun texto de cercar."
+
+#: findreplace/kfinddialog.cpp:590
+msgid "Invalid regular expression."
+msgstr "Expression regular invalide"
+
+#: findreplace/kreplace.cpp:59 findreplace/kreplace.cpp:71
+msgid "Replace"
+msgstr "Reimplacia"
+
+#: findreplace/kreplace.cpp:67
+msgctxt "@action:button Replace all occurrences"
+msgid "&All"
+msgstr "&Omne"
+
+#: findreplace/kreplace.cpp:69
+msgid "&Skip"
+msgstr "&Salta"
+
+#: findreplace/kreplace.cpp:88
+#, kde-format
+msgid "Replace '%1' with '%2'?"
+msgstr "Reimplacia '%1' con '%2'?"
+
+#: findreplace/kreplace.cpp:177 findreplace/kreplace.cpp:381
+msgid "No text was replaced."
+msgstr "Nulle texto esseva reimplaciate."
+
+#: findreplace/kreplace.cpp:179 findreplace/kreplace.cpp:383
+#, kde-format
+msgid "1 replacement done."
+msgid_plural "%1 replacements done."
+msgstr[0] "Facite 1 reimplaciamento"
+msgstr[1] "Facite %1 reimplaciamentos"
+
+#: findreplace/kreplace.cpp:397
+msgid "Do you want to restart search from the end?"
+msgstr "Tu vole re-initiar le cerca ex le fin?"
+
+#: findreplace/kreplace.cpp:398
+msgid "Do you want to restart search at the beginning?"
+msgstr "Tu vole re-initiar le cerca ex le summitate?"
+
+#: findreplace/kreplace.cpp:401
+msgctxt "@action:button Restart find & replace"
+msgid "Restart"
+msgstr "Re-Initia"
+
+#: findreplace/kreplace.cpp:402
+msgctxt "@action:button Stop find & replace"
+msgid "Stop"
+msgstr "Stoppa"
+
+#: findreplace/kreplacedialog.cpp:151
+#, kde-format
+msgid "Your replacement string is referencing a capture greater than '\\%1', "
+msgstr ""
+"Tu catena de reimplaciamento referentia un captura le plus grande que '\\"
+"%1', "
+
+#: findreplace/kreplacedialog.cpp:153
+#, kde-format
+msgid "but your pattern only defines 1 capture."
+msgid_plural "but your pattern only defines %1 captures."
+msgstr[0] "ma tu modello solmente define 1 captura."
+msgstr[1] "ma tu modello solmente define %1 capturas."
+
+#: findreplace/kreplacedialog.cpp:155
+msgid "but your pattern defines no captures."
+msgstr "ma tu modello non define alcun capturas."
+
+#: findreplace/kreplacedialog.cpp:156
+msgid ""
+"\n"
+"Please correct."
+msgstr ""
+"\n"
+"Pro favor, tu corrige."
+
+#: widgets/krichtextwidget.cpp:230
+msgctxt "@action"
+msgid "Text &Color..."
+msgstr "&Color de texto ..."
+
+#: widgets/krichtextwidget.cpp:231
+msgctxt "@label stroke color"
+msgid "Color"
+msgstr "Color"
+
+#: widgets/krichtextwidget.cpp:242
+msgctxt "@action"
+msgid "Text &Highlight..."
+msgstr "&Evidentia texto ..."
+
+#: widgets/krichtextwidget.cpp:252
+msgctxt "@action"
+msgid "&Font"
+msgstr "&Font"
+
+#: widgets/krichtextwidget.cpp:262
+msgctxt "@action"
+msgid "Font &Size"
+msgstr "Dimen&sion de Font"
+
+#: widgets/krichtextwidget.cpp:272
+msgctxt "@action boldify selected text"
+msgid "&Bold"
+msgstr "&Bold"
+
+#: widgets/krichtextwidget.cpp:286
+msgctxt "@action italicize selected text"
+msgid "&Italic"
+msgstr "&Italic"
+
+#: widgets/krichtextwidget.cpp:301
+msgctxt "@action underline selected text"
+msgid "&Underline"
+msgstr "S&ublineate"
+
+#: widgets/krichtextwidget.cpp:316
+msgctxt "@action"
+msgid "&Strike Out"
+msgstr "&Strike Out"
+
+#: widgets/krichtextwidget.cpp:332
+msgctxt "@action"
+msgid "Align &Left"
+msgstr "Alinea a &Sinistra"
+
+#: widgets/krichtextwidget.cpp:333
+msgctxt "@label left justify"
+msgid "Left"
+msgstr "Sinistra"
+
+#: widgets/krichtextwidget.cpp:340
+msgctxt "@action"
+msgid "Align &Center"
+msgstr "Alinea a &Centro"
+
+#: widgets/krichtextwidget.cpp:341
+msgctxt "@label center justify"
+msgid "Center"
+msgstr "Centro"
+
+#: widgets/krichtextwidget.cpp:348
+msgctxt "@action"
+msgid "Align &Right"
+msgstr "Alinea a  Dexte&ra"
+
+#: widgets/krichtextwidget.cpp:349
+msgctxt "@label right justify"
+msgid "Right"
+msgstr "Dextera"
+
+#: widgets/krichtextwidget.cpp:356
+msgctxt "@action"
+msgid "&Justify"
+msgstr "&Justifica"
+
+#: widgets/krichtextwidget.cpp:357
+msgctxt "@label justify fill"
+msgid "Justify"
+msgstr "Justifica"
+
+#: widgets/krichtextwidget.cpp:377
+msgctxt "@action"
+msgid "Left-to-Right"
+msgstr "Sinistra a dextera"
+
+#: widgets/krichtextwidget.cpp:378
+msgctxt "@label left-to-right"
+msgid "Left-to-Right"
+msgstr "Sinistra a dextera"
+
+#: widgets/krichtextwidget.cpp:385
+msgctxt "@action"
+msgid "Right-to-Left"
+msgstr "Dextera a Sinistra"
+
+#: widgets/krichtextwidget.cpp:386
+msgctxt "@label right-to-left"
+msgid "Right-to-Left"
+msgstr "Dextera a Sinistra"
+
+#: widgets/krichtextwidget.cpp:402
+msgctxt "@title:menu"
+msgid "List Style"
+msgstr "Lista stilo"
+
+#: widgets/krichtextwidget.cpp:404
+msgctxt "@item:inmenu no list style"
+msgid "None"
+msgstr "Necun"
+
+#: widgets/krichtextwidget.cpp:405
+msgctxt "@item:inmenu disc list style"
+msgid "Disc"
+msgstr "Disco"
+
+#: widgets/krichtextwidget.cpp:406
+msgctxt "@item:inmenu circle list style"
+msgid "Circle"
+msgstr "Circulo"
+
+#: widgets/krichtextwidget.cpp:407
+msgctxt "@item:inmenu square list style"
+msgid "Square"
+msgstr "Quadrato"
+
+#: widgets/krichtextwidget.cpp:408
+msgctxt "@item:inmenu numbered lists"
+msgid "123"
+msgstr "123"
+
+#: widgets/krichtextwidget.cpp:409
+msgctxt "@item:inmenu lowercase abc lists"
+msgid "abc"
+msgstr "abc"
+
+#: widgets/krichtextwidget.cpp:410
+msgctxt "@item:inmenu uppercase abc lists"
+msgid "ABC"
+msgstr "ABC"
+
+#: widgets/krichtextwidget.cpp:411
+msgctxt "@item:inmenu lower case roman numerals"
+msgid "i ii iii"
+msgstr "i ii iii"
+
+#: widgets/krichtextwidget.cpp:412
+msgctxt "@item:inmenu upper case roman numerals"
+msgid "I II III"
+msgstr "I II III"
+
+#: widgets/krichtextwidget.cpp:428
+msgctxt "@action"
+msgid "Increase Indent"
+msgstr "Augmenta Indent"
+
+#: widgets/krichtextwidget.cpp:441
+msgctxt "@action"
+msgid "Decrease Indent"
+msgstr "Diminuer indent"
+
+#: widgets/krichtextwidget.cpp:454
+msgctxt "@action"
+msgid "Insert Rule Line"
+msgstr "Inserta Linea de Regula"
+
+#: widgets/krichtextwidget.cpp:465
+msgctxt "@action"
+msgid "Link"
+msgstr "Ligamine"
+
+#: widgets/krichtextwidget.cpp:476
+msgctxt "@action"
+msgid "Format Painter"
+msgstr "Pictor de Formato"
+
+#: widgets/krichtextwidget.cpp:486
+msgctxt "@action"
+msgid "To Plain Text"
+msgstr "A le texto plano"
+
+#: widgets/krichtextwidget.cpp:497
+msgctxt "@action"
+msgid "Subscript"
+msgstr "Subscript"
+
+#: widgets/krichtextwidget.cpp:504
+msgctxt "@action"
+msgid "Superscript"
+msgstr "Superscript"
+
+#: widgets/ktextedit.cpp:150
+msgid "Nothing to spell check."
+msgstr "Nihil de controlar orthographicamente"
+
+#: widgets/ktextedit.cpp:542
+msgid "Check Spelling..."
+msgstr "Controlo Orthographic..."
+
+#: widgets/ktextedit.cpp:546
+msgid "Auto Spell Check"
+msgstr "Auto Controlo Orthographic"
+
+#: widgets/ktextedit.cpp:551
+msgid "Allow Tabulations"
+msgstr "Permitte Tabulationes"
+
+#: widgets/ktextedit.cpp:579
+msgid "Speak Text"
+msgstr "Declama texto"
+
+#: widgets/ktextedit.cpp:593
+msgid "Starting Jovie Text-to-Speech Service Failed"
+msgstr "Il falleva a initiar le servicio texto-a-voce Jovie"
