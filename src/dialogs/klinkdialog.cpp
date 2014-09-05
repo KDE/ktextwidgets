@@ -53,6 +53,7 @@ KLinkDialog::KLinkDialog(QWidget *parent)
     setModal(true);
 
     QVBoxLayout *layout = new QVBoxLayout;
+    setLayout(layout);
 
     QGridLayout *grid = new QGridLayout;
 
