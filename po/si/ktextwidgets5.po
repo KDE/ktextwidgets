@@ -1,0 +1,595 @@
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Danishka Navin <danishka@gmail.com>, 2008, 2009, 2010, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2014-09-06 08:12+0000\n"
+"PO-Revision-Date: 2011-07-25 07:45+0530\n"
+"Last-Translator: Danishka Navin <danishka@gmail.com>\n"
+"Language-Team: Sinhala <danishka@gmail.com>\n"
+"Language: si\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+" \n"
+" \n"
+"X-Generator: Lokalize 1.2\n"
+
+#: dialogs/klinkdialog.cpp:52
+msgid "Manage Link"
+msgstr "සබැඳිය කලමණාකරනය"
+
+#: dialogs/klinkdialog.cpp:60
+msgid "Link Text:"
+msgstr "සබැඳි පෙළ:"
+
+#: dialogs/klinkdialog.cpp:63
+msgid "Link URL:"
+msgstr "සබැඳි URL:"
+
+#: findreplace/kfind.cpp:60
+msgid "Find Next"
+msgstr "මීළඟ සෙවුම"
+
+#: findreplace/kfind.cpp:65
+#, kde-format
+msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
+msgstr "<qt>'<b>%1</b>' හි ඊළඟ හමුවීම සොයන්නද?</qt>"
+
+#: findreplace/kfind.cpp:624 findreplace/kfind.cpp:643
+#, kde-format
+msgid "1 match found."
+msgid_plural "%1 matches found."
+msgstr[0] "එක් ගැළපීමක් හමුවිය"
+msgstr[1] "ගැළපීම් %1 ක් හමුවිය."
+
+#: findreplace/kfind.cpp:626
+#, kde-format
+msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
+msgstr "<qt>'<b>%1</b>' සඳහා ගැළපීමක් හමු නොවුනි.</qt>"
+
+#: findreplace/kfind.cpp:645
+#, kde-format
+msgid "No matches found for '<b>%1</b>'."
+msgstr "සඳහා '<b>%1</b>' ගැළපීම් හමුනොවීය."
+
+#: findreplace/kfind.cpp:649 findreplace/kreplace.cpp:387
+msgid "Beginning of document reached."
+msgstr "ලේඛනයේ ආරම්භයට පැමිණියා."
+
+#: findreplace/kfind.cpp:651 findreplace/kreplace.cpp:389
+msgid "End of document reached."
+msgstr "ලේඛනයේ අවසානයට පැමිණියා."
+
+#: findreplace/kfind.cpp:659
+msgid "Continue from the end?"
+msgstr "අවසානයේ සිට පටන්ගන්න ද?"
+
+#: findreplace/kfind.cpp:660
+msgid "Continue from the beginning?"
+msgstr "ආරම්භයේ සිට පටන්ගන්න ද?"
+
+#: findreplace/kfinddialog.cpp:49
+msgid "Find Text"
+msgstr "පෙළ සොයන්න"
+
+#: findreplace/kfinddialog.cpp:84
+msgctxt "@title:group"
+msgid "Find"
+msgstr "සොයන්න"
+
+#: findreplace/kfinddialog.cpp:87
+msgid "&Text to find:"
+msgstr "සෙවිය යුතු පෙළ (&T):"
+
+#: findreplace/kfinddialog.cpp:91
+msgid "Regular e&xpression"
+msgstr "ක්‍රමවත් ප්‍රකාශන (&x)"
+
+#: findreplace/kfinddialog.cpp:92
+msgid "&Edit..."
+msgstr "සැකසුම්... (&E)"
+
+#: findreplace/kfinddialog.cpp:101
+msgid "Replace With"
+msgstr "ආදේශ කළ යුත්තේ"
+
+#: findreplace/kfinddialog.cpp:104
+msgid "Replace&ment text:"
+msgstr "ආදේශ කළ යුතු පෙළ (&m):"
+
+#: findreplace/kfinddialog.cpp:108
+msgid "Use p&laceholders"
+msgstr "තැන්දරණු භාවිතා කරන්න (&l)"
+
+#: findreplace/kfinddialog.cpp:109
+msgid "Insert Place&holder"
+msgstr "තැන්දරණුව ඇතුල් කරන් (&hන)"
+
+#: findreplace/kfinddialog.cpp:118
+msgid "Options"
+msgstr "විකල්ප"
+
+#: findreplace/kfinddialog.cpp:121
+msgid "C&ase sensitive"
+msgstr "අක්‍ෂර සංවේදි (&a)"
+
+#: findreplace/kfinddialog.cpp:122
+msgid "&Whole words only"
+msgstr "සම්පූර්ණ පදයම පමණයි (&W)"
+
+#: findreplace/kfinddialog.cpp:123
+msgid "From c&ursor"
+msgstr "කර්සරයෙන් (&u)"
+
+#: findreplace/kfinddialog.cpp:124
+msgid "Find &backwards"
+msgstr "ආපස්සට සොයන්න (&b)"
+
+#: findreplace/kfinddialog.cpp:125
+msgid "&Selected text"
+msgstr "තෝරාගත් පෙළ (&S)"
+
+#: findreplace/kfinddialog.cpp:132
+msgid "&Prompt on replace"
+msgstr "ප්‍රතිස්ථාපනයේදී පොළඹවන්න (&P)"
+
+#: findreplace/kfinddialog.cpp:199
+msgid "&Replace"
+msgstr "ආදේශ කරන්න  (&R)"
+
+#: findreplace/kfinddialog.cpp:200
+msgid "Start replace"
+msgstr "ආදේශය අරඹන්න"
+
+#: findreplace/kfinddialog.cpp:201
+msgid ""
+"<qt>If you press the <b>Replace</b> button, the text you entered above is "
+"searched for within the document and any occurrence is replaced with the "
+"replacement text.</qt>"
+msgstr ""
+"<qt>ඔබ <b>ප්‍රතිස්ථාපනය කරන්න</b> බොත්තම ක්ලික් කළොත්, ඔබ ඉහත ඇතුල් කළ පෙළ සඳහා ලිපිය තුළ "
+"සොයා ඕනැම හමුවීමක් ප්‍රතිස්ථාපන පෙළ මඟින් ප්‍රතිස්ථාපනය කරනු ඇත.</qt>"
+
+#: findreplace/kfinddialog.cpp:205
+msgid "&Find"
+msgstr "සොයන්න (&F)"
+
+#: findreplace/kfinddialog.cpp:206
+msgid "Start searching"
+msgstr "සෙවීම  අරඹන්න"
+
+#: findreplace/kfinddialog.cpp:207
+msgid ""
+"<qt>If you press the <b>Find</b> button, the text you entered above is "
+"searched for within the document.</qt>"
+msgstr ""
+"<qt>ඔබ <b>සොයන්න</b> බොත්තම ක්ලික් කළොත්, ඔබ ඉහත ඇතුල් කළ පෙළ සඳහා ලිපිය තුළ සොයනු ඇත.</"
+"qt>"
+
+#: findreplace/kfinddialog.cpp:213
+msgid ""
+"Enter a pattern to search for, or select a previous pattern from the list."
+msgstr "සෙවීමට මෝස්තරයක් ඇතුල් කරන්න, හෝ ලැයිස්තුවෙන් පෙර මෝස්තරයක් තෝරන්න."
+
+#: findreplace/kfinddialog.cpp:216
+msgid "If enabled, search for a regular expression."
+msgstr "සක්‍රිය කර ඇත්නම්, ක්‍රමවත් ප්‍රකාශනයක් සඳහා සොයන්න."
+
+#: findreplace/kfinddialog.cpp:218
+msgid "Click here to edit your regular expression using a graphical editor."
+msgstr ""
+"චිත්‍රක සංස්කාරකයක් භාවිතා කර ඔබගේ ක්‍රමවත් ප්‍රකාශනය සංස්කරණය කිරීම සඳහා මෙහි ක්ලික් කරන්න."
+
+#: findreplace/kfinddialog.cpp:220
+msgid "Enter a replacement string, or select a previous one from the list."
+msgstr "ප්‍රතිස්ථාපන පෙළක් ඇතුල් කරන්න, හෝ ලැයිස්තුවෙන් පෙර එකක් තෝරන්න."
+
+#: findreplace/kfinddialog.cpp:222
+msgid ""
+"<qt>If enabled, any occurrence of <code><b>\\N</b></code>, where <code><b>N</"
+"b></code> is an integer number, will be replaced with the corresponding "
+"capture (\"parenthesized substring\") from the pattern.<p>To include (a "
+"literal <code><b>\\N</b></code> in your replacement, put an extra backslash "
+"in front of it, like <code><b>\\\\N</b></code>.</p></qt>"
+msgstr ""
+"<qt>සක්‍රිය කර ඇත්නම්, <code><b>N</b></code> පූර්ණ සංඛ්‍යාවක් වන <code><b>\\N</b></"
+"code> හි ඕනෑම හමුවීමක්, මෝස්තරයෙන් අදාළ හසුකර ගැනීමෙන් (\"වරහන් යෙදූ උප පෙළ\") "
+"ප්‍රතිස්ථාපනය වෙනු ඇත.<p>ඔබගේ ප්‍රතිස්ථාපනයේ <code><b>\\N</b></code> වාච්‍යාර්ථක් අඩංගු "
+"කිරීමට <code><b>\\\\N</b></code> ආකාරයට එයට පෙර අමතර පසු ඇල ඉරක් යොදන්න.</p></qt>"
+
+#: findreplace/kfinddialog.cpp:229
+msgid "Click for a menu of available captures."
+msgstr "ප්‍රයෝජනයට ගත හැකි හසි කිරීම්වල මෙනුවක් සඳහා ක්ලික් කරන්න."
+
+#: findreplace/kfinddialog.cpp:231
+msgid "Require word boundaries in both ends of a match to succeed."
+msgstr "ගැළපීමක් සාර්ථක වීමට අවසාන දෙකේම පද මායිම් අවශ්‍ය වේ."
+
+#: findreplace/kfinddialog.cpp:233
+msgid "Start searching at the current cursor location rather than at the top."
+msgstr "මුදුනේ සිට වෙනවට දැනට කර්සරය තිබෙන පිහිටීමෙන් සෙවීම ආරම්භ කරන්න."
+
+#: findreplace/kfinddialog.cpp:235
+msgid "Only search within the current selection."
+msgstr "දැනට ඇති තේරීම මත සොයන්න."
+
+#: findreplace/kfinddialog.cpp:237
+msgid ""
+"Perform a case sensitive search: entering the pattern 'Joe' will not match "
+"'joe' or 'JOE', only 'Joe'."
+msgstr ""
+"අකුරු අංවේදි සෙවුමක් කරන්න: 'Joe' මෝස්තරය ඇතුල් කිරීම 'joe' හෝ 'JOE' ට නොගැළපෙනු ඇත. "
+"'Joe'ට පමණක් ගැළපෙනු ඇත."
+
+#: findreplace/kfinddialog.cpp:240
+msgid "Search backwards."
+msgstr "පසුපසට සොයන්න."
+
+#: findreplace/kfinddialog.cpp:242
+msgid "Ask before replacing each match found."
+msgstr "හමුවූ ගැළපීමක් ප්‍රතිස්ථාපනය කිරීමට පෙර විමසන්න."
+
+#: findreplace/kfinddialog.cpp:454
+msgid "Any Character"
+msgstr "ඕනැම අකුරක්"
+
+#: findreplace/kfinddialog.cpp:455
+msgid "Start of Line"
+msgstr "පේළියේ ඇරභුම"
+
+#: findreplace/kfinddialog.cpp:456
+msgid "End of Line"
+msgstr "පේළියේ අවසානය"
+
+#: findreplace/kfinddialog.cpp:457
+msgid "Set of Characters"
+msgstr "අකුරු කිහිපයක්"
+
+#: findreplace/kfinddialog.cpp:458
+msgid "Repeats, Zero or More Times"
+msgstr "ශූන්‍ය හෝ කීප වාරයක් නැවත නැවත සිදු කරයි"
+
+#: findreplace/kfinddialog.cpp:459
+msgid "Repeats, One or More Times"
+msgstr "එක් වරක් හෝ කීප වාරයක් නැවත නැවත සිදු කරයි"
+
+#: findreplace/kfinddialog.cpp:460
+msgid "Optional"
+msgstr "වෛකල්පිත"
+
+#: findreplace/kfinddialog.cpp:461
+msgid "Escape"
+msgstr "Escape"
+
+#: findreplace/kfinddialog.cpp:462
+msgid "TAB"
+msgstr "TAB"
+
+#: findreplace/kfinddialog.cpp:463
+msgid "Newline"
+msgstr "නවපෙළ"
+
+#: findreplace/kfinddialog.cpp:464
+msgid "Carriage Return"
+msgstr "Carriage Return"
+
+#: findreplace/kfinddialog.cpp:465
+msgid "White Space"
+msgstr "හිස් ඉඩ"
+
+#: findreplace/kfinddialog.cpp:466
+msgid "Digit"
+msgstr "අංකය"
+
+#: findreplace/kfinddialog.cpp:568
+msgid "Complete Match"
+msgstr "සම්පූර්ණ ගැළපීම"
+
+#: findreplace/kfinddialog.cpp:573
+#, kde-format
+msgid "Captured Text (%1)"
+msgstr "ග්‍රහණය කළ පෙළ (%1)"
+
+#: findreplace/kfinddialog.cpp:581
+msgid "You must enter some text to search for."
+msgstr "ඔබ සෙවීම සඳහා කිසියම් පෙළ ඇතුල් කළ යුතුයි."
+
+#: findreplace/kfinddialog.cpp:590
+msgid "Invalid regular expression."
+msgstr "අවලංගු ක්‍රමවත් ප්‍රකාශය."
+
+#: findreplace/kreplace.cpp:59 findreplace/kreplace.cpp:71
+msgid "Replace"
+msgstr "ආදේශය"
+
+#: findreplace/kreplace.cpp:67
+msgctxt "@action:button Replace all occurrences"
+msgid "&All"
+msgstr "සියලු (&A)"
+
+#: findreplace/kreplace.cpp:69
+msgid "&Skip"
+msgstr "මඟහරින්න (&S)"
+
+#: findreplace/kreplace.cpp:88
+#, kde-format
+msgid "Replace '%1' with '%2'?"
+msgstr "'%2' සඳහා '%1' ආදේශ කරනවා ද?"
+
+#: findreplace/kreplace.cpp:177 findreplace/kreplace.cpp:381
+msgid "No text was replaced."
+msgstr "කිසිදු පෙළක් ආදේශකළේ  නැත."
+
+#: findreplace/kreplace.cpp:179 findreplace/kreplace.cpp:383
+#, kde-format
+msgid "1 replacement done."
+msgid_plural "%1 replacements done."
+msgstr[0] "එක් ආදේශනයක් සිදු කළා."
+msgstr[1] "ආදේශනය %1 ක් සිදු කළා"
+
+#: findreplace/kreplace.cpp:397
+msgid "Do you want to restart search from the end?"
+msgstr "ඔබට අවසානයේ සිට සෙවීම නැවත ආරම්භ කිරීමට අවශ්‍යද?"
+
+#: findreplace/kreplace.cpp:398
+msgid "Do you want to restart search at the beginning?"
+msgstr "ඔබට ආරම්භයේ සිට සෙවීම නැවත ආරම්භ කිරීමට අවශ්‍යද?"
+
+#: findreplace/kreplace.cpp:401
+msgctxt "@action:button Restart find & replace"
+msgid "Restart"
+msgstr "යළි ඇරඹුම"
+
+#: findreplace/kreplace.cpp:402
+msgctxt "@action:button Stop find & replace"
+msgid "Stop"
+msgstr "නවත් වන්න"
+
+#: findreplace/kreplacedialog.cpp:151
+#, kde-format
+msgid "Your replacement string is referencing a capture greater than '\\%1', "
+msgstr "ඔබගේ ප්‍රතිස්ථාපන පෙළ '\\%1' ට වැඩි හසු කිරීමක් නිර්දේශ කරයි,"
+
+#: findreplace/kreplacedialog.cpp:153
+#, kde-format
+msgid "but your pattern only defines 1 capture."
+msgid_plural "but your pattern only defines %1 captures."
+msgstr[0] "නමුත් ඔබගේ මෝස්තරය අර්ථ දක්වන්නේ එක් හසු කිරීමක් පමණි."
+msgstr[1] "නමුත් ඔබගේ මෝස්තරය අර්ථ දක්වන්නේ හසු කිරීම් %1ක් පමණි."
+
+#: findreplace/kreplacedialog.cpp:155
+msgid "but your pattern defines no captures."
+msgstr "නමුත් ඔබගේ මෝස්තරය හසු කිරීම් අර්ථ දක්වන්නේ නැත."
+
+#: findreplace/kreplacedialog.cpp:156
+msgid ""
+"\n"
+"Please correct."
+msgstr ""
+"\n"
+"කරුණාකර නිවැරදි කරන්න."
+
+#: widgets/krichtextwidget.cpp:230
+msgctxt "@action"
+msgid "Text &Color..."
+msgstr "පෙළ වර්‍ණය... (&C)"
+
+#: widgets/krichtextwidget.cpp:231
+msgctxt "@label stroke color"
+msgid "Color"
+msgstr "වර්‍ණය"
+
+#: widgets/krichtextwidget.cpp:242
+msgctxt "@action"
+msgid "Text &Highlight..."
+msgstr "පෙළ පද්දීපනය... (&H)"
+
+#: widgets/krichtextwidget.cpp:252
+msgctxt "@action"
+msgid "&Font"
+msgstr "අක්‍ෂර (&F)"
+
+#: widgets/krichtextwidget.cpp:262
+msgctxt "@action"
+msgid "Font &Size"
+msgstr "අකුරු ප්‍රමාණය (&S)"
+
+#: widgets/krichtextwidget.cpp:272
+msgctxt "@action boldify selected text"
+msgid "&Bold"
+msgstr "තදකුරු (&B)"
+
+#: widgets/krichtextwidget.cpp:286
+msgctxt "@action italicize selected text"
+msgid "&Italic"
+msgstr "ඇලකුරු (&I)"
+
+#: widgets/krichtextwidget.cpp:301
+msgctxt "@action underline selected text"
+msgid "&Underline"
+msgstr "යටි ඉර (&U)"
+
+#: widgets/krichtextwidget.cpp:316
+msgctxt "@action"
+msgid "&Strike Out"
+msgstr "හරහට ඉර (&S)"
+
+#: widgets/krichtextwidget.cpp:332
+msgctxt "@action"
+msgid "Align &Left"
+msgstr "වමට පෙළ ගස්සන්න (&L)"
+
+#: widgets/krichtextwidget.cpp:333
+msgctxt "@label left justify"
+msgid "Left"
+msgstr "වම"
+
+#: widgets/krichtextwidget.cpp:340
+msgctxt "@action"
+msgid "Align &Center"
+msgstr "මැදට පෙළ ගස්සන්න (&C)"
+
+#: widgets/krichtextwidget.cpp:341
+msgctxt "@label center justify"
+msgid "Center"
+msgstr "මැද"
+
+#: widgets/krichtextwidget.cpp:348
+msgctxt "@action"
+msgid "Align &Right"
+msgstr "දකුණට පෙළ ගස්සන්න (&R)"
+
+#: widgets/krichtextwidget.cpp:349
+msgctxt "@label right justify"
+msgid "Right"
+msgstr "දකුණ"
+
+#: widgets/krichtextwidget.cpp:356
+msgctxt "@action"
+msgid "&Justify"
+msgstr "සමව පෙළ ගස්සන්න (&J)"
+
+#: widgets/krichtextwidget.cpp:357
+msgctxt "@label justify fill"
+msgid "Justify"
+msgstr "සමව පෙළ ගස්සන්න"
+
+#: widgets/krichtextwidget.cpp:377
+msgctxt "@action"
+msgid "Left-to-Right"
+msgstr "වමේ-සිට-දකුණට"
+
+#: widgets/krichtextwidget.cpp:378
+msgctxt "@label left-to-right"
+msgid "Left-to-Right"
+msgstr "වමේ-සිට-දකුණට"
+
+#: widgets/krichtextwidget.cpp:385
+msgctxt "@action"
+msgid "Right-to-Left"
+msgstr "දකුණේ-සිට-වමට"
+
+#: widgets/krichtextwidget.cpp:386
+msgctxt "@label right-to-left"
+msgid "Right-to-Left"
+msgstr "දකුණේ-සිට-වමට"
+
+#: widgets/krichtextwidget.cpp:402
+msgctxt "@title:menu"
+msgid "List Style"
+msgstr "ලැයිස්තු රටාව"
+
+#: widgets/krichtextwidget.cpp:404
+msgctxt "@item:inmenu no list style"
+msgid "None"
+msgstr "කිසිවක් නැත"
+
+#: widgets/krichtextwidget.cpp:405
+msgctxt "@item:inmenu disc list style"
+msgid "Disc"
+msgstr "තැටිය"
+
+#: widgets/krichtextwidget.cpp:406
+msgctxt "@item:inmenu circle list style"
+msgid "Circle"
+msgstr "කවය"
+
+#: widgets/krichtextwidget.cpp:407
+msgctxt "@item:inmenu square list style"
+msgid "Square"
+msgstr "කොටුව"
+
+#: widgets/krichtextwidget.cpp:408
+msgctxt "@item:inmenu numbered lists"
+msgid "123"
+msgstr "123"
+
+#: widgets/krichtextwidget.cpp:409
+msgctxt "@item:inmenu lowercase abc lists"
+msgid "abc"
+msgstr "abc"
+
+#: widgets/krichtextwidget.cpp:410
+msgctxt "@item:inmenu uppercase abc lists"
+msgid "ABC"
+msgstr "ABC"
+
+#: widgets/krichtextwidget.cpp:411
+msgctxt "@item:inmenu lower case roman numerals"
+msgid "i ii iii"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:412
+msgctxt "@item:inmenu upper case roman numerals"
+msgid "I II III"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:428
+msgctxt "@action"
+msgid "Increase Indent"
+msgstr "අනූච්ඡේදනය වැඩි කරන්න"
+
+#: widgets/krichtextwidget.cpp:441
+msgctxt "@action"
+msgid "Decrease Indent"
+msgstr "අනූච්ඡේදනය අඩු කරන්න"
+
+#: widgets/krichtextwidget.cpp:454
+msgctxt "@action"
+msgid "Insert Rule Line"
+msgstr "නීති රේඛාව ඇතුල් කරන්න"
+
+#: widgets/krichtextwidget.cpp:465
+msgctxt "@action"
+msgid "Link"
+msgstr "සබැඳිය"
+
+#: widgets/krichtextwidget.cpp:476
+msgctxt "@action"
+msgid "Format Painter"
+msgstr "සිත්තරා ආකෘතිගත කරන්න"
+
+#: widgets/krichtextwidget.cpp:486
+msgctxt "@action"
+msgid "To Plain Text"
+msgstr "සරල පෙළට"
+
+#: widgets/krichtextwidget.cpp:497
+msgctxt "@action"
+msgid "Subscript"
+msgstr "දායකත්වය"
+
+#: widgets/krichtextwidget.cpp:504
+msgctxt "@action"
+msgid "Superscript"
+msgstr "උඩකුර"
+
+#: widgets/ktextedit.cpp:150
+msgid "Nothing to spell check."
+msgstr "අක්‍ෂර වින්‍යාස පරික්‍ෂාවට කිසිවක් නොමැත."
+
+#: widgets/ktextedit.cpp:542
+msgid "Check Spelling..."
+msgstr "අක්‍ෂර වින්‍යාස පිරික්සමින්..."
+
+#: widgets/ktextedit.cpp:546
+msgid "Auto Spell Check"
+msgstr "ස්වයංක්‍රීය අක්‍ෂර වින්‍යාස"
+
+#: widgets/ktextedit.cpp:551
+msgid "Allow Tabulations"
+msgstr "වගුකිරීම"
+
+#: widgets/ktextedit.cpp:579
+#, fuzzy
+#| msgid "Speak custom text"
+msgid "Speak Text"
+msgstr "රිසිකළ පෙළ පවසන්න"
+
+#: widgets/ktextedit.cpp:593
+msgid "Starting Jovie Text-to-Speech Service Failed"
+msgstr ""
