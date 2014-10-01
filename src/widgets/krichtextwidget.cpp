@@ -318,7 +318,7 @@ QList<QAction *> KRichTextWidget::createActions()
         strikeout.setStrikeOut(true);
         d->action_text_strikeout->setFont(strikeout);
         d->richTextActionList.append((d->action_text_strikeout));
-        d->action_text_strikeout->setObjectName(QStringLiteral("format_text_strikethrough"));
+        d->action_text_strikeout->setObjectName(QStringLiteral("format_text_strikeout"));
         d->action_text_strikeout->setShortcut(Qt::CTRL + Qt::Key_L);
         connect(d->action_text_strikeout, SIGNAL(triggered(bool)),
                 this, SLOT(setTextStrikeOut(bool)));
