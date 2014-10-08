@@ -575,16 +575,20 @@ QMenu *KTextEdit::mousePopupMenu()
             popup->addAction(replaceAction);
         }
     }
+//TODO port to QtSpeech
+#if 0
     popup->addSeparator();
     QAction *speakAction = popup->addAction(i18n("Speak Text"));
     speakAction->setIcon(QIcon::fromTheme(QLatin1String("preferences-desktop-text-to-speech")));
     speakAction->setEnabled(!emptyDocument);
     connect(speakAction, SIGNAL(triggered(bool)), this, SLOT(slotSpeakText()));
+#endif
     return popup;
 }
 
 void KTextEdit::slotSpeakText()
 {
+#if 0
     // If KTTSD not running, start it.
     QDBusConnectionInterface *bus = QDBusConnection::sessionBus().interface();
     if (!bus->isServiceRegistered(QLatin1String("org.kde.kttsd"))) {
@@ -602,6 +606,7 @@ void KTextEdit::slotSpeakText()
         text = toPlainText();
     }
     ktts.asyncCall(QLatin1String("say"), text, 0);
+#endif
 }
 
 void KTextEdit::contextMenuEvent(QContextMenuEvent *event)
