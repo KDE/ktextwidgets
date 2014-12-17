@@ -212,7 +212,7 @@ Q_SIGNALS:
     void cancelClicked();
 
 protected:
-    virtual void showEvent(QShowEvent *);
+    virtual void showEvent(QShowEvent *) Q_DECL_OVERRIDE;
 
 private:
     friend class KReplaceDialog;
