@@ -24,7 +24,7 @@ set(ktextwidgets_INCLUDES
 target_include_directories(KF5TextWidgets PUBLIC "$<BUILD_INTERFACE:${ktextwidgets_INCLUDES}>"
 )
 
-target_include_directories(KF5TextWidgets INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/KTextWidgets>")
+target_include_directories(KF5TextWidgets INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/KTextWidgets>")
 
 target_link_libraries(KF5TextWidgets
 PUBLIC
@@ -80,10 +80,10 @@ install(TARGETS KF5TextWidgets EXPORT KF5TextWidgetsTargets ${KF5_INSTALL_TARGET
 install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/ktextwidgets_export.h
   ${KTextWidgets_HEADERS}
-  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/KTextWidgets COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KTextWidgets COMPONENT Devel
 )
-install( FILES kregexpeditor/kregexpeditor.desktop DESTINATION ${SERVICETYPES_INSTALL_DIR} )
+install( FILES kregexpeditor/kregexpeditor.desktop DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR} )
 
 include(ECMGeneratePriFile)
-ecm_generate_pri_file(BASE_NAME KTextWidgets LIB_NAME KF5TextWidgets DEPS "widgets SonnetUi I18n" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KF5_INCLUDE_INSTALL_DIR}/KTextWidgets)
+ecm_generate_pri_file(BASE_NAME KTextWidgets LIB_NAME KF5TextWidgets DEPS "widgets SonnetUi I18n" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/KTextWidgets)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
