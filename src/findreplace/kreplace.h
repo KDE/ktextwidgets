@@ -188,13 +188,13 @@ public:
      * and we could even be hitting the beginning of the document (so not all
      * matches have even been seen).
      */
-    virtual bool shouldRestart(bool forceAsking = false, bool showNumMatches = true) const;
+    bool shouldRestart(bool forceAsking = false, bool showNumMatches = true) const Q_DECL_OVERRIDE;
 
     /**
      * Displays the final dialog telling the user how many replacements were made.
      * Call either this or shouldRestart().
      */
-    virtual void displayFinalDialog() const;
+    void displayFinalDialog() const Q_DECL_OVERRIDE;
 
 Q_SIGNALS:
 

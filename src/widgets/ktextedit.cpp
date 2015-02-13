@@ -57,7 +57,7 @@ class KTextDecorator : public Sonnet::SpellCheckDecorator
 {
 public:
     KTextDecorator(KTextEdit *textEdit);
-    virtual bool isSpellCheckingEnabledForBlock(const QString &textBlock) const;
+    bool isSpellCheckingEnabledForBlock(const QString &textBlock) const Q_DECL_OVERRIDE;
 private:
     KTextEdit *m_textEdit;
 };
