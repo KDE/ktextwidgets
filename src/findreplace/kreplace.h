@@ -129,7 +129,7 @@ public:
      * Can be useful if reusing the same KReplace for different operations,
      * or when restarting from the beginning of the document.
      */
-    virtual void resetCounts() Q_DECL_OVERRIDE;
+    void resetCounts() Q_DECL_OVERRIDE;
 
     /**
      * Walk the text fragment (e.g. kwrite line, kspread cell) looking for matches.
