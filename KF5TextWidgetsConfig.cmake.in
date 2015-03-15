@@ -1,11 +1,5 @@
 @PACKAGE_INIT@
 
-find_dependency(KF5Completion "@KF5_DEP_VERSION@")
-find_dependency(KF5ConfigWidgets "@KF5_DEP_VERSION@")
-find_dependency(KF5IconThemes "@KF5_DEP_VERSION@")
-find_dependency(KF5Service "@KF5_DEP_VERSION@")
-find_dependency(KF5WindowSystem "@KF5_DEP_VERSION@")
-
 find_dependency(Qt5Widgets @REQUIRED_QT_VERSION@)
 find_dependency(KF5Sonnet "@KF5_DEP_VERSION@")
 find_dependency(KF5I18n "@KF5_DEP_VERSION@")
