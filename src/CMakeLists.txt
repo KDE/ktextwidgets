@@ -41,6 +41,13 @@ PRIVATE
   KF5::Completion
 )
 
+if (Qt5TextToSpeech_FOUND)
+    target_link_libraries(KF5TextWidgets
+PRIVATE
+        Qt5::TextToSpeech)
+endif()
+
+
 set_target_properties(KF5TextWidgets PROPERTIES VERSION ${KTEXTWIDGETS_VERSION_STRING}
                                                 SOVERSION ${KTEXTWIDGETS_SOVERSION}
                                                 EXPORT_NAME TextWidgets

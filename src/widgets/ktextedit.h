@@ -25,7 +25,6 @@
 #include <sonnet/highlighter.h>
 #include <QTextEdit>
 
-
 /**
  * @short A KDE'ified QTextEdit
  *

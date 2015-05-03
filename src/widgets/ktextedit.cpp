@@ -33,6 +33,9 @@
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QDebug>
+#ifdef HAVE_SPEECH
+#include <QTextToSpeech>
+#endif
 
 #include <sonnet/configdialog.h>
 #include <sonnet/dialog.h>
@@ -72,13 +75,20 @@ public:
           findReplaceEnabled(true),
           showTabAction(true),
           showAutoCorrectionButton(false),
-          decorator(0), findDlg(0), find(0), repDlg(0), replace(0), findIndex(0), repIndex(0),
+          decorator(0), findDlg(0), find(0), repDlg(0), replace(0),
+#ifdef HAVE_SPEECH
+          textToSpeech(Q_NULLPTR),
+#endif
+          findIndex(0), repIndex(0),
           lastReplacedPosition(-1)
     {
         //Check the default sonnet settings to see if spellchecking should be enabled.
         KConfig sonnetKConfig(QLatin1String("sonnetrc"));
         KConfigGroup group(&sonnetKConfig, "Spelling");
         checkSpellingEnabled = group.readEntry("checkerEnabledByDefault", false);
+#ifdef HAVE_SPEECH
+        textToSpeech = new QTextToSpeech(parent);
+#endif
     }
 
     ~Private()
@@ -88,6 +98,9 @@ public:
         delete find;
         delete replace;
         delete repDlg;
+#ifdef HAVE_SPEECH
+        delete textToSpeech;
+#endif
     }
 
     /**
@@ -140,6 +153,10 @@ public:
     KFind *find;
     KReplaceDialog *repDlg;
     KReplace *replace;
+#ifdef HAVE_SPEECH
+    QTextToSpeech *textToSpeech;
+#endif
+
     int findIndex, repIndex;
     int lastReplacedPosition;
 };
@@ -575,8 +592,7 @@ QMenu *KTextEdit::mousePopupMenu()
             popup->addAction(replaceAction);
         }
     }
-//TODO port to QtSpeech
-#if 0
+#ifdef HAVE_SPEECH
     popup->addSeparator();
     QAction *speakAction = popup->addAction(i18n("Speak Text"));
     speakAction->setIcon(QIcon::fromTheme(QLatin1String("preferences-desktop-text-to-speech")));
@@ -588,24 +604,14 @@ QMenu *KTextEdit::mousePopupMenu()
 
 void KTextEdit::slotSpeakText()
 {
-#if 0
-    // If KTTSD not running, start it.
-    QDBusConnectionInterface *bus = QDBusConnection::sessionBus().interface();
-    if (!bus->isServiceRegistered(QLatin1String("org.kde.kttsd"))) {
-        QDBusReply<void> reply = bus->startService(QLatin1String("org.kde.kttsd"));
-        if (!reply.isValid()) {
-            KMessageBox::error(this, i18n("Starting Jovie Text-to-Speech Service Failed"), reply.error().message());
-            return;
-        }
-    }
-    QDBusInterface ktts(QLatin1String("org.kde.kttsd"), QLatin1String("/KSpeech"), QLatin1String("org.kde.KSpeech"));
+#ifdef HAVE_SPEECH
     QString text;
     if (textCursor().hasSelection()) {
         text = textCursor().selectedText();
     } else {
         text = toPlainText();
     }
-    ktts.asyncCall(QLatin1String("say"), text, 0);
+    d->textToSpeech->say(text);
 #endif
 }
 
