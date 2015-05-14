@@ -321,6 +321,10 @@ protected Q_SLOTS:
     void slotDoFind();
     void slotFind();
     void slotFindNext();
+    /**
+     * @since 5.11
+     */
+    void slotFindPrevious();
     void slotReplace();
     /**
      * @since 4.3

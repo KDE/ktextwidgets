@@ -491,6 +491,9 @@ bool KTextEdit::Private::handleShortcut(const QKeyEvent *event)
     } else if (findReplaceEnabled && KStandardShortcut::findNext().contains(key)) {
         parent->slotFindNext();
         return true;
+    } else if (findReplaceEnabled && KStandardShortcut::findPrev().contains(key)) {
+        parent->slotFindPrevious();
+        return true;
     } else if (findReplaceEnabled && KStandardShortcut::replace().contains(key)) {
         if (!parent->isReadOnly()) {
             parent->slotReplace();
@@ -574,15 +577,19 @@ QMenu *KTextEdit::mousePopupMenu()
     if (d->findReplaceEnabled) {
         QAction *findAction = KStandardAction::find(this, SLOT(slotFind()), popup);
         QAction *findNextAction = KStandardAction::findNext(this, SLOT(slotFindNext()), popup);
+        QAction *findPrevAction = KStandardAction::findPrev(this, SLOT(slotFindPrevious()), popup);
         if (emptyDocument) {
             findAction->setEnabled(false);
             findNextAction->setEnabled(false);
+            findPrevAction->setEnabled(false);
         } else {
             findNextAction->setEnabled(d->find != 0);
+            findPrevAction->setEnabled(d->find != 0);
         }
         popup->addSeparator();
         popup->addAction(findAction);
         popup->addAction(findNextAction);
+        popup->addAction(findPrevAction);
 
         if (!isReadOnly()) {
             QAction *replaceAction = KStandardAction::replace(this, SLOT(slotReplace()), popup);
@@ -897,6 +904,19 @@ void KTextEdit::slotFindNext()
     }
 }
 
+void KTextEdit::slotFindPrevious()
+{
+    if (!d->find) {
+        return;
+    }
+    const long oldOptions = d->find->options();
+    d->find->setOptions(oldOptions ^ KFind::FindBackwards);
+    slotFindNext();
+    if (d->find) {
+        d->find->setOptions(oldOptions);
+    }
+}
+
 void KTextEdit::slotFind()
 {
     if (document()->isEmpty()) {  // saves having to track the text changes
@@ -977,6 +997,8 @@ bool KTextEdit::Private::overrideShortcut(const QKeyEvent *event)
     } else if (findReplaceEnabled && KStandardShortcut::find().contains(key)) {
         return true;
     } else if (findReplaceEnabled && KStandardShortcut::findNext().contains(key)) {
+        return true;
+    } else if (findReplaceEnabled && KStandardShortcut::findPrev().contains(key)) {
         return true;
     } else if (findReplaceEnabled && KStandardShortcut::replace().contains(key)) {
         return true;
