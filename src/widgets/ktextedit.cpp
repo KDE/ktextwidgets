@@ -646,6 +646,12 @@ Sonnet::Highlighter *KTextEdit::highlighter() const
     }
 }
 
+void KTextEdit::clearDecorator()
+{
+    delete d->decorator;
+    d->decorator = 0;
+}
+
 void KTextEdit::addTextDecorator(Sonnet::SpellCheckDecorator *decorator)
 {
     d->decorator = decorator;
@@ -682,8 +688,7 @@ void KTextEdit::setCheckSpellingEnabled(bool check)
             }
         }
     } else {
-        delete d->decorator;
-        d->decorator = 0;
+        clearDecorator();
     }
 }
 

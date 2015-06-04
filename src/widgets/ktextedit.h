@@ -320,6 +320,12 @@ public Q_SLOTS:
      */
     void addTextDecorator(Sonnet::SpellCheckDecorator *decorator);
 
+    /**
+     * @brief clearDecorator clear the spellcheckerdecorator
+     * @since 5.11
+     */
+    void clearDecorator();
+
 protected Q_SLOTS:
     /**
      * @since 4.1
