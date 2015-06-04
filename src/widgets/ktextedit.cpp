@@ -148,7 +148,7 @@ public:
     bool showAutoCorrectionButton: 1;
     QTextDocumentFragment originalDoc;
     QString spellCheckingLanguage;
-    KTextDecorator *decorator;
+    Sonnet::SpellCheckDecorator *decorator;
     KFindDialog *findDlg;
     KFind *find;
     KReplaceDialog *repDlg;
@@ -646,14 +646,20 @@ Sonnet::Highlighter *KTextEdit::highlighter() const
     }
 }
 
+void KTextEdit::addTextDecorator(Sonnet::SpellCheckDecorator *decorator)
+{
+    d->decorator = decorator;
+}
+
 void KTextEdit::setHighlighter(Sonnet::Highlighter *_highLighter)
 {
-    d->decorator = new KTextDecorator(this);
-    d->decorator->setHighlighter(_highLighter);
+    KTextDecorator *decorator = new KTextDecorator(this);
+    decorator->setHighlighter(_highLighter);
 
     //KTextEdit used to take ownership of the highlighter, Sonnet::SpellCheckDecorator does not.
     //so we reparent the highlighter so it will be deleted when the decorator is destroyed
-    _highLighter->setParent(d->decorator);
+    _highLighter->setParent(decorator);
+    addTextDecorator(decorator);
 }
 
 void KTextEdit::setCheckSpellingEnabled(bool check)

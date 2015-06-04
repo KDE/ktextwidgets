@@ -24,7 +24,9 @@
 
 #include <sonnet/highlighter.h>
 #include <QTextEdit>
-
+namespace Sonnet {
+class SpellCheckDecorator;
+}
 /**
  * @short A KDE'ified QTextEdit
  *
@@ -311,6 +313,12 @@ public Q_SLOTS:
      * @since 4.1
      */
     void replace();
+
+    /**
+     * Add custom spell checker decorator
+     * @since 5.11
+     */
+    void addTextDecorator(Sonnet::SpellCheckDecorator *decorator);
 
 protected Q_SLOTS:
     /**
