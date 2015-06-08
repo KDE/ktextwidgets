@@ -32,7 +32,6 @@ PUBLIC
   KF5::SonnetUi
   KF5::I18n
 PRIVATE
-  Qt5::DBus
   KF5::SonnetCore
   KF5::Service
   KF5::ConfigWidgets

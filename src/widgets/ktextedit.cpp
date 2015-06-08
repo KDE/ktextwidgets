@@ -29,9 +29,6 @@
 #include <QScrollBar>
 #include <QTextCursor>
 #include <QTextDocumentFragment>
-#include <QDBusInterface>
-#include <QDBusConnection>
-#include <QDBusConnectionInterface>
 #include <QDebug>
 #ifdef HAVE_SPEECH
 #include <QTextToSpeech>
