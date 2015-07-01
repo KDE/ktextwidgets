@@ -657,6 +657,8 @@ void KTextEdit::addTextDecorator(Sonnet::SpellCheckDecorator *decorator)
 void KTextEdit::setHighlighter(Sonnet::Highlighter *_highLighter)
 {
     KTextDecorator *decorator = new KTextDecorator(this);
+    // The old default highlighter must be manually deleted.
+    delete decorator->highlighter();
     decorator->setHighlighter(_highLighter);
 
     //KTextEdit used to take ownership of the highlighter, Sonnet::SpellCheckDecorator does not.
