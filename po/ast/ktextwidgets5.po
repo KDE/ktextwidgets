@@ -1,0 +1,669 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# enolp <enolp@softastur.org>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4-1\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2015-06-10 09:04+0000\n"
+"PO-Revision-Date: 2015-06-30 20:48+0100\n"
+"Last-Translator: Enol P. <enolp@softastur.org>\n"
+"Language-Team: Asturian <alminsitradores@softastur.org>\n"
+"Language: ast_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: asturian\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: dialogs/klinkdialog.cpp:52
+msgid "Manage Link"
+msgstr "Xestionar enllaz"
+
+#: dialogs/klinkdialog.cpp:60
+msgid "Link Text:"
+msgstr "Testu d'enllaz:"
+
+#: dialogs/klinkdialog.cpp:63
+msgid "Link URL:"
+msgstr "URL d'enllaz:"
+
+#: findreplace/kfind.cpp:60
+msgid "Find Next"
+msgstr "Alcontrar siguiente"
+
+#: findreplace/kfind.cpp:65
+#, kde-format
+msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
+msgstr "<qt>¿Alcontrar l'apaición siguiente de «<b>%1</b>»?</qt>"
+
+#: findreplace/kfind.cpp:624 findreplace/kfind.cpp:643
+#, kde-format
+msgid "1 match found."
+msgid_plural "%1 matches found."
+msgstr[0] "Alcontróse una coincidencia."
+msgstr[1] "Alcontráronse %1 coincidencies."
+
+#: findreplace/kfind.cpp:626
+#, kde-format
+msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
+msgstr "<qt>Nun s'alcontraron coincidencies pa «<b>%1</b>».</qt>"
+
+#: findreplace/kfind.cpp:645
+#, kde-format
+msgid "No matches found for '<b>%1</b>'."
+msgstr "Nun s'alcontraron coincidencies pa «<b>%1</b>»."
+
+#: findreplace/kfind.cpp:649 findreplace/kreplace.cpp:387
+msgid "Beginning of document reached."
+msgstr "Algamóse l'entamu del documentu."
+
+#: findreplace/kfind.cpp:651 findreplace/kreplace.cpp:389
+msgid "End of document reached."
+msgstr "Algamóse'l final del documentu."
+
+#: findreplace/kfind.cpp:659
+msgid "Continue from the end?"
+msgstr "¿Siguir dende'l final?"
+
+#: findreplace/kfind.cpp:660
+msgid "Continue from the beginning?"
+msgstr "¿Siguir dende l'entamu?"
+
+#: findreplace/kfinddialog.cpp:49
+msgid "Find Text"
+msgstr "Alcontrar testu"
+
+#: findreplace/kfinddialog.cpp:84
+msgctxt "@title:group"
+msgid "Find"
+msgstr "Alcontrar"
+
+#: findreplace/kfinddialog.cpp:87
+msgid "&Text to find:"
+msgstr "&Testu p'alcontrar:"
+
+#: findreplace/kfinddialog.cpp:91
+msgid "Regular e&xpression"
+msgstr "Espresión &regular"
+
+#: findreplace/kfinddialog.cpp:92
+msgid "&Edit..."
+msgstr "&Editar..."
+
+#: findreplace/kfinddialog.cpp:101
+msgid "Replace With"
+msgstr "Trocar con"
+
+#: findreplace/kfinddialog.cpp:104
+msgid "Replace&ment text:"
+msgstr "Tro&quéu de testu:"
+
+#: findreplace/kfinddialog.cpp:108
+#, fuzzy
+msgid "Use p&laceholders"
+msgstr "U&sar contenedores"
+
+#: findreplace/kfinddialog.cpp:109
+#, fuzzy
+msgid "Insert Place&holder"
+msgstr "Inxertar contend&or"
+
+#: findreplace/kfinddialog.cpp:118
+msgid "Options"
+msgstr "Opciones"
+
+#: findreplace/kfinddialog.cpp:121
+msgid "C&ase sensitive"
+msgstr "Sensible a m&ayúscules"
+
+#: findreplace/kfinddialog.cpp:122
+msgid "&Whole words only"
+msgstr "Namái pallabres comp&letes"
+
+#: findreplace/kfinddialog.cpp:123
+msgid "From c&ursor"
+msgstr "Dende'l c&ursor"
+
+#: findreplace/kfinddialog.cpp:124
+#, fuzzy
+msgid "Find &backwards"
+msgstr "Guetar &haza atrás"
+
+#: findreplace/kfinddialog.cpp:125
+msgid "&Selected text"
+msgstr "Testu &esbilláu"
+
+#: findreplace/kfinddialog.cpp:132
+msgid "&Prompt on replace"
+msgstr "&Entrugar nel troquéu"
+
+#: findreplace/kfinddialog.cpp:199
+msgid "&Replace"
+msgstr "&Trocar"
+
+#: findreplace/kfinddialog.cpp:200
+#, fuzzy
+msgid "Start replace"
+msgstr "Entamar a trocar"
+
+#: findreplace/kfinddialog.cpp:201
+msgid ""
+"<qt>If you press the <b>Replace</b> button, the text you entered above is "
+"searched for within the document and any occurrence is replaced with the "
+"replacement text.</qt>"
+msgstr ""
+"<qt>Si primes nel botón <b>Trocar</b>, guetaráse dientro'l documentu y "
+"cualesquier apaición trocaráse col testu de troquéu'l testu qu'introduxesti "
+"enriba.</qt>"
+
+#: findreplace/kfinddialog.cpp:205
+msgid "&Find"
+msgstr "&Alcontrar"
+
+#: findreplace/kfinddialog.cpp:206
+#, fuzzy
+msgid "Start searching"
+msgstr "Aniciar gueta"
+
+#: findreplace/kfinddialog.cpp:207
+msgid ""
+"<qt>If you press the <b>Find</b> button, the text you entered above is "
+"searched for within the document.</qt>"
+msgstr ""
+"<qt>Si primes el botón <b>Alcontrar</b>, guetaráse dientro'l documentu'l "
+"testu qu'introduxesti enriba.</qt>"
+
+#: findreplace/kfinddialog.cpp:213
+msgid ""
+"Enter a pattern to search for, or select a previous pattern from the list."
+msgstr "Introduz un patrón pa guetar, o esbilla unu anterior del llistáu."
+
+#: findreplace/kfinddialog.cpp:216
+msgid "If enabled, search for a regular expression."
+msgstr "Si s'habilita, gueta una espresión regular."
+
+#: findreplace/kfinddialog.cpp:218
+msgid "Click here to edit your regular expression using a graphical editor."
+msgstr "Primi equí pa editar la to espresión regular usando un editor gráficu."
+
+#: findreplace/kfinddialog.cpp:220
+msgid "Enter a replacement string, or select a previous one from the list."
+msgstr "Introduz una cadena de troquéu, o esbilla una anterior del llistáu."
+
+#: findreplace/kfinddialog.cpp:222
+msgid ""
+"<qt>If enabled, any occurrence of <code><b>\\N</b></code>, where <code><b>N</"
+"b></code> is an integer number, will be replaced with the corresponding "
+"capture (\"parenthesized substring\") from the pattern.<p>To include (a "
+"literal <code><b>\\N</b></code> in your replacement, put an extra backslash "
+"in front of it, like <code><b>\\\\N</b></code>.</p></qt>"
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:229
+#, fuzzy
+msgid "Click for a menu of available captures."
+msgstr "Calcar pa ver un menú de captures disponibles."
+
+#: findreplace/kfinddialog.cpp:231
+#, fuzzy
+msgid "Require word boundaries in both ends of a match to succeed."
+msgstr ""
+"Necesita llendes de pallabra nos dos cabos pa qu'una concordancia tenga "
+"éxitu."
+
+#: findreplace/kfinddialog.cpp:233
+#, fuzzy
+msgid "Start searching at the current cursor location rather than at the top."
+msgstr "Entamar la gueta na posición actual del cursor y non al principiu."
+
+#: findreplace/kfinddialog.cpp:235
+#, fuzzy
+msgid "Only search within the current selection."
+msgstr "Guetar sólo dientro de la seleición actual."
+
+#: findreplace/kfinddialog.cpp:237
+#, fuzzy
+msgid ""
+"Perform a case sensitive search: entering the pattern 'Joe' will not match "
+"'joe' or 'JOE', only 'Joe'."
+msgstr ""
+"Facer una gueta sensible a les mayúscules: escribiendo'l patrón 'Xuan' nun "
+"alcontrará 'xuan' nin 'XUAN', sólo 'Xuan'."
+
+#: findreplace/kfinddialog.cpp:240
+#, fuzzy
+msgid "Search backwards."
+msgstr "Guetar haza atrás."
+
+#: findreplace/kfinddialog.cpp:242
+#, fuzzy
+msgid "Ask before replacing each match found."
+msgstr "Entrugar enantes de trocar cada concordancia alcontrada."
+
+#: findreplace/kfinddialog.cpp:454
+#, fuzzy
+msgid "Any Character"
+msgstr "Cualesquier caráuter"
+
+#: findreplace/kfinddialog.cpp:455
+#, fuzzy
+msgid "Start of Line"
+msgstr "Aniciu de llinia"
+
+#: findreplace/kfinddialog.cpp:456
+#, fuzzy
+msgid "End of Line"
+msgstr "Fin de llinia"
+
+#: findreplace/kfinddialog.cpp:457
+#, fuzzy
+msgid "Set of Characters"
+msgstr "Xuegu de carauteres"
+
+#: findreplace/kfinddialog.cpp:458
+#, fuzzy
+msgid "Repeats, Zero or More Times"
+msgstr "Repítese, cero o más vegaes"
+
+#: findreplace/kfinddialog.cpp:459
+#, fuzzy
+msgid "Repeats, One or More Times"
+msgstr "Repítese, una o más veces"
+
+#: findreplace/kfinddialog.cpp:460
+#, fuzzy
+msgid "Optional"
+msgstr "Opcional"
+
+#: findreplace/kfinddialog.cpp:461
+#, fuzzy
+msgid "Escape"
+msgstr "Escape"
+
+#: findreplace/kfinddialog.cpp:462
+#, fuzzy
+msgid "TAB"
+msgstr "TAB"
+
+#: findreplace/kfinddialog.cpp:463
+#, fuzzy
+msgid "Newline"
+msgstr "Nueva llinia"
+
+#: findreplace/kfinddialog.cpp:464
+#, fuzzy
+msgid "Carriage Return"
+msgstr "Retornu de carru"
+
+#: findreplace/kfinddialog.cpp:465
+#, fuzzy
+msgid "White Space"
+msgstr "Espaciu en blancu"
+
+#: findreplace/kfinddialog.cpp:466
+#, fuzzy
+msgid "Digit"
+msgstr "Díxitu"
+
+#: findreplace/kfinddialog.cpp:568
+#, fuzzy
+msgid "Complete Match"
+msgstr "Coincidencia completa"
+
+#: findreplace/kfinddialog.cpp:573
+#, fuzzy, kde-format
+msgid "Captured Text (%1)"
+msgstr "Testu capturáu (%1)"
+
+#: findreplace/kfinddialog.cpp:581
+#, fuzzy
+msgid "You must enter some text to search for."
+msgstr "Debes escribir dalgún testu a guetar."
+
+#: findreplace/kfinddialog.cpp:590
+#, fuzzy
+msgid "Invalid regular expression."
+msgstr "Espresión regular incorreuta."
+
+#: findreplace/kreplace.cpp:59 findreplace/kreplace.cpp:71
+#, fuzzy
+msgid "Replace"
+msgstr "Trocar"
+
+#: findreplace/kreplace.cpp:67
+#, fuzzy
+msgctxt "@action:button Replace all occurrences"
+msgid "&All"
+msgstr "&Tou"
+
+#: findreplace/kreplace.cpp:69
+#, fuzzy
+msgid "&Skip"
+msgstr "O&mitir"
+
+#: findreplace/kreplace.cpp:88
+#, fuzzy, kde-format
+msgid "Replace '%1' with '%2'?"
+msgstr "Trocar '%1' con '%2'?"
+
+#: findreplace/kreplace.cpp:177 findreplace/kreplace.cpp:381
+#, fuzzy
+msgid "No text was replaced."
+msgstr "Nun se trocó dengún testu."
+
+#: findreplace/kreplace.cpp:179 findreplace/kreplace.cpp:383
+#, fuzzy, kde-format
+msgid "1 replacement done."
+msgid_plural "%1 replacements done."
+msgstr[0] "fízose un troque."
+msgstr[1] "ficiéronse %1 troques."
+
+#: findreplace/kreplace.cpp:397
+#, fuzzy
+msgid "Do you want to restart search from the end?"
+msgstr "¿Deseya reaniciar la gueta dende'l final?"
+
+#: findreplace/kreplace.cpp:398
+#, fuzzy
+msgid "Do you want to restart search at the beginning?"
+msgstr "¿Quies reaniciar la gueta dende l'entamu?"
+
+#: findreplace/kreplace.cpp:401
+#, fuzzy
+msgctxt "@action:button Restart find & replace"
+msgid "Restart"
+msgstr "Reaniciar"
+
+#: findreplace/kreplace.cpp:402
+#, fuzzy
+msgctxt "@action:button Stop find & replace"
+msgid "Stop"
+msgstr "Detener"
+
+#: findreplace/kreplacedialog.cpp:151
+#, fuzzy, kde-format
+msgid "Your replacement string is referencing a capture greater than '\\%1', "
+msgstr "La to cadena de troque fai referencia a una captura mayor que '\\%1', "
+
+#: findreplace/kreplacedialog.cpp:153
+#, fuzzy, kde-format
+msgid "but your pattern only defines 1 capture."
+msgid_plural "but your pattern only defines %1 captures."
+msgstr[0] "pero'l to patrón namái define una captura."
+msgstr[1] "pero'l to patrón namái define %1 captures."
+
+#: findreplace/kreplacedialog.cpp:155
+#, fuzzy
+msgid "but your pattern defines no captures."
+msgstr "pero el to patrón nun define captures."
+
+#: findreplace/kreplacedialog.cpp:156
+#, fuzzy
+msgid ""
+"\n"
+"Please correct."
+msgstr ""
+"\n"
+"Por favor ígualo."
+
+#: widgets/krichtextwidget.cpp:230
+#, fuzzy
+msgctxt "@action"
+msgid "Text &Color..."
+msgstr "&Color del testu..."
+
+#: widgets/krichtextwidget.cpp:231
+#, fuzzy
+msgctxt "@label stroke color"
+msgid "Color"
+msgstr "Color"
+
+#: widgets/krichtextwidget.cpp:242
+#, fuzzy
+msgctxt "@action"
+msgid "Text &Highlight..."
+msgstr "Resalte de te&stu..."
+
+#: widgets/krichtextwidget.cpp:252
+#, fuzzy
+msgctxt "@action"
+msgid "&Font"
+msgstr "&Triba de lletra"
+
+#: widgets/krichtextwidget.cpp:262
+#, fuzzy
+msgctxt "@action"
+msgid "Font &Size"
+msgstr "&Tamañu de la tipografía"
+
+#: widgets/krichtextwidget.cpp:272
+#, fuzzy
+msgctxt "@action boldify selected text"
+msgid "&Bold"
+msgstr "&Negrina"
+
+#: widgets/krichtextwidget.cpp:286
+#, fuzzy
+msgctxt "@action italicize selected text"
+msgid "&Italic"
+msgstr "&Cursiva"
+
+#: widgets/krichtextwidget.cpp:301
+#, fuzzy
+msgctxt "@action underline selected text"
+msgid "&Underline"
+msgstr "&Sorrayáu"
+
+#: widgets/krichtextwidget.cpp:316
+#, fuzzy
+msgctxt "@action"
+msgid "&Strike Out"
+msgstr "Tac&háu"
+
+#: widgets/krichtextwidget.cpp:332
+#, fuzzy
+msgctxt "@action"
+msgid "Align &Left"
+msgstr "Alliñar a la e&squierda"
+
+#: widgets/krichtextwidget.cpp:333
+#, fuzzy
+msgctxt "@label left justify"
+msgid "Left"
+msgstr "Esquierda"
+
+#: widgets/krichtextwidget.cpp:340
+#, fuzzy
+msgctxt "@action"
+msgid "Align &Center"
+msgstr "Alliñar al &centru"
+
+#: widgets/krichtextwidget.cpp:341
+#, fuzzy
+msgctxt "@label center justify"
+msgid "Center"
+msgstr "Centráu"
+
+#: widgets/krichtextwidget.cpp:348
+#, fuzzy
+msgctxt "@action"
+msgid "Align &Right"
+msgstr "Alliñar a la d&erecha"
+
+#: widgets/krichtextwidget.cpp:349
+#, fuzzy
+msgctxt "@label right justify"
+msgid "Right"
+msgstr "Derecha"
+
+#: widgets/krichtextwidget.cpp:356
+#, fuzzy
+msgctxt "@action"
+msgid "&Justify"
+msgstr "&Xustificar"
+
+#: widgets/krichtextwidget.cpp:357
+#, fuzzy
+msgctxt "@label justify fill"
+msgid "Justify"
+msgstr "Xustificar"
+
+#: widgets/krichtextwidget.cpp:377
+#, fuzzy
+msgctxt "@action"
+msgid "Left-to-Right"
+msgstr "Esquierda-a-derecha"
+
+#: widgets/krichtextwidget.cpp:378
+#, fuzzy
+msgctxt "@label left-to-right"
+msgid "Left-to-Right"
+msgstr "Esquierda-a-derecha"
+
+#: widgets/krichtextwidget.cpp:385
+#, fuzzy
+msgctxt "@action"
+msgid "Right-to-Left"
+msgstr "Derecha-a-esquierda"
+
+#: widgets/krichtextwidget.cpp:386
+#, fuzzy
+msgctxt "@label right-to-left"
+msgid "Right-to-Left"
+msgstr "Derecha-a-esquierda"
+
+#: widgets/krichtextwidget.cpp:402
+#, fuzzy
+msgctxt "@title:menu"
+msgid "List Style"
+msgstr "Estilu de llista"
+
+#: widgets/krichtextwidget.cpp:404
+#, fuzzy
+msgctxt "@item:inmenu no list style"
+msgid "None"
+msgstr "Dengún"
+
+#: widgets/krichtextwidget.cpp:405
+#, fuzzy
+msgctxt "@item:inmenu disc list style"
+msgid "Disc"
+msgstr "Círculu"
+
+#: widgets/krichtextwidget.cpp:406
+#, fuzzy
+msgctxt "@item:inmenu circle list style"
+msgid "Circle"
+msgstr "Círculu"
+
+#: widgets/krichtextwidget.cpp:407
+#, fuzzy
+msgctxt "@item:inmenu square list style"
+msgid "Square"
+msgstr "Cuadráu"
+
+#: widgets/krichtextwidget.cpp:408
+#, fuzzy
+msgctxt "@item:inmenu numbered lists"
+msgid "123"
+msgstr "123"
+
+#: widgets/krichtextwidget.cpp:409
+#, fuzzy
+msgctxt "@item:inmenu lowercase abc lists"
+msgid "abc"
+msgstr "abc"
+
+#: widgets/krichtextwidget.cpp:410
+#, fuzzy
+msgctxt "@item:inmenu uppercase abc lists"
+msgid "ABC"
+msgstr "abc"
+
+#: widgets/krichtextwidget.cpp:411
+#, fuzzy
+msgctxt "@item:inmenu lower case roman numerals"
+msgid "i ii iii"
+msgstr "i ii iii"
+
+#: widgets/krichtextwidget.cpp:412
+#, fuzzy
+msgctxt "@item:inmenu upper case roman numerals"
+msgid "I II III"
+msgstr "I II III"
+
+#: widgets/krichtextwidget.cpp:428
+#, fuzzy
+msgctxt "@action"
+msgid "Increase Indent"
+msgstr "Incrementar sangráu"
+
+#: widgets/krichtextwidget.cpp:441
+#, fuzzy
+msgctxt "@action"
+msgid "Decrease Indent"
+msgstr "Amenorgar sangráu"
+
+#: widgets/krichtextwidget.cpp:454
+#, fuzzy
+msgctxt "@action"
+msgid "Insert Rule Line"
+msgstr "Inxertar llinia de separtación"
+
+#: widgets/krichtextwidget.cpp:465
+#, fuzzy
+msgctxt "@action"
+msgid "Link"
+msgstr "Enllaz"
+
+#: widgets/krichtextwidget.cpp:476
+#, fuzzy
+msgctxt "@action"
+msgid "Format Painter"
+msgstr "Formatu de brocha"
+
+#: widgets/krichtextwidget.cpp:486
+#, fuzzy
+msgctxt "@action"
+msgid "To Plain Text"
+msgstr "A testu planu"
+
+#: widgets/krichtextwidget.cpp:497
+#, fuzzy
+msgctxt "@action"
+msgid "Subscript"
+msgstr "Soíndiz"
+
+#: widgets/krichtextwidget.cpp:504
+#, fuzzy
+msgctxt "@action"
+msgid "Superscript"
+msgstr "Superíndiz"
+
+#: widgets/ktextedit.cpp:164
+#, fuzzy
+msgid "Nothing to spell check."
+msgstr "Res que comprobar ortográficamente."
+
+#: widgets/ktextedit.cpp:559
+#, fuzzy
+msgid "Check Spelling..."
+msgstr "Comprobar ortografía..."
+
+#: widgets/ktextedit.cpp:563
+#, fuzzy
+msgid "Auto Spell Check"
+msgstr "Correutor ortográficu automáticu"
+
+#: widgets/ktextedit.cpp:568
+#, fuzzy
+msgid "Allow Tabulations"
+msgstr "Permitir tabulaciones"
+
+#: widgets/ktextedit.cpp:601
+#, fuzzy
+msgid "Speak Text"
+msgstr "Lleer testu"
