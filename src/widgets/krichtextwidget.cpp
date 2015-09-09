@@ -673,7 +673,9 @@ void KRichTextWidget::mouseReleaseEvent(QMouseEvent *event)
         // If the painter is active, paint the selection with the
         // correct format.
         if (textCursor().hasSelection()) {
-            textCursor().setCharFormat(d->painterFormat);
+            QTextCursor c = textCursor();
+            c.setCharFormat(d->painterFormat);
+            setTextCursor(c);
         }
         d->painterActive = false;
         d->action_format_painter->setChecked(false);
