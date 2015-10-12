@@ -33,13 +33,12 @@
 #ifdef HAVE_SPEECH
 #include <QTextToSpeech>
 #endif
+#include <QSettings>
 
 #include <sonnet/configdialog.h>
 #include <sonnet/dialog.h>
 #include <sonnet/backgroundchecker.h>
 #include <sonnet/spellcheckdecorator.h>
-#include <kconfig.h>
-#include <kconfiggroup.h>
 #include <kcursor.h>
 #include <kstandardaction.h>
 #include <kicontheme.h>
@@ -68,7 +67,7 @@ public:
     Private(KTextEdit *_parent)
         : parent(_parent),
           customPalette(false),
-          checkSpellingEnabled(false),
+          spellCheckingEnabled(false),
           findReplaceEnabled(true),
           showTabAction(true),
           showAutoCorrectionButton(false),
@@ -80,9 +79,8 @@ public:
           lastReplacedPosition(-1)
     {
         //Check the default sonnet settings to see if spellchecking should be enabled.
-        KConfig sonnetKConfig(QLatin1String("sonnetrc"));
-        KConfigGroup group(&sonnetKConfig, "Spelling");
-        checkSpellingEnabled = group.readEntry("checkerEnabledByDefault", false);
+        QSettings settings(QStringLiteral("KDE"), QStringLiteral("Sonnet"));
+        spellCheckingEnabled = settings.value(QStringLiteral("checkerEnabledByDefault"), false).toBool();
 #ifdef HAVE_SPEECH
         textToSpeech = new QTextToSpeech(parent);
 #endif
@@ -139,7 +137,7 @@ public:
     QAction *spellCheckAction;
     bool customPalette : 1;
 
-    bool checkSpellingEnabled : 1;
+    bool spellCheckingEnabled : 1;
     bool findReplaceEnabled: 1;
     bool showTabAction: 1;
     bool showAutoCorrectionButton: 1;
@@ -670,7 +668,7 @@ void KTextEdit::setHighlighter(Sonnet::Highlighter *_highLighter)
 void KTextEdit::setCheckSpellingEnabled(bool check)
 {
     emit checkSpellingChanged(check);
-    if (check == d->checkSpellingEnabled) {
+    if (check == d->spellCheckingEnabled) {
         return;
     }
 
@@ -678,7 +676,7 @@ void KTextEdit::setCheckSpellingEnabled(bool check)
     // on that we need to create a new highlighter and if we're turning it
     // off we should remove the old one.
 
-    d->checkSpellingEnabled = check;
+    d->spellCheckingEnabled = check;
     if (check) {
         if (hasFocus()) {
             createHighlighter();
@@ -693,7 +691,7 @@ void KTextEdit::setCheckSpellingEnabled(bool check)
 
 void KTextEdit::focusInEvent(QFocusEvent *event)
 {
-    if (d->checkSpellingEnabled && !isReadOnly() && !d->decorator) {
+    if (d->spellCheckingEnabled && !isReadOnly() && !d->decorator) {
         createHighlighter();
     }
 
@@ -702,7 +700,7 @@ void KTextEdit::focusInEvent(QFocusEvent *event)
 
 bool KTextEdit::checkSpellingEnabled() const
 {
-    return d->checkSpellingEnabled;
+    return d->spellCheckingEnabled;
 }
 
 bool KTextEdit::shouldBlockBeSpellChecked(const QString &) const
@@ -712,7 +710,7 @@ bool KTextEdit::shouldBlockBeSpellChecked(const QString &) const
 
 void KTextEdit::setReadOnly(bool readOnly)
 {
-    if (!readOnly && hasFocus() && d->checkSpellingEnabled && !d->decorator) {
+    if (!readOnly && hasFocus() && d->spellCheckingEnabled && !d->decorator) {
         createHighlighter();
     }
 
