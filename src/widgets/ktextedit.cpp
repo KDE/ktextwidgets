@@ -66,12 +66,13 @@ class KTextEdit::Private
 public:
     Private(KTextEdit *_parent)
         : parent(_parent),
+          languagesMenu(Q_NULLPTR),
           customPalette(false),
           spellCheckingEnabled(false),
           findReplaceEnabled(true),
           showTabAction(true),
           showAutoCorrectionButton(false),
-          decorator(0), findDlg(0), find(0), repDlg(0), replace(0),
+          decorator(0), speller(0), findDlg(0), find(0), repDlg(0), replace(0),
 #ifdef HAVE_SPEECH
           textToSpeech(Q_NULLPTR),
 #endif
@@ -93,6 +94,7 @@ public:
         delete find;
         delete replace;
         delete repDlg;
+        delete speller;
 #ifdef HAVE_SPEECH
         delete textToSpeech;
 #endif
@@ -135,6 +137,7 @@ public:
     QAction *autoSpellCheckAction;
     QAction *allowTab;
     QAction *spellCheckAction;
+    QMenu *languagesMenu;
     bool customPalette : 1;
 
     bool spellCheckingEnabled : 1;
@@ -144,6 +147,7 @@ public:
     QTextDocumentFragment originalDoc;
     QString spellCheckingLanguage;
     Sonnet::SpellCheckDecorator *decorator;
+    Sonnet::Speller *speller;
     KFindDialog *findDlg;
     KFind *find;
     KReplaceDialog *repDlg;
@@ -558,6 +562,34 @@ QMenu *KTextEdit::mousePopupMenu()
         if (emptyDocument) {
             d->spellCheckAction->setEnabled(false);
         }
+
+        if (checkSpellingEnabled()) {
+            d->languagesMenu = new QMenu(i18n("Spell Checking Language"), popup);
+            QActionGroup *languagesGroup = new QActionGroup(d->languagesMenu);
+            languagesGroup->setExclusive(true);
+            if (!d->speller) {
+                d->speller = new Sonnet::Speller();
+            }
+
+            QMapIterator<QString, QString> i(d->speller->availableDictionaries());
+            const QString language = spellCheckingLanguage();
+            while (i.hasNext()) {
+                i.next();
+
+                QAction *languageAction = d->languagesMenu->addAction(i.key());
+                languageAction->setCheckable(true);
+                languageAction->setChecked(language == i.value() || (language.isEmpty()
+                                        && d->speller->defaultLanguage() == i.value()));
+                languageAction->setData(i.value());
+                languageAction->setActionGroup(languagesGroup);
+                connect(languageAction, &QAction::triggered,
+                        [this, languageAction]() {
+                            setSpellCheckingLanguage(languageAction->data().toString());
+                        });
+            }
+            popup->addMenu(d->languagesMenu);
+        }
+
         d->autoSpellCheckAction = popup->addAction(i18n("Auto Spell Check"));
         d->autoSpellCheckAction->setCheckable(true);
         d->autoSpellCheckAction->setChecked(checkSpellingEnabled());
