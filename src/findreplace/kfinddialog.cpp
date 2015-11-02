@@ -152,21 +152,21 @@ void KFindDialog::KFindDialogPrivate::init(bool forReplace, const QStringList &_
 
     // signals and slots connections
     q->connect(selectedText, SIGNAL(toggled(bool)), q, SLOT(_k_slotSelectedTextToggled(bool)));
-    q->connect(regExp, SIGNAL(toggled(bool)), regExpItem, SLOT(setEnabled(bool)));
-    q->connect(backRef, SIGNAL(toggled(bool)), backRefItem, SLOT(setEnabled(bool)));
+    q->connect(regExp, &QAbstractButton::toggled, regExpItem, &QWidget::setEnabled);
+    q->connect(backRef, &QAbstractButton::toggled, backRefItem, &QWidget::setEnabled);
     q->connect(regExpItem, SIGNAL(clicked()), q, SLOT(_k_showPatterns()));
     q->connect(backRefItem, SIGNAL(clicked()), q, SLOT(_k_showPlaceholders()));
 
     q->connect(find, SIGNAL(editTextChanged(QString)), q, SLOT(_k_textSearchChanged(QString)));
 
-    q->connect(regExp, SIGNAL(toggled(bool)), q, SIGNAL(optionsChanged()));
-    q->connect(backRef, SIGNAL(toggled(bool)), q, SIGNAL(optionsChanged()));
-    q->connect(caseSensitive, SIGNAL(toggled(bool)), q, SIGNAL(optionsChanged()));
-    q->connect(wholeWordsOnly, SIGNAL(toggled(bool)), q, SIGNAL(optionsChanged()));
-    q->connect(fromCursor, SIGNAL(toggled(bool)), q, SIGNAL(optionsChanged()));
-    q->connect(findBackwards, SIGNAL(toggled(bool)), q, SIGNAL(optionsChanged()));
-    q->connect(selectedText, SIGNAL(toggled(bool)), q, SIGNAL(optionsChanged()));
-    q->connect(promptOnReplace, SIGNAL(toggled(bool)), q, SIGNAL(optionsChanged()));
+    q->connect(regExp, &QAbstractButton::toggled, q, &KFindDialog::optionsChanged);
+    q->connect(backRef, &QAbstractButton::toggled, q, &KFindDialog::optionsChanged);
+    q->connect(caseSensitive, &QAbstractButton::toggled, q, &KFindDialog::optionsChanged);
+    q->connect(wholeWordsOnly, &QAbstractButton::toggled, q, &KFindDialog::optionsChanged);
+    q->connect(fromCursor, &QAbstractButton::toggled, q, &KFindDialog::optionsChanged);
+    q->connect(findBackwards, &QAbstractButton::toggled, q, &KFindDialog::optionsChanged);
+    q->connect(selectedText, &QAbstractButton::toggled, q, &KFindDialog::optionsChanged);
+    q->connect(promptOnReplace, &QAbstractButton::toggled, q, &KFindDialog::optionsChanged);
 
     // tab order
     q->setTabOrder(find, regExp);
@@ -202,7 +202,7 @@ void KFindDialog::KFindDialogPrivate::init(bool forReplace, const QStringList &_
                                                     "above is searched for within the document and any occurrence is "
                                                     "replaced with the replacement text.</qt>")));
     } else {
-        KGuiItem::assign(buttonOk, KGuiItem(i18n("&Find"), QLatin1String("edit-find"),
+        KGuiItem::assign(buttonOk, KGuiItem(i18n("&Find"), QStringLiteral("edit-find"),
                                             i18n("Start searching"),
                                             i18n("<qt>If you press the <b>Find</b> button, the text you entered "
                                                     "above is searched for within the document.</qt>")));
@@ -557,7 +557,7 @@ void KFindDialog::KFindDialogPrivate::_k_showPlaceholders()
         PlaceHolderAction *placeHolderAction = static_cast<PlaceHolderAction *>(action);
         if (placeHolderAction) {
             QLineEdit *editor = replace->lineEdit();
-            editor->insert(QString::fromLatin1("\\%1").arg(placeHolderAction->id()));
+            editor->insert(QStringLiteral("\\%1").arg(placeHolderAction->id()));
         }
     }
 }

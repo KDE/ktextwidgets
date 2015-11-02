@@ -73,13 +73,13 @@ KLinkDialog::KLinkDialog(QWidget *parent)
 
     d->buttonBox = new QDialogButtonBox(this);
     d->buttonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-    connect(d->buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(d->buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    connect(d->buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
+    connect(d->buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
     layout->addWidget(d->buttonBox);
 
     d->textLineEdit->setFocus();
     d->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
-    connect(d->textLineEdit, SIGNAL(textChanged(QString)), this, SLOT(slotTextChanged(QString)));
+    connect(d->textLineEdit, &QLineEdit::textChanged, this, &KLinkDialog::slotTextChanged);
 }
 
 KLinkDialog::~KLinkDialog()

@@ -65,11 +65,11 @@ KReplaceNextDialog::KReplaceNextDialog(QWidget *parent)
     layout->addWidget(m_mainLabel);
 
     m_allButton = new QPushButton(i18nc("@action:button Replace all occurrences", "&All"));
-    m_allButton->setObjectName(QLatin1String("allButton"));
+    m_allButton->setObjectName(QStringLiteral("allButton"));
     m_skipButton = new QPushButton(i18n("&Skip"));
-    m_skipButton->setObjectName(QLatin1String("skipButton"));
+    m_skipButton->setObjectName(QStringLiteral("skipButton"));
     m_replaceButton = new QPushButton(i18n("Replace"));
-    m_replaceButton->setObjectName(QLatin1String("replaceButton"));
+    m_replaceButton->setObjectName(QStringLiteral("replaceButton"));
     m_replaceButton->setDefault(true);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(this);
@@ -79,8 +79,8 @@ KReplaceNextDialog::KReplaceNextDialog(QWidget *parent)
     buttonBox->setStandardButtons(QDialogButtonBox::Close);
     layout->addWidget(buttonBox);
 
-    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
 }
 
 void KReplaceNextDialog::setLabel(const QString &pattern, const QString &replacement)

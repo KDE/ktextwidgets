@@ -262,7 +262,7 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_font_size = new KFontSizeAction(i18nc("@action", "Font &Size"), this);
         d->richTextActionList.append((d->action_font_size));
         d->action_font_size->setObjectName(QStringLiteral("format_font_size"));
-        connect(d->action_font_size, SIGNAL(fontSizeChanged(int)), this, SLOT(setFontSize(int)));
+        connect(d->action_font_size, &KFontSizeAction::fontSizeChanged, this, &KRichTextEdit::setFontSize);
     } else {
         d->action_font_size = 0;
     }
@@ -276,7 +276,7 @@ QList<QAction *> KRichTextWidget::createActions()
         d->richTextActionList.append((d->action_text_bold));
         d->action_text_bold->setObjectName(QStringLiteral("format_text_bold"));
         d->action_text_bold->setShortcut(Qt::CTRL + Qt::Key_B);
-        connect(d->action_text_bold, SIGNAL(triggered(bool)), this, SLOT(setTextBold(bool)));
+        connect(d->action_text_bold, &QAction::triggered, this, &KRichTextEdit::setTextBold);
     } else {
         d->action_text_bold = 0;
     }
@@ -290,8 +290,8 @@ QList<QAction *> KRichTextWidget::createActions()
         d->richTextActionList.append((d->action_text_italic));
         d->action_text_italic->setObjectName(QStringLiteral("format_text_italic"));
         d->action_text_italic->setShortcut(Qt::CTRL + Qt::Key_I);
-        connect(d->action_text_italic, SIGNAL(triggered(bool)),
-                this, SLOT(setTextItalic(bool)));
+        connect(d->action_text_italic, &QAction::triggered,
+                this, &KRichTextEdit::setTextItalic);
     } else {
         d->action_text_italic = 0;
     }
@@ -305,8 +305,8 @@ QList<QAction *> KRichTextWidget::createActions()
         d->richTextActionList.append((d->action_text_underline));
         d->action_text_underline->setObjectName(QStringLiteral("format_text_underline"));
         d->action_text_underline->setShortcut(Qt::CTRL + Qt::Key_U);
-        connect(d->action_text_underline, SIGNAL(triggered(bool)),
-                this, SLOT(setTextUnderline(bool)));
+        connect(d->action_text_underline, &QAction::triggered,
+                this, &KRichTextEdit::setTextUnderline);
     } else {
         d->action_text_underline = 0;
     }
@@ -320,8 +320,8 @@ QList<QAction *> KRichTextWidget::createActions()
         d->richTextActionList.append((d->action_text_strikeout));
         d->action_text_strikeout->setObjectName(QStringLiteral("format_text_strikeout"));
         d->action_text_strikeout->setShortcut(Qt::CTRL + Qt::Key_L);
-        connect(d->action_text_strikeout, SIGNAL(triggered(bool)),
-                this, SLOT(setTextStrikeOut(bool)));
+        connect(d->action_text_strikeout, &QAction::triggered,
+                this, &KRichTextEdit::setTextStrikeOut);
     } else {
         d->action_text_strikeout = 0;
     }
@@ -333,32 +333,32 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_align_left->setIconText(i18nc("@label left justify", "Left"));
         d->richTextActionList.append((d->action_align_left));
         d->action_align_left->setObjectName(QStringLiteral("format_align_left"));
-        connect(d->action_align_left, SIGNAL(triggered()),
-                this, SLOT(alignLeft()));
+        connect(d->action_align_left, &QAction::triggered,
+                this, &KRichTextEdit::alignLeft);
 
         d->action_align_center = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-justify-center")),
                 i18nc("@action", "Align &Center"), this);
         d->action_align_center->setIconText(i18nc("@label center justify", "Center"));
         d->richTextActionList.append((d->action_align_center));
         d->action_align_center->setObjectName(QStringLiteral("format_align_center"));
-        connect(d->action_align_center, SIGNAL(triggered()),
-                this, SLOT(alignCenter()));
+        connect(d->action_align_center, &QAction::triggered,
+                this, &KRichTextEdit::alignCenter);
 
         d->action_align_right = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-justify-right")),
                 i18nc("@action", "Align &Right"), this);
         d->action_align_right->setIconText(i18nc("@label right justify", "Right"));
         d->richTextActionList.append((d->action_align_right));
         d->action_align_right->setObjectName(QStringLiteral("format_align_right"));
-        connect(d->action_align_right, SIGNAL(triggered()),
-                this, SLOT(alignRight()));
+        connect(d->action_align_right, &QAction::triggered,
+                this, &KRichTextEdit::alignRight);
 
         d->action_align_justify = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-justify-fill")),
                 i18nc("@action", "&Justify"), this);
         d->action_align_justify->setIconText(i18nc("@label justify fill", "Justify"));
         d->richTextActionList.append((d->action_align_justify));
         d->action_align_justify->setObjectName(QStringLiteral("format_align_justify"));
-        connect(d->action_align_justify, SIGNAL(triggered()),
-                this, SLOT(alignJustify()));
+        connect(d->action_align_justify, &QAction::triggered,
+                this, &KRichTextEdit::alignJustify);
 
         QActionGroup *alignmentGroup = new QActionGroup(this);
         alignmentGroup->addAction(d->action_align_left);
@@ -378,16 +378,16 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_direction_ltr->setIconText(i18nc("@label left-to-right", "Left-to-Right"));
         d->richTextActionList.append(d->action_direction_ltr);
         d->action_direction_ltr->setObjectName(QStringLiteral("direction_ltr"));
-        connect(d->action_direction_ltr, SIGNAL(triggered()),
-                this, SLOT(makeLeftToRight()));
+        connect(d->action_direction_ltr, &QAction::triggered,
+                this, &KRichTextEdit::makeLeftToRight);
 
         d->action_direction_rtl = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-direction-rtl")),
                 i18nc("@action", "Right-to-Left"), this);
         d->action_direction_rtl->setIconText(i18nc("@label right-to-left", "Right-to-Left"));
         d->richTextActionList.append(d->action_direction_rtl);
         d->action_direction_rtl->setObjectName(QStringLiteral("direction_rtl"));
-        connect(d->action_direction_rtl, SIGNAL(triggered()),
-                this, SLOT(makeRightToLeft()));
+        connect(d->action_direction_rtl, &QAction::triggered,
+                this, &KRichTextEdit::makeRightToLeft);
 
         QActionGroup *directionGroup = new QActionGroup(this);
         directionGroup->addAction(d->action_direction_ltr);
@@ -428,8 +428,8 @@ QList<QAction *> KRichTextWidget::createActions()
                                             i18nc("@action", "Increase Indent"), this);
         d->richTextActionList.append((d->action_list_indent));
         d->action_list_indent->setObjectName(QStringLiteral("format_list_indent_more"));
-        connect(d->action_list_indent, SIGNAL(triggered()),
-                this, SLOT(indentListMore()));
+        connect(d->action_list_indent, &QAction::triggered,
+                this, &KRichTextEdit::indentListMore);
         connect(d->action_list_indent, SIGNAL(triggered()),
                 this, SLOT(_k_updateMiscActions()));
     } else {
@@ -441,8 +441,8 @@ QList<QAction *> KRichTextWidget::createActions()
                                             i18nc("@action", "Decrease Indent"), this);
         d->richTextActionList.append((d->action_list_dedent));
         d->action_list_dedent->setObjectName(QStringLiteral("format_list_indent_less"));
-        connect(d->action_list_dedent, SIGNAL(triggered()),
-                this, SLOT(indentListLess()));
+        connect(d->action_list_dedent, &QAction::triggered,
+                this, &KRichTextEdit::indentListLess);
         connect(d->action_list_dedent, SIGNAL(triggered()),
                 this, SLOT(_k_updateMiscActions()));
     } else {
@@ -454,8 +454,8 @@ QList<QAction *> KRichTextWidget::createActions()
                 i18nc("@action", "Insert Rule Line"), this);
         d->richTextActionList.append((d->action_insert_horizontal_rule));
         d->action_insert_horizontal_rule->setObjectName(QStringLiteral("insert_horizontal_rule"));
-        connect(d->action_insert_horizontal_rule, SIGNAL(triggered()),
-                this, SLOT(insertHorizontalRule()));
+        connect(d->action_insert_horizontal_rule, &QAction::triggered,
+                this, &KRichTextEdit::insertHorizontalRule);
     } else {
         d->action_insert_horizontal_rule = 0;
     }
@@ -486,8 +486,8 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_to_plain_text = new KToggleAction(i18nc("@action", "To Plain Text"), this);
         d->richTextActionList.append((d->action_to_plain_text));
         d->action_to_plain_text->setObjectName(QStringLiteral("action_to_plain_text"));
-        connect(d->action_to_plain_text, SIGNAL(triggered()),
-                this, SLOT(switchToPlainText()));
+        connect(d->action_to_plain_text, &QAction::triggered,
+                this, &KRichTextEdit::switchToPlainText);
     } else {
         d->action_to_plain_text = 0;
     }
@@ -497,15 +497,15 @@ QList<QAction *> KRichTextWidget::createActions()
                 i18nc("@action", "Subscript"), this);
         d->richTextActionList.append((d->action_text_subscript));
         d->action_text_subscript->setObjectName(QStringLiteral("format_text_subscript"));
-        connect(d->action_text_subscript, SIGNAL(triggered(bool)),
-                this, SLOT(setTextSubScript(bool)));
+        connect(d->action_text_subscript, &QAction::triggered,
+                this, &KRichTextEdit::setTextSubScript);
 
         d->action_text_superscript = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-superscript")),
                 i18nc("@action", "Superscript"), this);
         d->richTextActionList.append((d->action_text_superscript));
         d->action_text_superscript->setObjectName(QStringLiteral("format_text_superscript"));
-        connect(d->action_text_superscript, SIGNAL(triggered(bool)),
-                this, SLOT(setTextSuperScript(bool)));
+        connect(d->action_text_superscript, &QAction::triggered,
+                this, &KRichTextEdit::setTextSuperScript);
     } else {
         d->action_text_subscript = 0;
 

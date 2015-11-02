@@ -240,7 +240,7 @@ void TestKFind::testSimpleSearch()
 {
     // first we do a simple text searching the text and doing a few find nexts
     KFindRecorder test(m_text.split(QLatin1Char('\n')));
-    test.find(QLatin1String("This"), 0);
+    test.find(QStringLiteral("This"), 0);
     while (test.findNext()) {}
 
     const QString output1 =
@@ -255,10 +255,10 @@ void TestKFind::testSimpleSearch()
 void TestKFind::testSimpleRegexp()
 {
     KFindRecorder test(m_text.split(QLatin1Char('\n')));
-    test.find(QLatin1String("W.R+ANT[YZ]"), KFind::RegularExpression | KFind::CaseSensitive);
+    test.find(QStringLiteral("W.R+ANT[YZ]"), KFind::RegularExpression | KFind::CaseSensitive);
     while (test.findNext()) {}
     const QString output =
-        QLatin1String("line: \"    but WITHOUT ANY WARRANTY; without even the implied warranty of\", index: 20, length: 8\n");
+        QStringLiteral("line: \"    but WITHOUT ANY WARRANTY; without even the implied warranty of\", index: 20, length: 8\n");
     QCOMPARE(test.hits().join(QString()), output);
 }
 
@@ -266,17 +266,17 @@ void TestKFind::testLineBeginRegexp()
 {
     // Let's see what QRegExp can do on a big text (like in KTextEdit)
     {
-        const QString foobar = QLatin1String("foo\nbar");
-        const int idx = foobar.indexOf(QRegExp(QLatin1String("^bar")));
+        const QString foobar = QStringLiteral("foo\nbar");
+        const int idx = foobar.indexOf(QRegExp(QStringLiteral("^bar")));
         QCOMPARE(idx, -1); // it doesn't find it. No /m support, as they say. Too bad.
     }
 
     // If we split, it works, but then looking for "foo\nbar" won't work...
     KFindRecorder test(m_text.split(QLatin1Char('\n')));
-    test.find(QLatin1String("^License"), KFind::RegularExpression);
+    test.find(QStringLiteral("^License"), KFind::RegularExpression);
     while (test.findNext()) {}
     const QString output =
-        QLatin1String("line: \"License version 2, as published by the Free Software Foundation.\", index: 0, length: 7\n");
+        QStringLiteral("line: \"License version 2, as published by the Free Software Foundation.\", index: 0, length: 7\n");
     QCOMPARE(test.hits().join(QString()), output);
 }
 
@@ -286,19 +286,19 @@ void TestKFind::testFindIncremental()
 
     KFindRecorder test(m_text.split(QLatin1Char('\n')));
     test.find(QString(), KFind::FindIncremental);
-    test.findNext(QLatin1String("i"));
-    test.findNext(QLatin1String("is"));
-    test.findNext(QLatin1String("ist"));
+    test.findNext(QStringLiteral("i"));
+    test.findNext(QStringLiteral("is"));
+    test.findNext(QStringLiteral("ist"));
     test.findNext();
-    test.findNext(QLatin1String("istri"));
-    test.findNext(QLatin1String("istr"));
-    test.findNext(QLatin1String("ist"));
-    test.findNext(QLatin1String("is"));
-    test.findNext(QLatin1String("W"));
-    test.findNext(QLatin1String("WA"));
-    test.findNext(QLatin1String("WARRANTY"));
-    test.findNext(QLatin1String("Free"));
-    test.findNext(QLatin1String("Software Foundation"));
+    test.findNext(QStringLiteral("istri"));
+    test.findNext(QStringLiteral("istr"));
+    test.findNext(QStringLiteral("ist"));
+    test.findNext(QStringLiteral("is"));
+    test.findNext(QStringLiteral("W"));
+    test.findNext(QStringLiteral("WA"));
+    test.findNext(QStringLiteral("WARRANTY"));
+    test.findNext(QStringLiteral("Free"));
+    test.findNext(QStringLiteral("Software Foundation"));
 
     const QString output2 =
         QLatin1String("line: \"This file is part of the KDE project.\", index: 0, length: 0\n") +
@@ -325,24 +325,24 @@ void TestKFind::testFindIncrementalDynamic()
     KFindRecorder test(m_text.split(QLatin1Char('\n')));
 
     test.find(QString(), KFind::FindIncremental);
-    test.findNext(QLatin1String("i"));
-    test.findNext(QLatin1String("is"));
-    test.findNext(QLatin1String("ist"));
-    test.findNext(QLatin1String("istr"));
+    test.findNext(QStringLiteral("i"));
+    test.findNext(QStringLiteral("is"));
+    test.findNext(QStringLiteral("ist"));
+    test.findNext(QStringLiteral("istr"));
     test.findNext();
-    test.changeText(1, QLatin1String("The second line now looks a whole lot different."));
-    test.findNext(QLatin1String("istri"));
-    test.findNext(QLatin1String("istr"));
-    test.findNext(QLatin1String("ist"));
-    test.findNext(QLatin1String("is"));
-    test.findNext(QLatin1String("i"));
-    test.findNext(QLatin1String("W"));
-    test.findNext(QLatin1String("WA"));
-    test.findNext(QLatin1String("WARRANTY"));
-    test.changeText(6, QLatin1String("    but WITHOUT ANY xxxx; without even the implied warranty of"));
-    test.findNext(QLatin1String("WARRAN"));
-    test.findNext(QLatin1String("Free"));
-    test.findNext(QLatin1String("Software Foundation"));
+    test.changeText(1, QStringLiteral("The second line now looks a whole lot different."));
+    test.findNext(QStringLiteral("istri"));
+    test.findNext(QStringLiteral("istr"));
+    test.findNext(QStringLiteral("ist"));
+    test.findNext(QStringLiteral("is"));
+    test.findNext(QStringLiteral("i"));
+    test.findNext(QStringLiteral("W"));
+    test.findNext(QStringLiteral("WA"));
+    test.findNext(QStringLiteral("WARRANTY"));
+    test.changeText(6, QStringLiteral("    but WITHOUT ANY xxxx; without even the implied warranty of"));
+    test.findNext(QStringLiteral("WARRAN"));
+    test.findNext(QStringLiteral("Free"));
+    test.findNext(QStringLiteral("Software Foundation"));
 
     const QString output3 =
         QLatin1String("line: \"This file is part of the KDE project.\", index: 0, length: 0\n") +

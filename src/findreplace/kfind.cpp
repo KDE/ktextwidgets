@@ -73,8 +73,8 @@ KFindNextDialog::KFindNextDialog(const QString &pattern, QWidget *parent)
     buttonBox->setStandardButtons(QDialogButtonBox::Close);
     layout->addWidget(buttonBox);
 
-    connect(buttonBox, SIGNAL(accepted()), this, SLOT(accept()));
-    connect(buttonBox, SIGNAL(rejected()), this, SLOT(reject()));
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
 }
 
 QPushButton *KFindNextDialog::findButton() const
@@ -337,7 +337,7 @@ KFind::Result KFind::find()
                     }
 
                     if (d->pattern.length() < d->matchedPattern.length()) {
-                        d->pattern += d->matchedPattern.mid(d->pattern.length(), 1);
+                        d->pattern += d->matchedPattern.midRef(d->pattern.length(), 1);
                         done = false;
                     }
                 }
@@ -659,7 +659,7 @@ bool KFind::shouldRestart(bool forceAsking, bool showNumMatches) const
         i18n("Continue from the end?")
         : i18n("Continue from the beginning?");
 
-    int ret = KMessageBox::questionYesNo(dialogsParent(), QString::fromLatin1("<qt>%1</qt>").arg(message),
+    int ret = KMessageBox::questionYesNo(dialogsParent(), QStringLiteral("<qt>%1</qt>").arg(message),
                                          QString(), KStandardGuiItem::cont(), KStandardGuiItem::stop());
     bool yes = (ret == KMessageBox::Yes);
     if (yes) {

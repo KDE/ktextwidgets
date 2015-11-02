@@ -41,10 +41,10 @@ private Q_SLOTS:
 void KTextEdit_UnitTest::testPaste()
 {
     const QString origText = QApplication::clipboard()->text();
-    const QString pastedText = QLatin1String("Test paste from ktextedit_unittest");
+    const QString pastedText = QStringLiteral("Test paste from ktextedit_unittest");
     QApplication::clipboard()->setText(pastedText);
     KTextEdit w;
-    w.setPlainText(QLatin1String("Hello world"));
+    w.setPlainText(QStringLiteral("Hello world"));
     w.selectAll();
     QTest::keyClick(&w, Qt::Key_V, Qt::ControlModifier);
     QCOMPARE(w.toPlainText(), pastedText);

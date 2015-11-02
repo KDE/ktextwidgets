@@ -182,8 +182,8 @@ void KTextEdit::Private::checkSpelling(bool force)
             parent, SLOT(spellCheckerCorrected(QString,int,QString)));
     connect(spellDialog, SIGNAL(misspelling(QString,int)),
             parent, SLOT(spellCheckerMisspelling(QString,int)));
-    connect(spellDialog, SIGNAL(autoCorrect(QString,QString)),
-            parent, SLOT(spellCheckerAutoCorrect(QString,QString)));
+    connect(spellDialog, &Sonnet::Dialog::autoCorrect,
+            parent, &KTextEdit::spellCheckerAutoCorrect);
     connect(spellDialog, SIGNAL(done(QString)),
             parent, SLOT(spellCheckerFinished()));
     connect(spellDialog, SIGNAL(cancel()),
@@ -193,13 +193,13 @@ void KTextEdit::Private::checkSpelling(bool force)
     connect(spellDialog, SIGNAL(stop()),
             parent, SLOT(spellCheckerFinished()));
     */
-    connect(spellDialog, SIGNAL(spellCheckStatus(QString)),
-            parent, SIGNAL(spellCheckStatus(QString)));
-    connect(spellDialog, SIGNAL(languageChanged(QString)),
-            parent, SIGNAL(languageChanged(QString)));
+    connect(spellDialog, &Sonnet::Dialog::spellCheckStatus,
+            parent, &KTextEdit::spellCheckStatus);
+    connect(spellDialog, &Sonnet::Dialog::languageChanged,
+            parent, &KTextEdit::languageChanged);
     if (force) {
         connect(spellDialog, SIGNAL(done(QString)), parent, SIGNAL(spellCheckingFinished()));
-        connect(spellDialog, SIGNAL(cancel()), parent, SIGNAL(spellCheckingCanceled()));
+        connect(spellDialog, &Sonnet::Dialog::cancel, parent, &KTextEdit::spellCheckingCanceled);
         //Laurent in sonnet/dialog.cpp we emit done(QString) too => it calls here twice spellCheckerFinished not necessary
         //connect(spellDialog, SIGNAL(stop()), parent, SIGNAL(spellCheckingFinished()));
     }
@@ -309,8 +309,8 @@ void KTextEdit::Private::slotReplaceText(const QString &text, int replacementInd
 void KTextEdit::Private::init()
 {
     KCursor::setAutoHideCursor(parent, true, false);
-    parent->connect(parent, SIGNAL(languageChanged(QString)),
-                    parent, SLOT(setSpellCheckingLanguage(QString)));
+    parent->connect(parent, &KTextEdit::languageChanged,
+                    parent, &KTextEdit::setSpellCheckingLanguage);
 }
 
 KTextDecorator::KTextDecorator(KTextEdit *textEdit):
@@ -557,7 +557,7 @@ QMenu *KTextEdit::mousePopupMenu()
 
     if (!isReadOnly()) {
         popup->addSeparator();
-        d->spellCheckAction = popup->addAction(QIcon::fromTheme(QLatin1String("tools-check-spelling")),
+        d->spellCheckAction = popup->addAction(QIcon::fromTheme(QStringLiteral("tools-check-spelling")),
                                                i18n("Check Spelling..."));
         if (emptyDocument) {
             d->spellCheckAction->setEnabled(false);
@@ -629,9 +629,9 @@ QMenu *KTextEdit::mousePopupMenu()
 #ifdef HAVE_SPEECH
     popup->addSeparator();
     QAction *speakAction = popup->addAction(i18n("Speak Text"));
-    speakAction->setIcon(QIcon::fromTheme(QLatin1String("preferences-desktop-text-to-speech")));
+    speakAction->setIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-text-to-speech")));
     speakAction->setEnabled(!emptyDocument);
-    connect(speakAction, SIGNAL(triggered(bool)), this, SLOT(slotSpeakText()));
+    connect(speakAction, &QAction::triggered, this, &KTextEdit::slotSpeakText);
 #endif
     return popup;
 }
@@ -805,7 +805,7 @@ void KTextEdit::replace()
     } else {
         d->repDlg = new KReplaceDialog(this, 0,
                                        QStringList(), QStringList(), false);
-        connect(d->repDlg, SIGNAL(okClicked()), this, SLOT(slotDoReplace()));
+        connect(d->repDlg, &KFindDialog::okClicked, this, &KTextEdit::slotDoReplace);
     }
     d->repDlg->show();
 }
@@ -835,7 +835,7 @@ void KTextEdit::slotDoReplace()
     // of found text.
     connect(d->replace, SIGNAL(highlight(QString,int,int)),
             this, SLOT(slotFindHighlight(QString,int,int)));
-    connect(d->replace, SIGNAL(findNext()), this, SLOT(slotReplaceNext()));
+    connect(d->replace, &KFind::findNext, this, &KTextEdit::slotReplaceNext);
     connect(d->replace, SIGNAL(replace(QString,int,int,int)),
             this, SLOT(slotReplaceText(QString,int,int,int)));
 
@@ -908,7 +908,7 @@ void KTextEdit::slotDoFind()
     // of found text.
     connect(d->find, SIGNAL(highlight(QString,int,int)),
             this, SLOT(slotFindHighlight(QString,int,int)));
-    connect(d->find, SIGNAL(findNext()), this, SLOT(slotFindNext()));
+    connect(d->find, &KFind::findNext, this, &KTextEdit::slotFindNext);
 
     d->findDlg->close();
     d->find->closeFindNextDialog();
@@ -967,7 +967,7 @@ void KTextEdit::slotFind()
         KWindowSystem::activateWindow(d->findDlg->winId());
     } else {
         d->findDlg = new KFindDialog(this);
-        connect(d->findDlg, SIGNAL(okClicked()), this, SLOT(slotDoFind()));
+        connect(d->findDlg, &KFindDialog::okClicked, this, &KTextEdit::slotDoFind);
     }
     d->findDlg->show();
 }
@@ -983,7 +983,7 @@ void KTextEdit::slotReplace()
     } else {
         d->repDlg = new KReplaceDialog(this, 0,
                                        QStringList(), QStringList(), false);
-        connect(d->repDlg, SIGNAL(okClicked()), this, SLOT(slotDoReplace()));
+        connect(d->repDlg, &KFindDialog::okClicked, this, &KTextEdit::slotDoReplace);
     }
     d->repDlg->show();
 }

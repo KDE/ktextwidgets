@@ -26,7 +26,7 @@
 
 int main(int argc, char **argv)
 {
-    QApplication::setApplicationName(QLatin1String("ktextedittest"));
+    QApplication::setApplicationName(QStringLiteral("ktextedittest"));
     QApplication app(argc, argv);
     KTextEdit *edit = new KTextEdit();
 
