@@ -557,43 +557,45 @@ QMenu *KTextEdit::mousePopupMenu()
 
     if (!isReadOnly()) {
         popup->addSeparator();
-        d->spellCheckAction = popup->addAction(QIcon::fromTheme(QStringLiteral("tools-check-spelling")),
-                                               i18n("Check Spelling..."));
-        if (emptyDocument) {
-            d->spellCheckAction->setEnabled(false);
+        if (!d->speller) {
+            d->speller = new Sonnet::Speller();
         }
+        if (!d->speller->availableBackends().isEmpty()) {
 
-        if (checkSpellingEnabled()) {
-            d->languagesMenu = new QMenu(i18n("Spell Checking Language"), popup);
-            QActionGroup *languagesGroup = new QActionGroup(d->languagesMenu);
-            languagesGroup->setExclusive(true);
-            if (!d->speller) {
-                d->speller = new Sonnet::Speller();
+            d->spellCheckAction = popup->addAction(QIcon::fromTheme(QStringLiteral("tools-check-spelling")),
+                                                   i18n("Check Spelling..."));
+            if (emptyDocument) {
+                d->spellCheckAction->setEnabled(false);
+            }
+            if (checkSpellingEnabled()) {
+                d->languagesMenu = new QMenu(i18n("Spell Checking Language"), popup);
+                QActionGroup *languagesGroup = new QActionGroup(d->languagesMenu);
+                languagesGroup->setExclusive(true);
+
+                QMapIterator<QString, QString> i(d->speller->availableDictionaries());
+                const QString language = spellCheckingLanguage();
+                while (i.hasNext()) {
+                    i.next();
+
+                    QAction *languageAction = d->languagesMenu->addAction(i.key());
+                    languageAction->setCheckable(true);
+                    languageAction->setChecked(language == i.value() || (language.isEmpty()
+                                                                         && d->speller->defaultLanguage() == i.value()));
+                    languageAction->setData(i.value());
+                    languageAction->setActionGroup(languagesGroup);
+                    connect(languageAction, &QAction::triggered,
+                            [this, languageAction]() {
+                        setSpellCheckingLanguage(languageAction->data().toString());
+                    });
+                }
+                popup->addMenu(d->languagesMenu);
             }
 
-            QMapIterator<QString, QString> i(d->speller->availableDictionaries());
-            const QString language = spellCheckingLanguage();
-            while (i.hasNext()) {
-                i.next();
-
-                QAction *languageAction = d->languagesMenu->addAction(i.key());
-                languageAction->setCheckable(true);
-                languageAction->setChecked(language == i.value() || (language.isEmpty()
-                                        && d->speller->defaultLanguage() == i.value()));
-                languageAction->setData(i.value());
-                languageAction->setActionGroup(languagesGroup);
-                connect(languageAction, &QAction::triggered,
-                        [this, languageAction]() {
-                            setSpellCheckingLanguage(languageAction->data().toString());
-                        });
-            }
-            popup->addMenu(d->languagesMenu);
+            d->autoSpellCheckAction = popup->addAction(i18n("Auto Spell Check"));
+            d->autoSpellCheckAction->setCheckable(true);
+            d->autoSpellCheckAction->setChecked(checkSpellingEnabled());
+            popup->addSeparator();
         }
-
-        d->autoSpellCheckAction = popup->addAction(i18n("Auto Spell Check"));
-        d->autoSpellCheckAction->setCheckable(true);
-        d->autoSpellCheckAction->setChecked(checkSpellingEnabled());
-        popup->addSeparator();
         if (d->showTabAction) {
             d->allowTab = popup->addAction(i18n("Allow Tabulations"));
             d->allowTab->setCheckable(true);
