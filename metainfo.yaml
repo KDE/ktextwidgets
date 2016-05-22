@@ -11,3 +11,7 @@ libraries:
  - qmake: KTextWidgets
    cmake: "KF5::TextWidgets"
 cmakename: KF5TextWidgets
+
+public_lib: true
+group: Frameworks
+subgroup: Tier 3
