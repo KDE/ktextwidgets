@@ -19,7 +19,7 @@ include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 include(ECMPackageConfigHelpers)
 
-set(KF5_VERSION "5.25.0") # handled by release scripts
+set(KF5_VERSION "5.26.0") # handled by release scripts
 set(KF5_DEP_VERSION "5.25.0") # handled by release scripts
 
 ecm_setup_version(${KF5_VERSION}
