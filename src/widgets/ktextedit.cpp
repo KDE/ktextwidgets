@@ -366,7 +366,7 @@ void KTextEdit::showSpellConfigDialog(const QString &windowIcon)
         dialog.setLanguage(d->spellCheckingLanguage);
     }
     if (!windowIcon.isEmpty()) {
-        dialog.setWindowIcon(QIcon::fromTheme(windowIcon));
+        dialog.setWindowIcon(QIcon::fromTheme(windowIcon, dialog.windowIcon()));
     }
     if (dialog.exec()) {
         setSpellCheckingLanguage(dialog.language());
