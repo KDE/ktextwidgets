@@ -19,7 +19,7 @@ include(KDECMakeSettings)
 include(GenerateExportHeader)
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
-include(ECMPackageConfigHelpers)
+include(CMakePackageConfigHelpers)
 
 ecm_setup_version(PROJECT
                   VARIABLE_PREFIX KTEXTWIDGETS
@@ -60,7 +60,7 @@ add_subdirectory(autotests)
 # create a Config.cmake and a ConfigVersion.cmake file and install them
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5TextWidgets")
 
-ecm_configure_package_config_file("${CMAKE_CURRENT_SOURCE_DIR}/KF5TextWidgetsConfig.cmake.in"
+configure_package_config_file("${CMAKE_CURRENT_SOURCE_DIR}/KF5TextWidgetsConfig.cmake.in"
                               "${CMAKE_CURRENT_BINARY_DIR}/KF5TextWidgetsConfig.cmake"
                               INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
                              )
