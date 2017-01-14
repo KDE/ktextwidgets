@@ -47,7 +47,6 @@ class QAction;
 class KTEXTWIDGETS_EXPORT KRichTextWidget : public KRichTextEdit
 {
     Q_OBJECT
-    Q_FLAGS(RichTextSupport)
     Q_PROPERTY(RichTextSupport richTextSupport READ richTextSupport WRITE setRichTextSupport)
 public:
 
@@ -228,6 +227,7 @@ public:
         FullSupport = 0xffffffff
     };
     Q_DECLARE_FLAGS(RichTextSupport, RichTextSupportValues)
+    Q_FLAG(RichTextSupport)
 
     /**
      * @brief Constructor
