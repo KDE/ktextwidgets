@@ -60,13 +60,13 @@ public:
      * Constructs a KTextEdit object. See QTextEdit::QTextEdit
      * for details.
      */
-    explicit KTextEdit(const QString &text, QWidget *parent = 0);
+    explicit KTextEdit(const QString &text, QWidget *parent = nullptr);
 
     /**
      * Constructs a KTextEdit object. See QTextEdit::QTextEdit
      * for details.
      */
-    explicit KTextEdit(QWidget *parent = 0);
+    explicit KTextEdit(QWidget *parent = nullptr);
 
     /**
      * Destroys the KTextEdit object.

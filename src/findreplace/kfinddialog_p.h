@@ -40,12 +40,12 @@ class KFindDialog::KFindDialogPrivate
 public:
     KFindDialogPrivate(KFindDialog *q)
         : q(q),
-          regexpDialog(0),
+          regexpDialog(nullptr),
           regexpDialogQueryDone(false),
           initialShowDone(false),
           enabled(KFind::WholeWordsOnly | KFind::FromCursor |  KFind::SelectedText | KFind::CaseSensitive | KFind::FindBackwards | KFind::RegularExpression),
-          findExtension(0),
-          buttonBox(0)
+          findExtension(nullptr),
+          buttonBox(nullptr)
     {}
 
     void init(bool forReplace, const QStringList &findStrings, bool hasSelection);

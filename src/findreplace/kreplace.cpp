@@ -155,7 +155,7 @@ QDialog *KReplace::replaceNextDialog(bool create)
     if (KFind::d->dialog || create) {
         return d->dialog();
     }
-    return 0L;
+    return nullptr;
 }
 
 KReplaceNextDialog *KReplacePrivate::dialog()
@@ -272,7 +272,7 @@ int KReplace::replace(QString &text, const QString &pattern, const QString &repl
 
     index = KFind::find(text, pattern, index, options, &matchedLength);
     if (index != -1) {
-        *replacedLength = replaceHelper(text, replacement, index, options, matchedLength, NULL);
+        *replacedLength = replaceHelper(text, replacement, index, options, matchedLength, nullptr);
         if (options & KFind::FindBackwards) {
             index--;
         } else {
@@ -314,7 +314,7 @@ void KReplacePrivate::_k_slotSkip()
         q->KFind::d->index++;
     }
     if (q->KFind::d->dialogClosed) {
-        q->KFind::d->dialog->deleteLater(); q->KFind::d->dialog = 0L; // hide it again
+        q->KFind::d->dialog->deleteLater(); q->KFind::d->dialog = nullptr; // hide it again
     } else {
         emit q->findNext();
     }
@@ -324,7 +324,7 @@ void KReplacePrivate::_k_slotReplace()
 {
     doReplace();
     if (q->KFind::d->dialogClosed) {
-        q->KFind::d->dialog->deleteLater(); q->KFind::d->dialog = 0L; // hide it again
+        q->KFind::d->dialog->deleteLater(); q->KFind::d->dialog = nullptr; // hide it again
     } else {
         emit q->findNext();
     }

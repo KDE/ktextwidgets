@@ -54,7 +54,7 @@ private:
 // Create the dialog.
 KFindNextDialog::KFindNextDialog(const QString &pattern, QWidget *parent)
     : QDialog(parent),
-      m_findButton(0)
+      m_findButton(nullptr)
 {
     setModal(false);
     setWindowTitle(i18n("Find Next"));
@@ -105,11 +105,11 @@ void KFind::Private::init(const QString &_pattern)
 {
     matches = 0;
     pattern = _pattern;
-    dialog = 0;
+    dialog = nullptr;
     dialogClosed = false;
     index = INDEX_NOMATCH;
     lastResult = NoMatch;
-    regExp = 0;
+    regExp = nullptr;
     q->setOptions(options);   // create d->regExp with the right options
 }
 
@@ -391,7 +391,7 @@ KFind::Result KFind::find()
 void KFind::Private::startNewIncrementalSearch()
 {
     Private::Match *match = emptyMatch;
-    if (match == 0) {
+    if (match == nullptr) {
         text.clear();
         index = 0;
         currentId = 0;
@@ -402,7 +402,7 @@ void KFind::Private::startNewIncrementalSearch()
     }
     matchedLength = 0;
     incrementalPath.clear();
-    delete emptyMatch; emptyMatch = 0;
+    delete emptyMatch; emptyMatch = nullptr;
     matchedPattern = pattern;
     pattern.clear();
 }
@@ -682,7 +682,7 @@ void KFind::setOptions(long options)
         Qt::CaseSensitivity caseSensitive = (d->options & KFind::CaseSensitive) ? Qt::CaseSensitive : Qt::CaseInsensitive;
         d->regExp = new QRegExp(d->pattern, caseSensitive);
     } else {
-        d->regExp = 0;
+        d->regExp = nullptr;
     }
 }
 
@@ -690,7 +690,7 @@ void KFind::closeFindNextDialog()
 {
     if (d->dialog) {
         d->dialog->deleteLater();
-        d->dialog = 0;
+        d->dialog = nullptr;
     }
     d->dialogClosed = true;
 }

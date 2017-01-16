@@ -105,7 +105,7 @@ public:
      * Only use this constructor if you don't use KFindDialog, or if
      * you use it as a modal dialog.
      */
-    KReplace(const QString &pattern, const QString &replacement, long options, QWidget *parent = 0);
+    KReplace(const QString &pattern, const QString &replacement, long options, QWidget *parent = nullptr);
     /**
      * This is the recommended constructor if you also use KReplaceDialog (non-modal).
      * You should pass the pointer to it here, so that when a message box

@@ -42,7 +42,7 @@ public:
     KReplaceDialogPrivate(KReplaceDialog *q)
         : q(q)
         , initialShowDone(false)
-        , replaceExtension(0)
+        , replaceExtension(nullptr)
     {
     }
 

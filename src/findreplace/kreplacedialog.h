@@ -78,7 +78,7 @@ public:
      *        replace with
      * @param hasSelection Whether a selection exists
      */
-    explicit KReplaceDialog(QWidget *parent = 0, long options = 0,
+    explicit KReplaceDialog(QWidget *parent = nullptr, long options = 0,
                             const QStringList &findStrings = QStringList(),
                             const QStringList &replaceStrings = QStringList(),
                             bool hasSelection = true);

@@ -40,7 +40,7 @@ public:
      * Default constructor
      */
 
-    explicit KPluralHandlingSpinBox(QWidget *parent = 0);
+    explicit KPluralHandlingSpinBox(QWidget *parent = nullptr);
     ~KPluralHandlingSpinBox();
 
     /**

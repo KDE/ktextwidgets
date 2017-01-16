@@ -33,12 +33,12 @@
 struct KFind::Private {
     Private(KFind *q)
         : q(q)
-        , findDialog(0)
+        , findDialog(nullptr)
         , currentId(0)
         , customIds(false)
         , patternChanged(false)
         , matchedPattern(QLatin1String(""))
-        , emptyMatch(0)
+        , emptyMatch(nullptr)
     {
     }
 
@@ -47,10 +47,10 @@ struct KFind::Private {
         if (dialog) {
             dialog->deleteLater();
         }
-        dialog = 0;
+        dialog = nullptr;
         data.clear();
         delete emptyMatch;
-        emptyMatch = 0;
+        emptyMatch = nullptr;
     }
 
     struct Match {

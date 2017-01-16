@@ -72,7 +72,7 @@ public:
           findReplaceEnabled(true),
           showTabAction(true),
           showAutoCorrectionButton(false),
-          decorator(0), speller(0), findDlg(0), find(0), repDlg(0), replace(0),
+          decorator(nullptr), speller(nullptr), findDlg(nullptr), find(nullptr), repDlg(nullptr), replace(nullptr),
 #ifdef HAVE_SPEECH
           textToSpeech(Q_NULLPTR),
 #endif
@@ -174,7 +174,7 @@ void KTextEdit::Private::checkSpelling(bool force)
         backgroundSpellCheck->changeLanguage(spellCheckingLanguage);
     }
     Sonnet::Dialog *spellDialog = new Sonnet::Dialog(
-        backgroundSpellCheck, force ? parent : 0);
+        backgroundSpellCheck, force ? parent : nullptr);
     backgroundSpellCheck->setParent(spellDialog);
     spellDialog->setAttribute(Qt::WA_DeleteOnClose, true);
     spellDialog->activeAutoCorrect(showAutoCorrectionButton);
@@ -529,7 +529,7 @@ QMenu *KTextEdit::mousePopupMenu()
 {
     QMenu *popup = createStandardContextMenu();
     if (!popup) {
-        return 0;
+        return nullptr;
     }
     connect(popup, SIGNAL(triggered(QAction*)),
             this, SLOT(menuActivated(QAction*)));
@@ -538,7 +538,7 @@ QMenu *KTextEdit::mousePopupMenu()
     if (!isReadOnly()) {
         QList<QAction *> actionList = popup->actions();
         enum { UndoAct, RedoAct, CutAct, CopyAct, PasteAct, ClearAct, SelectAllAct, NCountActs };
-        QAction *separatorAction = 0L;
+        QAction *separatorAction = nullptr;
         int idx = actionList.indexOf(actionList[SelectAllAct]) + 1;
         if (idx < actionList.count()) {
             separatorAction = actionList.at(idx);
@@ -612,8 +612,8 @@ QMenu *KTextEdit::mousePopupMenu()
             findNextAction->setEnabled(false);
             findPrevAction->setEnabled(false);
         } else {
-            findNextAction->setEnabled(d->find != 0);
-            findPrevAction->setEnabled(d->find != 0);
+            findNextAction->setEnabled(d->find != nullptr);
+            findPrevAction->setEnabled(d->find != nullptr);
         }
         popup->addSeparator();
         popup->addAction(findAction);
@@ -671,14 +671,14 @@ Sonnet::Highlighter *KTextEdit::highlighter() const
     if (d->decorator) {
         return d->decorator->highlighter();
     } else {
-        return 0;
+        return nullptr;
     }
 }
 
 void KTextEdit::clearDecorator()
 {
     delete d->decorator;
-    d->decorator = 0;
+    d->decorator = nullptr;
 }
 
 void KTextEdit::addTextDecorator(Sonnet::SpellCheckDecorator *decorator)
@@ -754,7 +754,7 @@ void KTextEdit::setReadOnly(bool readOnly)
 
     if (readOnly) {
         delete d->decorator;
-        d->decorator = 0;
+        d->decorator = nullptr;
 
         d->customPalette = testAttribute(Qt::WA_SetPalette);
         QPalette p = palette();
@@ -821,7 +821,7 @@ void KTextEdit::slotDoReplace()
 
     if (d->repDlg->pattern().isEmpty()) {
         delete d->replace;
-        d->replace = 0;
+        d->replace = nullptr;
         ensureCursorVisible();
         return;
     }
@@ -880,7 +880,7 @@ void KTextEdit::slotReplaceNext()
         d->replace->displayFinalDialog();
         d->replace->disconnect(this);
         d->replace->deleteLater(); // we are in a slot connected to m_replace, don't delete it right away
-        d->replace = 0;
+        d->replace = nullptr;
         ensureCursorVisible();
         //or           if ( m_replace->shouldRestart() ) { reinit (w/o FromCursor) and call slotReplaceNext(); }
     } else {
@@ -896,7 +896,7 @@ void KTextEdit::slotDoFind()
     }
     if (d->findDlg->pattern().isEmpty()) {
         delete d->find;
-        d->find = 0;
+        d->find = nullptr;
         return;
     }
     delete d->find;
@@ -925,7 +925,7 @@ void KTextEdit::slotFindNext()
     if (document()->isEmpty()) {
         d->find->disconnect(this);
         d->find->deleteLater(); // we are in a slot connected to m_find, don't delete right away
-        d->find = 0;
+        d->find = nullptr;
         return;
     }
 
@@ -939,7 +939,7 @@ void KTextEdit::slotFindNext()
         d->find->displayFinalDialog();
         d->find->disconnect(this);
         d->find->deleteLater(); // we are in a slot connected to m_find, don't delete right away
-        d->find = 0;
+        d->find = nullptr;
         //or           if ( m_find->shouldRestart() ) { reinit (w/o FromCursor) and call slotFindNext(); }
     } else {
         //m_find->closeFindNextDialog();

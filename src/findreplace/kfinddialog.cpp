@@ -147,8 +147,8 @@ void KFindDialog::KFindDialogPrivate::init(bool forReplace, const QStringList &_
     topLayout->addWidget(buttonBox);
 
     // We delay creation of these until needed.
-    patterns = 0;
-    placeholders = 0;
+    patterns = nullptr;
+    placeholders = nullptr;
 
     // signals and slots connections
     q->connect(selectedText, SIGNAL(toggled(bool)), q, SLOT(_k_slotSelectedTextToggled(bool)));
@@ -431,7 +431,7 @@ void KFindDialog::KFindDialogPrivate::_k_showPatterns()
         regexpDialog = KPluginTrader::createInstanceFromQuery<QDialog>(QStringLiteral("kregexpeditor"),
                        QStringLiteral("KRegExpEditor/KRegExpEditor"),
                        QString(),
-                       0,
+                       nullptr,
                        q);
         regexpDialogQueryDone = true;
     }

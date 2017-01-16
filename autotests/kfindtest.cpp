@@ -29,7 +29,7 @@
 void KFindRecorder::changeText(int line, const QString &text)
 {
     Q_ASSERT(line < m_text.count());
-    Q_ASSERT(m_find != 0);
+    Q_ASSERT(m_find != nullptr);
 
     m_line = line;
     m_text[line] = text;
@@ -39,7 +39,7 @@ void KFindRecorder::changeText(int line, const QString &text)
 void KFindRecorder::find(const QString &pattern, long options)
 {
     delete m_find;
-    m_find = new KFind(pattern, options, 0);
+    m_find = new KFind(pattern, options, nullptr);
     // Prevent dialogs from popping up
     m_find->closeFindNextDialog();
 
@@ -65,7 +65,7 @@ void KFindRecorder::find(const QString &pattern, long options)
 
 bool KFindRecorder::findNext(const QString &pattern)
 {
-    Q_ASSERT(m_find != 0);
+    Q_ASSERT(m_find != nullptr);
 
     if (!pattern.isNull()) {
         m_find->setPattern(pattern);

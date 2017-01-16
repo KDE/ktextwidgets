@@ -79,14 +79,14 @@ public:
      *             HTML.
      * @param parent The parent widget
      */
-    explicit KRichTextEdit(const QString &text, QWidget *parent = 0);
+    explicit KRichTextEdit(const QString &text, QWidget *parent = nullptr);
 
     /**
      * Constructs a KRichTextEdit object.
      *
      * @param parent The parent widget
      */
-    explicit KRichTextEdit(QWidget *parent = 0);
+    explicit KRichTextEdit(QWidget *parent = nullptr);
 
     /**
      * Destructor.

@@ -48,30 +48,30 @@ public:
         :   q(parent),
             painterActive(false),
             richTextEnabled(false), // It's only enabled when an action makes text rich.
-            enableRichText(0),
-            action_text_foreground_color(0),
-            action_text_background_color(0),
-            action_text_bold(0),
-            action_text_italic(0),
-            action_text_underline(0),
-            action_text_strikeout(0),
-            action_font_family(0),
-            action_font_size(0),
-            action_list_style(0),
-            action_list_indent(0),
-            action_list_dedent(0),
-            action_manage_link(0),
-            action_insert_horizontal_rule(0),
-            action_format_painter(0),
-            action_to_plain_text(0),
-            action_align_left(0),
-            action_align_right(0),
-            action_align_center(0),
-            action_align_justify(0),
-            action_direction_ltr(0),
-            action_direction_rtl(0),
-            action_text_superscript(0),
-            action_text_subscript(0)
+            enableRichText(nullptr),
+            action_text_foreground_color(nullptr),
+            action_text_background_color(nullptr),
+            action_text_bold(nullptr),
+            action_text_italic(nullptr),
+            action_text_underline(nullptr),
+            action_text_strikeout(nullptr),
+            action_font_family(nullptr),
+            action_font_size(nullptr),
+            action_list_style(nullptr),
+            action_list_indent(nullptr),
+            action_list_dedent(nullptr),
+            action_manage_link(nullptr),
+            action_insert_horizontal_rule(nullptr),
+            action_format_painter(nullptr),
+            action_to_plain_text(nullptr),
+            action_align_left(nullptr),
+            action_align_right(nullptr),
+            action_align_center(nullptr),
+            action_align_justify(nullptr),
+            action_direction_ltr(nullptr),
+            action_direction_rtl(nullptr),
+            action_text_superscript(nullptr),
+            action_text_subscript(nullptr)
     {
     }
 
@@ -233,7 +233,7 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_text_foreground_color->setObjectName(QStringLiteral("format_text_foreground_color"));
         connect(d->action_text_foreground_color, SIGNAL(triggered()), this, SLOT(_k_setTextForegroundColor()));
     } else {
-        d->action_text_foreground_color = 0;
+        d->action_text_foreground_color = nullptr;
     }
 
     if (d->richTextSupport & SupportTextBackgroundColor) {
@@ -244,7 +244,7 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_text_background_color->setObjectName(QStringLiteral("format_text_background_color"));
         connect(d->action_text_background_color, SIGNAL(triggered()), this, SLOT(_k_setTextBackgroundColor()));
     } else {
-        d->action_text_background_color = 0;
+        d->action_text_background_color = nullptr;
     }
 
     if (d->richTextSupport & SupportFontFamily) {
@@ -254,7 +254,7 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_font_family->setObjectName(QStringLiteral("format_font_family"));
         connect(d->action_font_family, SIGNAL(triggered(QString)), this, SLOT(setFontFamily(QString)));
     } else {
-        d->action_font_family = 0;
+        d->action_font_family = nullptr;
     }
 
     if (d->richTextSupport & SupportFontSize) {
@@ -264,7 +264,7 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_font_size->setObjectName(QStringLiteral("format_font_size"));
         connect(d->action_font_size, &KFontSizeAction::fontSizeChanged, this, &KRichTextEdit::setFontSize);
     } else {
-        d->action_font_size = 0;
+        d->action_font_size = nullptr;
     }
 
     if (d->richTextSupport & SupportBold) {
@@ -278,7 +278,7 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_text_bold->setShortcut(Qt::CTRL + Qt::Key_B);
         connect(d->action_text_bold, &QAction::triggered, this, &KRichTextEdit::setTextBold);
     } else {
-        d->action_text_bold = 0;
+        d->action_text_bold = nullptr;
     }
 
     if (d->richTextSupport & SupportItalic) {
@@ -293,7 +293,7 @@ QList<QAction *> KRichTextWidget::createActions()
         connect(d->action_text_italic, &QAction::triggered,
                 this, &KRichTextEdit::setTextItalic);
     } else {
-        d->action_text_italic = 0;
+        d->action_text_italic = nullptr;
     }
 
     if (d->richTextSupport & SupportUnderline) {
@@ -308,7 +308,7 @@ QList<QAction *> KRichTextWidget::createActions()
         connect(d->action_text_underline, &QAction::triggered,
                 this, &KRichTextEdit::setTextUnderline);
     } else {
-        d->action_text_underline = 0;
+        d->action_text_underline = nullptr;
     }
 
     if (d->richTextSupport & SupportStrikeOut) {
@@ -323,7 +323,7 @@ QList<QAction *> KRichTextWidget::createActions()
         connect(d->action_text_strikeout, &QAction::triggered,
                 this, &KRichTextEdit::setTextStrikeOut);
     } else {
-        d->action_text_strikeout = 0;
+        d->action_text_strikeout = nullptr;
     }
 
     if (d->richTextSupport & SupportAlignment) {
@@ -366,10 +366,10 @@ QList<QAction *> KRichTextWidget::createActions()
         alignmentGroup->addAction(d->action_align_right);
         alignmentGroup->addAction(d->action_align_justify);
     } else {
-        d->action_align_left = 0;
-        d->action_align_center = 0;
-        d->action_align_right = 0;
-        d->action_align_justify = 0;
+        d->action_align_left = nullptr;
+        d->action_align_center = nullptr;
+        d->action_align_right = nullptr;
+        d->action_align_justify = nullptr;
     }
 
     if (d->richTextSupport & SupportDirection) {
@@ -393,8 +393,8 @@ QList<QAction *> KRichTextWidget::createActions()
         directionGroup->addAction(d->action_direction_ltr);
         directionGroup->addAction(d->action_direction_rtl);
     } else {
-        d->action_direction_ltr = 0;
-        d->action_direction_rtl = 0;
+        d->action_direction_ltr = nullptr;
+        d->action_direction_rtl = nullptr;
     }
 
     if (d->richTextSupport & SupportChangeListStyle) {
@@ -420,7 +420,7 @@ QList<QAction *> KRichTextWidget::createActions()
         connect(d->action_list_style, SIGNAL(triggered()),
                 this, SLOT(_k_updateMiscActions()));
     } else {
-        d->action_list_style = 0;
+        d->action_list_style = nullptr;
     }
 
     if (d->richTextSupport & SupportIndentLists) {
@@ -433,7 +433,7 @@ QList<QAction *> KRichTextWidget::createActions()
         connect(d->action_list_indent, SIGNAL(triggered()),
                 this, SLOT(_k_updateMiscActions()));
     } else {
-        d->action_list_indent = 0;
+        d->action_list_indent = nullptr;
     }
 
     if (d->richTextSupport & SupportDedentLists) {
@@ -446,7 +446,7 @@ QList<QAction *> KRichTextWidget::createActions()
         connect(d->action_list_dedent, SIGNAL(triggered()),
                 this, SLOT(_k_updateMiscActions()));
     } else {
-        d->action_list_dedent = 0;
+        d->action_list_dedent = nullptr;
     }
 
     if (d->richTextSupport & SupportRuleLine) {
@@ -457,7 +457,7 @@ QList<QAction *> KRichTextWidget::createActions()
         connect(d->action_insert_horizontal_rule, &QAction::triggered,
                 this, &KRichTextEdit::insertHorizontalRule);
     } else {
-        d->action_insert_horizontal_rule = 0;
+        d->action_insert_horizontal_rule = nullptr;
     }
 
     if (d->richTextSupport & SupportHyperlinks) {
@@ -468,7 +468,7 @@ QList<QAction *> KRichTextWidget::createActions()
         connect(d->action_manage_link, SIGNAL(triggered()),
                 this, SLOT(_k_manageLink()));
     } else {
-        d->action_manage_link = 0;
+        d->action_manage_link = nullptr;
     }
 
     if (d->richTextSupport & SupportFormatPainting) {
@@ -479,7 +479,7 @@ QList<QAction *> KRichTextWidget::createActions()
         connect(d->action_format_painter, SIGNAL(toggled(bool)),
                 this, SLOT(_k_formatPainter(bool)));
     } else {
-        d->action_format_painter = 0;
+        d->action_format_painter = nullptr;
     }
 
     if (d->richTextSupport & SupportToPlainText) {
@@ -489,7 +489,7 @@ QList<QAction *> KRichTextWidget::createActions()
         connect(d->action_to_plain_text, &QAction::triggered,
                 this, &KRichTextEdit::switchToPlainText);
     } else {
-        d->action_to_plain_text = 0;
+        d->action_to_plain_text = nullptr;
     }
 
     if (d->richTextSupport & SupportSuperScriptAndSubScript) {
@@ -507,9 +507,9 @@ QList<QAction *> KRichTextWidget::createActions()
         connect(d->action_text_superscript, &QAction::triggered,
                 this, &KRichTextEdit::setTextSuperScript);
     } else {
-        d->action_text_subscript = 0;
+        d->action_text_subscript = nullptr;
 
-        d->action_text_superscript = 0;
+        d->action_text_superscript = nullptr;
     }
 
     disconnect(this, SIGNAL(currentCharFormatChanged(QTextCharFormat)),

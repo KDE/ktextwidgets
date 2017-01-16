@@ -33,8 +33,8 @@ class KFindRecorder : public QObject
 
 public:
     KFindRecorder(const QStringList &text) :
-        QObject(0),
-        m_find(0),
+        QObject(nullptr),
+        m_find(nullptr),
         m_text(text),
         m_line(0)
     {}

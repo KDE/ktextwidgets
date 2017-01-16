@@ -87,7 +87,7 @@ void KReplaceTest::slotHighlight(const QString &str, int matchingIndex, int matc
     // so slotReplaceNext never returns)
     if (m_replace->options() & KReplaceDialog::PromptOnReplace) {
         QDialog *dlg = m_replace->replaceNextDialog(false);
-        disconnect(dlg, SIGNAL(finished(int)), m_replace, 0); // hack to avoid _k_slotDialogClosed being called
+        disconnect(dlg, SIGNAL(finished(int)), m_replace, nullptr); // hack to avoid _k_slotDialogClosed being called
         dlg->hide();
 
         QPushButton *button = dlg->findChild<QPushButton *>(m_buttonName);
@@ -273,7 +273,7 @@ static void testReplaceBackRef1(int options, const QString &buttonName = QString
 
 static void testReplacementHistory(const QStringList &findHistory, const QStringList &replaceHistory)
 {
-    KReplaceDialog dlg(0, 0, findHistory, replaceHistory);
+    KReplaceDialog dlg(nullptr, 0, findHistory, replaceHistory);
     dlg.show();
     qDebug() << "testReplacementHistory:" << dlg.replacementHistory();
     assert(dlg.replacementHistory() == replaceHistory);

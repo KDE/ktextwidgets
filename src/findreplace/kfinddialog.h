@@ -79,7 +79,7 @@ public:
      * @param findStrings The find history, see findHistory()
      * @param hasSelection Whether a selection exists
      */
-    explicit KFindDialog(QWidget *parent = 0, long options = 0,
+    explicit KFindDialog(QWidget *parent = nullptr, long options = 0,
                          const QStringList &findStrings = QStringList(), bool hasSelection = false, bool replaceDialog = false);
 
     /**

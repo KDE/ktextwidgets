@@ -242,7 +242,7 @@ public:
      *             HTML.
      * @param parent The parent widget
      */
-    explicit KRichTextWidget(const QString &text, QWidget *parent = 0);
+    explicit KRichTextWidget(const QString &text, QWidget *parent = nullptr);
 
     /**
      * @brief Destructor
