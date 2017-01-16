@@ -66,7 +66,7 @@ class KTextEdit::Private
 public:
     Private(KTextEdit *_parent)
         : parent(_parent),
-          languagesMenu(Q_NULLPTR),
+          languagesMenu(nullptr),
           customPalette(false),
           spellCheckingEnabled(false),
           findReplaceEnabled(true),
@@ -74,7 +74,7 @@ public:
           showAutoCorrectionButton(false),
           decorator(nullptr), speller(nullptr), findDlg(nullptr), find(nullptr), repDlg(nullptr), replace(nullptr),
 #ifdef HAVE_SPEECH
-          textToSpeech(Q_NULLPTR),
+          textToSpeech(nullptr),
 #endif
           findIndex(0), repIndex(0),
           lastReplacedPosition(-1)
