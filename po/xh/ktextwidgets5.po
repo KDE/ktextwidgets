@@ -1,0 +1,731 @@
+# translation of kdelibs4.po to
+# translation of kdelibs4.po to
+# translation of kdelibs4.po to
+# translation of kdelibs4.po to Xhosa
+# K Desktop Environment - kdelibs
+# Copyright (C) 2001 translate.org.za
+# Antoinette Dekeni <antoinette@transalate.org.za>, 2001.
+# Lwandle Mgidlana <lwandle@translate.org.za>, 2002
+# Thelma Lungcuzo <thelma@translate.org.za>, 2002
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2016-11-19 20:12+0100\n"
+"PO-Revision-Date: 2002-12-13 17:20SAST\n"
+"Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
+"Language-Team: Xhosa <xhosa@translate.org.za>\n"
+"Language: xh\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.0beta2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: dialogs/klinkdialog.cpp:52
+#, fuzzy, kde-format
+#| msgid "Save Link As"
+msgid "Manage Link"
+msgstr "Gcina Ikhonkco Njenge"
+
+#: dialogs/klinkdialog.cpp:60
+#, fuzzy, kde-format
+#| msgid "Find Text"
+msgid "Link Text:"
+msgstr "Fumana Okubhaliweyo"
+
+#: dialogs/klinkdialog.cpp:63
+#, fuzzy, kde-format
+#| msgid "URL:"
+msgid "Link URL:"
+msgstr "URL:"
+
+#: findreplace/kfind.cpp:60
+#, kde-format
+msgid "Find Next"
+msgstr "Fumana Okulandelayo"
+
+#: findreplace/kfind.cpp:65
+#, kde-format
+msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
+msgstr "<qt>Fumana isahlakalo esilandelayo se '<b>%1</b>'?</qt>"
+
+#: findreplace/kfind.cpp:624 findreplace/kfind.cpp:643
+#, fuzzy, kde-format
+msgid "1 match found."
+msgid_plural "%1 matches found."
+msgstr[0] "utelekiso olunye olufumanekileyo"
+msgstr[1] "%1 iintelekiso ezifumanekileyo."
+
+#: findreplace/kfind.cpp:626
+#, kde-format
+msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
+msgstr "<qt>Akukho ntelekiso efunyenweyo '<b>%1</b>'.</qt>"
+
+#: findreplace/kfind.cpp:645
+#, fuzzy, kde-format
+msgid "No matches found for '<b>%1</b>'."
+msgstr "<qt>Akukho ntelekiso efunyenweyo '<b>%1</b>'.</qt>"
+
+#: findreplace/kfind.cpp:649 findreplace/kreplace.cpp:387
+#, fuzzy, kde-format
+msgid "Beginning of document reached."
+msgstr ""
+"Kufikelelwe ekuqaleni koxwebhu.\n"
+"Qhubekeka ukusuka ekugqibeleni?"
+
+#: findreplace/kfind.cpp:651 findreplace/kreplace.cpp:389
+#, fuzzy, kde-format
+msgid "End of document reached."
+msgstr ""
+"Kufikelelwe esiphelweni soxwebhu.\n"
+"Qhubekeka ukusuka ekuqalekeni?"
+
+#: findreplace/kfind.cpp:659
+#, fuzzy, kde-format
+msgid "Continue from the end?"
+msgstr "Qhubeka nomsebenzi"
+
+#: findreplace/kfind.cpp:660
+#, fuzzy, kde-format
+msgid "Continue from the beginning?"
+msgstr ""
+"Kufikelelwe esiphelweni soxwebhu.\n"
+"Qhubekeka ukusuka ekuqalekeni?"
+
+#: findreplace/kfinddialog.cpp:49
+#, kde-format
+msgid "Find Text"
+msgstr "Fumana Okubhaliweyo"
+
+#: findreplace/kfinddialog.cpp:84
+#, fuzzy, kde-format
+#| msgid "Find"
+msgctxt "@title:group"
+msgid "Find"
+msgstr "Fumana"
+
+#: findreplace/kfinddialog.cpp:87
+#, kde-format
+msgid "&Text to find:"
+msgstr "&Okubhaliweyo omakufunyanwe:"
+
+#: findreplace/kfinddialog.cpp:91
+#, fuzzy, kde-format
+msgid "Regular e&xpression"
+msgstr "&Inkcazo eqhelekileyo"
+
+#: findreplace/kfinddialog.cpp:92
+#, kde-format
+msgid "&Edit..."
+msgstr "&Hlela..."
+
+#: findreplace/kfinddialog.cpp:101
+#, kde-format
+msgid "Replace With"
+msgstr "Buyisela Nge"
+
+#: findreplace/kfinddialog.cpp:104
+#, fuzzy, kde-format
+msgid "Replace&ment text:"
+msgstr "&Umbhalo obuyiselweyo:"
+
+#: findreplace/kfinddialog.cpp:108
+#, fuzzy, kde-format
+msgid "Use p&laceholders"
+msgstr "Se&benzisa ababambi bendawo"
+
+#: findreplace/kfinddialog.cpp:109
+#, kde-format
+msgid "Insert Place&holder"
+msgstr "Faka Umbambi&wendawo"
+
+#: findreplace/kfinddialog.cpp:118
+#, kde-format
+msgid "Options"
+msgstr "Iinketho"
+
+#: findreplace/kfinddialog.cpp:121
+#, kde-format
+msgid "C&ase sensitive"
+msgstr "U&mzekelo onovakalelo"
+
+#: findreplace/kfinddialog.cpp:122
+#, kde-format
+msgid "&Whole words only"
+msgstr "&Amagama apheleleyo kuphela"
+
+#: findreplace/kfinddialog.cpp:123
+#, fuzzy, kde-format
+msgid "From c&ursor"
+msgstr "&Ukusuka kwisikhombisi"
+
+#: findreplace/kfinddialog.cpp:124
+#, kde-format
+msgid "Find &backwards"
+msgstr "Fumana &ngasemva"
+
+#: findreplace/kfinddialog.cpp:125
+#, kde-format
+msgid "&Selected text"
+msgstr "&Okubhaliweyo okukhethiweyo"
+
+#: findreplace/kfinddialog.cpp:132
+#, kde-format
+msgid "&Prompt on replace"
+msgstr "&Unikezelo lusekubuyiselweni"
+
+#: findreplace/kfinddialog.cpp:199
+#, kde-format
+msgid "&Replace"
+msgstr "&Buyisela"
+
+#: findreplace/kfinddialog.cpp:200
+#, fuzzy, kde-format
+msgid "Start replace"
+msgstr "&Unikezelo lusekubuyiselweni"
+
+#: findreplace/kfinddialog.cpp:201
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Replace</b> button, the text you entered above is "
+"searched for within the document and any occurrence is replaced with the "
+"replacement text.</qt>"
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:205
+#, kde-format
+msgid "&Find"
+msgstr "&Fumana"
+
+#: findreplace/kfinddialog.cpp:206
+#, fuzzy, kde-format
+msgid "Start searching"
+msgstr "&Qalisa Umshicileli"
+
+#: findreplace/kfinddialog.cpp:207
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Find</b> button, the text you entered above is "
+"searched for within the document.</qt>"
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:213
+#, kde-format
+msgid ""
+"Enter a pattern to search for, or select a previous pattern from the list."
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:216
+#, fuzzy, kde-format
+msgid "If enabled, search for a regular expression."
+msgstr "Ukuzitsho okuthe rhoqo."
+
+#: findreplace/kfinddialog.cpp:218
+#, kde-format
+msgid "Click here to edit your regular expression using a graphical editor."
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:220
+#, kde-format
+msgid "Enter a replacement string, or select a previous one from the list."
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:222
+#, kde-format
+msgid ""
+"<qt>If enabled, any occurrence of <code><b>\\N</b></code>, where <code><b>N</"
+"b></code> is an integer number, will be replaced with the corresponding "
+"capture (\"parenthesized substring\") from the pattern.<p>To include (a "
+"literal <code><b>\\N</b></code> in your replacement, put an extra backslash "
+"in front of it, like <code><b>\\\\N</b></code>.</p></qt>"
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:229
+#, kde-format
+msgid "Click for a menu of available captures."
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:231
+#, kde-format
+msgid "Require word boundaries in both ends of a match to succeed."
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:233
+#, kde-format
+msgid "Start searching at the current cursor location rather than at the top."
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:235
+#, kde-format
+msgid "Only search within the current selection."
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:237
+#, kde-format
+msgid ""
+"Perform a case sensitive search: entering the pattern 'Joe' will not match "
+"'joe' or 'JOE', only 'Joe'."
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:240
+#, fuzzy, kde-format
+msgid "Search backwards."
+msgstr "Fumana &ngasemva"
+
+#: findreplace/kfinddialog.cpp:242
+#, kde-format
+msgid "Ask before replacing each match found."
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:454
+#, kde-format
+msgid "Any Character"
+msgstr "Noluphi na Uphawu"
+
+#: findreplace/kfinddialog.cpp:455
+#, kde-format
+msgid "Start of Line"
+msgstr "Qala Kumgca"
+
+#: findreplace/kfinddialog.cpp:456
+#, kde-format
+msgid "End of Line"
+msgstr "Isiphelo Selayini"
+
+#: findreplace/kfinddialog.cpp:457
+#, kde-format
+msgid "Set of Characters"
+msgstr "Iqela Lophawu"
+
+#: findreplace/kfinddialog.cpp:458
+#, kde-format
+msgid "Repeats, Zero or More Times"
+msgstr "Iimpinda, Igunkcu okanye Amaxesha Amaninzi"
+
+#: findreplace/kfinddialog.cpp:459
+#, kde-format
+msgid "Repeats, One or More Times"
+msgstr "Iimpinda, Enye okanye Amaxesha Amaninzi"
+
+#: findreplace/kfinddialog.cpp:460
+#, kde-format
+msgid "Optional"
+msgstr "Eyodwa"
+
+#: findreplace/kfinddialog.cpp:461
+#, kde-format
+msgid "Escape"
+msgstr "Zimela"
+
+#: findreplace/kfinddialog.cpp:462
+#, kde-format
+msgid "TAB"
+msgstr "TAB"
+
+#: findreplace/kfinddialog.cpp:463
+#, kde-format
+msgid "Newline"
+msgstr "Newline"
+
+#: findreplace/kfinddialog.cpp:464
+#, kde-format
+msgid "Carriage Return"
+msgstr "Ubuyiso lwe Carriage"
+
+#: findreplace/kfinddialog.cpp:465
+#, kde-format
+msgid "White Space"
+msgstr "Isithuba Esimhlophe"
+
+#: findreplace/kfinddialog.cpp:466
+#, kde-format
+msgid "Digit"
+msgstr "Inani ngalinye"
+
+#: findreplace/kfinddialog.cpp:568
+#, fuzzy, kde-format
+msgid "Complete Match"
+msgstr "Igqityiwe"
+
+#: findreplace/kfinddialog.cpp:573
+#, kde-format
+msgid "Captured Text (%1)"
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:581
+#, kde-format
+msgid "You must enter some text to search for."
+msgstr "Kufuneka ufake umbhalo ozakupheyiphenda."
+
+#: findreplace/kfinddialog.cpp:590
+#, kde-format
+msgid "Invalid regular expression."
+msgstr "Ukuzitsho okuthe rhoqo."
+
+#: findreplace/kreplace.cpp:59 findreplace/kreplace.cpp:71
+#, kde-format
+msgid "Replace"
+msgstr "Buyisela"
+
+#: findreplace/kreplace.cpp:67
+#, fuzzy, kde-format
+#| msgid "&All"
+msgctxt "@action:button Replace all occurrences"
+msgid "&All"
+msgstr "&Zonke"
+
+#: findreplace/kreplace.cpp:69
+#, kde-format
+msgid "&Skip"
+msgstr "&Tsiba"
+
+#: findreplace/kreplace.cpp:88
+#, kde-format
+msgid "Replace '%1' with '%2'?"
+msgstr "Buyisela '%1' nge '%2'?"
+
+#: findreplace/kreplace.cpp:177 findreplace/kreplace.cpp:381
+#, kde-format
+msgid "No text was replaced."
+msgstr "Akukho mbhalo okubuyiselweyo."
+
+#: findreplace/kreplace.cpp:179 findreplace/kreplace.cpp:383
+#, fuzzy, kde-format
+msgid "1 replacement done."
+msgid_plural "%1 replacements done."
+msgstr[0] "ubuyiselo lwenziwe"
+msgstr[1] "%1 ubuyiselo(i) lwenziwe."
+
+#: findreplace/kreplace.cpp:397
+#, fuzzy, kde-format
+msgid "Do you want to restart search from the end?"
+msgstr "Ufuna ukuqala kwakhona uphendlo ekuqaleni?"
+
+#: findreplace/kreplace.cpp:398
+#, kde-format
+msgid "Do you want to restart search at the beginning?"
+msgstr "Ufuna ukuqala kwakhona uphendlo ekuqaleni?"
+
+#: findreplace/kreplace.cpp:401
+#, fuzzy, kde-format
+#| msgid "Restart"
+msgctxt "@action:button Restart find & replace"
+msgid "Restart"
+msgstr "Qala kwakhona"
+
+#: findreplace/kreplace.cpp:402
+#, fuzzy, kde-format
+#| msgid "Stop"
+msgctxt "@action:button Stop find & replace"
+msgid "Stop"
+msgstr "Yima"
+
+#: findreplace/kreplacedialog.cpp:151
+#, kde-format
+msgid "Your replacement string is referencing a capture greater than '\\%1', "
+msgstr ""
+
+#: findreplace/kreplacedialog.cpp:153
+#, kde-format
+msgid "but your pattern only defines 1 capture."
+msgid_plural "but your pattern only defines %1 captures."
+msgstr[0] ""
+msgstr[1] ""
+
+#: findreplace/kreplacedialog.cpp:155
+#, kde-format
+msgid "but your pattern defines no captures."
+msgstr ""
+
+#: findreplace/kreplacedialog.cpp:156
+#, kde-format
+msgid ""
+"\n"
+"Please correct."
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:230
+#, fuzzy, kde-format
+#| msgid "Text Completion"
+msgctxt "@action"
+msgid "Text &Color..."
+msgstr "Ugqibo Lombhalo"
+
+#: widgets/krichtextwidget.cpp:231
+#, fuzzy, kde-format
+#| msgid "Named Colors"
+msgctxt "@label stroke color"
+msgid "Color"
+msgstr "Imibala Ebiziweyo"
+
+#: widgets/krichtextwidget.cpp:242
+#, kde-format
+msgctxt "@action"
+msgid "Text &Highlight..."
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:252
+#, fuzzy, kde-format
+#| msgid "&Font"
+msgctxt "@action"
+msgid "&Font"
+msgstr "&Uhlobo lwamagama"
+
+#: widgets/krichtextwidget.cpp:262
+#, fuzzy, kde-format
+#| msgid "Font Size"
+msgctxt "@action"
+msgid "Font &Size"
+msgstr "Ubungakanani begama"
+
+#: widgets/krichtextwidget.cpp:272
+#, fuzzy, kde-format
+#| msgid "Bold"
+msgctxt "@action boldify selected text"
+msgid "&Bold"
+msgstr "Amagama amakhulu"
+
+#: widgets/krichtextwidget.cpp:286
+#, fuzzy, kde-format
+#| msgid "Italic"
+msgctxt "@action italicize selected text"
+msgid "&Italic"
+msgstr "Amagama akekeleyo"
+
+#: widgets/krichtextwidget.cpp:301
+#, fuzzy, kde-format
+#| msgid "&Underline"
+msgctxt "@action underline selected text"
+msgid "&Underline"
+msgstr "&Yenza umgca ngaphantsi"
+
+#: widgets/krichtextwidget.cpp:316
+#, fuzzy, kde-format
+msgctxt "@action"
+msgid "&Strike Out"
+msgstr "&Inyathelo"
+
+#: widgets/krichtextwidget.cpp:332
+#, fuzzy, kde-format
+#| msgid "Align"
+msgctxt "@action"
+msgid "Align &Left"
+msgstr "Yenza umgca"
+
+#: widgets/krichtextwidget.cpp:333
+#, fuzzy, kde-format
+#| msgid "Left"
+msgctxt "@label left justify"
+msgid "Left"
+msgstr "Ekhohlo"
+
+#: widgets/krichtextwidget.cpp:340
+#, kde-format
+msgctxt "@action"
+msgid "Align &Center"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:341
+#, fuzzy, kde-format
+#| msgctxt "QAccel"
+#| msgid "Enter"
+msgctxt "@label center justify"
+msgid "Center"
+msgstr "Ngena"
+
+#: widgets/krichtextwidget.cpp:348
+#, kde-format
+msgctxt "@action"
+msgid "Align &Right"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:349
+#, fuzzy, kde-format
+#| msgid "Right"
+msgctxt "@label right justify"
+msgid "Right"
+msgstr "Ekunene"
+
+#: widgets/krichtextwidget.cpp:356
+#, kde-format
+msgctxt "@action"
+msgid "&Justify"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:357
+#, kde-format
+msgctxt "@label justify fill"
+msgid "Justify"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:377
+#, kde-format
+msgctxt "@action"
+msgid "Left-to-Right"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:378
+#, kde-format
+msgctxt "@label left-to-right"
+msgid "Left-to-Right"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:385
+#, kde-format
+msgctxt "@action"
+msgid "Right-to-Left"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:386
+#, kde-format
+msgctxt "@label right-to-left"
+msgid "Right-to-Left"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:402
+#, kde-format
+msgctxt "@title:menu"
+msgid "List Style"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:404
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "@item:inmenu no list style"
+msgid "None"
+msgstr "Akukho nanye"
+
+#: widgets/krichtextwidget.cpp:405
+#, fuzzy, kde-format
+#| msgid "Discard"
+msgctxt "@item:inmenu disc list style"
+msgid "Disc"
+msgstr "Lahla"
+
+#: widgets/krichtextwidget.cpp:406
+#, fuzzy, kde-format
+#| msgid "File"
+msgctxt "@item:inmenu circle list style"
+msgid "Circle"
+msgstr "Ifayile"
+
+#: widgets/krichtextwidget.cpp:407
+#, fuzzy, kde-format
+msgctxt "@item:inmenu square list style"
+msgid "Square"
+msgstr "Amacebo"
+
+#: widgets/krichtextwidget.cpp:408
+#, kde-format
+msgctxt "@item:inmenu numbered lists"
+msgid "123"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:409
+#, fuzzy, kde-format
+#| msgid "Arabic"
+msgctxt "@item:inmenu lowercase abc lists"
+msgid "abc"
+msgstr "Arabic"
+
+#: widgets/krichtextwidget.cpp:410
+#, fuzzy, kde-format
+#| msgid "TAB"
+msgctxt "@item:inmenu uppercase abc lists"
+msgid "ABC"
+msgstr "TAB"
+
+#: widgets/krichtextwidget.cpp:411
+#, kde-format
+msgctxt "@item:inmenu lower case roman numerals"
+msgid "i ii iii"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:412
+#, kde-format
+msgctxt "@item:inmenu upper case roman numerals"
+msgid "I II III"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:428
+#, kde-format
+msgctxt "@action"
+msgid "Increase Indent"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:441
+#, kde-format
+msgctxt "@action"
+msgid "Decrease Indent"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:454
+#, kde-format
+msgctxt "@action"
+msgid "Insert Rule Line"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:465
+#, fuzzy, kde-format
+#| msgid "Line up"
+msgctxt "@action"
+msgid "Link"
+msgstr "Umgca ephezulu"
+
+#: widgets/krichtextwidget.cpp:476
+#, fuzzy, kde-format
+#| msgid "Formatted Name"
+msgctxt "@action"
+msgid "Format Painter"
+msgstr "Igama Elilungisiweyo"
+
+#: widgets/krichtextwidget.cpp:486
+#, fuzzy, kde-format
+#| msgid "Find Text"
+msgctxt "@action"
+msgid "To Plain Text"
+msgstr "Fumana Okubhaliweyo"
+
+#: widgets/krichtextwidget.cpp:497
+#, fuzzy, kde-format
+msgctxt "@action"
+msgid "Subscript"
+msgstr "Oku&shicilelweyo"
+
+#: widgets/krichtextwidget.cpp:504
+#, fuzzy, kde-format
+msgctxt "@action"
+msgid "Superscript"
+msgstr "Oku&shicilelweyo"
+
+#: widgets/ktextedit.cpp:166
+#, fuzzy, kde-format
+msgid "Nothing to spell check."
+msgstr "Akukho thuba likhethiweyo"
+
+#: widgets/ktextedit.cpp:566
+#, fuzzy, kde-format
+msgid "Check Spelling..."
+msgstr "Khangela upelo"
+
+#: widgets/ktextedit.cpp:571
+#, fuzzy, kde-format
+msgid "Spell Checking Language"
+msgstr "Umkhangeli Wopelo"
+
+#: widgets/ktextedit.cpp:594
+#, fuzzy, kde-format
+msgid "Auto Spell Check"
+msgstr "Umkhangeli Wopelo"
+
+#: widgets/ktextedit.cpp:600
+#, fuzzy, kde-format
+msgid "Allow Tabulations"
+msgstr "&Iintshukumo ezikhoyo:"
+
+#: widgets/ktextedit.cpp:633
+#, fuzzy, kde-format
+msgid "Speak Text"
+msgstr "Nceda ngenisa igama:"
