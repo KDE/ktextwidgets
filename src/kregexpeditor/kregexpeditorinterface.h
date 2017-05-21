@@ -32,13 +32,13 @@
  * @author Jesper K. Pedersen blackie@kde.org
  *
  * The actual editor is located in kdeutils, with an interface in
- * kdelibs. This means that it is a bit more comlicated to create an
+ * kdelibs. This means that it is a bit more complicated to create an
  * instance of the editor, but only a little bit more complicated.
  *
  * To check if kregexpeditor in kdeutils is installed and available use this line:
  *
  * \code
- * bool installed=!KTrader::self()->query("KRegExpEditor/KRegExpEditor").isEmpty();
+ * bool installed=!KServiceTypeTrader::self()->query("KRegExpEditor/KRegExpEditor").isEmpty();
  * \endcode
  *
  * The following is a template for what you need to do to create an instance of the
