@@ -59,10 +59,10 @@ class KTEXTWIDGETS_EXPORT KReplaceDialog:
 
 public:
 
-    // Options.
+    /// Options.
 
     enum Options {
-        // Should the user be prompted before the replace operation?
+        /// Should the user be prompted before the replace operation?
         PromptOnReplace = 256,
         BackReference = 512
     };
