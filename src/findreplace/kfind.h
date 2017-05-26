@@ -29,6 +29,8 @@
 class QDialog;
 
 /**
+ * @class KFind kfind.h <KFind>
+ *
  * @brief A generic implementation of the "find" function.
  *
  * @author S.R.Haque <srhaque@iee.org>, David Faure <faure@kde.org>,

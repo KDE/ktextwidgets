@@ -28,6 +28,8 @@
 class KReplaceDialogPrivate;
 
 /**
+ * @class KReplaceDialog kreplace.h <KReplaceDialog>
+ *
  * @short A generic "replace" dialog.
  *
  * @author S.R.Haque <srhaque@iee.org>

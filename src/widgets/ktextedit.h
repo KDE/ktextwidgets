@@ -28,6 +28,8 @@ namespace Sonnet {
 class SpellCheckDecorator;
 }
 /**
+ * @class KTextEdit ktextedit.h <KTextEdit>
+ *
  * @short A KDE'ified QTextEdit
  *
  * This is just a little subclass of QTextEdit, implementing

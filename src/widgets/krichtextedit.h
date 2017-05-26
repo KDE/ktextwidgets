@@ -33,6 +33,8 @@ class KRichTextEditPrivate;
 #include <ktextwidgets_export.h>
 
 /**
+ * @class KRichTextEdit krichtextedit.h <KRichTextEdit>
+ *
  * The KRichTextEdit class provides a widget to edit and display rich text.
  *
  * It offers several additional rich text editing functions to KTextEdit and makes

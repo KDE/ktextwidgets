@@ -26,6 +26,8 @@
 
 
 /**
+ * @class KPluralHandlingSpinBox kpluralhandlingspinbox.h <KPluralHandlingSpinBox>
+ *
  * @brief A QSpinBox with plural handling for the suffix.
  *
  * @author Laurent Montel <montel@kde.org>

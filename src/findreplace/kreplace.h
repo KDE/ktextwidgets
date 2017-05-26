@@ -28,6 +28,8 @@
 class KReplacePrivate;
 
 /**
+ * @class KReplace kreplace.h <KReplace>
+ *
  * @brief A generic implementation of the "replace" function.
  *
  * @author S.R.Haque <srhaque@iee.org>, David Faure <faure@kde.org>

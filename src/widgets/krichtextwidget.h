@@ -27,6 +27,8 @@
 class QAction;
 
 /**
+ * @class KRichTextWidget krichtextwidget.h <KRichTextWidget>
+ *
  * @brief A KRichTextEdit with common actions
  *
  * This class implements common actions which are often used with KRichTextEdit.

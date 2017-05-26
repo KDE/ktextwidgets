@@ -27,6 +27,8 @@
 #include <QtCore/QObject>
 
 /**
+ * @class KRegExpEditorInterface kregexpeditorinterface.h <KRegExpEditorInterface>
+ *
  *  A graphical editor for regular expressions.
  *
  * @author Jesper K. Pedersen blackie@kde.org

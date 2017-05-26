@@ -26,6 +26,8 @@
 #include <QDialog>
 
 /**
+ * @class KFindDialog kfinddialog.h <KFindDialog>
+ *
  * @brief A generic "find" dialog.
  *
  * @author S.R.Haque <srhaque@iee.org>
