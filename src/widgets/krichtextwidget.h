@@ -42,7 +42,7 @@ class QAction;
  * @author Stephen Kelly <steveire@gmail.com>
  * @author Thomas McGuire <thomas.mcguire@gmx.net>
  *
- * \image html krichtextedit.png "KDE Rich Text Widget"
+ * \image html krichtextedit.png "KRichTextWidget Widget"
  *
  * @since 4.1
  */

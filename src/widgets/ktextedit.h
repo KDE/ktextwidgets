@@ -43,7 +43,7 @@ class SpellCheckDecorator;
  *
  * Basic rule: whenever you want to use QTextEdit, use KTextEdit!
  *
- * \image html ktextedit.png "KDE Text Edit Widget"
+ * \image html ktextedit.png "KTextEdit Widget"
  *
  * @see QTextEdit
  * @author Carsten Pfeiffer <pfeiffer@kde.org>

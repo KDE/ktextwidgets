@@ -57,7 +57,7 @@ class KRichTextEditPrivate;
  * connect to the slots which insert the rich text, use switchToPlainText() or
  * enableRichTextMode().
  *
- * \image html krichtextedit.png "KDE Rich Text Edit Widget"
+ * \image html krichtextedit.png "KRichTextEdit Widget"
  *
  * @since 4.1
  */

@@ -65,7 +65,7 @@
  *
  * To use your own extensions: see findExtension().
  *
- * \image html kfinddialog.png "KDE Find Dialog"
+ * \image html kfinddialog.png "KFindDialog Widget"
  */
 class KTEXTWIDGETS_EXPORT KFindDialog : public QDialog
 {

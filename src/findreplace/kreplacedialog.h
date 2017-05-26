@@ -52,7 +52,7 @@ class KReplaceDialogPrivate;
  * \code
  * \endcode
  *
- * \image html kreplacedialog.png "KDE Replace Dialog"
+ * \image html kreplacedialog.png "KReplaceDialog Widget"
  */
 class KTEXTWIDGETS_EXPORT KReplaceDialog:
     public KFindDialog
