@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright 2014 Laurent Montel <montel@kde.org>
  *
  * This library is free software; you can redistribute it and/or

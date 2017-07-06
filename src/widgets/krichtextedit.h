@@ -1,4 +1,4 @@
-/**
+/*
  * krichtextedit.h
  *
  * Copyright 2007 Laurent Montel <montel@kde.org>
