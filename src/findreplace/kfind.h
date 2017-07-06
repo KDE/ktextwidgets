@@ -89,7 +89,7 @@ class QDialog;
  *      }
  *
  *      if ( res == KFind::NoMatch ) // i.e. at end
- *          <Call either  m_find->displayFinalDialog(); m_find->deleteLater(); m_find = 0L;
+ *          <Call either  m_find->displayFinalDialog(); m_find->deleteLater(); m_find = nullptr;
  *           or           if ( m_find->shouldRestart() ) { reinit (w/o FromCursor) and call slotFindNext(); }
  *                        else { m_find->closeFindNextDialog(); }>
  *  }

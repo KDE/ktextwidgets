@@ -86,7 +86,7 @@ class KReplacePrivate;
  *      }
  *
  *      if ( res == KFind::NoMatch ) // i.e. at end
- *          <Call either  m_replace->displayFinalDialog(); delete m_replace; m_replace = 0L;
+ *          <Call either  m_replace->displayFinalDialog(); delete m_replace; m_replace = nullptr;
  *           or           if ( m_replace->shouldRestart() ) { reinit (w/o FromCursor) and call slotReplaceNext(); }
  *                        else { m_replace->closeReplaceNextDialog(); }>
  *  }
