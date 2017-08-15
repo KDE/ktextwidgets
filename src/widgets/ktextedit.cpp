@@ -61,7 +61,7 @@ private:
     KTextEdit *m_textEdit;
 };
 
-class KTextEdit::Private
+class Q_DECL_HIDDEN KTextEdit::Private
 {
 public:
     Private(KTextEdit *_parent)

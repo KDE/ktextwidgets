@@ -19,7 +19,7 @@
 
 #include "kpluralhandlingspinbox.h"
 
-class KPluralHandlingSpinBox::KPluralHandlingSpinBoxPrivate
+class Q_DECL_HIDDEN KPluralHandlingSpinBox::KPluralHandlingSpinBoxPrivate
 {
 public:
     KPluralHandlingSpinBoxPrivate(QSpinBox *q)

@@ -30,7 +30,7 @@
 #include <QtCore/QPointer>
 #include <QtCore/QString>
 
-struct KFind::Private {
+struct Q_DECL_HIDDEN KFind::Private {
     Private(KFind *q)
         : q(q)
         , findDialog(nullptr)

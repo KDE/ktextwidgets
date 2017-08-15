@@ -41,7 +41,7 @@
   @internal
 */
 //@cond PRIVATE
-class KRichTextWidget::Private
+class Q_DECL_HIDDEN KRichTextWidget::Private
 {
 public:
     Private(KRichTextWidget *parent)

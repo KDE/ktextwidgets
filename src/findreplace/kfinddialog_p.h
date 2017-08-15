@@ -35,7 +35,7 @@ class QGroupBox;
 class QMenu;
 class QPushButton;
 
-class KFindDialog::KFindDialogPrivate
+class Q_DECL_HIDDEN KFindDialog::KFindDialogPrivate
 {
 public:
     KFindDialogPrivate(KFindDialog *q)
