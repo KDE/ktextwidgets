@@ -493,12 +493,11 @@ void KFindDialog::KFindDialogPrivate::_k_showPatterns()
             int mCursor;
         };
 
-        int i;
 
         // Populate the popup menu.
         if (!patterns) {
             patterns = new QMenu(q);
-            for (i = 0; (unsigned)i < sizeof(items) / sizeof(items[0]); i++) {
+            for (int i = 0; (unsigned)i < sizeof(items) / sizeof(items[0]); i++) {
                 patterns->addAction(new RegExpAction(patterns, i18n(items[i].description),
                                                      QLatin1String(items[i].regExp),
                                                      items[i].cursorAdjustment));
