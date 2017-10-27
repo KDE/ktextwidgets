@@ -41,7 +41,7 @@
 class KRichTextEditPrivate : public QObject
 {
 public:
-    KRichTextEditPrivate(KRichTextEdit *parent)
+    explicit KRichTextEditPrivate(KRichTextEdit *parent)
         : q(parent),
           mMode(KRichTextEdit::Plain)
     {

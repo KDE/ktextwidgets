@@ -1,7 +1,7 @@
 /**
  * Nested list helper
  *
- * Copyright 2008  Stephen Kelly <steveire@gmail.com>
+ * Copyright 2008  Stephen Kelly <steveire@gmail.com>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -10,13 +10,13 @@
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  * Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
- * 02110-1301  USA
+ * 02110-1301  USA
  */
 
 #include "nestedlisthelper_p.h"
@@ -87,12 +87,11 @@ bool NestedListHelper::canDedent() const
     QTextBlock nextBlock = thisBlock.next();
     if (thisBlock.isValid()) {
         int nextBlockIndent = 0;
-        int thisBlockIndent = 0;
         if (nextBlock.isValid() && nextBlock.textList()) {
             nextBlockIndent = nextBlock.textList()->format().indent();
         }
         if (thisBlock.textList()) {
-            thisBlockIndent = thisBlock.textList()->format().indent();
+            const int thisBlockIndent = thisBlock.textList()->format().indent();
             if (thisBlockIndent >= nextBlockIndent) {
                 return thisBlock.textList()->format().indent() > 0;
             }

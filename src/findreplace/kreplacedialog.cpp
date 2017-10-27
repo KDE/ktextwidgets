@@ -39,7 +39,7 @@
 class KReplaceDialogPrivate
 {
 public:
-    KReplaceDialogPrivate(KReplaceDialog *q)
+    explicit KReplaceDialogPrivate(KReplaceDialog *q)
         : q(q)
     {
     }
