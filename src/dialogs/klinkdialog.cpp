@@ -38,11 +38,11 @@
 class KLinkDialogPrivate
 {
 public:
-    QLabel *textLabel;
-    QLineEdit *textLineEdit;
-    QLabel *linkUrlLabel;
-    QLineEdit *linkUrlLineEdit;
-    QDialogButtonBox *buttonBox;
+    QLabel *textLabel = nullptr;
+    QLineEdit *textLineEdit = nullptr;
+    QLabel *linkUrlLabel = nullptr;
+    QLineEdit *linkUrlLineEdit = nullptr;
+    QDialogButtonBox *buttonBox = nullptr;
 };
 //@endcond
 

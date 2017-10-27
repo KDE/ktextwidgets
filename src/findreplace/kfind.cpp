@@ -48,13 +48,12 @@ public:
     QPushButton *findButton() const;
 
 private:
-    QPushButton *m_findButton;
+    QPushButton *m_findButton = nullptr;
 };
 
 // Create the dialog.
 KFindNextDialog::KFindNextDialog(const QString &pattern, QWidget *parent)
-    : QDialog(parent),
-      m_findButton(nullptr)
+    : QDialog(parent)
 {
     setModal(false);
     setWindowTitle(i18n("Find Next"));

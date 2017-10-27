@@ -41,17 +41,15 @@ class KReplaceDialogPrivate
 public:
     KReplaceDialogPrivate(KReplaceDialog *q)
         : q(q)
-        , initialShowDone(false)
-        , replaceExtension(nullptr)
     {
     }
 
     void _k_slotOk();
 
-    KReplaceDialog *q;
+    KReplaceDialog *q = nullptr;
     QStringList replaceStrings;
-    bool initialShowDone;
-    QWidget *replaceExtension;
+    bool initialShowDone = false;
+    QWidget *replaceExtension = nullptr;
 };
 
 KReplaceDialog::KReplaceDialog(QWidget *parent, long options, const QStringList &findStrings,
@@ -129,7 +127,7 @@ void KReplaceDialog::setOptions(long options)
 
 void KReplaceDialog::setReplacementHistory(const QStringList &strings)
 {
-    if (strings.count() > 0) {
+    if (!strings.isEmpty()) {
         KFindDialog::d->replace->setHistoryItems(strings, true);
     } else {
         KFindDialog::d->replace->clearHistory();

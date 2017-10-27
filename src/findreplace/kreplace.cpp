@@ -46,10 +46,10 @@ public:
     QPushButton *replaceButton() const;
 
 private:
-    QLabel *m_mainLabel;
-    QPushButton *m_allButton;
-    QPushButton *m_skipButton;
-    QPushButton *m_replaceButton;
+    QLabel *m_mainLabel = nullptr;
+    QPushButton *m_allButton = nullptr;
+    QPushButton *m_skipButton = nullptr;
+    QPushButton *m_replaceButton = nullptr;
 };
 
 KReplaceNextDialog::KReplaceNextDialog(QWidget *parent)

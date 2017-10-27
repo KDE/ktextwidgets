@@ -58,41 +58,41 @@ public:
     void _k_showPlaceholders();
     void _k_textSearchChanged(const QString &);
 
-    KFindDialog *q;
-    QDialog *regexpDialog;
+    KFindDialog *q = nullptr;
+    QDialog *regexpDialog = nullptr;
     bool regexpDialogQueryDone : 1;
     bool initialShowDone : 1;
     long enabled; // uses Options to define which search options are enabled
     QStringList findStrings;
     QString pattern;
-    QWidget *findExtension;
-    QDialogButtonBox *buttonBox;
+    QWidget *findExtension = nullptr;
+    QDialogButtonBox *buttonBox = nullptr;
 
-    QGroupBox *findGrp;
-    KHistoryComboBox *find;
-    QCheckBox *regExp;
-    QPushButton *regExpItem;
-    QGridLayout *findLayout;
+    QGroupBox *findGrp = nullptr;
+    KHistoryComboBox *find = nullptr;
+    QCheckBox *regExp = nullptr;
+    QPushButton *regExpItem = nullptr;
+    QGridLayout *findLayout = nullptr;
 
-    QCheckBox *wholeWordsOnly;
-    QCheckBox *fromCursor;
-    QCheckBox *selectedText;
-    QCheckBox *caseSensitive;
-    QCheckBox *findBackwards;
+    QCheckBox *wholeWordsOnly = nullptr;
+    QCheckBox *fromCursor = nullptr;
+    QCheckBox *selectedText = nullptr;
+    QCheckBox *caseSensitive = nullptr;
+    QCheckBox *findBackwards = nullptr;
 
-    QMenu *patterns;
+    QMenu *patterns = nullptr;
 
     // for the replace dialog
 
-    QGroupBox *replaceGrp;
-    KHistoryComboBox *replace;
-    QCheckBox *backRef;
-    QPushButton *backRefItem;
-    QGridLayout *replaceLayout;
+    QGroupBox *replaceGrp = nullptr;
+    KHistoryComboBox *replace = nullptr;
+    QCheckBox *backRef = nullptr;
+    QPushButton *backRefItem = nullptr;
+    QGridLayout *replaceLayout = nullptr;
 
-    QCheckBox *promptOnReplace;
+    QCheckBox *promptOnReplace = nullptr;
 
-    QMenu *placeholders;
+    QMenu *placeholders = nullptr;
 };
 
 #endif // KFINDDIALOG_P_H
