@@ -231,7 +231,7 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_text_foreground_color->setIconText(i18nc("@label stroke color", "Color"));
         d->richTextActionList.append((d->action_text_foreground_color));
         d->action_text_foreground_color->setObjectName(QStringLiteral("format_text_foreground_color"));
-        connect(d->action_text_foreground_color, SIGNAL(triggered()), this, SLOT(_k_setTextForegroundColor()));
+        connect(d->action_text_foreground_color, &QAction::triggered, this, [this]() {d->_k_setTextForegroundColor();});
     } else {
         d->action_text_foreground_color = nullptr;
     }
@@ -242,7 +242,7 @@ QList<QAction *> KRichTextWidget::createActions()
                 i18nc("@action", "Text &Highlight..."), this);
         d->richTextActionList.append((d->action_text_background_color));
         d->action_text_background_color->setObjectName(QStringLiteral("format_text_background_color"));
-        connect(d->action_text_background_color, SIGNAL(triggered()), this, SLOT(_k_setTextBackgroundColor()));
+        connect(d->action_text_background_color, &QAction::triggered, this, [this]() {d->_k_setTextBackgroundColor();});
     } else {
         d->action_text_background_color = nullptr;
     }
@@ -415,8 +415,9 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_list_style->setCurrentItem(0);
         d->richTextActionList.append((d->action_list_style));
         d->action_list_style->setObjectName(QStringLiteral("format_list_style"));
-        connect(d->action_list_style, SIGNAL(triggered(int)),
-                this, SLOT(_k_setListStyle(int)));
+
+        connect(d->action_list_style, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered),
+                this, [this](int style) {d->_k_setListStyle(style);});
         connect(d->action_list_style, SIGNAL(triggered()),
                 this, SLOT(_k_updateMiscActions()));
     } else {
@@ -465,8 +466,8 @@ QList<QAction *> KRichTextWidget::createActions()
                                             i18nc("@action", "Link"), this);
         d->richTextActionList.append((d->action_manage_link));
         d->action_manage_link->setObjectName(QStringLiteral("manage_link"));
-        connect(d->action_manage_link, SIGNAL(triggered()),
-                this, SLOT(_k_manageLink()));
+        connect(d->action_manage_link, &QAction::triggered,
+                this, [this]() {d->_k_manageLink();});
     } else {
         d->action_manage_link = nullptr;
     }
