@@ -477,8 +477,8 @@ QList<QAction *> KRichTextWidget::createActions()
                 i18nc("@action", "Format Painter"), this);
         d->richTextActionList.append((d->action_format_painter));
         d->action_format_painter->setObjectName(QStringLiteral("format_painter"));
-        connect(d->action_format_painter, SIGNAL(toggled(bool)),
-                this, SLOT(_k_formatPainter(bool)));
+        connect(d->action_format_painter, &QAction::toggled,
+                this, [this](bool state) {d->_k_formatPainter(state);});
     } else {
         d->action_format_painter = nullptr;
     }
