@@ -25,10 +25,10 @@
 #include "kfind.h"
 
 #include <QDialog>
-#include <QtCore/QHash>
-#include <QtCore/QList>
-#include <QtCore/QPointer>
-#include <QtCore/QString>
+#include <QHash>
+#include <QList>
+#include <QPointer>
+#include <QString>
 
 struct Q_DECL_HIDDEN KFind::Private {
     Private(KFind *q)

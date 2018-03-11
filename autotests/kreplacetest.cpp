@@ -23,7 +23,7 @@
 #include <stdlib.h>
 
 #include <QApplication>
-#include <QtCore/QEventLoop>
+#include <QEventLoop>
 #include <QDebug>
 #include <QPushButton>
 

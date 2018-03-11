@@ -22,8 +22,8 @@
 #ifndef KFINDTEST_H
 #define KFINDTEST_H
 
-#include <QtCore/QObject>
-#include <QtCore/QStringList>
+#include <QObject>
+#include <QStringList>
 
 class KFind;
 

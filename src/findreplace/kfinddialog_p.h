@@ -24,7 +24,7 @@
 #include "kfinddialog.h"
 #include "kfind.h"
 
-#include <QtCore/QStringList>
+#include <QStringList>
 
 class KHistoryComboBox;
 

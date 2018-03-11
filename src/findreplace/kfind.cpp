@@ -32,8 +32,8 @@
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QPushButton>
-#include <QtCore/QRegExp>
-#include <QtCore/QHash>
+#include <QRegExp>
+#include <QHash>
 #include <QVBoxLayout>
 
 // #define DEBUG_FIND

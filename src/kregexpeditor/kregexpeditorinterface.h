@@ -23,8 +23,8 @@
 #ifndef __kregexpeditorinterface_h__
 #define __kregexpeditorinterface_h__
 
-#include <QtCore/QString>
-#include <QtCore/QObject>
+#include <QString>
+#include <QObject>
 
 /**
  * @class KRegExpEditorInterface kregexpeditorinterface.h <KRegExpEditorInterface>

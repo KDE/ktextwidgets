@@ -20,7 +20,7 @@
 #ifndef KRICHTEXTEDITTEST_H
 #define KRICHTEXTEDITTEST_H
 
-#include <QtCore/QObject>
+#include <QObject>
 
 class KRichTextEditTest : public QObject
 {

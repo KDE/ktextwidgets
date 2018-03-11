@@ -31,7 +31,7 @@
 #include <QLineEdit>
 #include <QMenu>
 #include <QPushButton>
-#include <QtCore/QRegExp>
+#include <QRegExp>
 #include <QGridLayout>
 
 #include <klocalizedstring.h>

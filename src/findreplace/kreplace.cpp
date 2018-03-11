@@ -27,7 +27,7 @@
 #include <QLabel>
 #include <QPushButton>
 #include <QVBoxLayout>
-#include <QtCore/QRegExp>
+#include <QRegExp>
 
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
