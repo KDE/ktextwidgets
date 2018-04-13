@@ -131,7 +131,7 @@ public:
      * Can be useful if reusing the same KReplace for different operations,
      * or when restarting from the beginning of the document.
      */
-    void resetCounts() Q_DECL_OVERRIDE;
+    void resetCounts() override;
 
     /**
      * Walk the text fragment (e.g. kwrite line, kspread cell) looking for matches.
@@ -190,13 +190,13 @@ public:
      * and we could even be hitting the beginning of the document (so not all
      * matches have even been seen).
      */
-    bool shouldRestart(bool forceAsking = false, bool showNumMatches = true) const Q_DECL_OVERRIDE;
+    bool shouldRestart(bool forceAsking = false, bool showNumMatches = true) const override;
 
     /**
      * Displays the final dialog telling the user how many replacements were made.
      * Call either this or shouldRestart().
      */
-    void displayFinalDialog() const Q_DECL_OVERRIDE;
+    void displayFinalDialog() const override;
 
 Q_SIGNALS:
 

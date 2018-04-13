@@ -341,7 +341,7 @@ protected:
      * Reimplemented.
      * Catches mouse release events. Used to know when a selection has been completed.
      */
-    void mouseReleaseEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
+    void mouseReleaseEvent(QMouseEvent *event) override;
 
 private:
     //@cond PRIVATE

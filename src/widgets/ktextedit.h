@@ -351,18 +351,18 @@ protected:
     /**
      * Reimplemented to catch "delete word" shortcut events.
      */
-    bool event(QEvent *) Q_DECL_OVERRIDE;
+    bool event(QEvent *) override;
 
     /**
      * Reimplemented for internal reasons
      */
-    void keyPressEvent(QKeyEvent *) Q_DECL_OVERRIDE;
+    void keyPressEvent(QKeyEvent *) override;
 
     /**
      * Reimplemented to instantiate a KDictSpellingHighlighter, if
      * spellchecking is enabled.
      */
-    void focusInEvent(QFocusEvent *) Q_DECL_OVERRIDE;
+    void focusInEvent(QFocusEvent *) override;
 
     /**
      * Deletes a word backwards from the current cursor position,
@@ -380,7 +380,7 @@ protected:
      * Reimplemented from QTextEdit to add spelling related items
      * when appropriate.
      */
-    void contextMenuEvent(QContextMenuEvent *) Q_DECL_OVERRIDE;
+    void contextMenuEvent(QContextMenuEvent *) override;
 
 private:
     class Private;

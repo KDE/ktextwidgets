@@ -369,7 +369,7 @@ protected:
      * Reimplemented.
      * Catches key press events. Used to handle some key presses on lists.
      */
-    void keyPressEvent(QKeyEvent *event) Q_DECL_OVERRIDE;
+    void keyPressEvent(QKeyEvent *event) override;
 
 private:
     //@cond PRIVATE

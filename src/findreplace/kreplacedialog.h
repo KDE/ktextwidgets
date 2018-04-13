@@ -136,7 +136,7 @@ public:
     QWidget *replaceExtension() const;
 
 protected:
-    void showEvent(QShowEvent *) Q_DECL_OVERRIDE;
+    void showEvent(QShowEvent *) override;
 
 private:
 

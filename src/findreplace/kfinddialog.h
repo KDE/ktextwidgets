@@ -214,7 +214,7 @@ Q_SIGNALS:
     void cancelClicked();
 
 protected:
-    void showEvent(QShowEvent *) Q_DECL_OVERRIDE;
+    void showEvent(QShowEvent *) override;
 
 private:
     friend class KReplaceDialog;
