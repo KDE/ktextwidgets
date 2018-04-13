@@ -731,7 +731,7 @@ bool KFind::validateMatch(const QString &, int, int)
 
 QWidget *KFind::parentWidget() const
 {
-    return (QWidget *)parent();
+    return static_cast<QWidget *>(parent());
 }
 
 QWidget *KFind::dialogsParent() const
@@ -739,7 +739,7 @@ QWidget *KFind::dialogsParent() const
     // If the find dialog is still up, it should get the focus when closing a message box
     // Otherwise, maybe the "find next?" dialog is up
     // Otherwise, the "view" is the parent.
-    return d->findDialog ? (QWidget *)d->findDialog : (d->dialog ? d->dialog : parentWidget());
+    return d->findDialog ? static_cast<QWidget *>(d->findDialog) : (d->dialog ? d->dialog : parentWidget());
 }
 
 #include "moc_kfind.cpp"

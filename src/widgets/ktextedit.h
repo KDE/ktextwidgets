@@ -73,7 +73,7 @@ public:
     /**
      * Destroys the KTextEdit object.
      */
-    ~KTextEdit();
+    ~KTextEdit() override;
 
     /**
      * Reimplemented to set a proper "deactivated" background color.

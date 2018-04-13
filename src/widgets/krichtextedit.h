@@ -93,7 +93,7 @@ public:
     /**
      * Destructor.
      */
-    virtual ~KRichTextEdit();
+    ~KRichTextEdit() override;
 
     /**
      * This enables rich text mode. Nothing is done except changing the internal

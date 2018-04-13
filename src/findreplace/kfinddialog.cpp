@@ -567,8 +567,8 @@ void KFindDialog::KFindDialogPrivate::_k_slotPlaceholdersAboutToShow()
     placeholders->addAction(new PlaceHolderAction(placeholders, i18n("Complete Match"), 0));
 
     QRegExp r(q->pattern());
-    uint n = r.captureCount();
-    for (uint i = 0; i < n; i++) {
+    int n = r.captureCount();
+    for (int i = 0; i < n; i++) {
         placeholders->addAction(new PlaceHolderAction(placeholders, i18n("Captured Text (%1)",  i + 1), i + 1));
     }
 }

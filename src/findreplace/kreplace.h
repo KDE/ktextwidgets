@@ -116,7 +116,7 @@ public:
      */
     KReplace(const QString &pattern, const QString &replacement, long options, QWidget *parent, QWidget *replaceDialog);
 
-    virtual ~KReplace();
+    ~KReplace() override;
 
     /**
      * Return the number of replacements made (i.e. the number of times

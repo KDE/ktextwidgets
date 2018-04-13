@@ -551,7 +551,7 @@ void KRichTextWidget::Private::_k_updateCharFormatActions(const QTextCharFormat 
     }
     if (richTextSupport & SupportFontSize) {
         if (f.pointSize() > 0) {
-            action_font_size->setFontSize((int)f.pointSize());
+            action_font_size->setFontSize(f.pointSize());
         }
     }
 
