@@ -706,8 +706,9 @@ QString KFind::pattern() const
 
 void KFind::setPattern(const QString &pattern)
 {
-    if (d->options & KFind::FindIncremental && d->pattern != pattern) {
+    if (d->pattern != pattern) {
         d->patternChanged = true;
+        d->matches = 0;
     }
 
     d->pattern = pattern;
