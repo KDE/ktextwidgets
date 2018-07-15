@@ -57,13 +57,22 @@
  *   } else {
  *     m_findDialog = new KFindDialog(...);
  *     connect(m_findDialog, &KFindDialog::okClicked, this, [this] {
- *         delete m_find;
- *         m_find = new KFind(m_findDialog->pattern(), m_findDialog->options(), this);
- *         if (m_findDialog->options() & KFind::FromCursor) {
- *             // ... initialize from cursor
- *         }
+ *         // If the user can find the "Find Next" shortcut, we can close the dialog
+ *         // and recreate KFind here.
+ *         //m_findDialog->close();
+ *         //delete m_find;
+ *         //m_find = new KFind(m_findDialog->pattern(), m_findDialog->options(), this);
  *         // ... connect to signals from KFind, like highlight() and findNext()
- *         m_find->closeFindNextDialog();
+ *         //m_find->closeFindNextDialog();
+ *
+ *         // A more intuitive solution is to keep the dialog open:
+ *         m_find->setPattern(m_findDialog->pattern());
+ *         m_find->setOptions(m_findDialog->options());
+ *
+ *         // And then, in any case:
+ *         if (m_findDialog->options() & KFind::FromCursor) {
+ *             // ... initialize from cursor position
+ *         }
  *         slotFindNext();
  *     });
  *   }
