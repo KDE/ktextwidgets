@@ -273,6 +273,7 @@ void KFindDialog::showEvent(QShowEvent *e)
             setTabOrder(prev, d->replace);
         }
     }
+    d->find->setFocus();
     QDialog::showEvent(e);
 }
 
