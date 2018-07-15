@@ -44,7 +44,7 @@
  *
  * \code
  *  KFindDialog dlg(....)
- *  if ( dlg.exec() != QDialog::Accepted )
+ *  if (dlg.exec() != QDialog::Accepted)
  *      return;
  *
  *  // proceed with KFind from here
@@ -52,15 +52,23 @@
  *
  * To create a non-modal find dialog:
  * \code
- *   if ( m_findDia )
- *     KWindowSystem::activateWindow( m_findDia->winId() );
- *   else
- *   {
- *     m_findDia = new KFindDialog(false,...);
- *     connect( m_findDia, SIGNAL(okClicked()), this, SLOT(findTextNext()) );
+ *   if (m_findDialog) {
+ *     KWindowSystem::activateWindow(m_findDialog->winId());
+ *   } else {
+ *     m_findDialog = new KFindDialog(...);
+ *     connect(m_findDialog, &KFindDialog::okClicked, this, [this] {
+ *         delete m_find;
+ *         m_find = new KFind(m_findDialog->pattern(), m_findDialog->options(), this);
+ *         if (m_findDialog->options() & KFind::FromCursor) {
+ *             // ... initialize from cursor
+ *         }
+ *         // ... connect to signals from KFind, like highlight() and findNext()
+ *         m_find->closeFindNextDialog();
+ *         slotFindNext();
+ *     });
  *   }
  * \endcode
- * Don't forget to delete and reset m_findDia when closed.
+ * Don't forget to delete and reset m_findDialog when closed.
  * (But do NOT delete your KFind object at that point, it's needed for "Find Next".)
  *
  * To use your own extensions: see findExtension().

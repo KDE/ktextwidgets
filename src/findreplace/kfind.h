@@ -54,11 +54,11 @@ class QDialog;
  *
  *  // Connect highlight signal to code which handles highlighting
  *  // of found text.
- *  connect( m_find, SIGNAL( highlight( const QString &, int, int ) ),
- *          this, SLOT( slotHighlight( const QString &, int, int ) ) );
+ *  connect(m_find, SIGNAL(highlight(QString, int, int)),
+ *          this, SLOT(slotHighlight(QString, int, int)));
  *  // Connect findNext signal - called when pressing the button in the dialog
- *  connect( m_find, SIGNAL( findNext() ),
- *          this, SLOT( slotFindNext() ) );
+ *  connect(m_find, SIGNAL(findNext()),
+ *          this, SLOT(slotFindNext()));
  * \endcode
  *
  * If you are using a non-modal find dialog (recommended),
@@ -76,21 +76,21 @@ class QDialog;
  *  void slotFindNext()
  *  {
  *      KFind::Result res = KFind::NoMatch;
- *      while ( res == KFind::NoMatch && <position not at end> ) {
- *          if ( m_find->needData() )
- *              m_find->setData( <current text fragment> );
+ *      while (res == KFind::NoMatch && <position not at end>) {
+ *          if (m_find->needData())
+ *              m_find->setData(<current text fragment>);
  *
  *          // Let KFind inspect the text fragment, and display a dialog if a match is found
  *          res = m_find->find();
  *
- *          if ( res == KFind::NoMatch ) {
+ *          if (res == KFind::NoMatch) {
  *              <Move to the next text fragment, honoring the FindBackwards setting for the direction>
  *          }
  *      }
  *
- *      if ( res == KFind::NoMatch ) // i.e. at end
+ *      if (res == KFind::NoMatch) // i.e. at end
  *          <Call either  m_find->displayFinalDialog(); m_find->deleteLater(); m_find = nullptr;
- *           or           if ( m_find->shouldRestart() ) { reinit (w/o FromCursor) and call slotFindNext(); }
+ *           or           if (m_find->shouldRestart()) { reinit (w/o FromCursor); m_find->resetCounts(); slotFindNext(); }
  *                        else { m_find->closeFindNextDialog(); }>
  *  }
  * \endcode
@@ -300,10 +300,10 @@ public:
     void closeFindNextDialog();
 
     /**
-     * @return the current matching index ( or -1 ).
+     * @return the current matching index (or -1).
      * Same as the matchingIndex parameter passed to highlight.
      * You usually don't need to use this, except maybe when updating the current data,
-     * so you need to call setData( newData, index() ).
+     * so you need to call setData(newData, index()).
      */
     int index() const;
 
