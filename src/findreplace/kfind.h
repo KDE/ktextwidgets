@@ -61,9 +61,6 @@ class QDialog;
  *          this, SLOT(slotFindNext()));
  * \endcode
  *
- * If you are using a non-modal find dialog (recommended),
- * you should call right away m_find->closeFindNextDialog().
- *
  *  Then initialize the variables determining the "current position"
  *  (to the cursor, if the option FromCursor is set,
  *   to the beginning of the selection if the option SelectedText is set,
