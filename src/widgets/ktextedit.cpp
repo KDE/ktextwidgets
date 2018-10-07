@@ -82,9 +82,6 @@ public:
         //Check the default sonnet settings to see if spellchecking should be enabled.
         QSettings settings(QStringLiteral("KDE"), QStringLiteral("Sonnet"));
         spellCheckingEnabled = settings.value(QStringLiteral("checkerEnabledByDefault"), false).toBool();
-#ifdef HAVE_SPEECH
-        textToSpeech = new QTextToSpeech(parent);
-#endif
     }
 
     ~Private()
@@ -646,6 +643,9 @@ void KTextEdit::slotSpeakText()
         text = textCursor().selectedText();
     } else {
         text = toPlainText();
+    }
+    if (!d->textToSpeech) {
+        d->textToSpeech = new QTextToSpeech(this);
     }
     d->textToSpeech->say(text);
 #endif
