@@ -45,78 +45,52 @@ class Q_DECL_HIDDEN KRichTextWidget::Private
 {
 public:
     Private(KRichTextWidget *parent)
-        :   q(parent),
-            painterActive(false),
-            richTextEnabled(false), // It's only enabled when an action makes text rich.
-            enableRichText(nullptr),
-            action_text_foreground_color(nullptr),
-            action_text_background_color(nullptr),
-            action_text_bold(nullptr),
-            action_text_italic(nullptr),
-            action_text_underline(nullptr),
-            action_text_strikeout(nullptr),
-            action_font_family(nullptr),
-            action_font_size(nullptr),
-            action_list_style(nullptr),
-            action_list_indent(nullptr),
-            action_list_dedent(nullptr),
-            action_manage_link(nullptr),
-            action_insert_horizontal_rule(nullptr),
-            action_format_painter(nullptr),
-            action_to_plain_text(nullptr),
-            action_align_left(nullptr),
-            action_align_right(nullptr),
-            action_align_center(nullptr),
-            action_align_justify(nullptr),
-            action_direction_ltr(nullptr),
-            action_direction_rtl(nullptr),
-            action_text_superscript(nullptr),
-            action_text_subscript(nullptr)
+        :   q(parent)
     {
     }
 
+    QList<QAction *> richTextActionList;
+    QTextCharFormat painterFormat;
     KRichTextWidget *q;
 
     RichTextSupport richTextSupport;
 
-    QTextCharFormat painterFormat;
-    bool painterActive;
+    bool painterActive = false;
 
-    QList<QAction *> richTextActionList;
 
-    bool richTextEnabled;
-    KToggleAction *enableRichText;
+    bool richTextEnabled = false;
+    KToggleAction *enableRichText = nullptr;
 
-    QAction *action_text_foreground_color;
-    QAction *action_text_background_color;
+    QAction *action_text_foreground_color = nullptr;
+    QAction *action_text_background_color = nullptr;
 
-    KToggleAction *action_text_bold;
-    KToggleAction *action_text_italic;
-    KToggleAction *action_text_underline;
-    KToggleAction *action_text_strikeout;
+    KToggleAction *action_text_bold = nullptr;
+    KToggleAction *action_text_italic = nullptr;
+    KToggleAction *action_text_underline = nullptr;
+    KToggleAction *action_text_strikeout = nullptr;
 
-    KFontAction *action_font_family;
-    KFontSizeAction *action_font_size;
+    KFontAction *action_font_family = nullptr;
+    KFontSizeAction *action_font_size = nullptr;
 
-    KSelectAction *action_list_style;
-    QAction *action_list_indent;
-    QAction *action_list_dedent;
+    KSelectAction *action_list_style = nullptr;
+    QAction *action_list_indent = nullptr;
+    QAction *action_list_dedent = nullptr;
 
-    QAction *action_manage_link;
-    QAction *action_insert_horizontal_rule;
-    QAction *action_format_painter;
-    QAction *action_to_plain_text;
+    QAction *action_manage_link = nullptr;
+    QAction *action_insert_horizontal_rule = nullptr;
+    QAction *action_format_painter = nullptr;
+    QAction *action_to_plain_text = nullptr;
 
-    KToggleAction *action_align_left;
-    KToggleAction *action_align_right;
-    KToggleAction *action_align_center;
-    KToggleAction *action_align_justify;
+    KToggleAction *action_align_left = nullptr;
+    KToggleAction *action_align_right = nullptr;
+    KToggleAction *action_align_center = nullptr;
+    KToggleAction *action_align_justify = nullptr;
 
-    KToggleAction *action_direction_ltr;
-    KToggleAction *action_direction_rtl;
+    KToggleAction *action_direction_ltr = nullptr;
+    KToggleAction *action_direction_rtl = nullptr;
 
-    KToggleAction *action_text_superscript;
-    KToggleAction *action_text_subscript;
+    KToggleAction *action_text_superscript = nullptr;
+    KToggleAction *action_text_subscript = nullptr;
 
     //
     // Normal functions

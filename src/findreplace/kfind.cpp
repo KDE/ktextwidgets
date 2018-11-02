@@ -42,8 +42,9 @@ static const int INDEX_NOMATCH = -1;
 
 class KFindNextDialog : public QDialog
 {
+    Q_OBJECT
 public:
-    KFindNextDialog(const QString &pattern, QWidget *parent);
+    explicit KFindNextDialog(const QString &pattern, QWidget *parent);
 
     QPushButton *findButton() const;
 
@@ -744,3 +745,4 @@ QWidget *KFind::dialogsParent() const
 }
 
 #include "moc_kfind.cpp"
+#include "kfind.moc"

@@ -46,10 +46,10 @@ public:
 
     void _k_slotOk();
 
-    KReplaceDialog *q = nullptr;
     QStringList replaceStrings;
-    bool initialShowDone = false;
+    KReplaceDialog *q = nullptr;
     QWidget *replaceExtension = nullptr;
+    bool initialShowDone = false;
 };
 
 KReplaceDialog::KReplaceDialog(QWidget *parent, long options, const QStringList &findStrings,

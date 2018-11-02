@@ -91,7 +91,7 @@ public:
     /**
      * Destructor.
      */
-    virtual ~KFindDialog();
+    ~KFindDialog() override;
 
     /**
      * Provide the list of @p strings to be displayed as the history

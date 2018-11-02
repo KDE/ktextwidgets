@@ -73,16 +73,16 @@ struct Q_DECL_HIDDEN KFind::Private {
     };
 
     struct Data {
-        Data() : id(-1), dirty(false) { }
+        Data() { }
         Data(int id, const QString &text, bool dirty = false) :
-            id(id),
             text(text),
+            id(id),
             dirty(dirty)
         { }
 
-        int     id;
         QString text;
-        bool    dirty;
+        int     id = -1;
+        bool    dirty = false;
     };
 
     void init(const QString &pattern);
