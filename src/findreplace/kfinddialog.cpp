@@ -317,7 +317,7 @@ void KFindDialog::setPattern(const QString &pattern)
 
 void KFindDialog::setFindHistory(const QStringList &strings)
 {
-    if (strings.count() > 0) {
+    if (!strings.isEmpty()) {
         d->find->setHistoryItems(strings, true);
         d->find->lineEdit()->setText(strings.first());
         d->find->lineEdit()->selectAll();
