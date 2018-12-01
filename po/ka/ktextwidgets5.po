@@ -1,0 +1,730 @@
+# KDE3 - Georgian translation of kdelibs4.po
+# Gia Shervashidze <giasher@telenet.ge>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2018-11-03 03:47+0100\n"
+"PO-Revision-Date: 2009-12-17 02:11+0400\n"
+"Last-Translator: George Machitidze <giomac@gmail.com>\n"
+"Language-Team: Georgian <http://www.gia.ge>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.9\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: dialogs/klinkdialog.cpp:52
+#, fuzzy, kde-format
+#| msgid "Save Link As"
+msgid "Manage Link"
+msgstr "შევინახო ბმა როგორც"
+
+#: dialogs/klinkdialog.cpp:60
+#, fuzzy, kde-format
+#| msgid "Find Text"
+msgid "Link Text:"
+msgstr "ტექსტის პოვნა"
+
+#: dialogs/klinkdialog.cpp:63
+#, fuzzy, kde-format
+#| msgid "URL:"
+msgid "Link URL:"
+msgstr "მისამართი:"
+
+#: findreplace/kfind.cpp:60
+#, kde-format
+msgid "Find Next"
+msgstr "შემდეგის პოვნა"
+
+#: findreplace/kfind.cpp:65
+#, kde-format
+msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
+msgstr "<qt>შემდეგი კონტექსტის პოვნა '<b>%1</b>'?</qt>"
+
+#: findreplace/kfind.cpp:624 findreplace/kfind.cpp:643
+#, kde-format
+msgid "1 match found."
+msgid_plural "%1 matches found."
+msgstr[0] "მოიძებნა %1 თანხვედრა."
+
+#: findreplace/kfind.cpp:626
+#, kde-format
+msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
+msgstr "<qt>თანხვედრა ვერ მოიძებნა ტექსტისთვის '<b>%1</b>'.</qt>"
+
+#: findreplace/kfind.cpp:645
+#, kde-format
+msgid "No matches found for '<b>%1</b>'."
+msgstr "თანხვედრა ვერ მოიძებნა ტექსტისთვის '<b>%1</b>'."
+
+#: findreplace/kfind.cpp:649 findreplace/kreplace.cpp:387
+#, kde-format
+msgid "Beginning of document reached."
+msgstr "მიღწეულია დოკუმენტის დასაწყისი."
+
+#: findreplace/kfind.cpp:651 findreplace/kreplace.cpp:389
+#, kde-format
+msgid "End of document reached."
+msgstr "მიღწეულია დოკუმენტის ბოლო."
+
+#: findreplace/kfind.cpp:659
+#, kde-format
+msgid "Continue from the end?"
+msgstr "გავაგრძელო ბოლოდან?"
+
+#: findreplace/kfind.cpp:660
+#, kde-format
+msgid "Continue from the beginning?"
+msgstr "გავაგრძელო დასაწყისიდან?"
+
+#: findreplace/kfinddialog.cpp:49
+#, kde-format
+msgid "Find Text"
+msgstr "ტექსტის პოვნა"
+
+#: findreplace/kfinddialog.cpp:84
+#, kde-format
+msgctxt "@title:group"
+msgid "Find"
+msgstr "პოვნა"
+
+#: findreplace/kfinddialog.cpp:87
+#, kde-format
+msgid "&Text to find:"
+msgstr "საძიებო &ტექსტი:"
+
+#: findreplace/kfinddialog.cpp:91
+#, kde-format
+msgid "Regular e&xpression"
+msgstr "&მარტივი გამოსახულება"
+
+#: findreplace/kfinddialog.cpp:92
+#, kde-format
+msgid "&Edit..."
+msgstr "&რეადქტირება..."
+
+#: findreplace/kfinddialog.cpp:101
+#, kde-format
+msgid "Replace With"
+msgstr "შემცვლელი კონტექსტი"
+
+#: findreplace/kfinddialog.cpp:104
+#, kde-format
+msgid "Replace&ment text:"
+msgstr "შე&საცვლელი ტექსტი:"
+
+#: findreplace/kfinddialog.cpp:108
+#, kde-format
+msgid "Use p&laceholders"
+msgstr "&შემავსებლების გამოყენება"
+
+#: findreplace/kfinddialog.cpp:109
+#, kde-format
+msgid "Insert Place&holder"
+msgstr "შემავსებლი &ჩამატება"
+
+#: findreplace/kfinddialog.cpp:118
+#, kde-format
+msgid "Options"
+msgstr "ოფციები"
+
+#: findreplace/kfinddialog.cpp:121
+#, kde-format
+msgid "C&ase sensitive"
+msgstr "&მთავრულის გათვალისწინებით"
+
+#: findreplace/kfinddialog.cpp:122
+#, kde-format
+msgid "&Whole words only"
+msgstr "მხოლოდ &სრული სიტყვები"
+
+#: findreplace/kfinddialog.cpp:123
+#, kde-format
+msgid "From c&ursor"
+msgstr "&კურსორიდან"
+
+#: findreplace/kfinddialog.cpp:124
+#, kde-format
+msgid "Find &backwards"
+msgstr "&უკუძიება"
+
+#: findreplace/kfinddialog.cpp:125
+#, kde-format
+msgid "&Selected text"
+msgstr "&მონიშნული ტექსტი"
+
+#: findreplace/kfinddialog.cpp:132
+#, kde-format
+msgid "&Prompt on replace"
+msgstr "&დამეკითხე შეცვლისას"
+
+#: findreplace/kfinddialog.cpp:199
+#, kde-format
+msgid "&Replace"
+msgstr "&შეცვლა"
+
+#: findreplace/kfinddialog.cpp:200
+#, kde-format
+msgid "Start replace"
+msgstr "შეცვლის დაწყება"
+
+#: findreplace/kfinddialog.cpp:201
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Replace</b> button, the text you entered above is "
+"searched for within the document and any occurrence is replaced with the "
+"replacement text.</qt>"
+msgstr ""
+"<qt>თუ დააჭერთ ღილაკს <b>შეცვლა</b>, დაიწყება თქვენი მიკთითებული ტექსტის "
+"ძებნა მთელ დოკუმენტში და თითოეული თანხვედრის შეცვლა შემცვლელი ტექსტით.</qt>"
+
+#: findreplace/kfinddialog.cpp:205
+#, kde-format
+msgid "&Find"
+msgstr "&პოვნა"
+
+#: findreplace/kfinddialog.cpp:206
+#, kde-format
+msgid "Start searching"
+msgstr "ძიების დაწყება"
+
+#: findreplace/kfinddialog.cpp:207
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Find</b> button, the text you entered above is "
+"searched for within the document.</qt>"
+msgstr ""
+"<qt>თუ დააჭერთ ღილაკს <b>შეცვლა</b>, დაიწყება თქვენი მიკთითებული ტექსტის "
+"ძებნა მთელ დოკუმენტში.</qt>"
+
+#: findreplace/kfinddialog.cpp:213
+#, kde-format
+msgid ""
+"Enter a pattern to search for, or select a previous pattern from the list."
+msgstr "მიუთითეთ ძიების ნიმუში ან აირჩიეთ წინა ნიმუშების სიიდან."
+
+#: findreplace/kfinddialog.cpp:216
+#, kde-format
+msgid "If enabled, search for a regular expression."
+msgstr "თუ ჩართულია, მარტივი გამოსახულების ძიება."
+
+#: findreplace/kfinddialog.cpp:218
+#, kde-format
+msgid "Click here to edit your regular expression using a graphical editor."
+msgstr "დაწკაპეთ აქ მარტივი გამოსახულების გრაფიკული რედაქტორით მისათითებლად."
+
+#: findreplace/kfinddialog.cpp:220
+#, kde-format
+msgid "Enter a replacement string, or select a previous one from the list."
+msgstr "მიუთითეთ შეცვლის ტექსტი ან აირჩიეთ წინა ტექსტი სიიდან."
+
+#: findreplace/kfinddialog.cpp:222
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt>If enabled, any occurrence of <code><b>\\N</b></code>, where "
+#| "<code><b>N</b></code> is a integer number, will be replaced with the "
+#| "corresponding capture (\"parenthesized substring\") from the pattern."
+#| "<p>To include (a literal <code><b>\\N</b></code> in your replacement, put "
+#| "an extra backslash in front of it, like <code><b>\\\\N</b></code>.</qt>"
+msgid ""
+"<qt>If enabled, any occurrence of <code><b>\\N</b></code>, where <code><b>N</"
+"b></code> is an integer number, will be replaced with the corresponding "
+"capture (\"parenthesized substring\") from the pattern.<p>To include (a "
+"literal <code><b>\\N</b></code> in your replacement, put an extra backslash "
+"in front of it, like <code><b>\\\\N</b></code>.</p></qt>"
+msgstr ""
+"<qt>თუ ჩართულია, ნებისმიერი კონტექსტი <code><b>\\N</b></code>, სადაც "
+"<code><b>N</b></code> - მთელი რიცხვია, შეიცვლება ნიმუშის შესაბამისი "
+"კონტექსტით (\"ფრჩხილებში ჩასმული ტექსტი\").<p>შეცვლის კონტექსტში <code><b>"
+"\\N</b></code> სიმბოლოს ჩასართველად მის წინ დაამატეთ კიდევ ერთი უკუირიბი, "
+"მაგალითად <code><b>\\\\N</b></code>.</qt>"
+
+#: findreplace/kfinddialog.cpp:229
+#, kde-format
+msgid "Click for a menu of available captures."
+msgstr "დაწკაპეთ შესაძლო ნიმუშების მენიუს გამოსაძახებლად."
+
+#: findreplace/kfinddialog.cpp:231
+#, kde-format
+msgid "Require word boundaries in both ends of a match to succeed."
+msgstr "შესაბამისობა ორივე მხრიდან სიტყვებით უნდა მთავრდებოდეს."
+
+#: findreplace/kfinddialog.cpp:233
+#, kde-format
+msgid "Start searching at the current cursor location rather than at the top."
+msgstr "დოკუმენტის თავის ნაცვლად ძიების კორსორის პოზიციიდან დაწყება."
+
+#: findreplace/kfinddialog.cpp:235
+#, kde-format
+msgid "Only search within the current selection."
+msgstr "ძიება მხოლოდ მონიშნულ ფრაგმენტში."
+
+#: findreplace/kfinddialog.cpp:237
+#, kde-format
+msgid ""
+"Perform a case sensitive search: entering the pattern 'Joe' will not match "
+"'joe' or 'JOE', only 'Joe'."
+msgstr ""
+"ძიება მთავრულის გათვალისწინებით. ამ შემთხვევაში ნიმუში 'Joe' ვერ მოიძებნება "
+"სიტყვებში 'joe' ან 'JOE', და მოიძებნება მხოლოდ 'Joe'."
+
+#: findreplace/kfinddialog.cpp:240
+#, kde-format
+msgid "Search backwards."
+msgstr "უკუძიება."
+
+#: findreplace/kfinddialog.cpp:242
+#, kde-format
+msgid "Ask before replacing each match found."
+msgstr "გადამოწმება ყოველი შეცვლის წინ."
+
+#: findreplace/kfinddialog.cpp:455
+#, kde-format
+msgid "Any Character"
+msgstr "ნებისმიერი სიმბოლო"
+
+#: findreplace/kfinddialog.cpp:456
+#, kde-format
+msgid "Start of Line"
+msgstr "სტრიქონის დასაწყისი"
+
+#: findreplace/kfinddialog.cpp:457
+#, kde-format
+msgid "End of Line"
+msgstr "სტრიქონის ბოლოს"
+
+#: findreplace/kfinddialog.cpp:458
+#, kde-format
+msgid "Set of Characters"
+msgstr "სიმბოლოთა ნაკრები"
+
+#: findreplace/kfinddialog.cpp:459
+#, kde-format
+msgid "Repeats, Zero or More Times"
+msgstr "გამეორებები, ნული და მეტჯერ"
+
+#: findreplace/kfinddialog.cpp:460
+#, kde-format
+msgid "Repeats, One or More Times"
+msgstr "გამეორებები, ერთხელ და მეტჯერ"
+
+#: findreplace/kfinddialog.cpp:461
+#, kde-format
+msgid "Optional"
+msgstr "დამატებით"
+
+#: findreplace/kfinddialog.cpp:462
+#, kde-format
+msgid "Escape"
+msgstr "Escape"
+
+#: findreplace/kfinddialog.cpp:463
+#, kde-format
+msgid "TAB"
+msgstr "ტაბულაცია"
+
+#: findreplace/kfinddialog.cpp:464
+#, kde-format
+msgid "Newline"
+msgstr "ახალი სტრიქონი"
+
+#: findreplace/kfinddialog.cpp:465
+#, kde-format
+msgid "Carriage Return"
+msgstr "ახალი პარაგრაფი"
+
+#: findreplace/kfinddialog.cpp:466
+#, kde-format
+msgid "White Space"
+msgstr "ხარე(ებ)ი"
+
+#: findreplace/kfinddialog.cpp:467
+#, kde-format
+msgid "Digit"
+msgstr "ციფრი"
+
+#: findreplace/kfinddialog.cpp:568
+#, kde-format
+msgid "Complete Match"
+msgstr "სრული თანხვედრა"
+
+#: findreplace/kfinddialog.cpp:573
+#, kde-format
+msgid "Captured Text (%1)"
+msgstr "ტექსტის ნიმუში (%1)"
+
+#: findreplace/kfinddialog.cpp:581
+#, kde-format
+msgid "You must enter some text to search for."
+msgstr "უნდა მიუთითოთ საძიებო ტექსტი."
+
+#: findreplace/kfinddialog.cpp:590
+#, kde-format
+msgid "Invalid regular expression."
+msgstr "მცდარი მარტივი გამოსახულება."
+
+#: findreplace/kreplace.cpp:59 findreplace/kreplace.cpp:71
+#, kde-format
+msgid "Replace"
+msgstr "შეცვლა"
+
+#: findreplace/kreplace.cpp:67
+#, kde-format
+msgctxt "@action:button Replace all occurrences"
+msgid "&All"
+msgstr "&ყველა"
+
+#: findreplace/kreplace.cpp:69
+#, kde-format
+msgid "&Skip"
+msgstr "&გამოტოვება"
+
+#: findreplace/kreplace.cpp:88
+#, kde-format
+msgid "Replace '%1' with '%2'?"
+msgstr "შევცვალო '%1' - '%2'?"
+
+#: findreplace/kreplace.cpp:177 findreplace/kreplace.cpp:381
+#, kde-format
+msgid "No text was replaced."
+msgstr "არაფერი შეცვლილა."
+
+#: findreplace/kreplace.cpp:179 findreplace/kreplace.cpp:383
+#, kde-format
+msgid "1 replacement done."
+msgid_plural "%1 replacements done."
+msgstr[0] "შესრულდა %1 შეცვლა."
+
+#: findreplace/kreplace.cpp:397
+#, kde-format
+msgid "Do you want to restart search from the end?"
+msgstr "გავაგრძელო ძიება ბოლოდან?"
+
+#: findreplace/kreplace.cpp:398
+#, kde-format
+msgid "Do you want to restart search at the beginning?"
+msgstr "გავაგრძელო ძიება დასაწყისიდან?"
+
+#: findreplace/kreplace.cpp:401
+#, fuzzy, kde-format
+#| msgid "Restart"
+msgctxt "@action:button Restart find & replace"
+msgid "Restart"
+msgstr "ხელახლა დაწყება"
+
+#: findreplace/kreplace.cpp:402
+#, kde-format
+msgctxt "@action:button Stop find & replace"
+msgid "Stop"
+msgstr "შეჩერება"
+
+#: findreplace/kreplacedialog.cpp:149
+#, kde-format
+msgid "Your replacement string is referencing a capture greater than '\\%1', "
+msgstr "შემცვლელი ტექსტი იმოწმებს ნიმუშს რომელიც მეტია ვიდრე '\\%1', "
+
+#: findreplace/kreplacedialog.cpp:151
+#, kde-format
+msgid "but your pattern only defines 1 capture."
+msgid_plural "but your pattern only defines %1 captures."
+msgstr[0] "მაგრამ თქვენი ნიმუში მხოლოდ %1 ანაბეჭდს მიუთითებს."
+
+#: findreplace/kreplacedialog.cpp:153
+#, kde-format
+msgid "but your pattern defines no captures."
+msgstr "მაგრამ თქვენი ნიმუში ანაბეჭდს არ მიუთითებს."
+
+#: findreplace/kreplacedialog.cpp:154
+#, kde-format
+msgid ""
+"\n"
+"Please correct."
+msgstr ""
+"\n"
+"გთხოვთ შეასწოროთ"
+
+#: widgets/krichtextwidget.cpp:204
+#, fuzzy, kde-format
+#| msgid "Text Completion"
+msgctxt "@action"
+msgid "Text &Color..."
+msgstr "ტექსტის თვითშევსება"
+
+#: widgets/krichtextwidget.cpp:205
+#, kde-format
+msgctxt "@label stroke color"
+msgid "Color"
+msgstr "ფერი"
+
+#: widgets/krichtextwidget.cpp:216
+#, kde-format
+msgctxt "@action"
+msgid "Text &Highlight..."
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:226
+#, kde-format
+msgctxt "@action"
+msgid "&Font"
+msgstr "&შრიფტი"
+
+#: widgets/krichtextwidget.cpp:236
+#, fuzzy, kde-format
+#| msgid "Icon Size"
+msgctxt "@action"
+msgid "Font &Size"
+msgstr "პიქტოგრამების ზომა"
+
+#: widgets/krichtextwidget.cpp:246
+#, fuzzy, kde-format
+#| msgid "Bold"
+msgctxt "@action boldify selected text"
+msgid "&Bold"
+msgstr "მუქი"
+
+#: widgets/krichtextwidget.cpp:260
+#, fuzzy, kde-format
+#| msgid "Italic"
+msgctxt "@action italicize selected text"
+msgid "&Italic"
+msgstr "კურსივი"
+
+#: widgets/krichtextwidget.cpp:275
+#, kde-format
+msgctxt "@action underline selected text"
+msgid "&Underline"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:290
+#, fuzzy, kde-format
+msgctxt "@action"
+msgid "&Strike Out"
+msgstr "ბიჯი"
+
+#: widgets/krichtextwidget.cpp:306
+#, kde-format
+msgctxt "@action"
+msgid "Align &Left"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:307
+#, fuzzy, kde-format
+#| msgctxt "toolbar position string"
+#| msgid "Left"
+msgctxt "@label left justify"
+msgid "Left"
+msgstr "მარცხნივ"
+
+#: widgets/krichtextwidget.cpp:314
+#, kde-format
+msgctxt "@action"
+msgid "Align &Center"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:315
+#, fuzzy, kde-format
+#| msgid "Other"
+msgctxt "@label center justify"
+msgid "Center"
+msgstr "სხვა"
+
+#: widgets/krichtextwidget.cpp:322
+#, kde-format
+msgctxt "@action"
+msgid "Align &Right"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:323
+#, fuzzy, kde-format
+#| msgctxt "toolbar position string"
+#| msgid "Right"
+msgctxt "@label right justify"
+msgid "Right"
+msgstr "მარჯვნივ"
+
+#: widgets/krichtextwidget.cpp:330
+#, kde-format
+msgctxt "@action"
+msgid "&Justify"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:331
+#, kde-format
+msgctxt "@label justify fill"
+msgid "Justify"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:351
+#, kde-format
+msgctxt "@action"
+msgid "Left-to-Right"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:352
+#, kde-format
+msgctxt "@label left-to-right"
+msgid "Left-to-Right"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:359
+#, kde-format
+msgctxt "@action"
+msgid "Right-to-Left"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:360
+#, kde-format
+msgctxt "@label right-to-left"
+msgid "Right-to-Left"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:376
+#, kde-format
+msgctxt "@title:menu"
+msgid "List Style"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:378
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "@item:inmenu no list style"
+msgid "None"
+msgstr "არა"
+
+#: widgets/krichtextwidget.cpp:379
+#, fuzzy, kde-format
+#| msgid "&Discard"
+msgctxt "@item:inmenu disc list style"
+msgid "Disc"
+msgstr "&უარყოფა"
+
+#: widgets/krichtextwidget.cpp:380
+#, fuzzy, kde-format
+#| msgid "File"
+msgctxt "@item:inmenu circle list style"
+msgid "Circle"
+msgstr "ფაილი"
+
+#: widgets/krichtextwidget.cpp:381
+#, fuzzy, kde-format
+msgctxt "@item:inmenu square list style"
+msgid "Square"
+msgstr "რესურსი"
+
+#: widgets/krichtextwidget.cpp:382
+#, kde-format
+msgctxt "@item:inmenu numbered lists"
+msgid "123"
+msgstr "123"
+
+#: widgets/krichtextwidget.cpp:383
+#, fuzzy, kde-format
+#| msgid "Sab"
+msgctxt "@item:inmenu lowercase abc lists"
+msgid "abc"
+msgstr "შაბ"
+
+#: widgets/krichtextwidget.cpp:384
+#, fuzzy, kde-format
+#| msgid "TAB"
+msgctxt "@item:inmenu uppercase abc lists"
+msgid "ABC"
+msgstr "ტაბულაცია"
+
+#: widgets/krichtextwidget.cpp:385
+#, kde-format
+msgctxt "@item:inmenu lower case roman numerals"
+msgid "i ii iii"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:386
+#, kde-format
+msgctxt "@item:inmenu upper case roman numerals"
+msgid "I II III"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:403
+#, kde-format
+msgctxt "@action"
+msgid "Increase Indent"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:416
+#, kde-format
+msgctxt "@action"
+msgid "Decrease Indent"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:429
+#, kde-format
+msgctxt "@action"
+msgid "Insert Rule Line"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:440
+#, fuzzy, kde-format
+#| msgid "License:"
+msgctxt "@action"
+msgid "Link"
+msgstr "ლიცენზია:"
+
+#: widgets/krichtextwidget.cpp:451
+#, kde-format
+msgctxt "@action"
+msgid "Format Painter"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:461
+#, fuzzy, kde-format
+#| msgid "Find Text"
+msgctxt "@action"
+msgid "To Plain Text"
+msgstr "ტექსტის პოვნა"
+
+#: widgets/krichtextwidget.cpp:472
+#, fuzzy, kde-format
+#| msgid "Submit"
+msgctxt "@action"
+msgid "Subscript"
+msgstr "გაგზავნა"
+
+#: widgets/krichtextwidget.cpp:479
+#, fuzzy, kde-format
+msgctxt "@action"
+msgid "Superscript"
+msgstr "ხელ&ნაწერი"
+
+#: widgets/ktextedit.cpp:163
+#, fuzzy, kde-format
+msgid "Nothing to spell check."
+msgstr "მომწოდებელი არ შერჩეულა."
+
+#: widgets/ktextedit.cpp:563
+#, kde-format
+msgid "Check Spelling..."
+msgstr "მართლწერის შემოწმება..."
+
+#: widgets/ktextedit.cpp:568
+#, fuzzy, kde-format
+#| msgid "Spell Checking"
+msgid "Spell Checking Language"
+msgstr "მართლწერის შემოწმება"
+
+#: widgets/ktextedit.cpp:591
+#, kde-format
+msgid "Auto Spell Check"
+msgstr "მართლწერის თვითშემოწმება"
+
+#: widgets/ktextedit.cpp:597
+#, kde-format
+msgid "Allow Tabulations"
+msgstr "ტაბულაციის დაშვება"
+
+#: widgets/ktextedit.cpp:630
+#, fuzzy, kde-format
+#| msgid "&Break at Next Statement"
+msgid "Speak Text"
+msgstr "&წყვეტა შემდეგ გამოსახულებაზე"
