@@ -59,8 +59,7 @@ KFindNextDialog::KFindNextDialog(const QString &pattern, QWidget *parent)
     setModal(false);
     setWindowTitle(i18n("Find Next"));
 
-    QVBoxLayout *layout = new QVBoxLayout;
-    setLayout(layout);
+    QVBoxLayout *layout = new QVBoxLayout(this);
 
     layout->addWidget(new QLabel(i18n("<qt>Find next occurrence of '<b>%1</b>'?</qt>", pattern), this));
 
@@ -116,7 +115,6 @@ void KFind::Private::init(const QString &_pattern)
 KFind::~KFind()
 {
     delete d;
-    //qDebug() ;
 }
 
 bool KFind::needData() const

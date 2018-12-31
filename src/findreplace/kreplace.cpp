@@ -37,6 +37,7 @@
 
 class KReplaceNextDialog : public QDialog
 {
+    Q_OBJECT
 public:
     explicit KReplaceNextDialog(QWidget *parent);
     void setLabel(const QString &pattern, const QString &replacement);
@@ -106,12 +107,11 @@ QPushButton *KReplaceNextDialog::replaceButton() const
 ////
 
 class KReplacePrivate
-{
+{    
 public:
     KReplacePrivate(KReplace *q, const QString &replacement)
         : q(q)
         , m_replacement(replacement)
-        , m_replacements(0)
     {}
 
     KReplaceNextDialog *dialog();
@@ -123,7 +123,7 @@ public:
 
     KReplace *q;
     QString m_replacement;
-    unsigned m_replacements;
+    int m_replacements = 0;
 };
 
 ////
@@ -409,3 +409,4 @@ void KReplace::closeReplaceNextDialog()
 }
 
 #include "moc_kreplace.cpp"
+#include "kreplace.moc"
