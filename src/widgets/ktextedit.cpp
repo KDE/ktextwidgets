@@ -758,16 +758,16 @@ void KTextEdit::setReadOnly(bool readOnly)
 
         d->customPalette = testAttribute(Qt::WA_SetPalette);
         QPalette p = palette();
-        QColor color = p.color(QPalette::Disabled, QPalette::Background);
+        QColor color = p.color(QPalette::Disabled, QPalette::Window);
         p.setColor(QPalette::Base, color);
-        p.setColor(QPalette::Background, color);
+        p.setColor(QPalette::Window, color);
         setPalette(p);
     } else {
         if (d->customPalette && testAttribute(Qt::WA_SetPalette)) {
             QPalette p = palette();
             QColor color = p.color(QPalette::Normal, QPalette::Base);
             p.setColor(QPalette::Base, color);
-            p.setColor(QPalette::Background, color);
+            p.setColor(QPalette::Window, color);
             setPalette(p);
         } else {
             setPalette(QPalette());
