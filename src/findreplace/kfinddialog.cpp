@@ -266,7 +266,8 @@ void KFindDialog::showEvent(QShowEvent *e)
         //maintain a user-friendly tab order
         if (d->findExtension) {
             QWidget *prev = d->regExpItem;
-            Q_FOREACH (QWidget *child, d->findExtension->findChildren<QWidget *>()) {
+            const auto children = d->findExtension->findChildren<QWidget *>();
+            for (QWidget *child : children) {
                 setTabOrder(prev, child);
                 prev = child;
             }

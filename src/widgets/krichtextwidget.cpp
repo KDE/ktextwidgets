@@ -504,7 +504,7 @@ QList<QAction *> KRichTextWidget::createActions()
 
 void KRichTextWidget::setActionsEnabled(bool enabled)
 {
-    Q_FOREACH (QAction *action, d->richTextActionList) {
+    for (QAction *action : qAsConst(d->richTextActionList)) {
         action->setEnabled(enabled);
     }
     d->richTextEnabled = enabled;
