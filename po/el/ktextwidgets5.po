@@ -1,0 +1,729 @@
+# translation of kdelibs4.po to Greek
+# translation of kdelibs4.po to
+# Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008 Free Software Foundation, Inc.
+# Last MAJOR revision (whole file) (29-03-2003 - Stergios Dramis).
+#
+# Dimitris Kamenopoulos <d.kamenopoulos@mail.ntua.gr>, 2000-2002.
+# Stergios Dramis <sdramis@egnatia.ee.auth.gr>, 2002-2004.
+# Κώστας Μπουκουβάλας <quantis@hellug.gr>, 2005.
+# Spiros Georgaras <sngeorgaras@otenet.gr>, 2005, 2006, 2007, 2008.
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2006, 2007, 2008, 2009.
+# Spiros Georgaras <sng@hellug.gr>, 2007, 2008.
+# Σπύρος Γεωργαράς <sngeorgaras@otenet.gr>, 2008.
+# Petros <pvidalis@gmail.com>, 2009.
+# Petros Vidalis <p_vidalis@hotmail.com>, 2010, 2011.
+# Dimitrios Glentadakis <dglent@gmail.com>, 2010, 2011, 2012, 2013, 2014.
+# nikos, 2011.
+# Stelios <sstavra@gmail.com>, 2012, 2013.
+# Dimitris Kardarakos <dimkard@gmail.com>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-05-20 02:58+0200\n"
+"PO-Revision-Date: 2015-11-04 15:35+0200\n"
+"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: dialogs/klinkdialog.cpp:52
+#, kde-format
+msgid "Manage Link"
+msgstr "Διαχείριση συνδέσμου"
+
+#: dialogs/klinkdialog.cpp:60
+#, kde-format
+msgid "Link Text:"
+msgstr "Κείμενο συνδέσμου:"
+
+#: dialogs/klinkdialog.cpp:63
+#, kde-format
+msgid "Link URL:"
+msgstr "URL συνδέσμου:"
+
+#: findreplace/kfind.cpp:60
+#, kde-format
+msgid "Find Next"
+msgstr "Αναζήτηση επόμενου"
+
+#: findreplace/kfind.cpp:64
+#, kde-format
+msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
+msgstr "<qt>Αναζήτηση επόμενης εμφάνισης του '<b>%1</b>';</qt>"
+
+#: findreplace/kfind.cpp:622 findreplace/kfind.cpp:641
+#, kde-format
+msgid "1 match found."
+msgid_plural "%1 matches found."
+msgstr[0] "Βρέθηκε 1 ταίριασμα."
+msgstr[1] "Βρέθηκαν %1 ταιριάσματα."
+
+#: findreplace/kfind.cpp:624
+#, kde-format
+msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
+msgstr "<qt>Δε βρέθηκαν ταιριάσματα για το '<b>%1</b>'.</qt>"
+
+#: findreplace/kfind.cpp:643
+#, kde-format
+msgid "No matches found for '<b>%1</b>'."
+msgstr "Δε βρέθηκαν ταιριάσματα για το '<b>%1</b>'."
+
+#: findreplace/kfind.cpp:647 findreplace/kreplace.cpp:387
+#, kde-format
+msgid "Beginning of document reached."
+msgstr "Φτάσαμε στην αρχή του εγγράφου."
+
+#: findreplace/kfind.cpp:649 findreplace/kreplace.cpp:389
+#, kde-format
+msgid "End of document reached."
+msgstr "Φτάσαμε στο τέλος του εγγράφου."
+
+#: findreplace/kfind.cpp:657
+#, kde-format
+msgid "Continue from the end?"
+msgstr "Συνέχεια από το τέλος;"
+
+#: findreplace/kfind.cpp:658
+#, kde-format
+msgid "Continue from the beginning?"
+msgstr "Συνέχεια από την αρχή;"
+
+#: findreplace/kfinddialog.cpp:49
+#, kde-format
+msgid "Find Text"
+msgstr "Αναζήτηση κειμένου"
+
+#: findreplace/kfinddialog.cpp:84
+#, kde-format
+msgctxt "@title:group"
+msgid "Find"
+msgstr "Αναζήτηση"
+
+#: findreplace/kfinddialog.cpp:87
+#, kde-format
+msgid "&Text to find:"
+msgstr "Κείμενο για ανα&ζήτηση:"
+
+#: findreplace/kfinddialog.cpp:91
+#, kde-format
+msgid "Regular e&xpression"
+msgstr "Κανονική έκφ&ραση"
+
+#: findreplace/kfinddialog.cpp:92
+#, kde-format
+msgid "&Edit..."
+msgstr "&Επεξεργασία..."
+
+#: findreplace/kfinddialog.cpp:101
+#, kde-format
+msgid "Replace With"
+msgstr "Αντικατάσταση με"
+
+#: findreplace/kfinddialog.cpp:104
+#, kde-format
+msgid "Replace&ment text:"
+msgstr "Κείμενο αντικατ&άστασης:"
+
+#: findreplace/kfinddialog.cpp:108
+#, kde-format
+msgid "Use p&laceholders"
+msgstr "Χρήση &δεσμευτικών θέσης"
+
+#: findreplace/kfinddialog.cpp:109
+#, kde-format
+msgid "Insert Place&holder"
+msgstr "Εισαγωγή δ&εσμευτικού θέσης"
+
+#: findreplace/kfinddialog.cpp:118
+#, kde-format
+msgid "Options"
+msgstr "Επιλογές"
+
+#: findreplace/kfinddialog.cpp:121
+#, kde-format
+msgid "C&ase sensitive"
+msgstr "Διάκριση πεζών/κε&φαλαίων"
+
+#: findreplace/kfinddialog.cpp:122
+#, kde-format
+msgid "&Whole words only"
+msgstr "Μόνο &ολόκληρες λέξεις"
+
+#: findreplace/kfinddialog.cpp:123
+#, kde-format
+msgid "From c&ursor"
+msgstr "Από το &δρομέα"
+
+#: findreplace/kfinddialog.cpp:124
+#, kde-format
+msgid "Find &backwards"
+msgstr "Αναζήτηση προς τα &πίσω"
+
+#: findreplace/kfinddialog.cpp:125
+#, kde-format
+msgid "&Selected text"
+msgstr "Επιλε&γμένο κείμενο"
+
+#: findreplace/kfinddialog.cpp:132
+#, kde-format
+msgid "&Prompt on replace"
+msgstr "&Προτροπή κατά την αντικατάσταση"
+
+#: findreplace/kfinddialog.cpp:199
+#, kde-format
+msgid "&Replace"
+msgstr "&Αντικατάσταση"
+
+#: findreplace/kfinddialog.cpp:200
+#, kde-format
+msgid "Start replace"
+msgstr "Εκκίνηση αντικατάστασης"
+
+#: findreplace/kfinddialog.cpp:201
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Replace</b> button, the text you entered above is "
+"searched for within the document and any occurrence is replaced with the "
+"replacement text.</qt>"
+msgstr ""
+"<qt>Αν πατήσετε το κουμπί <b>Αντικατάσταση</b>, το κείμενο που δώσατε "
+"παραπάνω αναζητείται μέσα στο έγγραφο και οποιαδήποτε εμφάνιση του "
+"αντικαθίσταται με το κείμενο αντικατάστασης.</qt>"
+
+#: findreplace/kfinddialog.cpp:205
+#, kde-format
+msgid "&Find"
+msgstr "&Αναζήτηση"
+
+#: findreplace/kfinddialog.cpp:206
+#, kde-format
+msgid "Start searching"
+msgstr "Εκκίνηση αναζήτησης"
+
+#: findreplace/kfinddialog.cpp:207
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Find</b> button, the text you entered above is "
+"searched for within the document.</qt>"
+msgstr ""
+"<qt>Αν πατήσετε το κουμπί <b>Αναζήτηση</b>, το κείμενο που δώσατε παραπάνω "
+"αναζητείται μέσα στο έγγραφο.</qt>"
+
+#: findreplace/kfinddialog.cpp:213
+#, kde-format
+msgid ""
+"Enter a pattern to search for, or select a previous pattern from the list."
+msgstr ""
+"Εισάγετε ένα μοτίβο προς έρευνα, ή επιλέξτε μια προηγούμενο μοτίβο από τη "
+"λίστα."
+
+#: findreplace/kfinddialog.cpp:216
+#, kde-format
+msgid "If enabled, search for a regular expression."
+msgstr "Αν γίνει ενεργοποίηση, ψάξε για μια κανονική έκφραση."
+
+#: findreplace/kfinddialog.cpp:218
+#, kde-format
+msgid "Click here to edit your regular expression using a graphical editor."
+msgstr ""
+"Κάντε κλικ εδώ για να επεξεργαστείτε την κανονική έκφραση χρησιμοποιώντας "
+"ένα γραφικό επεξεργαστή."
+
+#: findreplace/kfinddialog.cpp:220
+#, kde-format
+msgid "Enter a replacement string, or select a previous one from the list."
+msgstr ""
+"Εισάγετε μια συμβολοσειρά αντικατάστασης, ή επιλέξτε μια προηγούμενη από τον "
+"κατάλογο."
+
+#: findreplace/kfinddialog.cpp:222
+#, kde-format
+msgid ""
+"<qt>If enabled, any occurrence of <code><b>\\N</b></code>, where <code><b>N</"
+"b></code> is an integer number, will be replaced with the corresponding "
+"capture (\"parenthesized substring\") from the pattern.<p>To include (a "
+"literal <code><b>\\N</b></code> in your replacement, put an extra backslash "
+"in front of it, like <code><b>\\\\N</b></code>.</p></qt>"
+msgstr ""
+"<qt>Αν ενεργοποιηθεί, οποιαδήποτε εμφάνιση του <code><b>\\N</b></code>,  "
+"όπου <code><b>N</b> </code> ένας ακέραιος, θα αντικατασταθεί με την "
+"αντίστοιχη σύλληψη (\"υποσυμβολοσειρά σε παρενθέσεις\") του μοτίβου.<p>Για "
+"να περιληφθεί ένα <code><b>\\N</b></code> στην αντικατάστασή σας, βάλτε μία "
+"παραπάνω ανάποδη κατακόρυφο μπροστά του, όπως στο <code><b>\\\\N</b></code>."
+"</p></qt>"
+
+#: findreplace/kfinddialog.cpp:229
+#, kde-format
+msgid "Click for a menu of available captures."
+msgstr "Κλικ για ένα μενού των διαθέσιμων λήψεων."
+
+#: findreplace/kfinddialog.cpp:231
+#, kde-format
+msgid "Require word boundaries in both ends of a match to succeed."
+msgstr "Αίτηση ορίων λέξεων και στις δύο άκρες ενός ζεύγους για επιτυχία."
+
+#: findreplace/kfinddialog.cpp:233
+#, kde-format
+msgid "Start searching at the current cursor location rather than at the top."
+msgstr ""
+"Εκκίνηση αναζήτησης από την τρέχουσα τοποθεσία δρομέα αντί από την αρχή."
+
+#: findreplace/kfinddialog.cpp:235
+#, kde-format
+msgid "Only search within the current selection."
+msgstr "Αναζήτηση μόνο στην τρέχουσα επιλογή."
+
+#: findreplace/kfinddialog.cpp:237
+#, kde-format
+msgid ""
+"Perform a case sensitive search: entering the pattern 'Joe' will not match "
+"'joe' or 'JOE', only 'Joe'."
+msgstr ""
+"Εκτέλεση μίας αναζήτησης με διάκριση πεζών/κεφαλαίων· δίνοντας το μοτίβο "
+"'Joe' δε θα ταιριάξει με το 'joe', ή το 'JOE', μόνο με το 'Joe'."
+
+#: findreplace/kfinddialog.cpp:240
+#, kde-format
+msgid "Search backwards."
+msgstr "Αναζήτηση προς τα πίσω."
+
+#: findreplace/kfinddialog.cpp:242
+#, kde-format
+msgid "Ask before replacing each match found."
+msgstr "Ερώτηση πριν από την αντικατάσταση κάθε ευρισκόμενου ζεύγους."
+
+#: findreplace/kfinddialog.cpp:456
+#, kde-format
+msgid "Any Character"
+msgstr "Οποιοσδήποτε χαρακτήρας"
+
+#: findreplace/kfinddialog.cpp:457
+#, kde-format
+msgid "Start of Line"
+msgstr "Αρχή γραμμής"
+
+#: findreplace/kfinddialog.cpp:458
+#, kde-format
+msgid "End of Line"
+msgstr "Τέλος γραμμής"
+
+#: findreplace/kfinddialog.cpp:459
+#, kde-format
+msgid "Set of Characters"
+msgstr "Σύνολο χαρακτήρων"
+
+#: findreplace/kfinddialog.cpp:460
+#, kde-format
+msgid "Repeats, Zero or More Times"
+msgstr "Επαναλαμβάνεται, μηδέν ή περισσότερες φορές"
+
+#: findreplace/kfinddialog.cpp:461
+#, kde-format
+msgid "Repeats, One or More Times"
+msgstr "Επαναλαμβάνεται, μία ή περισσότερες φορές"
+
+#: findreplace/kfinddialog.cpp:462
+#, kde-format
+msgid "Optional"
+msgstr "Προαιρετικά"
+
+#: findreplace/kfinddialog.cpp:463
+#, kde-format
+msgid "Escape"
+msgstr "Έξοδος"
+
+#: findreplace/kfinddialog.cpp:464
+#, kde-format
+msgid "TAB"
+msgstr "TAB"
+
+#: findreplace/kfinddialog.cpp:465
+#, kde-format
+msgid "Newline"
+msgstr "Νέα γραμμή"
+
+#: findreplace/kfinddialog.cpp:466
+#, kde-format
+msgid "Carriage Return"
+msgstr "Επαναφορά κεφαλής"
+
+#: findreplace/kfinddialog.cpp:467
+#, kde-format
+msgid "White Space"
+msgstr "Κενό"
+
+#: findreplace/kfinddialog.cpp:468
+#, kde-format
+msgid "Digit"
+msgstr "Ψηφίο"
+
+#: findreplace/kfinddialog.cpp:569
+#, kde-format
+msgid "Complete Match"
+msgstr "Απόλυτο ταίριασμα"
+
+#: findreplace/kfinddialog.cpp:574
+#, kde-format
+msgid "Captured Text (%1)"
+msgstr "Λαμβανόμενο κείμενο (%1)"
+
+#: findreplace/kfinddialog.cpp:582
+#, kde-format
+msgid "You must enter some text to search for."
+msgstr "Πρέπει να δώσετε κάποιο κείμενο για αναζήτηση."
+
+#: findreplace/kfinddialog.cpp:591
+#, kde-format
+msgid "Invalid regular expression."
+msgstr "Μη έγκυρη κανονική έκφραση."
+
+#: findreplace/kreplace.cpp:60 findreplace/kreplace.cpp:72
+#, kde-format
+msgid "Replace"
+msgstr "Αντικατάσταση"
+
+#: findreplace/kreplace.cpp:68
+#, kde-format
+msgctxt "@action:button Replace all occurrences"
+msgid "&All"
+msgstr "Ό&λα"
+
+#: findreplace/kreplace.cpp:70
+#, kde-format
+msgid "&Skip"
+msgstr "Παράλει&ψη"
+
+#: findreplace/kreplace.cpp:89
+#, kde-format
+msgid "Replace '%1' with '%2'?"
+msgstr "Αντικατάσταση του '%1' με το '%2';"
+
+#: findreplace/kreplace.cpp:177 findreplace/kreplace.cpp:381
+#, kde-format
+msgid "No text was replaced."
+msgstr "Δεν αντικαταστάθηκε κάποιο κείμενο."
+
+#: findreplace/kreplace.cpp:179 findreplace/kreplace.cpp:383
+#, kde-format
+msgid "1 replacement done."
+msgid_plural "%1 replacements done."
+msgstr[0] "Έγινε 1 αντικατάσταση."
+msgstr[1] "Έγιναν %1 αντικαταστάσεις."
+
+#: findreplace/kreplace.cpp:397
+#, kde-format
+msgid "Do you want to restart search from the end?"
+msgstr "Θέλετε να επανεκκινήσετε την αναζήτηση από το τέλος;"
+
+#: findreplace/kreplace.cpp:398
+#, kde-format
+msgid "Do you want to restart search at the beginning?"
+msgstr "Θέλετε να επανεκκινήσετε την αναζήτηση από την αρχή;"
+
+#: findreplace/kreplace.cpp:401
+#, kde-format
+msgctxt "@action:button Restart find & replace"
+msgid "Restart"
+msgstr "Επανεκκίνηση"
+
+#: findreplace/kreplace.cpp:402
+#, kde-format
+msgctxt "@action:button Stop find & replace"
+msgid "Stop"
+msgstr "Διακοπή"
+
+#: findreplace/kreplacedialog.cpp:149
+#, kde-format
+msgid "Your replacement string is referencing a capture greater than '\\%1', "
+msgstr ""
+"Η συμβολοσειρά αντικατάστασης, αναφέρει μια λήψη μεγαλύτερη από '\\%1', "
+
+#: findreplace/kreplacedialog.cpp:151
+#, kde-format
+msgid "but your pattern only defines 1 capture."
+msgid_plural "but your pattern only defines %1 captures."
+msgstr[0] "αλλά το μοτίβο σας προσδιορίζει μόνο 1 λήψη."
+msgstr[1] "αλλά το μοτίβο σας προσδιορίζει μόνο %1 λήψεις."
+
+#: findreplace/kreplacedialog.cpp:153
+#, kde-format
+msgid "but your pattern defines no captures."
+msgstr "αλλά το μοτίβο σας δεν προσδιορίζει καμία λήψη."
+
+#: findreplace/kreplacedialog.cpp:154
+#, kde-format
+msgid ""
+"\n"
+"Please correct."
+msgstr ""
+"\n"
+"Παρακαλώ διορθώστε."
+
+#: widgets/krichtextwidget.cpp:204
+#, kde-format
+msgctxt "@action"
+msgid "Text &Color..."
+msgstr "&Χρώμα κειμένου..."
+
+#: widgets/krichtextwidget.cpp:205
+#, kde-format
+msgctxt "@label stroke color"
+msgid "Color"
+msgstr "Χρώμα"
+
+#: widgets/krichtextwidget.cpp:216
+#, kde-format
+msgctxt "@action"
+msgid "Text &Highlight..."
+msgstr "Χρώμα &τονισμού..."
+
+#: widgets/krichtextwidget.cpp:226
+#, kde-format
+msgctxt "@action"
+msgid "&Font"
+msgstr "&Γραμματοσειρά"
+
+#: widgets/krichtextwidget.cpp:236
+#, kde-format
+msgctxt "@action"
+msgid "Font &Size"
+msgstr "&Μέγεθος γραμματοσειράς"
+
+#: widgets/krichtextwidget.cpp:246
+#, kde-format
+msgctxt "@action boldify selected text"
+msgid "&Bold"
+msgstr "Έ&ντονα"
+
+#: widgets/krichtextwidget.cpp:260
+#, kde-format
+msgctxt "@action italicize selected text"
+msgid "&Italic"
+msgstr "&Πλάγια"
+
+#: widgets/krichtextwidget.cpp:275
+#, kde-format
+msgctxt "@action underline selected text"
+msgid "&Underline"
+msgstr "&Υπογράμμιση"
+
+#: widgets/krichtextwidget.cpp:290
+#, kde-format
+msgctxt "@action"
+msgid "&Strike Out"
+msgstr "&Επιγράμμιση"
+
+#: widgets/krichtextwidget.cpp:306
+#, kde-format
+msgctxt "@action"
+msgid "Align &Left"
+msgstr "Στοίχιση &αριστερά"
+
+#: widgets/krichtextwidget.cpp:307
+#, kde-format
+msgctxt "@label left justify"
+msgid "Left"
+msgstr "Αριστερά"
+
+#: widgets/krichtextwidget.cpp:314
+#, kde-format
+msgctxt "@action"
+msgid "Align &Center"
+msgstr "Στοίχιση στο &κέντρο"
+
+#: widgets/krichtextwidget.cpp:315
+#, kde-format
+msgctxt "@label center justify"
+msgid "Center"
+msgstr "Κέντρο"
+
+#: widgets/krichtextwidget.cpp:322
+#, kde-format
+msgctxt "@action"
+msgid "Align &Right"
+msgstr "Στοίχιση &δεξιά"
+
+#: widgets/krichtextwidget.cpp:323
+#, kde-format
+msgctxt "@label right justify"
+msgid "Right"
+msgstr "Δεξιά"
+
+#: widgets/krichtextwidget.cpp:330
+#, kde-format
+msgctxt "@action"
+msgid "&Justify"
+msgstr "&Ευθυγράμμιση"
+
+#: widgets/krichtextwidget.cpp:331
+#, kde-format
+msgctxt "@label justify fill"
+msgid "Justify"
+msgstr "Ευθυγράμμιση"
+
+#: widgets/krichtextwidget.cpp:351
+#, kde-format
+msgctxt "@action"
+msgid "Left-to-Right"
+msgstr "Αριστερά προς τα δεξιά"
+
+#: widgets/krichtextwidget.cpp:352
+#, kde-format
+msgctxt "@label left-to-right"
+msgid "Left-to-Right"
+msgstr "Αριστερά προς τα δεξιά"
+
+#: widgets/krichtextwidget.cpp:359
+#, kde-format
+msgctxt "@action"
+msgid "Right-to-Left"
+msgstr "Δεξιά προς αριστερά"
+
+#: widgets/krichtextwidget.cpp:360
+#, kde-format
+msgctxt "@label right-to-left"
+msgid "Right-to-Left"
+msgstr "Δεξιά προς αριστερά"
+
+#: widgets/krichtextwidget.cpp:376
+#, kde-format
+msgctxt "@title:menu"
+msgid "List Style"
+msgstr "Στυλ λίστας"
+
+#: widgets/krichtextwidget.cpp:378
+#, kde-format
+msgctxt "@item:inmenu no list style"
+msgid "None"
+msgstr "Κανένα"
+
+#: widgets/krichtextwidget.cpp:379
+#, kde-format
+msgctxt "@item:inmenu disc list style"
+msgid "Disc"
+msgstr "Δίσκος"
+
+#: widgets/krichtextwidget.cpp:380
+#, kde-format
+msgctxt "@item:inmenu circle list style"
+msgid "Circle"
+msgstr "Κύκλος"
+
+#: widgets/krichtextwidget.cpp:381
+#, kde-format
+msgctxt "@item:inmenu square list style"
+msgid "Square"
+msgstr "Τετράγωνο"
+
+#: widgets/krichtextwidget.cpp:382
+#, kde-format
+msgctxt "@item:inmenu numbered lists"
+msgid "123"
+msgstr "123"
+
+#: widgets/krichtextwidget.cpp:383
+#, kde-format
+msgctxt "@item:inmenu lowercase abc lists"
+msgid "abc"
+msgstr "abc"
+
+#: widgets/krichtextwidget.cpp:384
+#, kde-format
+msgctxt "@item:inmenu uppercase abc lists"
+msgid "ABC"
+msgstr "ABC"
+
+#: widgets/krichtextwidget.cpp:385
+#, kde-format
+msgctxt "@item:inmenu lower case roman numerals"
+msgid "i ii iii"
+msgstr "i ii iii"
+
+#: widgets/krichtextwidget.cpp:386
+#, kde-format
+msgctxt "@item:inmenu upper case roman numerals"
+msgid "I II III"
+msgstr "I II III"
+
+#: widgets/krichtextwidget.cpp:403
+#, kde-format
+msgctxt "@action"
+msgid "Increase Indent"
+msgstr "Αύξηση εσοχής"
+
+#: widgets/krichtextwidget.cpp:416
+#, kde-format
+msgctxt "@action"
+msgid "Decrease Indent"
+msgstr "Μείωση εσοχής"
+
+#: widgets/krichtextwidget.cpp:429
+#, kde-format
+msgctxt "@action"
+msgid "Insert Rule Line"
+msgstr "Εισαγωγή γραμμής κανόνα"
+
+#: widgets/krichtextwidget.cpp:440
+#, kde-format
+msgctxt "@action"
+msgid "Link"
+msgstr "Δεσμός"
+
+#: widgets/krichtextwidget.cpp:451
+#, kde-format
+msgctxt "@action"
+msgid "Format Painter"
+msgstr "Μορφοποίηση σχεδίασης"
+
+#: widgets/krichtextwidget.cpp:461
+#, kde-format
+msgctxt "@action"
+msgid "To Plain Text"
+msgstr "Σε απλό κείμενο"
+
+#: widgets/krichtextwidget.cpp:472
+#, kde-format
+msgctxt "@action"
+msgid "Subscript"
+msgstr "Δείκτης"
+
+#: widgets/krichtextwidget.cpp:479
+#, kde-format
+msgctxt "@action"
+msgid "Superscript"
+msgstr "Εκθέτης"
+
+#: widgets/ktextedit.cpp:163
+#, kde-format
+msgid "Nothing to spell check."
+msgstr "Τίποτα για ορθογραφικό έλεγχο."
+
+#: widgets/ktextedit.cpp:563
+#, kde-format
+msgid "Check Spelling..."
+msgstr "Έλεγχος ορθογραφίας..."
+
+#: widgets/ktextedit.cpp:568
+#, kde-format
+msgid "Spell Checking Language"
+msgstr "Γλώσσα ορθογραφικού ελέγχου"
+
+#: widgets/ktextedit.cpp:591
+#, kde-format
+msgid "Auto Spell Check"
+msgstr "Αυτόματος έλεγχος ορθογραφίας"
+
+#: widgets/ktextedit.cpp:597
+#, kde-format
+msgid "Allow Tabulations"
+msgstr "Να επιτρέπεται η δημιουργία Πινάκων"
+
+#: widgets/ktextedit.cpp:630
+#, kde-format
+msgid "Speak Text"
+msgstr "Εκφώνηση κειμένου"
