@@ -90,6 +90,10 @@ install(FILES
 )
 install( FILES kregexpeditor/kregexpeditor.desktop DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR} )
 
+if (BUILD_DESIGNERPLUGIN)
+    add_subdirectory(designer)
+endif()
+
 if (BUILD_QCH)
     ecm_add_qch(
         KF5TextWidgets_QCH
