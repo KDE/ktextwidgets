@@ -24,7 +24,6 @@
 #define __kregexpeditorinterface_h__
 
 #include <QString>
-#include <QObject>
 
 /**
  * @class KRegExpEditorInterface kregexpeditorinterface.h <KRegExpEditorInterface>

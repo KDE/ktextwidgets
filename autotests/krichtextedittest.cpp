@@ -22,7 +22,6 @@
 #include <krichtextedit.h>
 #include <kcolorscheme.h>
 
-#include <QTestEvent>
 #include <QTest>
 #include <QTextCursor>
 #include <QTextList>

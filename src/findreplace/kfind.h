@@ -23,7 +23,6 @@
 
 #include "ktextwidgets_export.h"
 
-#include <QRect>
 #include <QObject>
 
 class QDialog;

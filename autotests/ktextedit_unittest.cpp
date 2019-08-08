@@ -21,7 +21,6 @@
 
 #include <QClipboard>
 #include <QTest>
-#include <QTestEvent>
 
 #include <ktextedit.h>
 
