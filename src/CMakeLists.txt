@@ -109,6 +109,9 @@ if (BUILD_QCH)
             Qt5Widgets_QCH
             KF5SonnetUi_QCH
             KF5I18n_QCH
+        INCLUDE_DIRS
+            ${CMAKE_CURRENT_BINARY_DIR}
+            ${ktextwidgets_INCLUDES}
         BLANK_MACROS
             KTEXTWIDGETS_EXPORT
             KTEXTWIDGETS_DEPRECATED_EXPORT
