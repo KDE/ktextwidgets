@@ -451,8 +451,8 @@ void KFindDialog::KFindDialogPrivate::_k_showPatterns()
             const char *description;
             const char *regExp;
             int cursorAdjustment;
-        } term;
-        static const term items[] = {
+        } Term;
+        static const Term items[] = {
             { I18N_NOOP("Any Character"),                 ".",        0 },
             { I18N_NOOP("Start of Line"),                 "^",        0 },
             { I18N_NOOP("End of Line"),                   "$",        0 },
@@ -499,10 +499,10 @@ void KFindDialog::KFindDialogPrivate::_k_showPatterns()
         // Populate the popup menu.
         if (!patterns) {
             patterns = new QMenu(q);
-            for (int i = 0; (unsigned)i < sizeof(items) / sizeof(items[0]); i++) {
-                patterns->addAction(new RegExpAction(patterns, i18n(items[i].description),
-                                                     QLatin1String(items[i].regExp),
-                                                     items[i].cursorAdjustment));
+            for (const Term &item : items) {
+                patterns->addAction(new RegExpAction(patterns, i18n(item.description),
+                                                     QLatin1String(item.regExp),
+                                                     item.cursorAdjustment));
             }
         }
 
