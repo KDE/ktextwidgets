@@ -12,8 +12,15 @@ set(ktextwidgets_LIB_SRCS
 )
 
 add_library(KF5TextWidgets ${ktextwidgets_LIB_SRCS})
-generate_export_header(KF5TextWidgets BASE_NAME KTextWidgets)
 add_library(KF5::TextWidgets ALIAS KF5TextWidgets)
+ecm_generate_export_header(KF5TextWidgets
+    BASE_NAME KTextWidgets
+    # GROUP_BASE_NAME KF <- enable once all of KF modules use ecm_generate_export_header
+    VERSION ${KF5_VERSION}
+    DEPRECATED_BASE_VERSION 0
+    DEPRECATION_VERSIONS 5.0
+    EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
+)
 
 set(ktextwidgets_INCLUDES
   ${CMAKE_CURRENT_SOURCE_DIR}/dialogs
