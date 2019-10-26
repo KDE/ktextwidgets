@@ -43,7 +43,6 @@ PRIVATE
   KF5::Service
   KF5::ConfigWidgets
   KF5::WindowSystem
-  KF5::IconThemes
   KF5::Completion
 )
 

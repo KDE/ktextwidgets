@@ -41,7 +41,6 @@
 #include <sonnet/spellcheckdecorator.h>
 #include <kcursor.h>
 #include <kstandardaction.h>
-#include <kicontheme.h>
 #include <kstandardshortcut.h>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
@@ -548,9 +547,6 @@ QMenu *KTextEdit::mousePopupMenu()
             popup->insertAction(separatorAction, clearAllAction);
         }
     }
-    KIconTheme::assignIconsToContextMenu(isReadOnly() ? KIconTheme::ReadOnlyText
-                                         : KIconTheme::TextEditor,
-                                         popup->actions());
 
     if (!isReadOnly()) {
         popup->addSeparator();
