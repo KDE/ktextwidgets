@@ -1,0 +1,721 @@
+# translation of kdelibs4.po to Lithuanian
+# Ričardas Čepas <rch@richard.eu.org>, 2002-2004.
+# Donatas Glodenis <dgvirtual@akl.lt>, 2004-2009.
+# Gintautas Miselis <gintautas@miselis.lt>, 2008.
+# Andrius Štikonas <andrius@stikonas.eu>, 2009.
+# Tomas Straupis <tomasstraupis@gmail.com>, 2011.
+# Remigijus Jarmalavičius <remigijus@jarmalavicius.lt>, 2011.
+# Liudas Ališauskas <liudas.alisauskas@gmail.com>, 2011, 2012, 2013, 2014.
+# Liudas Alisauskas <liudas@akmc.lt>, 2013.
+# Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-10-31 02:47+0100\n"
+"PO-Revision-Date: 2017-06-25 15:14+0200\n"
+"Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
+"Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Lokalize 2.0\n"
+
+#: dialogs/klinkdialog.cpp:52
+#, kde-format
+msgid "Manage Link"
+msgstr "Tvarkyti nuorodą"
+
+#: dialogs/klinkdialog.cpp:60
+#, kde-format
+msgid "Link Text:"
+msgstr "Nuorodos tekstas:"
+
+#: dialogs/klinkdialog.cpp:63
+#, kde-format
+msgid "Link URL:"
+msgstr "Nuorodos URL:"
+
+#: findreplace/kfind.cpp:60
+#, kde-format
+msgid "Find Next"
+msgstr "Ieškoti kito"
+
+#: findreplace/kfind.cpp:64
+#, kde-format
+msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
+msgstr "<qt>Rasti „<b>%1</b>“ kitoje vietoje?</qt>"
+
+#: findreplace/kfind.cpp:622 findreplace/kfind.cpp:641
+#, kde-format
+msgid "1 match found."
+msgid_plural "%1 matches found."
+msgstr[0] "Rastas %1 atitikmuo"
+msgstr[1] "Rasti %1 atitikmenys"
+msgstr[2] "Rasta %1 atitikmenų"
+msgstr[3] "Rastas %1 atitikmuo"
+
+#: findreplace/kfind.cpp:624
+#, kde-format
+msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
+msgstr "<qt>„<b>%1</b>“ neturi atitikčių.</qt>"
+
+#: findreplace/kfind.cpp:643
+#, kde-format
+msgid "No matches found for '<b>%1</b>'."
+msgstr "Atitikčių „<b>%1</b>“ nerasta."
+
+#: findreplace/kfind.cpp:647 findreplace/kreplace.cpp:387
+#, kde-format
+msgid "Beginning of document reached."
+msgstr "Pasiekta dokumento pradžia."
+
+#: findreplace/kfind.cpp:649 findreplace/kreplace.cpp:389
+#, kde-format
+msgid "End of document reached."
+msgstr "Pasiekta dokumento pabaiga."
+
+#: findreplace/kfind.cpp:657
+#, kde-format
+msgid "Continue from the end?"
+msgstr "Pradėti nuo galo?"
+
+#: findreplace/kfind.cpp:658
+#, kde-format
+msgid "Continue from the beginning?"
+msgstr "Tęsti iš pradžių?"
+
+#: findreplace/kfinddialog.cpp:49
+#, kde-format
+msgid "Find Text"
+msgstr "Ieškoti teksto"
+
+#: findreplace/kfinddialog.cpp:84
+#, kde-format
+msgctxt "@title:group"
+msgid "Find"
+msgstr "Ieškoti"
+
+#: findreplace/kfinddialog.cpp:87
+#, kde-format
+msgid "&Text to find:"
+msgstr "Ieškomas &tekstas:"
+
+#: findreplace/kfinddialog.cpp:91
+#, kde-format
+msgid "Regular e&xpression"
+msgstr "Į&prastoji išraiška"
+
+#: findreplace/kfinddialog.cpp:92
+#, kde-format
+msgid "&Edit..."
+msgstr "&Keisti..."
+
+#: findreplace/kfinddialog.cpp:101
+#, kde-format
+msgid "Replace With"
+msgstr "Keisti į:"
+
+#: findreplace/kfinddialog.cpp:104
+#, kde-format
+msgid "Replace&ment text:"
+msgstr "Pakeiti&mo tekstas:"
+
+#: findreplace/kfinddialog.cpp:108
+#, kde-format
+msgid "Use p&laceholders"
+msgstr "Use p&amainymus"
+
+#: findreplace/kfinddialog.cpp:109
+#, kde-format
+msgid "Insert Place&holder"
+msgstr "Įdėti &teksto ženklą"
+
+#: findreplace/kfinddialog.cpp:118
+#, kde-format
+msgid "Options"
+msgstr "Parinktys"
+
+#: findreplace/kfinddialog.cpp:121
+#, kde-format
+msgid "C&ase sensitive"
+msgstr "&Skirti raidžių dydį"
+
+#: findreplace/kfinddialog.cpp:122
+#, kde-format
+msgid "&Whole words only"
+msgstr "&Tik pilnus žodžius"
+
+#: findreplace/kfinddialog.cpp:123
+#, kde-format
+msgid "From c&ursor"
+msgstr "N&uo žymeklio"
+
+#: findreplace/kfinddialog.cpp:124
+#, kde-format
+msgid "Find &backwards"
+msgstr "I&eškoti atgal"
+
+#: findreplace/kfinddialog.cpp:125
+#, kde-format
+msgid "&Selected text"
+msgstr "&Pažymėtą tekstas"
+
+#: findreplace/kfinddialog.cpp:132
+#, kde-format
+msgid "&Prompt on replace"
+msgstr "&Klausti keičiant"
+
+#: findreplace/kfinddialog.cpp:199
+#, kde-format
+msgid "&Replace"
+msgstr "&Keisti"
+
+#: findreplace/kfinddialog.cpp:200
+#, kde-format
+msgid "Start replace"
+msgstr "Pradėti keitimą"
+
+#: findreplace/kfinddialog.cpp:201
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Replace</b> button, the text you entered above is "
+"searched for within the document and any occurrence is replaced with the "
+"replacement text.</qt>"
+msgstr ""
+"<qt>Paspaudus <b>Pakeisti</b> mygtuką, aukščiau įrašyto teksto dokumente bus "
+"ieškoma, ir visi jo atvejai bus pakeisti pakeitimo tekstu.</qt>"
+
+#: findreplace/kfinddialog.cpp:205
+#, kde-format
+msgid "&Find"
+msgstr "&Ieškoti"
+
+#: findreplace/kfinddialog.cpp:206
+#, kde-format
+msgid "Start searching"
+msgstr "Pradėti paiešką"
+
+#: findreplace/kfinddialog.cpp:207
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Find</b> button, the text you entered above is "
+"searched for within the document.</qt>"
+msgstr ""
+"<qt>Paspaudus mygtuką <b>Ieškoti</b>, aukščiau įrašyto teksto dokumente bus "
+"ieškoma.</qt>"
+
+#: findreplace/kfinddialog.cpp:213
+#, kde-format
+msgid ""
+"Enter a pattern to search for, or select a previous pattern from the list."
+msgstr ""
+"Įveskite derinį, kurio turi būti ieškoma, arba pasirinkite derinį iš sąrašo."
+
+#: findreplace/kfinddialog.cpp:216
+#, kde-format
+msgid "If enabled, search for a regular expression."
+msgstr "Jei įjungta, ieškoti įprastosios išraiškos."
+
+#: findreplace/kfinddialog.cpp:218
+#, kde-format
+msgid "Click here to edit your regular expression using a graphical editor."
+msgstr ""
+"Norėdami įprastąją išraišką redaguoti grafiniu redaktoriumi, spauskite čia."
+
+#: findreplace/kfinddialog.cpp:220
+#, kde-format
+msgid "Enter a replacement string, or select a previous one from the list."
+msgstr "Įrašykite pakeitimo eilutę arba išsirinkite ankstesniąją iš sąrašo."
+
+#: findreplace/kfinddialog.cpp:222
+#, kde-format
+msgid ""
+"<qt>If enabled, any occurrence of <code><b>\\N</b></code>, where <code><b>N</"
+"b></code> is an integer number, will be replaced with the corresponding "
+"capture (\"parenthesized substring\") from the pattern.<p>To include (a "
+"literal <code><b>\\N</b></code> in your replacement, put an extra backslash "
+"in front of it, like <code><b>\\\\N</b></code>.</p></qt>"
+msgstr ""
+"<qt>Įjungus šią parinktį, bet kuris <code><b>\\N</b></code> atvejis, kur "
+"<code><b>N</b></code> yra sveikasis skaičius, bus pakeistas atitinkamu "
+"pakaitalu („skliausteliuose esančia eilutės dalimi“) iš šablono.<p>Norėdami "
+"įterpti (tikrą <code><b>\\N</b></code> pakeitimo laukelyje, prieš jį "
+"įrašykite papildomą atvirkštinį brukšnelį, pvz., <code><b>\\\\N</b></code>.</"
+"p></qt>"
+
+#: findreplace/kfinddialog.cpp:229
+#, kde-format
+msgid "Click for a menu of available captures."
+msgstr "Spustelėkite norėdami pamatyti galimų pakaitalų meniu."
+
+#: findreplace/kfinddialog.cpp:231
+#, kde-format
+msgid "Require word boundaries in both ends of a match to succeed."
+msgstr "Reikalauti žodžio ribų abiejose pusėse, norint sėkmingai įvykdyti."
+
+#: findreplace/kfinddialog.cpp:233
+#, kde-format
+msgid "Start searching at the current cursor location rather than at the top."
+msgstr "Pradės ieškoti pradedant nuo žymeklio pozicijos, o ne nuo viršaus."
+
+#: findreplace/kfinddialog.cpp:235
+#, kde-format
+msgid "Only search within the current selection."
+msgstr "Ieškoti tik pažymėtoje dalyje."
+
+#: findreplace/kfinddialog.cpp:237
+#, kde-format
+msgid ""
+"Perform a case sensitive search: entering the pattern 'Joe' will not match "
+"'joe' or 'JOE', only 'Joe'."
+msgstr ""
+"Atlikti raidžių dydžiui jautrią paiešką: įrašius „Joe“ nebus rastas nei "
+"„joe“, nei „JOE“, o tik „Joe“."
+
+#: findreplace/kfinddialog.cpp:240
+#, kde-format
+msgid "Search backwards."
+msgstr "Ieškoti atgal."
+
+#: findreplace/kfinddialog.cpp:242
+#, kde-format
+msgid "Ask before replacing each match found."
+msgstr "Klausti prieš pakeičiant kiekvieną aptiktą atitikmenį."
+
+#: findreplace/kfinddialog.cpp:456
+#, kde-format
+msgid "Any Character"
+msgstr "Bet koks simbolis"
+
+#: findreplace/kfinddialog.cpp:457
+#, kde-format
+msgid "Start of Line"
+msgstr "Eilutės pradžia"
+
+#: findreplace/kfinddialog.cpp:458
+#, kde-format
+msgid "End of Line"
+msgstr "Eilutės pabaiga"
+
+#: findreplace/kfinddialog.cpp:459
+#, kde-format
+msgid "Set of Characters"
+msgstr "Simbolių rinkinys"
+
+#: findreplace/kfinddialog.cpp:460
+#, kde-format
+msgid "Repeats, Zero or More Times"
+msgstr "Kartojasi bet kiek kartų (arba nė vieno)"
+
+#: findreplace/kfinddialog.cpp:461
+#, kde-format
+msgid "Repeats, One or More Times"
+msgstr "Kartojasi vieną ar daugiau kartų"
+
+#: findreplace/kfinddialog.cpp:462
+#, kde-format
+msgid "Optional"
+msgstr "Nebūtina"
+
+#: findreplace/kfinddialog.cpp:463
+#, kde-format
+msgid "Escape"
+msgstr "Escape"
+
+#: findreplace/kfinddialog.cpp:464
+#, kde-format
+msgid "TAB"
+msgstr "TAB"
+
+#: findreplace/kfinddialog.cpp:465
+#, kde-format
+msgid "Newline"
+msgstr "Nauja eilutė"
+
+#: findreplace/kfinddialog.cpp:466
+#, kde-format
+msgid "Carriage Return"
+msgstr "Carriage Return"
+
+#: findreplace/kfinddialog.cpp:467
+#, kde-format
+msgid "White Space"
+msgstr "Tarpų simboliai"
+
+#: findreplace/kfinddialog.cpp:468
+#, kde-format
+msgid "Digit"
+msgstr "Skaitmuo"
+
+#: findreplace/kfinddialog.cpp:569
+#, kde-format
+msgid "Complete Match"
+msgstr "Visiškas atitikmuo"
+
+#: findreplace/kfinddialog.cpp:574
+#, kde-format
+msgid "Captured Text (%1)"
+msgstr "Pakaitalo tekstas (%1)"
+
+#: findreplace/kfinddialog.cpp:582
+#, kde-format
+msgid "You must enter some text to search for."
+msgstr "Jūs turite įvesti kokį nors paieškos tekstą."
+
+#: findreplace/kfinddialog.cpp:591
+#, kde-format
+msgid "Invalid regular expression."
+msgstr "Neteisinga įprasta išraiška."
+
+#: findreplace/kreplace.cpp:60 findreplace/kreplace.cpp:72
+#, kde-format
+msgid "Replace"
+msgstr "Pakeisti"
+
+#: findreplace/kreplace.cpp:68
+#, kde-format
+msgctxt "@action:button Replace all occurrences"
+msgid "&All"
+msgstr "&Visus"
+
+#: findreplace/kreplace.cpp:70
+#, kde-format
+msgid "&Skip"
+msgstr "Pra&leisti"
+
+#: findreplace/kreplace.cpp:89
+#, kde-format
+msgid "Replace '%1' with '%2'?"
+msgstr "Pakeisti „%1“ į „%2“?"
+
+#: findreplace/kreplace.cpp:177 findreplace/kreplace.cpp:381
+#, kde-format
+msgid "No text was replaced."
+msgstr "Nepakeistas joks tekstas."
+
+#: findreplace/kreplace.cpp:179 findreplace/kreplace.cpp:383
+#, kde-format
+msgid "1 replacement done."
+msgid_plural "%1 replacements done."
+msgstr[0] "Padarytas %1 pakeitimas."
+msgstr[1] "Padaryti %1 pakeitimai."
+msgstr[2] "Padaryta %1 pakeitimų."
+msgstr[3] "Padarytas %1 pakeitimas."
+
+#: findreplace/kreplace.cpp:397
+#, kde-format
+msgid "Do you want to restart search from the end?"
+msgstr "Ar norite tęsti paiešką nuo pabaigos?"
+
+#: findreplace/kreplace.cpp:398
+#, kde-format
+msgid "Do you want to restart search at the beginning?"
+msgstr "Ar norite tęsti paiešką nuo pradžių?"
+
+#: findreplace/kreplace.cpp:401
+#, kde-format
+msgctxt "@action:button Restart find & replace"
+msgid "Restart"
+msgstr "Perstartuoti"
+
+#: findreplace/kreplace.cpp:402
+#, kde-format
+msgctxt "@action:button Stop find & replace"
+msgid "Stop"
+msgstr "Stabdyti"
+
+#: findreplace/kreplacedialog.cpp:149
+#, kde-format
+msgid "Your replacement string is referencing a capture greater than '\\%1', "
+msgstr "Jūsų pakeitimo eilutėje nurodytas radinys, didesnis nei„\\%1“, "
+
+#: findreplace/kreplacedialog.cpp:151
+#, kde-format
+msgid "but your pattern only defines 1 capture."
+msgid_plural "but your pattern only defines %1 captures."
+msgstr[0] "tačiau jūsų pateiktas derinys apibūdina tik %1 radinį."
+msgstr[1] "tačiau jūsų pateiktas derinys apibūdina tik %1 radinius."
+msgstr[2] "tačiau jūsų pateiktas derinys apibūdina tik %1 radinių."
+msgstr[3] "tačiau jūsų pateiktas derinys apibūdina tik %1 radinį."
+
+#: findreplace/kreplacedialog.cpp:153
+#, kde-format
+msgid "but your pattern defines no captures."
+msgstr "tačiau Jūsų įvestas šablonas neapibūdina nei vieno radinio."
+
+#: findreplace/kreplacedialog.cpp:154
+#, kde-format
+msgid ""
+"\n"
+"Please correct."
+msgstr ""
+"\n"
+"Prašome pataisyti."
+
+#: widgets/krichtextwidget.cpp:204
+#, kde-format
+msgctxt "@action"
+msgid "Text &Color..."
+msgstr "Tekstas ir &spalva..."
+
+#: widgets/krichtextwidget.cpp:205
+#, kde-format
+msgctxt "@label stroke color"
+msgid "Color"
+msgstr "Spalva"
+
+#: widgets/krichtextwidget.cpp:216
+#, kde-format
+msgctxt "@action"
+msgid "Text &Highlight..."
+msgstr "Tekstas ir žy&mėjimas..."
+
+#: widgets/krichtextwidget.cpp:226
+#, kde-format
+msgctxt "@action"
+msgid "&Font"
+msgstr "Š&riftas"
+
+#: widgets/krichtextwidget.cpp:236
+#, kde-format
+msgctxt "@action"
+msgid "Font &Size"
+msgstr "Šrifto &dydis"
+
+#: widgets/krichtextwidget.cpp:246
+#, kde-format
+msgctxt "@action boldify selected text"
+msgid "&Bold"
+msgstr "&Juodas"
+
+#: widgets/krichtextwidget.cpp:260
+#, kde-format
+msgctxt "@action italicize selected text"
+msgid "&Italic"
+msgstr "&Kursyvas"
+
+#: widgets/krichtextwidget.cpp:275
+#, kde-format
+msgctxt "@action underline selected text"
+msgid "&Underline"
+msgstr "&Pabrauktas"
+
+#: widgets/krichtextwidget.cpp:290
+#, kde-format
+msgctxt "@action"
+msgid "&Strike Out"
+msgstr "&Išbrauktas"
+
+#: widgets/krichtextwidget.cpp:306
+#, kde-format
+msgctxt "@action"
+msgid "Align &Left"
+msgstr "Lygiuoti &kairėje"
+
+#: widgets/krichtextwidget.cpp:307
+#, kde-format
+msgctxt "@label left justify"
+msgid "Left"
+msgstr "Kairėn"
+
+#: widgets/krichtextwidget.cpp:314
+#, kde-format
+msgctxt "@action"
+msgid "Align &Center"
+msgstr "Lygiuoti &centre"
+
+#: widgets/krichtextwidget.cpp:315
+#, kde-format
+msgctxt "@label center justify"
+msgid "Center"
+msgstr "Centre"
+
+#: widgets/krichtextwidget.cpp:322
+#, kde-format
+msgctxt "@action"
+msgid "Align &Right"
+msgstr "Lygiuoti d&ešinėje"
+
+#: widgets/krichtextwidget.cpp:323
+#, kde-format
+msgctxt "@label right justify"
+msgid "Right"
+msgstr "Dešinėn"
+
+#: widgets/krichtextwidget.cpp:330
+#, kde-format
+msgctxt "@action"
+msgid "&Justify"
+msgstr "&Abipusė lygiuotė"
+
+#: widgets/krichtextwidget.cpp:331
+#, kde-format
+msgctxt "@label justify fill"
+msgid "Justify"
+msgstr "Abipusė lygiuotė"
+
+#: widgets/krichtextwidget.cpp:351
+#, kde-format
+msgctxt "@action"
+msgid "Left-to-Right"
+msgstr "Iš kairės į dešinę"
+
+#: widgets/krichtextwidget.cpp:352
+#, kde-format
+msgctxt "@label left-to-right"
+msgid "Left-to-Right"
+msgstr "Iš kairės į dešinę"
+
+#: widgets/krichtextwidget.cpp:359
+#, kde-format
+msgctxt "@action"
+msgid "Right-to-Left"
+msgstr "Iš dešinės į kairę"
+
+#: widgets/krichtextwidget.cpp:360
+#, kde-format
+msgctxt "@label right-to-left"
+msgid "Right-to-Left"
+msgstr "Iš dešinės į kairę"
+
+#: widgets/krichtextwidget.cpp:376
+#, kde-format
+msgctxt "@title:menu"
+msgid "List Style"
+msgstr "Sąrašo stilius"
+
+#: widgets/krichtextwidget.cpp:378
+#, kde-format
+msgctxt "@item:inmenu no list style"
+msgid "None"
+msgstr "Jokio"
+
+#: widgets/krichtextwidget.cpp:379
+#, kde-format
+msgctxt "@item:inmenu disc list style"
+msgid "Disc"
+msgstr "Diskas"
+
+#: widgets/krichtextwidget.cpp:380
+#, kde-format
+msgctxt "@item:inmenu circle list style"
+msgid "Circle"
+msgstr "Apskritimas"
+
+#: widgets/krichtextwidget.cpp:381
+#, kde-format
+msgctxt "@item:inmenu square list style"
+msgid "Square"
+msgstr "Kvadratas"
+
+#: widgets/krichtextwidget.cpp:382
+#, kde-format
+msgctxt "@item:inmenu numbered lists"
+msgid "123"
+msgstr "123"
+
+#: widgets/krichtextwidget.cpp:383
+#, kde-format
+msgctxt "@item:inmenu lowercase abc lists"
+msgid "abc"
+msgstr "abc"
+
+#: widgets/krichtextwidget.cpp:384
+#, kde-format
+msgctxt "@item:inmenu uppercase abc lists"
+msgid "ABC"
+msgstr "ABC"
+
+#: widgets/krichtextwidget.cpp:385
+#, kde-format
+msgctxt "@item:inmenu lower case roman numerals"
+msgid "i ii iii"
+msgstr "i ii iii"
+
+#: widgets/krichtextwidget.cpp:386
+#, kde-format
+msgctxt "@item:inmenu upper case roman numerals"
+msgid "I II III"
+msgstr "I II III"
+
+#: widgets/krichtextwidget.cpp:403
+#, kde-format
+msgctxt "@action"
+msgid "Increase Indent"
+msgstr "Didinti atitraukimą"
+
+#: widgets/krichtextwidget.cpp:416
+#, kde-format
+msgctxt "@action"
+msgid "Decrease Indent"
+msgstr "Sumažinti atitraukimą"
+
+#: widgets/krichtextwidget.cpp:429
+#, kde-format
+msgctxt "@action"
+msgid "Insert Rule Line"
+msgstr "Įterpti liniuotės liniją"
+
+#: widgets/krichtextwidget.cpp:440
+#, kde-format
+msgctxt "@action"
+msgid "Link"
+msgstr "Nuoroda"
+
+#: widgets/krichtextwidget.cpp:451
+#, kde-format
+msgctxt "@action"
+msgid "Format Painter"
+msgstr "Formato teptukas"
+
+#: widgets/krichtextwidget.cpp:461
+#, kde-format
+msgctxt "@action"
+msgid "To Plain Text"
+msgstr "Į paprastą tekstą"
+
+#: widgets/krichtextwidget.cpp:472
+#, kde-format
+msgctxt "@action"
+msgid "Subscript"
+msgstr "Apat. indeksas"
+
+#: widgets/krichtextwidget.cpp:479
+#, kde-format
+msgctxt "@action"
+msgid "Superscript"
+msgstr "Virš. indeksas"
+
+#: widgets/ktextedit.cpp:162
+#, kde-format
+msgid "Nothing to spell check."
+msgstr "Nėra ką tikrinti."
+
+#: widgets/ktextedit.cpp:559
+#, kde-format
+msgid "Check Spelling..."
+msgstr "Rašybos tikrinimas..."
+
+#: widgets/ktextedit.cpp:564
+#, kde-format
+msgid "Spell Checking Language"
+msgstr ""
+
+#: widgets/ktextedit.cpp:587
+#, kde-format
+msgid "Auto Spell Check"
+msgstr "Automatiškai tikrinti rašybą"
+
+#: widgets/ktextedit.cpp:593
+#, kde-format
+msgid "Allow Tabulations"
+msgstr "Leisti naudoti tabuliatorius"
+
+#: widgets/ktextedit.cpp:626
+#, kde-format
+msgid "Speak Text"
+msgstr "Kalbėti tekstą"

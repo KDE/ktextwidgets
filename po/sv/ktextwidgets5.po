@@ -1,0 +1,718 @@
+# translation of kdelibs4.po to Swedish
+# Översättning kdelibs4.po till Svenska
+#
+# Copyright (C) 1997,2002,2003, 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
+# Magnus Reftel <d96reftl@dtek.chalmers.se>, 1997.
+# Anders Widell <awl@hem.passagen.se>, 1998-2000.
+# Per Lindström <pelinstr@algonet.se>, 2000.
+# Mattias Newzella <newzella@linux.nu>, 2000, 2001, 2002,2003, 2004, 2005.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2002.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2004, 2005, 2006, 2007, 2008, 2009, 2010.
+# Stefan Asserhall <stefan.asserhall@bredband.net>, 2010, 2011, 2012, 2013, 2015.
+# Arve Eriksson <031299870@telia.com>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2019-10-31 02:47+0100\n"
+"PO-Revision-Date: 2015-10-13 16:47+0100\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: dialogs/klinkdialog.cpp:52
+#, kde-format
+msgid "Manage Link"
+msgstr "Hantera länk"
+
+#: dialogs/klinkdialog.cpp:60
+#, kde-format
+msgid "Link Text:"
+msgstr "Länktext:"
+
+#: dialogs/klinkdialog.cpp:63
+#, kde-format
+msgid "Link URL:"
+msgstr "Länkwebbadress:"
+
+#: findreplace/kfind.cpp:60
+#, kde-format
+msgid "Find Next"
+msgstr "Sök nästa"
+
+#: findreplace/kfind.cpp:64
+#, kde-format
+msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
+msgstr "<qt>Hitta nästa förekomst av \"<b>%1</b>\"?</qt>"
+
+#: findreplace/kfind.cpp:622 findreplace/kfind.cpp:641
+#, kde-format
+msgid "1 match found."
+msgid_plural "%1 matches found."
+msgstr[0] "1 träff."
+msgstr[1] "%1 träffar."
+
+#: findreplace/kfind.cpp:624
+#, kde-format
+msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
+msgstr "<qt>Inga träffar hittades för \"<b>%1</b>\".</qt>"
+
+#: findreplace/kfind.cpp:643
+#, kde-format
+msgid "No matches found for '<b>%1</b>'."
+msgstr "Inga träffar hittades för \"<b>%1</b>\"."
+
+#: findreplace/kfind.cpp:647 findreplace/kreplace.cpp:387
+#, kde-format
+msgid "Beginning of document reached."
+msgstr "Början på dokumentet nådd."
+
+#: findreplace/kfind.cpp:649 findreplace/kreplace.cpp:389
+#, kde-format
+msgid "End of document reached."
+msgstr "Slutet på dokumentet nått."
+
+#: findreplace/kfind.cpp:657
+#, kde-format
+msgid "Continue from the end?"
+msgstr "Fortsätt från slutet?"
+
+#: findreplace/kfind.cpp:658
+#, kde-format
+msgid "Continue from the beginning?"
+msgstr "Fortsätt från början?"
+
+#: findreplace/kfinddialog.cpp:49
+#, kde-format
+msgid "Find Text"
+msgstr "Sök text"
+
+#: findreplace/kfinddialog.cpp:84
+#, kde-format
+msgctxt "@title:group"
+msgid "Find"
+msgstr "Sök"
+
+#: findreplace/kfinddialog.cpp:87
+#, kde-format
+msgid "&Text to find:"
+msgstr "&Text att söka:"
+
+#: findreplace/kfinddialog.cpp:91
+#, kde-format
+msgid "Regular e&xpression"
+msgstr "Reguljärt &uttryck"
+
+#: findreplace/kfinddialog.cpp:92
+#, kde-format
+msgid "&Edit..."
+msgstr "Re&digera..."
+
+#: findreplace/kfinddialog.cpp:101
+#, kde-format
+msgid "Replace With"
+msgstr "Ersätt med"
+
+#: findreplace/kfinddialog.cpp:104
+#, kde-format
+msgid "Replace&ment text:"
+msgstr "Ersätt&ningstext:"
+
+#: findreplace/kfinddialog.cpp:108
+#, kde-format
+msgid "Use p&laceholders"
+msgstr "Anv&änd alias"
+
+#: findreplace/kfinddialog.cpp:109
+#, kde-format
+msgid "Insert Place&holder"
+msgstr "Infoga a&lias"
+
+#: findreplace/kfinddialog.cpp:118
+#, kde-format
+msgid "Options"
+msgstr "Alternativ"
+
+#: findreplace/kfinddialog.cpp:121
+#, kde-format
+msgid "C&ase sensitive"
+msgstr "S&kiftlägeskänslig"
+
+#: findreplace/kfinddialog.cpp:122
+#, kde-format
+msgid "&Whole words only"
+msgstr "Endast &hela ord"
+
+#: findreplace/kfinddialog.cpp:123
+#, kde-format
+msgid "From c&ursor"
+msgstr "&Från markören"
+
+#: findreplace/kfinddialog.cpp:124
+#, kde-format
+msgid "Find &backwards"
+msgstr "Sök &baklänges"
+
+#: findreplace/kfinddialog.cpp:125
+#, kde-format
+msgid "&Selected text"
+msgstr "&Markerad text"
+
+#: findreplace/kfinddialog.cpp:132
+#, kde-format
+msgid "&Prompt on replace"
+msgstr "Fråga &vid ersättning"
+
+#: findreplace/kfinddialog.cpp:199
+#, kde-format
+msgid "&Replace"
+msgstr "&Ersätt"
+
+#: findreplace/kfinddialog.cpp:200
+#, kde-format
+msgid "Start replace"
+msgstr "Starta ersättning"
+
+#: findreplace/kfinddialog.cpp:201
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Replace</b> button, the text you entered above is "
+"searched for within the document and any occurrence is replaced with the "
+"replacement text.</qt>"
+msgstr ""
+"<qt>Om du klickar på knappen <b>Ersätt</b>, söks dokumentet igenom efter "
+"texten som ska hittas, och alla förekomster ersätts med ersättningstexten.</"
+"qt>"
+
+#: findreplace/kfinddialog.cpp:205
+#, kde-format
+msgid "&Find"
+msgstr "&Sök"
+
+#: findreplace/kfinddialog.cpp:206
+#, kde-format
+msgid "Start searching"
+msgstr "Starta sökning"
+
+#: findreplace/kfinddialog.cpp:207
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Find</b> button, the text you entered above is "
+"searched for within the document.</qt>"
+msgstr ""
+"<qt>Om du klickar på knappen <b>Sök</b>, söks dokumentet igenom efter texten "
+"som du skrivit in ovan.</qt>"
+
+#: findreplace/kfinddialog.cpp:213
+#, kde-format
+msgid ""
+"Enter a pattern to search for, or select a previous pattern from the list."
+msgstr ""
+"Skriv in ett mönster att söka efter, eller välj ett tidigare mönster i "
+"listan."
+
+#: findreplace/kfinddialog.cpp:216
+#, kde-format
+msgid "If enabled, search for a regular expression."
+msgstr "Om aktiverad, sök efter ett reguljärt uttryck."
+
+#: findreplace/kfinddialog.cpp:218
+#, kde-format
+msgid "Click here to edit your regular expression using a graphical editor."
+msgstr ""
+"Klicka här för att redigera det reguljära uttrycket med en grafisk editor."
+
+#: findreplace/kfinddialog.cpp:220
+#, kde-format
+msgid "Enter a replacement string, or select a previous one from the list."
+msgstr "Skriv in en ersättningssträng, eller välj en tidigare i listan."
+
+#: findreplace/kfinddialog.cpp:222
+#, kde-format
+msgid ""
+"<qt>If enabled, any occurrence of <code><b>\\N</b></code>, where <code><b>N</"
+"b></code> is an integer number, will be replaced with the corresponding "
+"capture (\"parenthesized substring\") from the pattern.<p>To include (a "
+"literal <code><b>\\N</b></code> in your replacement, put an extra backslash "
+"in front of it, like <code><b>\\\\N</b></code>.</p></qt>"
+msgstr ""
+"<qt>Om aktiverad, ersätts alla förekomster av <code><b>\\N</b></code>, där "
+"<code><b>N</b></code> är ett heltal, med motsvarande hittade (\"delsträng "
+"inom parentes\") i mönstret.<p>För att få med följden <code><b>\\N</b></"
+"code> i ersättningstexten, placera ett extra bakstreck framför det, som "
+"<code><b>\\\\N</b></code>.</p></qt>"
+
+#: findreplace/kfinddialog.cpp:229
+#, kde-format
+msgid "Click for a menu of available captures."
+msgstr "Klicka för en meny med tillgängliga hittade texter."
+
+#: findreplace/kfinddialog.cpp:231
+#, kde-format
+msgid "Require word boundaries in both ends of a match to succeed."
+msgstr "Kräv ordgränser i båda ändarna av en träff för att lyckas."
+
+#: findreplace/kfinddialog.cpp:233
+#, kde-format
+msgid "Start searching at the current cursor location rather than at the top."
+msgstr "Börja söka på markörens aktuella plats istället för längst upp."
+
+#: findreplace/kfinddialog.cpp:235
+#, kde-format
+msgid "Only search within the current selection."
+msgstr "Sök bara i aktuell markering."
+
+#: findreplace/kfinddialog.cpp:237
+#, kde-format
+msgid ""
+"Perform a case sensitive search: entering the pattern 'Joe' will not match "
+"'joe' or 'JOE', only 'Joe'."
+msgstr ""
+"Utför en skiftlägeskänslig sökning: att skriva in mönstret \"Anna\" ger "
+"ingen träff för \"anna\" eller \"ANNA\", utan bara för \"Anna\"."
+
+#: findreplace/kfinddialog.cpp:240
+#, kde-format
+msgid "Search backwards."
+msgstr "Sök baklänges."
+
+#: findreplace/kfinddialog.cpp:242
+#, kde-format
+msgid "Ask before replacing each match found."
+msgstr "Fråga innan ersättning av varje träff som hittas."
+
+#: findreplace/kfinddialog.cpp:456
+#, kde-format
+msgid "Any Character"
+msgstr "Alla tecken"
+
+#: findreplace/kfinddialog.cpp:457
+#, kde-format
+msgid "Start of Line"
+msgstr "Början på raden"
+
+#: findreplace/kfinddialog.cpp:458
+#, kde-format
+msgid "End of Line"
+msgstr "Slutet på raden"
+
+#: findreplace/kfinddialog.cpp:459
+#, kde-format
+msgid "Set of Characters"
+msgstr "En uppsättning tecken"
+
+#: findreplace/kfinddialog.cpp:460
+#, kde-format
+msgid "Repeats, Zero or More Times"
+msgstr "Upprepas, noll eller flera gånger"
+
+#: findreplace/kfinddialog.cpp:461
+#, kde-format
+msgid "Repeats, One or More Times"
+msgstr "Upprepas, en eller flera gånger"
+
+#: findreplace/kfinddialog.cpp:462
+#, kde-format
+msgid "Optional"
+msgstr "Valfri"
+
+#: findreplace/kfinddialog.cpp:463
+#, kde-format
+msgid "Escape"
+msgstr "Esc"
+
+#: findreplace/kfinddialog.cpp:464
+#, kde-format
+msgid "TAB"
+msgstr "TAB"
+
+#: findreplace/kfinddialog.cpp:465
+#, kde-format
+msgid "Newline"
+msgstr "Nyrad"
+
+#: findreplace/kfinddialog.cpp:466
+#, kde-format
+msgid "Carriage Return"
+msgstr "Returtecken"
+
+#: findreplace/kfinddialog.cpp:467
+#, kde-format
+msgid "White Space"
+msgstr "Blanksteg"
+
+#: findreplace/kfinddialog.cpp:468
+#, kde-format
+msgid "Digit"
+msgstr "Siffra"
+
+#: findreplace/kfinddialog.cpp:569
+#, kde-format
+msgid "Complete Match"
+msgstr "Fullständig träff"
+
+#: findreplace/kfinddialog.cpp:574
+#, kde-format
+msgid "Captured Text (%1)"
+msgstr "Hittad text (%1)"
+
+#: findreplace/kfinddialog.cpp:582
+#, kde-format
+msgid "You must enter some text to search for."
+msgstr "Du måste ange någon text att söka efter."
+
+#: findreplace/kfinddialog.cpp:591
+#, kde-format
+msgid "Invalid regular expression."
+msgstr "Ogiltigt reguljärt uttryck."
+
+#: findreplace/kreplace.cpp:60 findreplace/kreplace.cpp:72
+#, kde-format
+msgid "Replace"
+msgstr "Ersätt"
+
+#: findreplace/kreplace.cpp:68
+#, kde-format
+msgctxt "@action:button Replace all occurrences"
+msgid "&All"
+msgstr "&Alla"
+
+#: findreplace/kreplace.cpp:70
+#, kde-format
+msgid "&Skip"
+msgstr "&Hoppa över"
+
+#: findreplace/kreplace.cpp:89
+#, kde-format
+msgid "Replace '%1' with '%2'?"
+msgstr "Ersätt \"%1\" med \"%2\"?"
+
+#: findreplace/kreplace.cpp:177 findreplace/kreplace.cpp:381
+#, kde-format
+msgid "No text was replaced."
+msgstr "Ingen text ersatt."
+
+#: findreplace/kreplace.cpp:179 findreplace/kreplace.cpp:383
+#, kde-format
+msgid "1 replacement done."
+msgid_plural "%1 replacements done."
+msgstr[0] "1 ersättning utförd."
+msgstr[1] "%1 ersättningar utförda."
+
+#: findreplace/kreplace.cpp:397
+#, kde-format
+msgid "Do you want to restart search from the end?"
+msgstr "Vill du starta om sökningen från slutet?"
+
+#: findreplace/kreplace.cpp:398
+#, kde-format
+msgid "Do you want to restart search at the beginning?"
+msgstr "Vill du starta om sökningen från början?"
+
+#: findreplace/kreplace.cpp:401
+#, kde-format
+msgctxt "@action:button Restart find & replace"
+msgid "Restart"
+msgstr "Starta om"
+
+#: findreplace/kreplace.cpp:402
+#, kde-format
+msgctxt "@action:button Stop find & replace"
+msgid "Stop"
+msgstr "Stoppa"
+
+#: findreplace/kreplacedialog.cpp:149
+#, kde-format
+msgid "Your replacement string is referencing a capture greater than '\\%1', "
+msgstr ""
+"Din ersättningssträng refererar till en hittad text större än \"\\%1\", "
+
+#: findreplace/kreplacedialog.cpp:151
+#, kde-format
+msgid "but your pattern only defines 1 capture."
+msgid_plural "but your pattern only defines %1 captures."
+msgstr[0] "men ditt mönster definierar bara %1 text."
+msgstr[1] "men ditt mönster definierar bara %1 texter."
+
+#: findreplace/kreplacedialog.cpp:153
+#, kde-format
+msgid "but your pattern defines no captures."
+msgstr "men ditt mönster definierar inte några hittade texter."
+
+#: findreplace/kreplacedialog.cpp:154
+#, kde-format
+msgid ""
+"\n"
+"Please correct."
+msgstr ""
+"\n"
+"Korrigera det här."
+
+#: widgets/krichtextwidget.cpp:204
+#, kde-format
+msgctxt "@action"
+msgid "Text &Color..."
+msgstr "Text&färg..."
+
+#: widgets/krichtextwidget.cpp:205
+#, kde-format
+msgctxt "@label stroke color"
+msgid "Color"
+msgstr "Färg"
+
+#: widgets/krichtextwidget.cpp:216
+#, kde-format
+msgctxt "@action"
+msgid "Text &Highlight..."
+msgstr "Text&markering..."
+
+#: widgets/krichtextwidget.cpp:226
+#, kde-format
+msgctxt "@action"
+msgid "&Font"
+msgstr "&Teckensnitt"
+
+#: widgets/krichtextwidget.cpp:236
+#, kde-format
+msgctxt "@action"
+msgid "Font &Size"
+msgstr "Tecken&storlek"
+
+#: widgets/krichtextwidget.cpp:246
+#, kde-format
+msgctxt "@action boldify selected text"
+msgid "&Bold"
+msgstr "&Fetstil"
+
+#: widgets/krichtextwidget.cpp:260
+#, kde-format
+msgctxt "@action italicize selected text"
+msgid "&Italic"
+msgstr "&Kursiv"
+
+#: widgets/krichtextwidget.cpp:275
+#, kde-format
+msgctxt "@action underline selected text"
+msgid "&Underline"
+msgstr "Stryk &under"
+
+#: widgets/krichtextwidget.cpp:290
+#, kde-format
+msgctxt "@action"
+msgid "&Strike Out"
+msgstr "Str&yk över"
+
+#: widgets/krichtextwidget.cpp:306
+#, kde-format
+msgctxt "@action"
+msgid "Align &Left"
+msgstr "&Vänsterjustera"
+
+#: widgets/krichtextwidget.cpp:307
+#, kde-format
+msgctxt "@label left justify"
+msgid "Left"
+msgstr "Vänster"
+
+#: widgets/krichtextwidget.cpp:314
+#, kde-format
+msgctxt "@action"
+msgid "Align &Center"
+msgstr "&Centrera"
+
+#: widgets/krichtextwidget.cpp:315
+#, kde-format
+msgctxt "@label center justify"
+msgid "Center"
+msgstr "Centrera"
+
+#: widgets/krichtextwidget.cpp:322
+#, kde-format
+msgctxt "@action"
+msgid "Align &Right"
+msgstr "&Högerjustera"
+
+#: widgets/krichtextwidget.cpp:323
+#, kde-format
+msgctxt "@label right justify"
+msgid "Right"
+msgstr "Höger"
+
+#: widgets/krichtextwidget.cpp:330
+#, kde-format
+msgctxt "@action"
+msgid "&Justify"
+msgstr "&Anpassa"
+
+#: widgets/krichtextwidget.cpp:331
+#, kde-format
+msgctxt "@label justify fill"
+msgid "Justify"
+msgstr "Anpassa"
+
+#: widgets/krichtextwidget.cpp:351
+#, kde-format
+msgctxt "@action"
+msgid "Left-to-Right"
+msgstr "Vänster till höger"
+
+#: widgets/krichtextwidget.cpp:352
+#, kde-format
+msgctxt "@label left-to-right"
+msgid "Left-to-Right"
+msgstr "Vänster till höger"
+
+#: widgets/krichtextwidget.cpp:359
+#, kde-format
+msgctxt "@action"
+msgid "Right-to-Left"
+msgstr "Höger till vänster"
+
+#: widgets/krichtextwidget.cpp:360
+#, kde-format
+msgctxt "@label right-to-left"
+msgid "Right-to-Left"
+msgstr "Höger till vänster"
+
+#: widgets/krichtextwidget.cpp:376
+#, kde-format
+msgctxt "@title:menu"
+msgid "List Style"
+msgstr "Liststil"
+
+#: widgets/krichtextwidget.cpp:378
+#, kde-format
+msgctxt "@item:inmenu no list style"
+msgid "None"
+msgstr "Ingen"
+
+#: widgets/krichtextwidget.cpp:379
+#, kde-format
+msgctxt "@item:inmenu disc list style"
+msgid "Disc"
+msgstr "Skivformad"
+
+#: widgets/krichtextwidget.cpp:380
+#, kde-format
+msgctxt "@item:inmenu circle list style"
+msgid "Circle"
+msgstr "Cirkelformad"
+
+#: widgets/krichtextwidget.cpp:381
+#, kde-format
+msgctxt "@item:inmenu square list style"
+msgid "Square"
+msgstr "Fyrkantig"
+
+#: widgets/krichtextwidget.cpp:382
+#, kde-format
+msgctxt "@item:inmenu numbered lists"
+msgid "123"
+msgstr "123"
+
+#: widgets/krichtextwidget.cpp:383
+#, kde-format
+msgctxt "@item:inmenu lowercase abc lists"
+msgid "abc"
+msgstr "abc"
+
+#: widgets/krichtextwidget.cpp:384
+#, kde-format
+msgctxt "@item:inmenu uppercase abc lists"
+msgid "ABC"
+msgstr "ABC"
+
+#: widgets/krichtextwidget.cpp:385
+#, kde-format
+msgctxt "@item:inmenu lower case roman numerals"
+msgid "i ii iii"
+msgstr "i ii iii"
+
+#: widgets/krichtextwidget.cpp:386
+#, kde-format
+msgctxt "@item:inmenu upper case roman numerals"
+msgid "I II III"
+msgstr "I II III"
+
+#: widgets/krichtextwidget.cpp:403
+#, kde-format
+msgctxt "@action"
+msgid "Increase Indent"
+msgstr "Öka indentering"
+
+#: widgets/krichtextwidget.cpp:416
+#, kde-format
+msgctxt "@action"
+msgid "Decrease Indent"
+msgstr "Minska indentering"
+
+#: widgets/krichtextwidget.cpp:429
+#, kde-format
+msgctxt "@action"
+msgid "Insert Rule Line"
+msgstr "Infoga styrlinje"
+
+#: widgets/krichtextwidget.cpp:440
+#, kde-format
+msgctxt "@action"
+msgid "Link"
+msgstr "Länk"
+
+#: widgets/krichtextwidget.cpp:451
+#, kde-format
+msgctxt "@action"
+msgid "Format Painter"
+msgstr "Formatpensel"
+
+#: widgets/krichtextwidget.cpp:461
+#, kde-format
+msgctxt "@action"
+msgid "To Plain Text"
+msgstr "Till vanlig text"
+
+#: widgets/krichtextwidget.cpp:472
+#, kde-format
+msgctxt "@action"
+msgid "Subscript"
+msgstr "Upphöjt"
+
+#: widgets/krichtextwidget.cpp:479
+#, kde-format
+msgctxt "@action"
+msgid "Superscript"
+msgstr "Nersänkt"
+
+#: widgets/ktextedit.cpp:162
+#, kde-format
+msgid "Nothing to spell check."
+msgstr "Ingenting att stavningskontrollera."
+
+#: widgets/ktextedit.cpp:559
+#, kde-format
+msgid "Check Spelling..."
+msgstr "Kontrollera stavning..."
+
+#: widgets/ktextedit.cpp:564
+#, kde-format
+msgid "Spell Checking Language"
+msgstr "Språk för stavningskontroll"
+
+#: widgets/ktextedit.cpp:587
+#, kde-format
+msgid "Auto Spell Check"
+msgstr "Automatisk stavningskontroll"
+
+#: widgets/ktextedit.cpp:593
+#, kde-format
+msgid "Allow Tabulations"
+msgstr "Tillåt tabulatorer"
+
+#: widgets/ktextedit.cpp:626
+#, kde-format
+msgid "Speak Text"
+msgstr "Läs upp text"
