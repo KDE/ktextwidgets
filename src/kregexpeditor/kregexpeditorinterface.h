@@ -25,6 +25,8 @@
 
 #include <QString>
 
+#include <ktextwidgets_export.h>
+
 #if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 65)
 /**
  * @class KRegExpEditorInterface kregexpeditorinterface.h <KRegExpEditorInterface>
