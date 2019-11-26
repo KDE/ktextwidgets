@@ -25,6 +25,7 @@
 
 #include <QString>
 
+#if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 65)
 /**
  * @class KRegExpEditorInterface kregexpeditorinterface.h <KRegExpEditorInterface>
  *
@@ -91,7 +92,7 @@
  *   // Don't offer the editor widget.
  * }
  * \endcode
- *
+ * @deprecated since 5.65 due to no functional implementation
  */
 class KRegExpEditorInterface
 {
@@ -100,6 +101,7 @@ public:
      * returns the regular expression of the editor in Qt3 QRegExp
      * syntax. Note, there is also a 'regexp' Qt property available.
      */
+    KTEXTWIDGETS_DEPRECATED_VERSION(5, 65, "No functional implementation")
     virtual QString regExp() const = 0;
 
     virtual ~KRegExpEditorInterface() {}
@@ -132,8 +134,11 @@ public:
      * Set the regular expression for the editor. The syntax must be Qt3
      * QRegExp syntax.
      */
+    KTEXTWIDGETS_DEPRECATED_VERSION(5, 65, "No functional implementation")
     virtual void setRegExp(const QString &regexp) = 0;
+    KTEXTWIDGETS_DEPRECATED_VERSION(5, 65, "No functional implementation")
     virtual void redo() = 0;
+    KTEXTWIDGETS_DEPRECATED_VERSION(5, 65, "No functional implementation")
     virtual void undo() = 0;
 
     /**
@@ -143,6 +148,7 @@ public:
      * this method will be used to give the widget a text to show matches of
      * the regular expression on.
      */
+    KTEXTWIDGETS_DEPRECATED_VERSION(5, 65, "No functional implementation")
     virtual void setMatchText(const QString &) = 0;
 
     /**
@@ -151,10 +157,11 @@ public:
      *
      * See http://techbase.kde.org/Policies/Binary_Compatibility_Issues_With_C++
      */
+    KTEXTWIDGETS_DEPRECATED_VERSION(5, 65, "No functional implementation")
     virtual void doSomething(const QString& method, void *arguments) = 0;
 };
 
 Q_DECLARE_INTERFACE(KRegExpEditorInterface, "org.kde.KRegExpEditorInterface/1.0")
-
+#endif
 #endif
 
