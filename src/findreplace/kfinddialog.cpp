@@ -36,7 +36,6 @@
 
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
-#include <kplugintrader.h>
 #include <kguiitem.h>
 #include <khistorycombobox.h>
 
@@ -429,93 +428,74 @@ void KFindDialog::setOptions(long options)
 // compose a regular expression search pattern.
 void KFindDialog::KFindDialogPrivate::_k_showPatterns()
 {
-    if (!regexpDialogQueryDone) {
-        regexpDialog = KPluginTrader::createInstanceFromQuery<QDialog>(QStringLiteral("kregexpeditor"),
-                       QStringLiteral("KRegExpEditor/KRegExpEditor"),
-                       QString(),
-                       nullptr,
-                       q);
-        regexpDialogQueryDone = true;
+    typedef struct {
+        const char *description;
+        const char *regExp;
+        int cursorAdjustment;
+    } Term;
+    static const Term items[] = {
+        { I18N_NOOP("Any Character"),                 ".",        0 },
+        { I18N_NOOP("Start of Line"),                 "^",        0 },
+        { I18N_NOOP("End of Line"),                   "$",        0 },
+        { I18N_NOOP("Set of Characters"),             "[]",       -1 },
+        { I18N_NOOP("Repeats, Zero or More Times"),   "*",        0 },
+        { I18N_NOOP("Repeats, One or More Times"),    "+",        0 },
+        { I18N_NOOP("Optional"),                      "?",        0 },
+        { I18N_NOOP("Escape"),                        "\\",       0 },
+        { I18N_NOOP("TAB"),                           "\\t",      0 },
+        { I18N_NOOP("Newline"),                       "\\n",      0 },
+        { I18N_NOOP("Carriage Return"),               "\\r",      0 },
+        { I18N_NOOP("White Space"),                   "\\s",      0 },
+        { I18N_NOOP("Digit"),                         "\\d",      0 },
+    };
+
+    class RegExpAction : public QAction
+    {
+    public:
+        RegExpAction(QObject *parent, const QString &text, const QString &regExp, int cursor)
+            : QAction(text, parent), mText(text), mRegExp(regExp), mCursor(cursor)
+        {
+        }
+
+        QString text() const
+        {
+            return mText;
+        }
+        QString regExp() const
+        {
+            return mRegExp;
+        }
+        int cursor() const
+        {
+            return mCursor;
+        }
+
+    private:
+        QString mText;
+        QString mRegExp;
+        int mCursor;
+    };
+
+
+    // Populate the popup menu.
+    if (!patterns) {
+        patterns = new QMenu(q);
+        for (const Term &item : items) {
+            patterns->addAction(new RegExpAction(patterns, i18n(item.description),
+                                                    QLatin1String(item.regExp),
+                                                    item.cursorAdjustment));
+        }
     }
 
-    if (regexpDialog) {
-        KRegExpEditorInterface *iface = qobject_cast<KRegExpEditorInterface *>(regexpDialog);
-        assert(iface);
+    // Insert the selection into the edit control.
+    QAction *action = patterns->exec(regExpItem->mapToGlobal(regExpItem->rect().bottomLeft()));
+    if (action) {
+        RegExpAction *regExpAction = static_cast<RegExpAction *>(action);
+        if (regExpAction) {
+            QLineEdit *editor = find->lineEdit();
 
-        iface->setRegExp(q->pattern());
-        if (regexpDialog->exec() == QDialog::Accepted) {
-            q->setPattern(iface->regExp());
-        }
-    } else { // No complete regexp-editor available, bring up the old popupmenu
-        typedef struct {
-            const char *description;
-            const char *regExp;
-            int cursorAdjustment;
-        } Term;
-        static const Term items[] = {
-            { I18N_NOOP("Any Character"),                 ".",        0 },
-            { I18N_NOOP("Start of Line"),                 "^",        0 },
-            { I18N_NOOP("End of Line"),                   "$",        0 },
-            { I18N_NOOP("Set of Characters"),             "[]",       -1 },
-            { I18N_NOOP("Repeats, Zero or More Times"),   "*",        0 },
-            { I18N_NOOP("Repeats, One or More Times"),    "+",        0 },
-            { I18N_NOOP("Optional"),                      "?",        0 },
-            { I18N_NOOP("Escape"),                        "\\",       0 },
-            { I18N_NOOP("TAB"),                           "\\t",      0 },
-            { I18N_NOOP("Newline"),                       "\\n",      0 },
-            { I18N_NOOP("Carriage Return"),               "\\r",      0 },
-            { I18N_NOOP("White Space"),                   "\\s",      0 },
-            { I18N_NOOP("Digit"),                         "\\d",      0 },
-        };
-
-        class RegExpAction : public QAction
-        {
-        public:
-            RegExpAction(QObject *parent, const QString &text, const QString &regExp, int cursor)
-                : QAction(text, parent), mText(text), mRegExp(regExp), mCursor(cursor)
-            {
-            }
-
-            QString text() const
-            {
-                return mText;
-            }
-            QString regExp() const
-            {
-                return mRegExp;
-            }
-            int cursor() const
-            {
-                return mCursor;
-            }
-
-        private:
-            QString mText;
-            QString mRegExp;
-            int mCursor;
-        };
-
-
-        // Populate the popup menu.
-        if (!patterns) {
-            patterns = new QMenu(q);
-            for (const Term &item : items) {
-                patterns->addAction(new RegExpAction(patterns, i18n(item.description),
-                                                     QLatin1String(item.regExp),
-                                                     item.cursorAdjustment));
-            }
-        }
-
-        // Insert the selection into the edit control.
-        QAction *action = patterns->exec(regExpItem->mapToGlobal(regExpItem->rect().bottomLeft()));
-        if (action) {
-            RegExpAction *regExpAction = static_cast<RegExpAction *>(action);
-            if (regExpAction) {
-                QLineEdit *editor = find->lineEdit();
-
-                editor->insert(regExpAction->regExp());
-                editor->setCursorPosition(editor->cursorPosition() + regExpAction->cursor());
-            }
+            editor->insert(regExpAction->regExp());
+            editor->setCursorPosition(editor->cursorPosition() + regExpAction->cursor());
         }
     }
 }

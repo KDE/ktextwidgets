@@ -40,7 +40,6 @@ PUBLIC
   KF5::I18n
 PRIVATE
   KF5::SonnetCore
-  KF5::Service
   KF5::ConfigWidgets
   KF5::WindowSystem
   KF5::Completion
@@ -94,7 +93,6 @@ install(FILES
   ${KTextWidgets_HEADERS}
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/KTextWidgets COMPONENT Devel
 )
-install( FILES kregexpeditor/kregexpeditor.desktop DESTINATION ${KDE_INSTALL_KSERVICETYPES5DIR} )
 
 if (BUILD_DESIGNERPLUGIN)
     add_subdirectory(designer)
