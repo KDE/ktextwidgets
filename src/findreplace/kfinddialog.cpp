@@ -22,7 +22,6 @@
 #include "kfinddialog_p.h"
 
 #include "kfind.h"
-#include "kregexpeditorinterface.h"
 
 #include <QCheckBox>
 #include <QDialogButtonBox>
