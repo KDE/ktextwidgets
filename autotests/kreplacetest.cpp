@@ -79,8 +79,7 @@ void KReplaceTest::replace(const QString &pattern, const QString &replacement, l
 void KReplaceTest::slotHighlight(const QString &str, int matchingIndex, int matchedLength)
 {
     qDebug() << "slotHighlight Index:" << matchingIndex << " Length:" << matchedLength
-             << " Substr:" << str.mid(matchingIndex, matchedLength)
-             << endl;
+             << " Substr:" << str.mid(matchingIndex, matchedLength);
     // Emulate the user saying yes
     // We need Qt::QueuedConnection (and the enterloop/exitloop)
     // otherwise we get an infinite loop (Match never returned,
@@ -166,7 +165,7 @@ static void testReplaceSimple(int options, const QString &buttonName = QString()
     QStringList textLines = test.textLines();
     assert(textLines.count() == 1);
     if (textLines[ 0 ] != QLatin1String("HELLOHELLO")) {
-        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of 'HELLOHELLO'" << endl;
+        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of 'HELLOHELLO'";
         exit(1);
     }
 }
@@ -181,7 +180,7 @@ static void testReplaceBlank(int options, const QString &buttonName = QString())
     QStringList textLines = test.textLines();
     assert(textLines.count() == 1);
     if (!textLines[ 0 ].isEmpty()) {
-        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of ''" << endl;
+        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of ''";
         exit(1);
     }
 }
@@ -196,7 +195,7 @@ static void testReplaceBlankSearch(int options, const QString &buttonName = QStr
     QStringList textLines = test.textLines();
     assert(textLines.count() == 1);
     if (textLines[ 0 ] != QLatin1String("foobfoobfoobfoobfoo")) {
-        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of 'foobfoobfoobfoobfoo'" << endl;
+        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of 'foobfoobfoobfoobfoo'";
         exit(1);
     }
 }
@@ -210,7 +209,7 @@ static void testReplaceLonger(int options, const QString &buttonName = QString()
     QStringList textLines = test.textLines();
     assert(textLines.count() == 1);
     if (textLines[ 0 ] != QLatin1String("bbbbbbbb")) {
-        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of 'bbbbbbbb'" << endl;
+        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of 'bbbbbbbb'";
         exit(1);
     }
 }
@@ -224,7 +223,7 @@ static void testReplaceLongerInclude(int options, const QString &buttonName = QS
     QStringList textLines = test.textLines();
     assert(textLines.count() == 1);
     if (textLines[ 0 ] != QLatin1String("a foobar b")) {
-        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of 'a foobar b'" << endl;
+        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of 'a foobar b'";
         exit(1);
     }
 }
@@ -238,7 +237,7 @@ static void testReplaceLongerInclude2(int options, const QString &buttonName = Q
     QStringList textLines = test.textLines();
     assert(textLines.count() == 1);
     if (textLines[ 0 ] != QLatin1String("aaaaaaaa")) {
-        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of 'aaaaaaaa'" << endl;
+        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of 'aaaaaaaa'";
         exit(1);
     }
 }
@@ -252,7 +251,7 @@ static void testReplaceBackRef(int options, const QString &buttonName = QString(
     assert(textLines.count() == 1);
     QString expected = options & KReplaceDialog::BackReference ? QStringLiteral("(abc) def") : QStringLiteral("(\\0) def");
     if (textLines[ 0 ] != expected) {
-        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of '" << expected << "'" << endl;
+        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of '" << expected << "'";
         exit(1);
     }
 }
@@ -266,7 +265,7 @@ static void testReplaceBackRef1(int options, const QString &buttonName = QString
     assert(textLines.count() == 1);
     QString expected = QStringLiteral("a and 1 in (a1) b and 2 in (b2) a and 3 in (a3)");
     if (textLines[ 0 ] != expected) {
-        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of '" << expected << "'" << endl;
+        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of '" << expected << "'";
         exit(1);
     }
 }
