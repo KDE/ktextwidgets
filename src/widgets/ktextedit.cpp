@@ -852,12 +852,10 @@ void KTextEdit::slotReplaceNext()
         viewport()->setUpdatesEnabled(false);
     }
 
-    KFind::Result res = KFind::NoMatch;
-
     if (d->replace->needData()) {
         d->replace->setData(toPlainText(), d->repIndex);
     }
-    res = d->replace->replace();
+    KFind::Result res = d->replace->replace();
     if (!(d->replace->options() & KReplaceDialog::PromptOnReplace)) {
         textCursor().endEditBlock(); // #48541
         if (d->lastReplacedPosition >= 0) {
@@ -924,11 +922,10 @@ void KTextEdit::slotFindNext()
         return;
     }
 
-    KFind::Result res = KFind::NoMatch;
     if (d->find->needData()) {
         d->find->setData(toPlainText(), d->findIndex);
     }
-    res = d->find->find();
+    KFind::Result res = d->find->find();
 
     if (res == KFind::NoMatch) {
         d->find->displayFinalDialog();
