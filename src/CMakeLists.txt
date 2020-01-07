@@ -41,7 +41,6 @@ PUBLIC
 PRIVATE
   KF5::SonnetCore
   KF5::ConfigWidgets
-  KF5::WindowSystem
   KF5::Completion
 )
 

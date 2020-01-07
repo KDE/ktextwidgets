@@ -44,7 +44,6 @@
 #include <kstandardshortcut.h>
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
-#include <kwindowsystem.h>
 
 #include "kreplacedialog.h"
 #include "kfinddialog.h"
@@ -799,7 +798,7 @@ void KTextEdit::replace()
     }
 
     if (d->repDlg) {
-        KWindowSystem::activateWindow(d->repDlg->winId());
+        d->repDlg->activateWindow();
     } else {
         d->repDlg = new KReplaceDialog(this, 0,
                                        QStringList(), QStringList(), false);
@@ -962,7 +961,7 @@ void KTextEdit::slotFind()
     }
 
     if (d->findDlg) {
-        KWindowSystem::activateWindow(d->findDlg->winId());
+        d->findDlg->activateWindow();
     } else {
         d->findDlg = new KFindDialog(this);
         connect(d->findDlg, &KFindDialog::okClicked, this, &KTextEdit::slotDoFind);
@@ -977,7 +976,7 @@ void KTextEdit::slotReplace()
     }
 
     if (d->repDlg) {
-        KWindowSystem::activateWindow(d->repDlg->winId());
+        d->repDlg->activateWindow();
     } else {
         d->repDlg = new KReplaceDialog(this, 0,
                                        QStringList(), QStringList(), false);

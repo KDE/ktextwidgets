@@ -53,7 +53,7 @@
  * To create a non-modal find dialog:
  * \code
  *   if (m_findDialog) {
- *     KWindowSystem::activateWindow(m_findDialog->winId());
+ *     m_findDialog->activateWindow();
  *   } else {
  *     m_findDialog = new KFindDialog(...);
  *     connect(m_findDialog, &KFindDialog::okClicked, this, [this] {
