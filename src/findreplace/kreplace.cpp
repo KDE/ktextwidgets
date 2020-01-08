@@ -28,6 +28,7 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QRegExp>
+#include <QRegularExpression>
 
 #include <klocalizedstring.h>
 #include <kmessagebox.h>
@@ -124,6 +125,7 @@ public:
     KReplace *q;
     QString m_replacement;
     int m_replacements = 0;
+    QRegularExpressionMatch m_match;
 };
 
 ////
@@ -180,6 +182,7 @@ void KReplace::displayFinalDialog() const
     }
 }
 
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
 static int replaceHelper(QString &text, const QString &replacement, int index, long options, int length, const QRegExp *regExp)
 {
     QString rep(replacement);
@@ -193,6 +196,30 @@ static int replaceHelper(QString &text, const QString &replacement, int index, l
             for (int i = 0; i < caps.count(); ++i) {
                 rep.replace(QLatin1String("\\") + QString::number(i), caps.at(i));
             }
+        }
+    }
+
+    // Then replace rep into the text
+    text.replace(index, length, rep);
+    return rep.length();
+}
+#endif
+
+static int replaceHelper(QString &text, const QString &replacement, int index, long options,
+                         const QRegularExpressionMatch *match, int length)
+{
+    QString rep(replacement);
+    if (options & KReplaceDialog::BackReference) {
+        // Handle backreferences
+        if (options & KFind::RegularExpression) { // regex search
+            Q_ASSERT(match);
+            const int capNum = match->regularExpression().captureCount();
+            for (int i = 0 ; i <= capNum; ++i) {
+                rep.replace(QLatin1String("\\") + QString::number(i), match->captured(i));
+            }
+        } else { // with non-regex search only \0 is supported, replace it with the
+                 // right portion of 'text'
+            rep.replace(QLatin1String("\\0"), text.mid(index, length));
         }
     }
 
@@ -217,11 +244,8 @@ KFind::Result KReplace::replace()
         //qDebug() << "beginning of loop: df->index=" << df->index;
 #endif
         // Find the next match.
-        if (df->options & KFind::RegularExpression) {
-            df->index = KFind::find(df->text, *df->regExp, df->index, df->options, &df->matchedLength);
-        } else {
-            df->index = KFind::find(df->text, df->pattern, df->index, df->options, &df->matchedLength);
-        }
+        df->index = KFind::find(df->text, df->pattern, df->index, df->options, &df->matchedLength,
+                                df->options & KFind::RegularExpression? &d->m_match : nullptr);
 
 #ifdef DEBUG_REPLACE
         //qDebug() << "KFind::find returned df->index=" << df->index;
@@ -236,7 +260,9 @@ KFind::Result KReplace::replace()
                     // Display accurate initial string and replacement string, they can vary
                     QString matchedText(df->text.mid(df->index, df->matchedLength));
                     QString rep(matchedText);
-                    replaceHelper(rep, d->m_replacement, 0, df->options, df->matchedLength, df->regExp);
+                    replaceHelper(rep, d->m_replacement, 0, df->options,
+                                  df->options & KFind::RegularExpression ? &d->m_match : nullptr,
+                                  df->matchedLength);
                     d->dialog()->setLabel(matchedText, rep);
                     d->dialog()->show(); // TODO kde5: virtual void showReplaceNextDialog(QString,QString), so that kreplacetest can skip the show()
 
@@ -269,10 +295,14 @@ KFind::Result KReplace::replace()
 int KReplace::replace(QString &text, const QString &pattern, const QString &replacement, int index, long options, int *replacedLength)
 {
     int matchedLength;
+    QRegularExpressionMatch match;
+    index = KFind::find(text, pattern, index, options, &matchedLength,
+                        options & KFind::RegularExpression ? &match : nullptr);
 
-    index = KFind::find(text, pattern, index, options, &matchedLength);
     if (index != -1) {
-        *replacedLength = replaceHelper(text, replacement, index, options, matchedLength, nullptr);
+        *replacedLength = replaceHelper(text, replacement, index, options,
+                                        options & KFind::RegularExpression ? &match : nullptr,
+                                        matchedLength);
         if (options & KFind::FindBackwards) {
             index--;
         } else {
@@ -282,6 +312,7 @@ int KReplace::replace(QString &text, const QString &pattern, const QString &repl
     return index;
 }
 
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
 int KReplace::replace(QString &text, const QRegExp &pattern, const QString &replacement, int index, long options, int *replacedLength)
 {
     int matchedLength;
@@ -297,6 +328,7 @@ int KReplace::replace(QString &text, const QRegExp &pattern, const QString &repl
     }
     return index;
 }
+#endif
 
 void KReplacePrivate::_k_slotReplaceAll()
 {
@@ -334,7 +366,7 @@ void KReplacePrivate::doReplace()
 {
     KFind::Private *df = q->KFind::d;
     Q_ASSERT(df->index >= 0);
-    const int replacedLength = replaceHelper(df->text, m_replacement, df->index, df->options, df->matchedLength, df->regExp);
+    const int replacedLength = replaceHelper(df->text, m_replacement, df->index, df->options, &m_match, df->matchedLength);
 
     // Tell the world about the replacement we made, in case someone wants to
     // highlight it.

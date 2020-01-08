@@ -20,6 +20,7 @@
 */
 #include "kfindtest.h"
 
+#include <QRegularExpression>
 #include <QTest>
 
 #include <kfind.h>
@@ -234,6 +235,12 @@ void TestKFind::testStaticFindRegexp()
     const int result = KFind::find(text, QRegExp(pattern), startIndex, options, &matchedLength);
     QCOMPARE(result, expectedResult);
     QCOMPARE(matchedLength, expectedMatchedLength);
+
+    matchedLength = 0;
+    const int result2 = KFind::find(text, pattern, startIndex, options | KFind::RegularExpression,
+                                    &matchedLength, nullptr);
+    QCOMPARE(result2, expectedResult);
+    QCOMPARE(matchedLength, expectedMatchedLength);
 }
 
 void TestKFind::testSimpleSearch()
@@ -278,6 +285,14 @@ void TestKFind::testLineBeginRegexp()
     const QString output =
         QStringLiteral("line: \"License version 2, as published by the Free Software Foundation.\", index: 0, length: 7\n");
     QCOMPARE(test.hits().join(QString()), output);
+}
+
+void TestKFind::testLineBeginRegularExpression()
+{
+    int matchedLength;
+    QRegularExpressionMatch match;
+    KFind::find(m_text, QStringLiteral("^License.+"), 0, KFind::RegularExpression, &matchedLength, &match);
+    QCOMPARE(match.captured(0), QStringLiteral("License version 2, as published by the Free Software Foundation."));
 }
 
 void TestKFind::testFindIncremental()

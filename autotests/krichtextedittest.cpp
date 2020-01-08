@@ -22,6 +22,7 @@
 #include <krichtextedit.h>
 #include <kcolorscheme.h>
 
+#include <QRegularExpression>
 #include <QTest>
 #include <QTextCursor>
 #include <QTextList>
@@ -193,9 +194,12 @@ void KRichTextEditTest::testHTMLOrderedLists()
     // there should not be a margin-left: 0 defined for the <ol> element
     QRegExp regex(QStringLiteral("<ol.*margin-left: 0px.*><li"));
     regex.setMinimal(true);
-
     QVERIFY2(regex.indexIn(line6, 0) == -1, "margin-left: 0px specified for ordered lists "
              "removes numbers in 3rd party viewers ");
+
+    const QRegularExpression re(QStringLiteral("<ol.*?margin-left: 0px.*?><li"));
+    QVERIFY2(!re.match(line6, 0).hasMatch(), "margin-left: 0px specified for ordered lists "
+                                             "removes numbers in 3rd party viewers ");
 
 }
 
@@ -239,9 +243,11 @@ void KRichTextEditTest::testHTMLUnorderedLists()
     // there should not be a margin-left: 0 defined for the <ol> element
     QRegExp regex(QStringLiteral("<ul.*margin-left: 0px.*><li"));
     regex.setMinimal(true);
-
     QVERIFY2(regex.indexIn(line6, 0) == -1, "margin-left: 0px specified for unordered lists "
              "removes numbers in 3rd party viewers ");
 
+    const QRegularExpression re(QStringLiteral("<ul.*?margin-left: 0px.*?><li"));
+    QVERIFY2(!re.match(line6, 0).hasMatch(), "margin-left: 0px specified for unordered lists "
+                                             "removes numbers in 3rd party viewers ");
 }
 

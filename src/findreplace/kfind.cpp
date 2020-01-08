@@ -33,6 +33,7 @@
 #include <QLabel>
 #include <QPushButton>
 #include <QRegExp>
+#include <QRegularExpression>
 #include <QHash>
 #include <QVBoxLayout>
 
@@ -108,8 +109,14 @@ void KFind::Private::init(const QString &_pattern)
     dialogClosed = false;
     index = INDEX_NOMATCH;
     lastResult = NoMatch;
-    regExp = nullptr;
-    q->setOptions(options);   // create d->regExp with the right options
+
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
+    regExp = nullptr;      // QRegExp
+
+#endif
+    // TODO: KF6 change this comment once d->regExp is removed
+    // set options and create d->regExp with the right options
+    q->setOptions(options);
 }
 
 KFind::~KFind()
@@ -298,11 +305,7 @@ KFind::Result KFind::find()
         // blocks till we either searched all blocks or we find a match
         do {
             // Find the next candidate match.
-            if (d->options & KFind::RegularExpression) {
-                d->index = KFind::find(d->text, *d->regExp, d->index, d->options, &d->matchedLength);
-            } else {
-                d->index = KFind::find(d->text, d->pattern, d->index, d->options, &d->matchedLength);
-            }
+            d->index = KFind::find(d->text, d->pattern, d->index, d->options, &d->matchedLength, nullptr);
 
             if (d->options & KFind::FindIncremental) {
                 d->data[d->currentId].dirty = false;
@@ -435,15 +438,53 @@ static bool matchOk(const QString &text, int index, int matchedLength, long opti
     return false;
 }
 
+static int findRegex(const QString &text, const QString &pattern, int index, long options,
+                     int *matchedLength, QRegularExpressionMatch *rmatch)
+{
+    QRegularExpression::PatternOptions opts;
+    // instead of this rudimentary test, add a checkbox to toggle MultilineOption ?
+    if (pattern.startsWith(QLatin1Char('^')) || pattern.endsWith(QLatin1Char('$'))) {
+        opts |= QRegularExpression::MultilineOption;
+    }
+
+    opts |= (options & KFind::CaseSensitive) ? QRegularExpression::NoPatternOption
+                                               : QRegularExpression::CaseInsensitiveOption;
+
+    QRegularExpression re(pattern, opts);
+    QRegularExpressionMatch match;
+    if (options & KFind::FindBackwards) {
+        // Backward search, until the beginning of the line...
+        text.lastIndexOf(re, index, &match);
+    } else {
+        // Forward search, until the end of the line...
+        match = re.match(text, index);
+    }
+
+    // index is -1 if no match is found
+    index = match.capturedStart(0);
+    // matchedLength is 0 if no match is found
+    *matchedLength = match.capturedLength(0);
+
+    if (rmatch) {
+        *rmatch = match;
+    }
+
+    return index;
+}
+
 // static
 int KFind::find(const QString &text, const QString &pattern, int index, long options, int *matchedLength)
 {
+    return find(text, pattern, index, options, matchedLength, nullptr);
+}
+
+// static
+int KFind::find(const QString &text, const QString &pattern, int index, long options,
+                int *matchedLength, QRegularExpressionMatch *rmatch)
+{
     // Handle regular expressions in the appropriate way.
     if (options & KFind::RegularExpression) {
-        Qt::CaseSensitivity caseSensitive = (options & KFind::CaseSensitive) ? Qt::CaseSensitive : Qt::CaseInsensitive;
-        QRegExp regExp(pattern, caseSensitive);
-
-        return find(text, regExp, index, options, matchedLength);
+        return findRegex(text, pattern, index, options, matchedLength, rmatch);
     }
 
     // In Qt4 QString("aaaaaa").lastIndexOf("a",6) returns -1; we need
@@ -496,6 +537,7 @@ int KFind::find(const QString &text, const QString &pattern, int index, long opt
     return index;
 }
 
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
 // Core method for the regexp-based find
 static int doFind(const QString &text, const QRegExp &pattern, int index, long options, int *matchedLength)
 {
@@ -586,6 +628,7 @@ static int lineBasedFind(const QString &text, const QRegExp &pattern, int index,
     }
     return -1;
 }
+#endif
 
 // static
 int KFind::find(const QString &text, const QRegExp &pattern, int index, long options, int *matchedLength)
@@ -675,6 +718,7 @@ void KFind::setOptions(long options)
 {
     d->options = options;
 
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
     delete d->regExp;
     if (d->options & KFind::RegularExpression) {
         Qt::CaseSensitivity caseSensitive = (d->options & KFind::CaseSensitive) ? Qt::CaseSensitive : Qt::CaseInsensitive;
@@ -682,6 +726,7 @@ void KFind::setOptions(long options)
     } else {
         d->regExp = nullptr;
     }
+#endif
 }
 
 void KFind::closeFindNextDialog()
@@ -711,7 +756,10 @@ void KFind::setPattern(const QString &pattern)
     }
 
     d->pattern = pattern;
-    setOptions(options());   // rebuild d->regExp if necessary
+
+    // TODO: KF6 change this comment once d->regExp is removed
+    // set the options and rebuild d->regeExp if necessary
+    setOptions(options());
 }
 
 int KFind::numMatches() const

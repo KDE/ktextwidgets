@@ -30,7 +30,7 @@
 #include <QLineEdit>
 #include <QMenu>
 #include <QPushButton>
-#include <QRegExp>
+#include <QRegularExpression>
 #include <QGridLayout>
 
 #include <klocalizedstring.h>
@@ -547,10 +547,9 @@ void KFindDialog::KFindDialogPrivate::_k_slotPlaceholdersAboutToShow()
     placeholders->clear();
     placeholders->addAction(new PlaceHolderAction(placeholders, i18n("Complete Match"), 0));
 
-    QRegExp r(q->pattern());
-    int n = r.captureCount();
-    for (int i = 0; i < n; i++) {
-        placeholders->addAction(new PlaceHolderAction(placeholders, i18n("Captured Text (%1)",  i + 1), i + 1));
+    const int n = QRegularExpression(q->pattern()).captureCount();
+    for (int i = 1; i <= n; ++i) {
+        placeholders->addAction(new PlaceHolderAction(placeholders, i18n("Captured Text (%1)",  i), i));
     }
 }
 
@@ -564,10 +563,8 @@ void KFindDialog::KFindDialogPrivate::_k_slotOk()
 
     if (regExp->isChecked()) {
         // Check for a valid regular expression.
-        QRegExp _regExp(q->pattern());
-
-        if (!_regExp.isValid()) {
-            KMessageBox::error(q, i18n("Invalid regular expression."));
+        if (!QRegularExpression(q->pattern()).isValid()) {
+            KMessageBox::error(q, i18n("Invalid PCRE pattern syntax."));
             return;
         }
     }

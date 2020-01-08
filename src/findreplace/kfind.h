@@ -252,6 +252,7 @@ public:
      */
     virtual bool shouldRestart(bool forceAsking = false, bool showNumMatches = true) const;
 
+#if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 70)
     /**
      * Search the given string, and returns whether a match was found. If one is,
      * the length of the string matched is also returned.
@@ -265,10 +266,42 @@ public:
      * @param options The options to use.
      * @param matchedlength The length of the string that was matched
      * @return The index at which a match was found, or -1 if no match was found.
+     *
+     * @deprecated Since 5.70
      */
+
+    KTEXTWIDGETS_DEPRECATED_VERSION(5, 70, "Use find(const QString &text, const QString &pattern, int index, long options, \
+                   int *matchedLength, QRegularExpressionMatch *rmatch).")
+
     static int find(const QString &text, const QString &pattern, int index, long options, int *matchedlength);
 
+    /** @deprecated Since 5.70, for lack of direct use
+     */
     static int find(const QString &text, const QRegExp &pattern, int index, long options, int *matchedlength);
+#endif
+
+    /**
+     * Search @p text for @p pattern. If a match is found, the length of the matched
+     * string will be stored in @p matchedLength and the index of the matched string
+     * will be returned. If no match is found -1 is returned.
+     *
+     * If the KFind::RegularExpression flag is set, the @p pattern will be iterpreted
+     * as a regular expression (using QRegularExpression).
+     *
+     * @param text The string to search in
+     * @param pattern The pattern to search for
+     * @param index  The index in @p text from which to start the search
+     * @param options The options to use
+     * @param matchedlength If there is a match, its length will be stored in this parameter
+     * @param rmatch If there is a regular expression match (implies that the KFind::RegularExpression
+     *               flag is set) and @p rmatch is not a nullptr the match result will be stored
+     *               in this QRegularExpressionMatch object
+     * @return The index at which a match was found otherwise -1
+     *
+     * @since 5.70
+     */
+    static int find(const QString &text, const QString &pattern, int index, long options,
+                   int *matchedLength, QRegularExpressionMatch *rmatch);
 
     /**
      * Displays the final dialog saying "no match was found", if that was the case.

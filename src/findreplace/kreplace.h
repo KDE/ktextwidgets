@@ -157,24 +157,36 @@ public:
     void closeReplaceNextDialog();
 
     /**
-     * Search the given string, replaces with the given replacement string,
-     * and returns whether a match was found. If one is,
-     * the replacement string length is also returned.
+     * Searches the given @p text for @p pattern; if a match is found it is replaced
+     * with @p replacement and the index of the replacement string is returned.
      *
-     * A performance optimised version of the function is provided for use
-     * with regular expressions.
+     * @param text The string to search
+     * @param pattern The pattern to search for
+     * @param replacement The replacement string to insert into the text
+     * @param index The starting index into the string
+     * @param options The options to use
+     * @param replacedLength Output parameter, contains the length of the replaced string
+     *        Not always the same as replacement.length(), when backreferences are used
+     * @return The index at which a match was found, or -1 otherwise
+     */
+    static int replace(QString &text, const QString &pattern, const QString &replacement, int index, long options, int *replacedLength);
+
+#if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 70)
+    /**
+     * This is an overloaded function provided for use with QRegExp regular expressions.
      *
      * @param text The string to search.
-     * @param pattern The pattern to look for.
+     * @param pattern The QRegExp object used for searching.
      * @param replacement The replacement string to insert into the text.
      * @param index The starting index into the string.
      * @param options The options to use.
      * @param replacedLength Output parameter, contains the length of the replaced string.
      * Not always the same as replacement.length(), when backreferences are used.
      * @return The index at which a match was found, or -1 if no match was found.
-     */
-    static int replace(QString &text, const QString &pattern, const QString &replacement, int index, long options, int *replacedLength);
+     * @deprecated Since 5.70, for lack of direct use
+    */
     static int replace(QString &text, const QRegExp &pattern, const QString &replacement, int index, long options, int *replacedLength);
+#endif
 
     /**
      * Returns true if we should restart the search from scratch.

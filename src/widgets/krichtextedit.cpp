@@ -32,6 +32,7 @@
 #include <kcolorscheme.h>
 
 // Qt includes
+#include <QRegularExpression>
 
 /**
   Private class that helps to provide binary compatibility between releases.
@@ -539,7 +540,7 @@ QString KRichTextEdit::toCleanHtml() const
     // Qt inserts various style properties based on the current mode of the editor (underline,
     // bold, etc), but only empty paragraphs *also* have qt-paragraph-type set to 'empty'.
     static const QString EMPTYLINEREGEX = QStringLiteral(
-            "<p style=\"-qt-paragraph-type:empty;(.*)</p>");
+            "<p style=\"-qt-paragraph-type:empty;(.*?)</p>");
 
     static const QString OLLISTPATTERNQT = QStringLiteral(
             "<ol style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px;");
@@ -557,20 +558,8 @@ QString KRichTextEdit::toCleanHtml() const
     // a non-existing line.
     // Although we can simply remove the margin-top style property, we still get unwanted results
     // if you have three or more empty lines. It's best to replace empty <p> elements with <p>&nbsp;</p>.
-
-    QRegExp emptyLineFinder(EMPTYLINEREGEX);
-    emptyLineFinder.setMinimal(true);
-
-    // find the first occurrence
-    int offset = emptyLineFinder.indexIn(result, 0);
-    while (offset != -1) {
-        // replace all the matching text with the new line text
-        result.replace(offset, emptyLineFinder.matchedLength(), EMPTYLINEHTML);
-        // advance the search offset to just beyond the last replace
-        offset += EMPTYLINEHTML.length();
-        // find the next occurrence
-        offset = emptyLineFinder.indexIn(result, offset);
-    }
+    // replace all occurrences with the new line text
+    result.replace(QRegularExpression(EMPTYLINEREGEX), EMPTYLINEHTML);
 
     // fix 2a - ordered lists - MS Outlook treats margin-left:0px; as
     // a non-existing number; e.g: "1. First item" turns into "First Item"

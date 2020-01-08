@@ -81,6 +81,7 @@ private Q_SLOTS:
     void testSimpleSearch();
     void testSimpleRegexp();
     void testLineBeginRegexp();
+    void testLineBeginRegularExpression();
     void testFindIncremental();
     void testFindIncrementalDynamic();
 
