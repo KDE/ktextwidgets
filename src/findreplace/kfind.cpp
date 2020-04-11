@@ -441,16 +441,20 @@ static bool matchOk(const QString &text, int index, int matchedLength, long opti
 static int findRegex(const QString &text, const QString &pattern, int index, long options,
                      int *matchedLength, QRegularExpressionMatch *rmatch)
 {
+    QString _pattern = pattern;
+
     QRegularExpression::PatternOptions opts;
     // instead of this rudimentary test, add a checkbox to toggle MultilineOption ?
     if (pattern.startsWith(QLatin1Char('^')) || pattern.endsWith(QLatin1Char('$'))) {
         opts |= QRegularExpression::MultilineOption;
+    } else if (options & KFind::WholeWordsOnly) { // WholeWordsOnly makes no sense with multiline
+        _pattern = QLatin1String("\\b") + pattern + QLatin1String("\\b");
     }
 
     opts |= (options & KFind::CaseSensitive) ? QRegularExpression::NoPatternOption
                                                : QRegularExpression::CaseInsensitiveOption;
 
-    QRegularExpression re(pattern, opts);
+    QRegularExpression re(_pattern, opts);
     QRegularExpressionMatch match;
     if (options & KFind::FindBackwards) {
         // Backward search, until the beginning of the line...
