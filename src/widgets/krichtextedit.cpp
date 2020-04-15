@@ -338,6 +338,46 @@ void KRichTextEdit::setTextSubScript(bool subscript)
     d->activateRichText();
 }
 
+void KRichTextEdit::setHeadingLevel(int level)
+{
+    const int boundedLevel = qBound(0, 6, level);
+    // Apparently, 5 is maximum for FontSizeAdjustment; otherwise level=1 and
+    // level=2 look the same
+    const int sizeAdjustment = boundedLevel > 0 ? 5 - boundedLevel: 0;
+
+    QTextCursor cursor = textCursor();
+
+    QTextBlockFormat blkfmt;
+    blkfmt.setHeadingLevel(boundedLevel);
+    cursor.mergeBlockFormat(blkfmt);
+
+    QTextCharFormat chrfmt;
+    chrfmt.setFontWeight(boundedLevel > 0 ? QFont::Bold : QFont::Normal);
+    chrfmt.setProperty(QTextFormat::FontSizeAdjustment, sizeAdjustment);
+    // Applying style to the current line or selection
+    QTextCursor selectCursor = cursor;
+    if (selectCursor.hasSelection()) {
+        QTextCursor top = selectCursor;
+        top.setPosition(qMin(top.anchor(), top.position()));
+        top.movePosition(QTextCursor::StartOfBlock);
+
+        QTextCursor bottom = selectCursor;
+        bottom.setPosition(qMax(bottom.anchor(), bottom.position()));
+        bottom.movePosition(QTextCursor::EndOfBlock);
+
+        selectCursor.setPosition(top.position(), QTextCursor::MoveAnchor);
+        selectCursor.setPosition(bottom.position(), QTextCursor::KeepAnchor);
+    } else {
+        selectCursor.select(QTextCursor::BlockUnderCursor);
+    }
+    selectCursor.mergeCharFormat(chrfmt);
+
+    cursor.mergeBlockCharFormat(chrfmt);
+    setTextCursor(cursor);
+    setFocus();
+    d->activateRichText();
+}
+
 void KRichTextEdit::enableRichTextMode()
 {
     d->activateRichText();
@@ -499,6 +539,19 @@ void KRichTextEdit::keyPressEvent(QKeyEvent *event)
 
     if (!handled) {
         KTextEdit::keyPressEvent(event);
+    }
+
+    // Match the behavior of office suites: newline after header switches to normal text
+    if ((event->key() == Qt::Key_Return)
+            && (textCursor().blockFormat().headingLevel() > 0)
+            && (textCursor().atBlockEnd())) {
+        setHeadingLevel(0);
+    }
+
+    // If a line was merged with previous one, with different heading level,
+    // the style should also be adjusted accordingly (i.e. merged)
+    if ((event->key() == Qt::Key_Backspace) || (event->key() == Qt::Key_Delete)) {
+        setHeadingLevel(textCursor().blockFormat().headingLevel());
     }
 
     if (textCursor().currentList()) {

@@ -224,6 +224,17 @@ public:
         SupportDirection = 0x8000000,
 
         /**
+         * Action to make the current line a heading (up to six levels,
+         * corresponding to HTML h1...h6 tags)
+         * Displayed as a combobox when inserted into a toolbar.
+         * This is a KSelectAction. The status is automatically updated when
+         * the text cursor is moved.
+         *
+         * @since 5.70
+         */
+        SupportHeading = 0x10000000,
+
+        /**
          * Includes all above actions for full rich text support
          */
         FullSupport = 0xffffffff
@@ -291,6 +302,7 @@ public:
      * <tr><td>format_painter</td><td>SupportFormatPainting</td></tr>
      * <tr><td>action_to_plain_text</td><td>SupportToPlainText</td></tr>
      * <tr><td>format_text_subscript & format_text_superscript</td><td>SupportSuperScriptAndSubScript</td></tr>
+     * <tr><td>format_heading_level</td><td>SupportHeading</td></tr>
      * </table>
      *
      * @since 5.0

@@ -33,6 +33,7 @@ private Q_SLOTS:
     void testHTMLLineBreaks();
     void testHTMLOrderedLists();
     void testHTMLUnorderedLists();
+    void testHeading();
 };
 
 #endif

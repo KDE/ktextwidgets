@@ -251,3 +251,63 @@ void KRichTextEditTest::testHTMLUnorderedLists()
                                              "removes numbers in 3rd party viewers ");
 }
 
+void KRichTextEditTest::testHeading()
+{
+    KRichTextEdit edit;
+    // Create two lines, make second one a heading
+    QTest::keyClicks(&edit, QStringLiteral("a\rb"));
+    edit.setHeadingLevel(2);
+    QTest::keyClicks(&edit, QStringLiteral("cd"));
+    QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 2);
+    QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Bold));
+    // Now add a new line, make sure it's no longer a heading
+    QTest::keyClicks(&edit, QStringLiteral("\ref"));
+    QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 0);
+    QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Normal));
+    // Go to beginning of this line, press Backspace -> lines should be merged,
+    // current line should become a heading
+    QTest::keyClick(&edit, Qt::Key_Home);
+    QTest::keyClick(&edit, Qt::Key_Backspace);
+    QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 2);
+    QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Bold));
+    // The line is now "bcd|ef", "|" is cursor. Press Enter, the second line should remain a heading
+    QTest::keyClick(&edit, Qt::Key_Return);
+    QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 2);
+    QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Bold));
+    // Change the heading level back to normal
+    edit.setHeadingLevel(0);
+    QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 0);
+    QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Normal));
+    // Go to end of previous line, press Delete -> lines should be merged again
+    QTextCursor cursor = edit.textCursor();
+    cursor.movePosition(QTextCursor::PreviousBlock);
+    cursor.movePosition(QTextCursor::EndOfBlock);
+    edit.setTextCursor(cursor);
+    QTest::keyClick(&edit, Qt::Key_Delete);
+    cursor.movePosition(QTextCursor::EndOfBlock);
+    QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 2);
+    QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Bold));
+
+    // Now playing with selection. The contents are currently:
+    // ---
+    // a
+    // bcdef
+    // ---
+    // Let's add a new line 'gh', select everything between "c" and "g"
+    // and change heading. It should apply to both lines
+    QTest::keyClicks(&edit, QStringLiteral("\rgh"));
+    cursor.setPosition(4, QTextCursor::MoveAnchor);
+    cursor.setPosition(9, QTextCursor::KeepAnchor);
+    edit.setTextCursor(cursor);
+    edit.setHeadingLevel(5);
+    // In the end, both lines should change the heading (even before the selection, i.e. 'b'!)
+    cursor.setPosition(3);
+    edit.setTextCursor(cursor);
+    QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 5);
+    QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Bold));
+    // (and after the selection, i.e. 'f'!)
+    cursor.setPosition(10);
+    edit.setTextCursor(cursor);
+    QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 5);
+    QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Bold));
+}

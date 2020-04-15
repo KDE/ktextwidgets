@@ -92,6 +92,8 @@ public:
     KToggleAction *action_text_superscript = nullptr;
     KToggleAction *action_text_subscript = nullptr;
 
+    KSelectAction *action_heading_level = nullptr;
+
     //
     // Normal functions
     //
@@ -143,6 +145,10 @@ public:
      */
     void _k_setListStyle(int index);
 
+    /**
+     * Change the heading level of a current line to a level given by @a level
+     */
+    void _k_setHeadingLevel(int level);
 };
 //@endcond
 
@@ -487,6 +493,27 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_text_superscript = nullptr;
     }
 
+    if (d->richTextSupport & SupportHeading) {
+        // TODO: an icon maybe?
+        d->action_heading_level = new KSelectAction(i18nc("@title:menu", "Heading Level"), this);
+        const QStringList headingLevels = {i18nc("@item:inmenu no heading",                 "Basic text"),
+                                           i18nc("@item:inmenu heading level 1 (largest)",  "Title"),
+                                           i18nc("@item:inmenu heading level 2",            "Subtitle"),
+                                           i18nc("@item:inmenu heading level 3",            "Section"),
+                                           i18nc("@item:inmenu heading level 4",            "Subsection"),
+                                           i18nc("@item:inmenu heading level 5",            "Paragraph"),
+                                           i18nc("@item:inmenu heading level 6 (smallest)", "Subparagraph")};
+
+        d->action_heading_level->setItems(headingLevels);
+        d->action_heading_level->setCurrentItem(0);
+        d->richTextActionList.append(d->action_heading_level);
+        d->action_heading_level->setObjectName(QStringLiteral("format_heading_level"));
+        connect(d->action_heading_level, QOverload<int>::of(&KSelectAction::triggered),
+                this, [this](int level){ d->_k_setHeadingLevel(level); });
+    } else {
+        d->action_heading_level = nullptr;
+    }
+
     disconnect(this, SIGNAL(currentCharFormatChanged(QTextCharFormat)),
                this, SLOT(_k_updateCharFormatActions(QTextCharFormat)));
     disconnect(this, SIGNAL(cursorPositionChanged()),
@@ -513,6 +540,12 @@ void KRichTextWidget::setActionsEnabled(bool enabled)
 void KRichTextWidget::Private::_k_setListStyle(int index)
 {
     q->setListStyle(index);
+    _k_updateMiscActions();
+}
+
+void KRichTextWidget::Private::_k_setHeadingLevel(int level)
+{
+    q->setHeadingLevel(level);
     _k_updateMiscActions();
 }
 
@@ -595,6 +628,10 @@ void KRichTextWidget::Private::_k_updateMiscActions()
         const Qt::LayoutDirection direction = q->textCursor().blockFormat().layoutDirection();
         action_direction_ltr->setChecked(direction == Qt::LeftToRight);
         action_direction_rtl->setChecked(direction == Qt::RightToLeft);
+    }
+
+    if (richTextSupport & SupportHeading) {
+        action_heading_level->setCurrentItem(q->textCursor().blockFormat().headingLevel());
     }
 }
 

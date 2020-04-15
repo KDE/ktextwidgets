@@ -343,6 +343,16 @@ public Q_SLOTS:
     void setTextSubScript(bool subscript);
 
     /**
+     * Sets the heading level of a current block or selection
+     *
+     * @param level Heading level (value should be between 0 and 6)
+     * (0 is "normal text", 1 is the largest heading, 6 is the smallest one)
+     *
+     * @since 5.70
+     */
+    void setHeadingLevel(int level);
+
+    /**
      * @since 4.10
      * Because of binary compatibility constraints, insertPlainText
      * is not virtual. Therefore it must dynamically detect and call this slot.
