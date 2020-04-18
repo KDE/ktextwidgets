@@ -257,20 +257,49 @@ void KRichTextEditTest::testHeading()
     KRichTextEdit edit;
     // Create two lines, make second one a heading
     QTest::keyClicks(&edit, QStringLiteral("a\rb"));
+    // Make sure heading actually changes
+    edit.setHeadingLevel(1);
+    QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 1);
+    QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Bold));
+    // Make sure it doesn't clutter undo stack (a single undo is sufficient)
+    edit.undo();
+    QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 0);
+    QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Normal));
+
+    // Set heading & keep writing, the text remains a heading
     edit.setHeadingLevel(2);
     QTest::keyClicks(&edit, QStringLiteral("cd"));
     QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 2);
     QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Bold));
+
     // Now add a new line, make sure it's no longer a heading
+    QTest::keyClick(&edit, '\r');
+    QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 0);
+    QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Normal));
+
+    // Make sure creating new line is also undoable
+    edit.undo();
+    QCOMPARE(edit.textCursor().position(), 5);
+    QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 2);
+    QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Bold));
+
+    // Add a new line and some more text, make sure it's still normal
     QTest::keyClicks(&edit, QStringLiteral("\ref"));
     QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 0);
     QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Normal));
+
     // Go to beginning of this line, press Backspace -> lines should be merged,
     // current line should become a heading
     QTest::keyClick(&edit, Qt::Key_Home);
     QTest::keyClick(&edit, Qt::Key_Backspace);
     QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 2);
     QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Bold));
+    // Make sure this is also undoable
+    edit.undo();
+    QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 0);
+    QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Normal));
+    // Return it back
+    QTest::keyClick(&edit, Qt::Key_Backspace);
     // The line is now "bcd|ef", "|" is cursor. Press Enter, the second line should remain a heading
     QTest::keyClick(&edit, Qt::Key_Return);
     QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 2);
@@ -285,20 +314,25 @@ void KRichTextEditTest::testHeading()
     cursor.movePosition(QTextCursor::EndOfBlock);
     edit.setTextCursor(cursor);
     QTest::keyClick(&edit, Qt::Key_Delete);
-    cursor.movePosition(QTextCursor::EndOfBlock);
     QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 2);
     QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Bold));
+    // Make sure this is also undoable
+    edit.undo();
+    QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 0);
+    QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Normal));
 
     // Now playing with selection. The contents are currently:
     // ---
     // a
-    // bcdef
+    // bcd
+    // ef
+    // gh
     // ---
     // Let's add a new line 'gh', select everything between "c" and "g"
     // and change heading. It should apply to both lines
     QTest::keyClicks(&edit, QStringLiteral("\rgh"));
     cursor.setPosition(4, QTextCursor::MoveAnchor);
-    cursor.setPosition(9, QTextCursor::KeepAnchor);
+    cursor.setPosition(10, QTextCursor::KeepAnchor);
     edit.setTextCursor(cursor);
     edit.setHeadingLevel(5);
     // In the end, both lines should change the heading (even before the selection, i.e. 'b'!)
@@ -307,7 +341,7 @@ void KRichTextEditTest::testHeading()
     QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 5);
     QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Bold));
     // (and after the selection, i.e. 'f'!)
-    cursor.setPosition(10);
+    cursor.setPosition(11);
     edit.setTextCursor(cursor);
     QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 5);
     QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Bold));

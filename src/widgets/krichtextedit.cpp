@@ -346,6 +346,7 @@ void KRichTextEdit::setHeadingLevel(int level)
     const int sizeAdjustment = boundedLevel > 0 ? 5 - boundedLevel: 0;
 
     QTextCursor cursor = textCursor();
+    cursor.beginEditBlock();
 
     QTextBlockFormat blkfmt;
     blkfmt.setHeadingLevel(boundedLevel);
@@ -373,6 +374,7 @@ void KRichTextEdit::setHeadingLevel(int level)
     selectCursor.mergeCharFormat(chrfmt);
 
     cursor.mergeBlockCharFormat(chrfmt);
+    cursor.endEditBlock();
     setTextCursor(cursor);
     setFocus();
     d->activateRichText();
@@ -536,6 +538,25 @@ void KRichTextEdit::keyPressEvent(QKeyEvent *event)
         handled = d->nestedListHelper->handleBeforeKeyPressEvent(event);
     }
 
+    // If a line was merged with previous (next) one, with different heading level,
+    // the style should also be adjusted accordingly (i.e. merged)
+    if ((event->key() == Qt::Key_Backspace && textCursor().atBlockStart() &&
+            (textCursor().blockFormat().headingLevel() != textCursor().block().previous().blockFormat().headingLevel()))
+     || (event->key() == Qt::Key_Delete && textCursor().atBlockEnd() &&
+            (textCursor().blockFormat().headingLevel() != textCursor().block().next().blockFormat().headingLevel())))
+    {
+        QTextCursor cursor = textCursor();
+        cursor.beginEditBlock();
+        if (event->key() == Qt::Key_Delete) {
+            cursor.deleteChar();
+        } else {
+            cursor.deletePreviousChar();
+        }
+        setHeadingLevel(cursor.blockFormat().headingLevel());
+        cursor.endEditBlock();
+        handled = true;
+    }
+
     if (!handled) {
         KTextEdit::keyPressEvent(event);
     }
@@ -543,14 +564,12 @@ void KRichTextEdit::keyPressEvent(QKeyEvent *event)
     // Match the behavior of office suites: newline after header switches to normal text
     if ((event->key() == Qt::Key_Return)
             && (textCursor().blockFormat().headingLevel() > 0)
-            && (textCursor().atBlockEnd())) {
+            && (textCursor().atBlockEnd()))
+    {
+        // it should be undoable together with actual "return" keypress
+        textCursor().joinPreviousEditBlock();
         setHeadingLevel(0);
-    }
-
-    // If a line was merged with previous one, with different heading level,
-    // the style should also be adjusted accordingly (i.e. merged)
-    if ((event->key() == Qt::Key_Backspace) || (event->key() == Qt::Key_Delete)) {
-        setHeadingLevel(textCursor().blockFormat().headingLevel());
+        textCursor().endEditBlock();
     }
 
     if (textCursor().currentList()) {
