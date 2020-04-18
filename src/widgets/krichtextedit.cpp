@@ -530,7 +530,6 @@ void KRichTextEdit::updateLink(const QString &linkUrl, const QString &linkText)
 void KRichTextEdit::keyPressEvent(QKeyEvent *event)
 {
     bool handled = false;
-    textCursor().beginEditBlock();
     if (textCursor().currentList()) {
         // handled is False if the key press event was not handled or not completely
         // handled by the Helper class.
@@ -557,7 +556,6 @@ void KRichTextEdit::keyPressEvent(QKeyEvent *event)
     if (textCursor().currentList()) {
         d->nestedListHelper->handleAfterKeyPressEvent(event);
     }
-    textCursor().endEditBlock();
     emit cursorPositionChanged();
 }
 

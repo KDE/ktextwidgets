@@ -125,7 +125,6 @@ bool NestedListHelper::handleAfterKeyPressEvent(QKeyEvent *event)
 
             // No need to reformatList in this case. reformatList is slow.
             if ((event->key() == Qt::Key_Return) || (event->key() == Qt::Key_Backspace)) {
-                reformatBoundingItemSpacing();
                 handled = true;
             }
         } else {
@@ -163,7 +162,6 @@ bool NestedListHelper::handleAfterDropEvent(QDropEvent *dropEvent)
 //         list.add( droppedBlock );
     }
 
-    reformatBoundingItemSpacing();
     return true;
 }
 
@@ -272,8 +270,6 @@ void NestedListHelper::handleOnIndentMore()
         cursor.createList(listFmt);
         reformatList();
     }
-
-    reformatBoundingItemSpacing();
 }
 
 void NestedListHelper::handleOnIndentLess()
@@ -295,7 +291,6 @@ void NestedListHelper::handleOnIndentLess()
         cursor.setBlockFormat(bfmt);
         reformatList(cursor.block().next());
     }
-    reformatBoundingItemSpacing();
 }
 
 void NestedListHelper::handleOnBulletType(int styleIndex)
@@ -322,73 +317,7 @@ void NestedListHelper::handleOnBulletType(int styleIndex)
         QTextBlockFormat bfmt;
         bfmt.setObjectIndex(-1);
         cursor.setBlockFormat(bfmt);
-        reformatBoundingItemSpacing();
     }
 
-    reformatBoundingItemSpacing();
     reformatList();
-}
-
-void NestedListHelper::reformatBoundingItemSpacing(QTextBlock block)
-{
-    // This is a workaround for qt bug 201228. Spacing between items is not kept
-    // consistent.
-    // Fixed scheduled for qt4.5
-    // -- Stephen Kelly, 8th June 2008
-
-    int nextBlockTopMargin = listNoMargin;
-    int previousBlockBottomMargin = listNoMargin;
-    int thisBlockBottomMargin = listBottomMargin;
-    int thisBlockTopMargin = listTopMargin;
-    bool prevBlockValid = block.previous().isValid();
-    bool nextBlockValid = block.next().isValid();
-
-    if (block.textList()) {
-        if (prevBlockValid && block.previous().textList()) {
-            thisBlockTopMargin = listNoMargin;
-        }
-
-        if (nextBlockValid && block.next().textList()) {
-            thisBlockBottomMargin = listNoMargin;
-        }
-    } else {
-        if (prevBlockValid && !block.previous().textList()) {
-            thisBlockTopMargin = listNoMargin;
-        }
-        if (nextBlockValid && !block.next().textList()) {
-            thisBlockBottomMargin = listNoMargin;
-        }
-
-    }
-    QTextBlockFormat fmt;
-    QTextCursor cursor;
-
-    fmt = block.blockFormat();
-    fmt.setBottomMargin(thisBlockBottomMargin);
-    fmt.setTopMargin(thisBlockTopMargin);
-    cursor = QTextCursor(block);
-    cursor.setBlockFormat(fmt);
-
-    if (nextBlockValid) {
-        block = block.next();
-        fmt = block.blockFormat();
-        fmt.setTopMargin(nextBlockTopMargin);
-        cursor = QTextCursor(block);
-        cursor.setBlockFormat(fmt);
-
-        block = block.previous();
-    }
-    if (prevBlockValid) {
-        block = block.previous();
-        fmt = block.blockFormat();
-        fmt.setBottomMargin(previousBlockBottomMargin);
-        cursor = QTextCursor(block);
-        cursor.setBlockFormat(fmt);
-    }
-}
-
-void NestedListHelper::reformatBoundingItemSpacing()
-{
-    reformatBoundingItemSpacing(topOfSelection().block());
-    reformatBoundingItemSpacing(bottomOfSelection().block());
 }
