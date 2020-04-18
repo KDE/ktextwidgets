@@ -27,6 +27,7 @@
 #include <QTextCursor>
 #include <QTextList>
 #include <QFont>
+#include <QScrollBar>
 
 QTEST_MAIN(KRichTextEditTest)
 
@@ -310,4 +311,22 @@ void KRichTextEditTest::testHeading()
     edit.setTextCursor(cursor);
     QCOMPARE(edit.textCursor().blockFormat().headingLevel(), 5);
     QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Bold));
+}
+
+void KRichTextEditTest::testRulerScroll()
+{
+    // This is a test for bug 195828
+    KRichTextEdit edit;
+    // Add some lines, so that scroll definitely appears
+    for (int i = 0; i < 100; i++) {
+        QTest::keyClicks(&edit, QStringLiteral("New line\r"));
+    }
+    // Widget has to be shown for the scrollbar to be adjusted
+    edit.show();
+    // Ensure the scrollbar actually appears
+    QVERIFY(edit.verticalScrollBar()->value() > 0);
+
+    edit.insertHorizontalRule();
+    // Make sure scrollbar didn't jump to the top
+    QVERIFY(edit.verticalScrollBar()->value() > 0);
 }

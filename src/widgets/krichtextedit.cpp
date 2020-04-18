@@ -168,9 +168,9 @@ void KRichTextEdit::insertHorizontalRule()
     cursor.beginEditBlock();
     cursor.insertHtml(QStringLiteral("<hr>"));
     cursor.insertBlock(bf, cf);
+    cursor.endEditBlock();
     setTextCursor(cursor);
     d->activateRichText();
-    cursor.endEditBlock();
 }
 
 void KRichTextEdit::alignLeft()
