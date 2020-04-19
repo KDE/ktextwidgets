@@ -55,6 +55,7 @@ public:
     /**
      * These flags describe what actions will be created by createActions() after
      * passing a combination of these flags to setRichTextSupport().
+     * @see RichTextSupport
      */
     enum RichTextSupportValues {
         /**
@@ -239,6 +240,9 @@ public:
          */
         FullSupport = 0xffffffff
     };
+    /**
+     * Stores a combination of #RichTextSupportValues values.
+     */
     Q_DECLARE_FLAGS(RichTextSupport, RichTextSupportValues)
     Q_FLAG(RichTextSupport)
 

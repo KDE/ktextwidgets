@@ -107,7 +107,9 @@ class KTEXTWIDGETS_EXPORT KFind :
 
 public:
 
-    /// the options
+    /**
+     * @see SearchOptions
+     */
     enum Options {
         WholeWordsOnly = 1,     ///< Match whole words only.
         FromCursor = 2,         ///< Start from current cursor position.
@@ -120,6 +122,9 @@ public:
         // User extensions can use boolean options above this value.
         MinimumUserOption = 65536 ///< user options start with this bit
     };
+    /**
+     * Stores a combination of #Options values.
+     */
     Q_DECLARE_FLAGS(SearchOptions, Options)
 
     /**
