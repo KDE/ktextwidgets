@@ -533,9 +533,7 @@ void KRichTextEdit::keyPressEvent(QKeyEvent *event)
 {
     bool handled = false;
     if (textCursor().currentList()) {
-        // handled is False if the key press event was not handled or not completely
-        // handled by the Helper class.
-        handled = d->nestedListHelper->handleBeforeKeyPressEvent(event);
+        handled = d->nestedListHelper->handleKeyPressEvent(event);
     }
 
     // If a line was merged with previous (next) one, with different heading level,
@@ -572,9 +570,6 @@ void KRichTextEdit::keyPressEvent(QKeyEvent *event)
         textCursor().endEditBlock();
     }
 
-    if (textCursor().currentList()) {
-        d->nestedListHelper->handleAfterKeyPressEvent(event);
-    }
     emit cursorPositionChanged();
 }
 

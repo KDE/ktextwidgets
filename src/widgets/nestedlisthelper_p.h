@@ -61,26 +61,16 @@ public:
      *
      * Handles a key press before it is processed by the text edit widget.
      *
-     * Currently this causes a backspace at the beginning of a line or with a
-     * multi-line selection to decrease the nesting level of the list.
+     * This includes:
+     *   1. Backspace at the beginning of a line decreases nesting level
+     *   2. Return at the empty list element decreases nesting level
+     *   3. Tab at the beginning of a line OR with a multi-line selection
+     * increases nesting level
      *
      * @param event The event to be handled
      * @return Whether the event was completely handled by this method.
      */
-    bool handleBeforeKeyPressEvent(QKeyEvent *event);
-
-    /**
-     *
-     * Handles a key press after it is processed by the text edit widget.
-     *
-     * Currently this causes a Return at the end of the last list item, or
-     * a Backspace after the last list item to recalculate the spacing
-     * between the list items.
-     *
-     * @param event The event to be handled
-     * @return Whether the event was completely handled by this method.
-     */
-    bool handleAfterKeyPressEvent(QKeyEvent *event);
+    bool handleKeyPressEvent(QKeyEvent *event);
 
     bool handleAfterDropEvent(QDropEvent *event);
 
@@ -119,7 +109,8 @@ public:
     /**
      * \brief Check whether the current item in the list may be dedented.
      *
-     * An item may be dedented if it is part of a list. Otherwise it can't be.
+     * An item may be dedented if it is part of a list.
+     * The next item must be at the same or lesser level.
      *
      * @sa canIndent
      *
@@ -128,18 +119,13 @@ public:
     bool canDedent() const;
 
 private:
-    QTextCursor topOfSelection();
-    QTextCursor bottomOfSelection();
+    QTextCursor topOfSelection() const;
+    QTextCursor bottomOfSelection() const;
     void processList(QTextList *list);
     void reformatList(QTextBlock block);
     void reformatList();
 
     QTextEdit *textEdit = nullptr;
-
-    int listBottomMargin;
-    int listTopMargin;
-    int listNoMargin;
-
 };
 
 //@endcond

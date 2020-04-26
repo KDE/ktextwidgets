@@ -31,107 +31,69 @@
 NestedListHelper::NestedListHelper(QTextEdit *te)
 {
     textEdit = te;
-    listBottomMargin = 12;
-    listTopMargin = 12;
-    listNoMargin = 0;
 }
 
 NestedListHelper::~NestedListHelper()
 {
 }
 
-bool NestedListHelper::handleBeforeKeyPressEvent(QKeyEvent *event)
+bool NestedListHelper::handleKeyPressEvent(QKeyEvent *event)
 {
     QTextCursor cursor = textEdit->textCursor();
-
-    // Only attempt to handle Backspace while on a list
-    if ((event->key() != Qt::Key_Backspace)
-            || (!cursor.currentList())) {
+    if (!cursor.currentList()) {
         return false;
     }
 
-    bool handled = false;
-
-    if (!cursor.hasSelection()
-            && cursor.currentList()
-            && event->key() == Qt::Key_Backspace
-            && cursor.atBlockStart()) {
+    if (event->key() == Qt::Key_Backspace && !cursor.hasSelection() && cursor.atBlockStart() && canDedent()) {
         handleOnIndentLess();
-        handled = true;
+        return true;
     }
 
-    return handled;
+    if (event->key() == Qt::Key_Return && !cursor.hasSelection() && cursor.block().text().isEmpty() && canDedent()) {
+        handleOnIndentLess();
+        return true;
+    }
+
+    if (event->key() == Qt::Key_Tab && (cursor.atBlockStart() || cursor.hasSelection()) && canIndent()) {
+        handleOnIndentMore();
+        return true;
+    }
+
+    return false;
 }
 
 bool NestedListHelper::canIndent() const
 {
-    if ((textEdit->textCursor().block().isValid())
-//            && (  textEdit->textCursor().block().previous().isValid() )
-       ) {
-        QTextBlock block = textEdit->textCursor().block();
-        QTextBlock prevBlock = textEdit->textCursor().block().previous();
-        if (block.textList()) {
-            if (prevBlock.textList()) {
-                return block.textList()->format().indent() <= prevBlock.textList()->format().indent();
-            }
-        } else {
-            return true;
-        }
+    const QTextCursor cursor = topOfSelection();
+    const QTextBlock block = cursor.block();
+    if (!block.isValid()) {
+        return false;
     }
-    return false;
+    if (!block.textList()) {
+        return true;
+    }
+    const QTextBlock prevBlock = block.previous();
+    if (!prevBlock.textList()) {
+        return false;
+    }
+    return block.textList()->format().indent() <= prevBlock.textList()->format().indent();
 }
 
 bool NestedListHelper::canDedent() const
 {
-    QTextBlock thisBlock = textEdit->textCursor().block();
-    QTextBlock nextBlock = thisBlock.next();
-    if (thisBlock.isValid()) {
-        int nextBlockIndent = 0;
-        if (nextBlock.isValid() && nextBlock.textList()) {
-            nextBlockIndent = nextBlock.textList()->format().indent();
-        }
-        if (thisBlock.textList()) {
-            const int thisBlockIndent = thisBlock.textList()->format().indent();
-            if (thisBlockIndent >= nextBlockIndent) {
-                return thisBlock.textList()->format().indent() > 0;
-            }
-        }
-    }
-    return false;
-
-}
-
-bool NestedListHelper::handleAfterKeyPressEvent(QKeyEvent *event)
-{
-    // Only attempt to handle Backspace and Return
-    if ((event->key() != Qt::Key_Backspace)
-            && (event->key() != Qt::Key_Return)) {
+    const QTextCursor cursor = bottomOfSelection();
+    const QTextBlock block = cursor.block();
+    if (!block.isValid()) {
         return false;
     }
-
-    QTextCursor cursor = textEdit->textCursor();
-    bool handled = false;
-
-    if (!cursor.hasSelection() && cursor.currentList()) {
-
-        // Check if we're on the last list item.
-        // itemNumber is zero indexed
-        QTextBlock currentBlock = cursor.block();
-        if (cursor.currentList()->count() == cursor.currentList()->itemNumber(currentBlock) + 1) {
-            // Last block in this list, but may have just gained another list below.
-            if (currentBlock.next().textList()) {
-                reformatList();
-            }
-
-            // No need to reformatList in this case. reformatList is slow.
-            if ((event->key() == Qt::Key_Return) || (event->key() == Qt::Key_Backspace)) {
-                handled = true;
-            }
-        } else {
-            reformatList();
-        }
+    if (!block.textList() || block.textList()->format().indent() <= 0) {
+        return false;
     }
-    return handled;
+    const QTextBlock nextBlock = block.next();
+    if (!nextBlock.textList()) {
+        return true;
+    }
+    return block.textList()->format().indent() >= nextBlock.textList()->format().indent();
 }
 
 bool NestedListHelper::handleAfterDropEvent(QDropEvent *dropEvent)
@@ -219,7 +181,7 @@ void NestedListHelper::reformatList()
     reformatList(cursor.block());
 }
 
-QTextCursor NestedListHelper::topOfSelection()
+QTextCursor NestedListHelper::topOfSelection() const
 {
     QTextCursor cursor = textEdit->textCursor();
 
@@ -229,7 +191,7 @@ QTextCursor NestedListHelper::topOfSelection()
     return cursor;
 }
 
-QTextCursor NestedListHelper::bottomOfSelection()
+QTextCursor NestedListHelper::bottomOfSelection() const
 {
     QTextCursor cursor = textEdit->textCursor();
 
@@ -242,6 +204,7 @@ QTextCursor NestedListHelper::bottomOfSelection()
 void NestedListHelper::handleOnIndentMore()
 {
     QTextCursor cursor = textEdit->textCursor();
+    cursor.beginEditBlock();
 
     QTextListFormat listFmt;
     if (!cursor.currentList()) {
@@ -270,6 +233,7 @@ void NestedListHelper::handleOnIndentMore()
         cursor.createList(listFmt);
         reformatList();
     }
+    cursor.endEditBlock();
 }
 
 void NestedListHelper::handleOnIndentLess()
@@ -279,6 +243,7 @@ void NestedListHelper::handleOnIndentLess()
     if (!currentList) {
         return;
     }
+    cursor.beginEditBlock();
     QTextListFormat listFmt;
     listFmt = currentList->format();
     if (listFmt.indent() > 1) {
@@ -291,6 +256,7 @@ void NestedListHelper::handleOnIndentLess()
         cursor.setBlockFormat(bfmt);
         reformatList(cursor.block().next());
     }
+    cursor.endEditBlock();
 }
 
 void NestedListHelper::handleOnBulletType(int styleIndex)
