@@ -364,3 +364,109 @@ void KRichTextEditTest::testRulerScroll()
     // Make sure scrollbar didn't jump to the top
     QVERIFY(edit.verticalScrollBar()->value() > 0);
 }
+
+void KRichTextEditTest::testNestedLists()
+{
+    KRichTextEdit edit;
+    // Simplest test: create a list with a single element
+    QTest::keyClicks(&edit, QStringLiteral("el1"));
+    edit.setListStyle(-static_cast<int>(QTextListFormat::ListSquare));
+    QVERIFY(edit.textCursor().currentList());
+    QCOMPARE(edit.textCursor().currentList()->format().style(), QTextListFormat::ListSquare);
+    // It should not be indentable, as there is nothing above
+    QVERIFY(!edit.canIndentList());
+    // But it should be dedentable
+    QVERIFY(edit.canDedentList());
+    // Press enter, a new element should be added
+    QTest::keyClicks(&edit, QStringLiteral("\rel2"));
+    QVERIFY(edit.textCursor().currentList());
+    QCOMPARE(edit.textCursor().currentList()->format().style(), QTextListFormat::ListSquare);
+    // Change indentation
+    edit.indentListMore();
+    edit.setListStyle(-static_cast<int>(QTextListFormat::ListCircle));
+    QCOMPARE(edit.textCursor().currentList()->format().indent(), 2);
+    QCOMPARE(edit.textCursor().currentList()->format().style(), QTextListFormat::ListCircle);
+    // And another one; let's then change the style of "3" and see if "2" have also changed style
+    QTest::keyClicks(&edit, QStringLiteral("\rel3"));
+    edit.setListStyle(-static_cast<int>(QTextListFormat::ListDecimal));
+    edit.moveCursor(QTextCursor::PreviousBlock);
+    QCOMPARE(edit.textCursor().currentList()->format().style(), QTextListFormat::ListDecimal);
+    // Now add another element, and dedent it, so the list should look like following:
+    // [] el1
+    //    1. el2
+    //    2. el3
+    // [] el4
+    edit.moveCursor(QTextCursor::End);
+    QTest::keyClicks(&edit, QStringLiteral("\rel4"));
+    edit.indentListLess();
+    QCOMPARE(edit.textCursor().currentList()->format().style(), QTextListFormat::ListSquare);
+    // Let's change the style to disc and see if first element have also changed the style
+    edit.setListStyle(-static_cast<int>(QTextListFormat::ListDisc));
+    edit.moveCursor(QTextCursor::Start);
+    QCOMPARE(edit.textCursor().currentList()->format().style(), QTextListFormat::ListDisc);
+    // Now let's play with selection. First we add couple subelements below, so the list is:
+    // *  el1
+    //    1. el2
+    //    2. el3
+    // *  el4
+    //    o  el5
+    //    o  el6
+    edit.moveCursor(QTextCursor::End);
+    QTest::keyClicks(&edit, QStringLiteral("\rel5"));
+    edit.indentListMore();
+    edit.setListStyle(-static_cast<int>(QTextListFormat::ListCircle));
+    QTest::keyClicks(&edit, QStringLiteral("\rel6"));
+
+    // Let's select (el3-el5) and indent them. It should become:
+    // * el1
+    //   1. el2
+    //      1. el3
+    //   2. el4
+    //      o  el5
+    //   3. el6
+    QTextCursor cursor(edit.document());
+    cursor.setPosition(9);
+    cursor.setPosition(17, QTextCursor::KeepAnchor);
+    edit.setTextCursor(cursor);
+    edit.indentListMore();
+    edit.moveCursor(QTextCursor::End);
+    QCOMPARE(edit.textCursor().currentList()->count(), 3);
+    QCOMPARE(edit.textCursor().currentList()->format().style(), QTextListFormat::ListDecimal);
+    // Now select el2-el5 and dedent them. It should become:
+    // *  el1
+    // *  el2
+    //    1. el3
+    // *  el4
+    //    o  el5
+    //    o  el6
+    cursor.setPosition(6);
+    cursor.setPosition(18, QTextCursor::KeepAnchor);
+    edit.setTextCursor(cursor);
+    edit.indentListLess();
+    edit.moveCursor(QTextCursor::End);
+    QCOMPARE(edit.textCursor().currentList()->count(), 2);
+    QCOMPARE(edit.textCursor().currentList()->format().style(), QTextListFormat::ListCircle);
+    // point at "el4"
+    cursor.setPosition(13);
+    QCOMPARE(cursor.currentList()->count(), 3);
+    QCOMPARE(cursor.currentList()->format().style(), QTextListFormat::ListDisc);
+    // Select el4 && el5, dedent it, so el4 becomes a simple text:
+    // *  el1
+    // *  el2
+    //    1. el3
+    // el4
+    // o  el5
+    //    o  el6
+    cursor.setPosition(17, QTextCursor::KeepAnchor);
+    edit.setTextCursor(cursor);
+    edit.indentListLess();
+    // point cursor at "el4"
+    cursor.setPosition(13);
+    QVERIFY(!cursor.currentList());
+    // point at "el5", make sure it's a separate list now
+    cursor.setPosition(16);
+    QCOMPARE(cursor.currentList()->count(), 1);
+    QCOMPARE(cursor.currentList()->format().style(), QTextListFormat::ListCircle);
+    // Make sure the selection is not dedentable anymore
+    QVERIFY(!edit.canDedentList());
+}

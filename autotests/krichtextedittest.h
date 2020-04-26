@@ -35,6 +35,7 @@ private Q_SLOTS:
     void testHTMLUnorderedLists();
     void testHeading();
     void testRulerScroll();
+    void testNestedLists();
 };
 
 #endif

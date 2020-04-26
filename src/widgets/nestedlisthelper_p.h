@@ -75,14 +75,10 @@ public:
     bool handleAfterDropEvent(QDropEvent *event);
 
     /**
-     * Increases the indent (nesting level) on the current list item or selection.
+     * Changes the indent (nesting level) on a current list item or selection
+     * by the value @p delta (typically, +1 or -1)
      */
-    void handleOnIndentMore();
-
-    /**
-     * Decreases the indent (nesting level) on the current list item or selection.
-     */
-    void handleOnIndentLess();
+    void changeIndent(int delta);
 
     /**
      * Changes the style of the current list or creates a new list with

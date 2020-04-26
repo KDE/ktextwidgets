@@ -45,17 +45,17 @@ bool NestedListHelper::handleKeyPressEvent(QKeyEvent *event)
     }
 
     if (event->key() == Qt::Key_Backspace && !cursor.hasSelection() && cursor.atBlockStart() && canDedent()) {
-        handleOnIndentLess();
+        changeIndent(-1);
         return true;
     }
 
     if (event->key() == Qt::Key_Return && !cursor.hasSelection() && cursor.block().text().isEmpty() && canDedent()) {
-        handleOnIndentLess();
+        changeIndent(-1);
         return true;
     }
 
     if (event->key() == Qt::Key_Tab && (cursor.atBlockStart() || cursor.hasSelection()) && canIndent()) {
-        handleOnIndentMore();
+        changeIndent(+1);
         return true;
     }
 
@@ -201,61 +201,72 @@ QTextCursor NestedListHelper::bottomOfSelection() const
     return cursor;
 }
 
-void NestedListHelper::handleOnIndentMore()
+void NestedListHelper::changeIndent(int delta)
 {
     QTextCursor cursor = textEdit->textCursor();
     cursor.beginEditBlock();
 
-    QTextListFormat listFmt;
-    if (!cursor.currentList()) {
+    const int top = qMin(cursor.position(), cursor.anchor());
+    const int bottom = qMax(cursor.position(), cursor.anchor());
 
-        QTextListFormat::Style style;
-        cursor = topOfSelection();
-        cursor.movePosition(QTextCursor::PreviousBlock);
-        if (cursor.currentList()) {
-            style = cursor.currentList()->format().style();
+    // A reformatList should be called on the block inside selection
+    // with the lowest indentation level
+    int minIndentPosition;
+    int minIndent = -1;
+
+    // Changing indentation of all blocks between top and bottom
+    cursor.setPosition(top);
+    do {
+        QTextList *list = cursor.currentList();
+        // Setting up listFormat
+        QTextListFormat listFmt;
+        if (!list) {
+            if (delta > 0) {
+                // No list, we're increasing indentation -> create a new one
+                listFmt.setStyle(QTextListFormat::ListDisc);
+                listFmt.setIndent(delta);
+            }
+            // else do nothing
         } else {
-
-            cursor = bottomOfSelection();
-            cursor.movePosition(QTextCursor::NextBlock);
-
-            if (cursor.currentList()) {
-                style = cursor.currentList()->format().style();
+            const int newIndent = list->format().indent() + delta;
+            if (newIndent > 0) {
+                listFmt = list->format();
+                listFmt.setIndent(newIndent);
             } else {
-                style = QTextListFormat::ListDisc;
+                listFmt.setIndent(0);
             }
         }
-        handleOnBulletType(style);
-    } else {
-        listFmt = cursor.currentList()->format();
-        listFmt.setIndent(listFmt.indent() + 1);
 
-        cursor.createList(listFmt);
-        reformatList();
-    }
-    cursor.endEditBlock();
-}
-
-void NestedListHelper::handleOnIndentLess()
-{
-    QTextCursor cursor = textEdit->textCursor();
-    QTextList *currentList = cursor.currentList();
-    if (!currentList) {
-        return;
-    }
-    cursor.beginEditBlock();
-    QTextListFormat listFmt;
-    listFmt = currentList->format();
-    if (listFmt.indent() > 1) {
-        listFmt.setIndent(listFmt.indent() - 1);
-        cursor.createList(listFmt);
+        if (listFmt.indent() > 0) {
+            // This block belongs to a list: here we create a new one
+            // for each block, and then let reformatList() sort it out
+            cursor.createList(listFmt);
+            if (minIndent == -1 || minIndent > listFmt.indent()) {
+                minIndent = listFmt.indent();
+                minIndentPosition = cursor.block().position();
+            }
+        } else {
+            // If the block belonged to a list, remove it from there
+            if (list) {
+                list->remove(cursor.block());
+            }
+            // The removal does not change the indentation, we need to do it explicitly
+            QTextBlockFormat blkFmt;
+            blkFmt.setIndent(0);
+            cursor.mergeBlockFormat(blkFmt);
+        }
+        if (!cursor.block().next().isValid()) {
+            break;
+        }
+        cursor.movePosition(QTextCursor::NextBlock);
+    } while (cursor.position() < bottom);
+    // Reformatting the whole list
+    if (minIndent != -1) {
+        cursor.setPosition(minIndentPosition);
         reformatList(cursor.block());
-    } else {
-        QTextBlockFormat bfmt;
-        bfmt.setObjectIndex(-1);
-        cursor.setBlockFormat(bfmt);
-        reformatList(cursor.block().next());
     }
+    cursor.setPosition(top);
+    reformatList(cursor.block());
     cursor.endEditBlock();
 }
 

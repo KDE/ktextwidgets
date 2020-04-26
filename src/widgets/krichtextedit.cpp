@@ -150,13 +150,13 @@ void KRichTextEdit::setListStyle(int _styleIndex)
 
 void KRichTextEdit::indentListMore()
 {
-    d->nestedListHelper->handleOnIndentMore();
+    d->nestedListHelper->changeIndent(+1);
     d->activateRichText();
 }
 
 void KRichTextEdit::indentListLess()
 {
-    d->nestedListHelper->handleOnIndentLess();
+    d->nestedListHelper->changeIndent(-1);
 }
 
 void KRichTextEdit::insertHorizontalRule()
