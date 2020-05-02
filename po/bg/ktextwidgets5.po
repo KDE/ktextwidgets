@@ -1,0 +1,764 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008, 2009.
+# Yasen Pramatarov <yasen@lindeas.com>, 2009, 2010, 2011, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-04-20 03:07+0200\n"
+"PO-Revision-Date: 2013-07-23 01:52+0300\n"
+"Last-Translator: Yasen Pramatarov <yasen@lindeas.com>\n"
+"Language-Team: Bulgarian <dict@ludost.net>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.5\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: dialogs/klinkdialog.cpp:52
+#, kde-format
+msgid "Manage Link"
+msgstr "Запис на адреса"
+
+#: dialogs/klinkdialog.cpp:60
+#, kde-format
+msgid "Link Text:"
+msgstr "Текст на връзката:"
+
+#: dialogs/klinkdialog.cpp:63
+#, kde-format
+msgid "Link URL:"
+msgstr "Адрес на връзката:"
+
+#: findreplace/kfind.cpp:61
+#, kde-format
+msgid "Find Next"
+msgstr "Търсене на следващ"
+
+#: findreplace/kfind.cpp:65
+#, kde-format
+msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
+msgstr "<qt>Търсене следващата поява на \"<b>%1</b>\"?</qt>"
+
+#: findreplace/kfind.cpp:669 findreplace/kfind.cpp:688
+#, kde-format
+msgid "1 match found."
+msgid_plural "%1 matches found."
+msgstr[0] "Намерено е 1 съвпадение."
+msgstr[1] "Намерени са %1 съвпадения."
+
+#: findreplace/kfind.cpp:671
+#, kde-format
+msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
+msgstr "<qt>Не са намерени съвпадения за \"<b>%1</b>\".</qt>"
+
+#: findreplace/kfind.cpp:690
+#, kde-format
+msgid "No matches found for '<b>%1</b>'."
+msgstr "Не са намерени съвпадения за \"<b>%1</b>\"."
+
+#: findreplace/kfind.cpp:694 findreplace/kreplace.cpp:419
+#, kde-format
+msgid "Beginning of document reached."
+msgstr "Достигнато е началото на документа."
+
+#: findreplace/kfind.cpp:696 findreplace/kreplace.cpp:421
+#, kde-format
+msgid "End of document reached."
+msgstr "Достигнат е края на документа."
+
+#: findreplace/kfind.cpp:704
+#, kde-format
+msgid "Continue from the end?"
+msgstr "Продължение от края?"
+
+#: findreplace/kfind.cpp:705
+#, kde-format
+msgid "Continue from the beginning?"
+msgstr "Продължение от началото?"
+
+#: findreplace/kfinddialog.cpp:47
+#, kde-format
+msgid "Find Text"
+msgstr "Търсене на текст"
+
+#: findreplace/kfinddialog.cpp:82
+#, kde-format
+msgctxt "@title:group"
+msgid "Find"
+msgstr "Търсене"
+
+#: findreplace/kfinddialog.cpp:85
+#, kde-format
+msgid "&Text to find:"
+msgstr "Търсене на т&екст:"
+
+#: findreplace/kfinddialog.cpp:89
+#, kde-format
+msgid "Regular e&xpression"
+msgstr "Ре&гулярен израз"
+
+#: findreplace/kfinddialog.cpp:90
+#, kde-format
+msgid "&Edit..."
+msgstr "&Редактиране..."
+
+#: findreplace/kfinddialog.cpp:99
+#, kde-format
+msgid "Replace With"
+msgstr "Замяна"
+
+#: findreplace/kfinddialog.cpp:102
+#, kde-format
+msgid "Replace&ment text:"
+msgstr "Текст за з&амяна:"
+
+#: findreplace/kfinddialog.cpp:106
+#, kde-format
+msgid "Use p&laceholders"
+msgstr "&Използване на параметър за поставяне"
+
+#: findreplace/kfinddialog.cpp:107
+#, kde-format
+msgid "Insert Place&holder"
+msgstr "&Вмъкване"
+
+#: findreplace/kfinddialog.cpp:116
+#, kde-format
+msgid "Options"
+msgstr "Настройки"
+
+#: findreplace/kfinddialog.cpp:119
+#, kde-format
+msgid "C&ase sensitive"
+msgstr "&Чувствителен регистър"
+
+#: findreplace/kfinddialog.cpp:120
+#, kde-format
+msgid "&Whole words only"
+msgstr "Търсене само на &цели думи"
+
+#: findreplace/kfinddialog.cpp:121
+#, kde-format
+msgid "From c&ursor"
+msgstr "Търсене от тек&ущата позиция"
+
+#: findreplace/kfinddialog.cpp:122
+#, kde-format
+msgid "Find &backwards"
+msgstr "Търсене в о&братна посока"
+
+#: findreplace/kfinddialog.cpp:123
+#, kde-format
+msgid "&Selected text"
+msgstr "Търсене само в &маркираното"
+
+#: findreplace/kfinddialog.cpp:130
+#, kde-format
+msgid "&Prompt on replace"
+msgstr "Потвър&ждение при замяна"
+
+#: findreplace/kfinddialog.cpp:197
+#, kde-format
+msgid "&Replace"
+msgstr "&Замяна"
+
+#: findreplace/kfinddialog.cpp:198
+#, kde-format
+msgid "Start replace"
+msgstr "Стартиране на замяната"
+
+#: findreplace/kfinddialog.cpp:199
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Replace</b> button, the text you entered above is "
+"searched for within the document and any occurrence is replaced with the "
+"replacement text.</qt>"
+msgstr ""
+"<qt>Ако натиснете бутона <b>Замяна</b>, документът ще бъде претърсен за "
+"въведения текст и ще бъде заменено със зададения текст.</qt>"
+
+#: findreplace/kfinddialog.cpp:203
+#, kde-format
+msgid "&Find"
+msgstr "&Търсене"
+
+#: findreplace/kfinddialog.cpp:204
+#, kde-format
+msgid "Start searching"
+msgstr "Стартиране на търсенето"
+
+#: findreplace/kfinddialog.cpp:205
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Find</b> button, the text you entered above is "
+"searched for within the document.</qt>"
+msgstr ""
+"<qt>Ако натиснете бутона <b>Търсене</b>, документът ще бъде претърсен за "
+"въведения текст.</qt>"
+
+#: findreplace/kfinddialog.cpp:211
+#, kde-format
+msgid ""
+"Enter a pattern to search for, or select a previous pattern from the list."
+msgstr "Въведете термин за търсене или изберете предишен термин от списъка."
+
+#: findreplace/kfinddialog.cpp:214
+#, kde-format
+msgid "If enabled, search for a regular expression."
+msgstr ""
+"Ако отметката е включена, при търсенето ще се използва регулярен израз."
+
+#: findreplace/kfinddialog.cpp:216
+#, kde-format
+msgid "Click here to edit your regular expression using a graphical editor."
+msgstr "Редактиране на регулярен израз чрез графичен редактор."
+
+#: findreplace/kfinddialog.cpp:218
+#, kde-format
+msgid "Enter a replacement string, or select a previous one from the list."
+msgstr "Въведете низ за замяна или изберете предишен от списъка."
+
+#: findreplace/kfinddialog.cpp:220
+#, kde-format
+msgid ""
+"<qt>If enabled, any occurrence of <code><b>\\N</b></code>, where <code><b>N</"
+"b></code> is an integer number, will be replaced with the corresponding "
+"capture (\"parenthesized substring\") from the pattern.<p>To include (a "
+"literal <code><b>\\N</b></code> in your replacement, put an extra backslash "
+"in front of it, like <code><b>\\\\N</b></code>.</p></qt>"
+msgstr ""
+"<qt>Ако отметката е включена, всяко срещане на <code><b>\\N</b></code>, "
+"където <code><b>N</b></code> е цяло число, ще бъде заменено със съответната "
+"стойност (\"подниз заграден в скоби\") от образеца.<p>За да включите знаците "
+"<code><b>\\N</b></code> в замяната, използвайте допълнителна обратна "
+"наклонена черта. Примерно <code><b>\\\\N</b></code></p>.</qt>"
+
+#: findreplace/kfinddialog.cpp:227
+#, kde-format
+msgid "Click for a menu of available captures."
+msgstr "Щракнете за меню от налични елементи."
+
+#: findreplace/kfinddialog.cpp:229
+#, kde-format
+msgid "Require word boundaries in both ends of a match to succeed."
+msgstr "Изискват се граници на дума в двата края на съвпадението."
+
+#: findreplace/kfinddialog.cpp:231
+#, kde-format
+msgid "Start searching at the current cursor location rather than at the top."
+msgstr "Търсене от позицията на курсора вместо от началото."
+
+#: findreplace/kfinddialog.cpp:233
+#, kde-format
+msgid "Only search within the current selection."
+msgstr "Търсене само в маркирания текст."
+
+#: findreplace/kfinddialog.cpp:235
+#, kde-format
+msgid ""
+"Perform a case sensitive search: entering the pattern 'Joe' will not match "
+"'joe' or 'JOE', only 'Joe'."
+msgstr "Игнориране на главни/малки букви при търсенето."
+
+#: findreplace/kfinddialog.cpp:238
+#, kde-format
+msgid "Search backwards."
+msgstr "Търсене в обратна посока."
+
+#: findreplace/kfinddialog.cpp:240
+#, kde-format
+msgid "Ask before replacing each match found."
+msgstr "Потвърждение при замяна."
+
+#: findreplace/kfinddialog.cpp:436
+#, kde-format
+msgid "Any Character"
+msgstr "Всеки знак"
+
+#: findreplace/kfinddialog.cpp:437
+#, kde-format
+msgid "Start of Line"
+msgstr "В началото на реда"
+
+#: findreplace/kfinddialog.cpp:438
+#, kde-format
+msgid "End of Line"
+msgstr "В края на реда"
+
+#: findreplace/kfinddialog.cpp:439
+#, kde-format
+msgid "Set of Characters"
+msgstr "Набор от знаци"
+
+#: findreplace/kfinddialog.cpp:440
+#, kde-format
+msgid "Repeats, Zero or More Times"
+msgstr "Повтаряне нула или повече пъти"
+
+#: findreplace/kfinddialog.cpp:441
+#, kde-format
+msgid "Repeats, One or More Times"
+msgstr "Повтаряне един или повече пъти"
+
+#: findreplace/kfinddialog.cpp:442
+#, kde-format
+msgid "Optional"
+msgstr "Незадължителен знак"
+
+#: findreplace/kfinddialog.cpp:443
+#, kde-format
+msgid "Escape"
+msgstr "Escape"
+
+#: findreplace/kfinddialog.cpp:444
+#, kde-format
+msgid "TAB"
+msgstr "TAB"
+
+#: findreplace/kfinddialog.cpp:445
+#, kde-format
+msgid "Newline"
+msgstr "Нов ред"
+
+#: findreplace/kfinddialog.cpp:446
+#, kde-format
+msgid "Carriage Return"
+msgstr "Връщане на каретката"
+
+#: findreplace/kfinddialog.cpp:447
+#, kde-format
+msgid "White Space"
+msgstr "Интервал"
+
+#: findreplace/kfinddialog.cpp:448
+#, kde-format
+msgid "Digit"
+msgstr "Цифра"
+
+#: findreplace/kfinddialog.cpp:548
+#, kde-format
+msgid "Complete Match"
+msgstr "Пълно съвпадение"
+
+#: findreplace/kfinddialog.cpp:552
+#, kde-format
+msgid "Captured Text (%1)"
+msgstr "Маркиран текст (%1)"
+
+#: findreplace/kfinddialog.cpp:560
+#, kde-format
+msgid "You must enter some text to search for."
+msgstr "Трябва да въведете текст за търсене."
+
+#: findreplace/kfinddialog.cpp:567
+#, kde-format
+msgid "Invalid PCRE pattern syntax."
+msgstr ""
+
+#: findreplace/kreplace.cpp:61 findreplace/kreplace.cpp:73
+#, kde-format
+msgid "Replace"
+msgstr "Замяна"
+
+#: findreplace/kreplace.cpp:69
+#, kde-format
+msgctxt "@action:button Replace all occurrences"
+msgid "&All"
+msgstr "&Всички"
+
+#: findreplace/kreplace.cpp:71
+#, kde-format
+msgid "&Skip"
+msgstr "Пр&опускане"
+
+#: findreplace/kreplace.cpp:90
+#, kde-format
+msgid "Replace '%1' with '%2'?"
+msgstr "Замяна на \"%1\" с \"%2\"?"
+
+#: findreplace/kreplace.cpp:179 findreplace/kreplace.cpp:413
+#, kde-format
+msgid "No text was replaced."
+msgstr "Не е заменен текст."
+
+#: findreplace/kreplace.cpp:181 findreplace/kreplace.cpp:415
+#, kde-format
+msgid "1 replacement done."
+msgid_plural "%1 replacements done."
+msgstr[0] "Направена беше 1 замяна."
+msgstr[1] "Направена бяха %1 замени."
+
+#: findreplace/kreplace.cpp:429
+#, kde-format
+msgid "Do you want to restart search from the end?"
+msgstr "Продължение от края на документа?"
+
+#: findreplace/kreplace.cpp:430
+#, kde-format
+msgid "Do you want to restart search at the beginning?"
+msgstr "Продължение от началото на документа?"
+
+#: findreplace/kreplace.cpp:433
+#, kde-format
+msgctxt "@action:button Restart find & replace"
+msgid "Restart"
+msgstr "Рестартиране"
+
+#: findreplace/kreplace.cpp:434
+#, kde-format
+msgctxt "@action:button Stop find & replace"
+msgid "Stop"
+msgstr "Стоп"
+
+#: findreplace/kreplacedialog.cpp:149
+#, kde-format
+msgid "Your replacement string is referencing a capture greater than '\\%1', "
+msgstr "Низът за замяна сочи към низ по-голям от \"\\%1\", "
+
+#: findreplace/kreplacedialog.cpp:151
+#, kde-format
+msgid "but your pattern only defines 1 capture."
+msgid_plural "but your pattern only defines %1 captures."
+msgstr[0] "но образецът за замяна дефинира 1 замяна."
+msgstr[1] "но образецът за замяна дефинира %1 замени."
+
+#: findreplace/kreplacedialog.cpp:153
+#, kde-format
+msgid "but your pattern defines no captures."
+msgstr "но образецът за замяна не дефинира замени."
+
+#: findreplace/kreplacedialog.cpp:154
+#, kde-format
+msgid ""
+"\n"
+"Please correct."
+msgstr ""
+"\n"
+"Моля, поправете грешката."
+
+#: widgets/krichtextwidget.cpp:210
+#, kde-format
+msgctxt "@action"
+msgid "Text &Color..."
+msgstr "Цвят на &текст..."
+
+#: widgets/krichtextwidget.cpp:211
+#, kde-format
+msgctxt "@label stroke color"
+msgid "Color"
+msgstr "Цвят"
+
+#: widgets/krichtextwidget.cpp:222
+#, kde-format
+msgctxt "@action"
+msgid "Text &Highlight..."
+msgstr "&Открояване на текст..."
+
+#: widgets/krichtextwidget.cpp:232
+#, kde-format
+msgctxt "@action"
+msgid "&Font"
+msgstr "&Шрифт"
+
+#: widgets/krichtextwidget.cpp:242
+#, kde-format
+msgctxt "@action"
+msgid "Font &Size"
+msgstr "Ра&змер на иконите"
+
+#: widgets/krichtextwidget.cpp:252
+#, kde-format
+msgctxt "@action boldify selected text"
+msgid "&Bold"
+msgstr "&Получер"
+
+#: widgets/krichtextwidget.cpp:266
+#, kde-format
+msgctxt "@action italicize selected text"
+msgid "&Italic"
+msgstr "&Курсив"
+
+#: widgets/krichtextwidget.cpp:281
+#, kde-format
+msgctxt "@action underline selected text"
+msgid "&Underline"
+msgstr "&Подчертаване"
+
+#: widgets/krichtextwidget.cpp:296
+#, kde-format
+msgctxt "@action"
+msgid "&Strike Out"
+msgstr "&Зачертан"
+
+#: widgets/krichtextwidget.cpp:312
+#, kde-format
+msgctxt "@action"
+msgid "Align &Left"
+msgstr "&Ляво подравняване"
+
+#: widgets/krichtextwidget.cpp:313
+#, kde-format
+msgctxt "@label left justify"
+msgid "Left"
+msgstr "Ляво"
+
+#: widgets/krichtextwidget.cpp:320
+#, kde-format
+msgctxt "@action"
+msgid "Align &Center"
+msgstr "&Центрирано"
+
+#: widgets/krichtextwidget.cpp:321
+#, kde-format
+msgctxt "@label center justify"
+msgid "Center"
+msgstr "Център"
+
+#: widgets/krichtextwidget.cpp:328
+#, kde-format
+msgctxt "@action"
+msgid "Align &Right"
+msgstr "&Дясно подравняване"
+
+#: widgets/krichtextwidget.cpp:329
+#, kde-format
+msgctxt "@label right justify"
+msgid "Right"
+msgstr "Дясно"
+
+#: widgets/krichtextwidget.cpp:336
+#, kde-format
+msgctxt "@action"
+msgid "&Justify"
+msgstr "&Двустранно подравняване"
+
+#: widgets/krichtextwidget.cpp:337
+#, kde-format
+msgctxt "@label justify fill"
+msgid "Justify"
+msgstr "Двустранно"
+
+#: widgets/krichtextwidget.cpp:357
+#, kde-format
+msgctxt "@action"
+msgid "Left-to-Right"
+msgstr "Отляво надясно"
+
+#: widgets/krichtextwidget.cpp:358
+#, kde-format
+msgctxt "@label left-to-right"
+msgid "Left-to-Right"
+msgstr "Отляво надясно"
+
+#: widgets/krichtextwidget.cpp:365
+#, kde-format
+msgctxt "@action"
+msgid "Right-to-Left"
+msgstr "Отдясно наляво"
+
+#: widgets/krichtextwidget.cpp:366
+#, kde-format
+msgctxt "@label right-to-left"
+msgid "Right-to-Left"
+msgstr "Отдясно наляво"
+
+#: widgets/krichtextwidget.cpp:382
+#, kde-format
+msgctxt "@title:menu"
+msgid "List Style"
+msgstr "Стил на списък"
+
+#: widgets/krichtextwidget.cpp:384
+#, kde-format
+msgctxt "@item:inmenu no list style"
+msgid "None"
+msgstr "Без"
+
+#: widgets/krichtextwidget.cpp:385
+#, kde-format
+msgctxt "@item:inmenu disc list style"
+msgid "Disc"
+msgstr "Точки"
+
+#: widgets/krichtextwidget.cpp:386
+#, kde-format
+msgctxt "@item:inmenu circle list style"
+msgid "Circle"
+msgstr "Кръгове"
+
+#: widgets/krichtextwidget.cpp:387
+#, kde-format
+msgctxt "@item:inmenu square list style"
+msgid "Square"
+msgstr "Квадрати"
+
+#: widgets/krichtextwidget.cpp:388
+#, kde-format
+msgctxt "@item:inmenu numbered lists"
+msgid "123"
+msgstr "123"
+
+#: widgets/krichtextwidget.cpp:389
+#, kde-format
+msgctxt "@item:inmenu lowercase abc lists"
+msgid "abc"
+msgstr "абв"
+
+#: widgets/krichtextwidget.cpp:390
+#, kde-format
+msgctxt "@item:inmenu uppercase abc lists"
+msgid "ABC"
+msgstr "АБВ"
+
+#: widgets/krichtextwidget.cpp:391
+#, kde-format
+msgctxt "@item:inmenu lower case roman numerals"
+msgid "i ii iii"
+msgstr "i ii iii"
+
+#: widgets/krichtextwidget.cpp:392
+#, kde-format
+msgctxt "@item:inmenu upper case roman numerals"
+msgid "I II III"
+msgstr "I II III"
+
+#: widgets/krichtextwidget.cpp:409
+#, kde-format
+msgctxt "@action"
+msgid "Increase Indent"
+msgstr "Увеличаване на отстъпа"
+
+#: widgets/krichtextwidget.cpp:422
+#, kde-format
+msgctxt "@action"
+msgid "Decrease Indent"
+msgstr "Намаляване на отстъпа"
+
+#: widgets/krichtextwidget.cpp:435
+#, kde-format
+msgctxt "@action"
+msgid "Insert Rule Line"
+msgstr "Вмъкване на водеща линия"
+
+#: widgets/krichtextwidget.cpp:446
+#, kde-format
+msgctxt "@action"
+msgid "Link"
+msgstr "Създаване на връзка"
+
+#: widgets/krichtextwidget.cpp:457
+#, kde-format
+msgctxt "@action"
+msgid "Format Painter"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:467
+#, kde-format
+msgctxt "@action"
+msgid "To Plain Text"
+msgstr "В обикновен текст"
+
+#: widgets/krichtextwidget.cpp:478
+#, kde-format
+msgctxt "@action"
+msgid "Subscript"
+msgstr "Доен индекс"
+
+#: widgets/krichtextwidget.cpp:485
+#, kde-format
+msgctxt "@action"
+msgid "Superscript"
+msgstr "Горен индекс"
+
+#: widgets/krichtextwidget.cpp:498
+#, fuzzy, kde-format
+#| msgid "Loading Preview"
+msgctxt "@title:menu"
+msgid "Heading Level"
+msgstr "Зареждане на предварителен преглед"
+
+#: widgets/krichtextwidget.cpp:499
+#, fuzzy, kde-format
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Basic Latin"
+msgctxt "@item:inmenu no heading"
+msgid "Basic text"
+msgstr "Латиница основни знаци"
+
+#: widgets/krichtextwidget.cpp:500
+#, fuzzy, kde-format
+#| msgctxt "Title of the notified event"
+#| msgid "Title"
+msgctxt "@item:inmenu heading level 1 (largest)"
+msgid "Title"
+msgstr "Заглавие"
+
+#: widgets/krichtextwidget.cpp:501
+#, fuzzy, kde-format
+#| msgid "Untitled"
+msgctxt "@item:inmenu heading level 2"
+msgid "Subtitle"
+msgstr "Неозаглавено"
+
+#: widgets/krichtextwidget.cpp:502
+#, fuzzy, kde-format
+#| msgid "Action"
+msgctxt "@item:inmenu heading level 3"
+msgid "Section"
+msgstr "Операция"
+
+#: widgets/krichtextwidget.cpp:503
+#, fuzzy, kde-format
+#| msgid "Question"
+msgctxt "@item:inmenu heading level 4"
+msgid "Subsection"
+msgstr "Въпрос"
+
+#: widgets/krichtextwidget.cpp:504
+#, fuzzy, kde-format
+#| msgid "Separator, Paragraph"
+msgctxt "@item:inmenu heading level 5"
+msgid "Paragraph"
+msgstr "Разделител, параграф"
+
+#: widgets/krichtextwidget.cpp:505
+#, fuzzy, kde-format
+#| msgid "Separator, Paragraph"
+msgctxt "@item:inmenu heading level 6 (smallest)"
+msgid "Subparagraph"
+msgstr "Разделител, параграф"
+
+#: widgets/ktextedit.cpp:161
+#, kde-format
+msgid "Nothing to spell check."
+msgstr "Няма нищо за проверка."
+
+#: widgets/ktextedit.cpp:558
+#, kde-format
+msgid "Check Spelling..."
+msgstr "Проверка на правописа..."
+
+#: widgets/ktextedit.cpp:563
+#, fuzzy, kde-format
+#| msgid "Spell Checking"
+msgid "Spell Checking Language"
+msgstr "Проверка на правописа"
+
+#: widgets/ktextedit.cpp:586
+#, kde-format
+msgid "Auto Spell Check"
+msgstr "Автоматична проверка на правописа"
+
+#: widgets/ktextedit.cpp:592
+#, kde-format
+msgid "Allow Tabulations"
+msgstr "Разрешаване на табулациите"
+
+#: widgets/ktextedit.cpp:625
+#, kde-format
+msgid "Speak Text"
+msgstr "Изговаряне на текст"
