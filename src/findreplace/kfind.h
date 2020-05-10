@@ -274,14 +274,17 @@ public:
      *
      * @deprecated Since 5.70
      */
-
     KTEXTWIDGETS_DEPRECATED_VERSION(5, 70, "Use find(const QString &text, const QString &pattern, int index, long options, \
                    int *matchedLength, QRegularExpressionMatch *rmatch).")
-
     static int find(const QString &text, const QString &pattern, int index, long options, int *matchedlength);
+#endif
 
-    /** @deprecated Since 5.70, for lack of direct use
+#if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 70)
+    /**
+     * @deprecated Since 5.70, for lack of direct use
      */
+    KTEXTWIDGETS_DEPRECATED_VERSION(5, 71, "Use find(const QString &, const QString &, int, long, \
+                   int *, QRegularExpressionMatch *).") // 5.71, because comiler warning tag only added then
     static int find(const QString &text, const QRegExp &pattern, int index, long options, int *matchedlength);
 #endif
 
