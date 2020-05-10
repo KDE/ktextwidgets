@@ -476,11 +476,13 @@ static int findRegex(const QString &text, const QString &pattern, int index, lon
     return index;
 }
 
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
 // static
 int KFind::find(const QString &text, const QString &pattern, int index, long options, int *matchedLength)
 {
     return find(text, pattern, index, options, matchedLength, nullptr);
 }
+#endif
 
 // static
 int KFind::find(const QString &text, const QString &pattern, int index, long options,
@@ -634,6 +636,7 @@ static int lineBasedFind(const QString &text, const QRegExp &pattern, int index,
 }
 #endif
 
+#if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 70)
 // static
 int KFind::find(const QString &text, const QRegExp &pattern, int index, long options, int *matchedLength)
 {
@@ -643,6 +646,7 @@ int KFind::find(const QString &text, const QRegExp &pattern, int index, long opt
 
     return doFind(text, pattern, index, options, matchedLength);
 }
+#endif
 
 void KFind::Private::_k_slotFindNext()
 {

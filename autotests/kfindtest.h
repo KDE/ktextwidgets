@@ -22,6 +22,7 @@
 #ifndef KFINDTEST_H
 #define KFINDTEST_H
 
+#include <ktextwidgets_export.h>
 #include <QObject>
 #include <QStringList>
 
@@ -73,8 +74,10 @@ public:
 
 private Q_SLOTS:
 
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
     void testStaticFindString_data();
     void testStaticFindString();
+#endif
     void testStaticFindRegexp_data();
     void testStaticFindRegexp();
 

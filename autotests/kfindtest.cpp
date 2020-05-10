@@ -127,6 +127,7 @@ TestKFind::TestKFind()
              QLatin1String("    Boston, MA 02110-1301, USA.\n");
 }
 
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
 void TestKFind::testStaticFindString_data()
 {
     // Tests for the core method "static KFind::find"
@@ -162,7 +163,9 @@ void TestKFind::testStaticFindString_data()
     QTest::newRow("back, at end, found") << "a" << "a" << 1 << int(KFind::FindBackwards) << 0 << 1;
     QTest::newRow("back, text shorter than pattern") << "a" << "abcd" << 0 << int(KFind::FindBackwards) << -1 << 0;
 }
+#endif
 
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
 void TestKFind::testStaticFindString()
 {
     // Tests for the core method "static KFind::find(text, regexp)"
@@ -178,6 +181,7 @@ void TestKFind::testStaticFindString()
     QCOMPARE(result, expectedResult);
     QCOMPARE(matchedLength, expectedMatchedLength);
 }
+#endif
 
 void TestKFind::testStaticFindRegexp_data()
 {
@@ -231,12 +235,14 @@ void TestKFind::testStaticFindRegexp()
     QFETCH(int, expectedResult);
     QFETCH(int, expectedMatchedLength);
 
-    int matchedLength;
+    int matchedLength = 0;
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
     const int result = KFind::find(text, QRegExp(pattern), startIndex, options, &matchedLength);
     QCOMPARE(result, expectedResult);
     QCOMPARE(matchedLength, expectedMatchedLength);
 
     matchedLength = 0;
+#endif
     const int result2 = KFind::find(text, pattern, startIndex, options | KFind::RegularExpression,
                                     &matchedLength, nullptr);
     QCOMPARE(result2, expectedResult);
