@@ -1,0 +1,757 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the ktextwidgets package.
+#
+# Xəyyam <xxmn77@gmail.com>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: ktextwidgets\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-05-11 03:07+0200\n"
+"PO-Revision-Date: 2020-05-06 21:11+0400\n"
+"Last-Translator: Xəyyam <xxmn77@gmail.com>\n"
+"Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.04.0\n"
+
+#: dialogs/klinkdialog.cpp:52
+#, kde-format
+msgid "Manage Link"
+msgstr "Linkin idarəsi"
+
+#: dialogs/klinkdialog.cpp:60
+#, kde-format
+msgid "Link Text:"
+msgstr "Link mətni:"
+
+#: dialogs/klinkdialog.cpp:63
+#, kde-format
+msgid "Link URL:"
+msgstr "URL linki:"
+
+#: findreplace/kfind.cpp:61
+#, kde-format
+msgid "Find Next"
+msgstr "Sonrakını tap"
+
+#: findreplace/kfind.cpp:65
+#, kde-format
+msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
+msgstr "<qt> '<b>%1</b>' ifadəsinin sonrakı təkrarı tapılsin?</qt>"
+
+#: findreplace/kfind.cpp:673 findreplace/kfind.cpp:692
+#, kde-format
+msgid "1 match found."
+msgid_plural "%1 matches found."
+msgstr[0] "%1 uyğunluq tapıldı"
+msgstr[1] "%1 uyğunluq tapıldı"
+
+#: findreplace/kfind.cpp:675
+#, kde-format
+msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
+msgstr "<qt> '<b>%1</b>' üçün uyğun olanı tapılmadı.</qt>"
+
+#: findreplace/kfind.cpp:694
+#, kde-format
+msgid "No matches found for '<b>%1</b>'."
+msgstr "'<b>%1</b>' üçün uyğun olanı tapılmadı."
+
+#: findreplace/kfind.cpp:698 findreplace/kreplace.cpp:419
+#, kde-format
+msgid "Beginning of document reached."
+msgstr "Sənədin başlanğıcına çatdı."
+
+#: findreplace/kfind.cpp:700 findreplace/kreplace.cpp:421
+#, kde-format
+msgid "End of document reached."
+msgstr "Sənədin sonuna çatdı."
+
+#: findreplace/kfind.cpp:708
+#, kde-format
+msgid "Continue from the end?"
+msgstr "Sondan davam edilsin?"
+
+#: findreplace/kfind.cpp:709
+#, kde-format
+msgid "Continue from the beginning?"
+msgstr "Əvvəlindən davam edilsin?"
+
+#: findreplace/kfinddialog.cpp:47
+#, kde-format
+msgid "Find Text"
+msgstr "Mətni tapmaq"
+
+#: findreplace/kfinddialog.cpp:82
+#, kde-format
+msgctxt "@title:group"
+msgid "Find"
+msgstr "Tapmaq"
+
+#: findreplace/kfinddialog.cpp:85
+#, kde-format
+msgid "&Text to find:"
+msgstr "&Tapmaq üçün mətn:"
+
+#: findreplace/kfinddialog.cpp:89
+#, kde-format
+msgid "Regular e&xpression"
+msgstr "Müntə&zəm ifadə"
+
+#: findreplace/kfinddialog.cpp:90
+#, kde-format
+msgid "&Edit..."
+msgstr "&Düzəliş etmək..."
+
+#: findreplace/kfinddialog.cpp:99
+#, kde-format
+msgid "Replace With"
+msgstr "Əvəzləmək"
+
+#: findreplace/kfinddialog.cpp:102
+#, kde-format
+msgid "Replace&ment text:"
+msgstr "Əvəz etmə &mətni:"
+
+#: findreplace/kfinddialog.cpp:106
+#, kde-format
+msgid "Use p&laceholders"
+msgstr "Mətn doldurucudan istifadə edin"
+
+#: findreplace/kfinddialog.cpp:107
+#, kde-format
+msgid "Insert Place&holder"
+msgstr "Doldurucu daxil edin"
+
+#: findreplace/kfinddialog.cpp:116
+#, kde-format
+msgid "Options"
+msgstr "Seçimlər"
+
+#: findreplace/kfinddialog.cpp:119
+#, kde-format
+msgid "C&ase sensitive"
+msgstr "Böyük/kiçik hərfə həss&as"
+
+#: findreplace/kfinddialog.cpp:120
+#, kde-format
+msgid "&Whole words only"
+msgstr "&Yalnız bütöv sözlər"
+
+#: findreplace/kfinddialog.cpp:121
+#, kde-format
+msgid "From c&ursor"
+msgstr "K&ursordan"
+
+#: findreplace/kfinddialog.cpp:122
+#, kde-format
+msgid "Find &backwards"
+msgstr "G&eriyə axtarış"
+
+#: findreplace/kfinddialog.cpp:123
+#, kde-format
+msgid "&Selected text"
+msgstr "&Seçilmiş mətn"
+
+#: findreplace/kfinddialog.cpp:130
+#, kde-format
+msgid "&Prompt on replace"
+msgstr "Əvəz o&lunarkən soruşun"
+
+#: findreplace/kfinddialog.cpp:197
+#, kde-format
+msgid "&Replace"
+msgstr "Ə&vəzləmək"
+
+#: findreplace/kfinddialog.cpp:198
+#, kde-format
+msgid "Start replace"
+msgstr "Əvəzləməyə başla"
+
+#: findreplace/kfinddialog.cpp:199
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Replace</b> button, the text you entered above is "
+"searched for within the document and any occurrence is replaced with the "
+"replacement text.</qt>"
+msgstr ""
+"<qt> <b>Əvəz et</b> düyməsini vursanız, yuxarıda daxil etdiyiniz mətn sənəd "
+"daxilində axtarılır və hər hansı bir təkrar əvəz mətni ilə əvəz olunur.</qt>"
+
+#: findreplace/kfinddialog.cpp:203
+#, kde-format
+msgid "&Find"
+msgstr "&Axtarış"
+
+#: findreplace/kfinddialog.cpp:204
+#, kde-format
+msgid "Start searching"
+msgstr "Axtarışa başlayın"
+
+#: findreplace/kfinddialog.cpp:205
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Find</b> button, the text you entered above is "
+"searched for within the document.</qt>"
+msgstr ""
+"<qt> <b>Tapın</b> düyməsini basarsanız, yuxarıda daxil etdiyiniz mətn sənəd "
+"daxilində axtarılır.</qt>"
+
+#: findreplace/kfinddialog.cpp:211
+#, kde-format
+msgid ""
+"Enter a pattern to search for, or select a previous pattern from the list."
+msgstr ""
+"Axtarmaq üçün bir nümunə daxil edin və ya siyahıdan əvvəlki bir nümunəni "
+"seçin."
+
+#: findreplace/kfinddialog.cpp:214
+#, kde-format
+msgid "If enabled, search for a regular expression."
+msgstr "Əgər aktivdirsə, müntəzəm bir ifadə axtarın."
+
+#: findreplace/kfinddialog.cpp:216
+#, kde-format
+msgid "Click here to edit your regular expression using a graphical editor."
+msgstr ""
+"Qrafik redaktoru istifadə edərək müntəzəm ifadənizi redaktə etmək üçün "
+"buraya vurun."
+
+#: findreplace/kfinddialog.cpp:218
+#, kde-format
+msgid "Enter a replacement string, or select a previous one from the list."
+msgstr "Yeni bir sətirə keçin və ya siyahıdan bir əvvəlki sətri seçin."
+
+#: findreplace/kfinddialog.cpp:220
+#, kde-format
+msgid ""
+"<qt>If enabled, any occurrence of <code><b>\\N</b></code>, where <code><b>N</"
+"b></code> is an integer number, will be replaced with the corresponding "
+"capture (\"parenthesized substring\") from the pattern.<p>To include (a "
+"literal <code><b>\\N</b></code> in your replacement, put an extra backslash "
+"in front of it, like <code><b>\\\\N</b></code>.</p></qt>"
+msgstr ""
+"<qt> Aktiv olunarsa, <code><b>N</b></code> -in bir tam say olduğu <code><b>"
+"\\N</b> </code> şablondan uyğun gələnləri ələ almaqla əvəz oluncaqdır "
+"(\"mötərizədə düzülüşlə\").<p>Dəyişdirmək məqsədi ilə <code><b>\\N</b></"
+"code> əlavə etmək üçün əvvəlinə tərs kəsir işarəsi qoyun. Məs., <code><b>\\"
+"\\N</b></code>.</p></qt>"
+
+#: findreplace/kfinddialog.cpp:227
+#, kde-format
+msgid "Click for a menu of available captures."
+msgstr "Mövcud yaxalamalar menyusu üçün klikləyin"
+
+#: findreplace/kfinddialog.cpp:229
+#, kde-format
+msgid "Require word boundaries in both ends of a match to succeed."
+msgstr "Uyğunluq ayrıca bir söz olmalıdır."
+
+#: findreplace/kfinddialog.cpp:231
+#, kde-format
+msgid "Start searching at the current cursor location rather than at the top."
+msgstr "Axtarışı sənədin əvvəlindən yox kursorun olduğu yerdən başlamaq."
+
+#: findreplace/kfinddialog.cpp:233
+#, kde-format
+msgid "Only search within the current selection."
+msgstr "Ancaq seçilmiş fraqmentdən axtarmaq."
+
+#: findreplace/kfinddialog.cpp:235
+#, kde-format
+msgid ""
+"Perform a case sensitive search: entering the pattern 'Joe' will not match "
+"'joe' or 'JOE', only 'Joe'."
+msgstr ""
+"Böyük/kiçik hərfə görə axtarmaq. Bu halda \"Beş\" sətirini axtarırkən \"beş"
+"\" və ya \"BEŞ\" tapılmayacaq. Tapılan yalnız \"Beş\" olacaq."
+
+#: findreplace/kfinddialog.cpp:238
+#, kde-format
+msgid "Search backwards."
+msgstr "Geriyə axtarış"
+
+#: findreplace/kfinddialog.cpp:240
+#, kde-format
+msgid "Ask before replacing each match found."
+msgstr "Hər əvəz olunmada soruşmaq"
+
+#: findreplace/kfinddialog.cpp:436
+#, kde-format
+msgid "Any Character"
+msgstr "İstənilən simvol"
+
+#: findreplace/kfinddialog.cpp:437
+#, kde-format
+msgid "Start of Line"
+msgstr "Sətirlərin əvvəli"
+
+#: findreplace/kfinddialog.cpp:438
+#, kde-format
+msgid "End of Line"
+msgstr "Sətirlərin sonu"
+
+#: findreplace/kfinddialog.cpp:439
+#, kde-format
+msgid "Set of Characters"
+msgstr "Simvollar toplusu"
+
+#: findreplace/kfinddialog.cpp:440
+#, kde-format
+msgid "Repeats, Zero or More Times"
+msgstr "Təkrarlar, sıfır və ya bir neçə dəfə"
+
+#: findreplace/kfinddialog.cpp:441
+#, kde-format
+msgid "Repeats, One or More Times"
+msgstr "Təkrarlar, Bir və bir neçə dəfə"
+
+#: findreplace/kfinddialog.cpp:442
+#, kde-format
+msgid "Optional"
+msgstr "Əlavə olaraq"
+
+#: findreplace/kfinddialog.cpp:443
+#, kde-format
+msgid "Escape"
+msgstr "Escape"
+
+#: findreplace/kfinddialog.cpp:444
+#, kde-format
+msgid "TAB"
+msgstr "TAB"
+
+#: findreplace/kfinddialog.cpp:445
+#, kde-format
+msgid "Newline"
+msgstr "Yeni Sətir"
+
+#: findreplace/kfinddialog.cpp:446
+#, kde-format
+msgid "Carriage Return"
+msgstr "Sətirbaşı"
+
+#: findreplace/kfinddialog.cpp:447
+#, kde-format
+msgid "White Space"
+msgstr "Boşluq işarəsi"
+
+#: findreplace/kfinddialog.cpp:448
+#, kde-format
+msgid "Digit"
+msgstr "Rəqəm"
+
+#: findreplace/kfinddialog.cpp:548
+#, kde-format
+msgid "Complete Match"
+msgstr "Tam uyğunluq"
+
+#: findreplace/kfinddialog.cpp:552
+#, kde-format
+msgid "Captured Text (%1)"
+msgstr "Yaxalanan mətn (%1)"
+
+#: findreplace/kfinddialog.cpp:560
+#, kde-format
+msgid "You must enter some text to search for."
+msgstr "Axtarış üçün mətni daxil etməl lazımdır"
+
+#: findreplace/kfinddialog.cpp:567
+#, kde-format
+msgid "Invalid PCRE pattern syntax."
+msgstr "Səhv PCRE sintaksis şablonu"
+
+#: findreplace/kreplace.cpp:61 findreplace/kreplace.cpp:73
+#, kde-format
+msgid "Replace"
+msgstr "Əvəz etmək"
+
+#: findreplace/kreplace.cpp:69
+#, kde-format
+msgctxt "@action:button Replace all occurrences"
+msgid "&All"
+msgstr "H&amısı"
+
+#: findreplace/kreplace.cpp:71
+#, kde-format
+msgid "&Skip"
+msgstr "Ötü&rmək"
+
+#: findreplace/kreplace.cpp:90
+#, kde-format
+msgid "Replace '%1' with '%2'?"
+msgstr "'%1' -i '%2' ilə əvəz edilsin?"
+
+#: findreplace/kreplace.cpp:179 findreplace/kreplace.cpp:413
+#, kde-format
+msgid "No text was replaced."
+msgstr "Heç bir mətn dəyişdirilmədi"
+
+#: findreplace/kreplace.cpp:181 findreplace/kreplace.cpp:415
+#, kde-format
+msgid "1 replacement done."
+msgid_plural "%1 replacements done."
+msgstr[0] "%1 əvəz olundu"
+msgstr[1] "%1 əvəz olundu"
+
+#: findreplace/kreplace.cpp:429
+#, kde-format
+msgid "Do you want to restart search from the end?"
+msgstr "Axtarış sondan davam edilsin?"
+
+#: findreplace/kreplace.cpp:430
+#, kde-format
+msgid "Do you want to restart search at the beginning?"
+msgstr "Axtarış əvvəlindən davam edilsin?"
+
+#: findreplace/kreplace.cpp:433
+#, kde-format
+msgctxt "@action:button Restart find & replace"
+msgid "Restart"
+msgstr "Təkrarlamaq"
+
+#: findreplace/kreplace.cpp:434
+#, kde-format
+msgctxt "@action:button Stop find & replace"
+msgid "Stop"
+msgstr "Dayandıqmaq"
+
+#: findreplace/kreplacedialog.cpp:149
+#, kde-format
+msgid "Your replacement string is referencing a capture greater than '\\%1', "
+msgstr "Əvəzləmə sətiri '\\%1', böyük yaxalamaya istinad edir, "
+
+#: findreplace/kreplacedialog.cpp:151
+#, kde-format
+msgid "but your pattern only defines 1 capture."
+msgid_plural "but your pattern only defines %1 captures."
+msgstr[0] "amma şablon yalnız %1 yaxalama təyin edir"
+msgstr[1] "amma şablon yalnız %1 yaxalama təyin edir"
+
+#: findreplace/kreplacedialog.cpp:153
+#, kde-format
+msgid "but your pattern defines no captures."
+msgstr "ancaq çablon heç bir yaxalama təyin etmir."
+
+#: findreplace/kreplacedialog.cpp:154
+#, kde-format
+msgid ""
+"\n"
+"Please correct."
+msgstr ""
+"\n"
+"Lütfən düzəliş edin"
+
+#: widgets/krichtextwidget.cpp:210
+#, kde-format
+msgctxt "@action"
+msgid "Text &Color..."
+msgstr "Mətn &rəngi..."
+
+#: widgets/krichtextwidget.cpp:211
+#, kde-format
+msgctxt "@label stroke color"
+msgid "Color"
+msgstr "Rəng"
+
+#: widgets/krichtextwidget.cpp:222
+#, kde-format
+msgctxt "@action"
+msgid "Text &Highlight..."
+msgstr "Mətn &işıqlanması..."
+
+#: widgets/krichtextwidget.cpp:232
+#, kde-format
+msgctxt "@action"
+msgid "&Font"
+msgstr "Şri&ft"
+
+#: widgets/krichtextwidget.cpp:242
+#, kde-format
+msgctxt "@action"
+msgid "Font &Size"
+msgstr "Şriftin ölçü&sü"
+
+#: widgets/krichtextwidget.cpp:252
+#, kde-format
+msgctxt "@action boldify selected text"
+msgid "&Bold"
+msgstr "&Qalın"
+
+#: widgets/krichtextwidget.cpp:266
+#, kde-format
+msgctxt "@action italicize selected text"
+msgid "&Italic"
+msgstr "Kurs&iv"
+
+#: widgets/krichtextwidget.cpp:281
+#, kde-format
+msgctxt "@action underline selected text"
+msgid "&Underline"
+msgstr "&Alt cizgisi"
+
+#: widgets/krichtextwidget.cpp:296
+#, kde-format
+msgctxt "@action"
+msgid "&Strike Out"
+msgstr "&Üzərində cizgi"
+
+#: widgets/krichtextwidget.cpp:312
+#, kde-format
+msgctxt "@action"
+msgid "Align &Left"
+msgstr "So&l kənar"
+
+#: widgets/krichtextwidget.cpp:313
+#, kde-format
+msgctxt "@label left justify"
+msgid "Left"
+msgstr "Sol"
+
+#: widgets/krichtextwidget.cpp:320
+#, kde-format
+msgctxt "@action"
+msgid "Align &Center"
+msgstr "Sağ &kənar"
+
+#: widgets/krichtextwidget.cpp:321
+#, kde-format
+msgctxt "@label center justify"
+msgid "Center"
+msgstr "Mərkəz"
+
+#: widgets/krichtextwidget.cpp:328
+#, kde-format
+msgctxt "@action"
+msgid "Align &Right"
+msgstr "Sağ kəna&r"
+
+#: widgets/krichtextwidget.cpp:329
+#, kde-format
+msgctxt "@label right justify"
+msgid "Right"
+msgstr "Sağ"
+
+#: widgets/krichtextwidget.cpp:336
+#, kde-format
+msgctxt "@action"
+msgid "&Justify"
+msgstr "&Eninə"
+
+#: widgets/krichtextwidget.cpp:337
+#, kde-format
+msgctxt "@label justify fill"
+msgid "Justify"
+msgstr "Eninə"
+
+#: widgets/krichtextwidget.cpp:357
+#, kde-format
+msgctxt "@action"
+msgid "Left-to-Right"
+msgstr "Soldan sağa yazı"
+
+#: widgets/krichtextwidget.cpp:358
+#, kde-format
+msgctxt "@label left-to-right"
+msgid "Left-to-Right"
+msgstr "Soldan sağa"
+
+#: widgets/krichtextwidget.cpp:365
+#, kde-format
+msgctxt "@action"
+msgid "Right-to-Left"
+msgstr "Sağdan sola yazı"
+
+#: widgets/krichtextwidget.cpp:366
+#, kde-format
+msgctxt "@label right-to-left"
+msgid "Right-to-Left"
+msgstr "Sağdan sola"
+
+#: widgets/krichtextwidget.cpp:382
+#, kde-format
+msgctxt "@title:menu"
+msgid "List Style"
+msgstr "Siyahının növü"
+
+#: widgets/krichtextwidget.cpp:384
+#, kde-format
+msgctxt "@item:inmenu no list style"
+msgid "None"
+msgstr "Heç biri"
+
+#: widgets/krichtextwidget.cpp:385
+#, kde-format
+msgctxt "@item:inmenu disc list style"
+msgid "Disc"
+msgstr "Disk"
+
+#: widgets/krichtextwidget.cpp:386
+#, kde-format
+msgctxt "@item:inmenu circle list style"
+msgid "Circle"
+msgstr "Dairə"
+
+#: widgets/krichtextwidget.cpp:387
+#, kde-format
+msgctxt "@item:inmenu square list style"
+msgid "Square"
+msgstr "Düzbucaqlı"
+
+#: widgets/krichtextwidget.cpp:388
+#, kde-format
+msgctxt "@item:inmenu numbered lists"
+msgid "123"
+msgstr "123"
+
+#: widgets/krichtextwidget.cpp:389
+#, kde-format
+msgctxt "@item:inmenu lowercase abc lists"
+msgid "abc"
+msgstr "abc"
+
+#: widgets/krichtextwidget.cpp:390
+#, kde-format
+msgctxt "@item:inmenu uppercase abc lists"
+msgid "ABC"
+msgstr "ABC"
+
+#: widgets/krichtextwidget.cpp:391
+#, kde-format
+msgctxt "@item:inmenu lower case roman numerals"
+msgid "i ii iii"
+msgstr "i ii iii"
+
+#: widgets/krichtextwidget.cpp:392
+#, kde-format
+msgctxt "@item:inmenu upper case roman numerals"
+msgid "I II III"
+msgstr "I II III"
+
+#: widgets/krichtextwidget.cpp:409
+#, kde-format
+msgctxt "@action"
+msgid "Increase Indent"
+msgstr "Abzası böyütmək"
+
+#: widgets/krichtextwidget.cpp:422
+#, kde-format
+msgctxt "@action"
+msgid "Decrease Indent"
+msgstr "Abzası kiçiltmək"
+
+#: widgets/krichtextwidget.cpp:435
+#, kde-format
+msgctxt "@action"
+msgid "Insert Rule Line"
+msgstr "Üfüqi xətt qoymaq"
+
+#: widgets/krichtextwidget.cpp:446
+#, kde-format
+msgctxt "@action"
+msgid "Link"
+msgstr "Keçid"
+
+#: widgets/krichtextwidget.cpp:457
+#, kde-format
+msgctxt "@action"
+msgid "Format Painter"
+msgstr "Mətn formatına çevirmək"
+
+#: widgets/krichtextwidget.cpp:467
+#, kde-format
+msgctxt "@action"
+msgid "To Plain Text"
+msgstr "Adi mətnə çevirmək"
+
+#: widgets/krichtextwidget.cpp:478
+#, kde-format
+msgctxt "@action"
+msgid "Subscript"
+msgstr "Kiçik həriflərlə"
+
+#: widgets/krichtextwidget.cpp:485
+#, kde-format
+msgctxt "@action"
+msgid "Superscript"
+msgstr "Böyük həriflərlə"
+
+#: widgets/krichtextwidget.cpp:498
+#, kde-format
+msgctxt "@title:menu"
+msgid "Heading Level"
+msgstr "Başlıq səviyyəsi"
+
+#: widgets/krichtextwidget.cpp:499
+#, kde-format
+msgctxt "@item:inmenu no heading"
+msgid "Basic text"
+msgstr "Əsas mətn"
+
+#: widgets/krichtextwidget.cpp:500
+#, kde-format
+msgctxt "@item:inmenu heading level 1 (largest)"
+msgid "Title"
+msgstr "Başlıq"
+
+#: widgets/krichtextwidget.cpp:501
+#, kde-format
+msgctxt "@item:inmenu heading level 2"
+msgid "Subtitle"
+msgstr "Başlıqaltı"
+
+#: widgets/krichtextwidget.cpp:502
+#, kde-format
+msgctxt "@item:inmenu heading level 3"
+msgid "Section"
+msgstr "Bölmə"
+
+#: widgets/krichtextwidget.cpp:503
+#, kde-format
+msgctxt "@item:inmenu heading level 4"
+msgid "Subsection"
+msgstr "Alt bölmə"
+
+#: widgets/krichtextwidget.cpp:504
+#, kde-format
+msgctxt "@item:inmenu heading level 5"
+msgid "Paragraph"
+msgstr "Paraqraf"
+
+#: widgets/krichtextwidget.cpp:505
+#, kde-format
+msgctxt "@item:inmenu heading level 6 (smallest)"
+msgid "Subparagraph"
+msgstr "Alt paraqraf"
+
+#: widgets/ktextedit.cpp:161
+#, kde-format
+msgid "Nothing to spell check."
+msgstr "Yoxlamağa heç nə yoxdu"
+
+#: widgets/ktextedit.cpp:558
+#, kde-format
+msgid "Check Spelling..."
+msgstr "Orfoqrafiya yoxlaması"
+
+#: widgets/ktextedit.cpp:563
+#, kde-format
+msgid "Spell Checking Language"
+msgstr "Orfoqrafiya yoxlaması üç. dil"
+
+#: widgets/ktextedit.cpp:586
+#, kde-format
+msgid "Auto Spell Check"
+msgstr "Avtomatik orfoqrafiya yoxlaması"
+
+#: widgets/ktextedit.cpp:592
+#, kde-format
+msgid "Allow Tabulations"
+msgstr "Tabulyasiyaya icazə vermək"
+
+#: widgets/ktextedit.cpp:625
+#, kde-format
+msgid "Speak Text"
+msgstr "Mətni oxutmaq"
