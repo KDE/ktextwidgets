@@ -33,10 +33,10 @@
 #include <QRegularExpression>
 #include <QGridLayout>
 
-#include <klocalizedstring.h>
-#include <kmessagebox.h>
-#include <kguiitem.h>
-#include <khistorycombobox.h>
+#include <KLocalizedString>
+#include <KMessageBox>
+#include <KGuiItem>
+#include <KHistoryComboBox>
 
 #include <assert.h>
 

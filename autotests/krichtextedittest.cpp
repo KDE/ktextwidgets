@@ -20,7 +20,7 @@
 #include "krichtextedittest.h"
 
 #include <krichtextedit.h>
-#include <kcolorscheme.h>
+#include <KColorScheme>
 
 #include <QRegularExpression>
 #include <QTest>

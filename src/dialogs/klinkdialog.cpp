@@ -21,7 +21,7 @@
 
 #include "klinkdialog_p.h"
 
-#include <klocalizedstring.h>
+#include <KLocalizedString>
 
 #include <QDialogButtonBox>
 #include <QLabel>

@@ -21,10 +21,10 @@
 #include "krichtextwidget.h"
 
 // KDE includes
-#include <kcolorscheme.h>
-#include <kfontaction.h>
-#include <kfontsizeaction.h>
-#include <klocalizedstring.h>
+#include <KColorScheme>
+#include <KFontAction>
+#include <KFontSizeAction>
+#include <KLocalizedString>
 #include <ktoggleaction.h>
 
 // Qt includes

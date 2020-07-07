@@ -24,9 +24,9 @@
 
 #include "kfinddialog.h"
 
-#include <klocalizedstring.h>
-#include <kmessagebox.h>
-#include <kguiitem.h>
+#include <KLocalizedString>
+#include <KMessageBox>
+#include <KGuiItem>
 
 #include <QDialog>
 #include <QDialogButtonBox>

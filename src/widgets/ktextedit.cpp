@@ -39,11 +39,11 @@
 #include <sonnet/dialog.h>
 #include <sonnet/backgroundchecker.h>
 #include <sonnet/spellcheckdecorator.h>
-#include <kcursor.h>
-#include <kstandardaction.h>
-#include <kstandardshortcut.h>
-#include <klocalizedstring.h>
-#include <kmessagebox.h>
+#include <KCursor>
+#include <KStandardAction>
+#include <KStandardShortcut>
+#include <KLocalizedString>
+#include <KMessageBox>
 
 #include "kreplacedialog.h"
 #include "kfinddialog.h"

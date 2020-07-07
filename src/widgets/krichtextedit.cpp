@@ -28,8 +28,8 @@
 #include "klinkdialog_p.h"
 
 // kdelibs includes
-#include <kcursor.h>
-#include <kcolorscheme.h>
+#include <KCursor>
+#include <KColorScheme>
 
 // Qt includes
 #include <QRegularExpression>

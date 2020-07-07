@@ -30,8 +30,8 @@
 #include <QRegExp>
 #include <QRegularExpression>
 
-#include <klocalizedstring.h>
-#include <kmessagebox.h>
+#include <KLocalizedString>
+#include <KMessageBox>
 
 //#define DEBUG_REPLACE
 #define INDEX_NOMATCH -1

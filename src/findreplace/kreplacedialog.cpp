@@ -27,9 +27,9 @@
 #include <QGridLayout>
 #include <QGroupBox>
 
-#include <khistorycombobox.h>
-#include <klocalizedstring.h>
-#include <kmessagebox.h>
+#include <KHistoryComboBox>
+#include <KLocalizedString>
+#include <KMessageBox>
 
 /**
  * we need to insert the strings after the dialog is set
