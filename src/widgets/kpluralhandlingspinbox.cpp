@@ -23,7 +23,7 @@ public:
         }
     }
 
-    QSpinBox *q;
+    QSpinBox *const q;
     KLocalizedString pluralSuffix;
 };
 

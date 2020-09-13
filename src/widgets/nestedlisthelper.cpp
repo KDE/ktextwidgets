@@ -15,8 +15,8 @@
 #include "ktextedit.h"
 
 NestedListHelper::NestedListHelper(QTextEdit *te)
+    : textEdit(te)
 {
-    textEdit = te;
 }
 
 NestedListHelper::~NestedListHelper()

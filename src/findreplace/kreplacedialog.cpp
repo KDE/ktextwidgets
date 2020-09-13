@@ -35,7 +35,7 @@ public:
     void _k_slotOk();
 
     QStringList replaceStrings;
-    KReplaceDialog *q = nullptr;
+    KReplaceDialog *const q;
     QWidget *replaceExtension = nullptr;
     bool initialShowDone = false;
 };

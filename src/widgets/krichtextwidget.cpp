@@ -39,7 +39,7 @@ public:
 
     QList<QAction *> richTextActionList;
     QTextCharFormat painterFormat;
-    KRichTextWidget *q;
+    KRichTextWidget *const q;
 
     RichTextSupport richTextSupport;
 

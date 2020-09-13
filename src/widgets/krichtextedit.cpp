@@ -29,8 +29,7 @@ class KRichTextEditPrivate : public QObject
 {
 public:
     explicit KRichTextEditPrivate(KRichTextEdit *parent)
-        : q(parent),
-          mMode(KRichTextEdit::Plain)
+        : q(parent)
     {
         nestedListHelper = new NestedListHelper(q);
     }
@@ -62,8 +61,8 @@ public:
 
     // Data members
 
-    KRichTextEdit *q;
-    KRichTextEdit::Mode mMode;
+    KRichTextEdit *const q;
+    KRichTextEdit::Mode mMode = KRichTextEdit::Plain;
 
     NestedListHelper *nestedListHelper;
 
