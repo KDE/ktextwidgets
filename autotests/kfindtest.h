@@ -20,7 +20,7 @@ class KFindRecorder : public QObject
     Q_OBJECT
 
 public:
-    KFindRecorder(const QStringList &text) :
+    explicit KFindRecorder(const QStringList &text) :
         QObject(nullptr),
         m_find(nullptr),
         m_text(text),
