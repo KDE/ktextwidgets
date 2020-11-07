@@ -1,0 +1,765 @@
+# Vietnamese translation for kdelibs.
+# Copyright © 2007 KDE i18n Project for Vietnamese.
+#
+# Clytie Siddall <clytie@riverland.net.au>, 2006-2007.
+# Hoàng Đức Hiếu <hieu.d.hoang@gmail.com>, 2008, 2011.
+# Lê Hoàng Phương <herophuong93@gmail.com>, 2011, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2020-08-12 02:08+0200\n"
+"PO-Revision-Date: 2012-09-23 18:43+0800\n"
+"Last-Translator: Lê Hoàng Phương <herophuong93@gmail.com>\n"
+"Language-Team: American English <kde-i18n-vi@kde.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 1.5\n"
+
+#: dialogs/klinkdialog.cpp:38
+#, kde-format
+msgid "Manage Link"
+msgstr "Quản lí liên kết"
+
+#: dialogs/klinkdialog.cpp:46
+#, kde-format
+msgid "Link Text:"
+msgstr "Văn bản liên kết:"
+
+#: dialogs/klinkdialog.cpp:49
+#, kde-format
+msgid "Link URL:"
+msgstr "URL liên kết:"
+
+#: findreplace/kfind.cpp:49
+#, kde-format
+msgid "Find Next"
+msgstr "Tìm kế"
+
+#: findreplace/kfind.cpp:53
+#, kde-format
+msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
+msgstr "<qt>Tìm lần gặp \"<b>%1</b>\" kế tiếp không?</qt>"
+
+#: findreplace/kfind.cpp:661 findreplace/kfind.cpp:680
+#, kde-format
+msgid "1 match found."
+msgid_plural "%1 matches found."
+msgstr[0] "Mới tìm %1 lần khớp."
+
+#: findreplace/kfind.cpp:663
+#, kde-format
+msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
+msgstr "<qt>Không tìm thấy \"<b>%1</b>\".</qt>"
+
+#: findreplace/kfind.cpp:682
+#, kde-format
+msgid "No matches found for '<b>%1</b>'."
+msgstr "Không tìm thấy \"<b>%1</b>\"."
+
+#: findreplace/kfind.cpp:686 findreplace/kreplace.cpp:407
+#, kde-format
+msgid "Beginning of document reached."
+msgstr "Mới tới đầu tài liệu."
+
+#: findreplace/kfind.cpp:688 findreplace/kreplace.cpp:409
+#, kde-format
+msgid "End of document reached."
+msgstr "Mới tới cuối tài liệu."
+
+#: findreplace/kfind.cpp:696
+#, kde-format
+msgid "Continue from the end?"
+msgstr "Tiếp tục từ kết thúc không?"
+
+#: findreplace/kfind.cpp:697
+#, kde-format
+msgid "Continue from the beginning?"
+msgstr "Tiếp tục từ đầu không?"
+
+#: findreplace/kfinddialog.cpp:35
+#, kde-format
+msgid "Find Text"
+msgstr "Tìm đoạn"
+
+#: findreplace/kfinddialog.cpp:70
+#, kde-format
+msgctxt "@title:group"
+msgid "Find"
+msgstr "Tìm"
+
+#: findreplace/kfinddialog.cpp:73
+#, kde-format
+msgid "&Text to find:"
+msgstr "&Đoạn cần tìm:"
+
+#: findreplace/kfinddialog.cpp:77
+#, kde-format
+msgid "Regular e&xpression"
+msgstr "&Biểu thức chính quy"
+
+#: findreplace/kfinddialog.cpp:78
+#, kde-format
+msgid "&Edit..."
+msgstr "&Sửa..."
+
+#: findreplace/kfinddialog.cpp:87
+#, kde-format
+msgid "Replace With"
+msgstr "Thay thế bằng"
+
+#: findreplace/kfinddialog.cpp:90
+#, kde-format
+msgid "Replace&ment text:"
+msgstr "Đoạn tha&y thế :"
+
+#: findreplace/kfinddialog.cpp:94
+#, kde-format
+msgid "Use p&laceholders"
+msgstr "Dùng bộ giữ chỗ"
+
+#: findreplace/kfinddialog.cpp:95
+#, kde-format
+msgid "Insert Place&holder"
+msgstr "C&hèn bộ giữ chỗ"
+
+#: findreplace/kfinddialog.cpp:104
+#, kde-format
+msgid "Options"
+msgstr "Tuỳ chọn"
+
+#: findreplace/kfinddialog.cpp:107
+#, kde-format
+msgid "C&ase sensitive"
+msgstr "&Phân biệt chữ hoa/thường"
+
+#: findreplace/kfinddialog.cpp:108
+#, kde-format
+msgid "&Whole words only"
+msgstr "Chỉ ng&uyên từ"
+
+#: findreplace/kfinddialog.cpp:109
+#, kde-format
+msgid "From c&ursor"
+msgstr "Từ c&on chạy"
+
+#: findreplace/kfinddialog.cpp:110
+#, kde-format
+msgid "Find &backwards"
+msgstr "Tìm &ngược"
+
+#: findreplace/kfinddialog.cpp:111
+#, kde-format
+msgid "&Selected text"
+msgstr "Đoạn đã &chọn"
+
+#: findreplace/kfinddialog.cpp:118
+#, kde-format
+msgid "&Prompt on replace"
+msgstr "&Nhắc khi thay thế"
+
+#: findreplace/kfinddialog.cpp:185
+#, kde-format
+msgid "&Replace"
+msgstr "Tha&y thế"
+
+#: findreplace/kfinddialog.cpp:186
+#, kde-format
+msgid "Start replace"
+msgstr "Chạy Thay thế"
+
+#: findreplace/kfinddialog.cpp:187
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Replace</b> button, the text you entered above is "
+"searched for within the document and any occurrence is replaced with the "
+"replacement text.</qt>"
+msgstr ""
+"<qt>Khi bạn bấm cái nút <b>Thay thế</b>, đoạn nhập trên được tìm kiếm qua "
+"tài liệu, và lần nào gặp nó được thay thế bằng đoạn thay thế.</qt>"
+
+#: findreplace/kfinddialog.cpp:191
+#, kde-format
+msgid "&Find"
+msgstr "&Tìm"
+
+#: findreplace/kfinddialog.cpp:192
+#, kde-format
+msgid "Start searching"
+msgstr "Chạy Tìm kiếm"
+
+#: findreplace/kfinddialog.cpp:193
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Find</b> button, the text you entered above is "
+"searched for within the document.</qt>"
+msgstr ""
+"<qt>Khi bạn bấm cái nút <b>Tìm</b>, đoạn nhập trên được tìm kiếm qua tài "
+"liệu.</qt>"
+
+#: findreplace/kfinddialog.cpp:199
+#, kde-format
+msgid ""
+"Enter a pattern to search for, or select a previous pattern from the list."
+msgstr "Hãy nhập chuỗi tìm kiếm, hoặc chọn mẫu trước trong danh sách này."
+
+#: findreplace/kfinddialog.cpp:202
+#, kde-format
+msgid "If enabled, search for a regular expression."
+msgstr "Nếu bật, tìm kiếm biểu thức chính quy."
+
+#: findreplace/kfinddialog.cpp:204
+#, kde-format
+msgid "Click here to edit your regular expression using a graphical editor."
+msgstr ""
+"Hãy nhắp vào đây để sửa đổi biểu thức chính quy bằng bộ soạn thảo đồ hoạ."
+
+#: findreplace/kfinddialog.cpp:206
+#, kde-format
+msgid "Enter a replacement string, or select a previous one from the list."
+msgstr "Hãy nhập chuỗi thay thế, hoặc chọn chuỗi trước trong danh sách này."
+
+#: findreplace/kfinddialog.cpp:208
+#, kde-format
+msgid ""
+"<qt>If enabled, any occurrence of <code><b>\\N</b></code>, where <code><b>N</"
+"b></code> is an integer number, will be replaced with the corresponding "
+"capture (\"parenthesized substring\") from the pattern.<p>To include (a "
+"literal <code><b>\\N</b></code> in your replacement, put an extra backslash "
+"in front of it, like <code><b>\\\\N</b></code>.</p></qt>"
+msgstr ""
+"<qt>Nếu bật, bất kì lần lặp lại nào của <code><b>\\N</b></code>, với "
+"<code><b>N</b> </code> là một số nguyên, sẽ được thay thế với bắt từ tương "
+"ứng (\"chuỗi con được đóng ngoặc\") từ mẫu.<p>Để thêm một chuỗi nguyên "
+"<code><b>\\N</b></code> trong bản thay thế của bạn, hãy đặt thêm các gạch "
+"ngược vào trước nó, như <code><b>\\\\N</b></code>.</p></qt>"
+
+#: findreplace/kfinddialog.cpp:215
+#, kde-format
+msgid "Click for a menu of available captures."
+msgstr "Nhắp vào để xem trình đơn các điều bắt có sẵn."
+
+#: findreplace/kfinddialog.cpp:217
+#, kde-format
+msgid "Require word boundaries in both ends of a match to succeed."
+msgstr ""
+"Cần thiết giới hạn từ tại cả đầu lẫn cuối đều của điều khớp, để thành công."
+
+#: findreplace/kfinddialog.cpp:219
+#, kde-format
+msgid "Start searching at the current cursor location rather than at the top."
+msgstr "Bắt đầu tìm kiếm tại vị trí con chạy hiện thời, hơn tại đỉnh."
+
+#: findreplace/kfinddialog.cpp:221
+#, kde-format
+msgid "Only search within the current selection."
+msgstr "Tìm kiếm chỉ trong phần chọn hiện thời."
+
+#: findreplace/kfinddialog.cpp:223
+#, kde-format
+msgid ""
+"Perform a case sensitive search: entering the pattern 'Joe' will not match "
+"'joe' or 'JOE', only 'Joe'."
+msgstr ""
+"Tìm kiếm phân biệt chữ hoa/thường : việc nhập mẫu \"Văn\" sẽ không khớp với "
+"\"văn\" hay \"VĂN\", chỉ với \"Văn\"."
+
+#: findreplace/kfinddialog.cpp:226
+#, kde-format
+msgid "Search backwards."
+msgstr "Tìm ngược."
+
+#: findreplace/kfinddialog.cpp:228
+#, kde-format
+msgid "Ask before replacing each match found."
+msgstr "Xin trước khi thay thế mỗi lần khớp được tìm."
+
+#: findreplace/kfinddialog.cpp:424
+#, kde-format
+msgid "Any Character"
+msgstr "Bất kì kí tự"
+
+#: findreplace/kfinddialog.cpp:425
+#, kde-format
+msgid "Start of Line"
+msgstr "Đầu dòng"
+
+#: findreplace/kfinddialog.cpp:426
+#, kde-format
+msgid "End of Line"
+msgstr "Cuối dòng"
+
+#: findreplace/kfinddialog.cpp:427
+#, kde-format
+msgid "Set of Characters"
+msgstr "Bộ kí tự"
+
+#: findreplace/kfinddialog.cpp:428
+#, kde-format
+msgid "Repeats, Zero or More Times"
+msgstr "Lặp lại, số không lần hay hơn"
+
+#: findreplace/kfinddialog.cpp:429
+#, kde-format
+msgid "Repeats, One or More Times"
+msgstr "Lặp lại, một lần hay hơn"
+
+#: findreplace/kfinddialog.cpp:430
+#, kde-format
+msgid "Optional"
+msgstr "Tuỳ chọn"
+
+#: findreplace/kfinddialog.cpp:431
+#, kde-format
+msgid "Escape"
+msgstr "Phím esc"
+
+#: findreplace/kfinddialog.cpp:432
+#, kde-format
+msgid "TAB"
+msgstr "Phím tab"
+
+#: findreplace/kfinddialog.cpp:433
+#, kde-format
+msgid "Newline"
+msgstr "Dòng mới"
+
+#: findreplace/kfinddialog.cpp:434
+#, kde-format
+msgid "Carriage Return"
+msgstr "Xuống dòng"
+
+#: findreplace/kfinddialog.cpp:435
+#, kde-format
+msgid "White Space"
+msgstr "Khoảng trắng"
+
+#: findreplace/kfinddialog.cpp:436
+#, kde-format
+msgid "Digit"
+msgstr "Con số"
+
+#: findreplace/kfinddialog.cpp:536
+#, kde-format
+msgid "Complete Match"
+msgstr "Khớp hoàn toàn"
+
+#: findreplace/kfinddialog.cpp:540
+#, kde-format
+msgid "Captured Text (%1)"
+msgstr "Đoạn đã bắt (%1)"
+
+#: findreplace/kfinddialog.cpp:548
+#, kde-format
+msgid "You must enter some text to search for."
+msgstr "Bạn phải gõ chuỗi cần tìm kiếm."
+
+#: findreplace/kfinddialog.cpp:555
+#, kde-format
+msgid "Invalid PCRE pattern syntax."
+msgstr ""
+
+#: findreplace/kreplace.cpp:49 findreplace/kreplace.cpp:61
+#, kde-format
+msgid "Replace"
+msgstr "Thay thế"
+
+#: findreplace/kreplace.cpp:57
+#, kde-format
+msgctxt "@action:button Replace all occurrences"
+msgid "&All"
+msgstr "&Tất cả"
+
+#: findreplace/kreplace.cpp:59
+#, kde-format
+msgid "&Skip"
+msgstr "&Bỏ qua"
+
+#: findreplace/kreplace.cpp:78
+#, kde-format
+msgid "Replace '%1' with '%2'?"
+msgstr "Thay thế \"%1\" bằng \"%2\" không?"
+
+#: findreplace/kreplace.cpp:167 findreplace/kreplace.cpp:401
+#, kde-format
+msgid "No text was replaced."
+msgstr "Chưa thay thế gì."
+
+#: findreplace/kreplace.cpp:169 findreplace/kreplace.cpp:403
+#, kde-format
+msgid "1 replacement done."
+msgid_plural "%1 replacements done."
+msgstr[0] "Mới thay thế %1 lần."
+
+#: findreplace/kreplace.cpp:417
+#, kde-format
+msgid "Do you want to restart search from the end?"
+msgstr "Bạn có muốn chạy lại việc tìm kiếm từ kết thúc không?"
+
+#: findreplace/kreplace.cpp:418
+#, kde-format
+msgid "Do you want to restart search at the beginning?"
+msgstr "Bạn có muốn chạy lại việc tìm kiếm từ đầu không?"
+
+#: findreplace/kreplace.cpp:421
+#, kde-format
+msgctxt "@action:button Restart find & replace"
+msgid "Restart"
+msgstr "Chạy lại"
+
+#: findreplace/kreplace.cpp:422
+#, kde-format
+msgctxt "@action:button Stop find & replace"
+msgid "Stop"
+msgstr "Dừng"
+
+#: findreplace/kreplacedialog.cpp:137
+#, kde-format
+msgid "Your replacement string is referencing a capture greater than '\\%1', "
+msgstr "Chuỗi thay thế này đang tham chiếu một điều bắt hơn \"\\%1\". "
+
+#: findreplace/kreplacedialog.cpp:139
+#, kde-format
+msgid "but your pattern only defines 1 capture."
+msgid_plural "but your pattern only defines %1 captures."
+msgstr[0] "nhưng mẫu này định nghĩa chỉ %1 điều bắt."
+
+#: findreplace/kreplacedialog.cpp:141
+#, kde-format
+msgid "but your pattern defines no captures."
+msgstr "nhưng mẫu này không định nghĩa điều bắt nào."
+
+#: findreplace/kreplacedialog.cpp:142
+#, kde-format
+msgid ""
+"\n"
+"Please correct."
+msgstr ""
+"\n"
+"Vui lòng sửa."
+
+#: widgets/krichtextwidget.cpp:198
+#, kde-format
+msgctxt "@action"
+msgid "Text &Color..."
+msgstr "&Màu văn bản..."
+
+#: widgets/krichtextwidget.cpp:199
+#, kde-format
+msgctxt "@label stroke color"
+msgid "Color"
+msgstr "Màu"
+
+#: widgets/krichtextwidget.cpp:210
+#, kde-format
+msgctxt "@action"
+msgid "Text &Highlight..."
+msgstr "Tô sáng &văn bản..."
+
+#: widgets/krichtextwidget.cpp:220
+#, kde-format
+msgctxt "@action"
+msgid "&Font"
+msgstr "&Phông chữ"
+
+#: widgets/krichtextwidget.cpp:230
+#, kde-format
+msgctxt "@action"
+msgid "Font &Size"
+msgstr "&Cỡ phông"
+
+#: widgets/krichtextwidget.cpp:240
+#, kde-format
+msgctxt "@action boldify selected text"
+msgid "&Bold"
+msgstr "Đậ&m"
+
+#: widgets/krichtextwidget.cpp:254
+#, kde-format
+msgctxt "@action italicize selected text"
+msgid "&Italic"
+msgstr "&Nghiêng"
+
+#: widgets/krichtextwidget.cpp:269
+#, kde-format
+msgctxt "@action underline selected text"
+msgid "&Underline"
+msgstr "&Gạch chân"
+
+#: widgets/krichtextwidget.cpp:284
+#, kde-format
+msgctxt "@action"
+msgid "&Strike Out"
+msgstr "&Gạch ngang"
+
+#: widgets/krichtextwidget.cpp:300
+#, kde-format
+msgctxt "@action"
+msgid "Align &Left"
+msgstr "Căn lề &trái"
+
+#: widgets/krichtextwidget.cpp:301
+#, kde-format
+msgctxt "@label left justify"
+msgid "Left"
+msgstr "Trái"
+
+#: widgets/krichtextwidget.cpp:308
+#, kde-format
+msgctxt "@action"
+msgid "Align &Center"
+msgstr "Căn &giữa"
+
+#: widgets/krichtextwidget.cpp:309
+#, kde-format
+msgctxt "@label center justify"
+msgid "Center"
+msgstr "Giữa"
+
+#: widgets/krichtextwidget.cpp:316
+#, kde-format
+msgctxt "@action"
+msgid "Align &Right"
+msgstr "Căn lề &phải"
+
+#: widgets/krichtextwidget.cpp:317
+#, kde-format
+msgctxt "@label right justify"
+msgid "Right"
+msgstr "Phải"
+
+#: widgets/krichtextwidget.cpp:324
+#, kde-format
+msgctxt "@action"
+msgid "&Justify"
+msgstr "Căn đều &hai bên"
+
+#: widgets/krichtextwidget.cpp:325
+#, kde-format
+msgctxt "@label justify fill"
+msgid "Justify"
+msgstr "Căn đều hai bên"
+
+#: widgets/krichtextwidget.cpp:345
+#, kde-format
+msgctxt "@action"
+msgid "Left-to-Right"
+msgstr "Trái-sang-phải"
+
+#: widgets/krichtextwidget.cpp:346
+#, kde-format
+msgctxt "@label left-to-right"
+msgid "Left-to-Right"
+msgstr "Trái-sang-phải"
+
+#: widgets/krichtextwidget.cpp:353
+#, kde-format
+msgctxt "@action"
+msgid "Right-to-Left"
+msgstr "Phải-sang-trái"
+
+#: widgets/krichtextwidget.cpp:354
+#, kde-format
+msgctxt "@label right-to-left"
+msgid "Right-to-Left"
+msgstr "Phải-sang-trái"
+
+#: widgets/krichtextwidget.cpp:370
+#, kde-format
+msgctxt "@title:menu"
+msgid "List Style"
+msgstr "Kiểu danh sách"
+
+#: widgets/krichtextwidget.cpp:372
+#, kde-format
+msgctxt "@item:inmenu no list style"
+msgid "None"
+msgstr "Không"
+
+#: widgets/krichtextwidget.cpp:373
+#, kde-format
+msgctxt "@item:inmenu disc list style"
+msgid "Disc"
+msgstr "Tròn đặc"
+
+#: widgets/krichtextwidget.cpp:374
+#, kde-format
+msgctxt "@item:inmenu circle list style"
+msgid "Circle"
+msgstr "Tròn rỗng"
+
+#: widgets/krichtextwidget.cpp:375
+#, kde-format
+msgctxt "@item:inmenu square list style"
+msgid "Square"
+msgstr "Vuông"
+
+#: widgets/krichtextwidget.cpp:376
+#, kde-format
+msgctxt "@item:inmenu numbered lists"
+msgid "123"
+msgstr "123"
+
+#: widgets/krichtextwidget.cpp:377
+#, kde-format
+msgctxt "@item:inmenu lowercase abc lists"
+msgid "abc"
+msgstr "abc"
+
+#: widgets/krichtextwidget.cpp:378
+#, kde-format
+msgctxt "@item:inmenu uppercase abc lists"
+msgid "ABC"
+msgstr "ABC"
+
+#: widgets/krichtextwidget.cpp:379
+#, kde-format
+msgctxt "@item:inmenu lower case roman numerals"
+msgid "i ii iii"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:380
+#, kde-format
+msgctxt "@item:inmenu upper case roman numerals"
+msgid "I II III"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:397
+#, kde-format
+msgctxt "@action"
+msgid "Increase Indent"
+msgstr "Tăng thụt lề"
+
+#: widgets/krichtextwidget.cpp:410
+#, kde-format
+msgctxt "@action"
+msgid "Decrease Indent"
+msgstr "Giảm thụt lề"
+
+#: widgets/krichtextwidget.cpp:423
+#, kde-format
+msgctxt "@action"
+msgid "Insert Rule Line"
+msgstr "Thêm dòng gạch kẻ"
+
+#: widgets/krichtextwidget.cpp:434
+#, kde-format
+msgctxt "@action"
+msgid "Link"
+msgstr "Liên kết"
+
+#: widgets/krichtextwidget.cpp:445
+#, kde-format
+msgctxt "@action"
+msgid "Format Painter"
+msgstr "Chổi định dạng"
+
+#: widgets/krichtextwidget.cpp:455
+#, kde-format
+msgctxt "@action"
+msgid "To Plain Text"
+msgstr "Sang văn bản thuần"
+
+#: widgets/krichtextwidget.cpp:466
+#, kde-format
+msgctxt "@action"
+msgid "Subscript"
+msgstr "Chỉ số dưới"
+
+#: widgets/krichtextwidget.cpp:473
+#, kde-format
+msgctxt "@action"
+msgid "Superscript"
+msgstr "Chỉ số trên"
+
+#: widgets/krichtextwidget.cpp:486
+#, fuzzy, kde-format
+#| msgid "Loading Preview"
+msgctxt "@title:menu"
+msgid "Heading Level"
+msgstr "Đang tải xem trước"
+
+#: widgets/krichtextwidget.cpp:487
+#, fuzzy, kde-format
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Basic Latin"
+msgctxt "@item:inmenu no heading"
+msgid "Basic text"
+msgstr "Latin cơ bản"
+
+#: widgets/krichtextwidget.cpp:488
+#, fuzzy, kde-format
+#| msgctxt "Title of the notified event"
+#| msgid "Title"
+msgctxt "@item:inmenu heading level 1 (largest)"
+msgid "Title"
+msgstr "Tiêu đề"
+
+#: widgets/krichtextwidget.cpp:489
+#, fuzzy, kde-format
+#| msgid "Untitled"
+msgctxt "@item:inmenu heading level 2"
+msgid "Subtitle"
+msgstr "Không tên"
+
+#: widgets/krichtextwidget.cpp:490
+#, fuzzy, kde-format
+#| msgid "Action"
+msgctxt "@item:inmenu heading level 3"
+msgid "Section"
+msgstr "Hành động"
+
+#: widgets/krichtextwidget.cpp:491
+#, fuzzy, kde-format
+#| msgid "Question"
+msgctxt "@item:inmenu heading level 4"
+msgid "Subsection"
+msgstr "Hỏi"
+
+#: widgets/krichtextwidget.cpp:492
+#, fuzzy, kde-format
+#| msgid "Separator, Paragraph"
+msgctxt "@item:inmenu heading level 5"
+msgid "Paragraph"
+msgstr "Dấu phân cách đoạn văn"
+
+#: widgets/krichtextwidget.cpp:493
+#, fuzzy, kde-format
+#| msgid "Separator, Paragraph"
+msgctxt "@item:inmenu heading level 6 (smallest)"
+msgid "Subparagraph"
+msgstr "Dấu phân cách đoạn văn"
+
+#: widgets/ktextedit.cpp:149
+#, kde-format
+msgid "Nothing to spell check."
+msgstr "Không có gì để kiểm tra chính tả."
+
+#: widgets/ktextedit.cpp:546
+#, kde-format
+msgid "Check Spelling..."
+msgstr "Bắt lỗi chính tả..."
+
+#: widgets/ktextedit.cpp:551
+#, fuzzy, kde-format
+#| msgid "Spell Checking"
+msgid "Spell Checking Language"
+msgstr "Bắt lỗi chính tả"
+
+#: widgets/ktextedit.cpp:574
+#, kde-format
+msgid "Auto Spell Check"
+msgstr "Tự động bắt lỗi chính tả"
+
+#: widgets/ktextedit.cpp:580
+#, kde-format
+msgid "Allow Tabulations"
+msgstr "Cho phép lập bảng"
+
+#: widgets/ktextedit.cpp:613
+#, kde-format
+msgid "Speak Text"
+msgstr "Đọc văn bản"
