@@ -60,12 +60,8 @@ QStringList KFindDialog::findHistory() const
 
 void KFindDialog::KFindDialogPrivate::init(bool forReplace, const QStringList &_findStrings, bool hasSelection)
 {
-    QVBoxLayout *topLayout;
-    QGridLayout *optionsLayout;
-
     // Create common parts of dialog.
-    topLayout = new QVBoxLayout;
-    q->setLayout(topLayout);
+    QVBoxLayout *topLayout = new QVBoxLayout(q);
 
     findGrp = new QGroupBox(i18nc("@title:group", "Find"), q);
     findLayout = new QGridLayout(findGrp);
@@ -102,7 +98,7 @@ void KFindDialog::KFindDialogPrivate::init(bool forReplace, const QStringList &_
     topLayout->addWidget(replaceGrp);
 
     QGroupBox *optionGrp = new QGroupBox(i18n("Options"), q);
-    optionsLayout = new QGridLayout(optionGrp);
+    QGridLayout *optionsLayout = new QGridLayout(optionGrp);
 
     caseSensitive = new QCheckBox(i18n("C&ase sensitive"), optionGrp);
     wholeWordsOnly = new QCheckBox(i18n("&Whole words only"), optionGrp);

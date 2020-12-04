@@ -38,8 +38,7 @@ KLinkDialog::KLinkDialog(QWidget *parent)
     setWindowTitle(i18n("Manage Link"));
     setModal(true);
 
-    QVBoxLayout *layout = new QVBoxLayout;
-    setLayout(layout);
+    QVBoxLayout *layout = new QVBoxLayout(this);
 
     QGridLayout *grid = new QGridLayout;
 

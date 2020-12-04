@@ -48,8 +48,7 @@ KReplaceNextDialog::KReplaceNextDialog(QWidget *parent)
     setModal(false);
     setWindowTitle(i18n("Replace"));
 
-    QVBoxLayout *layout = new QVBoxLayout;
-    setLayout(layout);
+    QVBoxLayout *layout = new QVBoxLayout(this);
 
     m_mainLabel = new QLabel(this);
     layout->addWidget(m_mainLabel);
