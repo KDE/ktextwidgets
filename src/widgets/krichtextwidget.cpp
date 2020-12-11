@@ -243,7 +243,7 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_text_bold->setFont(bold);
         d->richTextActionList.append((d->action_text_bold));
         d->action_text_bold->setObjectName(QStringLiteral("format_text_bold"));
-        d->action_text_bold->setShortcut(Qt::CTRL + Qt::Key_B);
+        d->action_text_bold->setShortcut(Qt::CTRL | Qt::Key_B);
         connect(d->action_text_bold, &QAction::triggered, this, &KRichTextEdit::setTextBold);
     } else {
         d->action_text_bold = nullptr;
@@ -257,7 +257,7 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_text_italic->setFont(italic);
         d->richTextActionList.append((d->action_text_italic));
         d->action_text_italic->setObjectName(QStringLiteral("format_text_italic"));
-        d->action_text_italic->setShortcut(Qt::CTRL + Qt::Key_I);
+        d->action_text_italic->setShortcut(Qt::CTRL | Qt::Key_I);
         connect(d->action_text_italic, &QAction::triggered,
                 this, &KRichTextEdit::setTextItalic);
     } else {
@@ -272,7 +272,7 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_text_underline->setFont(underline);
         d->richTextActionList.append((d->action_text_underline));
         d->action_text_underline->setObjectName(QStringLiteral("format_text_underline"));
-        d->action_text_underline->setShortcut(Qt::CTRL + Qt::Key_U);
+        d->action_text_underline->setShortcut(Qt::CTRL | Qt::Key_U);
         connect(d->action_text_underline, &QAction::triggered,
                 this, &KRichTextEdit::setTextUnderline);
     } else {
@@ -287,7 +287,7 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_text_strikeout->setFont(strikeout);
         d->richTextActionList.append((d->action_text_strikeout));
         d->action_text_strikeout->setObjectName(QStringLiteral("format_text_strikeout"));
-        d->action_text_strikeout->setShortcut(Qt::CTRL + Qt::Key_L);
+        d->action_text_strikeout->setShortcut(Qt::CTRL | Qt::Key_L);
         connect(d->action_text_strikeout, &QAction::triggered,
                 this, &KRichTextEdit::setTextStrikeOut);
     } else {
