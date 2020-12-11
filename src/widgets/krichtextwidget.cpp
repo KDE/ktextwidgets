@@ -658,13 +658,13 @@ void KRichTextWidget::Private::_k_manageLink()
     KLinkDialog *linkDialog = new KLinkDialog(q);
     linkDialog->setLinkText(q->currentLinkText());
     linkDialog->setLinkUrl(q->currentLinkUrl());
+    linkDialog->setAttribute(Qt::WA_DeleteOnClose);
 
-    if (linkDialog->exec()) {
+    connect(linkDialog, &QDialog::accepted, linkDialog, [linkDialog, this]() {
         q->updateLink(linkDialog->linkUrl(), linkDialog->linkText());
-    }
+    });
 
-    delete linkDialog;
-
+    linkDialog->show();
 }
 
 void KRichTextWidget::mouseReleaseEvent(QMouseEvent *event)
