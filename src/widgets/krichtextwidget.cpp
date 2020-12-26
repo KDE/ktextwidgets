@@ -220,7 +220,7 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_font_family = new KFontAction(i18nc("@action", "&Font"), this);
         d->richTextActionList.append((d->action_font_family));
         d->action_font_family->setObjectName(QStringLiteral("format_font_family"));
-        connect(d->action_font_family, SIGNAL(triggered(QString)), this, SLOT(setFontFamily(QString)));
+        connect(d->action_font_family, &KSelectAction::textTriggered, this, &KRichTextWidget::setFontFamily);
     } else {
         d->action_font_family = nullptr;
     }
