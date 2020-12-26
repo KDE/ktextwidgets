@@ -384,7 +384,7 @@ QList<QAction *> KRichTextWidget::createActions()
         d->richTextActionList.append((d->action_list_style));
         d->action_list_style->setObjectName(QStringLiteral("format_list_style"));
 
-        connect(d->action_list_style, static_cast<void (KSelectAction::*)(int)>(&KSelectAction::triggered),
+        connect(d->action_list_style, &KSelectAction::indexTriggered,
                 this, [this](int style) {d->_k_setListStyle(style);});
         connect(d->action_list_style, SIGNAL(triggered()),
                 this, SLOT(_k_updateMiscActions()));
@@ -496,7 +496,7 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_heading_level->setCurrentItem(0);
         d->richTextActionList.append(d->action_heading_level);
         d->action_heading_level->setObjectName(QStringLiteral("format_heading_level"));
-        connect(d->action_heading_level, QOverload<int>::of(&KSelectAction::triggered),
+        connect(d->action_heading_level, &KSelectAction::indexTriggered,
                 this, [this](int level){ d->_k_setHeadingLevel(level); });
     } else {
         d->action_heading_level = nullptr;
