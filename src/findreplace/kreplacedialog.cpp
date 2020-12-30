@@ -10,10 +10,10 @@
 #include "kfinddialog_p.h"
 
 #include <QCheckBox>
-#include <QRegExp>
 #include <QLineEdit>
 #include <QGridLayout>
 #include <QGroupBox>
+#include <QRegularExpression>
 
 #include <KHistoryComboBox>
 #include <KLocalizedString>
@@ -126,13 +126,15 @@ void KReplaceDialogPrivate::_k_slotOk()
 {
     // If regex and backrefs are enabled, do a sanity check.
     if (q->KFindDialog::d->regExp->isChecked() && q->KFindDialog::d->backRef->isChecked()) {
-        QRegExp r(q->pattern());
-        int caps = r.captureCount();
-        QRegExp check(QStringLiteral("((?:\\\\)+)(\\d+)"));
-        int p = 0;
-        QString rep = q->replacement();
-        while ((p = check.indexIn(rep, p)) > -1) {
-            if (check.cap(1).length() % 2 && check.cap(2).toInt() > caps) {
+        const QRegularExpression re(q->pattern());
+        const int caps = re.captureCount();
+
+        const QString rep = q->replacement();
+        const QRegularExpression check(QStringLiteral("((?:\\\\)+)(\\d+)"));
+        auto iter = check.globalMatch(rep);
+        while (iter.hasNext()) {
+            const QRegularExpressionMatch match = iter.next();
+            if ((match.captured(1).size() % 2) && match.captured(2).toInt() > caps) {
                 KMessageBox::information(q, i18n(
                                              "Your replacement string is referencing a capture greater than '\\%1', ",  caps) +
                                          (caps ?
@@ -142,9 +144,7 @@ void KReplaceDialogPrivate::_k_slotOk()
                                          i18n("\nPlease correct."));
                 return; // abort OKing
             }
-            p += check.matchedLength();
         }
-
     }
 
     q->KFindDialog::d->_k_slotOk();

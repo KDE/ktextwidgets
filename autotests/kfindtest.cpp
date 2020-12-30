@@ -263,6 +263,7 @@ void TestKFind::testSimpleRegexp()
     QCOMPARE(test.hits().join(QString()), output);
 }
 
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
 void TestKFind::testLineBeginRegexp()
 {
     // Let's see what QRegExp can do on a big text (like in KTextEdit)
@@ -280,6 +281,7 @@ void TestKFind::testLineBeginRegexp()
         QStringLiteral("line: \"License version 2, as published by the Free Software Foundation.\", index: 0, length: 7\n");
     QCOMPARE(test.hits().join(QString()), output);
 }
+#endif
 
 void TestKFind::testLineBeginRegularExpression()
 {

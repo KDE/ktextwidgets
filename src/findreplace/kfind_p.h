@@ -89,8 +89,11 @@ struct Q_DECL_HIDDEN KFind::Private {
     Match                *emptyMatch;
     QList<Data>           data; // used like a vector, not like a linked-list
 
-    QString pattern;
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
     QRegExp *regExp;
+#endif
+
+    QString pattern;
     QDialog *dialog;
     long options;
     unsigned matches;

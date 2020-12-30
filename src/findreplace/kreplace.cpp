@@ -11,11 +11,14 @@
 #include "kfind_p.h"
 #include "kreplacedialog.h"
 
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
+#include <QRegExp>
+#endif
+
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QPushButton>
 #include <QVBoxLayout>
-#include <QRegExp>
 #include <QRegularExpression>
 
 #include <KLocalizedString>

@@ -70,7 +70,11 @@ private Q_SLOTS:
 
     void testSimpleSearch();
     void testSimpleRegexp();
+
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
     void testLineBeginRegexp();
+#endif
+
     void testLineBeginRegularExpression();
     void testFindIncremental();
     void testFindIncrementalDynamic();

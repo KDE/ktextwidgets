@@ -16,11 +16,14 @@
 #include <KMessageBox>
 #include <KGuiItem>
 
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
+#include <QRegExp>
+#endif
+
 #include <QDialog>
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QPushButton>
-#include <QRegExp>
 #include <QRegularExpression>
 #include <QHash>
 #include <QVBoxLayout>
@@ -576,7 +579,9 @@ static int doFind(const QString &text, const QRegExp &pattern, int index, long o
     }
     return index;
 }
+#endif
 
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
 // Since QRegExp doesn't support multiline searches (the equivalent of perl's /m)
 // we have to cut the text into lines if the pattern starts with ^ or ends with $.
 static int lineBasedFind(const QString &text, const QRegExp &pattern, int index, long options, int *matchedLength)
