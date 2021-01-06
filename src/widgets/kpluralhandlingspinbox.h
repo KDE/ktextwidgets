@@ -10,7 +10,7 @@
 #include <ktextwidgets_export.h>
 #include <KLocalizedString>
 #include <QSpinBox>
-
+#include <memory>
 
 /**
  * @class KPluralHandlingSpinBox kpluralhandlingspinbox.h <KPluralHandlingSpinBox>
@@ -37,10 +37,10 @@ public:
      * Use this to add a plural-aware suffix, e.g. by using ki18np("singular", "plural").
      */
     void setSuffix(const KLocalizedString &suffix);
+
 private:
-    class KPluralHandlingSpinBoxPrivate;
     friend class KPluralHandlingSpinBoxPrivate;
-    KPluralHandlingSpinBoxPrivate *const d;
+    std::unique_ptr<class KPluralHandlingSpinBoxPrivate> const d;
 
     Q_DISABLE_COPY(KPluralHandlingSpinBox)
     Q_PRIVATE_SLOT(d, void updateSuffix(int))

@@ -6,13 +6,13 @@
 
 #include "kpluralhandlingspinbox.h"
 
-class Q_DECL_HIDDEN KPluralHandlingSpinBox::KPluralHandlingSpinBoxPrivate
+class KPluralHandlingSpinBoxPrivate
 {
 public:
     KPluralHandlingSpinBoxPrivate(QSpinBox *q)
         : q(q)
     {
-        connect(q, SIGNAL(valueChanged(int)), q, SLOT(updateSuffix(int)));
+        QObject::connect(q, SIGNAL(valueChanged(int)), q, SLOT(updateSuffix(int)));
     }
 
     void updateSuffix(int value)
@@ -34,10 +34,7 @@ KPluralHandlingSpinBox::KPluralHandlingSpinBox(QWidget *parent)
 {
 }
 
-KPluralHandlingSpinBox::~KPluralHandlingSpinBox()
-{
-    delete d;
-}
+KPluralHandlingSpinBox::~KPluralHandlingSpinBox() = default;
 
 void KPluralHandlingSpinBox::setSuffix(const KLocalizedString &suffix)
 {
