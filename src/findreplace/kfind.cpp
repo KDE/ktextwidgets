@@ -76,30 +76,46 @@ QPushButton *KFindNextDialog::findButton() const
 ////
 
 KFind::KFind(const QString &pattern, long options, QWidget *parent)
-    : QObject(parent),
-      d(new KFind::Private(this))
+    : KFind(*new KFindPrivate(this), pattern, options, parent)
 {
+}
+
+KFind::KFind(KFindPrivate &dd, const QString &pattern, long options, QWidget *parent)
+    : QObject(parent)
+    , d(&dd)
+{
+    Q_D(KFind);
+
     d->options = options;
     d->init(pattern);
 }
 
 KFind::KFind(const QString &pattern, long options, QWidget *parent, QWidget *findDialog)
-    : QObject(parent),
-      d(new KFind::Private(this))
+    : KFind(*new KFindPrivate(this), pattern, options, parent, findDialog)
 {
+}
+
+KFind::KFind(KFindPrivate &dd, const QString &pattern, long options, QWidget *parent, QWidget *findDialog)
+    : QObject(parent)
+    , d(&dd)
+{
+    Q_D(KFind);
+
     d->findDialog = findDialog;
     d->options = options;
     d->init(pattern);
 }
 
-void KFind::Private::init(const QString &_pattern)
+void KFindPrivate::init(const QString &_pattern)
 {
+    Q_Q(KFind);
+
     matches = 0;
     pattern = _pattern;
     dialog = nullptr;
     dialogClosed = false;
     index = INDEX_NOMATCH;
-    lastResult = NoMatch;
+    lastResult = KFind::NoMatch;
 
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
     regExp = nullptr;      // QRegExp
@@ -110,13 +126,12 @@ void KFind::Private::init(const QString &_pattern)
     q->setOptions(options);
 }
 
-KFind::~KFind()
-{
-    delete d;
-}
+KFind::~KFind() = default;
 
 bool KFind::needData() const
 {
+    Q_D(const KFind);
+
     // always true when d->text is empty.
     if (d->options & KFind::FindBackwards)
         // d->index==-1 and d->lastResult==Match means we haven't answered nomatch yet
@@ -138,6 +153,8 @@ void KFind::setData(const QString &data, int startPos)
 
 void KFind::setData(int id, const QString &data, int startPos)
 {
+    Q_D(KFind);
+
     // cache the data for incremental find
     if (d->options & KFind::FindIncremental) {
         if (id != -1) {
@@ -149,9 +166,9 @@ void KFind::setData(int id, const QString &data, int startPos)
         Q_ASSERT(id <= d->data.size());
 
         if (id == d->data.size()) {
-            d->data.append(Private::Data(id, data, true));
+            d->data.append(KFindPrivate::Data(id, data, true));
         } else {
-            d->data.replace(id, Private::Data(id, data, true));
+            d->data.replace(id, KFindPrivate::Data(id, data, true));
         }
         Q_ASSERT(d->data.at(id).text == data);
     }
@@ -178,6 +195,8 @@ void KFind::setData(int id, const QString &data, int startPos)
 
 QDialog *KFind::findNextDialog(bool create)
 {
+    Q_D(KFind);
+
     if (!d->dialog && create) {
         KFindNextDialog *dialog = new KFindNextDialog(d->pattern, parentWidget());
         connect(dialog->findButton(), SIGNAL(clicked()), this, SLOT(_k_slotFindNext()));
@@ -189,6 +208,8 @@ QDialog *KFind::findNextDialog(bool create)
 
 KFind::Result KFind::find()
 {
+    Q_D(KFind);
+
     Q_ASSERT(d->index != INDEX_NOMATCH || d->patternChanged);
 
     if (d->lastResult == Match && !d->patternChanged) {
@@ -209,7 +230,7 @@ KFind::Result KFind::find()
         // if the current pattern is shorter than the matchedPattern we can
         // probably look up the match in the incrementalPath
         if (d->pattern.length() < d->matchedPattern.length()) {
-            Private::Match match;
+            KFindPrivate::Match match;
             if (!d->pattern.isEmpty()) {
                 match = d->incrementalPath.value(d->pattern);
             } else if (d->emptyMatch) {
@@ -323,9 +344,9 @@ KFind::Result KFind::find()
                 if (d->options & KFind::FindIncremental) {
                     if (d->pattern.isEmpty()) {
                         delete d->emptyMatch;
-                        d->emptyMatch = new Private::Match(d->currentId, d->index, d->matchedLength);
+                        d->emptyMatch = new KFindPrivate::Match(d->currentId, d->index, d->matchedLength);
                     } else {
-                        d->incrementalPath.insert(d->pattern, Private::Match(d->currentId, d->index, d->matchedLength));
+                        d->incrementalPath.insert(d->pattern, KFindPrivate::Match(d->currentId, d->index, d->matchedLength));
                     }
 
                     if (d->pattern.length() < d->matchedPattern.length()) {
@@ -380,9 +401,9 @@ KFind::Result KFind::find()
     return NoMatch;
 }
 
-void KFind::Private::startNewIncrementalSearch()
+void KFindPrivate::startNewIncrementalSearch()
 {
-    Private::Match *match = emptyMatch;
+    KFindPrivate::Match *match = emptyMatch;
     if (match == nullptr) {
         text.clear();
         index = 0;
@@ -641,13 +662,17 @@ int KFind::find(const QString &text, const QRegExp &pattern, int index, long opt
 }
 #endif
 
-void KFind::Private::_k_slotFindNext()
+void KFindPrivate::_k_slotFindNext()
 {
+    Q_Q(KFind);
+
     emit q->findNext();
 }
 
-void KFind::Private::_k_slotDialogClosed()
+void KFindPrivate::_k_slotDialogClosed()
 {
+    Q_Q(KFind);
+
 #ifdef DEBUG_FIND
     //qDebug() << " Begin";
 #endif
@@ -661,6 +686,8 @@ void KFind::Private::_k_slotDialogClosed()
 
 void KFind::displayFinalDialog() const
 {
+    Q_D(const KFind);
+
     QString message;
     if (numMatches()) {
         message = i18np("1 match found.", "%1 matches found.", numMatches());
@@ -672,6 +699,8 @@ void KFind::displayFinalDialog() const
 
 bool KFind::shouldRestart(bool forceAsking, bool showNumMatches) const
 {
+    Q_D(const KFind);
+
     // Only ask if we did a "find from cursor", otherwise it's pointless.
     // Well, unless the user can modify the document during a search operation,
     // hence the force boolean.
@@ -705,18 +734,22 @@ bool KFind::shouldRestart(bool forceAsking, bool showNumMatches) const
                                          QString(), KStandardGuiItem::cont(), KStandardGuiItem::stop());
     bool yes = (ret == KMessageBox::Yes);
     if (yes) {
-        const_cast<KFind *>(this)->d->options &= ~KFind::FromCursor;    // clear FromCursor option
+        const_cast<KFindPrivate*>(d)->options &= ~KFind::FromCursor;    // clear FromCursor option
     }
     return yes;
 }
 
 long KFind::options() const
 {
+    Q_D(const KFind);
+
     return d->options;
 }
 
 void KFind::setOptions(long options)
 {
+    Q_D(KFind);
+
     d->options = options;
 
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
@@ -732,6 +765,8 @@ void KFind::setOptions(long options)
 
 void KFind::closeFindNextDialog()
 {
+    Q_D(KFind);
+
     if (d->dialog) {
         d->dialog->deleteLater();
         d->dialog = nullptr;
@@ -741,16 +776,22 @@ void KFind::closeFindNextDialog()
 
 int KFind::index() const
 {
+    Q_D(const KFind);
+
     return d->index;
 }
 
 QString KFind::pattern() const
 {
+    Q_D(const KFind);
+
     return d->pattern;
 }
 
 void KFind::setPattern(const QString &pattern)
 {
+    Q_D(KFind);
+
     if (d->pattern != pattern) {
         d->patternChanged = true;
         d->matches = 0;
@@ -765,11 +806,15 @@ void KFind::setPattern(const QString &pattern)
 
 int KFind::numMatches() const
 {
+    Q_D(const KFind);
+
     return d->matches;
 }
 
 void KFind::resetCounts()
 {
+    Q_D(KFind);
+
     d->matches = 0;
 }
 
@@ -785,6 +830,8 @@ QWidget *KFind::parentWidget() const
 
 QWidget *KFind::dialogsParent() const
 {
+    Q_D(const KFind);
+
     // If the find dialog is still up, it should get the focus when closing a message box
     // Otherwise, maybe the "find next?" dialog is up
     // Otherwise, the "view" is the parent.

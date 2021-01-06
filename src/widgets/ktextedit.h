@@ -12,9 +12,14 @@
 
 #include <sonnet/highlighter.h>
 #include <QTextEdit>
+#include <memory>
+
 namespace Sonnet {
 class SpellCheckDecorator;
 }
+
+class KTextEditPrivate;
+
 /**
  * @class KTextEdit ktextedit.h <KTextEdit>
  *
@@ -372,21 +377,28 @@ protected:
      */
     void contextMenuEvent(QContextMenuEvent *) override;
 
-private:
-    class Private;
-    Private *const d;
+protected:
+    KTextEdit(KTextEditPrivate &dd, const QString &text, QWidget *parent);
+    KTextEdit(KTextEditPrivate &dd, QWidget *parent);
 
-    Q_PRIVATE_SLOT(d, void spellCheckerMisspelling(const QString &, int))
-    Q_PRIVATE_SLOT(d, void spellCheckerCorrected(const QString &, int, const QString &))
-    Q_PRIVATE_SLOT(d, void spellCheckerCanceled())
-    Q_PRIVATE_SLOT(d, void spellCheckerAutoCorrect(const QString &, const QString &))
-    Q_PRIVATE_SLOT(d, void spellCheckerFinished())
-    Q_PRIVATE_SLOT(d, void undoableClear())
-    Q_PRIVATE_SLOT(d, void toggleAutoSpellCheck())
-    Q_PRIVATE_SLOT(d, void slotAllowTab())
-    Q_PRIVATE_SLOT(d, void menuActivated(QAction *))
-    Q_PRIVATE_SLOT(d, void slotFindHighlight(const QString &, int, int))
-    Q_PRIVATE_SLOT(d, void slotReplaceText(const QString &, int, int, int))
+private:
+    friend class KRichTextEdit;
+    friend class KRichTextWidget;
+    Q_DECLARE_PRIVATE_D(d, KTextEdit)
+    std::unique_ptr<class KTextEditPrivate> const d;
+    // KF6 TODO: change private d to protected d_ptr, use normal Q_DECLARE_PRIVATE, remove friend
+
+    Q_PRIVATE_SLOT(d_func(), void spellCheckerMisspelling(const QString &, int))
+    Q_PRIVATE_SLOT(d_func(), void spellCheckerCorrected(const QString &, int, const QString &))
+    Q_PRIVATE_SLOT(d_func(), void spellCheckerCanceled())
+    Q_PRIVATE_SLOT(d_func(), void spellCheckerAutoCorrect(const QString &, const QString &))
+    Q_PRIVATE_SLOT(d_func(), void spellCheckerFinished())
+    Q_PRIVATE_SLOT(d_func(), void undoableClear())
+    Q_PRIVATE_SLOT(d_func(), void toggleAutoSpellCheck())
+    Q_PRIVATE_SLOT(d_func(), void slotAllowTab())
+    Q_PRIVATE_SLOT(d_func(), void menuActivated(QAction *))
+    Q_PRIVATE_SLOT(d_func(), void slotFindHighlight(const QString &, int, int))
+    Q_PRIVATE_SLOT(d_func(), void slotReplaceText(const QString &, int, int, int))
 };
 
 #endif // KTEXTEDIT_H

@@ -14,6 +14,7 @@
 #include "ktextwidgets_export.h"
 
 class QAction;
+class KRichTextWidgetPrivate;
 
 /**
  * @class KRichTextWidget krichtextwidget.h <KRichTextWidget>
@@ -350,11 +351,15 @@ protected:
 
 private:
     //@cond PRIVATE
-    class Private;
-    friend class Private;
-    Private *const d;
-    Q_PRIVATE_SLOT(d, void _k_updateCharFormatActions(const QTextCharFormat &))
-    Q_PRIVATE_SLOT(d, void _k_updateMiscActions())
+    Q_DECLARE_PRIVATE_D(KTextEdit::d, KRichTextWidget)
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 79)
+    // Unused, kept for ABI compatibility, not renamed for source compatibility
+    // Make sure to use Q_D(KRichTextWidget) in any methods
+    const void * d;
+#endif
+
+    Q_PRIVATE_SLOT(d_func(), void _k_updateCharFormatActions(const QTextCharFormat &))
+    Q_PRIVATE_SLOT(d_func(), void _k_updateMiscActions())
     //@endcond
 };
 

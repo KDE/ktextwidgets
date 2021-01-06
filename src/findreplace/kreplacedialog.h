@@ -127,10 +127,14 @@ protected:
     void showEvent(QShowEvent *) override;
 
 private:
+    Q_DECLARE_PRIVATE_D(KFindDialog::d, KReplaceDialog)
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 79)
+    // Unused, kept for ABI compatibility, not renamed for source compatibility
+    // Make sure to use Q_D(KReplaceDialog) in any methods
+    const void * d;
+#endif
 
-    KReplaceDialogPrivate *const d;
-
-    Q_PRIVATE_SLOT(d, void _k_slotOk())
+    Q_PRIVATE_SLOT(d_func(), void _k_slotOk())
 };
 
 #endif // KREPLACEDIALOG_H

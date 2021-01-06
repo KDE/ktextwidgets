@@ -8,9 +8,9 @@
 */
 
 #include "krichtextedit.h"
+#include "krichtextedit_p.h"
 
 // Own includes
-#include "nestedlisthelper_p.h"
 #include "klinkdialog_p.h"
 
 // kdelibs includes
@@ -20,56 +20,11 @@
 // Qt includes
 #include <QRegularExpression>
 
-/**
-  Private class that helps to provide binary compatibility between releases.
-  @internal
-*/
-//@cond PRIVATE
-class KRichTextEditPrivate : public QObject
-{
-public:
-    explicit KRichTextEditPrivate(KRichTextEdit *parent)
-        : q(parent)
-    {
-        nestedListHelper = new NestedListHelper(q);
-    }
-
-    ~KRichTextEditPrivate()
-    {
-        delete nestedListHelper;
-    }
-
-    //
-    // Normal functions
-    //
-
-    // If the text under the cursor is a link, the cursor's selection is set to
-    // the complete link text. Otherwise selects the current word if there is no
-    // selection.
-    void selectLinkText() const;
-
-    void init();
-
-    // Switches to rich text mode and emits the mode changed signal if the
-    // mode really changed.
-    void activateRichText();
-
-    // Applies formatting to the current word if there is no selection.
-    void mergeFormatOnWordOrSelection(const QTextCharFormat &format);
-
-    void setTextCursor(QTextCursor &cursor);
-
-    // Data members
-
-    KRichTextEdit *const q;
-    KRichTextEdit::Mode mMode = KRichTextEdit::Plain;
-
-    NestedListHelper *nestedListHelper;
-
-};
 
 void KRichTextEditPrivate::activateRichText()
 {
+    Q_Q(KRichTextEdit);
+
     if (mMode == KRichTextEdit::Plain) {
         q->setAcceptRichText(true);
         mMode = KRichTextEdit::Rich;
@@ -79,11 +34,15 @@ void KRichTextEditPrivate::activateRichText()
 
 void KRichTextEditPrivate::setTextCursor(QTextCursor &cursor)
 {
+    Q_Q(KRichTextEdit);
+
     q->setTextCursor(cursor);
 }
 
 void KRichTextEditPrivate::mergeFormatOnWordOrSelection(const QTextCharFormat &format)
 {
+    Q_Q(KRichTextEdit);
+
     QTextCursor cursor = q->textCursor();
     QTextCursor wordStart(cursor);
     QTextCursor wordEnd(cursor);
@@ -99,28 +58,41 @@ void KRichTextEditPrivate::mergeFormatOnWordOrSelection(const QTextCharFormat &f
     q->mergeCurrentCharFormat(format);
     cursor.endEditBlock();
 }
-//@endcond
+
 
 KRichTextEdit::KRichTextEdit(const QString &text, QWidget *parent)
-    : KTextEdit(text, parent), d(new KRichTextEditPrivate(this))
+    : KRichTextEdit(*new KRichTextEditPrivate(this), text, parent)
 {
+}
+
+KRichTextEdit::KRichTextEdit(KRichTextEditPrivate &dd, const QString &text, QWidget *parent)
+    : KTextEdit(dd, text, parent)
+{
+    Q_D(KRichTextEdit);
+
     d->init();
 }
 
 KRichTextEdit::KRichTextEdit(QWidget *parent)
-    : KTextEdit(parent), d(new KRichTextEditPrivate(this))
+    : KRichTextEdit(*new KRichTextEditPrivate(this), parent)
 {
+}
+
+KRichTextEdit::KRichTextEdit(KRichTextEditPrivate &dd, QWidget *parent)
+    : KTextEdit(dd, parent)
+{
+    Q_D(KRichTextEdit);
+
     d->init();
 }
 
-KRichTextEdit::~KRichTextEdit()
-{
-    delete d;
-}
+KRichTextEdit::~KRichTextEdit() = default;
 
 //@cond PRIVATE
 void KRichTextEditPrivate::init()
 {
+    Q_Q(KRichTextEdit);
+
     q->setAcceptRichText(false);
     KCursor::setAutoHideCursor(q, true, true);
 }
@@ -128,6 +100,8 @@ void KRichTextEditPrivate::init()
 
 void KRichTextEdit::setListStyle(int _styleIndex)
 {
+    Q_D(KRichTextEdit);
+
     d->nestedListHelper->handleOnBulletType(-_styleIndex);
     setFocus();
     d->activateRichText();
@@ -135,17 +109,23 @@ void KRichTextEdit::setListStyle(int _styleIndex)
 
 void KRichTextEdit::indentListMore()
 {
+    Q_D(KRichTextEdit);
+
     d->nestedListHelper->changeIndent(+1);
     d->activateRichText();
 }
 
 void KRichTextEdit::indentListLess()
 {
+    Q_D(KRichTextEdit);
+
     d->nestedListHelper->changeIndent(-1);
 }
 
 void KRichTextEdit::insertHorizontalRule()
 {
+    Q_D(KRichTextEdit);
+
     QTextCursor cursor = textCursor();
     QTextBlockFormat bf = cursor.blockFormat();
     QTextCharFormat cf = cursor.charFormat();
@@ -160,6 +140,8 @@ void KRichTextEdit::insertHorizontalRule()
 
 void KRichTextEdit::alignLeft()
 {
+    Q_D(KRichTextEdit);
+
     setAlignment(Qt::AlignLeft);
     setFocus();
     d->activateRichText();
@@ -167,6 +149,8 @@ void KRichTextEdit::alignLeft()
 
 void KRichTextEdit::alignCenter()
 {
+    Q_D(KRichTextEdit);
+
     setAlignment(Qt::AlignHCenter);
     setFocus();
     d->activateRichText();
@@ -174,6 +158,8 @@ void KRichTextEdit::alignCenter()
 
 void KRichTextEdit::alignRight()
 {
+    Q_D(KRichTextEdit);
+
     setAlignment(Qt::AlignRight);
     setFocus();
     d->activateRichText();
@@ -181,6 +167,8 @@ void KRichTextEdit::alignRight()
 
 void KRichTextEdit::alignJustify()
 {
+    Q_D(KRichTextEdit);
+
     setAlignment(Qt::AlignJustify);
     setFocus();
     d->activateRichText();
@@ -188,6 +176,8 @@ void KRichTextEdit::alignJustify()
 
 void KRichTextEdit::makeRightToLeft()
 {
+    Q_D(KRichTextEdit);
+
     QTextBlockFormat format;
     format.setLayoutDirection(Qt::RightToLeft);
     QTextCursor cursor = textCursor();
@@ -199,6 +189,8 @@ void KRichTextEdit::makeRightToLeft()
 
 void KRichTextEdit::makeLeftToRight()
 {
+    Q_D(KRichTextEdit);
+
     QTextBlockFormat format;
     format.setLayoutDirection(Qt::LeftToRight);
     QTextCursor cursor = textCursor();
@@ -210,6 +202,8 @@ void KRichTextEdit::makeLeftToRight()
 
 void KRichTextEdit::setTextBold(bool bold)
 {
+    Q_D(KRichTextEdit);
+
     QTextCharFormat fmt;
     fmt.setFontWeight(bold ? QFont::Bold : QFont::Normal);
     d->mergeFormatOnWordOrSelection(fmt);
@@ -219,6 +213,8 @@ void KRichTextEdit::setTextBold(bool bold)
 
 void KRichTextEdit::setTextItalic(bool italic)
 {
+    Q_D(KRichTextEdit);
+
     QTextCharFormat fmt;
     fmt.setFontItalic(italic);
     d->mergeFormatOnWordOrSelection(fmt);
@@ -228,6 +224,8 @@ void KRichTextEdit::setTextItalic(bool italic)
 
 void KRichTextEdit::setTextUnderline(bool underline)
 {
+    Q_D(KRichTextEdit);
+
     QTextCharFormat fmt;
     fmt.setFontUnderline(underline);
     d->mergeFormatOnWordOrSelection(fmt);
@@ -237,6 +235,8 @@ void KRichTextEdit::setTextUnderline(bool underline)
 
 void KRichTextEdit::setTextStrikeOut(bool strikeOut)
 {
+    Q_D(KRichTextEdit);
+
     QTextCharFormat fmt;
     fmt.setFontStrikeOut(strikeOut);
     d->mergeFormatOnWordOrSelection(fmt);
@@ -246,6 +246,8 @@ void KRichTextEdit::setTextStrikeOut(bool strikeOut)
 
 void KRichTextEdit::setTextForegroundColor(const QColor &color)
 {
+    Q_D(KRichTextEdit);
+
     QTextCharFormat fmt;
     fmt.setForeground(color);
     d->mergeFormatOnWordOrSelection(fmt);
@@ -255,6 +257,8 @@ void KRichTextEdit::setTextForegroundColor(const QColor &color)
 
 void KRichTextEdit::setTextBackgroundColor(const QColor &color)
 {
+    Q_D(KRichTextEdit);
+
     QTextCharFormat fmt;
     fmt.setBackground(color);
     d->mergeFormatOnWordOrSelection(fmt);
@@ -264,6 +268,8 @@ void KRichTextEdit::setTextBackgroundColor(const QColor &color)
 
 void KRichTextEdit::setFontFamily(const QString &fontFamily)
 {
+    Q_D(KRichTextEdit);
+
     QTextCharFormat fmt;
     fmt.setFontFamily(fontFamily);
     d->mergeFormatOnWordOrSelection(fmt);
@@ -273,6 +279,8 @@ void KRichTextEdit::setFontFamily(const QString &fontFamily)
 
 void KRichTextEdit::setFontSize(int size)
 {
+    Q_D(KRichTextEdit);
+
     QTextCharFormat fmt;
     fmt.setFontPointSize(size);
     d->mergeFormatOnWordOrSelection(fmt);
@@ -282,6 +290,8 @@ void KRichTextEdit::setFontSize(int size)
 
 void KRichTextEdit::setFont(const QFont &font)
 {
+    Q_D(KRichTextEdit);
+
     QTextCharFormat fmt;
     fmt.setFont(font);
     d->mergeFormatOnWordOrSelection(fmt);
@@ -291,6 +301,8 @@ void KRichTextEdit::setFont(const QFont &font)
 
 void KRichTextEdit::switchToPlainText()
 {
+    Q_D(KRichTextEdit);
+
     if (d->mMode == Rich) {
         d->mMode = Plain;
         // TODO: Warn the user about this?
@@ -307,6 +319,8 @@ void KRichTextEdit::insertPlainTextImplementation()
 
 void KRichTextEdit::setTextSuperScript(bool superscript)
 {
+    Q_D(KRichTextEdit);
+
     QTextCharFormat fmt;
     fmt.setVerticalAlignment(superscript ? QTextCharFormat::AlignSuperScript : QTextCharFormat::AlignNormal);
     d->mergeFormatOnWordOrSelection(fmt);
@@ -316,6 +330,8 @@ void KRichTextEdit::setTextSuperScript(bool superscript)
 
 void KRichTextEdit::setTextSubScript(bool subscript)
 {
+    Q_D(KRichTextEdit);
+
     QTextCharFormat fmt;
     fmt.setVerticalAlignment(subscript ? QTextCharFormat::AlignSubScript : QTextCharFormat::AlignNormal);
     d->mergeFormatOnWordOrSelection(fmt);
@@ -325,6 +341,8 @@ void KRichTextEdit::setTextSubScript(bool subscript)
 
 void KRichTextEdit::setHeadingLevel(int level)
 {
+    Q_D(KRichTextEdit);
+
     const int boundedLevel = qBound(0, 6, level);
     // Apparently, 5 is maximum for FontSizeAdjustment; otherwise level=1 and
     // level=2 look the same
@@ -367,11 +385,15 @@ void KRichTextEdit::setHeadingLevel(int level)
 
 void KRichTextEdit::enableRichTextMode()
 {
+    Q_D(KRichTextEdit);
+
     d->activateRichText();
 }
 
 KRichTextEdit::Mode KRichTextEdit::textMode() const
 {
+    Q_D(const KRichTextEdit);
+
     return d->mMode;
 }
 
@@ -386,6 +408,8 @@ QString KRichTextEdit::textOrHtml() const
 
 void KRichTextEdit::setTextOrHtml(const QString &text)
 {
+    Q_D(KRichTextEdit);
+
     // might be rich text
     if (Qt::mightBeRichText(text)) {
         if (d->mMode == KRichTextEdit::Plain) {
@@ -397,6 +421,7 @@ void KRichTextEdit::setTextOrHtml(const QString &text)
     }
 }
 
+// KF6 TODO: remove constness
 QString KRichTextEdit::currentLinkText() const
 {
     QTextCursor cursor = textCursor();
@@ -404,11 +429,15 @@ QString KRichTextEdit::currentLinkText() const
     return cursor.selectedText();
 }
 
+// KF6 TODO: remove constness
 void KRichTextEdit::selectLinkText() const
 {
+    Q_D(const KRichTextEdit);
+
     QTextCursor cursor = textCursor();
     selectLinkText(&cursor);
-    d->setTextCursor(cursor);
+    // KF6 TODO: remove const_cast
+    const_cast<KRichTextEditPrivate*>(d)->setTextCursor(cursor);
 }
 
 void KRichTextEdit::selectLinkText(QTextCursor *cursor) const
@@ -455,6 +484,8 @@ QString KRichTextEdit::currentLinkUrl() const
 
 void KRichTextEdit::updateLink(const QString &linkUrl, const QString &linkText)
 {
+    Q_D(KRichTextEdit);
+
     selectLinkText();
 
     QTextCursor cursor = textCursor();
@@ -516,6 +547,8 @@ void KRichTextEdit::updateLink(const QString &linkUrl, const QString &linkText)
 
 void KRichTextEdit::keyPressEvent(QKeyEvent *event)
 {
+    Q_D(KRichTextEdit);
+
     bool handled = false;
     if (textCursor().currentList()) {
         handled = d->nestedListHelper->handleKeyPressEvent(event);
@@ -573,11 +606,15 @@ void KRichTextEdit::keyPressEvent(QKeyEvent *event)
 
 bool KRichTextEdit::canIndentList() const
 {
+    Q_D(const KRichTextEdit);
+
     return d->nestedListHelper->canIndent();
 }
 
 bool KRichTextEdit::canDedentList() const
 {
+    Q_D(const KRichTextEdit);
+
     return d->nestedListHelper->canDedent();
 }
 

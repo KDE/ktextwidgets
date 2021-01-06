@@ -18,9 +18,13 @@
 #include <QPointer>
 #include <QString>
 
-struct Q_DECL_HIDDEN KFind::Private {
-    Private(KFind *q)
-        : q(q)
+class KFindPrivate
+{
+    Q_DECLARE_PUBLIC(KFind)
+
+public:
+    KFindPrivate(KFind *q)
+        : q_ptr(q)
         , findDialog(nullptr)
         , currentId(0)
         , customIds(false)
@@ -30,7 +34,7 @@ struct Q_DECL_HIDDEN KFind::Private {
     {
     }
 
-    ~Private()
+    virtual ~KFindPrivate()
     {
         if (dialog) {
             dialog->deleteLater();
@@ -79,7 +83,7 @@ struct Q_DECL_HIDDEN KFind::Private {
     void _k_slotFindNext();
     void _k_slotDialogClosed();
 
-    KFind *q;
+    KFind * const q_ptr;
     QPointer<QWidget>  findDialog;
     int                   currentId;
     bool                  customIds : 1;

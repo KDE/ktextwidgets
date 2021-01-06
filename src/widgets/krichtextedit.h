@@ -367,10 +367,18 @@ protected:
      */
     void keyPressEvent(QKeyEvent *event) override;
 
+protected:
+    KRichTextEdit(KRichTextEditPrivate &dd, const QString &text, QWidget *parent);
+    KRichTextEdit(KRichTextEditPrivate &dd, QWidget *parent);
+
 private:
     //@cond PRIVATE
-    KRichTextEditPrivate *const d;
-    friend class KRichTextEditPrivate;
+    Q_DECLARE_PRIVATE_D(KTextEdit::d, KRichTextEdit)
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 79)
+    // Unused, kept for ABI compatibility, not renamed for source compatibility
+    // Make sure to use Q_D(KRichTextEdit) in any methods
+    const void * d;
+#endif
     //@endcond
 };
 

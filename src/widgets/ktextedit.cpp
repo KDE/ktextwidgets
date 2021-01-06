@@ -8,6 +8,7 @@
 */
 
 #include "ktextedit.h"
+#include "ktextedit_p.h"
 
 #include <QAction>
 #include <QApplication>
@@ -16,27 +17,16 @@
 #include <QMenu>
 #include <QScrollBar>
 #include <QTextCursor>
-#include <QTextDocumentFragment>
 #include <QDebug>
-#ifdef HAVE_SPEECH
-#include <QTextToSpeech>
-#endif
-#include <QSettings>
 
 #include <sonnet/configdialog.h>
 #include <sonnet/dialog.h>
 #include <sonnet/backgroundchecker.h>
-#include <sonnet/spellcheckdecorator.h>
 #include <KCursor>
 #include <KStandardAction>
 #include <KStandardShortcut>
 #include <KLocalizedString>
 #include <KMessageBox>
-
-#include "kreplacedialog.h"
-#include "kfinddialog.h"
-#include "kfind.h"
-#include "kreplace.h"
 
 class KTextDecorator : public Sonnet::SpellCheckDecorator
 {
@@ -47,108 +37,14 @@ private:
     KTextEdit *m_textEdit;
 };
 
-class Q_DECL_HIDDEN KTextEdit::Private
+void KTextEditPrivate::checkSpelling(bool force)
 {
-public:
-    Private(KTextEdit *_parent)
-        : parent(_parent),
-          languagesMenu(nullptr),
-          customPalette(false),
-          spellCheckingEnabled(false),
-          findReplaceEnabled(true),
-          showTabAction(true),
-          showAutoCorrectionButton(false),
-          decorator(nullptr), speller(nullptr), findDlg(nullptr), find(nullptr), repDlg(nullptr), replace(nullptr),
-#ifdef HAVE_SPEECH
-          textToSpeech(nullptr),
-#endif
-          findIndex(0), repIndex(0),
-          lastReplacedPosition(-1)
-    {
-        //Check the default sonnet settings to see if spellchecking should be enabled.
-        QSettings settings(QStringLiteral("KDE"), QStringLiteral("Sonnet"));
-        spellCheckingEnabled = settings.value(QStringLiteral("checkerEnabledByDefault"), false).toBool();
-    }
+    Q_Q(KTextEdit);
 
-    ~Private()
-    {
-        delete decorator;
-        delete findDlg;
-        delete find;
-        delete replace;
-        delete repDlg;
-        delete speller;
-#ifdef HAVE_SPEECH
-        delete textToSpeech;
-#endif
-    }
-
-    /**
-     * Checks whether we should/should not consume a key used as a shortcut.
-     * This makes it possible to handle shortcuts in the focused widget before any
-     * window-global QAction is triggered.
-     */
-    bool overrideShortcut(const QKeyEvent *e);
-    /**
-     * Actually handle a shortcut event.
-     */
-    bool handleShortcut(const QKeyEvent *e);
-
-    void spellCheckerMisspelling(const QString &text, int pos);
-    void spellCheckerCorrected(const QString &, int, const QString &);
-    void spellCheckerAutoCorrect(const QString &, const QString &);
-    void spellCheckerCanceled();
-    void spellCheckerFinished();
-    void toggleAutoSpellCheck();
-
-    void slotFindHighlight(const QString &text, int matchingIndex, int matchingLength);
-    void slotReplaceText(const QString &text, int replacementIndex, int /*replacedLength*/, int matchedLength);
-
-    /**
-     * Similar to QTextEdit::clear(), only that it is possible to undo this
-     * action.
-     */
-    void undoableClear();
-
-    void slotAllowTab();
-    void menuActivated(QAction *action);
-
-    void init();
-
-    void checkSpelling(bool force);
-    KTextEdit *parent;
-    QAction *autoSpellCheckAction;
-    QAction *allowTab;
-    QAction *spellCheckAction;
-    QMenu *languagesMenu;
-    bool customPalette : 1;
-
-    bool spellCheckingEnabled : 1;
-    bool findReplaceEnabled: 1;
-    bool showTabAction: 1;
-    bool showAutoCorrectionButton: 1;
-    QTextDocumentFragment originalDoc;
-    QString spellCheckingLanguage;
-    Sonnet::SpellCheckDecorator *decorator;
-    Sonnet::Speller *speller;
-    KFindDialog *findDlg;
-    KFind *find;
-    KReplaceDialog *repDlg;
-    KReplace *replace;
-#ifdef HAVE_SPEECH
-    QTextToSpeech *textToSpeech;
-#endif
-
-    int findIndex, repIndex;
-    int lastReplacedPosition;
-};
-
-void KTextEdit::Private::checkSpelling(bool force)
-{
-    if (parent->document()->isEmpty()) {
-        KMessageBox::information(parent, i18n("Nothing to spell check."));
+    if (q->document()->isEmpty()) {
+        KMessageBox::information(q, i18n("Nothing to spell check."));
         if (force) {
-            emit parent->spellCheckingFinished();
+            emit q->spellCheckingFinished();
         }
         return;
     }
@@ -157,89 +53,103 @@ void KTextEdit::Private::checkSpelling(bool force)
         backgroundSpellCheck->changeLanguage(spellCheckingLanguage);
     }
     Sonnet::Dialog *spellDialog = new Sonnet::Dialog(
-        backgroundSpellCheck, force ? parent : nullptr);
+        backgroundSpellCheck, force ? q : nullptr);
     backgroundSpellCheck->setParent(spellDialog);
     spellDialog->setAttribute(Qt::WA_DeleteOnClose, true);
     spellDialog->activeAutoCorrect(showAutoCorrectionButton);
-    connect(spellDialog, SIGNAL(replace(QString,int,QString)),
-            parent, SLOT(spellCheckerCorrected(QString,int,QString)));
-    connect(spellDialog, SIGNAL(misspelling(QString,int)),
-            parent, SLOT(spellCheckerMisspelling(QString,int)));
-    connect(spellDialog, &Sonnet::Dialog::autoCorrect,
-            parent, &KTextEdit::spellCheckerAutoCorrect);
-    connect(spellDialog, SIGNAL(done(QString)),
-            parent, SLOT(spellCheckerFinished()));
-    connect(spellDialog, SIGNAL(cancel()),
-            parent, SLOT(spellCheckerCanceled()));
+    QObject::connect(spellDialog, SIGNAL(replace(QString,int,QString)),
+                     q, SLOT(spellCheckerCorrected(QString,int,QString)));
+    QObject::connect(spellDialog, SIGNAL(misspelling(QString,int)),
+                     q, SLOT(spellCheckerMisspelling(QString,int)));
+    QObject::connect(spellDialog, &Sonnet::Dialog::autoCorrect,
+                     q, &KTextEdit::spellCheckerAutoCorrect);
+    QObject::connect(spellDialog, SIGNAL(done(QString)),
+                     q, SLOT(spellCheckerFinished()));
+    QObject::connect(spellDialog, SIGNAL(cancel()),
+                     q, SLOT(spellCheckerCanceled()));
     //Laurent in sonnet/dialog.cpp we emit done(QString) too => it calls here twice spellCheckerFinished not necessary
     /*
     connect(spellDialog, SIGNAL(stop()),
-            parent, SLOT(spellCheckerFinished()));
+            q, SLOT(spellCheckerFinished()));
     */
-    connect(spellDialog, &Sonnet::Dialog::spellCheckStatus,
-            parent, &KTextEdit::spellCheckStatus);
-    connect(spellDialog, &Sonnet::Dialog::languageChanged,
-            parent, &KTextEdit::languageChanged);
+    QObject::connect(spellDialog, &Sonnet::Dialog::spellCheckStatus,
+                     q, &KTextEdit::spellCheckStatus);
+    QObject::connect(spellDialog, &Sonnet::Dialog::languageChanged,
+                     q, &KTextEdit::languageChanged);
     if (force) {
-        connect(spellDialog, SIGNAL(done(QString)), parent, SIGNAL(spellCheckingFinished()));
-        connect(spellDialog, &Sonnet::Dialog::cancel, parent, &KTextEdit::spellCheckingCanceled);
+        QObject::connect(spellDialog, SIGNAL(done(QString)), q, SIGNAL(spellCheckingFinished()));
+        QObject::connect(spellDialog, &Sonnet::Dialog::cancel, q, &KTextEdit::spellCheckingCanceled);
         //Laurent in sonnet/dialog.cpp we emit done(QString) too => it calls here twice spellCheckerFinished not necessary
-        //connect(spellDialog, SIGNAL(stop()), parent, SIGNAL(spellCheckingFinished()));
+        //connect(spellDialog, SIGNAL(stop()), q, SIGNAL(spellCheckingFinished()));
     }
-    originalDoc = QTextDocumentFragment(parent->document());
-    spellDialog->setBuffer(parent->toPlainText());
+    originalDoc = QTextDocumentFragment(q->document());
+    spellDialog->setBuffer(q->toPlainText());
     spellDialog->show();
 }
 
-void KTextEdit::Private::spellCheckerCanceled()
+void KTextEditPrivate::spellCheckerCanceled()
 {
-    QTextDocument *doc = parent->document();
+    Q_Q(KTextEdit);
+
+    QTextDocument *doc = q->document();
     doc->clear();
     QTextCursor cursor(doc);
     cursor.insertFragment(originalDoc);
     spellCheckerFinished();
 }
 
-void KTextEdit::Private::spellCheckerAutoCorrect(const QString &currentWord, const QString &autoCorrectWord)
+void KTextEditPrivate::spellCheckerAutoCorrect(const QString &currentWord, const QString &autoCorrectWord)
 {
-    emit parent->spellCheckerAutoCorrect(currentWord, autoCorrectWord);
+    Q_Q(KTextEdit);
+
+    emit q->spellCheckerAutoCorrect(currentWord, autoCorrectWord);
 }
 
-void KTextEdit::Private::spellCheckerMisspelling(const QString &text, int pos)
+void KTextEditPrivate::spellCheckerMisspelling(const QString &text, int pos)
 {
+    Q_Q(KTextEdit);
+
     //qDebug()<<"TextEdit::Private::spellCheckerMisspelling :"<<text<<" pos :"<<pos;
-    parent->highlightWord(text.length(), pos);
+    q->highlightWord(text.length(), pos);
 }
 
-void KTextEdit::Private::spellCheckerCorrected(const QString &oldWord, int pos, const QString &newWord)
+void KTextEditPrivate::spellCheckerCorrected(const QString &oldWord, int pos, const QString &newWord)
 {
+    Q_Q(KTextEdit);
+
     //qDebug()<<" oldWord :"<<oldWord<<" newWord :"<<newWord<<" pos : "<<pos;
     if (oldWord != newWord) {
-        QTextCursor cursor(parent->document());
+        QTextCursor cursor(q->document());
         cursor.setPosition(pos);
         cursor.setPosition(pos + oldWord.length(), QTextCursor::KeepAnchor);
         cursor.insertText(newWord);
     }
 }
 
-void KTextEdit::Private::spellCheckerFinished()
+void KTextEditPrivate::spellCheckerFinished()
 {
-    QTextCursor cursor(parent->document());
+    Q_Q(KTextEdit);
+
+    QTextCursor cursor(q->document());
     cursor.clearSelection();
-    parent->setTextCursor(cursor);
-    if (parent->highlighter()) {
-        parent->highlighter()->rehighlight();
+    q->setTextCursor(cursor);
+    if (q->highlighter()) {
+        q->highlighter()->rehighlight();
     }
 }
 
-void KTextEdit::Private::toggleAutoSpellCheck()
+void KTextEditPrivate::toggleAutoSpellCheck()
 {
-    parent->setCheckSpellingEnabled(!parent->checkSpellingEnabled());
+    Q_Q(KTextEdit);
+
+    q->setCheckSpellingEnabled(!q->checkSpellingEnabled());
 }
 
-void KTextEdit::Private::undoableClear()
+void KTextEditPrivate::undoableClear()
 {
-    QTextCursor cursor = parent->textCursor();
+    Q_Q(KTextEdit);
+
+    QTextCursor cursor = q->textCursor();
     cursor.beginEditBlock();
     cursor.movePosition(QTextCursor::Start);
     cursor.movePosition(QTextCursor::End, QTextCursor::KeepAnchor);
@@ -247,15 +157,19 @@ void KTextEdit::Private::undoableClear()
     cursor.endEditBlock();
 }
 
-void KTextEdit::Private::slotAllowTab()
+void KTextEditPrivate::slotAllowTab()
 {
-    parent->setTabChangesFocus(!parent->tabChangesFocus());
+    Q_Q(KTextEdit);
+
+    q->setTabChangesFocus(!q->tabChangesFocus());
 }
 
-void KTextEdit::Private::menuActivated(QAction *action)
+void KTextEditPrivate::menuActivated(QAction *action)
 {
+    Q_Q(KTextEdit);
+
     if (action == spellCheckAction) {
-        parent->checkSpelling();
+        q->checkSpelling();
     } else if (action == autoSpellCheckAction) {
         toggleAutoSpellCheck();
     } else if (action == allowTab) {
@@ -263,37 +177,43 @@ void KTextEdit::Private::menuActivated(QAction *action)
     }
 }
 
-void KTextEdit::Private::slotFindHighlight(const QString &text, int matchingIndex, int matchingLength)
+void KTextEditPrivate::slotFindHighlight(const QString &text, int matchingIndex, int matchingLength)
 {
+    Q_Q(KTextEdit);
+
     Q_UNUSED(text)
     //qDebug() << "Highlight: [" << text << "] mi:" << matchingIndex << " ml:" << matchingLength;
-    QTextCursor tc = parent->textCursor();
+    QTextCursor tc = q->textCursor();
     tc.setPosition(matchingIndex);
     tc.movePosition(QTextCursor::NextCharacter, QTextCursor::KeepAnchor, matchingLength);
-    parent->setTextCursor(tc);
-    parent->ensureCursorVisible();
+    q->setTextCursor(tc);
+    q->ensureCursorVisible();
 }
 
-void KTextEdit::Private::slotReplaceText(const QString &text, int replacementIndex, int replacedLength, int matchedLength)
+void KTextEditPrivate::slotReplaceText(const QString &text, int replacementIndex, int replacedLength, int matchedLength)
 {
+    Q_Q(KTextEdit);
+
     //qDebug() << "Replace: [" << text << "] ri:" << replacementIndex << " rl:" << replacedLength << " ml:" << matchedLength;
-    QTextCursor tc = parent->textCursor();
+    QTextCursor tc = q->textCursor();
     tc.setPosition(replacementIndex);
     tc.movePosition(QTextCursor::NextCharacter, QTextCursor::KeepAnchor, matchedLength);
     tc.removeSelectedText();
     tc.insertText(text.mid(replacementIndex, replacedLength));
     if (replace->options() & KReplaceDialog::PromptOnReplace) {
-        parent->setTextCursor(tc);
-        parent->ensureCursorVisible();
+        q->setTextCursor(tc);
+        q->ensureCursorVisible();
     }
     lastReplacedPosition = replacementIndex;
 }
 
-void KTextEdit::Private::init()
+void KTextEditPrivate::init()
 {
-    KCursor::setAutoHideCursor(parent, true, false);
-    parent->connect(parent, &KTextEdit::languageChanged,
-                    parent, &KTextEdit::setSpellCheckingLanguage);
+    Q_Q(KTextEdit);
+
+    KCursor::setAutoHideCursor(q, true, false);
+    q->connect(q, &KTextEdit::languageChanged,
+                    q, &KTextEdit::setSpellCheckingLanguage);
 }
 
 KTextDecorator::KTextDecorator(KTextEdit *textEdit):
@@ -308,29 +228,46 @@ bool KTextDecorator::isSpellCheckingEnabledForBlock(const QString &textBlock) co
 }
 
 KTextEdit::KTextEdit(const QString &text, QWidget *parent)
-    : QTextEdit(text, parent), d(new Private(this))
+    : KTextEdit(*new KTextEditPrivate(this), text, parent)
 {
+}
+
+KTextEdit::KTextEdit(KTextEditPrivate &dd, const QString &text, QWidget *parent)
+    : QTextEdit(text, parent)
+    , d(&dd)
+{
+    Q_D(KTextEdit);
+
     d->init();
 }
 
 KTextEdit::KTextEdit(QWidget *parent)
-    : QTextEdit(parent), d(new Private(this))
+    : KTextEdit(*new KTextEditPrivate(this), parent)
 {
+}
+
+KTextEdit::KTextEdit(KTextEditPrivate &dd, QWidget *parent)
+    : QTextEdit(parent)
+    , d(&dd)
+{
+    Q_D(KTextEdit);
+
     d->init();
 }
 
-KTextEdit::~KTextEdit()
-{
-    delete d;
-}
+KTextEdit::~KTextEdit() = default;
 
 const QString &KTextEdit::spellCheckingLanguage() const
 {
+    Q_D(const KTextEdit);
+
     return d->spellCheckingLanguage;
 }
 
 void KTextEdit::setSpellCheckingLanguage(const QString &_language)
 {
+    Q_D(KTextEdit);
+
     if (highlighter()) {
         highlighter()->setCurrentLanguage(_language);
         highlighter()->rehighlight();
@@ -344,6 +281,8 @@ void KTextEdit::setSpellCheckingLanguage(const QString &_language)
 
 void KTextEdit::showSpellConfigDialog(const QString &windowIcon)
 {
+    Q_D(KTextEdit);
+
     Sonnet::ConfigDialog dialog(this);
     if (!d->spellCheckingLanguage.isEmpty()) {
         dialog.setLanguage(d->spellCheckingLanguage);
@@ -358,6 +297,8 @@ void KTextEdit::showSpellConfigDialog(const QString &windowIcon)
 
 bool KTextEdit::event(QEvent *ev)
 {
+    Q_D(KTextEdit);
+
     if (ev->type() == QEvent::ShortcutOverride) {
         QKeyEvent *e = static_cast<QKeyEvent *>(ev);
         if (d->overrideShortcut(e)) {
@@ -368,123 +309,125 @@ bool KTextEdit::event(QEvent *ev)
     return QTextEdit::event(ev);
 }
 
-bool KTextEdit::Private::handleShortcut(const QKeyEvent *event)
+bool KTextEditPrivate::handleShortcut(const QKeyEvent *event)
 {
+    Q_Q(KTextEdit);
+
     const int key = event->key() | event->modifiers();
 
     if (KStandardShortcut::copy().contains(key)) {
-        parent->copy();
+        q->copy();
         return true;
     } else if (KStandardShortcut::paste().contains(key)) {
-        parent->paste();
+        q->paste();
         return true;
     } else if (KStandardShortcut::cut().contains(key)) {
-        parent->cut();
+        q->cut();
         return true;
     } else if (KStandardShortcut::undo().contains(key)) {
-        if (!parent->isReadOnly()) {
-            parent->undo();
+        if (!q->isReadOnly()) {
+            q->undo();
         }
         return true;
     } else if (KStandardShortcut::redo().contains(key)) {
-        if (!parent->isReadOnly()) {
-            parent->redo();
+        if (!q->isReadOnly()) {
+            q->redo();
         }
         return true;
     } else if (KStandardShortcut::deleteWordBack().contains(key)) {
-        if (!parent->isReadOnly()) {
-           parent->deleteWordBack();
+        if (!q->isReadOnly()) {
+           q->deleteWordBack();
         }
         return true;
     } else if (KStandardShortcut::deleteWordForward().contains(key)) {
-        if (!parent->isReadOnly()) {
-            parent->deleteWordForward();
+        if (!q->isReadOnly()) {
+            q->deleteWordForward();
         }
         return true;
     } else if (KStandardShortcut::backwardWord().contains(key)) {
-        QTextCursor cursor = parent->textCursor();
+        QTextCursor cursor = q->textCursor();
         cursor.movePosition(QTextCursor::PreviousWord);
-        parent->setTextCursor(cursor);
+        q->setTextCursor(cursor);
         return true;
     } else if (KStandardShortcut::forwardWord().contains(key)) {
-        QTextCursor cursor = parent->textCursor();
+        QTextCursor cursor = q->textCursor();
         cursor.movePosition(QTextCursor::NextWord);
-        parent->setTextCursor(cursor);
+        q->setTextCursor(cursor);
         return true;
     } else if (KStandardShortcut::next().contains(key)) {
-        QTextCursor cursor = parent->textCursor();
+        QTextCursor cursor = q->textCursor();
         bool moved = false;
-        qreal lastY = parent->cursorRect(cursor).bottom();
+        qreal lastY = q->cursorRect(cursor).bottom();
         qreal distance = 0;
         do {
-            qreal y = parent->cursorRect(cursor).bottom();
+            qreal y = q->cursorRect(cursor).bottom();
             distance += qAbs(y - lastY);
             lastY = y;
             moved = cursor.movePosition(QTextCursor::Down);
-        } while (moved && distance < parent->viewport()->height());
+        } while (moved && distance < q->viewport()->height());
 
         if (moved) {
             cursor.movePosition(QTextCursor::Up);
-            parent->verticalScrollBar()->triggerAction(QAbstractSlider::SliderPageStepAdd);
+            q->verticalScrollBar()->triggerAction(QAbstractSlider::SliderPageStepAdd);
         }
-        parent->setTextCursor(cursor);
+        q->setTextCursor(cursor);
         return true;
     } else if (KStandardShortcut::prior().contains(key)) {
-        QTextCursor cursor = parent->textCursor();
+        QTextCursor cursor = q->textCursor();
         bool moved = false;
-        qreal lastY = parent->cursorRect(cursor).bottom();
+        qreal lastY = q->cursorRect(cursor).bottom();
         qreal distance = 0;
         do {
-            qreal y = parent->cursorRect(cursor).bottom();
+            qreal y = q->cursorRect(cursor).bottom();
             distance += qAbs(y - lastY);
             lastY = y;
             moved = cursor.movePosition(QTextCursor::Up);
-        } while (moved && distance < parent->viewport()->height());
+        } while (moved && distance < q->viewport()->height());
 
         if (moved) {
             cursor.movePosition(QTextCursor::Down);
-            parent->verticalScrollBar()->triggerAction(QAbstractSlider::SliderPageStepSub);
+            q->verticalScrollBar()->triggerAction(QAbstractSlider::SliderPageStepSub);
         }
-        parent->setTextCursor(cursor);
+        q->setTextCursor(cursor);
         return true;
     } else if (KStandardShortcut::begin().contains(key)) {
-        QTextCursor cursor = parent->textCursor();
+        QTextCursor cursor = q->textCursor();
         cursor.movePosition(QTextCursor::Start);
-        parent->setTextCursor(cursor);
+        q->setTextCursor(cursor);
         return true;
     } else if (KStandardShortcut::end().contains(key)) {
-        QTextCursor cursor = parent->textCursor();
+        QTextCursor cursor = q->textCursor();
         cursor.movePosition(QTextCursor::End);
-        parent->setTextCursor(cursor);
+        q->setTextCursor(cursor);
         return true;
     } else if (KStandardShortcut::beginningOfLine().contains(key)) {
-        QTextCursor cursor = parent->textCursor();
+        QTextCursor cursor = q->textCursor();
         cursor.movePosition(QTextCursor::StartOfLine);
-        parent->setTextCursor(cursor);
+        q->setTextCursor(cursor);
         return true;
     } else if (KStandardShortcut::endOfLine().contains(key)) {
-        QTextCursor cursor = parent->textCursor();
+        QTextCursor cursor = q->textCursor();
         cursor.movePosition(QTextCursor::EndOfLine);
-        parent->setTextCursor(cursor);
+        q->setTextCursor(cursor);
         return true;
     } else if (findReplaceEnabled && KStandardShortcut::find().contains(key)) {
-        parent->slotFind();
+        q->slotFind();
         return true;
     } else if (findReplaceEnabled && KStandardShortcut::findNext().contains(key)) {
-        parent->slotFindNext();
+        q->slotFindNext();
         return true;
     } else if (findReplaceEnabled && KStandardShortcut::findPrev().contains(key)) {
-        parent->slotFindPrevious();
+        q->slotFindPrevious();
         return true;
     } else if (findReplaceEnabled && KStandardShortcut::replace().contains(key)) {
-        if (!parent->isReadOnly()) {
-            parent->slotReplace();
+        if (!q->isReadOnly()) {
+            q->slotReplace();
         }
         return true;
     } else if (KStandardShortcut::pasteSelection().contains(key)) {
         QString text = QApplication::clipboard()->text(QClipboard::Selection);
         if (!text.isEmpty()) {
-            parent->insertPlainText(text);    // TODO: check if this is html? (MiB)
+            q->insertPlainText(text);    // TODO: check if this is html? (MiB)
         }
         return true;
     }
@@ -510,6 +453,8 @@ void KTextEdit::deleteWordForward()
 
 QMenu *KTextEdit::mousePopupMenu()
 {
+    Q_D(KTextEdit);
+
     QMenu *popup = createStandardContextMenu();
     if (!popup) {
         return nullptr;
@@ -620,6 +565,8 @@ QMenu *KTextEdit::mousePopupMenu()
 
 void KTextEdit::slotSpeakText()
 {
+    Q_D(KTextEdit);
+
 #ifdef HAVE_SPEECH
     QString text;
     if (textCursor().hasSelection()) {
@@ -651,6 +598,8 @@ void KTextEdit::createHighlighter()
 
 Sonnet::Highlighter *KTextEdit::highlighter() const
 {
+    Q_D(const KTextEdit);
+
     if (d->decorator) {
         return d->decorator->highlighter();
     } else {
@@ -660,12 +609,16 @@ Sonnet::Highlighter *KTextEdit::highlighter() const
 
 void KTextEdit::clearDecorator()
 {
+    Q_D(KTextEdit);
+
     delete d->decorator;
     d->decorator = nullptr;
 }
 
 void KTextEdit::addTextDecorator(Sonnet::SpellCheckDecorator *decorator)
 {
+    Q_D(KTextEdit);
+
     d->decorator = decorator;
 }
 
@@ -684,6 +637,8 @@ void KTextEdit::setHighlighter(Sonnet::Highlighter *_highLighter)
 
 void KTextEdit::setCheckSpellingEnabled(bool check)
 {
+    Q_D(KTextEdit);
+
     emit checkSpellingChanged(check);
     if (check == d->spellCheckingEnabled) {
         return;
@@ -708,6 +663,8 @@ void KTextEdit::setCheckSpellingEnabled(bool check)
 
 void KTextEdit::focusInEvent(QFocusEvent *event)
 {
+    Q_D(KTextEdit);
+
     if (d->spellCheckingEnabled && !isReadOnly() && !d->decorator) {
         createHighlighter();
     }
@@ -717,6 +674,8 @@ void KTextEdit::focusInEvent(QFocusEvent *event)
 
 bool KTextEdit::checkSpellingEnabled() const
 {
+    Q_D(const KTextEdit);
+
     return d->spellCheckingEnabled;
 }
 
@@ -727,6 +686,8 @@ bool KTextEdit::shouldBlockBeSpellChecked(const QString &) const
 
 void KTextEdit::setReadOnly(bool readOnly)
 {
+    Q_D(KTextEdit);
+
     if (!readOnly && hasFocus() && d->spellCheckingEnabled && !d->decorator) {
         createHighlighter();
     }
@@ -762,11 +723,15 @@ void KTextEdit::setReadOnly(bool readOnly)
 
 void KTextEdit::checkSpelling()
 {
+    Q_D(KTextEdit);
+
     d->checkSpelling(false);
 }
 
 void KTextEdit::forceSpellChecking()
 {
+    Q_D(KTextEdit);
+
     d->checkSpelling(true);
 }
 
@@ -781,6 +746,8 @@ void KTextEdit::highlightWord(int length, int pos)
 
 void KTextEdit::replace()
 {
+    Q_D(KTextEdit);
+
     if (document()->isEmpty()) {  // saves having to track the text changes
         return;
     }
@@ -797,6 +764,8 @@ void KTextEdit::replace()
 
 void KTextEdit::slotDoReplace()
 {
+    Q_D(KTextEdit);
+
     if (!d->repDlg) {
         // Should really assert()
         return;
@@ -830,6 +799,8 @@ void KTextEdit::slotDoReplace()
 
 void KTextEdit::slotReplaceNext()
 {
+    Q_D(KTextEdit);
+
     if (!d->replace) {
         return;
     }
@@ -871,6 +842,8 @@ void KTextEdit::slotReplaceNext()
 
 void KTextEdit::slotDoFind()
 {
+    Q_D(KTextEdit);
+
     if (!d->findDlg) {
         // Should really assert()
         return;
@@ -900,6 +873,8 @@ void KTextEdit::slotDoFind()
 
 void KTextEdit::slotFindNext()
 {
+    Q_D(KTextEdit);
+
     if (!d->find) {
         return;
     }
@@ -928,6 +903,8 @@ void KTextEdit::slotFindNext()
 
 void KTextEdit::slotFindPrevious()
 {
+    Q_D(KTextEdit);
+
     if (!d->find) {
         return;
     }
@@ -941,6 +918,8 @@ void KTextEdit::slotFindPrevious()
 
 void KTextEdit::slotFind()
 {
+    Q_D(KTextEdit);
+
     if (document()->isEmpty()) {  // saves having to track the text changes
         return;
     }
@@ -956,6 +935,8 @@ void KTextEdit::slotFind()
 
 void KTextEdit::slotReplace()
 {
+    Q_D(KTextEdit);
+
     if (document()->isEmpty()) {  // saves having to track the text changes
         return;
     }
@@ -972,15 +953,19 @@ void KTextEdit::slotReplace()
 
 void KTextEdit::enableFindReplace(bool enabled)
 {
+    Q_D(KTextEdit);
+
     d->findReplaceEnabled = enabled;
 }
 
 void KTextEdit::showTabAction(bool show)
 {
+    Q_D(KTextEdit);
+
     d->showTabAction = show;
 }
 
-bool KTextEdit::Private::overrideShortcut(const QKeyEvent *event)
+bool KTextEditPrivate::overrideShortcut(const QKeyEvent *event)
 {
     const int key = event->key() | event->modifiers();
 
@@ -1032,6 +1017,8 @@ bool KTextEdit::Private::overrideShortcut(const QKeyEvent *event)
 
 void KTextEdit::keyPressEvent(QKeyEvent *event)
 {
+    Q_D(KTextEdit);
+
     if (d->handleShortcut(event)) {
         event->accept();
     } else {
@@ -1041,6 +1028,8 @@ void KTextEdit::keyPressEvent(QKeyEvent *event)
 
 void KTextEdit::showAutoCorrectButton(bool show)
 {
+    Q_D(KTextEdit);
+
     d->showAutoCorrectionButton = show;
 }
 

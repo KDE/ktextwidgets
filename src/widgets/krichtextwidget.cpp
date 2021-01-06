@@ -8,6 +8,8 @@
 
 #include "krichtextwidget.h"
 
+#include "krichtextedit_p.h"
+
 // KDE includes
 #include <KColorScheme>
 #include <KFontAction>
@@ -29,19 +31,20 @@
   @internal
 */
 //@cond PRIVATE
-class Q_DECL_HIDDEN KRichTextWidget::Private
+class KRichTextWidgetPrivate : public KRichTextEditPrivate
 {
+    Q_DECLARE_PUBLIC(KRichTextWidget)
+
 public:
-    Private(KRichTextWidget *parent)
-        :   q(parent)
+    KRichTextWidgetPrivate(KRichTextWidget *q)
+        : KRichTextEditPrivate(q)
     {
     }
 
     QList<QAction *> richTextActionList;
     QTextCharFormat painterFormat;
-    KRichTextWidget *const q;
 
-    RichTextSupport richTextSupport;
+    KRichTextWidget::RichTextSupport richTextSupport;
 
     bool painterActive = false;
 
@@ -140,42 +143,49 @@ public:
 };
 //@endcond
 
-void KRichTextWidget::Private::init()
+void KRichTextWidgetPrivate::init()
 {
+    Q_Q(KRichTextWidget);
+
     q->setRichTextSupport(KRichTextWidget::FullSupport);
 }
 
 KRichTextWidget::KRichTextWidget(QWidget *parent)
-    : KRichTextEdit(parent),
-      d(new Private(this))
+    : KRichTextEdit(*new KRichTextWidgetPrivate(this), parent)
 {
+    Q_D(KRichTextWidget);
+
     d->init();
 }
 
 KRichTextWidget::KRichTextWidget(const QString &text, QWidget *parent)
-    : KRichTextEdit(text, parent),
-      d(new Private(this))
+    : KRichTextEdit(*new KRichTextWidgetPrivate(this), text, parent)
 {
+    Q_D(KRichTextWidget);
+
     d->init();
 }
 
-KRichTextWidget::~KRichTextWidget()
-{
-    delete d;
-}
+KRichTextWidget::~KRichTextWidget() = default;
 
 KRichTextWidget::RichTextSupport KRichTextWidget::richTextSupport() const
 {
+    Q_D(const KRichTextWidget);
+
     return d->richTextSupport;
 }
 
 void KRichTextWidget::setRichTextSupport(const KRichTextWidget::RichTextSupport &support)
 {
+    Q_D(KRichTextWidget);
+
     d->richTextSupport = support;
 }
 
 QList<QAction *> KRichTextWidget::createActions()
 {
+    Q_D(KRichTextWidget);
+
     // Note to maintainers: If adding new functionality here, make sure to disconnect
     // and delete actions which should not be supported.
     //
@@ -199,7 +209,8 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_text_foreground_color->setIconText(i18nc("@label stroke color", "Color"));
         d->richTextActionList.append((d->action_text_foreground_color));
         d->action_text_foreground_color->setObjectName(QStringLiteral("format_text_foreground_color"));
-        connect(d->action_text_foreground_color, &QAction::triggered, this, [this]() {d->_k_setTextForegroundColor();});
+        connect(d->action_text_foreground_color, &QAction::triggered,
+                this, [this]() { Q_D(KRichTextWidget); d->_k_setTextForegroundColor(); });
     } else {
         d->action_text_foreground_color = nullptr;
     }
@@ -210,7 +221,8 @@ QList<QAction *> KRichTextWidget::createActions()
                 i18nc("@action", "Text &Highlight..."), this);
         d->richTextActionList.append((d->action_text_background_color));
         d->action_text_background_color->setObjectName(QStringLiteral("format_text_background_color"));
-        connect(d->action_text_background_color, &QAction::triggered, this, [this]() {d->_k_setTextBackgroundColor();});
+        connect(d->action_text_background_color, &QAction::triggered,
+                this, [this]() { Q_D(KRichTextWidget); d->_k_setTextBackgroundColor(); });
     } else {
         d->action_text_background_color = nullptr;
     }
@@ -385,7 +397,7 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_list_style->setObjectName(QStringLiteral("format_list_style"));
 
         connect(d->action_list_style, &KSelectAction::indexTriggered,
-                this, [this](int style) {d->_k_setListStyle(style);});
+                this, [this](int style) { Q_D(KRichTextWidget); d->_k_setListStyle(style); });
         connect(d->action_list_style, SIGNAL(triggered()),
                 this, SLOT(_k_updateMiscActions()));
     } else {
@@ -435,7 +447,7 @@ QList<QAction *> KRichTextWidget::createActions()
         d->richTextActionList.append((d->action_manage_link));
         d->action_manage_link->setObjectName(QStringLiteral("manage_link"));
         connect(d->action_manage_link, &QAction::triggered,
-                this, [this]() {d->_k_manageLink();});
+                this, [this]() { Q_D(KRichTextWidget); d->_k_manageLink(); });
     } else {
         d->action_manage_link = nullptr;
     }
@@ -446,7 +458,7 @@ QList<QAction *> KRichTextWidget::createActions()
         d->richTextActionList.append((d->action_format_painter));
         d->action_format_painter->setObjectName(QStringLiteral("format_painter"));
         connect(d->action_format_painter, &QAction::toggled,
-                this, [this](bool state) {d->_k_formatPainter(state);});
+                this, [this](bool state) { Q_D(KRichTextWidget); d->_k_formatPainter(state);});
     } else {
         d->action_format_painter = nullptr;
     }
@@ -497,7 +509,7 @@ QList<QAction *> KRichTextWidget::createActions()
         d->richTextActionList.append(d->action_heading_level);
         d->action_heading_level->setObjectName(QStringLiteral("format_heading_level"));
         connect(d->action_heading_level, &KSelectAction::indexTriggered,
-                this, [this](int level){ d->_k_setHeadingLevel(level); });
+                this, [this](int level){ Q_D(KRichTextWidget); d->_k_setHeadingLevel(level); });
     } else {
         d->action_heading_level = nullptr;
     }
@@ -519,63 +531,73 @@ QList<QAction *> KRichTextWidget::createActions()
 
 void KRichTextWidget::setActionsEnabled(bool enabled)
 {
+    Q_D(KRichTextWidget);
+
     for (QAction *action : qAsConst(d->richTextActionList)) {
         action->setEnabled(enabled);
     }
     d->richTextEnabled = enabled;
 }
 
-void KRichTextWidget::Private::_k_setListStyle(int index)
+void KRichTextWidgetPrivate::_k_setListStyle(int index)
 {
+    Q_Q(KRichTextWidget);
+
     q->setListStyle(index);
     _k_updateMiscActions();
 }
 
-void KRichTextWidget::Private::_k_setHeadingLevel(int level)
+void KRichTextWidgetPrivate::_k_setHeadingLevel(int level)
 {
+    Q_Q(KRichTextWidget);
+
     q->setHeadingLevel(level);
     _k_updateMiscActions();
 }
 
-void KRichTextWidget::Private::_k_updateCharFormatActions(const QTextCharFormat &format)
+void KRichTextWidgetPrivate::_k_updateCharFormatActions(const QTextCharFormat &format)
 {
+    Q_Q(KRichTextWidget);
+
     QFont f = format.font();
 
-    if (richTextSupport & SupportFontFamily) {
+    if (richTextSupport & KRichTextWidget::SupportFontFamily) {
         action_font_family->setFont(f.family());
     }
-    if (richTextSupport & SupportFontSize) {
+    if (richTextSupport & KRichTextWidget::SupportFontSize) {
         if (f.pointSize() > 0) {
             action_font_size->setFontSize(f.pointSize());
         }
     }
 
-    if (richTextSupport & SupportBold) {
+    if (richTextSupport & KRichTextWidget::SupportBold) {
         action_text_bold->setChecked(f.bold());
     }
 
-    if (richTextSupport & SupportItalic) {
+    if (richTextSupport & KRichTextWidget::SupportItalic) {
         action_text_italic->setChecked(f.italic());
     }
 
-    if (richTextSupport & SupportUnderline) {
+    if (richTextSupport & KRichTextWidget::SupportUnderline) {
         action_text_underline->setChecked(f.underline());
     }
 
-    if (richTextSupport & SupportStrikeOut) {
+    if (richTextSupport & KRichTextWidget::SupportStrikeOut) {
         action_text_strikeout->setChecked(f.strikeOut());
     }
 
-    if (richTextSupport & SupportSuperScriptAndSubScript) {
+    if (richTextSupport & KRichTextWidget::SupportSuperScriptAndSubScript) {
         QTextCharFormat::VerticalAlignment vAlign = format.verticalAlignment();
         action_text_superscript->setChecked(vAlign == QTextCharFormat::AlignSuperScript);
         action_text_subscript->setChecked(vAlign == QTextCharFormat::AlignSubScript);
     }
 }
 
-void KRichTextWidget::Private::_k_updateMiscActions()
+void KRichTextWidgetPrivate::_k_updateMiscActions()
 {
-    if (richTextSupport & SupportAlignment) {
+    Q_Q(KRichTextWidget);
+
+    if (richTextSupport & KRichTextWidget::SupportAlignment) {
         Qt::Alignment a = q->alignment();
         if (a & Qt::AlignLeft) {
             action_align_left->setChecked(true);
@@ -588,7 +610,7 @@ void KRichTextWidget::Private::_k_updateMiscActions()
         }
     }
 
-    if (richTextSupport & SupportChangeListStyle) {
+    if (richTextSupport & KRichTextWidget::SupportChangeListStyle) {
         if (q->textCursor().currentList()) {
             action_list_style->setCurrentItem(-q->textCursor().currentList()->format().style());
         } else {
@@ -596,7 +618,7 @@ void KRichTextWidget::Private::_k_updateMiscActions()
         }
     }
 
-    if (richTextSupport & SupportIndentLists) {
+    if (richTextSupport & KRichTextWidget::SupportIndentLists) {
         if (richTextEnabled) {
             action_list_indent->setEnabled(q->canIndentList());
         } else {
@@ -604,7 +626,7 @@ void KRichTextWidget::Private::_k_updateMiscActions()
         }
     }
 
-    if (richTextSupport & SupportDedentLists) {
+    if (richTextSupport & KRichTextWidget::SupportDedentLists) {
         if (richTextEnabled) {
             action_list_dedent->setEnabled(q->canDedentList());
         } else {
@@ -612,19 +634,21 @@ void KRichTextWidget::Private::_k_updateMiscActions()
         }
     }
 
-    if (richTextSupport & SupportDirection) {
+    if (richTextSupport & KRichTextWidget::SupportDirection) {
         const Qt::LayoutDirection direction = q->textCursor().blockFormat().layoutDirection();
         action_direction_ltr->setChecked(direction == Qt::LeftToRight);
         action_direction_rtl->setChecked(direction == Qt::RightToLeft);
     }
 
-    if (richTextSupport & SupportHeading) {
+    if (richTextSupport & KRichTextWidget::SupportHeading) {
         action_heading_level->setCurrentItem(q->textCursor().blockFormat().headingLevel());
     }
 }
 
-void KRichTextWidget::Private::_k_setTextForegroundColor()
+void KRichTextWidgetPrivate::_k_setTextForegroundColor()
 {
+    Q_Q(KRichTextWidget);
+
     const QColor currentColor = q->textColor();
     const QColor defaultColor = KColorScheme(QPalette::Active, KColorScheme::View).foreground().color();
 
@@ -637,8 +661,10 @@ void KRichTextWidget::Private::_k_setTextForegroundColor()
     }
 }
 
-void KRichTextWidget::Private::_k_setTextBackgroundColor()
+void KRichTextWidgetPrivate::_k_setTextBackgroundColor()
 {
+    Q_Q(KRichTextWidget);
+
     QTextCharFormat fmt = q->textCursor().charFormat();
     const QColor currentColor = fmt.background().color();
     const QColor defaultColor = KColorScheme(QPalette::Active, KColorScheme::View).foreground().color();
@@ -652,8 +678,10 @@ void KRichTextWidget::Private::_k_setTextBackgroundColor()
     }
 }
 
-void KRichTextWidget::Private::_k_manageLink()
+void KRichTextWidgetPrivate::_k_manageLink()
 {
+    Q_Q(KRichTextWidget);
+
     q->selectLinkText();
     KLinkDialog *linkDialog = new KLinkDialog(q);
     linkDialog->setLinkText(q->currentLinkText());
@@ -669,6 +697,8 @@ void KRichTextWidget::Private::_k_manageLink()
 
 void KRichTextWidget::mouseReleaseEvent(QMouseEvent *event)
 {
+    Q_D(KRichTextWidget);
+
     if (d->painterActive) {
         // If the painter is active, paint the selection with the
         // correct format.
@@ -683,8 +713,10 @@ void KRichTextWidget::mouseReleaseEvent(QMouseEvent *event)
     KRichTextEdit::mouseReleaseEvent(event);
 }
 
-void KRichTextWidget::Private::_k_formatPainter(bool active)
+void KRichTextWidgetPrivate::_k_formatPainter(bool active)
 {
+    Q_Q(KRichTextWidget);
+
     if (active) {
         painterFormat = q->currentCharFormat();
         painterActive = true;
@@ -698,6 +730,8 @@ void KRichTextWidget::Private::_k_formatPainter(bool active)
 
 void KRichTextWidget::updateActionStates()
 {
+    Q_D(KRichTextWidget);
+
     d->_k_updateMiscActions();
     d->_k_updateCharFormatActions(currentCharFormat());
 }

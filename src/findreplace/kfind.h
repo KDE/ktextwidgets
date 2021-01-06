@@ -12,8 +12,10 @@
 #include "ktextwidgets_export.h"
 
 #include <QObject>
+#include <memory>
 
 class QDialog;
+class KFindPrivate;
 
 /**
  * @class KFind kfind.h <KFind>
@@ -389,15 +391,18 @@ protected:
     QWidget *parentWidget() const;
     QWidget *dialogsParent() const;
 
+protected:
+    KFind(KFindPrivate &dd, const QString &pattern, long options, QWidget *parent);
+    KFind(KFindPrivate &dd, const QString &pattern, long options, QWidget *parent, QWidget *findDialog);
+
 private:
     friend class KReplace;
-    friend class KReplacePrivate;
+    Q_DECLARE_PRIVATE_D(d, KFind)
+    std::unique_ptr<class KFindPrivate> const d;
+    // KF6 TODO: change private d to protected d_ptr, use normal Q_DECLARE_PRIVATE, remove friend
 
-    struct Private;
-    Private *const d;
-
-    Q_PRIVATE_SLOT(d, void _k_slotFindNext())
-    Q_PRIVATE_SLOT(d, void _k_slotDialogClosed())
+    Q_PRIVATE_SLOT(d_func(), void _k_slotFindNext())
+    Q_PRIVATE_SLOT(d_func(), void _k_slotDialogClosed())
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(KFind::SearchOptions)

@@ -217,11 +217,15 @@ Q_SIGNALS:
     void replace(const QString &text, int replacementIndex, int replacedLength, int matchedLength);
 
 private:
-    friend class KReplacePrivate;
-    KReplacePrivate *const d;
+    Q_DECLARE_PRIVATE_D(KFind::d, KReplace)
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 79)
+    // Unused, kept for ABI compatibility, not renamed for source compatibility
+    // Make sure to use Q_D(KReplace) in any methods
+    const void * d;
+#endif
 
-    Q_PRIVATE_SLOT(d, void _k_slotSkip())
-    Q_PRIVATE_SLOT(d, void _k_slotReplace())
-    Q_PRIVATE_SLOT(d, void _k_slotReplaceAll())
+    Q_PRIVATE_SLOT(d_func(), void _k_slotSkip())
+    Q_PRIVATE_SLOT(d_func(), void _k_slotReplace())
+    Q_PRIVATE_SLOT(d_func(), void _k_slotReplaceAll())
 };
 #endif

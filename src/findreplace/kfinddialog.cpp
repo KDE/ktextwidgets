@@ -29,22 +29,29 @@
 #include <assert.h>
 
 KFindDialog::KFindDialog(QWidget *parent, long options, const QStringList &findStrings, bool hasSelection, bool replaceDialog)
-    : QDialog(parent),
-      d(new KFindDialogPrivate(this))
+    : KFindDialog(*new KFindDialogPrivate(this), parent, options, findStrings, hasSelection, replaceDialog)
 {
     setWindowTitle(i18n("Find Text"));
+}
+
+KFindDialog::KFindDialog(KFindDialogPrivate &dd, QWidget *parent,
+                         long options, const QStringList &findStrings, bool hasSelection, bool replaceDialog)
+    : QDialog(parent),
+      d(&dd)
+{
+    Q_D(KFindDialog);
 
     d->init(replaceDialog, findStrings, hasSelection);
     setOptions(options);
 }
 
-KFindDialog::~KFindDialog()
-{
-    delete d;
-}
+
+KFindDialog::~KFindDialog() = default;
 
 QWidget *KFindDialog::findExtension() const
 {
+    Q_D(const KFindDialog);
+
     if (!d->findExtension) {
         d->findExtension = new QWidget(d->findGrp);
         d->findLayout->addWidget(d->findExtension, 3, 0, 1, 2);
@@ -55,11 +62,15 @@ QWidget *KFindDialog::findExtension() const
 
 QStringList KFindDialog::findHistory() const
 {
+    Q_D(const KFindDialog);
+
     return d->find->historyItems();
 }
 
-void KFindDialog::KFindDialogPrivate::init(bool forReplace, const QStringList &_findStrings, bool hasSelection)
+void KFindDialogPrivate::init(bool forReplace, const QStringList &_findStrings, bool hasSelection)
 {
+    Q_Q(KFindDialog);
+
     // Create common parts of dialog.
     QVBoxLayout *topLayout = new QVBoxLayout(q);
 
@@ -226,13 +237,15 @@ void KFindDialog::KFindDialogPrivate::init(bool forReplace, const QStringList &_
     _k_textSearchChanged(find->lineEdit()->text());
 }
 
-void KFindDialog::KFindDialogPrivate::_k_textSearchChanged(const QString &text)
+void KFindDialogPrivate::_k_textSearchChanged(const QString &text)
 {
     buttonBox->button(QDialogButtonBox::Ok)->setEnabled(!text.isEmpty());
 }
 
 void KFindDialog::showEvent(QShowEvent *e)
 {
+    Q_D(KFindDialog);
+
     if (!d->initialShowDone) {
         d->initialShowDone = true; // only once
         //qDebug() << "showEvent\n";
@@ -262,6 +275,8 @@ void KFindDialog::showEvent(QShowEvent *e)
 
 long KFindDialog::options() const
 {
+    Q_D(const KFindDialog);
+
     long options = 0;
 
     if (d->caseSensitive->isChecked()) {
@@ -287,11 +302,15 @@ long KFindDialog::options() const
 
 QString KFindDialog::pattern() const
 {
+    Q_D(const KFindDialog);
+
     return d->find->currentText();
 }
 
 void KFindDialog::setPattern(const QString &pattern)
 {
+    Q_D(KFindDialog);
+
     d->find->lineEdit()->setText(pattern);
     d->find->lineEdit()->selectAll();
     d->pattern = pattern;
@@ -300,6 +319,8 @@ void KFindDialog::setPattern(const QString &pattern)
 
 void KFindDialog::setFindHistory(const QStringList &strings)
 {
+    Q_D(KFindDialog);
+
     if (!strings.isEmpty()) {
         d->find->setHistoryItems(strings, true);
         d->find->lineEdit()->setText(strings.first());
@@ -311,6 +332,8 @@ void KFindDialog::setFindHistory(const QStringList &strings)
 
 void KFindDialog::setHasSelection(bool hasSelection)
 {
+    Q_D(KFindDialog);
+
     if (hasSelection) {
         d->enabled |= KFind::SelectedText;
     } else {
@@ -323,7 +346,7 @@ void KFindDialog::setHasSelection(bool hasSelection)
     }
 }
 
-void KFindDialog::KFindDialogPrivate::_k_slotSelectedTextToggled(bool selec)
+void KFindDialogPrivate::_k_slotSelectedTextToggled(bool selec)
 {
     // From cursor doesn't make sense if we have a selection
     fromCursor->setEnabled(!selec && (enabled & KFind::FromCursor));
@@ -334,6 +357,8 @@ void KFindDialog::KFindDialogPrivate::_k_slotSelectedTextToggled(bool selec)
 
 void KFindDialog::setHasCursor(bool hasCursor)
 {
+    Q_D(KFindDialog);
+
     if (hasCursor) {
         d->enabled |= KFind::FromCursor;
     } else {
@@ -345,6 +370,8 @@ void KFindDialog::setHasCursor(bool hasCursor)
 
 void KFindDialog::setSupportsBackwardsFind(bool supports)
 {
+    Q_D(KFindDialog);
+
     // ########## Shouldn't this hide the checkbox instead?
     if (supports) {
         d->enabled |= KFind::FindBackwards;
@@ -357,6 +384,8 @@ void KFindDialog::setSupportsBackwardsFind(bool supports)
 
 void KFindDialog::setSupportsCaseSensitiveFind(bool supports)
 {
+    Q_D(KFindDialog);
+
     // ########## This should hide the checkbox instead
     if (supports) {
         d->enabled |= KFind::CaseSensitive;
@@ -369,6 +398,8 @@ void KFindDialog::setSupportsCaseSensitiveFind(bool supports)
 
 void KFindDialog::setSupportsWholeWordsFind(bool supports)
 {
+    Q_D(KFindDialog);
+
     // ########## This should hide the checkbox instead
     if (supports) {
         d->enabled |= KFind::WholeWordsOnly;
@@ -381,6 +412,8 @@ void KFindDialog::setSupportsWholeWordsFind(bool supports)
 
 void KFindDialog::setSupportsRegularExpressionFind(bool supports)
 {
+    Q_D(KFindDialog);
+
     if (supports) {
         d->enabled |= KFind::RegularExpression;
     } else {
@@ -399,6 +432,8 @@ void KFindDialog::setSupportsRegularExpressionFind(bool supports)
 
 void KFindDialog::setOptions(long options)
 {
+    Q_D(KFindDialog);
+
     d->caseSensitive->setChecked((d->enabled & KFind::CaseSensitive) && (options & KFind::CaseSensitive));
     d->wholeWordsOnly->setChecked((d->enabled & KFind::WholeWordsOnly) && (options & KFind::WholeWordsOnly));
     d->fromCursor->setChecked((d->enabled & KFind::FromCursor) && (options & KFind::FromCursor));
@@ -409,8 +444,10 @@ void KFindDialog::setOptions(long options)
 
 // Create a popup menu with a list of regular expression terms, to help the user
 // compose a regular expression search pattern.
-void KFindDialog::KFindDialogPrivate::_k_showPatterns()
+void KFindDialogPrivate::_k_showPatterns()
 {
+    Q_Q(KFindDialog);
+
     typedef struct {
         const char *description;
         const char *regExp;
@@ -507,8 +544,10 @@ private:
 
 // Create a popup menu with a list of backreference terms, to help the user
 // compose a regular expression replacement pattern.
-void KFindDialog::KFindDialogPrivate::_k_showPlaceholders()
+void KFindDialogPrivate::_k_showPlaceholders()
 {
+    Q_Q(KFindDialog);
+
     // Populate the popup menu.
     if (!placeholders) {
         placeholders = new QMenu(q);
@@ -526,8 +565,10 @@ void KFindDialog::KFindDialogPrivate::_k_showPlaceholders()
     }
 }
 
-void KFindDialog::KFindDialogPrivate::_k_slotPlaceholdersAboutToShow()
+void KFindDialogPrivate::_k_slotPlaceholdersAboutToShow()
 {
+    Q_Q(KFindDialog);
+
     placeholders->clear();
     placeholders->addAction(new PlaceHolderAction(placeholders, i18n("Complete Match"), 0));
 
@@ -537,8 +578,10 @@ void KFindDialog::KFindDialogPrivate::_k_slotPlaceholdersAboutToShow()
     }
 }
 
-void KFindDialog::KFindDialogPrivate::_k_slotOk()
+void KFindDialogPrivate::_k_slotOk()
 {
+    Q_Q(KFindDialog);
+
     // Nothing to find?
     if (q->pattern().isEmpty()) {
         KMessageBox::error(q, i18n("You must enter some text to search for."));
@@ -561,8 +604,10 @@ void KFindDialog::KFindDialogPrivate::_k_slotOk()
     emit q->okClicked();
 }
 
-void KFindDialog::KFindDialogPrivate::_k_slotReject()
+void KFindDialogPrivate::_k_slotReject()
 {
+    Q_Q(KFindDialog);
+
     emit q->cancelClicked();
     q->reject();
 }

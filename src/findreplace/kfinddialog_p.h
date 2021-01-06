@@ -23,11 +23,13 @@ class QGroupBox;
 class QMenu;
 class QPushButton;
 
-class Q_DECL_HIDDEN KFindDialog::KFindDialogPrivate
+class KFindDialogPrivate
 {
+    Q_DECLARE_PUBLIC(KFindDialog)
+
 public:
     KFindDialogPrivate(KFindDialog *q)
-        : q(q),
+        : q_ptr(q),
           regexpDialog(nullptr),
           regexpDialogQueryDone(false),
           initialShowDone(false),
@@ -46,14 +48,14 @@ public:
     void _k_showPlaceholders();
     void _k_textSearchChanged(const QString &);
 
-    KFindDialog *q = nullptr;
+    KFindDialog * const q_ptr = nullptr;
     QDialog *regexpDialog = nullptr;
     bool regexpDialogQueryDone : 1;
     bool initialShowDone : 1;
     long enabled; // uses Options to define which search options are enabled
     QStringList findStrings;
     QString pattern;
-    QWidget *findExtension = nullptr;
+    mutable QWidget *findExtension = nullptr;
     QDialogButtonBox *buttonBox = nullptr;
 
     QGroupBox *findGrp = nullptr;
