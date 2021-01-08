@@ -688,7 +688,8 @@ void KRichTextWidgetPrivate::_k_manageLink()
     linkDialog->setLinkUrl(q->currentLinkUrl());
     linkDialog->setAttribute(Qt::WA_DeleteOnClose);
 
-    connect(linkDialog, &QDialog::accepted, linkDialog, [linkDialog, this]() {
+    QObject::connect(linkDialog, &QDialog::accepted, linkDialog, [linkDialog, this]() {
+        Q_Q(KRichTextWidget);
         q->updateLink(linkDialog->linkUrl(), linkDialog->linkText());
     });
 
