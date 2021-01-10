@@ -219,9 +219,8 @@ Q_SIGNALS:
 private:
     Q_DECLARE_PRIVATE_D(KFind::d, KReplace)
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 79)
-    // Unused, kept for ABI compatibility, not renamed for source compatibility
-    // Make sure to use Q_D(KReplace) in any methods
-    const void * d;
+    // Unused, kept for ABI compatibility
+    const void * __ktextwidgets_d_do_not_use;
 #endif
 
     Q_PRIVATE_SLOT(d_func(), void _k_slotSkip())

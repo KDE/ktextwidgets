@@ -353,9 +353,8 @@ private:
     //@cond PRIVATE
     Q_DECLARE_PRIVATE_D(KTextEdit::d, KRichTextWidget)
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 79)
-    // Unused, kept for ABI compatibility, not renamed for source compatibility
-    // Make sure to use Q_D(KRichTextWidget) in any methods
-    const void * d;
+    // Unused, kept for ABI compatibility
+    const void * __ktextwidgets_d_do_not_use;
 #endif
 
     Q_PRIVATE_SLOT(d_func(), void _k_updateCharFormatActions(const QTextCharFormat &))
