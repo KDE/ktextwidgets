@@ -44,7 +44,7 @@ void KTextEditPrivate::checkSpelling(bool force)
     if (q->document()->isEmpty()) {
         KMessageBox::information(q, i18n("Nothing to spell check."));
         if (force) {
-            emit q->spellCheckingFinished();
+            Q_EMIT q->spellCheckingFinished();
         }
         return;
     }
@@ -102,7 +102,7 @@ void KTextEditPrivate::spellCheckerAutoCorrect(const QString &currentWord, const
 {
     Q_Q(KTextEdit);
 
-    emit q->spellCheckerAutoCorrect(currentWord, autoCorrectWord);
+    Q_EMIT q->spellCheckerAutoCorrect(currentWord, autoCorrectWord);
 }
 
 void KTextEditPrivate::spellCheckerMisspelling(const QString &text, int pos)
@@ -275,7 +275,7 @@ void KTextEdit::setSpellCheckingLanguage(const QString &_language)
 
     if (_language != d->spellCheckingLanguage) {
         d->spellCheckingLanguage = _language;
-        emit languageChanged(_language);
+        Q_EMIT languageChanged(_language);
     }
 }
 
@@ -639,7 +639,7 @@ void KTextEdit::setCheckSpellingEnabled(bool check)
 {
     Q_D(KTextEdit);
 
-    emit checkSpellingChanged(check);
+    Q_EMIT checkSpellingChanged(check);
     if (check == d->spellCheckingEnabled) {
         return;
     }

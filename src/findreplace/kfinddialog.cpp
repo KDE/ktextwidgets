@@ -601,14 +601,14 @@ void KFindDialogPrivate::_k_slotOk()
     if (q->windowModality() != Qt::NonModal) {
         q->accept();
     }
-    emit q->okClicked();
+    Q_EMIT q->okClicked();
 }
 
 void KFindDialogPrivate::_k_slotReject()
 {
     Q_Q(KFindDialog);
 
-    emit q->cancelClicked();
+    Q_EMIT q->cancelClicked();
     q->reject();
 }
 

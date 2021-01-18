@@ -28,7 +28,7 @@ void KRichTextEditPrivate::activateRichText()
     if (mMode == KRichTextEdit::Plain) {
         q->setAcceptRichText(true);
         mMode = KRichTextEdit::Rich;
-        emit q->textModeChanged(mMode);
+        Q_EMIT q->textModeChanged(mMode);
     }
 }
 
@@ -308,7 +308,7 @@ void KRichTextEdit::switchToPlainText()
         // TODO: Warn the user about this?
         QMetaObject::invokeMethod(this, "insertPlainTextImplementation");
         setAcceptRichText(false);
-        emit textModeChanged(d->mMode);
+        Q_EMIT textModeChanged(d->mMode);
     }
 }
 
@@ -588,7 +588,7 @@ void KRichTextEdit::keyPressEvent(QKeyEvent *event)
         textCursor().endEditBlock();
     }
 
-    emit cursorPositionChanged();
+    Q_EMIT cursorPositionChanged();
 }
 
 // void KRichTextEdit::dropEvent(QDropEvent *event)

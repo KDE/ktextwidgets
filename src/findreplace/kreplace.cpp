@@ -263,7 +263,7 @@ KFind::Result KReplace::replace()
 
                     // Tell the world about the match we found, in case someone wants to
                     // highlight it.
-                    emit highlight(d->text, d->index, d->matchedLength);
+                    Q_EMIT highlight(d->text, d->index, d->matchedLength);
 
                     d->lastResult = Match;
                     return Match;
@@ -331,8 +331,8 @@ void KReplacePrivate::_k_slotReplaceAll()
 
     doReplace();
     options &= ~KReplaceDialog::PromptOnReplace;
-    emit q->optionsChanged();
-    emit q->findNext();
+    Q_EMIT q->optionsChanged();
+    Q_EMIT q->findNext();
 }
 
 void KReplacePrivate::_k_slotSkip()
@@ -347,7 +347,7 @@ void KReplacePrivate::_k_slotSkip()
     if (dialogClosed) {
         dialog->deleteLater(); dialog = nullptr; // hide it again
     } else {
-        emit q->findNext();
+        Q_EMIT q->findNext();
     }
 }
 
@@ -359,7 +359,7 @@ void KReplacePrivate::_k_slotReplace()
     if (dialogClosed) {
         dialog->deleteLater(); dialog = nullptr; // hide it again
     } else {
-        emit q->findNext();
+        Q_EMIT q->findNext();
     }
 }
 
@@ -372,7 +372,7 @@ void KReplacePrivate::doReplace()
 
     // Tell the world about the replacement we made, in case someone wants to
     // highlight it.
-    emit q->replace(text, index, replacedLength, matchedLength);
+    Q_EMIT q->replace(text, index, replacedLength, matchedLength);
 #ifdef DEBUG_REPLACE
     //qDebug() << "after replace() signal: d->index=" << d->index << " replacedLength=" << replacedLength;
 #endif
