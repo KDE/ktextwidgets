@@ -16,7 +16,7 @@ add_library(KF5::TextWidgets ALIAS KF5TextWidgets)
 ecm_generate_export_header(KF5TextWidgets
     BASE_NAME KTextWidgets
     GROUP_BASE_NAME KF
-    VERSION ${KF5_VERSION}
+    VERSION ${KF_VERSION}
     DEPRECATED_BASE_VERSION 0
     DEPRECATION_VERSIONS 5.0 5.65 5.70 5.71
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
@@ -102,7 +102,7 @@ if (BUILD_QCH)
         KF5TextWidgets_QCH
         NAME KTextWidgets
         BASE_NAME KF5TextWidgets
-        VERSION ${KF5_VERSION}
+        VERSION ${KF_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
             ${KTextWidgets_HEADERS}
