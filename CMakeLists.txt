@@ -57,7 +57,7 @@ add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Des
 
 add_definitions(-DTRANSLATION_DOMAIN=\"ktextwidgets5\")
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054B00)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054F00)
 if (IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/po")
     ki18n_install(po)
 endif()
