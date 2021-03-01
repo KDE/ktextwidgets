@@ -54,7 +54,7 @@ public:
     enum Options {
         /// Should the user be prompted before the replace operation?
         PromptOnReplace = 256,
-        BackReference = 512
+        BackReference = 512,
     };
 
     /**

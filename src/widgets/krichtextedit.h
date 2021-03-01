@@ -57,7 +57,7 @@ public:
      * The mode the edit widget is in.
      */
     enum Mode { Plain,    ///< Plain text mode
-                Rich      ///< Rich text mode
+                Rich,      ///< Rich text mode
               };
 
     /**

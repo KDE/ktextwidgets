@@ -110,7 +110,7 @@ public:
         FindIncremental = 64,   ///< Find incremental.
         // Note that KReplaceDialog uses 256 and 512
         // User extensions can use boolean options above this value.
-        MinimumUserOption = 65536 ///< user options start with this bit
+        MinimumUserOption = 65536, ///< user options start with this bit
     };
     /**
      * Stores a combination of #Options values.
@@ -132,7 +132,7 @@ public:
     KFind(const QString &pattern, long options, QWidget *parent, QWidget *findDialog);
     virtual ~KFind();
 
-    enum Result { NoMatch, Match };
+    enum Result { NoMatch, Match, };
 
     /**
      * @return true if the application must supply a new text fragment

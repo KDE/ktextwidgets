@@ -228,7 +228,7 @@ public:
         /**
          * Includes all above actions for full rich text support
          */
-        FullSupport = 0xffffffff
+        FullSupport = 0xffffffff,
     };
     /**
      * Stores a combination of #RichTextSupportValues values.
