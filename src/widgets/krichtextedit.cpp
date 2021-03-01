@@ -578,9 +578,9 @@ void KRichTextEdit::keyPressEvent(QKeyEvent *event)
     }
 
     // Match the behavior of office suites: newline after header switches to normal text
-    if ((event->key() == Qt::Key_Return)
-            && (textCursor().blockFormat().headingLevel() > 0)
-            && (textCursor().atBlockEnd()))
+    if (event->key() == Qt::Key_Return //
+        && textCursor().blockFormat().headingLevel() > 0 //
+        && textCursor().atBlockEnd())
     {
         // it should be undoable together with actual "return" keypress
         textCursor().joinPreviousEditBlock();

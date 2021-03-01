@@ -207,7 +207,7 @@ public:
          */
         SupportSuperScriptAndSubScript = 0x4000000,
 
-//         SupportChangeParagraphSpacing = 0x200000,
+        // SupportChangeParagraphSpacing = 0x200000,
 
         /**
          * Action to change direction of text to Right-To-Left or Left-To-Right.

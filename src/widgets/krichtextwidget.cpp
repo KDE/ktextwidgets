@@ -382,15 +382,17 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_list_style = new KSelectAction(QIcon::fromTheme(QStringLiteral("format-list-unordered")),
                 i18nc("@title:menu", "List Style"), this);
         QStringList listStyles;
-        listStyles      << i18nc("@item:inmenu no list style", "None")
-                        << i18nc("@item:inmenu disc list style", "Disc")
-                        << i18nc("@item:inmenu circle list style", "Circle")
-                        << i18nc("@item:inmenu square list style", "Square")
-                        << i18nc("@item:inmenu numbered lists", "123")
-                        << i18nc("@item:inmenu lowercase abc lists", "abc")
-                        << i18nc("@item:inmenu uppercase abc lists", "ABC")
-                        << i18nc("@item:inmenu lower case roman numerals", "i ii iii")
-                        << i18nc("@item:inmenu upper case roman numerals", "I II III");
+        /* clang-format off */
+        listStyles << i18nc("@item:inmenu no list style", "None")
+                   << i18nc("@item:inmenu disc list style", "Disc")
+                   << i18nc("@item:inmenu circle list style", "Circle")
+                   << i18nc("@item:inmenu square list style", "Square")
+                   << i18nc("@item:inmenu numbered lists", "123")
+                   << i18nc("@item:inmenu lowercase abc lists", "abc")
+                   << i18nc("@item:inmenu uppercase abc lists", "ABC")
+                   << i18nc("@item:inmenu lower case roman numerals", "i ii iii")
+                   << i18nc("@item:inmenu upper case roman numerals", "I II III");
+        /* clang-format on */
 
         d->action_list_style->setItems(listStyles);
         d->action_list_style->setCurrentItem(0);

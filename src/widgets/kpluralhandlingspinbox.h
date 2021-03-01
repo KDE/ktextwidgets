@@ -8,8 +8,11 @@
 #define KPLURALHANDLINGSPINBOX_H
 
 #include <ktextwidgets_export.h>
+
 #include <KLocalizedString>
+
 #include <QSpinBox>
+
 #include <memory>
 
 /**

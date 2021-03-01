@@ -8,10 +8,10 @@
 
 #include "kfindtest.h"
 
+#include <kfind.h>
+
 #include <QRegularExpression>
 #include <QTest>
-
-#include <kfind.h>
 
 #include <assert.h>
 
@@ -126,6 +126,7 @@ void TestKFind::testStaticFindString_data()
     QTest::addColumn<int>("expectedResult");
     QTest::addColumn<int>("expectedMatchedLength");
 
+    /* clang-format off */
     QTest::newRow("simple (0)") << "abc" << "a" << 0 << 0 << 0 << 1;
     QTest::newRow("simple (1)") << "abc" << "b" << 0 << 0 << 1 << 1;
     QTest::newRow("not found") << "abca" << "ba" << 0 << 0 << -1 << 0;
@@ -150,6 +151,7 @@ void TestKFind::testStaticFindString_data()
     QTest::newRow("back, at begin, found") << "a" << "a" << 0 << int(KFind::FindBackwards) << 0 << 1;
     QTest::newRow("back, at end, found") << "a" << "a" << 1 << int(KFind::FindBackwards) << 0 << 1;
     QTest::newRow("back, text shorter than pattern") << "a" << "abcd" << 0 << int(KFind::FindBackwards) << -1 << 0;
+    /* clang-format on */
 }
 #endif
 
@@ -181,6 +183,7 @@ void TestKFind::testStaticFindRegexp_data()
     QTest::addColumn<int>("expectedResult");
     QTest::addColumn<int>("expectedMatchedLength");
 
+    /* clang-format off */
     QTest::newRow("simple (0)") << "abc" << "a" << 0 << 0 << 0 << 1;
     QTest::newRow("simple (1)") << "abc" << "b" << 0 << 0 << 1 << 1;
     QTest::newRow("not found") << "abca" << "ba" << 0 << 0 << -1 << 0;
@@ -211,6 +214,7 @@ void TestKFind::testStaticFindRegexp_data()
     QTest::newRow("back, at begin, found") << "a" << "a" << 0 << int(KFind::FindBackwards) << 0 << 1;
     QTest::newRow("back, at end, found") << "a" << "a" << 1 << int(KFind::FindBackwards) << 0 << 1;
     QTest::newRow("back, text shorter than pattern") << "a" << "abcd" << 0 << int(KFind::FindBackwards) << -1 << 0;
+    /* clang-format on */
 }
 
 void TestKFind::testStaticFindRegexp()

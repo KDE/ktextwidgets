@@ -202,15 +202,10 @@ void KFindDialogPrivate::init(bool forReplace, const QStringList &_findStrings, 
     }
 
     // QWhatsthis texts
-    find->setWhatsThis(i18n(
-                           "Enter a pattern to search for, or select a previous pattern from "
-                           "the list."));
-    regExp->setWhatsThis(i18n(
-                             "If enabled, search for a regular expression."));
-    regExpItem->setWhatsThis(i18n(
-                                 "Click here to edit your regular expression using a graphical editor."));
-    replace->setWhatsThis(i18n(
-                              "Enter a replacement string, or select a previous one from the list."));
+    find->setWhatsThis(i18n("Enter a pattern to search for, or select a previous pattern from the list."));
+    regExp->setWhatsThis(i18n("If enabled, search for a regular expression."));
+    regExpItem->setWhatsThis(i18n("Click here to edit your regular expression using a graphical editor."));
+    replace->setWhatsThis(i18n("Enter a replacement string, or select a previous one from the list."));
     backRef->setWhatsThis(i18n(
                               "<qt>If enabled, any occurrence of <code><b>\\N</b></code>, where "
                               "<code><b>N</b></code> is an integer number, will be replaced with "
@@ -218,21 +213,13 @@ void KFindDialogPrivate::init(bool forReplace, const QStringList &_findStrings, 
                               "pattern.<p>To include (a literal <code><b>\\N</b></code> in your "
                               "replacement, put an extra backslash in front of it, like "
                               "<code><b>\\\\N</b></code>.</p></qt>"));
-    backRefItem->setWhatsThis(i18n(
-                                  "Click for a menu of available captures."));
-    wholeWordsOnly->setWhatsThis(i18n(
-                                     "Require word boundaries in both ends of a match to succeed."));
-    fromCursor->setWhatsThis(i18n(
-                                 "Start searching at the current cursor location rather than at the top."));
-    selectedText->setWhatsThis(i18n(
-                                   "Only search within the current selection."));
-    caseSensitive->setWhatsThis(i18n(
-                                    "Perform a case sensitive search: entering the pattern "
-                                    "'Joe' will not match 'joe' or 'JOE', only 'Joe'."));
-    findBackwards->setWhatsThis(i18n(
-                                    "Search backwards."));
-    promptOnReplace->setWhatsThis(i18n(
-                                      "Ask before replacing each match found."));
+    backRefItem->setWhatsThis(i18n("Click for a menu of available captures."));
+    wholeWordsOnly->setWhatsThis(i18n("Require word boundaries in both ends of a match to succeed."));
+    fromCursor->setWhatsThis(i18n("Start searching at the current cursor location rather than at the top."));
+    selectedText->setWhatsThis(i18n("Only search within the current selection."));
+    caseSensitive->setWhatsThis(i18n("Perform a case sensitive search: entering the pattern 'Joe' will not match 'joe' or 'JOE', only 'Joe'."));
+    findBackwards->setWhatsThis(i18n("Search backwards."));
+    promptOnReplace->setWhatsThis(i18n("Ask before replacing each match found."));
 
     _k_textSearchChanged(find->lineEdit()->text());
 }
