@@ -92,10 +92,12 @@ public:
     KTEXTWIDGETS_DEPRECATED_VERSION(5, 65, "No functional implementation")
     virtual QString regExp() const = 0;
 
-    virtual ~KRegExpEditorInterface() {}
+    virtual ~KRegExpEditorInterface()
+    {
+    }
 
 protected:
-// These are Q_SIGNALS: in classes that actually implement the interface.
+    // These are Q_SIGNALS: in classes that actually implement the interface.
 
     /**
      * This signal tells whether undo is available.
@@ -116,7 +118,7 @@ protected:
     virtual void changes(bool) = 0;
 
 public:
-// These are public Q_SLOTS: in classes that implement the interface.
+    // These are public Q_SLOTS: in classes that implement the interface.
 
     /**
      * Set the regular expression for the editor. The syntax must be Qt3
@@ -146,10 +148,9 @@ public:
      * See http://techbase.kde.org/Policies/Binary_Compatibility_Issues_With_C++
      */
     KTEXTWIDGETS_DEPRECATED_VERSION(5, 65, "No functional implementation")
-    virtual void doSomething(const QString& method, void *arguments) = 0;
+    virtual void doSomething(const QString &method, void *arguments) = 0;
 };
 
 Q_DECLARE_INTERFACE(KRegExpEditorInterface, "org.kde.KRegExpEditorInterface/1.0")
 #endif
 #endif
-

@@ -7,9 +7,9 @@
 
 #include <ktextedit.h>
 
-#include <QFile>
 #include <QAction>
 #include <QApplication>
+#include <QFile>
 #include <QTest>
 
 int main(int argc, char **argv)
@@ -18,10 +18,10 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
     KTextEdit *edit = new KTextEdit();
 
-    //QAction* action = new QAction("Select All", edit);
-    //action->setShortcut( Qt::CTRL | Qt::Key_Underscore );
-    //edit->addAction(action);
-    //QObject::connect(action, SIGNAL(triggered()), edit, SLOT(selectAll()));
+    // QAction* action = new QAction("Select All", edit);
+    // action->setShortcut( Qt::CTRL | Qt::Key_Underscore );
+    // edit->addAction(action);
+    // QObject::connect(action, SIGNAL(triggered()), edit, SLOT(selectAll()));
 
     QFile file(QFINDTESTDATA(QLatin1String("ktextedittest.cpp")));
     if (file.open(QIODevice::ReadOnly)) {

@@ -52,13 +52,13 @@ class KTEXTWIDGETS_EXPORT KRichTextEdit : public KTextEdit
     Q_OBJECT
 
 public:
-
     /**
      * The mode the edit widget is in.
      */
-    enum Mode { Plain,    ///< Plain text mode
-                Rich,      ///< Rich text mode
-              };
+    enum Mode {
+        Plain, ///< Plain text mode
+        Rich, ///< Rich text mode
+    };
 
     /**
      * Constructs a KRichTextEdit object
@@ -360,7 +360,6 @@ Q_SIGNALS:
     void selectionFinished();
 
 protected:
-
     /**
      * Reimplemented.
      * Catches key press events. Used to handle some key presses on lists.
@@ -376,7 +375,7 @@ private:
     Q_DECLARE_PRIVATE_D(KTextEdit::d, KRichTextEdit)
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 79)
     // Unused, kept for ABI compatibility
-    const void * __ktextwidgets_d_do_not_use;
+    const void *__ktextwidgets_d_do_not_use;
 #endif
     //@endcond
 };

@@ -18,7 +18,12 @@ class KReplaceTest : public QObject
     Q_OBJECT
 public:
     KReplaceTest(const QStringList &text, const QString &buttonName)
-        : QObject(nullptr), m_text(text), m_replace(nullptr), m_buttonName(buttonName) {}
+        : QObject(nullptr)
+        , m_text(text)
+        , m_replace(nullptr)
+        , m_buttonName(buttonName)
+    {
+    }
 
     void replace(const QString &pattern, const QString &replacement, long options);
     void print();

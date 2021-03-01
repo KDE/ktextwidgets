@@ -30,7 +30,6 @@ class QTextBlock;
 class NestedListHelper
 {
 public:
-
     /**
      * Create a helper
      *

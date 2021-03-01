@@ -10,9 +10,9 @@
 #include <KLocalizedString>
 
 #include <QDialogButtonBox>
+#include <QGridLayout>
 #include <QLabel>
 #include <QLineEdit>
-#include <QGridLayout>
 #include <QPushButton>
 #include <QVBoxLayout>
 
@@ -33,7 +33,8 @@ public:
 //@endcond
 
 KLinkDialog::KLinkDialog(QWidget *parent)
-    : QDialog(parent), d(new KLinkDialogPrivate)
+    : QDialog(parent)
+    , d(new KLinkDialogPrivate)
 {
     setWindowTitle(i18n("Manage Link"));
     setModal(true);

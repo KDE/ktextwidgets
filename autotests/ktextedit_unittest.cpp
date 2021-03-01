@@ -18,10 +18,9 @@ class KTextEdit_UnitTest : public QObject
 private Q_SLOTS:
     void testPaste();
     // These tests are probably invalid due to using invalid html.
-//     void testImportWithHorizontalTraversal();
-//     void testImportWithVerticalTraversal();
-//     void testBrInsideParagraphThroughTextEdit();
-
+    //     void testImportWithHorizontalTraversal();
+    //     void testImportWithVerticalTraversal();
+    //     void testBrInsideParagraphThroughTextEdit();
 };
 
 void KTextEdit_UnitTest::testPaste()
@@ -99,4 +98,3 @@ void KTextEdit_UnitTest::testPaste()
 QTEST_MAIN(KTextEdit_UnitTest)
 
 #include "ktextedit_unittest.moc"
-

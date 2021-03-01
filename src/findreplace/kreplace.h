@@ -84,13 +84,11 @@ class KReplacePrivate;
  *  unless you gave it a parent widget on construction.
  *
  */
-class KTEXTWIDGETS_EXPORT KReplace :
-    public KFind
+class KTEXTWIDGETS_EXPORT KReplace : public KFind
 {
     Q_OBJECT
 
 public:
-
     /**
      * Only use this constructor if you don't use KFindDialog, or if
      * you use it as a modal dialog.
@@ -172,7 +170,7 @@ public:
      * Not always the same as replacement.length(), when backreferences are used.
      * @return The index at which a match was found, or -1 if no match was found.
      * @deprecated Since 5.70, for lack of direct use
-    */
+     */
     static int replace(QString &text, const QRegExp &pattern, const QString &replacement, int index, long options, int *replacedLength);
 #endif
 
@@ -220,7 +218,7 @@ private:
     Q_DECLARE_PRIVATE_D(KFind::d, KReplace)
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 79)
     // Unused, kept for ABI compatibility
-    const void * __ktextwidgets_d_do_not_use;
+    const void *__ktextwidgets_d_do_not_use;
 #endif
 
     Q_PRIVATE_SLOT(d_func(), void _k_slotSkip())

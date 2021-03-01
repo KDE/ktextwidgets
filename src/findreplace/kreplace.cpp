@@ -18,8 +18,8 @@
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QPushButton>
-#include <QVBoxLayout>
 #include <QRegularExpression>
+#include <QVBoxLayout>
 
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -105,7 +105,8 @@ public:
     KReplacePrivate(KReplace *q, const QString &replacement)
         : KFindPrivate(q)
         , m_replacement(replacement)
-    {}
+    {
+    }
 
     KReplaceNextDialog *nextDialog();
     void doReplace();
@@ -155,7 +156,7 @@ KReplaceNextDialog *KReplacePrivate::nextDialog()
     Q_Q(KReplace);
 
     if (!dialog) {
-        auto* nextDialog = new KReplaceNextDialog(q->parentWidget());
+        auto *nextDialog = new KReplaceNextDialog(q->parentWidget());
         q->connect(nextDialog->replaceAllButton(), SIGNAL(clicked()), q, SLOT(_k_slotReplaceAll()));
         q->connect(nextDialog->skipButton(), SIGNAL(clicked()), q, SLOT(_k_slotSkip()));
         q->connect(nextDialog->replaceButton(), SIGNAL(clicked()), q, SLOT(_k_slotReplace()));
@@ -199,8 +200,7 @@ static int replaceHelper(QString &text, const QString &replacement, int index, l
 }
 #endif
 
-static int replaceHelper(QString &text, const QString &replacement, int index, long options,
-                         const QRegularExpressionMatch *match, int length)
+static int replaceHelper(QString &text, const QString &replacement, int index, long options, const QRegularExpressionMatch *match, int length)
 {
     QString rep(replacement);
     if (options & KReplaceDialog::BackReference) {
@@ -208,7 +208,7 @@ static int replaceHelper(QString &text, const QString &replacement, int index, l
         if (options & KFind::RegularExpression) { // regex search
             Q_ASSERT(match);
             const int capNum = match->regularExpression().captureCount();
-            for (int i = 0 ; i <= capNum; ++i) {
+            for (int i = 0; i <= capNum; ++i) {
                 rep.replace(QLatin1String("\\") + QString::number(i), match->captured(i));
             }
         } else { // with non-regex search only \0 is supported, replace it with the
@@ -227,7 +227,7 @@ KFind::Result KReplace::replace()
     Q_D(KReplace);
 
 #ifdef DEBUG_REPLACE
-    //qDebug() << "d->index=" << d->index;
+    // qDebug() << "d->index=" << d->index;
 #endif
     if (d->index == INDEX_NOMATCH && d->lastResult == Match) {
         d->lastResult = NoMatch;
@@ -236,28 +236,25 @@ KFind::Result KReplace::replace()
 
     do { // this loop is only because validateMatch can fail
 #ifdef DEBUG_REPLACE
-        //qDebug() << "beginning of loop: d->index=" << d->index;
+         // qDebug() << "beginning of loop: d->index=" << d->index;
 #endif
-        // Find the next match.
-        d->index = KFind::find(d->text, d->pattern, d->index, d->options, &d->matchedLength,
-                                d->options & KFind::RegularExpression? &d->m_match : nullptr);
+         // Find the next match.
+        d->index = KFind::find(d->text, d->pattern, d->index, d->options, &d->matchedLength, d->options & KFind::RegularExpression ? &d->m_match : nullptr);
 
 #ifdef DEBUG_REPLACE
-        //qDebug() << "KFind::find returned d->index=" << d->index;
+        // qDebug() << "KFind::find returned d->index=" << d->index;
 #endif
         if (d->index != -1) {
             // Flexibility: the app can add more rules to validate a possible match
             if (validateMatch(d->text, d->index, d->matchedLength)) {
                 if (d->options & KReplaceDialog::PromptOnReplace) {
 #ifdef DEBUG_REPLACE
-                    //qDebug() << "PromptOnReplace";
+                    // qDebug() << "PromptOnReplace";
 #endif
                     // Display accurate initial string and replacement string, they can vary
                     QString matchedText(d->text.mid(d->index, d->matchedLength));
                     QString rep(matchedText);
-                    replaceHelper(rep, d->m_replacement, 0, d->options,
-                                  d->options & KFind::RegularExpression ? &d->m_match : nullptr,
-                                  d->matchedLength);
+                    replaceHelper(rep, d->m_replacement, 0, d->options, d->options & KFind::RegularExpression ? &d->m_match : nullptr, d->matchedLength);
                     d->nextDialog()->setLabel(matchedText, rep);
                     d->nextDialog()->show(); // TODO kde5: virtual void showReplaceNextDialog(QString,QString), so that kreplacetest can skip the show()
 
@@ -279,7 +276,7 @@ KFind::Result KReplace::replace()
                 }
             }
         } else {
-            d->index = INDEX_NOMATCH;    // will exit the loop
+            d->index = INDEX_NOMATCH; // will exit the loop
         }
     } while (d->index != INDEX_NOMATCH);
 
@@ -291,13 +288,10 @@ int KReplace::replace(QString &text, const QString &pattern, const QString &repl
 {
     int matchedLength;
     QRegularExpressionMatch match;
-    index = KFind::find(text, pattern, index, options, &matchedLength,
-                        options & KFind::RegularExpression ? &match : nullptr);
+    index = KFind::find(text, pattern, index, options, &matchedLength, options & KFind::RegularExpression ? &match : nullptr);
 
     if (index != -1) {
-        *replacedLength = replaceHelper(text, replacement, index, options,
-                                        options & KFind::RegularExpression ? &match : nullptr,
-                                        matchedLength);
+        *replacedLength = replaceHelper(text, replacement, index, options, options & KFind::RegularExpression ? &match : nullptr, matchedLength);
         if (options & KFind::FindBackwards) {
             index--;
         } else {
@@ -345,7 +339,8 @@ void KReplacePrivate::_k_slotSkip()
         index++;
     }
     if (dialogClosed) {
-        dialog->deleteLater(); dialog = nullptr; // hide it again
+        dialog->deleteLater();
+        dialog = nullptr; // hide it again
     } else {
         Q_EMIT q->findNext();
     }
@@ -357,7 +352,8 @@ void KReplacePrivate::_k_slotReplace()
 
     doReplace();
     if (dialogClosed) {
-        dialog->deleteLater(); dialog = nullptr; // hide it again
+        dialog->deleteLater();
+        dialog = nullptr; // hide it again
     } else {
         Q_EMIT q->findNext();
     }
@@ -374,7 +370,7 @@ void KReplacePrivate::doReplace()
     // highlight it.
     Q_EMIT q->replace(text, index, replacedLength, matchedLength);
 #ifdef DEBUG_REPLACE
-    //qDebug() << "after replace() signal: d->index=" << d->index << " replacedLength=" << replacedLength;
+    // qDebug() << "after replace() signal: d->index=" << d->index << " replacedLength=" << replacedLength;
 #endif
     m_replacements++;
     if (options & KFind::FindBackwards) {
@@ -388,7 +384,7 @@ void KReplacePrivate::doReplace()
         }
     }
 #ifdef DEBUG_REPLACE
-    //qDebug() << "after adjustement: d->index=" << d->index;
+    // qDebug() << "after adjustement: d->index=" << d->index;
 #endif
 }
 
@@ -408,8 +404,7 @@ bool KReplace::shouldRestart(bool forceAsking, bool showNumMatches) const
     // ... Or if the prompt-on-replace option was set.
     // Well, unless the user can modify the document during a search operation,
     // hence the force boolean.
-    if (!forceAsking && (d->options & KFind::FromCursor) == 0
-            && (d->options & KReplaceDialog::PromptOnReplace) == 0) {
+    if (!forceAsking && (d->options & KFind::FromCursor) == 0 && (d->options & KReplaceDialog::PromptOnReplace) == 0) {
         displayFinalDialog();
         return false;
     }
@@ -431,11 +426,11 @@ bool KReplace::shouldRestart(bool forceAsking, bool showNumMatches) const
     message += QLatin1Char('\n');
     // Hope this word puzzle is ok, it's a different sentence
     message +=
-        (d->options & KFind::FindBackwards) ?
-        i18n("Do you want to restart search from the end?")
-        : i18n("Do you want to restart search at the beginning?");
+        (d->options & KFind::FindBackwards) ? i18n("Do you want to restart search from the end?") : i18n("Do you want to restart search at the beginning?");
 
-    int ret = KMessageBox::questionYesNo(parentWidget(), message, QString(),
+    int ret = KMessageBox::questionYesNo(parentWidget(),
+                                         message,
+                                         QString(),
                                          KGuiItem(i18nc("@action:button Restart find & replace", "Restart")),
                                          KGuiItem(i18nc("@action:button Stop find & replace", "Stop")));
     return (ret == KMessageBox::Yes);
@@ -446,5 +441,5 @@ void KReplace::closeReplaceNextDialog()
     closeFindNextDialog();
 }
 
-#include "moc_kreplace.cpp"
 #include "kreplace.moc"
+#include "moc_kreplace.cpp"

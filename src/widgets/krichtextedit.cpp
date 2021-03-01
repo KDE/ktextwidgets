@@ -14,12 +14,11 @@
 #include "klinkdialog_p.h"
 
 // kdelibs includes
-#include <KCursor>
 #include <KColorScheme>
+#include <KCursor>
 
 // Qt includes
 #include <QRegularExpression>
-
 
 void KRichTextEditPrivate::activateRichText()
 {
@@ -58,7 +57,6 @@ void KRichTextEditPrivate::mergeFormatOnWordOrSelection(const QTextCharFormat &f
     q->mergeCurrentCharFormat(format);
     cursor.endEditBlock();
 }
-
 
 KRichTextEdit::KRichTextEdit(const QString &text, QWidget *parent)
     : KRichTextEdit(*new KRichTextEditPrivate(this), text, parent)
@@ -346,7 +344,7 @@ void KRichTextEdit::setHeadingLevel(int level)
     const int boundedLevel = qBound(0, 6, level);
     // Apparently, 5 is maximum for FontSizeAdjustment; otherwise level=1 and
     // level=2 look the same
-    const int sizeAdjustment = boundedLevel > 0 ? 5 - boundedLevel: 0;
+    const int sizeAdjustment = boundedLevel > 0 ? 5 - boundedLevel : 0;
 
     QTextCursor cursor = textCursor();
     cursor.beginEditBlock();
@@ -437,7 +435,7 @@ void KRichTextEdit::selectLinkText() const
     QTextCursor cursor = textCursor();
     selectLinkText(&cursor);
     // KF6 TODO: remove const_cast
-    const_cast<KRichTextEditPrivate*>(d)->setTextCursor(cursor);
+    const_cast<KRichTextEditPrivate *>(d)->setTextCursor(cursor);
 }
 
 void KRichTextEdit::selectLinkText(QTextCursor *cursor) const
@@ -470,7 +468,6 @@ void KRichTextEdit::selectLinkText(QTextCursor *cursor) const
     } else if (cursor->hasSelection()) {
         // Nothing to to. Using the currently selected text as the link text.
     } else {
-
         // Select current word
         cursor->movePosition(QTextCursor::StartOfWord);
         cursor->movePosition(QTextCursor::EndOfWord, QTextCursor::KeepAnchor);
@@ -556,11 +553,10 @@ void KRichTextEdit::keyPressEvent(QKeyEvent *event)
 
     // If a line was merged with previous (next) one, with different heading level,
     // the style should also be adjusted accordingly (i.e. merged)
-    if ((event->key() == Qt::Key_Backspace && textCursor().atBlockStart() &&
-            (textCursor().blockFormat().headingLevel() != textCursor().block().previous().blockFormat().headingLevel()))
-     || (event->key() == Qt::Key_Delete && textCursor().atBlockEnd() &&
-            (textCursor().blockFormat().headingLevel() != textCursor().block().next().blockFormat().headingLevel())))
-    {
+    if ((event->key() == Qt::Key_Backspace && textCursor().atBlockStart()
+         && (textCursor().blockFormat().headingLevel() != textCursor().block().previous().blockFormat().headingLevel()))
+        || (event->key() == Qt::Key_Delete && textCursor().atBlockEnd()
+            && (textCursor().blockFormat().headingLevel() != textCursor().block().next().blockFormat().headingLevel()))) {
         QTextCursor cursor = textCursor();
         cursor.beginEditBlock();
         if (event->key() == Qt::Key_Delete) {
@@ -580,8 +576,7 @@ void KRichTextEdit::keyPressEvent(QKeyEvent *event)
     // Match the behavior of office suites: newline after header switches to normal text
     if (event->key() == Qt::Key_Return //
         && textCursor().blockFormat().headingLevel() > 0 //
-        && textCursor().atBlockEnd())
-    {
+        && textCursor().atBlockEnd()) {
         // it should be undoable together with actual "return" keypress
         textCursor().joinPreviousEditBlock();
         setHeadingLevel(0);
@@ -623,25 +618,20 @@ QString KRichTextEdit::toCleanHtml() const
     QString result = toHtml();
 
     static const QString EMPTYLINEHTML = QLatin1String(
-            "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
-            "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; \">&nbsp;</p>");
+        "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; "
+        "margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; \">&nbsp;</p>");
 
     // Qt inserts various style properties based on the current mode of the editor (underline,
     // bold, etc), but only empty paragraphs *also* have qt-paragraph-type set to 'empty'.
-    static const QString EMPTYLINEREGEX = QStringLiteral(
-            "<p style=\"-qt-paragraph-type:empty;(.*?)</p>");
+    static const QString EMPTYLINEREGEX = QStringLiteral("<p style=\"-qt-paragraph-type:empty;(.*?)</p>");
 
-    static const QString OLLISTPATTERNQT = QStringLiteral(
-            "<ol style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px;");
+    static const QString OLLISTPATTERNQT = QStringLiteral("<ol style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px;");
 
-    static const QString ULLISTPATTERNQT = QStringLiteral(
-            "<ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px;");
+    static const QString ULLISTPATTERNQT = QStringLiteral("<ul style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px;");
 
-    static const QString ORDEREDLISTHTML = QStringLiteral(
-            "<ol style=\"margin-top: 0px; margin-bottom: 0px;");
+    static const QString ORDEREDLISTHTML = QStringLiteral("<ol style=\"margin-top: 0px; margin-bottom: 0px;");
 
-    static const QString UNORDEREDLISTHTML = QStringLiteral(
-                "<ul style=\"margin-top: 0px; margin-bottom: 0px;");
+    static const QString UNORDEREDLISTHTML = QStringLiteral("<ul style=\"margin-top: 0px; margin-bottom: 0px;");
 
     // fix 1 - empty lines should show as empty lines - MS Outlook treats margin-top:0px; as
     // a non-existing line.
@@ -660,4 +650,3 @@ QString KRichTextEdit::toCleanHtml() const
 
     return result;
 }
-

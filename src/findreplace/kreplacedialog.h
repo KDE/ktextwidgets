@@ -42,13 +42,11 @@ class KReplaceDialogPrivate;
  *
  * \image html kreplacedialog.png "KReplaceDialog Widget"
  */
-class KTEXTWIDGETS_EXPORT KReplaceDialog:
-    public KFindDialog
+class KTEXTWIDGETS_EXPORT KReplaceDialog : public KFindDialog
 {
     Q_OBJECT
 
 public:
-
     /// Options.
 
     enum Options {
@@ -68,7 +66,8 @@ public:
      *        replace with
      * @param hasSelection Whether a selection exists
      */
-    explicit KReplaceDialog(QWidget *parent = nullptr, long options = 0,
+    explicit KReplaceDialog(QWidget *parent = nullptr,
+                            long options = 0,
                             const QStringList &findStrings = QStringList(),
                             const QStringList &replaceStrings = QStringList(),
                             bool hasSelection = true);
@@ -130,7 +129,7 @@ private:
     Q_DECLARE_PRIVATE_D(KFindDialog::d, KReplaceDialog)
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 79)
     // Unused, kept for ABI compatibility
-    const void * __ktextwidgets_d_do_not_use;
+    const void *__ktextwidgets_d_do_not_use;
 #endif
 
     Q_PRIVATE_SLOT(d_func(), void _k_slotOk())

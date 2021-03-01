@@ -46,15 +46,20 @@ public:
     }
 
     struct Match {
-        Match() : dataId(-1), index(-1), matchedLength(-1) {}
+        Match()
+            : dataId(-1)
+            , index(-1)
+            , matchedLength(-1)
+        {
+        }
         bool isNull() const
         {
             return index == -1;
         }
-        Match(int _dataId, int _index, int _matchedLength) :
-            dataId(_dataId),
-            index(_index),
-            matchedLength(_matchedLength)
+        Match(int _dataId, int _index, int _matchedLength)
+            : dataId(_dataId)
+            , index(_index)
+            , matchedLength(_matchedLength)
         {
             Q_ASSERT(index != -1);
         }
@@ -65,16 +70,19 @@ public:
     };
 
     struct Data {
-        Data() { }
-        Data(int id, const QString &text, bool dirty = false) :
-            text(text),
-            id(id),
-            dirty(dirty)
-        { }
+        Data()
+        {
+        }
+        Data(int id, const QString &text, bool dirty = false)
+            : text(text)
+            , id(id)
+            , dirty(dirty)
+        {
+        }
 
         QString text;
-        int     id = -1;
-        bool    dirty = false;
+        int id = -1;
+        bool dirty = false;
     };
 
     void init(const QString &pattern);
@@ -83,15 +91,15 @@ public:
     void _k_slotFindNext();
     void _k_slotDialogClosed();
 
-    KFind * const q_ptr;
-    QPointer<QWidget>  findDialog;
-    int                   currentId;
-    bool                  customIds : 1;
-    bool                  patternChanged : 1;
-    QString               matchedPattern;
-    QHash<QString, Match>  incrementalPath;
-    Match                *emptyMatch;
-    QList<Data>           data; // used like a vector, not like a linked-list
+    KFind *const q_ptr;
+    QPointer<QWidget> findDialog;
+    int currentId;
+    bool customIds : 1;
+    bool patternChanged : 1;
+    QString matchedPattern;
+    QHash<QString, Match> incrementalPath;
+    Match *emptyMatch;
+    QList<Data> data; // used like a vector, not like a linked-list
 
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
     QRegExp *regExp;

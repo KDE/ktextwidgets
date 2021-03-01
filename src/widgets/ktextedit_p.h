@@ -10,13 +10,13 @@
 #ifndef KTEXTEDIT_P_H
 #define KTEXTEDIT_P_H
 
-#include "kreplacedialog.h"
-#include "kfinddialog.h"
 #include "kfind.h"
+#include "kfinddialog.h"
 #include "kreplace.h"
+#include "kreplacedialog.h"
 
-#include <Sonnet/Speller>
 #include <Sonnet/SpellCheckDecorator>
+#include <Sonnet/Speller>
 
 #include <QSettings>
 #include <QTextDocumentFragment>
@@ -30,14 +30,14 @@ class KTextEditPrivate
 
 public:
     explicit KTextEditPrivate(KTextEdit *q)
-        : q_ptr(q),
-          customPalette(false),
-          spellCheckingEnabled(false),
-          findReplaceEnabled(true),
-          showTabAction(true),
-          showAutoCorrectionButton(false)
+        : q_ptr(q)
+        , customPalette(false)
+        , spellCheckingEnabled(false)
+        , findReplaceEnabled(true)
+        , showTabAction(true)
+        , showAutoCorrectionButton(false)
     {
-        //Check the default sonnet settings to see if spellchecking should be enabled.
+        // Check the default sonnet settings to see if spellchecking should be enabled.
         QSettings settings(QStringLiteral("KDE"), QStringLiteral("Sonnet"));
         spellCheckingEnabled = settings.value(QStringLiteral("checkerEnabledByDefault"), false).toBool();
     }
@@ -89,7 +89,7 @@ public:
 
     void checkSpelling(bool force);
 
-    KTextEdit * const q_ptr;
+    KTextEdit *const q_ptr;
     QAction *autoSpellCheckAction;
     QAction *allowTab;
     QAction *spellCheckAction;
@@ -97,9 +97,9 @@ public:
     bool customPalette : 1;
 
     bool spellCheckingEnabled : 1;
-    bool findReplaceEnabled: 1;
-    bool showTabAction: 1;
-    bool showAutoCorrectionButton: 1;
+    bool findReplaceEnabled : 1;
+    bool showTabAction : 1;
+    bool showAutoCorrectionButton : 1;
     QTextDocumentFragment originalDoc;
     QString spellCheckingLanguage;
     Sonnet::SpellCheckDecorator *decorator = nullptr;

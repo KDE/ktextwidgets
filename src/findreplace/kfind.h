@@ -90,24 +90,22 @@ class KFindPrivate;
  *  A "Find Previous" action can simply switch temporarily the value of
  *  FindBackwards and call slotFindNext() - and reset the value afterwards.
  */
-class KTEXTWIDGETS_EXPORT KFind :
-    public QObject
+class KTEXTWIDGETS_EXPORT KFind : public QObject
 {
     Q_OBJECT
 
 public:
-
     /**
      * @see SearchOptions
      */
     enum Options {
-        WholeWordsOnly = 1,     ///< Match whole words only.
-        FromCursor = 2,         ///< Start from current cursor position.
-        SelectedText = 4,       ///< Only search selected area.
-        CaseSensitive = 8,      ///< Consider case when matching.
-        FindBackwards = 16,     ///< Go backwards.
+        WholeWordsOnly = 1, ///< Match whole words only.
+        FromCursor = 2, ///< Start from current cursor position.
+        SelectedText = 4, ///< Only search selected area.
+        CaseSensitive = 8, ///< Consider case when matching.
+        FindBackwards = 16, ///< Go backwards.
         RegularExpression = 32, ///< Interpret the pattern as a regular expression.
-        FindIncremental = 64,   ///< Find incremental.
+        FindIncremental = 64, ///< Find incremental.
         // Note that KReplaceDialog uses 256 and 512
         // User extensions can use boolean options above this value.
         MinimumUserOption = 65536, ///< user options start with this bit
@@ -132,7 +130,10 @@ public:
     KFind(const QString &pattern, long options, QWidget *parent, QWidget *findDialog);
     virtual ~KFind();
 
-    enum Result { NoMatch, Match, };
+    enum Result {
+        NoMatch,
+        Match,
+    };
 
     /**
      * @return true if the application must supply a new text fragment
@@ -228,9 +229,7 @@ public:
      * @param index The starting index where the candidate match was found
      * @param matchedlength The length of the candidate match
      */
-    virtual bool validateMatch(const QString &text,
-                               int index,
-                               int matchedlength);
+    virtual bool validateMatch(const QString &text, int index, int matchedlength);
 
     /**
      * Returns true if we should restart the search from scratch.
@@ -264,7 +263,9 @@ public:
      *
      * @deprecated Since 5.70
      */
-    KTEXTWIDGETS_DEPRECATED_VERSION(5, 70, "Use find(const QString &text, const QString &pattern, int index, long options, \
+    KTEXTWIDGETS_DEPRECATED_VERSION(5,
+                                    70,
+                                    "Use find(const QString &text, const QString &pattern, int index, long options, \
                    int *matchedLength, QRegularExpressionMatch *rmatch).")
     static int find(const QString &text, const QString &pattern, int index, long options, int *matchedlength);
 #endif
@@ -273,7 +274,11 @@ public:
     /**
      * @deprecated Since 5.70, for lack of direct use
      */
-    KTEXTWIDGETS_DEPRECATED_VERSION_BELATED(5, 71, 5, 70, "Use find(const QString &, const QString &, int, long, \
+    KTEXTWIDGETS_DEPRECATED_VERSION_BELATED(5,
+                                            71,
+                                            5,
+                                            70,
+                                            "Use find(const QString &, const QString &, int, long, \
                    int *, QRegularExpressionMatch *).")
     static int find(const QString &text, const QRegExp &pattern, int index, long options, int *matchedlength);
 #endif
@@ -298,8 +303,7 @@ public:
      *
      * @since 5.70
      */
-    static int find(const QString &text, const QString &pattern, int index, long options,
-                   int *matchedLength, QRegularExpressionMatch *rmatch);
+    static int find(const QString &text, const QString &pattern, int index, long options, int *matchedLength, QRegularExpressionMatch *rmatch);
 
     /**
      * Displays the final dialog saying "no match was found", if that was the case.
@@ -387,7 +391,6 @@ Q_SIGNALS:
     void dialogClosed();
 
 protected:
-
     QWidget *parentWidget() const;
     QWidget *dialogsParent() const;
 

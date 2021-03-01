@@ -27,10 +27,9 @@ public:
     KLocalizedString pluralSuffix;
 };
 
-
 KPluralHandlingSpinBox::KPluralHandlingSpinBox(QWidget *parent)
-    : QSpinBox(parent),
-      d(new KPluralHandlingSpinBoxPrivate(this))
+    : QSpinBox(parent)
+    , d(new KPluralHandlingSpinBoxPrivate(this))
 {
 }
 

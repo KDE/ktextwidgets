@@ -49,7 +49,6 @@ public:
 
     bool painterActive = false;
 
-
     bool richTextEnabled = false;
     KToggleAction *enableRichText = nullptr;
 
@@ -204,32 +203,34 @@ QList<QAction *> KRichTextWidget::createActions()
     d->richTextActionList.clear();
 
     if (d->richTextSupport & SupportTextForegroundColor) {
-        //Foreground Color
-        d->action_text_foreground_color = new QAction(QIcon::fromTheme(QStringLiteral("format-stroke-color")),
-                i18nc("@action", "Text &Color..."), this);
+        // Foreground Color
+        d->action_text_foreground_color = new QAction(QIcon::fromTheme(QStringLiteral("format-stroke-color")), i18nc("@action", "Text &Color..."), this);
         d->action_text_foreground_color->setIconText(i18nc("@label stroke color", "Color"));
         d->richTextActionList.append((d->action_text_foreground_color));
         d->action_text_foreground_color->setObjectName(QStringLiteral("format_text_foreground_color"));
-        connect(d->action_text_foreground_color, &QAction::triggered,
-                this, [this]() { Q_D(KRichTextWidget); d->_k_setTextForegroundColor(); });
+        connect(d->action_text_foreground_color, &QAction::triggered, this, [this]() {
+            Q_D(KRichTextWidget);
+            d->_k_setTextForegroundColor();
+        });
     } else {
         d->action_text_foreground_color = nullptr;
     }
 
     if (d->richTextSupport & SupportTextBackgroundColor) {
-        //Background Color
-        d->action_text_background_color = new QAction(QIcon::fromTheme(QStringLiteral("format-fill-color")),
-                i18nc("@action", "Text &Highlight..."), this);
+        // Background Color
+        d->action_text_background_color = new QAction(QIcon::fromTheme(QStringLiteral("format-fill-color")), i18nc("@action", "Text &Highlight..."), this);
         d->richTextActionList.append((d->action_text_background_color));
         d->action_text_background_color->setObjectName(QStringLiteral("format_text_background_color"));
-        connect(d->action_text_background_color, &QAction::triggered,
-                this, [this]() { Q_D(KRichTextWidget); d->_k_setTextBackgroundColor(); });
+        connect(d->action_text_background_color, &QAction::triggered, this, [this]() {
+            Q_D(KRichTextWidget);
+            d->_k_setTextBackgroundColor();
+        });
     } else {
         d->action_text_background_color = nullptr;
     }
 
     if (d->richTextSupport & SupportFontFamily) {
-        //Font Family
+        // Font Family
         d->action_font_family = new KFontAction(i18nc("@action", "&Font"), this);
         d->richTextActionList.append((d->action_font_family));
         d->action_font_family->setObjectName(QStringLiteral("format_font_family"));
@@ -239,7 +240,7 @@ QList<QAction *> KRichTextWidget::createActions()
     }
 
     if (d->richTextSupport & SupportFontSize) {
-        //Font Size
+        // Font Size
         d->action_font_size = new KFontSizeAction(i18nc("@action", "Font &Size"), this);
         d->richTextActionList.append((d->action_font_size));
         d->action_font_size->setObjectName(QStringLiteral("format_font_size"));
@@ -249,8 +250,7 @@ QList<QAction *> KRichTextWidget::createActions()
     }
 
     if (d->richTextSupport & SupportBold) {
-        d->action_text_bold = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-bold")),
-                                                i18nc("@action boldify selected text", "&Bold"), this);
+        d->action_text_bold = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-bold")), i18nc("@action boldify selected text", "&Bold"), this);
         QFont bold;
         bold.setBold(true);
         d->action_text_bold->setFont(bold);
@@ -263,83 +263,71 @@ QList<QAction *> KRichTextWidget::createActions()
     }
 
     if (d->richTextSupport & SupportItalic) {
-        d->action_text_italic = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-italic")),
-                i18nc("@action italicize selected text", "&Italic"), this);
+        d->action_text_italic =
+            new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-italic")), i18nc("@action italicize selected text", "&Italic"), this);
         QFont italic;
         italic.setItalic(true);
         d->action_text_italic->setFont(italic);
         d->richTextActionList.append((d->action_text_italic));
         d->action_text_italic->setObjectName(QStringLiteral("format_text_italic"));
         d->action_text_italic->setShortcut(Qt::CTRL | Qt::Key_I);
-        connect(d->action_text_italic, &QAction::triggered,
-                this, &KRichTextEdit::setTextItalic);
+        connect(d->action_text_italic, &QAction::triggered, this, &KRichTextEdit::setTextItalic);
     } else {
         d->action_text_italic = nullptr;
     }
 
     if (d->richTextSupport & SupportUnderline) {
-        d->action_text_underline = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-underline")),
-                i18nc("@action underline selected text", "&Underline"), this);
+        d->action_text_underline =
+            new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-underline")), i18nc("@action underline selected text", "&Underline"), this);
         QFont underline;
         underline.setUnderline(true);
         d->action_text_underline->setFont(underline);
         d->richTextActionList.append((d->action_text_underline));
         d->action_text_underline->setObjectName(QStringLiteral("format_text_underline"));
         d->action_text_underline->setShortcut(Qt::CTRL | Qt::Key_U);
-        connect(d->action_text_underline, &QAction::triggered,
-                this, &KRichTextEdit::setTextUnderline);
+        connect(d->action_text_underline, &QAction::triggered, this, &KRichTextEdit::setTextUnderline);
     } else {
         d->action_text_underline = nullptr;
     }
 
     if (d->richTextSupport & SupportStrikeOut) {
-        d->action_text_strikeout = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-strikethrough")),
-                i18nc("@action", "&Strike Out"), this);
+        d->action_text_strikeout = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-strikethrough")), i18nc("@action", "&Strike Out"), this);
         QFont strikeout;
         strikeout.setStrikeOut(true);
         d->action_text_strikeout->setFont(strikeout);
         d->richTextActionList.append((d->action_text_strikeout));
         d->action_text_strikeout->setObjectName(QStringLiteral("format_text_strikeout"));
         d->action_text_strikeout->setShortcut(Qt::CTRL | Qt::Key_L);
-        connect(d->action_text_strikeout, &QAction::triggered,
-                this, &KRichTextEdit::setTextStrikeOut);
+        connect(d->action_text_strikeout, &QAction::triggered, this, &KRichTextEdit::setTextStrikeOut);
     } else {
         d->action_text_strikeout = nullptr;
     }
 
     if (d->richTextSupport & SupportAlignment) {
-        //Alignment
-        d->action_align_left = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-justify-left")),
-                i18nc("@action", "Align &Left"), this);
+        // Alignment
+        d->action_align_left = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-justify-left")), i18nc("@action", "Align &Left"), this);
         d->action_align_left->setIconText(i18nc("@label left justify", "Left"));
         d->richTextActionList.append((d->action_align_left));
         d->action_align_left->setObjectName(QStringLiteral("format_align_left"));
-        connect(d->action_align_left, &QAction::triggered,
-                this, &KRichTextEdit::alignLeft);
+        connect(d->action_align_left, &QAction::triggered, this, &KRichTextEdit::alignLeft);
 
-        d->action_align_center = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-justify-center")),
-                i18nc("@action", "Align &Center"), this);
+        d->action_align_center = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-justify-center")), i18nc("@action", "Align &Center"), this);
         d->action_align_center->setIconText(i18nc("@label center justify", "Center"));
         d->richTextActionList.append((d->action_align_center));
         d->action_align_center->setObjectName(QStringLiteral("format_align_center"));
-        connect(d->action_align_center, &QAction::triggered,
-                this, &KRichTextEdit::alignCenter);
+        connect(d->action_align_center, &QAction::triggered, this, &KRichTextEdit::alignCenter);
 
-        d->action_align_right = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-justify-right")),
-                i18nc("@action", "Align &Right"), this);
+        d->action_align_right = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-justify-right")), i18nc("@action", "Align &Right"), this);
         d->action_align_right->setIconText(i18nc("@label right justify", "Right"));
         d->richTextActionList.append((d->action_align_right));
         d->action_align_right->setObjectName(QStringLiteral("format_align_right"));
-        connect(d->action_align_right, &QAction::triggered,
-                this, &KRichTextEdit::alignRight);
+        connect(d->action_align_right, &QAction::triggered, this, &KRichTextEdit::alignRight);
 
-        d->action_align_justify = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-justify-fill")),
-                i18nc("@action", "&Justify"), this);
+        d->action_align_justify = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-justify-fill")), i18nc("@action", "&Justify"), this);
         d->action_align_justify->setIconText(i18nc("@label justify fill", "Justify"));
         d->richTextActionList.append((d->action_align_justify));
         d->action_align_justify->setObjectName(QStringLiteral("format_align_justify"));
-        connect(d->action_align_justify, &QAction::triggered,
-                this, &KRichTextEdit::alignJustify);
+        connect(d->action_align_justify, &QAction::triggered, this, &KRichTextEdit::alignJustify);
 
         QActionGroup *alignmentGroup = new QActionGroup(this);
         alignmentGroup->addAction(d->action_align_left);
@@ -354,21 +342,17 @@ QList<QAction *> KRichTextWidget::createActions()
     }
 
     if (d->richTextSupport & SupportDirection) {
-        d->action_direction_ltr = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-direction-ltr")),
-                i18nc("@action", "Left-to-Right"), this);
+        d->action_direction_ltr = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-direction-ltr")), i18nc("@action", "Left-to-Right"), this);
         d->action_direction_ltr->setIconText(i18nc("@label left-to-right", "Left-to-Right"));
         d->richTextActionList.append(d->action_direction_ltr);
         d->action_direction_ltr->setObjectName(QStringLiteral("direction_ltr"));
-        connect(d->action_direction_ltr, &QAction::triggered,
-                this, &KRichTextEdit::makeLeftToRight);
+        connect(d->action_direction_ltr, &QAction::triggered, this, &KRichTextEdit::makeLeftToRight);
 
-        d->action_direction_rtl = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-direction-rtl")),
-                i18nc("@action", "Right-to-Left"), this);
+        d->action_direction_rtl = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-direction-rtl")), i18nc("@action", "Right-to-Left"), this);
         d->action_direction_rtl->setIconText(i18nc("@label right-to-left", "Right-to-Left"));
         d->richTextActionList.append(d->action_direction_rtl);
         d->action_direction_rtl->setObjectName(QStringLiteral("direction_rtl"));
-        connect(d->action_direction_rtl, &QAction::triggered,
-                this, &KRichTextEdit::makeRightToLeft);
+        connect(d->action_direction_rtl, &QAction::triggered, this, &KRichTextEdit::makeRightToLeft);
 
         QActionGroup *directionGroup = new QActionGroup(this);
         directionGroup->addAction(d->action_direction_ltr);
@@ -379,8 +363,7 @@ QList<QAction *> KRichTextWidget::createActions()
     }
 
     if (d->richTextSupport & SupportChangeListStyle) {
-        d->action_list_style = new KSelectAction(QIcon::fromTheme(QStringLiteral("format-list-unordered")),
-                i18nc("@title:menu", "List Style"), this);
+        d->action_list_style = new KSelectAction(QIcon::fromTheme(QStringLiteral("format-list-unordered")), i18nc("@title:menu", "List Style"), this);
         QStringList listStyles;
         /* clang-format off */
         listStyles << i18nc("@item:inmenu no list style", "None")
@@ -399,69 +382,64 @@ QList<QAction *> KRichTextWidget::createActions()
         d->richTextActionList.append((d->action_list_style));
         d->action_list_style->setObjectName(QStringLiteral("format_list_style"));
 
-        connect(d->action_list_style, &KSelectAction::indexTriggered,
-                this, [this](int style) { Q_D(KRichTextWidget); d->_k_setListStyle(style); });
-        connect(d->action_list_style, SIGNAL(triggered()),
-                this, SLOT(_k_updateMiscActions()));
+        connect(d->action_list_style, &KSelectAction::indexTriggered, this, [this](int style) {
+            Q_D(KRichTextWidget);
+            d->_k_setListStyle(style);
+        });
+        connect(d->action_list_style, SIGNAL(triggered()), this, SLOT(_k_updateMiscActions()));
     } else {
         d->action_list_style = nullptr;
     }
 
     if (d->richTextSupport & SupportIndentLists) {
-        d->action_list_indent = new QAction(QIcon::fromTheme(QStringLiteral("format-indent-more")),
-                                            i18nc("@action", "Increase Indent"), this);
+        d->action_list_indent = new QAction(QIcon::fromTheme(QStringLiteral("format-indent-more")), i18nc("@action", "Increase Indent"), this);
         d->richTextActionList.append((d->action_list_indent));
         d->action_list_indent->setObjectName(QStringLiteral("format_list_indent_more"));
-        connect(d->action_list_indent, &QAction::triggered,
-                this, &KRichTextEdit::indentListMore);
-        connect(d->action_list_indent, SIGNAL(triggered()),
-                this, SLOT(_k_updateMiscActions()));
+        connect(d->action_list_indent, &QAction::triggered, this, &KRichTextEdit::indentListMore);
+        connect(d->action_list_indent, SIGNAL(triggered()), this, SLOT(_k_updateMiscActions()));
     } else {
         d->action_list_indent = nullptr;
     }
 
     if (d->richTextSupport & SupportDedentLists) {
-        d->action_list_dedent = new QAction(QIcon::fromTheme(QStringLiteral("format-indent-less")),
-                                            i18nc("@action", "Decrease Indent"), this);
+        d->action_list_dedent = new QAction(QIcon::fromTheme(QStringLiteral("format-indent-less")), i18nc("@action", "Decrease Indent"), this);
         d->richTextActionList.append((d->action_list_dedent));
         d->action_list_dedent->setObjectName(QStringLiteral("format_list_indent_less"));
-        connect(d->action_list_dedent, &QAction::triggered,
-                this, &KRichTextEdit::indentListLess);
-        connect(d->action_list_dedent, SIGNAL(triggered()),
-                this, SLOT(_k_updateMiscActions()));
+        connect(d->action_list_dedent, &QAction::triggered, this, &KRichTextEdit::indentListLess);
+        connect(d->action_list_dedent, SIGNAL(triggered()), this, SLOT(_k_updateMiscActions()));
     } else {
         d->action_list_dedent = nullptr;
     }
 
     if (d->richTextSupport & SupportRuleLine) {
-        d->action_insert_horizontal_rule = new QAction(QIcon::fromTheme(QStringLiteral("insert-horizontal-rule")),
-                i18nc("@action", "Insert Rule Line"), this);
+        d->action_insert_horizontal_rule = new QAction(QIcon::fromTheme(QStringLiteral("insert-horizontal-rule")), i18nc("@action", "Insert Rule Line"), this);
         d->richTextActionList.append((d->action_insert_horizontal_rule));
         d->action_insert_horizontal_rule->setObjectName(QStringLiteral("insert_horizontal_rule"));
-        connect(d->action_insert_horizontal_rule, &QAction::triggered,
-                this, &KRichTextEdit::insertHorizontalRule);
+        connect(d->action_insert_horizontal_rule, &QAction::triggered, this, &KRichTextEdit::insertHorizontalRule);
     } else {
         d->action_insert_horizontal_rule = nullptr;
     }
 
     if (d->richTextSupport & SupportHyperlinks) {
-        d->action_manage_link = new QAction(QIcon::fromTheme(QStringLiteral("insert-link")),
-                                            i18nc("@action", "Link"), this);
+        d->action_manage_link = new QAction(QIcon::fromTheme(QStringLiteral("insert-link")), i18nc("@action", "Link"), this);
         d->richTextActionList.append((d->action_manage_link));
         d->action_manage_link->setObjectName(QStringLiteral("manage_link"));
-        connect(d->action_manage_link, &QAction::triggered,
-                this, [this]() { Q_D(KRichTextWidget); d->_k_manageLink(); });
+        connect(d->action_manage_link, &QAction::triggered, this, [this]() {
+            Q_D(KRichTextWidget);
+            d->_k_manageLink();
+        });
     } else {
         d->action_manage_link = nullptr;
     }
 
     if (d->richTextSupport & SupportFormatPainting) {
-        d->action_format_painter = new KToggleAction(QIcon::fromTheme(QStringLiteral("draw-brush")),
-                i18nc("@action", "Format Painter"), this);
+        d->action_format_painter = new KToggleAction(QIcon::fromTheme(QStringLiteral("draw-brush")), i18nc("@action", "Format Painter"), this);
         d->richTextActionList.append((d->action_format_painter));
         d->action_format_painter->setObjectName(QStringLiteral("format_painter"));
-        connect(d->action_format_painter, &QAction::toggled,
-                this, [this](bool state) { Q_D(KRichTextWidget); d->_k_formatPainter(state);});
+        connect(d->action_format_painter, &QAction::toggled, this, [this](bool state) {
+            Q_D(KRichTextWidget);
+            d->_k_formatPainter(state);
+        });
     } else {
         d->action_format_painter = nullptr;
     }
@@ -470,26 +448,21 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_to_plain_text = new KToggleAction(i18nc("@action", "To Plain Text"), this);
         d->richTextActionList.append((d->action_to_plain_text));
         d->action_to_plain_text->setObjectName(QStringLiteral("action_to_plain_text"));
-        connect(d->action_to_plain_text, &QAction::triggered,
-                this, &KRichTextEdit::switchToPlainText);
+        connect(d->action_to_plain_text, &QAction::triggered, this, &KRichTextEdit::switchToPlainText);
     } else {
         d->action_to_plain_text = nullptr;
     }
 
     if (d->richTextSupport & SupportSuperScriptAndSubScript) {
-        d->action_text_subscript = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-subscript")),
-                i18nc("@action", "Subscript"), this);
+        d->action_text_subscript = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-subscript")), i18nc("@action", "Subscript"), this);
         d->richTextActionList.append((d->action_text_subscript));
         d->action_text_subscript->setObjectName(QStringLiteral("format_text_subscript"));
-        connect(d->action_text_subscript, &QAction::triggered,
-                this, &KRichTextEdit::setTextSubScript);
+        connect(d->action_text_subscript, &QAction::triggered, this, &KRichTextEdit::setTextSubScript);
 
-        d->action_text_superscript = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-superscript")),
-                i18nc("@action", "Superscript"), this);
+        d->action_text_superscript = new KToggleAction(QIcon::fromTheme(QStringLiteral("format-text-superscript")), i18nc("@action", "Superscript"), this);
         d->richTextActionList.append((d->action_text_superscript));
         d->action_text_superscript->setObjectName(QStringLiteral("format_text_superscript"));
-        connect(d->action_text_superscript, &QAction::triggered,
-                this, &KRichTextEdit::setTextSuperScript);
+        connect(d->action_text_superscript, &QAction::triggered, this, &KRichTextEdit::setTextSuperScript);
     } else {
         d->action_text_subscript = nullptr;
 
@@ -499,32 +472,30 @@ QList<QAction *> KRichTextWidget::createActions()
     if (d->richTextSupport & SupportHeading) {
         // TODO: an icon maybe?
         d->action_heading_level = new KSelectAction(i18nc("@title:menu", "Heading Level"), this);
-        const QStringList headingLevels = {i18nc("@item:inmenu no heading",                 "Basic text"),
-                                           i18nc("@item:inmenu heading level 1 (largest)",  "Title"),
-                                           i18nc("@item:inmenu heading level 2",            "Subtitle"),
-                                           i18nc("@item:inmenu heading level 3",            "Section"),
-                                           i18nc("@item:inmenu heading level 4",            "Subsection"),
-                                           i18nc("@item:inmenu heading level 5",            "Paragraph"),
+        const QStringList headingLevels = {i18nc("@item:inmenu no heading", "Basic text"),
+                                           i18nc("@item:inmenu heading level 1 (largest)", "Title"),
+                                           i18nc("@item:inmenu heading level 2", "Subtitle"),
+                                           i18nc("@item:inmenu heading level 3", "Section"),
+                                           i18nc("@item:inmenu heading level 4", "Subsection"),
+                                           i18nc("@item:inmenu heading level 5", "Paragraph"),
                                            i18nc("@item:inmenu heading level 6 (smallest)", "Subparagraph")};
 
         d->action_heading_level->setItems(headingLevels);
         d->action_heading_level->setCurrentItem(0);
         d->richTextActionList.append(d->action_heading_level);
         d->action_heading_level->setObjectName(QStringLiteral("format_heading_level"));
-        connect(d->action_heading_level, &KSelectAction::indexTriggered,
-                this, [this](int level){ Q_D(KRichTextWidget); d->_k_setHeadingLevel(level); });
+        connect(d->action_heading_level, &KSelectAction::indexTriggered, this, [this](int level) {
+            Q_D(KRichTextWidget);
+            d->_k_setHeadingLevel(level);
+        });
     } else {
         d->action_heading_level = nullptr;
     }
 
-    disconnect(this, SIGNAL(currentCharFormatChanged(QTextCharFormat)),
-               this, SLOT(_k_updateCharFormatActions(QTextCharFormat)));
-    disconnect(this, SIGNAL(cursorPositionChanged()),
-               this, SLOT(_k_updateMiscActions()));
-    connect(this, SIGNAL(currentCharFormatChanged(QTextCharFormat)),
-            this, SLOT(_k_updateCharFormatActions(QTextCharFormat)));
-    connect(this, SIGNAL(cursorPositionChanged()),
-            this, SLOT(_k_updateMiscActions()));
+    disconnect(this, SIGNAL(currentCharFormatChanged(QTextCharFormat)), this, SLOT(_k_updateCharFormatActions(QTextCharFormat)));
+    disconnect(this, SIGNAL(cursorPositionChanged()), this, SLOT(_k_updateMiscActions()));
+    connect(this, SIGNAL(currentCharFormatChanged(QTextCharFormat)), this, SLOT(_k_updateCharFormatActions(QTextCharFormat)));
+    connect(this, SIGNAL(cursorPositionChanged()), this, SLOT(_k_updateMiscActions()));
 
     d->_k_updateMiscActions();
     d->_k_updateCharFormatActions(currentCharFormat());

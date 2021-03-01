@@ -9,8 +9,8 @@
 #ifndef KFINDDIALOG_P_H
 #define KFINDDIALOG_P_H
 
-#include "kfinddialog.h"
 #include "kfind.h"
+#include "kfinddialog.h"
 
 #include <QStringList>
 
@@ -29,14 +29,15 @@ class KFindDialogPrivate
 
 public:
     KFindDialogPrivate(KFindDialog *q)
-        : q_ptr(q),
-          regexpDialog(nullptr),
-          regexpDialogQueryDone(false),
-          initialShowDone(false),
-          enabled(KFind::WholeWordsOnly | KFind::FromCursor |  KFind::SelectedText | KFind::CaseSensitive | KFind::FindBackwards | KFind::RegularExpression),
-          findExtension(nullptr),
-          buttonBox(nullptr)
-    {}
+        : q_ptr(q)
+        , regexpDialog(nullptr)
+        , regexpDialogQueryDone(false)
+        , initialShowDone(false)
+        , enabled(KFind::WholeWordsOnly | KFind::FromCursor | KFind::SelectedText | KFind::CaseSensitive | KFind::FindBackwards | KFind::RegularExpression)
+        , findExtension(nullptr)
+        , buttonBox(nullptr)
+    {
+    }
 
     void init(bool forReplace, const QStringList &findStrings, bool hasSelection);
 
@@ -48,7 +49,7 @@ public:
     void _k_showPlaceholders();
     void _k_textSearchChanged(const QString &);
 
-    KFindDialog * const q_ptr = nullptr;
+    KFindDialog *const q_ptr = nullptr;
     QDialog *regexpDialog = nullptr;
     bool regexpDialogQueryDone : 1;
     bool initialShowDone : 1;

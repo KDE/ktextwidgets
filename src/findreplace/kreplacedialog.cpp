@@ -10,9 +10,9 @@
 #include "kfinddialog_p.h"
 
 #include <QCheckBox>
-#include <QLineEdit>
 #include <QGridLayout>
 #include <QGroupBox>
+#include <QLineEdit>
 #include <QRegularExpression>
 
 #include <KHistoryComboBox>
@@ -41,8 +41,7 @@ public:
     bool initialShowDone = false;
 };
 
-KReplaceDialog::KReplaceDialog(QWidget *parent, long options, const QStringList &findStrings,
-                               const QStringList &replaceStrings, bool hasSelection)
+KReplaceDialog::KReplaceDialog(QWidget *parent, long options, const QStringList &findStrings, const QStringList &replaceStrings, bool hasSelection)
     : KFindDialog(*new KReplaceDialogPrivate(this), parent, options, findStrings, hasSelection, true /*create replace dialog*/)
 {
     Q_D(KReplaceDialog);
@@ -150,13 +149,11 @@ void KReplaceDialogPrivate::_k_slotOk()
         while (iter.hasNext()) {
             const QRegularExpressionMatch match = iter.next();
             if ((match.captured(1).size() % 2) && match.captured(2).toInt() > caps) {
-                KMessageBox::information(q, i18n(
-                                             "Your replacement string is referencing a capture greater than '\\%1', ",  caps) +
-                                         (caps ?
-                                          i18np("but your pattern only defines 1 capture.",
-                                                "but your pattern only defines %1 captures.", caps) :
-                                          i18n("but your pattern defines no captures.")) +
-                                         i18n("\nPlease correct."));
+                KMessageBox::information(q,
+                                         i18n("Your replacement string is referencing a capture greater than '\\%1', ", caps)
+                                             + (caps ? i18np("but your pattern only defines 1 capture.", "but your pattern only defines %1 captures.", caps)
+                                                     : i18n("but your pattern defines no captures."))
+                                             + i18n("\nPlease correct."));
                 return; // abort OKing
             }
         }

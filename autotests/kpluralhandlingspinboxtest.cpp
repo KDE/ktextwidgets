@@ -53,4 +53,3 @@ void KPluralHandlingSpinBoxTest::shouldReturnEmptySuffix()
     spinbox.setValue(2);
     QCOMPARE(spinbox.suffix(), QString());
 }
-

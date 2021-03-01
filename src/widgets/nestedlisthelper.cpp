@@ -8,9 +8,9 @@
 #include "nestedlisthelper_p.h"
 
 #include <QKeyEvent>
+#include <QTextBlock>
 #include <QTextCursor>
 #include <QTextList>
-#include <QTextBlock>
 
 #include "ktextedit.h"
 
@@ -102,12 +102,11 @@ bool NestedListHelper::handleAfterDropEvent(QDropEvent *dropEvent)
         while (droppedBlock.next().position() < endOfDrop) {
             droppedBlock = droppedBlock.next();
             if (droppedBlock.textList()->format().indent() != firstDroppedItemIndent) {
-
                 // new list?
             }
             list->add(droppedBlock);
         }
-//         list.add( droppedBlock );
+        //         list.add( droppedBlock );
     }
 
     return true;
@@ -120,7 +119,7 @@ void NestedListHelper::processList(QTextList *list)
 
     QTextCursor cursor = QTextCursor(block);
     list = cursor.createList(list->format());
-    bool processingSubList  = false;
+    bool processingSubList = false;
     while (block.next().textList() != nullptr) {
         block = block.next();
 
@@ -139,14 +138,14 @@ void NestedListHelper::processList(QTextList *list)
             list->add(block);
         }
     }
-//     delete nextList;
-//     nextList = 0;
+    //     delete nextList;
+    //     nextList = 0;
 }
 
 void NestedListHelper::reformatList(QTextBlock block)
 {
     if (block.textList()) {
-        int minimumIndent =  block.textList()->format().indent();
+        int minimumIndent = block.textList()->format().indent();
 
         // Start at the top of the list
         while (block.previous().textList() != nullptr) {
@@ -157,7 +156,6 @@ void NestedListHelper::reformatList(QTextBlock block)
         }
 
         processList(block.textList());
-
     }
 }
 

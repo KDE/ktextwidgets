@@ -10,11 +10,12 @@
 
 #include "ktextwidgets_export.h"
 
-#include <sonnet/highlighter.h>
 #include <QTextEdit>
 #include <memory>
+#include <sonnet/highlighter.h>
 
-namespace Sonnet {
+namespace Sonnet
+{
 class SpellCheckDecorator;
 }
 
@@ -41,7 +42,7 @@ class KTextEditPrivate;
  * @see QTextEdit
  * @author Carsten Pfeiffer <pfeiffer@kde.org>
  */
-class KTEXTWIDGETS_EXPORT KTextEdit : public QTextEdit //krazy:exclude=qclasses
+class KTEXTWIDGETS_EXPORT KTextEdit : public QTextEdit // krazy:exclude=qclasses
 {
     Q_OBJECT
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 0)
@@ -188,7 +189,10 @@ public:
      * @deprecated since 5.0, use QTextEdit::setPlaceholderText instead
      */
     KTEXTWIDGETS_DEPRECATED_VERSION(5, 0, "Use QTextEdit::setPlaceholderText(const QString&)")
-    inline void setClickMessage(const QString &msg) {setPlaceholderText(msg);}
+    inline void setClickMessage(const QString &msg)
+    {
+        setPlaceholderText(msg);
+    }
 #endif
 
 #if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 0)
@@ -197,7 +201,10 @@ public:
      * @deprecated since 5.0, use QTextEdit::placeholderText instead
      */
     KTEXTWIDGETS_DEPRECATED_VERSION(5, 0, "Use QTextEdit::placeholderText()")
-    inline QString clickMessage() const {return placeholderText();}
+    inline QString clickMessage() const
+    {
+        return placeholderText();
+    }
 #endif
 
     /**

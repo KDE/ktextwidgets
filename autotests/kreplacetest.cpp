@@ -11,8 +11,8 @@
 #include <stdlib.h>
 
 #include <QApplication>
-#include <QEventLoop>
 #include <QDebug>
+#include <QEventLoop>
 #include <QPushButton>
 
 #include <kreplace.h>
@@ -21,8 +21,7 @@
 void KReplaceTest::enterLoop()
 {
     QEventLoop eventLoop;
-    connect(this, &KReplaceTest::exitLoop,
-            &eventLoop, &QEventLoop::quit);
+    connect(this, &KReplaceTest::exitLoop, &eventLoop, &QEventLoop::quit);
     eventLoop.exec(QEventLoop::ExcludeUserInputEvents);
 }
 
@@ -35,14 +34,11 @@ void KReplaceTest::replace(const QString &pattern, const QString &replacement, l
 
     // Connect highlight signal to code which handles highlighting
     // of found text.
-    connect(m_replace, SIGNAL(highlight(QString,int,int)),
-            this, SLOT(slotHighlight(QString,int,int)));
+    connect(m_replace, SIGNAL(highlight(QString, int, int)), this, SLOT(slotHighlight(QString, int, int)));
     // Connect findNext signal - called when pressing the button in the dialog
-    connect(m_replace, &KFind::findNext,
-            this, &KReplaceTest::slotReplaceNext);
+    connect(m_replace, &KFind::findNext, this, &KReplaceTest::slotReplaceNext);
     // Connect replace signal - called when doing a replacement
-    connect(m_replace, SIGNAL(replace(QString,int,int,int)),
-            this, SLOT(slotReplace(QString,int,int,int)));
+    connect(m_replace, SIGNAL(replace(QString, int, int, int)), this, SLOT(slotReplace(QString, int, int, int)));
 
     // Go to initial position
     if ((options & KFind::FromCursor) == 0) {
@@ -66,8 +62,7 @@ void KReplaceTest::replace(const QString &pattern, const QString &replacement, l
 
 void KReplaceTest::slotHighlight(const QString &str, int matchingIndex, int matchedLength)
 {
-    qDebug() << "slotHighlight Index:" << matchingIndex << " Length:" << matchedLength
-             << " Substr:" << str.mid(matchingIndex, matchedLength);
+    qDebug() << "slotHighlight Index:" << matchingIndex << " Length:" << matchedLength << " Substr:" << str.mid(matchingIndex, matchedLength);
     // Emulate the user saying yes
     // We need Qt::QueuedConnection (and the enterloop/exitloop)
     // otherwise we get an infinite loop (Match never returned,
@@ -89,13 +84,13 @@ void KReplaceTest::slotReplace(const QString &text, int replacementIndex, int re
     Q_UNUSED(replacementIndex);
     Q_UNUSED(replacedLength);
     Q_UNUSED(matchedLength);
-    //qDebug() << "index=" << replacementIndex << " replacedLength=" << replacedLength << " matchedLength=" << matchedLength << " text=" << text.left( 50 );
+    // qDebug() << "index=" << replacementIndex << " replacedLength=" << replacedLength << " matchedLength=" << matchedLength << " text=" << text.left( 50 );
     *m_currentPos = text; // KReplace hacked the replacement into 'text' in already.
 }
 
 void KReplaceTest::slotReplaceNext()
 {
-    //qDebug();
+    // qDebug();
     KFind::Result res = KFind::NoMatch;
     int backwards = m_replace->options() & KFind::FindBackwards;
     while (res == KFind::NoMatch) {
@@ -152,8 +147,8 @@ static void testReplaceSimple(int options, const QString &buttonName = QString()
     test.replace(QStringLiteral("hello"), QStringLiteral("HELLO"), options);
     QStringList textLines = test.textLines();
     assert(textLines.count() == 1);
-    if (textLines[ 0 ] != QLatin1String("HELLOHELLO")) {
-        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of 'HELLOHELLO'";
+    if (textLines[0] != QLatin1String("HELLOHELLO")) {
+        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[0] << "' instead of 'HELLOHELLO'";
         exit(1);
     }
 }
@@ -167,8 +162,8 @@ static void testReplaceBlank(int options, const QString &buttonName = QString())
     test.replace(QStringLiteral("a"), QString(), options);
     QStringList textLines = test.textLines();
     assert(textLines.count() == 1);
-    if (!textLines[ 0 ].isEmpty()) {
-        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of ''";
+    if (!textLines[0].isEmpty()) {
+        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[0] << "' instead of ''";
         exit(1);
     }
 }
@@ -182,8 +177,8 @@ static void testReplaceBlankSearch(int options, const QString &buttonName = QStr
     test.replace(QString(), QStringLiteral("foo"), options);
     QStringList textLines = test.textLines();
     assert(textLines.count() == 1);
-    if (textLines[ 0 ] != QLatin1String("foobfoobfoobfoobfoo")) {
-        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of 'foobfoobfoobfoobfoo'";
+    if (textLines[0] != QLatin1String("foobfoobfoobfoobfoo")) {
+        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[0] << "' instead of 'foobfoobfoobfoobfoo'";
         exit(1);
     }
 }
@@ -196,8 +191,8 @@ static void testReplaceLonger(int options, const QString &buttonName = QString()
     test.replace(QStringLiteral("a"), QStringLiteral("bb"), options);
     QStringList textLines = test.textLines();
     assert(textLines.count() == 1);
-    if (textLines[ 0 ] != QLatin1String("bbbbbbbb")) {
-        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of 'bbbbbbbb'";
+    if (textLines[0] != QLatin1String("bbbbbbbb")) {
+        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[0] << "' instead of 'bbbbbbbb'";
         exit(1);
     }
 }
@@ -210,8 +205,8 @@ static void testReplaceLongerInclude(int options, const QString &buttonName = QS
     test.replace(QStringLiteral("foo"), QStringLiteral("foobar"), options);
     QStringList textLines = test.textLines();
     assert(textLines.count() == 1);
-    if (textLines[ 0 ] != QLatin1String("a foobar b")) {
-        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of 'a foobar b'";
+    if (textLines[0] != QLatin1String("a foobar b")) {
+        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[0] << "' instead of 'a foobar b'";
         exit(1);
     }
 }
@@ -224,8 +219,8 @@ static void testReplaceLongerInclude2(int options, const QString &buttonName = Q
     test.replace(QStringLiteral("a"), QStringLiteral("aa"), options);
     QStringList textLines = test.textLines();
     assert(textLines.count() == 1);
-    if (textLines[ 0 ] != QLatin1String("aaaaaaaa")) {
-        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of 'aaaaaaaa'";
+    if (textLines[0] != QLatin1String("aaaaaaaa")) {
+        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[0] << "' instead of 'aaaaaaaa'";
         exit(1);
     }
 }
@@ -238,8 +233,8 @@ static void testReplaceBackRef(int options, const QString &buttonName = QString(
     QStringList textLines = test.textLines();
     assert(textLines.count() == 1);
     QString expected = options & KReplaceDialog::BackReference ? QStringLiteral("(abc) def") : QStringLiteral("(\\0) def");
-    if (textLines[ 0 ] != expected) {
-        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of '" << expected << "'";
+    if (textLines[0] != expected) {
+        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[0] << "' instead of '" << expected << "'";
         exit(1);
     }
 }
@@ -252,8 +247,8 @@ static void testReplaceBackRef1(int options, const QString &buttonName = QString
     QStringList textLines = test.textLines();
     assert(textLines.count() == 1);
     QString expected = QStringLiteral("a and 1 in (a1) b and 2 in (b2) a and 3 in (a3)");
-    if (textLines[ 0 ] != expected) {
-        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[ 0 ] << "' instead of '" << expected << "'";
+    if (textLines[0] != expected) {
+        qCritical() << "ASSERT FAILED: replaced text is '" << textLines[0] << "' instead of '" << expected << "'";
         exit(1);
     }
 }
@@ -289,81 +284,74 @@ int main(int argc, char **argv)
     testReplacementHistory(); // #130831
 
     testReplaceBlank(0);
-    testReplaceBlank(KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton"));   // replace
-    testReplaceBlank(KReplaceDialog::PromptOnReplace, QStringLiteral("allButton"));   // replace all
+    testReplaceBlank(KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton")); // replace
+    testReplaceBlank(KReplaceDialog::PromptOnReplace, QStringLiteral("allButton")); // replace all
     testReplaceBlank(KFind::FindBackwards);
-    testReplaceBlank(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton"));   // replace
-    testReplaceBlank(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("allButton"));   // replace all
+    testReplaceBlank(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton")); // replace
+    testReplaceBlank(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("allButton")); // replace all
 
     testReplaceBlankSearch(0);
-    testReplaceBlankSearch(KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton"));   // replace
-    testReplaceBlankSearch(KReplaceDialog::PromptOnReplace, QStringLiteral("allButton"));   // replace all
+    testReplaceBlankSearch(KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton")); // replace
+    testReplaceBlankSearch(KReplaceDialog::PromptOnReplace, QStringLiteral("allButton")); // replace all
     testReplaceBlankSearch(KFind::FindBackwards);
-    testReplaceBlankSearch(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton"));   // replace
-    testReplaceBlankSearch(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("allButton"));   // replace all
+    testReplaceBlankSearch(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton")); // replace
+    testReplaceBlankSearch(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("allButton")); // replace all
 
     testReplaceSimple(0);
-    testReplaceSimple(KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton"));   // replace
-    testReplaceSimple(KReplaceDialog::PromptOnReplace, QStringLiteral("allButton"));   // replace all
+    testReplaceSimple(KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton")); // replace
+    testReplaceSimple(KReplaceDialog::PromptOnReplace, QStringLiteral("allButton")); // replace all
     testReplaceSimple(KFind::FindBackwards);
-    testReplaceSimple(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton"));   // replace
-    testReplaceSimple(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("allButton"));   // replace all
+    testReplaceSimple(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton")); // replace
+    testReplaceSimple(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("allButton")); // replace all
 
     testReplaceLonger(0);
-    testReplaceLonger(KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton"));   // replace
-    testReplaceLonger(KReplaceDialog::PromptOnReplace, QStringLiteral("allButton"));   // replace all
+    testReplaceLonger(KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton")); // replace
+    testReplaceLonger(KReplaceDialog::PromptOnReplace, QStringLiteral("allButton")); // replace all
     testReplaceLonger(KFind::FindBackwards);
-    testReplaceLonger(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton"));   // replace
-    testReplaceLonger(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("allButton"));   // replace all
+    testReplaceLonger(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton")); // replace
+    testReplaceLonger(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("allButton")); // replace all
 
     testReplaceLongerInclude(0);
-    testReplaceLongerInclude(KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton"));   // replace
-    testReplaceLongerInclude(KReplaceDialog::PromptOnReplace, QStringLiteral("allButton"));   // replace all
+    testReplaceLongerInclude(KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton")); // replace
+    testReplaceLongerInclude(KReplaceDialog::PromptOnReplace, QStringLiteral("allButton")); // replace all
     testReplaceLongerInclude(KFind::FindBackwards);
-    testReplaceLongerInclude(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton"));   // replace
-    testReplaceLongerInclude(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("allButton"));   // replace all
+    testReplaceLongerInclude(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton")); // replace
+    testReplaceLongerInclude(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("allButton")); // replace all
 
     testReplaceLongerInclude2(0);
-    testReplaceLongerInclude2(KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton"));   // replace
-    testReplaceLongerInclude2(KReplaceDialog::PromptOnReplace, QStringLiteral("allButton"));   // replace all
+    testReplaceLongerInclude2(KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton")); // replace
+    testReplaceLongerInclude2(KReplaceDialog::PromptOnReplace, QStringLiteral("allButton")); // replace all
     testReplaceLongerInclude2(KFind::FindBackwards);
-    testReplaceLongerInclude2(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton"));   // replace
-    testReplaceLongerInclude2(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("allButton"));   // replace all
+    testReplaceLongerInclude2(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton")); // replace
+    testReplaceLongerInclude2(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("allButton")); // replace all
 
     testReplaceBackRef(0);
-    testReplaceBackRef(KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton"));   // replace
-    testReplaceBackRef(KReplaceDialog::PromptOnReplace, QStringLiteral("allButton"));   // replace all
+    testReplaceBackRef(KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton")); // replace
+    testReplaceBackRef(KReplaceDialog::PromptOnReplace, QStringLiteral("allButton")); // replace all
 
     testReplaceBackRef(KFind::FindBackwards);
-    testReplaceBackRef(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton"));   // replace
-    testReplaceBackRef(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("allButton"));   // replace all
-    testReplaceBackRef(KReplaceDialog::BackReference | KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton"));   // replace
-    testReplaceBackRef(KReplaceDialog::BackReference | KReplaceDialog::PromptOnReplace, QStringLiteral("allButton"));   // replace all
+    testReplaceBackRef(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton")); // replace
+    testReplaceBackRef(KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("allButton")); // replace all
+    testReplaceBackRef(KReplaceDialog::BackReference | KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton")); // replace
+    testReplaceBackRef(KReplaceDialog::BackReference | KReplaceDialog::PromptOnReplace, QStringLiteral("allButton")); // replace all
     testReplaceBackRef(KReplaceDialog::BackReference | KFind::FindBackwards);
-    testReplaceBackRef(KReplaceDialog::BackReference | KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton"));   // replace
-    testReplaceBackRef(KReplaceDialog::BackReference | KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("allButton"));   // replace all
+    testReplaceBackRef(KReplaceDialog::BackReference | KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("replaceButton")); // replace
+    testReplaceBackRef(KReplaceDialog::BackReference | KFind::FindBackwards | KReplaceDialog::PromptOnReplace, QStringLiteral("allButton")); // replace all
 
-    testReplaceBackRef1(KReplaceDialog::BackReference | KFind::RegularExpression, QStringLiteral("replaceButton"));   // replace
-    testReplaceBackRef1(KReplaceDialog::BackReference | KFind::RegularExpression, QStringLiteral("allButton"));   // replace all
+    testReplaceBackRef1(KReplaceDialog::BackReference | KFind::RegularExpression, QStringLiteral("replaceButton")); // replace
+    testReplaceBackRef1(KReplaceDialog::BackReference | KFind::RegularExpression, QStringLiteral("allButton")); // replace all
 
-    QString text = QLatin1String("This file is part of the KDE project.\n") +
-                   QLatin1String("This library is free software; you can redistribute it and/or\n") +
-                   QLatin1String("modify it under the terms of the GNU Library General Public\n") +
-                   QLatin1String("License version 2, as published by the Free Software Foundation.\n") +
-                   QLatin1Char('\n') +
-                   QLatin1String("    This library is distributed in the hope that it will be useful,\n") +
-                   QLatin1String("    but WITHOUT ANY WARRANTY; without even the implied warranty of\n") +
-                   QLatin1String("    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU\n") +
-                   QLatin1String("    Library General Public License for more details.\n") +
-                   QLatin1Char('\n') +
-                   QLatin1String("    You should have received a copy of the GNU Library General Public License\n") +
-                   QLatin1String("    along with this library; see the file COPYING.LIB.  If not, write to\n") +
-                   QLatin1String("    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,\n") +
-                   QLatin1String("    Boston, MA 02110-1301, USA.\n") +
-                   QLatin1String("More tests:\n") +
-                   QLatin1String("ThisThis This, This. This\n") +
-                   QLatin1String("aGNU\n") +
-                   QLatin1String("free");
+    QString text = QLatin1String("This file is part of the KDE project.\n") + QLatin1String("This library is free software; you can redistribute it and/or\n")
+        + QLatin1String("modify it under the terms of the GNU Library General Public\n")
+        + QLatin1String("License version 2, as published by the Free Software Foundation.\n") + QLatin1Char('\n')
+        + QLatin1String("    This library is distributed in the hope that it will be useful,\n")
+        + QLatin1String("    but WITHOUT ANY WARRANTY; without even the implied warranty of\n")
+        + QLatin1String("    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU\n")
+        + QLatin1String("    Library General Public License for more details.\n") + QLatin1Char('\n')
+        + QLatin1String("    You should have received a copy of the GNU Library General Public License\n")
+        + QLatin1String("    along with this library; see the file COPYING.LIB.  If not, write to\n")
+        + QLatin1String("    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,\n") + QLatin1String("    Boston, MA 02110-1301, USA.\n")
+        + QLatin1String("More tests:\n") + QLatin1String("ThisThis This, This. This\n") + QLatin1String("aGNU\n") + QLatin1String("free");
     KReplaceTest test(text.split(QLatin1Char('\n')), QStringLiteral("0"));
 
     test.replace(QStringLiteral("GNU"), QStringLiteral("KDE"), 0);
@@ -371,6 +359,6 @@ int main(int argc, char **argv)
     test.replace(QStringLiteral("This"), QStringLiteral("THIS*"), KFind::FindBackwards);
 
     test.print();
-    //return app.exec();
+    // return app.exec();
     return 0;
 }

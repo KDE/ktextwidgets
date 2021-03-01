@@ -41,7 +41,6 @@ class KTEXTWIDGETS_EXPORT KRichTextWidget : public KRichTextEdit
     Q_OBJECT
     Q_PROPERTY(RichTextSupport richTextSupport READ richTextSupport WRITE setRichTextSupport)
 public:
-
     /**
      * These flags describe what actions will be created by createActions() after
      * passing a combination of these flags to setRichTextSupport().
@@ -153,17 +152,17 @@ public:
          */
         FullListSupport = 0xf00,
 
-// Not implemented yet.
-//         SupportCreateTables = 0x1000,
-//         SupportChangeCellMargin = 0x2000,
-//         SupportChangeCellPadding = 0x4000,
-//         SupportChangeTableBorderWidth = 0x8000,
-//         SupportChangeTableBorderColor = 0x10000,
-//         SupportChangeTableBorderStyle = 0x20000,
-//         SupportChangeCellBackground = 0x40000,
-//         SupportCellFillPatterns = 0x80000,
-//
-//         FullTableSupport = 0xff000,
+        // Not implemented yet.
+        //         SupportCreateTables = 0x1000,
+        //         SupportChangeCellMargin = 0x2000,
+        //         SupportChangeCellPadding = 0x4000,
+        //         SupportChangeTableBorderWidth = 0x8000,
+        //         SupportChangeTableBorderColor = 0x10000,
+        //         SupportChangeTableBorderStyle = 0x20000,
+        //         SupportChangeCellBackground = 0x40000,
+        //         SupportCellFillPatterns = 0x80000,
+        //
+        //         FullTableSupport = 0xff000,
 
         /**
          * Actions to align the current paragraph left, righ, center or justify.
@@ -354,7 +353,7 @@ private:
     Q_DECLARE_PRIVATE_D(KTextEdit::d, KRichTextWidget)
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 79)
     // Unused, kept for ABI compatibility
-    const void * __ktextwidgets_d_do_not_use;
+    const void *__ktextwidgets_d_do_not_use;
 #endif
 
     Q_PRIVATE_SLOT(d_func(), void _k_updateCharFormatActions(const QTextCharFormat &))
@@ -365,4 +364,3 @@ private:
 Q_DECLARE_OPERATORS_FOR_FLAGS(KRichTextWidget::RichTextSupport)
 
 #endif
-

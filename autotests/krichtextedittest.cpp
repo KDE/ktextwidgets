@@ -7,15 +7,15 @@
 
 #include "krichtextedittest.h"
 
-#include <krichtextedit.h>
 #include <KColorScheme>
+#include <krichtextedit.h>
 
+#include <QFont>
 #include <QRegularExpression>
+#include <QScrollBar>
 #include <QTest>
 #include <QTextCursor>
 #include <QTextList>
-#include <QFont>
-#include <QScrollBar>
 
 QTEST_MAIN(KRichTextEditTest)
 
@@ -107,9 +107,9 @@ void KRichTextEditTest::testHTMLLineBreaks()
     edit.enableRichTextMode();
 
     // Create the following text:
-    //A
+    // A
     //
-    //B
+    // B
     QTest::keyClicks(&edit, QStringLiteral("a\r"));
 
     edit.setTextUnderline(true);
@@ -125,11 +125,12 @@ void KRichTextEditTest::testHTMLLineBreaks()
 
     const QStringList lines = html.split(QLatin1Char('\n'));
 
-//  for (int idx=0; idx<lines.size(); idx++) {
-//    qDebug() << ( idx + 1 ) << QString( " : " ) << lines.at( idx );
-//  }
+    //  for (int idx=0; idx<lines.size(); idx++) {
+    //    qDebug() << ( idx + 1 ) << QString( " : " ) << lines.at( idx );
+    //  }
 
-    QVERIFY2(lines.size() == 7,  "we can't perform this unit test: "
+    QVERIFY2(lines.size() == 7,
+             "we can't perform this unit test: "
              "the html rendering has changed beyond recognition");
 
     const QString &line6 = lines.at(5);
@@ -138,14 +139,13 @@ void KRichTextEditTest::testHTMLLineBreaks()
     QVERIFY(line6.startsWith(QStringLiteral("<p style=\"-qt-paragraph-type:empty;")));
 
     // make sure that empty lines have the &nbsp; inserted
-    QVERIFY2(line6.endsWith(QStringLiteral(">&nbsp;</p>")), "Empty lines must have &nbsp; or otherwise 3rd party "
+    QVERIFY2(line6.endsWith(QStringLiteral(">&nbsp;</p>")),
+             "Empty lines must have &nbsp; or otherwise 3rd party "
              "viewers render those as non-existing lines");
-
 }
 
 void KRichTextEditTest::testHTMLOrderedLists()
 {
-
     // The problem we have is that we need to "fake" being a viewer such
     // as Thunderbird or MS-Outlook to unit test our html lists.
     // For now, we'll parse the 6th line (the <ol> element) and make sure it has the proper format
@@ -165,25 +165,26 @@ void KRichTextEditTest::testHTMLOrderedLists()
 
     const QStringList lines = html.split(QLatin1Char('\n'));
 
-//  Uncomment this section in case the first test fails to see if the HTML
-//  rendering has actually introduced a bug, or merely a problem with the unit test itself
-//
-//  for (int idx=0; idx<lines.size(); idx++) {
-//    qDebug() << ( idx + 1 ) << QString( " : " ) << lines.at( idx );
-//  }
+    //  Uncomment this section in case the first test fails to see if the HTML
+    //  rendering has actually introduced a bug, or merely a problem with the unit test itself
+    //
+    //  for (int idx=0; idx<lines.size(); idx++) {
+    //    qDebug() << ( idx + 1 ) << QString( " : " ) << lines.at( idx );
+    //  }
 
-    QVERIFY2(lines.size() == 9,  "we can't perform this unit test: "
+    QVERIFY2(lines.size() == 9,
+             "we can't perform this unit test: "
              "the html rendering has changed beyond recognition");
 
     // this is the <ol> declaration line
     const QString &line6 = lines.at(5);
 
-//  qDebug() << line6;
+    //  qDebug() << line6;
 
     const QRegularExpression re(QStringLiteral("<ol.*?margin-left: 0px.*?><li"));
-    QVERIFY2(!re.match(line6, 0).hasMatch(), "margin-left: 0px specified for ordered lists "
-                                             "removes numbers in 3rd party viewers ");
-
+    QVERIFY2(!re.match(line6, 0).hasMatch(),
+             "margin-left: 0px specified for ordered lists "
+             "removes numbers in 3rd party viewers ");
 }
 
 void KRichTextEditTest::testHTMLUnorderedLists()
@@ -208,30 +209,33 @@ void KRichTextEditTest::testHTMLUnorderedLists()
 
     const QStringList lines = html.split(QLatin1Char('\n'));
 
-//  Uncomment this section in case the first test fails to see if the HTML
-//  rendering has actually introduced a bug, or merely a problem with the unit test itself
-//
-//  for (int idx=0; idx<lines.size(); idx++) {
-//    qDebug() << ( idx + 1 ) << QString( " : " ) << lines.at( idx );
-//  }
+    //  Uncomment this section in case the first test fails to see if the HTML
+    //  rendering has actually introduced a bug, or merely a problem with the unit test itself
+    //
+    //  for (int idx=0; idx<lines.size(); idx++) {
+    //    qDebug() << ( idx + 1 ) << QString( " : " ) << lines.at( idx );
+    //  }
 
-    QVERIFY2(lines.size() == 9,  "we can't perform this unit test: "
+    QVERIFY2(lines.size() == 9,
+             "we can't perform this unit test: "
              "the html rendering has changed beyond recognition");
 
     // this is the <ol> declaration line
     const QString &line6 = lines.at(5);
 
-//  qDebug() << line6;
+    //  qDebug() << line6;
 
     // there should not be a margin-left: 0 defined for the <ol> element
     QRegExp regex(QStringLiteral("<ul.*margin-left: 0px.*><li"));
     regex.setMinimal(true);
-    QVERIFY2(regex.indexIn(line6, 0) == -1, "margin-left: 0px specified for unordered lists "
+    QVERIFY2(regex.indexIn(line6, 0) == -1,
+             "margin-left: 0px specified for unordered lists "
              "removes numbers in 3rd party viewers ");
 
     const QRegularExpression re(QStringLiteral("<ul.*?margin-left: 0px.*?><li"));
-    QVERIFY2(!re.match(line6, 0).hasMatch(), "margin-left: 0px specified for unordered lists "
-                                             "removes numbers in 3rd party viewers ");
+    QVERIFY2(!re.match(line6, 0).hasMatch(),
+             "margin-left: 0px specified for unordered lists "
+             "removes numbers in 3rd party viewers ");
 }
 
 void KRichTextEditTest::testHeading()

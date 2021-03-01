@@ -67,7 +67,6 @@ class KTEXTWIDGETS_EXPORT KFindDialog : public QDialog
     Q_OBJECT
 
 public:
-
     /**
      * Construct a modal find dialog
      *
@@ -76,8 +75,11 @@ public:
      * @param findStrings The find history, see findHistory()
      * @param hasSelection Whether a selection exists
      */
-    explicit KFindDialog(QWidget *parent = nullptr, long options = 0,
-                         const QStringList &findStrings = QStringList(), bool hasSelection = false, bool replaceDialog = false);
+    explicit KFindDialog(QWidget *parent = nullptr,
+                         long options = 0,
+                         const QStringList &findStrings = QStringList(),
+                         bool hasSelection = false,
+                         bool replaceDialog = false);
 
     /**
      * Destructor.
@@ -119,39 +121,39 @@ public:
     void setHasCursor(bool hasCursor);
 
     /**
-    * Enable/disable the 'Find backwards' option, depending
-    * on whether the application supports it.
-    *
-    * @param supports true if the application supports backwards find
-    * This is assumed to be the case by default.
-    */
+     * Enable/disable the 'Find backwards' option, depending
+     * on whether the application supports it.
+     *
+     * @param supports true if the application supports backwards find
+     * This is assumed to be the case by default.
+     */
     void setSupportsBackwardsFind(bool supports);
 
     /**
-    * Enable/disable the 'Case sensitive' option, depending
-    * on whether the application supports it.
-    *
-    * @param supports true if the application supports case sensitive find
-    * This is assumed to be the case by default.
-    */
+     * Enable/disable the 'Case sensitive' option, depending
+     * on whether the application supports it.
+     *
+     * @param supports true if the application supports case sensitive find
+     * This is assumed to be the case by default.
+     */
     void setSupportsCaseSensitiveFind(bool supports);
 
     /**
-    * Enable/disable the 'Whole words only' option, depending
-    * on whether the application supports it.
-    *
-    * @param supports true if the application supports whole words only find
-    * This is assumed to be the case by default.
-    */
+     * Enable/disable the 'Whole words only' option, depending
+     * on whether the application supports it.
+     *
+     * @param supports true if the application supports whole words only find
+     * This is assumed to be the case by default.
+     */
     void setSupportsWholeWordsFind(bool supports);
 
     /**
-    * Enable/disable the 'Regular expression' option, depending
-    * on whether the application supports it.
-    *
-    * @param supports true if the application supports regular expression find
-    * This is assumed to be the case by default.
-    */
+     * Enable/disable the 'Regular expression' option, depending
+     * on whether the application supports it.
+     *
+     * @param supports true if the application supports regular expression find
+     * This is assumed to be the case by default.
+     */
     void setSupportsRegularExpressionFind(bool supports);
 
     /**
@@ -212,9 +214,12 @@ protected:
     void showEvent(QShowEvent *) override;
 
 protected:
-    KFindDialog(KFindDialogPrivate &dd, QWidget *parent = nullptr, long options = 0,
+    KFindDialog(KFindDialogPrivate &dd,
+                QWidget *parent = nullptr,
+                long options = 0,
                 const QStringList &findStrings = QStringList(),
-                bool hasSelection = false, bool replaceDialog = false);
+                bool hasSelection = false,
+                bool replaceDialog = false);
 
 private:
     friend class KReplaceDialog;
