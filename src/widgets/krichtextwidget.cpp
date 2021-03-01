@@ -19,6 +19,7 @@
 
 // Qt includes
 #include <QAction>
+#include <QActionGroup>
 #include <QColorDialog>
 #include <QTextList>
 
