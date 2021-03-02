@@ -267,7 +267,10 @@ KFind::Result KFind::find()
                     if (d->customIds) {
                         Q_EMIT highlight(d->currentId, d->index, d->matchedLength);
                     } else {
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
                         Q_EMIT highlight(d->text, d->index, d->matchedLength);
+#endif
+                        Q_EMIT textFound(d->text, d->index, d->matchedLength);
                     }
 
                     d->lastResult = Match;
@@ -361,7 +364,10 @@ KFind::Result KFind::find()
                     if (d->customIds) {
                         Q_EMIT highlight(d->currentId, d->index, d->matchedLength);
                     } else {
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
                         Q_EMIT highlight(d->text, d->index, d->matchedLength);
+#endif
+                        Q_EMIT textFound(d->text, d->index, d->matchedLength);
                     }
 
                     if (!d->dialogClosed) {

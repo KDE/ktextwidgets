@@ -34,7 +34,12 @@ void KReplaceTest::replace(const QString &pattern, const QString &replacement, l
 
     // Connect highlight signal to code which handles highlighting
     // of found text.
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
     connect(m_replace, SIGNAL(highlight(QString, int, int)), this, SLOT(slotHighlight(QString, int, int)));
+#else
+    connect(m_replace, &KFind::textFound, this, &KReplaceTest::slotHighlight);
+#endif
+
     // Connect findNext signal - called when pressing the button in the dialog
     connect(m_replace, &KFind::findNext, this, &KReplaceTest::slotReplaceNext);
     // Connect replace signal - called when doing a replacement

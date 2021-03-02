@@ -38,10 +38,11 @@ class KReplacePrivate;
  *  // This creates a replace-on-prompt dialog if needed.
  *  m_replace = new KReplace(pattern, replacement, options, this);
  *
- *  // Connect signals to code which handles highlighting
- *  // of found text, and on-the-fly replacement.
- *  connect( m_replace, SIGNAL( highlight( const QString &, int, int ) ),
- *          this, SLOT( slotHighlight( const QString &, int, int ) ) );
+ *  // Connect signals to code which handles highlighting of found text, and
+ *  // on-the-fly replacement.
+ *  connect(m_replace, &KFind::textFound, this, [this](const QString &text, int matchingIndex, int matchedLength) {
+ *      slotHighlight(text, matchingIndex, matchedLength);
+ *  });
  *  // Connect findNext signal - called when pressing the button in the dialog
  *  connect( m_replace, SIGNAL( findNext() ),
  *          this, SLOT( slotReplaceNext() ) );
@@ -121,7 +122,7 @@ public:
 
     /**
      * Walk the text fragment (e.g. kwrite line, kspread cell) looking for matches.
-     * For each match, if prompt-on-replace is specified, emits the highlight() signal
+     * For each match, if prompt-on-replace is specified, emits the textFound() signal
      * and displays the prompt-for-replace dialog before doing the replace.
      */
     Result replace();
@@ -203,9 +204,9 @@ Q_SIGNALS:
      * operation.
      *
      * Extra care must be taken to properly implement the "no prompt-on-replace" case.
-     * For instance highlight isn't emitted in that case (some code might rely on it),
-     * and for performance reasons one should repaint after replace() ONLY if
-     * prompt-on-replace was selected.
+     * For instance, the textFound() signal isn't emitted in that case (some code might
+     * rely on it), and for performance reasons one should repaint after replace() ONLY
+     * if prompt-on-replace was selected.
      *
      * @param text The text, in which the replacement has already been done.
      * @param replacementIndex Starting index of the matched substring
