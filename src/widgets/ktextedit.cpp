@@ -774,7 +774,9 @@ void KTextEdit::slotDoReplace()
 
     // Connect highlight signal to code which handles highlighting
     // of found text.
-    connect(d->replace, SIGNAL(highlight(QString, int, int)), this, SLOT(slotFindHighlight(QString, int, int)));
+    connect(d->replace, &KFind::textFound, this, [d](const QString &text, int matchingIndex, int matchedLength) {
+        d->slotFindHighlight(text, matchingIndex, matchedLength);
+    });
     connect(d->replace, &KFind::findNext, this, &KTextEdit::slotReplaceNext);
     connect(d->replace, SIGNAL(replace(QString, int, int, int)), this, SLOT(slotReplaceText(QString, int, int, int)));
 
@@ -847,7 +849,9 @@ void KTextEdit::slotDoFind()
 
     // Connect highlight signal to code which handles highlighting
     // of found text.
-    connect(d->find, SIGNAL(highlight(QString, int, int)), this, SLOT(slotFindHighlight(QString, int, int)));
+    connect(d->find, &KFind::textFound, this, [d](const QString &text, int matchingIndex, int matchedLength) {
+        d->slotFindHighlight(text, matchingIndex, matchedLength);
+    });
     connect(d->find, &KFind::findNext, this, &KTextEdit::slotFindNext);
 
     d->findDlg->close();

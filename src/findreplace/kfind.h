@@ -41,10 +41,10 @@ class KFindPrivate;
  *  // This creates a find-next-prompt dialog if needed.
  *  m_find = new KFind(pattern, options, this);
  *
- *  // Connect highlight signal to code which handles highlighting
- *  // of found text.
- *  connect(m_find, SIGNAL(highlight(QString, int, int)),
- *          this, SLOT(slotHighlight(QString, int, int)));
+ *  // Connect textFound() signal to code which handles highlighting of found text.
+ *  connect(m_find, &KFind::textFound, this, [this](const QString &text, int matchingIndex, int matchedLength) {
+ *      slotHighlight(text, matchingIndex, matchedLength);
+ *  }));
  *  // Connect findNext signal - called when pressing the button in the dialog
  *  connect(m_find, SIGNAL(findNext()),
  *          this, SLOT(slotFindNext()));
@@ -168,9 +168,10 @@ public:
     void setData(int id, const QString &data, int startPos = -1);
 
     /**
-     * Walk the text fragment (e.g. text-processor line, kspread cell) looking for matches.
-     * For each match, emits the highlight() signal and displays the find-again dialog
-     * proceeding.
+     * Walk the text fragment (e.g. in a text-processor line or spreadsheet
+     * cell ...etc) looking for matches.
+     * For each match, emits the textFound() signal and displays the find-again
+     * dialog to ask if the user wants to find the same text again.
      */
     Result find();
 
@@ -204,8 +205,8 @@ public:
     void setPattern(const QString &pattern);
 
     /**
-     * Return the number of matches found (i.e. the number of times
-     * the highlight signal was emitted).
+     * Returns the number of matches found (i.e. the number of times the textFound()
+     * signal was emitted).
      * If 0, can be used in a dialog box to tell the user "no match was found".
      * The final dialog does so already, unless you used setDisplayFinalDialog(false).
      */
@@ -341,7 +342,7 @@ public:
     int index() const;
 
 Q_SIGNALS:
-
+#if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 81)
     /**
      * Connect to this signal to implement highlighting of found text during the find
      * operation.
@@ -354,15 +355,35 @@ Q_SIGNALS:
      * setData(), but can also be an earlier set data block.
      *
      * @see setData()
+     *
+     * @deprecated since 5.81, use the KFind::textFound(const QString &, int, int) signal instead.
      */
-    void highlight(const QString &text, int matchingIndex, int matchedLength);
+    KTEXTWIDGETS_DEPRECATED_VERSION(5, 81, "Use the KFind::textFound(const QString &, int, int) signal instead.")
+    void highlight(const QString &text, int matchingIndex, int matchedLength); // clazy:exclude=overloaded-signal
+#endif
+
+    /**
+     * Connect to this signal to implement highlighting of found text during the find
+     * operation.
+     *
+     * If you've set data with setData(id, text), use the highlight(int, int, int) signal.
+     *
+     * WARNING: If you're using the FindIncremental option, the text argument
+     * passed by this signal is not necessarily the data last set through
+     * setData(), but can also be an earlier set data block.
+     *
+     * @see setData()
+     *
+     * @since 5.81
+     */
+    void textFound(const QString &text, int matchingIndex, int matchedLength);
 
     /**
      * Connect to this signal to implement highlighting of found text during the find
      * operation.
      *
      * Use this signal if you've set your data with setData(id, text), otherwise
-     * use the signal with highlight(text, matchingIndex, matchedLength).
+     * use the textFound(text, matchingIndex, matchedLength) signal.
      *
      * WARNING: If you're using the FindIncremental option, the id argument
      * passed by this signal is not necessarily the id of the data last set
@@ -370,7 +391,7 @@ Q_SIGNALS:
      *
      * @see setData()
      */
-    void highlight(int id, int matchingIndex, int matchedLength);
+    void highlight(int id, int matchingIndex, int matchedLength); // clazy:exclude=overloaded-signal
 
     // ## TODO docu
     // findprevious will also emit findNext, after temporarily switching the value

@@ -260,7 +260,10 @@ KFind::Result KReplace::replace()
 
                     // Tell the world about the match we found, in case someone wants to
                     // highlight it.
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
                     Q_EMIT highlight(d->text, d->index, d->matchedLength);
+#endif
+                    Q_EMIT textFound(d->text, d->index, d->matchedLength);
 
                     d->lastResult = Match;
                     return Match;
