@@ -46,9 +46,10 @@ class KReplacePrivate;
  *  // Connect findNext signal - called when pressing the button in the dialog
  *  connect( m_replace, SIGNAL( findNext() ),
  *          this, SLOT( slotReplaceNext() ) );
- *  // Connect replace signal - called when doing a replacement
- *  connect( m_replace, SIGNAL( replace(const QString &, int, int, int) ),
- *          this, SLOT( slotReplace(const QString &, int, int, int) ) );
+ *  // Connect to the textReplaced() signal - emitted when a replacement is done
+ *  connect( m_replace, &KReplace::textReplaced, this, [this](const QString &text, int replacementIndex, int replacedLength, int matchedLength) {
+ *      slotReplace(text, replacementIndex, replacedLength, matchedLength);
+ *  });
  * \endcode
  *  Then initialize the variables determining the "current position"
  *  (to the cursor, if the option FromCursor is set,
@@ -107,7 +108,8 @@ public:
 
     /**
      * Return the number of replacements made (i.e. the number of times
-     * the replace signal was emitted).
+     * the textReplaced() signal was emitted).
+     *
      * Can be used in a dialog box to tell the user how many replacements were made.
      * The final dialog does so already, unless you used setDisplayFinalDialog(false).
      */
@@ -198,7 +200,7 @@ public:
     void displayFinalDialog() const override;
 
 Q_SIGNALS:
-
+#if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 83)
     /**
      * Connect to this slot to implement updating of replaced text during the replace
      * operation.
@@ -212,8 +214,30 @@ Q_SIGNALS:
      * @param replacementIndex Starting index of the matched substring
      * @param replacedLength Length of the replacement string
      * @param matchedLength Length of the matched string
+     *
+     * @deprecated since 5.83, use the KReplace::textReplaced(const QString &, int, int, int) signal instead
      */
-    void replace(const QString &text, int replacementIndex, int replacedLength, int matchedLength);
+    KTEXTWIDGETS_DEPRECATED_VERSION(5, 83, "Use the KReplace::textReplaced(const QString &, int, int, int) signal instead.")
+    void replace(const QString &text, int replacementIndex, int replacedLength, int matchedLength); // clazy:exclude=overloaded-signal
+#endif
+
+    /**
+     * Connect to this signal to implement updating of replaced text during the replace
+     * operation.
+     *
+     * Extra care must be taken to properly implement the "no prompt-on-replace" case.
+     * For instance, the textFound() signal isn't emitted in that case (some code
+     * might rely on it), and for performance reasons one should repaint after
+     * replace() ONLY if prompt-on-replace was selected.
+     *
+     * @param text The text, in which the replacement has already been done
+     * @param replacementIndex Starting index of the matched substring
+     * @param replacedLength Length of the replacement string
+     * @param matchedLength Length of the matched string
+     *
+     * @since 5.83
+     */
+    void textReplaced(const QString &text, int replacementIndex, int replacedLength, int matchedLength);
 
 private:
     Q_DECLARE_PRIVATE_D(KFind::d, KReplace)

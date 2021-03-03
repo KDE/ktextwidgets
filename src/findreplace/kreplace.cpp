@@ -371,7 +371,11 @@ void KReplacePrivate::doReplace()
 
     // Tell the world about the replacement we made, in case someone wants to
     // highlight it.
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 83)
     Q_EMIT q->replace(text, index, replacedLength, matchedLength);
+#endif
+    Q_EMIT q->textReplaced(text, index, replacedLength, matchedLength);
+
 #ifdef DEBUG_REPLACE
     // qDebug() << "after replace() signal: d->index=" << d->index << " replacedLength=" << replacedLength;
 #endif

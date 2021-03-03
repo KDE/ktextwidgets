@@ -777,7 +777,14 @@ void KTextEdit::slotDoReplace()
         d->slotFindHighlight(text, matchingIndex, matchedLength);
     });
     connect(d->replace, &KFind::findNext, this, &KTextEdit::slotReplaceNext);
+
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
     connect(d->replace, SIGNAL(replace(QString, int, int, int)), this, SLOT(slotReplaceText(QString, int, int, int)));
+#else
+    connect(d->replace, &KReplace::textReplaced, this, [d](const QString &text, int replacementIndex, int replacedLength, int matchedLength) {
+        d->slotReplaceText(text, replacementIndex, replacedLength, matchedLength);
+    });
+#endif
 
     d->repDlg->close();
     slotReplaceNext();

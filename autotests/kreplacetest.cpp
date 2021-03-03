@@ -52,8 +52,13 @@ void KReplaceTest::replace(const QString &pattern, const QString &replacement, l
 
     // Connect findNext signal - called when pressing the button in the dialog
     connect(m_replace.get(), &KFind::findNext, this, &KReplaceTest::slotReplaceNext);
+
     // Connect replace signal - called when doing a replacement
+#if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 83)
     connect(m_replace.get(), SIGNAL(replace(QString, int, int, int)), this, SLOT(slotReplace(QString, int, int, int)));
+#else
+    connect(m_replace.get(), &KReplace::textReplaced, this, &KReplaceTest::slotReplace);
+#endif
 
     // Go to initial position
     if ((options & KFind::FromCursor) == 0) {
