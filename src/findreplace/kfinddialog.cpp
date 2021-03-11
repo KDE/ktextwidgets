@@ -563,7 +563,7 @@ void KFindDialogPrivate::_k_slotPlaceholdersAboutToShow()
     placeholders->clear();
     placeholders->addAction(new PlaceHolderAction(placeholders, i18n("Complete Match"), 0));
 
-    const int n = QRegularExpression(q->pattern()).captureCount();
+    const int n = QRegularExpression(q->pattern(), QRegularExpression::UseUnicodePropertiesOption).captureCount();
     for (int i = 1; i <= n; ++i) {
         placeholders->addAction(new PlaceHolderAction(placeholders, i18n("Captured Text (%1)", i), i));
     }
@@ -581,7 +581,7 @@ void KFindDialogPrivate::_k_slotOk()
 
     if (regExp->isChecked()) {
         // Check for a valid regular expression.
-        if (!QRegularExpression(q->pattern()).isValid()) {
+        if (!QRegularExpression(q->pattern(), QRegularExpression::UseUnicodePropertiesOption).isValid()) {
             KMessageBox::error(q, i18n("Invalid PCRE pattern syntax."));
             return;
         }

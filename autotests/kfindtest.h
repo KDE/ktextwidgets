@@ -69,6 +69,9 @@ private Q_SLOTS:
     void testStaticFindRegexp_data();
     void testStaticFindRegexp();
 
+    void testRegexpUnicode_data();
+    void testRegexpUnicode();
+
     void testSimpleSearch();
     void testSimpleRegexp();
 

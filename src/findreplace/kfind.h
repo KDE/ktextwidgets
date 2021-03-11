@@ -291,6 +291,8 @@ public:
      * If the KFind::RegularExpression flag is set, the @p pattern will be iterpreted
      * as a regular expression (using QRegularExpression).
      *
+     * @note Unicode support is always enabled (by setting the QRegularExpression::UseUnicodePropertiesOption flag).
+     *
      * @param text The string to search in
      * @param pattern The pattern to search for
      * @param index  The index in @p text from which to start the search

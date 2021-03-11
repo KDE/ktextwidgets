@@ -454,7 +454,8 @@ static int findRegex(const QString &text, const QString &pattern, int index, lon
 {
     QString _pattern = pattern;
 
-    QRegularExpression::PatternOptions opts;
+    // Always enable Unicode support in QRegularExpression
+    QRegularExpression::PatternOptions opts = QRegularExpression::UseUnicodePropertiesOption;
     // instead of this rudimentary test, add a checkbox to toggle MultilineOption ?
     if (pattern.startsWith(QLatin1Char('^')) || pattern.endsWith(QLatin1Char('$'))) {
         opts |= QRegularExpression::MultilineOption;
@@ -462,7 +463,9 @@ static int findRegex(const QString &text, const QString &pattern, int index, lon
         _pattern = QLatin1String("\\b") + pattern + QLatin1String("\\b");
     }
 
-    opts |= (options & KFind::CaseSensitive) ? QRegularExpression::NoPatternOption : QRegularExpression::CaseInsensitiveOption;
+    if (!(options & KFind::CaseSensitive)) {
+        opts |= QRegularExpression::CaseInsensitiveOption;
+    }
 
     QRegularExpression re(_pattern, opts);
     QRegularExpressionMatch match;

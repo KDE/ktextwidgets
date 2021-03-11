@@ -140,7 +140,7 @@ void KReplaceDialogPrivate::_k_slotOk()
 
     // If regex and backrefs are enabled, do a sanity check.
     if (regExp->isChecked() && backRef->isChecked()) {
-        const QRegularExpression re(q->pattern());
+        const QRegularExpression re(q->pattern(), QRegularExpression::UseUnicodePropertiesOption);
         const int caps = re.captureCount();
 
         const QString rep = q->replacement();

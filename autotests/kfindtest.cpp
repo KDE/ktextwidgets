@@ -234,6 +234,40 @@ void TestKFind::testStaticFindRegexp()
     QCOMPARE(matchedLength, expectedMatchedLength);
 }
 
+void TestKFind::testRegexpUnicode_data()
+{
+    QTest::addColumn<QString>("text");
+    QTest::addColumn<QString>("pattern");
+    QTest::addColumn<int>("startIndex");
+    QTest::addColumn<int>("options");
+    QTest::addColumn<int>("expectedResult");
+    QTest::addColumn<int>("expectedMatchedLength");
+
+    /* clang-format off */
+    // Test matching with Unicode properties in QRegularExpression
+    QTest::newRow("unicode-word-boundary") << "aoé" << "\\b" << 1 << 0 << 3 << 0;
+    QTest::newRow("unicode-word-char") << "aoé" << "\\w$" << 0 << 0 << 2 << 1;
+    QTest::newRow("unicode-non-word-char") << "aoé" << "\\W" << 0 << 0 << -1 << 0;
+    /* clang-format on */
+}
+
+void TestKFind::testRegexpUnicode()
+{
+    // Tests for the core method "static KFind::find(text, regexp)"
+    QFETCH(QString, text);
+    QFETCH(QString, pattern);
+    QFETCH(int, startIndex);
+    QFETCH(int, options);
+    QFETCH(int, expectedResult);
+    QFETCH(int, expectedMatchedLength);
+
+    int matchedLength = 0;
+
+    const int result = KFind::find(text, pattern, startIndex, options | KFind::RegularExpression, &matchedLength, nullptr);
+    QCOMPARE(result, expectedResult);
+    QCOMPARE(matchedLength, expectedMatchedLength);
+}
+
 void TestKFind::testSimpleSearch()
 {
     // first we do a simple text searching the text and doing a few find nexts
