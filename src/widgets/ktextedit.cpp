@@ -772,8 +772,7 @@ void KTextEdit::slotDoReplace()
         d->repIndex = textCursor().anchor();
     }
 
-    // Connect highlight signal to code which handles highlighting
-    // of found text.
+    // Connect textFound signal to code which handles highlighting of found text.
     connect(d->replace, &KFind::textFound, this, [d](const QString &text, int matchingIndex, int matchedLength) {
         d->slotFindHighlight(text, matchingIndex, matchedLength);
     });
@@ -847,8 +846,7 @@ void KTextEdit::slotDoFind()
         d->findIndex = textCursor().anchor();
     }
 
-    // Connect highlight signal to code which handles highlighting
-    // of found text.
+    // Connect textFound() signal to code which handles highlighting of found text
     connect(d->find, &KFind::textFound, this, [d](const QString &text, int matchingIndex, int matchedLength) {
         d->slotFindHighlight(text, matchingIndex, matchedLength);
     });

@@ -265,7 +265,10 @@ KFind::Result KFind::find()
                 // if the result is clean we can return it now
                 if (clean) {
                     if (d->customIds) {
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
                         Q_EMIT highlight(d->currentId, d->index, d->matchedLength);
+#endif
+                        Q_EMIT textFoundAtId(d->currentId, d->index, d->matchedLength);
                     } else {
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
                         Q_EMIT highlight(d->text, d->index, d->matchedLength);
@@ -362,7 +365,10 @@ KFind::Result KFind::find()
                     // Tell the world about the match we found, in case someone wants to
                     // highlight it.
                     if (d->customIds) {
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
                         Q_EMIT highlight(d->currentId, d->index, d->matchedLength);
+#endif
+                        Q_EMIT textFoundAtId(d->currentId, d->index, d->matchedLength);
                     } else {
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
                         Q_EMIT highlight(d->text, d->index, d->matchedLength);

@@ -335,7 +335,7 @@ public:
 
     /**
      * @return the current matching index (or -1).
-     * Same as the matchingIndex parameter passed to highlight.
+     * Same as the matchingIndex parameter passed to the textFound() signal.
      * You usually don't need to use this, except maybe when updating the current data,
      * so you need to call setData(newData, index()).
      */
@@ -366,7 +366,7 @@ Q_SIGNALS:
      * Connect to this signal to implement highlighting of found text during the find
      * operation.
      *
-     * If you've set data with setData(id, text), use the highlight(int, int, int) signal.
+     * If you've set data with setData(id, text), use the textFoundAtId(int, int, int) signal.
      *
      * WARNING: If you're using the FindIncremental option, the text argument
      * passed by this signal is not necessarily the data last set through
@@ -378,6 +378,7 @@ Q_SIGNALS:
      */
     void textFound(const QString &text, int matchingIndex, int matchedLength);
 
+#if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 81)
     /**
      * Connect to this signal to implement highlighting of found text during the find
      * operation.
@@ -390,8 +391,29 @@ Q_SIGNALS:
      * through setData(), but can also be of an earlier set data block.
      *
      * @see setData()
+     *
+     * @deprecated since 5.81, use the KFind::textFoundAtId(int id, int matchingIndex, int matchedLength) signal instead.
      */
+    KTEXTWIDGETS_DEPRECATED_VERSION(5, 81, "Use the KFind::textFoundAtId(int id, int matchingIndex, int matchedLength) signal instead.")
     void highlight(int id, int matchingIndex, int matchedLength); // clazy:exclude=overloaded-signal
+#endif
+
+    /**
+     * Connect to this signal to implement highlighting of found text during
+     * the find operation.
+     *
+     * Use this signal if you've set your data with setData(id, text),
+     * otherwise use the textFound(text, matchingIndex, matchedLength) signal.
+     *
+     * WARNING: If you're using the FindIncremental option, the id argument
+     * passed by this signal is not necessarily the id of the data last set
+     * through setData(), but can also be of an earlier set data block.
+     *
+     * @see setData()
+     *
+     * @since 5.81
+     */
+    void textFoundAtId(int id, int matchingIndex, int matchedLength);
 
     // ## TODO docu
     // findprevious will also emit findNext, after temporarily switching the value

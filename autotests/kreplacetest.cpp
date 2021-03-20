@@ -32,8 +32,7 @@ void KReplaceTest::replace(const QString &pattern, const QString &replacement, l
     delete m_replace;
     m_replace = new KReplace(pattern, replacement, options);
 
-    // Connect highlight signal to code which handles highlighting
-    // of found text.
+    // Connect highlight (or textFound) signal to code which handles highlighting of found text.
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
     connect(m_replace, SIGNAL(highlight(QString, int, int)), this, SLOT(slotHighlight(QString, int, int)));
 #else

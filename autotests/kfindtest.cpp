@@ -34,13 +34,17 @@ void KFindRecorder::find(const QString &pattern, long options)
 
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
     connect(m_find, SIGNAL(highlight(QString, int, int)), SLOT(slotHighlight(QString, int, int)));
+
+    connect(m_find, SIGNAL(highlight(int, int, int)), SLOT(slotHighlight(int, int, int)));
 #else
     connect(m_find, &KFind::textFound, this, [this](const QString &text, int matchingIndex, int matchedLength) {
         slotHighlight(text, matchingIndex, matchedLength);
     });
-#endif
 
-    connect(m_find, SIGNAL(highlight(int, int, int)), SLOT(slotHighlight(int, int, int)));
+    connect(m_find, &KFind::textFoundAtId, this, [this](int id, int matchingIndex, int matchedLength) {
+        slotHighlight(id, matchingIndex, matchedLength);
+    });
+#endif
 
     m_line = 0;
     KFind::Result result = KFind::NoMatch;
