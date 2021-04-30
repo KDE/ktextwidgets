@@ -359,7 +359,7 @@ KFind::Result KFind::find()
                     }
 
                     if (d->pattern.length() < d->matchedPattern.length()) {
-                        d->pattern += d->matchedPattern.midRef(d->pattern.length(), 1);
+                        d->pattern += QStringView(d->matchedPattern).mid(d->pattern.length(), 1);
                         done = false;
                     }
                 }
