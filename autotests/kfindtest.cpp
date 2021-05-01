@@ -25,23 +25,33 @@ void KFindRecorder::changeText(int line, const QString &text)
     m_find->setData(line, text);
 }
 
+KFindRecorder::KFindRecorder(const QStringList &text)
+    : QObject(nullptr)
+    , m_text(text)
+    , m_line(0)
+{
+}
+
+KFindRecorder::~KFindRecorder()
+{
+}
+
 void KFindRecorder::find(const QString &pattern, long options)
 {
-    delete m_find;
-    m_find = new KFind(pattern, options, nullptr);
+    m_find.reset(new KFind(pattern, options, nullptr));
     // Prevent dialogs from popping up
     m_find->closeFindNextDialog();
 
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
-    connect(m_find, SIGNAL(highlight(QString, int, int)), SLOT(slotHighlight(QString, int, int)));
+    connect(m_find.get(), SIGNAL(highlight(QString, int, int)), SLOT(slotHighlight(QString, int, int)));
 
-    connect(m_find, SIGNAL(highlight(int, int, int)), SLOT(slotHighlight(int, int, int)));
+    connect(m_find.get(), SIGNAL(highlight(int, int, int)), SLOT(slotHighlight(int, int, int)));
 #else
-    connect(m_find, &KFind::textFound, this, [this](const QString &text, int matchingIndex, int matchedLength) {
+    connect(m_find.get(), &KFind::textFound, this, [this](const QString &text, int matchingIndex, int matchedLength) {
         slotHighlight(text, matchingIndex, matchedLength);
     });
 
-    connect(m_find, &KFind::textFoundAtId, this, [this](int id, int matchingIndex, int matchedLength) {
+    connect(m_find.get(), &KFind::textFoundAtId, this, [this](int id, int matchingIndex, int matchedLength) {
         slotHighlight(id, matchingIndex, matchedLength);
     });
 #endif

@@ -25,24 +25,35 @@ void KReplaceTest::enterLoop()
     eventLoop.exec(QEventLoop::ExcludeUserInputEvents);
 }
 
+KReplaceTest::KReplaceTest(const QStringList &text, const QString &buttonName)
+    : QObject(nullptr)
+    , m_text(text)
+    , m_replace(nullptr)
+    , m_buttonName(buttonName)
+{
+}
+
+KReplaceTest::~KReplaceTest()
+{
+}
+
 void KReplaceTest::replace(const QString &pattern, const QString &replacement, long options)
 {
     m_needEventLoop = false;
     // This creates a replace-next-prompt dialog if needed.
-    delete m_replace;
-    m_replace = new KReplace(pattern, replacement, options);
+    m_replace.reset(new KReplace(pattern, replacement, options));
 
     // Connect highlight (or textFound) signal to code which handles highlighting of found text.
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
-    connect(m_replace, SIGNAL(highlight(QString, int, int)), this, SLOT(slotHighlight(QString, int, int)));
+    connect(m_replace.get(), SIGNAL(highlight(QString, int, int)), this, SLOT(slotHighlight(QString, int, int)));
 #else
-    connect(m_replace, &KFind::textFound, this, &KReplaceTest::slotHighlight);
+    connect(m_replace.get(), &KFind::textFound, this, &KReplaceTest::slotHighlight);
 #endif
 
     // Connect findNext signal - called when pressing the button in the dialog
-    connect(m_replace, &KFind::findNext, this, &KReplaceTest::slotReplaceNext);
+    connect(m_replace.get(), &KFind::findNext, this, &KReplaceTest::slotReplaceNext);
     // Connect replace signal - called when doing a replacement
-    connect(m_replace, SIGNAL(replace(QString, int, int, int)), this, SLOT(slotReplace(QString, int, int, int)));
+    connect(m_replace.get(), SIGNAL(replace(QString, int, int, int)), this, SLOT(slotReplace(QString, int, int, int)));
 
     // Go to initial position
     if ((options & KFind::FromCursor) == 0) {
@@ -73,7 +84,7 @@ void KReplaceTest::slotHighlight(const QString &str, int matchingIndex, int matc
     // so slotReplaceNext never returns)
     if (m_replace->options() & KReplaceDialog::PromptOnReplace) {
         QDialog *dlg = m_replace->replaceNextDialog(false);
-        disconnect(dlg, SIGNAL(finished(int)), m_replace, nullptr); // hack to avoid _k_slotDialogClosed being called
+        disconnect(dlg, SIGNAL(finished(int)), m_replace.get(), nullptr); // hack to avoid _k_slotDialogClosed being called
         dlg->hide();
 
         QPushButton *button = dlg->findChild<QPushButton *>(m_buttonName);

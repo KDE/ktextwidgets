@@ -12,22 +12,16 @@
 #include <QObject>
 #include <QStringList>
 #include <ktextwidgets_export.h>
-
+#include <memory>
 class KFind;
-
 class KFindRecorder : public QObject
 {
     Q_OBJECT
 
 public:
-    explicit KFindRecorder(const QStringList &text)
-        : QObject(nullptr)
-        , m_find(nullptr)
-        , m_text(text)
-        , m_line(0)
-    {
-    }
+    explicit KFindRecorder(const QStringList &text);
 
+    ~KFindRecorder();
     void find(const QString &pattern, long options = 0);
     bool findNext(const QString &pattern = QString());
 
@@ -47,7 +41,7 @@ public Q_SLOTS:
     void slotHighlight(int id, int index, int matchedLengthlength);
 
 private:
-    KFind *m_find;
+    std::unique_ptr<KFind> m_find;
     QStringList m_text;
     int m_line;
     QStringList m_hits;

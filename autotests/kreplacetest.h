@@ -10,20 +10,15 @@
 
 #include <QObject>
 #include <QStringList>
+#include <memory>
 
 class KReplace;
-
 class KReplaceTest : public QObject
 {
     Q_OBJECT
 public:
-    KReplaceTest(const QStringList &text, const QString &buttonName)
-        : QObject(nullptr)
-        , m_text(text)
-        , m_replace(nullptr)
-        , m_buttonName(buttonName)
-    {
-    }
+    KReplaceTest(const QStringList &text, const QString &buttonName);
+    ~KReplaceTest();
 
     void replace(const QString &pattern, const QString &replacement, long options);
     void print();
@@ -45,7 +40,7 @@ private:
 
     QStringList::Iterator m_currentPos;
     QStringList m_text;
-    KReplace *m_replace;
+    std::unique_ptr<KReplace> m_replace;
     bool m_needEventLoop;
     QString m_buttonName;
 };
