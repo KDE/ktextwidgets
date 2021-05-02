@@ -51,7 +51,7 @@ PRIVATE
 endif()
 
 
-set_target_properties(KF5TextWidgets PROPERTIES VERSION ${KTEXTWIDGETS_VERSION_STRING}
+set_target_properties(KF5TextWidgets PROPERTIES VERSION ${KTEXTWIDGETS_VERSION}
                                                 SOVERSION ${KTEXTWIDGETS_SOVERSION}
                                                 EXPORT_NAME TextWidgets
 )
