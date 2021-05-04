@@ -199,8 +199,12 @@ QDialog *KFind::findNextDialog(bool create)
 
     if (!d->dialog && create) {
         KFindNextDialog *dialog = new KFindNextDialog(d->pattern, parentWidget());
-        connect(dialog->findButton(), SIGNAL(clicked()), this, SLOT(_k_slotFindNext()));
-        connect(dialog, SIGNAL(finished(int)), this, SLOT(_k_slotDialogClosed()));
+        connect(dialog->findButton(), &QPushButton::clicked, this, [d]() {
+            d->slotFindNext();
+        });
+        connect(dialog, &QDialog::finished, this, [d]() {
+            d->slotDialogClosed();
+        });
         d->dialog = dialog;
     }
     return d->dialog;
@@ -673,14 +677,14 @@ int KFind::find(const QString &text, const QRegExp &pattern, int index, long opt
 }
 #endif
 
-void KFindPrivate::_k_slotFindNext()
+void KFindPrivate::slotFindNext()
 {
     Q_Q(KFind);
 
     Q_EMIT q->findNext();
 }
 
-void KFindPrivate::_k_slotDialogClosed()
+void KFindPrivate::slotDialogClosed()
 {
     Q_Q(KFind);
 

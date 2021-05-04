@@ -45,7 +45,7 @@ void KReplaceTest::replace(const QString &pattern, const QString &replacement, l
 
     // Connect highlight (or textFound) signal to code which handles highlighting of found text.
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
-    connect(m_replace.get(), SIGNAL(highlight(QString, int, int)), this, SLOT(slotHighlight(QString, int, int)));
+    connect(m_replace.get(), QOverload<const QString &, int, int>::of(&KFind::highlight), this, &KReplaceTest::slotHighlight);
 #else
     connect(m_replace.get(), &KFind::textFound, this, &KReplaceTest::slotHighlight);
 #endif
@@ -55,7 +55,7 @@ void KReplaceTest::replace(const QString &pattern, const QString &replacement, l
 
     // Connect replace signal - called when doing a replacement
 #if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 83)
-    connect(m_replace.get(), SIGNAL(replace(QString, int, int, int)), this, SLOT(slotReplace(QString, int, int, int)));
+    connect(m_replace.get(), QOverload<const QString &, int, int, int>::of(&KReplace::replace), this, &KReplaceTest::slotReplace);
 #else
     connect(m_replace.get(), &KReplace::textReplaced, this, &KReplaceTest::slotReplace);
 #endif
@@ -89,7 +89,7 @@ void KReplaceTest::slotHighlight(const QString &str, int matchingIndex, int matc
     // so slotReplaceNext never returns)
     if (m_replace->options() & KReplaceDialog::PromptOnReplace) {
         QDialog *dlg = m_replace->replaceNextDialog(false);
-        disconnect(dlg, SIGNAL(finished(int)), m_replace.get(), nullptr); // hack to avoid _k_slotDialogClosed being called
+        disconnect(dlg, &QDialog::finished, m_replace.get(), nullptr); // hack to avoid slotDialogClosed being called
         dlg->hide();
 
         QPushButton *button = dlg->findChild<QPushButton *>(m_buttonName);

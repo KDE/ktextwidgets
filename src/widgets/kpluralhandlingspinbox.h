@@ -46,7 +46,6 @@ private:
     std::unique_ptr<class KPluralHandlingSpinBoxPrivate> const d;
 
     Q_DISABLE_COPY(KPluralHandlingSpinBox)
-    Q_PRIVATE_SLOT(d, void updateSuffix(int))
 };
 
 #endif // KPLURALHANDLINGSPINBOX_H

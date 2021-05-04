@@ -226,14 +226,6 @@ private:
     Q_DECLARE_PRIVATE_D(d, KFindDialog)
     std::unique_ptr<class KFindDialogPrivate> const d;
     // KF6 TODO: change private d to protected d_ptr, use normal Q_DECLARE_PRIVATE, remove friend
-
-    Q_PRIVATE_SLOT(d_func(), void _k_slotPlaceholdersAboutToShow())
-    Q_PRIVATE_SLOT(d_func(), void _k_slotOk())
-    Q_PRIVATE_SLOT(d_func(), void _k_slotReject())
-    Q_PRIVATE_SLOT(d_func(), void _k_slotSelectedTextToggled(bool))
-    Q_PRIVATE_SLOT(d_func(), void _k_showPatterns())
-    Q_PRIVATE_SLOT(d_func(), void _k_showPlaceholders())
-    Q_PRIVATE_SLOT(d_func(), void _k_textSearchChanged(const QString &))
 };
 
 #endif // KFINDDIALOG_H

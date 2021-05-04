@@ -12,7 +12,9 @@ public:
     KPluralHandlingSpinBoxPrivate(QSpinBox *q)
         : q(q)
     {
-        QObject::connect(q, SIGNAL(valueChanged(int)), q, SLOT(updateSuffix(int)));
+        QObject::connect(q, QOverload<int>::of(&QSpinBox::valueChanged), q, [this](int value) {
+            updateSuffix(value);
+        });
     }
 
     void updateSuffix(int value)

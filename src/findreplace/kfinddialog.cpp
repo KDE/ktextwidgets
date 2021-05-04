@@ -118,7 +118,7 @@ void KFindDialogPrivate::init(bool forReplace, const QStringList &_findStrings, 
     // If we have a selection, we make 'find in selection' default
     // and if we don't, then the option has to be unchecked, obviously.
     selectedText->setChecked(hasSelection);
-    _k_slotSelectedTextToggled(hasSelection);
+    slotSelectedTextToggled(hasSelection);
 
     promptOnReplace = new QCheckBox(i18n("&Prompt on replace"), optionGrp);
     promptOnReplace->setChecked(true);
@@ -133,8 +133,12 @@ void KFindDialogPrivate::init(bool forReplace, const QStringList &_findStrings, 
 
     buttonBox = new QDialogButtonBox(q);
     buttonBox->setStandardButtons(QDialogButtonBox::Ok | QDialogButtonBox::Close);
-    q->connect(buttonBox, SIGNAL(accepted()), q, SLOT(_k_slotOk()));
-    q->connect(buttonBox, SIGNAL(rejected()), q, SLOT(_k_slotReject()));
+    q->connect(buttonBox, &QDialogButtonBox::accepted, q, [this]() {
+        slotOk();
+    });
+    q->connect(buttonBox, &QDialogButtonBox::rejected, q, [this]() {
+        slotReject();
+    });
     topLayout->addWidget(buttonBox);
 
     // We delay creation of these until needed.
@@ -142,22 +146,30 @@ void KFindDialogPrivate::init(bool forReplace, const QStringList &_findStrings, 
     placeholders = nullptr;
 
     // signals and slots connections
-    q->connect(selectedText, SIGNAL(toggled(bool)), q, SLOT(_k_slotSelectedTextToggled(bool)));
-    q->connect(regExp, &QAbstractButton::toggled, regExpItem, &QWidget::setEnabled);
-    q->connect(backRef, &QAbstractButton::toggled, backRefItem, &QWidget::setEnabled);
-    q->connect(regExpItem, SIGNAL(clicked()), q, SLOT(_k_showPatterns()));
-    q->connect(backRefItem, SIGNAL(clicked()), q, SLOT(_k_showPlaceholders()));
+    q->connect(selectedText, &QCheckBox::toggled, q, [this](bool checked) {
+        slotSelectedTextToggled(checked);
+    });
+    q->connect(regExp, &QCheckBox::toggled, regExpItem, &QWidget::setEnabled);
+    q->connect(backRef, &QCheckBox::toggled, backRefItem, &QWidget::setEnabled);
+    q->connect(regExpItem, &QPushButton::clicked, q, [this]() {
+        showPatterns();
+    });
+    q->connect(backRefItem, &QPushButton::clicked, q, [this]() {
+        showPlaceholders();
+    });
 
-    q->connect(find, SIGNAL(editTextChanged(QString)), q, SLOT(_k_textSearchChanged(QString)));
+    q->connect(find, &KHistoryComboBox::editTextChanged, q, [this](const QString &text) {
+        textSearchChanged(text);
+    });
 
-    q->connect(regExp, &QAbstractButton::toggled, q, &KFindDialog::optionsChanged);
-    q->connect(backRef, &QAbstractButton::toggled, q, &KFindDialog::optionsChanged);
-    q->connect(caseSensitive, &QAbstractButton::toggled, q, &KFindDialog::optionsChanged);
-    q->connect(wholeWordsOnly, &QAbstractButton::toggled, q, &KFindDialog::optionsChanged);
-    q->connect(fromCursor, &QAbstractButton::toggled, q, &KFindDialog::optionsChanged);
-    q->connect(findBackwards, &QAbstractButton::toggled, q, &KFindDialog::optionsChanged);
-    q->connect(selectedText, &QAbstractButton::toggled, q, &KFindDialog::optionsChanged);
-    q->connect(promptOnReplace, &QAbstractButton::toggled, q, &KFindDialog::optionsChanged);
+    q->connect(regExp, &QCheckBox::toggled, q, &KFindDialog::optionsChanged);
+    q->connect(backRef, &QCheckBox::toggled, q, &KFindDialog::optionsChanged);
+    q->connect(caseSensitive, &QCheckBox::toggled, q, &KFindDialog::optionsChanged);
+    q->connect(wholeWordsOnly, &QCheckBox::toggled, q, &KFindDialog::optionsChanged);
+    q->connect(fromCursor, &QCheckBox::toggled, q, &KFindDialog::optionsChanged);
+    q->connect(findBackwards, &QCheckBox::toggled, q, &KFindDialog::optionsChanged);
+    q->connect(selectedText, &QCheckBox::toggled, q, &KFindDialog::optionsChanged);
+    q->connect(promptOnReplace, &QCheckBox::toggled, q, &KFindDialog::optionsChanged);
 
     // tab order
     q->setTabOrder(find, regExp);
@@ -223,10 +235,10 @@ void KFindDialogPrivate::init(bool forReplace, const QStringList &_findStrings, 
     findBackwards->setWhatsThis(i18n("Search backwards."));
     promptOnReplace->setWhatsThis(i18n("Ask before replacing each match found."));
 
-    _k_textSearchChanged(find->lineEdit()->text());
+    textSearchChanged(find->lineEdit()->text());
 }
 
-void KFindDialogPrivate::_k_textSearchChanged(const QString &text)
+void KFindDialogPrivate::textSearchChanged(const QString &text)
 {
     buttonBox->button(QDialogButtonBox::Ok)->setEnabled(!text.isEmpty());
 }
@@ -331,11 +343,11 @@ void KFindDialog::setHasSelection(bool hasSelection)
     d->selectedText->setEnabled(hasSelection);
     if (!hasSelection) {
         d->selectedText->setChecked(false);
-        d->_k_slotSelectedTextToggled(hasSelection);
+        d->slotSelectedTextToggled(hasSelection);
     }
 }
 
-void KFindDialogPrivate::_k_slotSelectedTextToggled(bool selec)
+void KFindDialogPrivate::slotSelectedTextToggled(bool selec)
 {
     // From cursor doesn't make sense if we have a selection
     fromCursor->setEnabled(!selec && (enabled & KFind::FromCursor));
@@ -433,7 +445,7 @@ void KFindDialog::setOptions(long options)
 
 // Create a popup menu with a list of regular expression terms, to help the user
 // compose a regular expression search pattern.
-void KFindDialogPrivate::_k_showPatterns()
+void KFindDialogPrivate::showPatterns()
 {
     Q_Q(KFindDialog);
 
@@ -535,14 +547,16 @@ private:
 
 // Create a popup menu with a list of backreference terms, to help the user
 // compose a regular expression replacement pattern.
-void KFindDialogPrivate::_k_showPlaceholders()
+void KFindDialogPrivate::showPlaceholders()
 {
     Q_Q(KFindDialog);
 
     // Populate the popup menu.
     if (!placeholders) {
         placeholders = new QMenu(q);
-        q->connect(placeholders, SIGNAL(aboutToShow()), q, SLOT(_k_slotPlaceholdersAboutToShow()));
+        q->connect(placeholders, &QMenu::aboutToShow, q, [this]() {
+            slotPlaceholdersAboutToShow();
+        });
     }
 
     // Insert the selection into the edit control.
@@ -556,7 +570,7 @@ void KFindDialogPrivate::_k_showPlaceholders()
     }
 }
 
-void KFindDialogPrivate::_k_slotPlaceholdersAboutToShow()
+void KFindDialogPrivate::slotPlaceholdersAboutToShow()
 {
     Q_Q(KFindDialog);
 
@@ -569,7 +583,7 @@ void KFindDialogPrivate::_k_slotPlaceholdersAboutToShow()
     }
 }
 
-void KFindDialogPrivate::_k_slotOk()
+void KFindDialogPrivate::slotOk()
 {
     Q_Q(KFindDialog);
 
@@ -595,7 +609,7 @@ void KFindDialogPrivate::_k_slotOk()
     Q_EMIT q->okClicked();
 }
 
-void KFindDialogPrivate::_k_slotReject()
+void KFindDialogPrivate::slotReject()
 {
     Q_Q(KFindDialog);
 

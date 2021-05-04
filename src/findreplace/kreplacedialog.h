@@ -131,8 +131,6 @@ private:
     // Unused, kept for ABI compatibility
     const void *__ktextwidgets_d_do_not_use;
 #endif
-
-    Q_PRIVATE_SLOT(d_func(), void _k_slotOk())
 };
 
 #endif // KREPLACEDIALOG_H

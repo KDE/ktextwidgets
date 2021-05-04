@@ -123,13 +123,13 @@ public:
     /**
      * @brief Update actions relating to text format (bold, size etc.).
      */
-    void _k_updateCharFormatActions(const QTextCharFormat &format);
+    void updateCharFormatActions(const QTextCharFormat &format);
 
     /**
      * Update actions not covered by text formatting, such as alignment,
      * list style and level.
      */
-    void _k_updateMiscActions();
+    void updateMiscActions();
 
     /**
      * Change the style of the current list or create a new list with the style given by @a index.
@@ -196,7 +196,7 @@ QList<QAction *> KRichTextWidget::createActions()
     // - the action needs to be added to the private class as a member
     // - the constructor of the private class
     // - depending on the action, some slot that changes the toggle state when
-    //   appropriate, such as _k_updateCharFormatActions or _k_updateMiscActions.
+    //   appropriate, such as updateCharFormatActions or updateMiscActions.
 
     // The list of actions currently supported is also stored internally.
     // This is used to disable all actions at once in setActionsEnabled.
@@ -386,7 +386,9 @@ QList<QAction *> KRichTextWidget::createActions()
             Q_D(KRichTextWidget);
             d->_k_setListStyle(style);
         });
-        connect(d->action_list_style, SIGNAL(triggered()), this, SLOT(_k_updateMiscActions()));
+        connect(d->action_list_style, &QAction::triggered, this, [d]() {
+            d->updateMiscActions();
+        });
     } else {
         d->action_list_style = nullptr;
     }
@@ -396,7 +398,9 @@ QList<QAction *> KRichTextWidget::createActions()
         d->richTextActionList.append((d->action_list_indent));
         d->action_list_indent->setObjectName(QStringLiteral("format_list_indent_more"));
         connect(d->action_list_indent, &QAction::triggered, this, &KRichTextEdit::indentListMore);
-        connect(d->action_list_indent, SIGNAL(triggered()), this, SLOT(_k_updateMiscActions()));
+        connect(d->action_list_indent, &QAction::triggered, this, [d]() {
+            d->updateMiscActions();
+        });
     } else {
         d->action_list_indent = nullptr;
     }
@@ -406,7 +410,9 @@ QList<QAction *> KRichTextWidget::createActions()
         d->richTextActionList.append((d->action_list_dedent));
         d->action_list_dedent->setObjectName(QStringLiteral("format_list_indent_less"));
         connect(d->action_list_dedent, &QAction::triggered, this, &KRichTextEdit::indentListLess);
-        connect(d->action_list_dedent, SIGNAL(triggered()), this, SLOT(_k_updateMiscActions()));
+        connect(d->action_list_dedent, &QAction::triggered, this, [d]() {
+            d->updateMiscActions();
+        });
     } else {
         d->action_list_dedent = nullptr;
     }
@@ -492,13 +498,17 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_heading_level = nullptr;
     }
 
-    disconnect(this, SIGNAL(currentCharFormatChanged(QTextCharFormat)), this, SLOT(_k_updateCharFormatActions(QTextCharFormat)));
-    disconnect(this, SIGNAL(cursorPositionChanged()), this, SLOT(_k_updateMiscActions()));
-    connect(this, SIGNAL(currentCharFormatChanged(QTextCharFormat)), this, SLOT(_k_updateCharFormatActions(QTextCharFormat)));
-    connect(this, SIGNAL(cursorPositionChanged()), this, SLOT(_k_updateMiscActions()));
+    disconnect(this, &QTextEdit::currentCharFormatChanged, this, nullptr);
+    disconnect(this, &QTextEdit::cursorPositionChanged, this, nullptr);
+    connect(this, &QTextEdit::currentCharFormatChanged, this, [d](const QTextCharFormat &format) {
+        d->updateCharFormatActions(format);
+    });
+    connect(this, &QTextEdit::cursorPositionChanged, this, [d]() {
+        d->updateMiscActions();
+    });
 
-    d->_k_updateMiscActions();
-    d->_k_updateCharFormatActions(currentCharFormat());
+    d->updateMiscActions();
+    d->updateCharFormatActions(currentCharFormat());
 
     return d->richTextActionList;
 }
@@ -518,7 +528,7 @@ void KRichTextWidgetPrivate::_k_setListStyle(int index)
     Q_Q(KRichTextWidget);
 
     q->setListStyle(index);
-    _k_updateMiscActions();
+    updateMiscActions();
 }
 
 void KRichTextWidgetPrivate::_k_setHeadingLevel(int level)
@@ -526,10 +536,10 @@ void KRichTextWidgetPrivate::_k_setHeadingLevel(int level)
     Q_Q(KRichTextWidget);
 
     q->setHeadingLevel(level);
-    _k_updateMiscActions();
+    updateMiscActions();
 }
 
-void KRichTextWidgetPrivate::_k_updateCharFormatActions(const QTextCharFormat &format)
+void KRichTextWidgetPrivate::updateCharFormatActions(const QTextCharFormat &format)
 {
     Q_Q(KRichTextWidget);
 
@@ -567,7 +577,7 @@ void KRichTextWidgetPrivate::_k_updateCharFormatActions(const QTextCharFormat &f
     }
 }
 
-void KRichTextWidgetPrivate::_k_updateMiscActions()
+void KRichTextWidgetPrivate::updateMiscActions()
 {
     Q_Q(KRichTextWidget);
 
@@ -707,8 +717,8 @@ void KRichTextWidget::updateActionStates()
 {
     Q_D(KRichTextWidget);
 
-    d->_k_updateMiscActions();
-    d->_k_updateCharFormatActions(currentCharFormat());
+    d->updateMiscActions();
+    d->updateCharFormatActions(currentCharFormat());
 }
 
 #include "moc_krichtextwidget.cpp"

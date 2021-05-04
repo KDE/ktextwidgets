@@ -91,8 +91,8 @@ public:
     void init(const QString &pattern);
     void startNewIncrementalSearch();
 
-    void _k_slotFindNext();
-    void _k_slotDialogClosed();
+    void slotFindNext();
+    void slotDialogClosed();
 
     KFind *const q_ptr;
     QPointer<QWidget> findDialog;

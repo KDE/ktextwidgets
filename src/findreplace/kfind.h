@@ -448,9 +448,6 @@ private:
     Q_DECLARE_PRIVATE_D(d, KFind)
     std::unique_ptr<class KFindPrivate> const d;
     // KF6 TODO: change private d to protected d_ptr, use normal Q_DECLARE_PRIVATE, remove friend
-
-    Q_PRIVATE_SLOT(d_func(), void _k_slotFindNext())
-    Q_PRIVATE_SLOT(d_func(), void _k_slotDialogClosed())
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(KFind::SearchOptions)

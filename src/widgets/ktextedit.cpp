@@ -58,20 +58,27 @@ void KTextEditPrivate::checkSpelling(bool force)
     backgroundSpellCheck->setParent(spellDialog);
     spellDialog->setAttribute(Qt::WA_DeleteOnClose, true);
     spellDialog->activeAutoCorrect(showAutoCorrectionButton);
-    QObject::connect(spellDialog, SIGNAL(replace(QString, int, QString)), q, SLOT(spellCheckerCorrected(QString, int, QString)));
-    QObject::connect(spellDialog, SIGNAL(misspelling(QString, int)), q, SLOT(spellCheckerMisspelling(QString, int)));
+    QObject::connect(spellDialog, &Sonnet::Dialog::replace, q, [this](const QString &oldWord, int pos, const QString &newWord) {
+        spellCheckerCorrected(oldWord, pos, newWord);
+    });
+    QObject::connect(spellDialog, &Sonnet::Dialog::misspelling, q, [this](const QString &text, int pos) {
+        spellCheckerMisspelling(text, pos);
+    });
     QObject::connect(spellDialog, &Sonnet::Dialog::autoCorrect, q, &KTextEdit::spellCheckerAutoCorrect);
-    QObject::connect(spellDialog, SIGNAL(done(QString)), q, SLOT(spellCheckerFinished()));
-    QObject::connect(spellDialog, SIGNAL(cancel()), q, SLOT(spellCheckerCanceled()));
+    QObject::connect(spellDialog, &Sonnet::Dialog::spellCheckDone, q, [this]() {
+        spellCheckerFinished();
+    });
+    QObject::connect(spellDialog, &Sonnet::Dialog::cancel, q, [this]() {
+        spellCheckerCanceled();
+    });
+
     // Laurent in sonnet/dialog.cpp we emit done(QString) too => it calls here twice spellCheckerFinished not necessary
-    /*
-    connect(spellDialog, SIGNAL(stop()),
-            q, SLOT(spellCheckerFinished()));
-    */
+    // connect(spellDialog, SIGNAL(stop()), q, SLOT(spellCheckerFinished()));
+
     QObject::connect(spellDialog, &Sonnet::Dialog::spellCheckStatus, q, &KTextEdit::spellCheckStatus);
     QObject::connect(spellDialog, &Sonnet::Dialog::languageChanged, q, &KTextEdit::languageChanged);
     if (force) {
-        QObject::connect(spellDialog, SIGNAL(done(QString)), q, SIGNAL(spellCheckingFinished()));
+        QObject::connect(spellDialog, &Sonnet::Dialog::spellCheckDone, q, &KTextEdit::spellCheckingFinished);
         QObject::connect(spellDialog, &Sonnet::Dialog::cancel, q, &KTextEdit::spellCheckingCanceled);
         // Laurent in sonnet/dialog.cpp we emit done(QString) too => it calls here twice spellCheckerFinished not necessary
         // connect(spellDialog, SIGNAL(stop()), q, SIGNAL(spellCheckingFinished()));
@@ -452,7 +459,9 @@ QMenu *KTextEdit::mousePopupMenu()
     if (!popup) {
         return nullptr;
     }
-    connect(popup, SIGNAL(triggered(QAction *)), this, SLOT(menuActivated(QAction *)));
+    connect(popup, &QMenu::triggered, this, [d](QAction *action) {
+        d->menuActivated(action);
+    });
 
     const bool emptyDocument = document()->isEmpty();
     if (!isReadOnly()) {
@@ -463,8 +472,13 @@ QMenu *KTextEdit::mousePopupMenu()
         if (idx < actionList.count()) {
             separatorAction = actionList.at(idx);
         }
+
+        auto undoableClearSlot = [d]() {
+            d->undoableClear();
+        };
+
         if (separatorAction) {
-            QAction *clearAllAction = KStandardAction::clear(this, SLOT(undoableClear()), popup);
+            QAction *clearAllAction = KStandardAction::clear(this, undoableClearSlot, popup);
             if (emptyDocument) {
                 clearAllAction->setEnabled(false);
             }
@@ -517,9 +531,9 @@ QMenu *KTextEdit::mousePopupMenu()
     }
 
     if (d->findReplaceEnabled) {
-        QAction *findAction = KStandardAction::find(this, SLOT(slotFind()), popup);
-        QAction *findNextAction = KStandardAction::findNext(this, SLOT(slotFindNext()), popup);
-        QAction *findPrevAction = KStandardAction::findPrev(this, SLOT(slotFindPrevious()), popup);
+        QAction *findAction = KStandardAction::find(this, &KTextEdit::slotFind, popup);
+        QAction *findNextAction = KStandardAction::findNext(this, &KTextEdit::slotFindNext, popup);
+        QAction *findPrevAction = KStandardAction::findPrev(this, &KTextEdit::slotFindPrevious, popup);
         if (emptyDocument) {
             findAction->setEnabled(false);
             findNextAction->setEnabled(false);
@@ -534,7 +548,7 @@ QMenu *KTextEdit::mousePopupMenu()
         popup->addAction(findPrevAction);
 
         if (!isReadOnly()) {
-            QAction *replaceAction = KStandardAction::replace(this, SLOT(slotReplace()), popup);
+            QAction *replaceAction = KStandardAction::replace(this, &KTextEdit::slotReplace, popup);
             if (emptyDocument) {
                 replaceAction->setEnabled(false);
             }
@@ -779,7 +793,12 @@ void KTextEdit::slotDoReplace()
     connect(d->replace, &KFind::findNext, this, &KTextEdit::slotReplaceNext);
 
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
-    connect(d->replace, SIGNAL(replace(QString, int, int, int)), this, SLOT(slotReplaceText(QString, int, int, int)));
+    connect(d->replace,
+            QOverload<const QString &, int, int, int>::of(&KReplace::replace),
+            this,
+            [d](const QString &text, int replacementIndex, int replacedLength, int matchedLength) {
+                d->slotReplaceText(text, replacementIndex, replacedLength, matchedLength);
+            });
 #else
     connect(d->replace, &KReplace::textReplaced, this, [d](const QString &text, int replacementIndex, int replacedLength, int matchedLength) {
         d->slotReplaceText(text, replacementIndex, replacedLength, matchedLength);

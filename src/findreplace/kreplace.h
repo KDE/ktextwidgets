@@ -245,9 +245,5 @@ private:
     // Unused, kept for ABI compatibility
     const void *__ktextwidgets_d_do_not_use;
 #endif
-
-    Q_PRIVATE_SLOT(d_func(), void _k_slotSkip())
-    Q_PRIVATE_SLOT(d_func(), void _k_slotReplace())
-    Q_PRIVATE_SLOT(d_func(), void _k_slotReplaceAll())
 };
 #endif

@@ -111,9 +111,9 @@ public:
     KReplaceNextDialog *nextDialog();
     void doReplace();
 
-    void _k_slotSkip();
-    void _k_slotReplace();
-    void _k_slotReplaceAll();
+    void slotSkip();
+    void slotReplace();
+    void slotReplaceAll();
 
     QString m_replacement;
     int m_replacements = 0;
@@ -157,10 +157,18 @@ KReplaceNextDialog *KReplacePrivate::nextDialog()
 
     if (!dialog) {
         auto *nextDialog = new KReplaceNextDialog(q->parentWidget());
-        q->connect(nextDialog->replaceAllButton(), SIGNAL(clicked()), q, SLOT(_k_slotReplaceAll()));
-        q->connect(nextDialog->skipButton(), SIGNAL(clicked()), q, SLOT(_k_slotSkip()));
-        q->connect(nextDialog->replaceButton(), SIGNAL(clicked()), q, SLOT(_k_slotReplace()));
-        q->connect(nextDialog, SIGNAL(finished(int)), q, SLOT(_k_slotDialogClosed()));
+        q->connect(nextDialog->replaceAllButton(), &QPushButton::clicked, q, [this]() {
+            slotReplaceAll();
+        });
+        q->connect(nextDialog->skipButton(), &QPushButton::clicked, q, [this]() {
+            slotSkip();
+        });
+        q->connect(nextDialog->replaceButton(), &QPushButton::clicked, q, [this]() {
+            slotReplace();
+        });
+        q->connect(nextDialog, &QDialog::finished, q, [this]() {
+            slotDialogClosed();
+        });
         dialog = nextDialog;
     }
     return static_cast<KReplaceNextDialog *>(dialog);
@@ -322,7 +330,7 @@ int KReplace::replace(QString &text, const QRegExp &pattern, const QString &repl
 }
 #endif
 
-void KReplacePrivate::_k_slotReplaceAll()
+void KReplacePrivate::slotReplaceAll()
 {
     Q_Q(KReplace);
 
@@ -332,7 +340,7 @@ void KReplacePrivate::_k_slotReplaceAll()
     Q_EMIT q->findNext();
 }
 
-void KReplacePrivate::_k_slotSkip()
+void KReplacePrivate::slotSkip()
 {
     Q_Q(KReplace);
 
@@ -349,7 +357,7 @@ void KReplacePrivate::_k_slotSkip()
     }
 }
 
-void KReplacePrivate::_k_slotReplace()
+void KReplacePrivate::slotReplace()
 {
     Q_Q(KReplace);
 

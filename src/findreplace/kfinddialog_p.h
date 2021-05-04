@@ -41,13 +41,13 @@ public:
 
     void init(bool forReplace, const QStringList &findStrings, bool hasSelection);
 
-    void _k_slotPlaceholdersAboutToShow();
-    void _k_slotOk();
-    void _k_slotReject();
-    void _k_slotSelectedTextToggled(bool);
-    void _k_showPatterns();
-    void _k_showPlaceholders();
-    void _k_textSearchChanged(const QString &);
+    void slotPlaceholdersAboutToShow();
+    void slotOk();
+    void slotReject();
+    void slotSelectedTextToggled(bool);
+    void showPatterns();
+    void showPlaceholders();
+    void textSearchChanged(const QString &);
 
     KFindDialog *const q_ptr = nullptr;
     QDialog *regexpDialog = nullptr;

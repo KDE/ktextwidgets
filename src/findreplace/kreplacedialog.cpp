@@ -34,7 +34,7 @@ public:
     {
     }
 
-    void _k_slotOk();
+    void slotOk();
 
     QStringList replaceStrings;
     mutable QWidget *replaceExtension = nullptr;
@@ -134,7 +134,7 @@ void KReplaceDialog::setReplacementHistory(const QStringList &strings)
     }
 }
 
-void KReplaceDialogPrivate::_k_slotOk()
+void KReplaceDialogPrivate::slotOk()
 {
     Q_Q(KReplaceDialog);
 
@@ -159,7 +159,7 @@ void KReplaceDialogPrivate::_k_slotOk()
         }
     }
 
-    _k_slotOk();
+    slotOk();
     replace->addToHistory(q->replacement());
 }
 
