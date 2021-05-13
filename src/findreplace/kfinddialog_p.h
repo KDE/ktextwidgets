@@ -38,6 +38,7 @@ public:
         , buttonBox(nullptr)
     {
     }
+    virtual ~KFindDialogPrivate() = default;
 
     void init(bool forReplace, const QStringList &findStrings, bool hasSelection);
 
