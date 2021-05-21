@@ -1,4 +1,7 @@
-set(ktextwidgets_LIB_SRCS
+add_library(KF5TextWidgets)
+add_library(KF5::TextWidgets ALIAS KF5TextWidgets)
+
+target_sources(KF5TextWidgets PRIVATE
   dialogs/klinkdialog.cpp
   findreplace/kfind.cpp
   findreplace/kfinddialog.cpp
@@ -11,8 +14,6 @@ set(ktextwidgets_LIB_SRCS
   widgets/kpluralhandlingspinbox.cpp
 )
 
-add_library(KF5TextWidgets ${ktextwidgets_LIB_SRCS})
-add_library(KF5::TextWidgets ALIAS KF5TextWidgets)
 ecm_generate_export_header(KF5TextWidgets
     BASE_NAME KTextWidgets
     GROUP_BASE_NAME KF
