@@ -224,7 +224,7 @@ public:
      * Virtual method, which allows applications to add extra checks for
      * validating a candidate match. It's only necessary to reimplement this
      * if the find dialog extension has been used to provide additional
-     * criterias.
+     * criteria.
      *
      * @param text  The current text fragment
      * @param index The starting index where the candidate match was found

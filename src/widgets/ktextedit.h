@@ -145,7 +145,7 @@ public:
     Sonnet::Highlighter *highlighter() const;
 
     /**
-     * Sets a custom backgound spell highlighter for this text edit.
+     * Sets a custom background spell highlighter for this text edit.
      * Normally, the highlighter returned by createHighlighter() will be
      * used to detect and highlight incorrectly spelled words, but this
      * function allows to set a custom highlighter.

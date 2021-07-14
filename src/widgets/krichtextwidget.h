@@ -114,7 +114,7 @@ public:
 
         /**
          * Action to change the background color of the currently selected text. If no
-         * text is selected, the backgound color of the word under the cursor is
+         * text is selected, the background color of the word under the cursor is
          * changed.
          * Opens a QColorDialog to select the color.
          */
@@ -269,7 +269,7 @@ public:
      * Those names need to be the same in your XML file.
      *
      * See the KRichTextWidget::RichTextSupportValues enum documentation for a
-     * detailed explaination of each action.
+     * detailed explanation of each action.
      *
      * <table>
      * <tr><td><b>XML Name</b></td><td><b>RichTextSupportValues flag</b></td></tr>

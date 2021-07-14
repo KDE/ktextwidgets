@@ -21,7 +21,7 @@
 
 /**
  * we need to insert the strings after the dialog is set
- * up, otherwise QComboBox will deliver an aweful big sizeHint
+ * up, otherwise QComboBox will deliver an awful big sizeHint
  * for long replacement texts.
  */
 class KReplaceDialogPrivate : public KFindDialogPrivate

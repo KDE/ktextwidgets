@@ -646,7 +646,7 @@ void KTextEdit::setCheckSpellingEnabled(bool check)
         return;
     }
 
-    // From the above statment we know know that if we're turning checking
+    // From the above statement we now know that if we're turning checking
     // on that we need to create a new highlighter and if we're turning it
     // off we should remove the old one.
 

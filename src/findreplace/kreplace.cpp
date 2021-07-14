@@ -399,7 +399,7 @@ void KReplacePrivate::doReplace()
         }
     }
 #ifdef DEBUG_REPLACE
-    // qDebug() << "after adjustement: d->index=" << d->index;
+    // qDebug() << "after adjustment: d->index=" << d->index;
 #endif
 }
 
