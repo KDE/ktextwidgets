@@ -517,7 +517,7 @@ void KRichTextWidget::setActionsEnabled(bool enabled)
 {
     Q_D(KRichTextWidget);
 
-    for (QAction *action : qAsConst(d->richTextActionList)) {
+    for (QAction *action : std::as_const(d->richTextActionList)) {
         action->setEnabled(enabled);
     }
     d->richTextEnabled = enabled;
