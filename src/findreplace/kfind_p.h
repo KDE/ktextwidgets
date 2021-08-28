@@ -23,8 +23,8 @@ class KFindPrivate
     Q_DECLARE_PUBLIC(KFind)
 
 public:
-    KFindPrivate(KFind *q)
-        : q_ptr(q)
+    KFindPrivate(KFind *qq)
+        : q_ptr(qq)
         , findDialog(nullptr)
         , currentId(0)
         , customIds(false)

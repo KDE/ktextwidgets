@@ -29,8 +29,8 @@ class KReplaceDialogPrivate : public KFindDialogPrivate
     Q_DECLARE_PUBLIC(KReplaceDialog)
 
 public:
-    explicit KReplaceDialogPrivate(KReplaceDialog *q)
-        : KFindDialogPrivate(q)
+    explicit KReplaceDialogPrivate(KReplaceDialog *qq)
+        : KFindDialogPrivate(qq)
     {
     }
 

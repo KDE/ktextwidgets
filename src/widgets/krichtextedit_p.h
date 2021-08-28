@@ -18,9 +18,9 @@ class KRichTextEditPrivate : public KTextEditPrivate
     Q_DECLARE_PUBLIC(KRichTextEdit)
 
 public:
-    explicit KRichTextEditPrivate(KRichTextEdit *q)
-        : KTextEditPrivate(q)
-        , nestedListHelper(new NestedListHelper(q))
+    explicit KRichTextEditPrivate(KRichTextEdit *qq)
+        : KTextEditPrivate(qq)
+        , nestedListHelper(new NestedListHelper(qq))
     {
     }
 

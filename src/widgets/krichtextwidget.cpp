@@ -37,8 +37,8 @@ class KRichTextWidgetPrivate : public KRichTextEditPrivate
     Q_DECLARE_PUBLIC(KRichTextWidget)
 
 public:
-    KRichTextWidgetPrivate(KRichTextWidget *q)
-        : KRichTextEditPrivate(q)
+    KRichTextWidgetPrivate(KRichTextWidget *qq)
+        : KRichTextEditPrivate(qq)
     {
     }
 

@@ -29,8 +29,8 @@ class KTextEditPrivate
     Q_DECLARE_PUBLIC(KTextEdit)
 
 public:
-    explicit KTextEditPrivate(KTextEdit *q)
-        : q_ptr(q)
+    explicit KTextEditPrivate(KTextEdit *qq)
+        : q_ptr(qq)
         , customPalette(false)
         , spellCheckingEnabled(false)
         , findReplaceEnabled(true)

@@ -9,8 +9,8 @@
 class KPluralHandlingSpinBoxPrivate
 {
 public:
-    KPluralHandlingSpinBoxPrivate(QSpinBox *q)
-        : q(q)
+    KPluralHandlingSpinBoxPrivate(QSpinBox *qq)
+        : q(qq)
     {
         QObject::connect(q, QOverload<int>::of(&QSpinBox::valueChanged), q, [this](int value) {
             updateSuffix(value);

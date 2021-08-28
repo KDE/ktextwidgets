@@ -28,8 +28,8 @@ class KFindDialogPrivate
     Q_DECLARE_PUBLIC(KFindDialog)
 
 public:
-    KFindDialogPrivate(KFindDialog *q)
-        : q_ptr(q)
+    KFindDialogPrivate(KFindDialog *qq)
+        : q_ptr(qq)
         , regexpDialog(nullptr)
         , regexpDialogQueryDone(false)
         , initialShowDone(false)
