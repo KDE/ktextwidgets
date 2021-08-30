@@ -794,7 +794,7 @@ void KTextEdit::slotDoReplace()
 
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
     connect(d->replace,
-            QOverload<const QString &, int, int, int>::of(&KReplace::replace),
+            qOverload<const QString &, int, int, int>(&KReplace::replace),
             this,
             [d](const QString &text, int replacementIndex, int replacedLength, int matchedLength) {
                 d->slotReplaceText(text, replacementIndex, replacedLength, matchedLength);

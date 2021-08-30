@@ -45,7 +45,7 @@ void KReplaceTest::replace(const QString &pattern, const QString &replacement, l
 
     // Connect highlight (or textFound) signal to code which handles highlighting of found text.
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
-    connect(m_replace.get(), QOverload<const QString &, int, int>::of(&KFind::highlight), this, &KReplaceTest::slotHighlight);
+    connect(m_replace.get(), qOverload<const QString &, int, int>(&KFind::highlight), this, &KReplaceTest::slotHighlight);
 #else
     connect(m_replace.get(), &KFind::textFound, this, &KReplaceTest::slotHighlight);
 #endif
@@ -55,7 +55,7 @@ void KReplaceTest::replace(const QString &pattern, const QString &replacement, l
 
     // Connect replace signal - called when doing a replacement
 #if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 83)
-    connect(m_replace.get(), QOverload<const QString &, int, int, int>::of(&KReplace::replace), this, &KReplaceTest::slotReplace);
+    connect(m_replace.get(), qOverload<const QString &, int, int, int>(&KReplace::replace), this, &KReplaceTest::slotReplace);
 #else
     connect(m_replace.get(), &KReplace::textReplaced, this, &KReplaceTest::slotReplace);
 #endif

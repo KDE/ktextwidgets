@@ -43,12 +43,9 @@ void KFindRecorder::find(const QString &pattern, long options)
     m_find->closeFindNextDialog();
 
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
-    connect(m_find.get(),
-            QOverload<const QString &, int, int>::of(&KFind::highlight),
-            this,
-            QOverload<const QString &, int, int>::of(&KFindRecorder::slotHighlight));
+    connect(m_find.get(), qOverload<const QString &, int, int>(&KFind::highlight), this, qOverload<const QString &, int, int>(&KFindRecorder::slotHighlight));
 
-    connect(m_find.get(), QOverload<int, int, int>::of(&KFind::highlight), this, QOverload<int, int, int>::of(&KFindRecorder::slotHighlight));
+    connect(m_find.get(), qOverload<int, int, int>(&KFind::highlight), this, qOverload<int, int, int>(&KFindRecorder::slotHighlight));
 #else
     connect(m_find.get(), &KFind::textFound, this, [this](const QString &text, int matchingIndex, int matchedLength) {
         slotHighlight(text, matchingIndex, matchedLength);
