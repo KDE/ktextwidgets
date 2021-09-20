@@ -346,12 +346,14 @@ bool KTextEditPrivate::handleShortcut(const QKeyEvent *event)
         return true;
     } else if (KStandardShortcut::backwardWord().contains(key)) {
         QTextCursor cursor = q->textCursor();
-        cursor.movePosition(QTextCursor::PreviousWord);
+        // We use visual positioning here since keyboard arrows represents visual direction (left, right)
+        cursor.movePosition(QTextCursor::WordLeft);
         q->setTextCursor(cursor);
         return true;
     } else if (KStandardShortcut::forwardWord().contains(key)) {
         QTextCursor cursor = q->textCursor();
-        cursor.movePosition(QTextCursor::NextWord);
+        // We use visual positioning here since keyboard arrows represents visual direction (left, right)
+        cursor.movePosition(QTextCursor::WordRight);
         q->setTextCursor(cursor);
         return true;
     } else if (KStandardShortcut::next().contains(key)) {
@@ -443,12 +445,16 @@ static void deleteWord(QTextCursor cursor, QTextCursor::MoveOperation op)
 
 void KTextEdit::deleteWordBack()
 {
+    // We use logical positioning here since deleting should always delete the previous word
+    // (left in case of LTR text, right in case of RTL text)
     deleteWord(textCursor(), QTextCursor::PreviousWord);
 }
 
 void KTextEdit::deleteWordForward()
 {
-    deleteWord(textCursor(), QTextCursor::WordRight);
+    // We use logical positioning here since deleting should always delete the previous word
+    // (left in case of LTR text, right in case of RTL text)
+    deleteWord(textCursor(), QTextCursor::NextWord);
 }
 
 QMenu *KTextEdit::mousePopupMenu()
