@@ -75,7 +75,7 @@ public:
     /**
      * Destructor.
      */
-    virtual ~KReplaceDialog();
+    ~KReplaceDialog() override;
 
     /**
      * Provide the list of @p strings to be displayed as the history

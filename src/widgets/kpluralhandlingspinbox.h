@@ -33,7 +33,7 @@ public:
      */
 
     explicit KPluralHandlingSpinBox(QWidget *parent = nullptr);
-    ~KPluralHandlingSpinBox();
+    ~KPluralHandlingSpinBox() override;
 
     /**
      * Sets the suffix to @p suffix.

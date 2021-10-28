@@ -21,7 +21,7 @@ class KFindRecorder : public QObject
 public:
     explicit KFindRecorder(const QStringList &text);
 
-    ~KFindRecorder();
+    ~KFindRecorder() override;
     void find(const QString &pattern, long options = 0);
     bool findNext(const QString &pattern = QString());
 

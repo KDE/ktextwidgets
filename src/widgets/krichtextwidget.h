@@ -253,7 +253,7 @@ public:
     /**
      * @brief Destructor
      */
-    ~KRichTextWidget();
+    ~KRichTextWidget() override;
 
     /**
      * @brief Creates the actions and adds them to the given action collection.

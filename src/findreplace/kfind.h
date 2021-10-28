@@ -128,7 +128,7 @@ public:
      * will notice if the find dialog is closed.
      */
     KFind(const QString &pattern, long options, QWidget *parent, QWidget *findDialog);
-    virtual ~KFind();
+    ~KFind() override;
 
     enum Result {
         NoMatch,

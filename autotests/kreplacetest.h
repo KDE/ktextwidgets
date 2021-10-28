@@ -18,7 +18,7 @@ class KReplaceTest : public QObject
     Q_OBJECT
 public:
     KReplaceTest(const QStringList &text, const QString &buttonName);
-    ~KReplaceTest();
+    ~KReplaceTest() override;
 
     void replace(const QString &pattern, const QString &replacement, long options);
     void print();
