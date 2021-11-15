@@ -2,16 +2,32 @@ add_library(KF5TextWidgets)
 add_library(KF5::TextWidgets ALIAS KF5TextWidgets)
 
 target_sources(KF5TextWidgets PRIVATE
-  dialogs/klinkdialog.cpp
-  findreplace/kfind.cpp
-  findreplace/kfinddialog.cpp
-  findreplace/kreplace.cpp
-  findreplace/kreplacedialog.cpp
-  widgets/krichtextedit.cpp
-  widgets/krichtextwidget.cpp
-  widgets/ktextedit.cpp
-  widgets/nestedlisthelper.cpp
-  widgets/kpluralhandlingspinbox.cpp
+    dialogs/klinkdialog.cpp
+    dialogs/klinkdialog_p.h
+    findreplace/kfind.cpp
+    findreplace/kfinddialog.cpp
+    findreplace/kfinddialog.h
+    findreplace/kfinddialog_p.h
+    findreplace/kfind.h
+    findreplace/kfind_p.h
+    findreplace/kreplace.cpp
+    findreplace/kreplacedialog.cpp
+    findreplace/kreplacedialog.h
+    findreplace/kreplace.h
+    kregexpeditor/kregexpeditorinterface.h
+    widgets/kpluralhandlingspinbox.cpp
+    widgets/kpluralhandlingspinbox.h
+    widgets/krichtextedit.cpp
+    widgets/krichtextedit.h
+    widgets/krichtextedit_p.h
+    widgets/krichtextwidget.cpp
+    widgets/krichtextwidget.h
+    widgets/ktextedit.cpp
+    widgets/ktextedit.h
+    widgets/ktextedit_p.h
+    widgets/nestedlisthelper.cpp
+    widgets/nestedlisthelper_p.h
+
 )
 
 ecm_generate_export_header(KF5TextWidgets
