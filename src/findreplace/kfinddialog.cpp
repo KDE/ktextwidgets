@@ -23,6 +23,7 @@
 
 #include <KGuiItem>
 #include <KHistoryComboBox>
+#include <KLazyLocalizedString>
 #include <KLocalizedString>
 #include <KMessageBox>
 
@@ -450,24 +451,24 @@ void KFindDialogPrivate::showPatterns()
     Q_Q(KFindDialog);
 
     typedef struct {
-        const char *description;
+        const KLazyLocalizedString description;
         const char *regExp;
         int cursorAdjustment;
     } Term;
     static const Term items[] = {
-        {I18N_NOOP("Any Character"), ".", 0},
-        {I18N_NOOP("Start of Line"), "^", 0},
-        {I18N_NOOP("End of Line"), "$", 0},
-        {I18N_NOOP("Set of Characters"), "[]", -1},
-        {I18N_NOOP("Repeats, Zero or More Times"), "*", 0},
-        {I18N_NOOP("Repeats, One or More Times"), "+", 0},
-        {I18N_NOOP("Optional"), "?", 0},
-        {I18N_NOOP("Escape"), "\\", 0},
-        {I18N_NOOP("TAB"), "\\t", 0},
-        {I18N_NOOP("Newline"), "\\n", 0},
-        {I18N_NOOP("Carriage Return"), "\\r", 0},
-        {I18N_NOOP("White Space"), "\\s", 0},
-        {I18N_NOOP("Digit"), "\\d", 0},
+        {kli18n("Any Character"), ".", 0},
+        {kli18n("Start of Line"), "^", 0},
+        {kli18n("End of Line"), "$", 0},
+        {kli18n("Set of Characters"), "[]", -1},
+        {kli18n("Repeats, Zero or More Times"), "*", 0},
+        {kli18n("Repeats, One or More Times"), "+", 0},
+        {kli18n("Optional"), "?", 0},
+        {kli18n("Escape"), "\\", 0},
+        {kli18n("TAB"), "\\t", 0},
+        {kli18n("Newline"), "\\n", 0},
+        {kli18n("Carriage Return"), "\\r", 0},
+        {kli18n("White Space"), "\\s", 0},
+        {kli18n("Digit"), "\\d", 0},
     };
 
     class RegExpAction : public QAction
@@ -504,7 +505,7 @@ void KFindDialogPrivate::showPatterns()
     if (!patterns) {
         patterns = new QMenu(q);
         for (const Term &item : items) {
-            patterns->addAction(new RegExpAction(patterns, i18n(item.description), QLatin1String(item.regExp), item.cursorAdjustment));
+            patterns->addAction(new RegExpAction(patterns, item.description.toString(), QLatin1String(item.regExp), item.cursorAdjustment));
         }
     }
 
