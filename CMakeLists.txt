@@ -32,9 +32,12 @@ ecm_setup_version(PROJECT
 # Dependencies
 set(REQUIRED_QT_VERSION 5.15.2)
 
-find_package(Qt5 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets)
+find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets)
 
-find_package(Qt5 OPTIONAL_COMPONENTS TextToSpeech)
+# No QTextToSpeech in Qt6.2
+if (QT_MAJOR_VERSION STREQUAL "5")
+    find_package(Qt5 OPTIONAL_COMPONENTS TextToSpeech)
+endif()
 if (NOT Qt5TextToSpeech_FOUND)
     message(STATUS "Qt5TextToSpeech not found, speech feature will be disabled")
 else()
@@ -93,7 +96,7 @@ install(FILES "${CMAKE_CURRENT_BINARY_DIR}/KF5TextWidgetsConfig.cmake"
        )
 
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/ktextwidgets_version.h
-        DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
+        DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF} COMPONENT Devel
        )
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

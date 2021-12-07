@@ -225,12 +225,14 @@ void KRichTextEditTest::testHTMLUnorderedLists()
 
     //  qDebug() << line6;
 
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
     // there should not be a margin-left: 0 defined for the <ol> element
     QRegExp regex(QStringLiteral("<ul.*margin-left: 0px.*><li"));
     regex.setMinimal(true);
     QVERIFY2(regex.indexIn(line6, 0) == -1,
              "margin-left: 0px specified for unordered lists "
              "removes numbers in 3rd party viewers ");
+#endif
 
     const QRegularExpression re(QStringLiteral("<ul.*?margin-left: 0px.*?><li"));
     QVERIFY2(!re.match(line6, 0).hasMatch(),

@@ -1,7 +1,7 @@
 @PACKAGE_INIT@
 
 include(CMakeFindDependencyMacro)
-find_dependency(Qt5Widgets @REQUIRED_QT_VERSION@)
+find_dependency(Qt@QT_MAJOR_VERSION@Widgets @REQUIRED_QT_VERSION@)
 find_dependency(KF5Sonnet "@KF_DEP_VERSION@")
 find_dependency(KF5I18n "@KF_DEP_VERSION@")
 
