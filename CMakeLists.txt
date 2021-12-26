@@ -61,7 +61,7 @@ add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Des
 
 add_definitions(-DTRANSLATION_DOMAIN=\"ktextwidgets5\")
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055100)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055900)
 ki18n_install(po)
 add_subdirectory(src)
 if (BUILD_TESTING)
