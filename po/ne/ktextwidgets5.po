@@ -1,0 +1,802 @@
+# translation of kdelibs4.po to Nepali
+# Mahesh Subedi <submanesh@gmail.com>, 2006, 2007.
+# Shiva Prasad Pokharel <pokharelshiva@hotmail.com>, 2006, 2007.
+# shyam krishna ball <shyam@mpp.org.np>, 2006.
+# shyam krishna bal <shyamkrishna_bal@yahoo.com>, 2006, 2007.
+# Shiva Pokharel <shiva@mpp.org.np>, 2007.
+# Nabin Gautam <nabin@mpp.org.np>, 2007.
+# Shiva Prasad Pokharel <pokharelshiv@gmail.com>, 2007.
+# Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-11-24 00:25+0000\n"
+"PO-Revision-Date: 2007-11-05 15:41+0545\n"
+"Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
+"Language-Team: Nepali <info@mpp.org.np>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n !=1\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#: dialogs/klinkdialog.cpp:39
+#, fuzzy, kde-format
+#| msgid "Save Link As"
+msgid "Manage Link"
+msgstr "यस रूपमा लिङ्क बचत गर्नुहोस्"
+
+#: dialogs/klinkdialog.cpp:46
+#, fuzzy, kde-format
+#| msgid "Find Text"
+msgid "Link Text:"
+msgstr "पाठ फेला पार्नुहोस्"
+
+#: dialogs/klinkdialog.cpp:49
+#, fuzzy, kde-format
+#| msgid "URL:"
+msgid "Link URL:"
+msgstr "यूआरएल:"
+
+#: findreplace/kfind.cpp:52
+#, kde-format
+msgid "Find Next"
+msgstr "पछिल्लो फेला पार्नुहोस्"
+
+#: findreplace/kfind.cpp:56
+#, kde-format
+msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
+msgstr "<qt> '<b>%1</b>'को पछिल्लो घटना फेला पार्नुभयो ?</qt>"
+
+#: findreplace/kfind.cpp:707 findreplace/kfind.cpp:728
+#, kde-format
+msgid "1 match found."
+msgid_plural "%1 matches found."
+msgstr[0] "१ जोडा फेला पर्यो ।"
+msgstr[1] "%1 जोडा फेला पर्यो ।"
+
+#: findreplace/kfind.cpp:709
+#, kde-format
+msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
+msgstr "<qt> '<b>%1</b>'का लागि जोडा फेला परेन ।</qt>"
+
+#: findreplace/kfind.cpp:730
+#, kde-format
+msgid "No matches found for '<b>%1</b>'."
+msgstr "'<b>%1</b>'का लागि जोडा फेला परेन ।"
+
+#: findreplace/kfind.cpp:734 findreplace/kreplace.cpp:435
+#, kde-format
+msgid "Beginning of document reached."
+msgstr "कागजातको सुरुआतमा पुगियो ।"
+
+#: findreplace/kfind.cpp:736 findreplace/kreplace.cpp:437
+#, kde-format
+msgid "End of document reached."
+msgstr "कागजातको अन्त्यमा पुगियो ।"
+
+#. i18n() of the first if() because of the plural form.
+#. Hope this word puzzle is ok, it's a different sentence
+#: findreplace/kfind.cpp:742
+#, kde-format
+msgid "Continue from the end?"
+msgstr "अन्त्यबाट जारी राख्नुहुन्छ ?"
+
+#: findreplace/kfind.cpp:742
+#, kde-format
+msgid "Continue from the beginning?"
+msgstr "सुरुआतबाट जारी राख्नुहुन्छ ?"
+
+#: findreplace/kfinddialog.cpp:35
+#, kde-format
+msgid "Find Text"
+msgstr "पाठ फेला पार्नुहोस्"
+
+#: findreplace/kfinddialog.cpp:76
+#, fuzzy, kde-format
+#| msgid "Find"
+msgctxt "@title:group"
+msgid "Find"
+msgstr "फेला पार्नुहोस्"
+
+#: findreplace/kfinddialog.cpp:79
+#, kde-format
+msgid "&Text to find:"
+msgstr "फेला पार्ने पाठ:"
+
+#: findreplace/kfinddialog.cpp:83
+#, kde-format
+msgid "Regular e&xpression"
+msgstr "नियमित अभिव्यक्ति"
+
+#: findreplace/kfinddialog.cpp:84
+#, kde-format
+msgid "&Edit..."
+msgstr "सम्पादन गर्नुहोस्..."
+
+#: findreplace/kfinddialog.cpp:93
+#, kde-format
+msgid "Replace With"
+msgstr "यससँग बदल्नुहोस्"
+
+#: findreplace/kfinddialog.cpp:96
+#, kde-format
+msgid "Replace&ment text:"
+msgstr "प्रतिस्थापन पाठ:"
+
+#: findreplace/kfinddialog.cpp:100
+#, kde-format
+msgid "Use p&laceholders"
+msgstr "प्लेसहोल्डर प्रयोग गर्नुहोस्"
+
+#: findreplace/kfinddialog.cpp:101
+#, kde-format
+msgid "Insert Place&holder"
+msgstr "प्लेसहोल्डर घुसाउनुहोस्"
+
+#: findreplace/kfinddialog.cpp:110
+#, kde-format
+msgid "Options"
+msgstr "विकल्प"
+
+#: findreplace/kfinddialog.cpp:113
+#, kde-format
+msgid "C&ase sensitive"
+msgstr "केस संवेदनशील"
+
+#: findreplace/kfinddialog.cpp:114
+#, kde-format
+msgid "&Whole words only"
+msgstr "पूरा शब्द मात्र"
+
+#: findreplace/kfinddialog.cpp:115
+#, kde-format
+msgid "From c&ursor"
+msgstr "कर्सरबाट"
+
+#: findreplace/kfinddialog.cpp:116
+#, kde-format
+msgid "Find &backwards"
+msgstr "पछाडितिर फेला पार्नुहोस्"
+
+#: findreplace/kfinddialog.cpp:117
+#, kde-format
+msgid "&Selected text"
+msgstr "चयन गरिएका पाठ"
+
+#: findreplace/kfinddialog.cpp:124
+#, kde-format
+msgid "&Prompt on replace"
+msgstr "प्रतिस्थापनमा प्रोम्ट गर्नुहोस्"
+
+#: findreplace/kfinddialog.cpp:204
+#, kde-format
+msgid "&Replace"
+msgstr "बदल्नुहोस्"
+
+#: findreplace/kfinddialog.cpp:206
+#, kde-format
+msgid "Start replace"
+msgstr "बदल्न सुरु गर्नुहोस्"
+
+#: findreplace/kfinddialog.cpp:207
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Replace</b> button, the text you entered above is "
+"searched for within the document and any occurrence is replaced with the "
+"replacement text.</qt>"
+msgstr ""
+"<qt>यदि तपाईँले <b>बदल्नुहोस्</b> बटन थिच्नु भएमा, तपाईँले माथि प्रविष्ट गर्नुभएको पाठलाई "
+"कागजात भित्र खोजिन्छ र पाठ प्रतिस्थापन मिल्दो कुनै घटनासँग बदलिन्छ ।</qt>"
+
+#: findreplace/kfinddialog.cpp:212
+#, kde-format
+msgid "&Find"
+msgstr "फेला पार्नुहोस्"
+
+#: findreplace/kfinddialog.cpp:214
+#, kde-format
+msgid "Start searching"
+msgstr "खोजी सुरु गर्नुहोस्"
+
+#: findreplace/kfinddialog.cpp:215
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Find</b> button, the text you entered above is "
+"searched for within the document.</qt>"
+msgstr ""
+"<qt>यदि तपाईँले <b>फेला पार्नुहोस्</b> बटन थिच्नु भएमा, कागजात भित्र तपाईँले माथि "
+"प्रविष्ट गर्नु भएको पाठ खोजी गरिन्छ ।</qt>"
+
+#: findreplace/kfinddialog.cpp:220
+#, kde-format
+msgid ""
+"Enter a pattern to search for, or select a previous pattern from the list."
+msgstr "खोजीका लागि बाँन्की प्रविष्ट गर्नुहोस्, वा सूचीबाट अघिल्लो बाँन्की चयन गर्नुहोस् ।"
+
+#: findreplace/kfinddialog.cpp:221
+#, kde-format
+msgid "If enabled, search for a regular expression."
+msgstr "यदि सक्षम पारिएमा, नियमित अभिव्यक्तिका लागि खोजी गर्नुहोस् ।"
+
+#: findreplace/kfinddialog.cpp:222
+#, kde-format
+msgid "Click here to edit your regular expression using a graphical editor."
+msgstr ""
+"ग्राफिकल सम्पादक प्रयोग गरेर तपाईँको नियमित अभिव्यक्ति सम्पादन गर्न यहाँ क्लिक गर्नुहोस् ।"
+
+#: findreplace/kfinddialog.cpp:223
+#, kde-format
+msgid "Enter a replacement string, or select a previous one from the list."
+msgstr "प्रतिस्थापन स्ट्रिङ प्रविष्ट गर्नुहोस्, वा सूचीबाट अघिल्लो एउटालाई चयन गर्नुहोस् ।"
+
+#: findreplace/kfinddialog.cpp:225
+#, fuzzy, kde-format
+#| msgid ""
+#| "<qt>If enabled, any occurrence of <code><b>\\N</b></code>, where "
+#| "<code><b>N</b></code> is a integer number, will be replaced with the "
+#| "corresponding capture (\"parenthesized substring\") from the pattern."
+#| "<p>To include (a literal <code><b>\\N</b></code> in your replacement, put "
+#| "an extra backslash in front of it, like <code><b>\\\\N</b></code>.</p></"
+#| "qt>"
+msgid ""
+"<qt>If enabled, any occurrence of <code><b>\\N</b></code>, where <code><b>N</"
+"b></code> is an integer number, will be replaced with the corresponding "
+"capture (\"parenthesized substring\") from the pattern.<p>To include (a "
+"literal <code><b>\\N</b></code> in your replacement, put an extra backslash "
+"in front of it, like <code><b>\\\\N</b></code>.</p></qt>"
+msgstr ""
+"<qt>यदि सक्षम पारिएमा, <code><b>\\N</b></code> को कुनै पनि घटना, जहाँ "
+"<code><b>N</b></code> एउटा इन्टिजर सङ्ख्या हुन्छ, त्यसलाई बाँन्कीबाट अनुकूल अधिग्रहण "
+"(\"parenthesized substring\") सँग बदलिन्छ ।<p>तपाईँको प्रतिस्थापनमा (अक्षरंश "
+"<code><b>\\N</b></code> सम्मिलित गर्न, यसको अगाडि अतिरिक्त ब्याकस्याल्स राख्नुहोस्, "
+"जस्तै <code><b>\\\\N</b></code>.</p></qt>"
+
+#: findreplace/kfinddialog.cpp:231
+#, kde-format
+msgid "Click for a menu of available captures."
+msgstr "उपलब्ध अधिग्रहणको मेनुका लागि क्लिक गर्नुहोस् ।"
+
+#: findreplace/kfinddialog.cpp:232
+#, kde-format
+msgid "Require word boundaries in both ends of a match to succeed."
+msgstr "जोडीको दुबै अन्त्यमा सफलताका लागि आवश्यक शब्द दायरा ।"
+
+#: findreplace/kfinddialog.cpp:233
+#, kde-format
+msgid "Start searching at the current cursor location rather than at the top."
+msgstr "माथिबाट खोजी गर्नुको सट्टा हालको कर्सरको स्थानबाट खोजी सुरु गर्नुहोस् ।"
+
+#: findreplace/kfinddialog.cpp:234
+#, kde-format
+msgid "Only search within the current selection."
+msgstr "हालको चयन भित्र मात्र खोजी गर्नुहोस् ।"
+
+#: findreplace/kfinddialog.cpp:235
+#, kde-format
+msgid ""
+"Perform a case sensitive search: entering the pattern 'Joe' will not match "
+"'joe' or 'JOE', only 'Joe'."
+msgstr ""
+"केस सम्वेदनशील खोजी गर्नुहोस्: बाँन्की 'Joe' प्रविष्टि गर्दा 'joe' वा 'JOE' सँग मिल्दैन, "
+"केबल 'Joe' मिल्दछ ।"
+
+#: findreplace/kfinddialog.cpp:236
+#, kde-format
+msgid "Search backwards."
+msgstr "पछाडितिर खोजी गर्नुहोस् ।"
+
+#: findreplace/kfinddialog.cpp:237
+#, kde-format
+msgid "Ask before replacing each match found."
+msgstr "फेला परेको हरेक जोडा बदल्नु अघि सोध्नुहोस् ।"
+
+#: findreplace/kfinddialog.cpp:459
+msgid "Any Character"
+msgstr "कुनै पनि क्यारेक्टर"
+
+#: findreplace/kfinddialog.cpp:460
+msgid "Start of Line"
+msgstr "रेखाको सुरुआत"
+
+#: findreplace/kfinddialog.cpp:461
+msgid "End of Line"
+msgstr "लाइनको अन्त्य"
+
+#: findreplace/kfinddialog.cpp:462
+msgid "Set of Characters"
+msgstr "क्यारेक्टरको सेट"
+
+#: findreplace/kfinddialog.cpp:463
+msgid "Repeats, Zero or More Times"
+msgstr "शून्य वा धेरै पटक, दोर्याउँदछ"
+
+#: findreplace/kfinddialog.cpp:464
+msgid "Repeats, One or More Times"
+msgstr "एक वा धेरै पटक, दोर्याउँदछ"
+
+#: findreplace/kfinddialog.cpp:465
+msgid "Optional"
+msgstr "वैकल्पिक"
+
+#: findreplace/kfinddialog.cpp:466
+msgid "Escape"
+msgstr "Escape"
+
+#: findreplace/kfinddialog.cpp:467
+msgid "TAB"
+msgstr "TAB"
+
+#: findreplace/kfinddialog.cpp:468
+msgid "Newline"
+msgstr "नयाँलाइन"
+
+#: findreplace/kfinddialog.cpp:469
+msgid "Carriage Return"
+msgstr "फिर्ता पठाउँनुहोस्"
+
+#: findreplace/kfinddialog.cpp:470
+msgid "White Space"
+msgstr "सेतो खाली स्थान"
+
+#: findreplace/kfinddialog.cpp:471
+msgid "Digit"
+msgstr "अङ्क"
+
+#: findreplace/kfinddialog.cpp:579
+#, kde-format
+msgid "Complete Match"
+msgstr "पूरै मिलेको"
+
+#: findreplace/kfinddialog.cpp:583
+#, kde-format
+msgid "Captured Text (%1)"
+msgstr "अभिग्रहित पाठ (%1)"
+
+#: findreplace/kfinddialog.cpp:593
+#, kde-format
+msgid "You must enter some text to search for."
+msgstr "खोजी गर्नका लागि तपाईँले केही पाठ प्रविष्ट गर्नुपर्दछ ।"
+
+#: findreplace/kfinddialog.cpp:600
+#, kde-format
+msgid "Invalid PCRE pattern syntax."
+msgstr ""
+
+#: findreplace/kreplace.cpp:52 findreplace/kreplace.cpp:63
+#, kde-format
+msgid "Replace"
+msgstr "बदल्नुहोस्"
+
+#: findreplace/kreplace.cpp:59
+#, fuzzy, kde-format
+#| msgid "&All"
+msgctxt "@action:button Replace all occurrences"
+msgid "&All"
+msgstr "सबै"
+
+#: findreplace/kreplace.cpp:61
+#, kde-format
+msgid "&Skip"
+msgstr "फड्काउनुहोस्"
+
+#: findreplace/kreplace.cpp:80
+#, kde-format
+msgid "Replace '%1' with '%2'?"
+msgstr " '%1' लाई '%2' सँग बदल्नुहुन्छ ?"
+
+#: findreplace/kreplace.cpp:182 findreplace/kreplace.cpp:429
+#, kde-format
+msgid "No text was replaced."
+msgstr "पाठ बदलिएको छैन ।"
+
+#: findreplace/kreplace.cpp:184 findreplace/kreplace.cpp:431
+#, kde-format
+msgid "1 replacement done."
+msgid_plural "%1 replacements done."
+msgstr[0] "१ प्रतिस्थापन पूरा भयो ।"
+msgstr[1] "%1 प्रतिस्थापन पूरा भयो ।"
+
+#: findreplace/kreplace.cpp:444
+#, kde-format
+msgid "Do you want to restart search from the end?"
+msgstr "तपाईँ अन्त्यबाट खोजी फेरि सुरु गर्न चाहनुहुन्छ ?"
+
+#: findreplace/kreplace.cpp:444
+#, kde-format
+msgid "Do you want to restart search at the beginning?"
+msgstr "तपाईँ सुरुबाट खोजी फेरि सुरु गर्न चाहनुहुन्छ ?"
+
+#: findreplace/kreplace.cpp:449
+#, fuzzy, kde-format
+#| msgid "Restart"
+msgctxt "@action:button Restart find & replace"
+msgid "Restart"
+msgstr "फेरि सुरु गर्नुहोस्"
+
+#: findreplace/kreplace.cpp:450
+#, fuzzy, kde-format
+#| msgid "Stop"
+msgctxt "@action:button Stop find & replace"
+msgid "Stop"
+msgstr "रोक्नुहोस्"
+
+#: findreplace/kreplacedialog.cpp:153
+#, kde-format
+msgid "Your replacement string is referencing a capture greater than '\\%1', "
+msgstr "तपाईँको प्रतिस्थापन स्ट्रिङले '\\%1', भन्दा ठूलो अभिग्रहण सन्दर्भ गरेकोछ "
+
+#: findreplace/kreplacedialog.cpp:154
+#, kde-format
+msgid "but your pattern only defines 1 capture."
+msgid_plural "but your pattern only defines %1 captures."
+msgstr[0] "तर तपाईँको बाँन्कीले केबल 1 अभिग्रहण परिभाषित गर्दछ ।"
+msgstr[1] "तर तपाईँको बान्कीले केबल %1 अभिग्रहण परिभाषित गर्दछ ।"
+
+#: findreplace/kreplacedialog.cpp:155
+#, kde-format
+msgid "but your pattern defines no captures."
+msgstr "तर तपाईँको बाँन्कीले कुनै अभिग्रहण परिभाषित गर्दैन ।"
+
+#: findreplace/kreplacedialog.cpp:156
+#, kde-format
+msgid ""
+"\n"
+"Please correct."
+msgstr ""
+"\n"
+"कृपया सुधार गर्नुहोस् ।"
+
+#: widgets/krichtextwidget.cpp:207
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text Completion"
+msgctxt "@action"
+msgid "Text &Color..."
+msgstr "पाठ समापन"
+
+#: widgets/krichtextwidget.cpp:208
+#, fuzzy, kde-format
+#| msgctxt "palette name"
+#| msgid "Web Colors"
+msgctxt "@label stroke color"
+msgid "Color"
+msgstr "वेब रङ"
+
+#: widgets/krichtextwidget.cpp:221
+#, kde-format
+msgctxt "@action"
+msgid "Text &Highlight..."
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:234
+#, fuzzy, kde-format
+#| msgctxt "@option:check"
+#| msgid "Font"
+msgctxt "@action"
+msgid "&Font"
+msgstr "फन्ट"
+
+#: widgets/krichtextwidget.cpp:244
+#, fuzzy, kde-format
+#| msgid "Icon Size"
+msgctxt "@action"
+msgid "Font &Size"
+msgstr "प्रतिमा साइज"
+
+#: widgets/krichtextwidget.cpp:253
+#, fuzzy, kde-format
+#| msgctxt "@item font"
+#| msgid "Bold"
+msgctxt "@action boldify selected text"
+msgid "&Bold"
+msgstr "बाक्लो"
+
+#: widgets/krichtextwidget.cpp:267
+#, fuzzy, kde-format
+#| msgctxt "@item font"
+#| msgid "Italic"
+msgctxt "@action italicize selected text"
+msgid "&Italic"
+msgstr "छड्के"
+
+#: widgets/krichtextwidget.cpp:281
+#, kde-format
+msgctxt "@action underline selected text"
+msgid "&Underline"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:294
+#, fuzzy, kde-format
+#| msgid "Step Out"
+msgctxt "@action"
+msgid "&Strike Out"
+msgstr "चरणबाट बाहिरनुहोस्"
+
+#: widgets/krichtextwidget.cpp:308
+#, kde-format
+msgctxt "@action"
+msgid "Align &Left"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:309
+#, fuzzy, kde-format
+#| msgctxt "toolbar position string"
+#| msgid "Left"
+msgctxt "@label left justify"
+msgid "Left"
+msgstr "बायाँ"
+
+#: widgets/krichtextwidget.cpp:314
+#, kde-format
+msgctxt "@action"
+msgid "Align &Center"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:315
+#, fuzzy, kde-format
+#| msgid "General"
+msgctxt "@label center justify"
+msgid "Center"
+msgstr "साधारण"
+
+#: widgets/krichtextwidget.cpp:320
+#, kde-format
+msgctxt "@action"
+msgid "Align &Right"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:321
+#, fuzzy, kde-format
+#| msgctxt "toolbar position string"
+#| msgid "Right"
+msgctxt "@label right justify"
+msgid "Right"
+msgstr "दायाँ"
+
+#: widgets/krichtextwidget.cpp:326
+#, kde-format
+msgctxt "@action"
+msgid "&Justify"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:327
+#, kde-format
+msgctxt "@label justify fill"
+msgid "Justify"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:345
+#, kde-format
+msgctxt "@action"
+msgid "Left-to-Right"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:346
+#, kde-format
+msgctxt "@label left-to-right"
+msgid "Left-to-Right"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:351
+#, kde-format
+msgctxt "@action"
+msgid "Right-to-Left"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:352
+#, kde-format
+msgctxt "@label right-to-left"
+msgid "Right-to-Left"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:366
+#, kde-format
+msgctxt "@title:menu"
+msgid "List Style"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:369
+#, fuzzy, kde-format
+#| msgid "None"
+msgctxt "@item:inmenu no list style"
+msgid "None"
+msgstr "कुनै पनि होइन"
+
+#: widgets/krichtextwidget.cpp:370
+#, fuzzy, kde-format
+#| msgid "&Discard"
+msgctxt "@item:inmenu disc list style"
+msgid "Disc"
+msgstr "छोड्नुहोस्"
+
+#: widgets/krichtextwidget.cpp:371
+#, fuzzy, kde-format
+#| msgid "File"
+msgctxt "@item:inmenu circle list style"
+msgid "Circle"
+msgstr "फाइल"
+
+#: widgets/krichtextwidget.cpp:372
+#, fuzzy, kde-format
+#| msgid "Source:"
+msgctxt "@item:inmenu square list style"
+msgid "Square"
+msgstr "स्रोत:"
+
+#: widgets/krichtextwidget.cpp:373
+#, kde-format
+msgctxt "@item:inmenu numbered lists"
+msgid "123"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:374
+#, fuzzy, kde-format
+#| msgid "Sab"
+msgctxt "@item:inmenu lowercase abc lists"
+msgid "abc"
+msgstr "Sab"
+
+#: widgets/krichtextwidget.cpp:375
+#, fuzzy, kde-format
+#| msgid "AC"
+msgctxt "@item:inmenu uppercase abc lists"
+msgid "ABC"
+msgstr "AC"
+
+#: widgets/krichtextwidget.cpp:376
+#, kde-format
+msgctxt "@item:inmenu lower case roman numerals"
+msgid "i ii iii"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:377
+#, kde-format
+msgctxt "@item:inmenu upper case roman numerals"
+msgid "I II III"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:397
+#, kde-format
+msgctxt "@action"
+msgid "Increase Indent"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:409
+#, kde-format
+msgctxt "@action"
+msgid "Decrease Indent"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:421
+#, kde-format
+msgctxt "@action"
+msgid "Insert Rule Line"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:430
+#, fuzzy, kde-format
+#| msgid "License:"
+msgctxt "@action"
+msgid "Link"
+msgstr "इजाजतपत्र:"
+
+#: widgets/krichtextwidget.cpp:442
+#, kde-format
+msgctxt "@action"
+msgid "Format Painter"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:454
+#, fuzzy, kde-format
+#| msgid "Find Text"
+msgctxt "@action"
+msgid "To Plain Text"
+msgstr "पाठ फेला पार्नुहोस्"
+
+#: widgets/krichtextwidget.cpp:463
+#, fuzzy, kde-format
+#| msgid "Subscribe"
+msgctxt "@action"
+msgid "Subscript"
+msgstr "सदस्यता लिनुहोस्"
+
+#: widgets/krichtextwidget.cpp:468
+#, fuzzy, kde-format
+#| msgid "Open Script"
+msgctxt "@action"
+msgid "Superscript"
+msgstr "स्क्रिप्ट खोल्नुहोस्"
+
+#: widgets/krichtextwidget.cpp:480
+#, fuzzy, kde-format
+#| msgid "Print Preview"
+msgctxt "@title:menu"
+msgid "Heading Level"
+msgstr "मुद्रण पूर्वावलोकन"
+
+#: widgets/krichtextwidget.cpp:481
+#, fuzzy, kde-format
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Basic Latin"
+msgctxt "@item:inmenu no heading"
+msgid "Basic text"
+msgstr "साधारण ल्याटिन"
+
+#: widgets/krichtextwidget.cpp:482
+#, fuzzy, kde-format
+#| msgctxt "Title of the notified event"
+#| msgid "Title"
+msgctxt "@item:inmenu heading level 1 (largest)"
+msgid "Title"
+msgstr "शीर्षक"
+
+#: widgets/krichtextwidget.cpp:483
+#, fuzzy, kde-format
+#| msgid "Untitled"
+msgctxt "@item:inmenu heading level 2"
+msgid "Subtitle"
+msgstr "शीर्षक विहिन"
+
+#: widgets/krichtextwidget.cpp:484
+#, fuzzy, kde-format
+#| msgid "Action"
+msgctxt "@item:inmenu heading level 3"
+msgid "Section"
+msgstr "कार्य"
+
+#: widgets/krichtextwidget.cpp:485
+#, fuzzy, kde-format
+#| msgid "Question"
+msgctxt "@item:inmenu heading level 4"
+msgid "Subsection"
+msgstr "प्रश्न"
+
+#: widgets/krichtextwidget.cpp:486
+#, fuzzy, kde-format
+#| msgid "Separator, Paragraph"
+msgctxt "@item:inmenu heading level 5"
+msgid "Paragraph"
+msgstr "विभाजक, अनुच्छेद"
+
+#: widgets/krichtextwidget.cpp:487
+#, fuzzy, kde-format
+#| msgid "Separator, Paragraph"
+msgctxt "@item:inmenu heading level 6 (smallest)"
+msgid "Subparagraph"
+msgstr "विभाजक, अनुच्छेद"
+
+#: widgets/ktextedit.cpp:47
+#, fuzzy, kde-format
+#| msgid "Nothing to Delete"
+msgid "Nothing to spell check."
+msgstr "मेट्नुपर्ने केही छैन"
+
+#: widgets/ktextedit.cpp:501
+#, kde-format
+msgid "Check Spelling..."
+msgstr "हिज्जे जाँच गर्नुहोस्..."
+
+#: widgets/ktextedit.cpp:506
+#, fuzzy, kde-format
+#| msgid "Spell Checking"
+msgid "Spell Checking Language"
+msgstr "हिज्जे जाँच"
+
+#: widgets/ktextedit.cpp:527
+#, kde-format
+msgid "Auto Spell Check"
+msgstr "स्वत: हिज्जे जाँच"
+
+#: widgets/ktextedit.cpp:533
+#, kde-format
+msgid "Allow Tabulations"
+msgstr "तालिकीकरण अनुमति दिनुहोस्"
+
+#: widgets/ktextedit.cpp:566
+#, fuzzy, kde-format
+#| msgid "&Break at Next Statement"
+msgid "Speak Text"
+msgstr "पछिल्लो कथनमा विच्छेद गर्नुहोस्"
