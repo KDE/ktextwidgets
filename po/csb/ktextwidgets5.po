@@ -1,0 +1,764 @@
+# translation of kdelibs4.po to Kaszëbsczi
+#
+# Michôł Òstrowsczi <michol@linuxcsb.org>, 2006, 2007, 2008, 2009.
+# Mark Kwidzińsczi <mark@linuxcsb.org>, 2006, 2007, 2008, 2009.
+# Mark Kwidzińśczi <mark@linuxcsb.org>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-11-24 00:25+0000\n"
+"PO-Revision-Date: 2009-12-04 22:09+0100\n"
+"Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
+"Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
+"Language: csb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.0\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2)\n"
+
+#: dialogs/klinkdialog.cpp:39
+#, kde-format
+msgid "Manage Link"
+msgstr "Sprôwiôj lënkã"
+
+#: dialogs/klinkdialog.cpp:46
+#, kde-format
+msgid "Link Text:"
+msgstr "Tekst lënka:"
+
+#: dialogs/klinkdialog.cpp:49
+#, kde-format
+msgid "Link URL:"
+msgstr "URL lënka:"
+
+#: findreplace/kfind.cpp:52
+#, kde-format
+msgid "Find Next"
+msgstr "Nalezë dali"
+
+#: findreplace/kfind.cpp:56
+#, kde-format
+msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
+msgstr "<qt>Szëkac za zôstnym wëstãpieniém '<b>%1</b>'?</qt>"
+
+#: findreplace/kfind.cpp:707 findreplace/kfind.cpp:728
+#, kde-format
+msgid "1 match found."
+msgid_plural "%1 matches found."
+msgstr[0] "Nalazłé 1 dopasowanié."
+msgstr[1] "Nalazłé %1 dopasowania."
+msgstr[2] "Nalazłëch %1 dopasowaniów."
+
+#: findreplace/kfind.cpp:709
+#, kde-format
+msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
+msgstr "<qt>Felënk dopasowaniów dlô '<b>%1</b>'.</qt>"
+
+#: findreplace/kfind.cpp:730
+#, kde-format
+msgid "No matches found for '<b>%1</b>'."
+msgstr "Felënk dopasowaniów dlô '<b>%1</b>'."
+
+#: findreplace/kfind.cpp:734 findreplace/kreplace.cpp:435
+#, kde-format
+msgid "Beginning of document reached."
+msgstr "Je zwënégòwóny zôczątk dokùmentu."
+
+#: findreplace/kfind.cpp:736 findreplace/kreplace.cpp:437
+#, kde-format
+msgid "End of document reached."
+msgstr "Je zwënégòwóny kùńc dokùmentu."
+
+#. i18n() of the first if() because of the plural form.
+#. Hope this word puzzle is ok, it's a different sentence
+#: findreplace/kfind.cpp:742
+#, kde-format
+msgid "Continue from the end?"
+msgstr "Jisc dali òd kùńca?"
+
+#: findreplace/kfind.cpp:742
+#, kde-format
+msgid "Continue from the beginning?"
+msgstr "Jisc dali òd zôczątkù?"
+
+#: findreplace/kfinddialog.cpp:35
+#, kde-format
+msgid "Find Text"
+msgstr "Nalezë tekst"
+
+#: findreplace/kfinddialog.cpp:76
+#, kde-format
+msgctxt "@title:group"
+msgid "Find"
+msgstr "Nalezë"
+
+#: findreplace/kfinddialog.cpp:79
+#, kde-format
+msgid "&Text to find:"
+msgstr "&Szëkóny tekst"
+
+#: findreplace/kfinddialog.cpp:83
+#, kde-format
+msgid "Regular e&xpression"
+msgstr "&Regùlarny wësłôw"
+
+#: findreplace/kfinddialog.cpp:84
+#, kde-format
+msgid "&Edit..."
+msgstr "&Edicëjô..."
+
+#: findreplace/kfinddialog.cpp:93
+#, kde-format
+msgid "Replace With"
+msgstr "Zastãpi przez"
+
+#: findreplace/kfinddialog.cpp:96
+#, kde-format
+msgid "Replace&ment text:"
+msgstr "Wsadzôny &tekst:"
+
+#: findreplace/kfinddialog.cpp:100
+#, kde-format
+msgid "Use p&laceholders"
+msgstr "Ùżëjë &znakòwników placu"
+
+#: findreplace/kfinddialog.cpp:101
+#, kde-format
+msgid "Insert Place&holder"
+msgstr "Wstawi znakòwniczi &placu"
+
+#: findreplace/kfinddialog.cpp:110
+#, kde-format
+msgid "Options"
+msgstr "Òptacëje"
+
+#: findreplace/kfinddialog.cpp:113
+#, kde-format
+msgid "C&ase sensitive"
+msgstr "Ùznôwôj wiôlgòsc &lëterów"
+
+#: findreplace/kfinddialog.cpp:114
+#, kde-format
+msgid "&Whole words only"
+msgstr "&Całowné słowa"
+
+#: findreplace/kfinddialog.cpp:115
+#, kde-format
+msgid "From c&ursor"
+msgstr "Òd kùrsora"
+
+#: findreplace/kfinddialog.cpp:116
+#, kde-format
+msgid "Find &backwards"
+msgstr "Szëkba &nazôd"
+
+#: findreplace/kfinddialog.cpp:117
+#, kde-format
+msgid "&Selected text"
+msgstr "&Zaznaczony tekst"
+
+#: findreplace/kfinddialog.cpp:124
+#, kde-format
+msgid "&Prompt on replace"
+msgstr "&Pëtôj prze zamianie"
+
+#: findreplace/kfinddialog.cpp:204
+#, kde-format
+msgid "&Replace"
+msgstr "&Zastãpi"
+
+#: findreplace/kfinddialog.cpp:206
+#, kde-format
+msgid "Start replace"
+msgstr "Naczni zamianã"
+
+#: findreplace/kfinddialog.cpp:207
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Replace</b> button, the text you entered above is "
+"searched for within the document and any occurrence is replaced with the "
+"replacement text.</qt>"
+msgstr ""
+"<qt>Jeżlë wcësniesz knąpã <b>Zastãpi</b>, tekst wprowôdzony wëżi òstanie "
+"òdnalazłi w teksce dokùmentu ë wszëtczé jego wëstãpienia òstaną zastãpione "
+"tekstã niżi.</qt>"
+
+#: findreplace/kfinddialog.cpp:212
+#, kde-format
+msgid "&Find"
+msgstr "&Nalezë"
+
+#: findreplace/kfinddialog.cpp:214
+#, kde-format
+msgid "Start searching"
+msgstr "Naczni szëkbã"
+
+#: findreplace/kfinddialog.cpp:215
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Find</b> button, the text you entered above is "
+"searched for within the document.</qt>"
+msgstr ""
+"<qt>Jeżlë wcëniesz knąpã <b>Nalezë</b>, tekst wprowôdzony wëżi òstanie "
+"odnalazłi w teksce dokùmentu.</qt>"
+
+#: findreplace/kfinddialog.cpp:220
+#, kde-format
+msgid ""
+"Enter a pattern to search for, or select a previous pattern from the list."
+msgstr "Proszã pòdac mùster szëkbë, abò wëbrac nôslédny mùster z listë."
+
+#: findreplace/kfinddialog.cpp:221
+#, kde-format
+msgid "If enabled, search for a regular expression."
+msgstr "Jeżlë włączoné, szëkba brëkùje regùlarnëch wësłôwiów."
+
+#: findreplace/kfinddialog.cpp:222
+#, kde-format
+msgid "Click here to edit your regular expression using a graphical editor."
+msgstr ""
+"Proszã klëknąc tuwò. bë editowac regùlarny wësłôw z pòmòcą graficznegò "
+"editorë,"
+
+#: findreplace/kfinddialog.cpp:223
+#, kde-format
+msgid "Enter a replacement string, or select a previous one from the list."
+msgstr "Proszã pòdac nôdpis zastãpùjący abò wëbrac wczasniészi z lëstë."
+
+#: findreplace/kfinddialog.cpp:225
+#, kde-format
+msgid ""
+"<qt>If enabled, any occurrence of <code><b>\\N</b></code>, where <code><b>N</"
+"b></code> is an integer number, will be replaced with the corresponding "
+"capture (\"parenthesized substring\") from the pattern.<p>To include (a "
+"literal <code><b>\\N</b></code> in your replacement, put an extra backslash "
+"in front of it, like <code><b>\\\\N</b></code>.</p></qt>"
+msgstr ""
+"<qt>Jeżlë na òptacëjô je włączonô, kòżdé wëstãpienié <code><b>\\N</b></"
+"code>, dze <code><b>N</b></code> je całowną wielëną, òstanie zastãpioné "
+"pasownym wëslôwiã w klamrach z mùstra.<p>Bë ùżëc prôwdzëwegò <code><b>\\N</"
+"b></code> w zastãpùjącym nôdpisë, nót je wstôwic przed nim dodôwny sztriszk "
+"na szôrc na nen ôrt: <code><b>\\\\N</b></code>.</p></qt>"
+
+#: findreplace/kfinddialog.cpp:231
+#, kde-format
+msgid "Click for a menu of available captures."
+msgstr ""
+"Proszã klëknąc, bë pòkôzało sã menu z przistãpnëma mùstrama do zastãpieniô."
+
+#: findreplace/kfinddialog.cpp:232
+#, kde-format
+msgid "Require word boundaries in both ends of a match to succeed."
+msgstr "Wëmôgôj greńcë słowa na kùńcach, bë mùster bëł pasowny."
+
+#: findreplace/kfinddialog.cpp:233
+#, kde-format
+msgid "Start searching at the current cursor location rather than at the top."
+msgstr "Naczni szëkbã òd aktualnegò pòłożeniô kùrsora, a nié òd zôczątkù."
+
+#: findreplace/kfinddialog.cpp:234
+#, kde-format
+msgid "Only search within the current selection."
+msgstr "Szëkôj blós w naznaczonym wëjimkù."
+
+#: findreplace/kfinddialog.cpp:235
+#, kde-format
+msgid ""
+"Perform a case sensitive search: entering the pattern 'Joe' will not match "
+"'joe' or 'JOE', only 'Joe'."
+msgstr ""
+"Szëkôj z ùwzglãdnieniém wiôlgòscë céchów: mùster 'Ana' nie dopasëje sã do "
+"'ana' czë 'ANA', le blós do 'Ana'."
+
+#: findreplace/kfinddialog.cpp:236
+#, kde-format
+msgid "Search backwards."
+msgstr "Szëkba nazôd."
+
+#: findreplace/kfinddialog.cpp:237
+#, kde-format
+msgid "Ask before replacing each match found."
+msgstr "Spëtôj przed zastãpieniém kòżdegò dopasowaniô."
+
+#: findreplace/kfinddialog.cpp:459
+msgid "Any Character"
+msgstr "Swòjôwòlny céch"
+
+#: findreplace/kfinddialog.cpp:460
+msgid "Start of Line"
+msgstr "Zôczątk réżczi"
+
+#: findreplace/kfinddialog.cpp:461
+msgid "End of Line"
+msgstr "Kùńc réżczi"
+
+#: findreplace/kfinddialog.cpp:462
+msgid "Set of Characters"
+msgstr "Zbiérk céchów"
+
+#: findreplace/kfinddialog.cpp:463
+msgid "Repeats, Zero or More Times"
+msgstr "Pòwtórzenié (0 abò wicy razë)"
+
+#: findreplace/kfinddialog.cpp:464
+msgid "Repeats, One or More Times"
+msgstr "Pòwtórzenié (1 abò wicy razë)"
+
+#: findreplace/kfinddialog.cpp:465
+msgid "Optional"
+msgstr "Òptacëjno"
+
+#: findreplace/kfinddialog.cpp:466
+msgid "Escape"
+msgstr "Escape"
+
+#: findreplace/kfinddialog.cpp:467
+msgid "TAB"
+msgstr "TAB"
+
+#: findreplace/kfinddialog.cpp:468
+msgid "Newline"
+msgstr "Nowô réżka"
+
+#: findreplace/kfinddialog.cpp:469
+msgid "Carriage Return"
+msgstr "Karétka"
+
+#: findreplace/kfinddialog.cpp:470
+msgid "White Space"
+msgstr "Rozstãp"
+
+#: findreplace/kfinddialog.cpp:471
+msgid "Digit"
+msgstr "Cyfra"
+
+#: findreplace/kfinddialog.cpp:579
+#, kde-format
+msgid "Complete Match"
+msgstr "Całowné dopasowanié"
+
+#: findreplace/kfinddialog.cpp:583
+#, kde-format
+msgid "Captured Text (%1)"
+msgstr "Zastãpòwóny tekst (%1)"
+
+#: findreplace/kfinddialog.cpp:593
+#, kde-format
+msgid "You must enter some text to search for."
+msgstr "Mùszisz pòdac szëkóny tekst"
+
+#: findreplace/kfinddialog.cpp:600
+#, kde-format
+msgid "Invalid PCRE pattern syntax."
+msgstr ""
+
+#: findreplace/kreplace.cpp:52 findreplace/kreplace.cpp:63
+#, kde-format
+msgid "Replace"
+msgstr "Zastãpi"
+
+#: findreplace/kreplace.cpp:59
+#, kde-format
+msgctxt "@action:button Replace all occurrences"
+msgid "&All"
+msgstr "&Wszëtczé"
+
+#: findreplace/kreplace.cpp:61
+#, kde-format
+msgid "&Skip"
+msgstr "&Przepùscë"
+
+#: findreplace/kreplace.cpp:80
+#, kde-format
+msgid "Replace '%1' with '%2'?"
+msgstr "Zamienic '%1' przez '%2'?"
+
+#: findreplace/kreplace.cpp:182 findreplace/kreplace.cpp:429
+#, kde-format
+msgid "No text was replaced."
+msgstr "Niżóden tekst nie òstôł zamieniony."
+
+#: findreplace/kreplace.cpp:184 findreplace/kreplace.cpp:431
+#, kde-format
+msgid "1 replacement done."
+msgid_plural "%1 replacements done."
+msgstr[0] "1 zamiana fardich."
+msgstr[1] "%1 zamianë fardich."
+msgstr[2] "%1 zamianów fardich."
+
+#: findreplace/kreplace.cpp:444
+#, kde-format
+msgid "Do you want to restart search from the end?"
+msgstr "Nacząc szëkbã òd kùńca?"
+
+#: findreplace/kreplace.cpp:444
+#, kde-format
+msgid "Do you want to restart search at the beginning?"
+msgstr "Nacząc szëkbã òd zôczątkù?"
+
+#: findreplace/kreplace.cpp:449
+#, kde-format
+msgctxt "@action:button Restart find & replace"
+msgid "Restart"
+msgstr "Zrëszë znowa"
+
+#: findreplace/kreplace.cpp:450
+#, kde-format
+msgctxt "@action:button Stop find & replace"
+msgid "Stop"
+msgstr "Zatrzëmôj"
+
+#: findreplace/kreplacedialog.cpp:153
+#, kde-format
+msgid "Your replacement string is referencing a capture greater than '\\%1', "
+msgstr ""
+"Nôdpis zmieniwôjący òdwòłiwô sã do nôdpisu zamienianegò, wikszegò nigle '\\"
+"%1', "
+
+#: findreplace/kreplacedialog.cpp:154
+#, kde-format
+msgid "but your pattern only defines 1 capture."
+msgid_plural "but your pattern only defines %1 captures."
+msgstr[0] "leno mùster taksëje 1 nôdpis."
+msgstr[1] "leno mùster taksëje %1 nôdpisë."
+msgstr[2] "leno mùster taksëje %1 nôdpisów."
+
+#: findreplace/kreplacedialog.cpp:155
+#, kde-format
+msgid "but your pattern defines no captures."
+msgstr "leno mùster nie taksëjë taczich nôdpisów."
+
+#: findreplace/kreplacedialog.cpp:156
+#, kde-format
+msgid ""
+"\n"
+"Please correct."
+msgstr ""
+"\n"
+"Proszã pòprawic."
+
+#: widgets/krichtextwidget.cpp:207
+#, kde-format
+msgctxt "@action"
+msgid "Text &Color..."
+msgstr "&Farwa tekstu..."
+
+#: widgets/krichtextwidget.cpp:208
+#, kde-format
+msgctxt "@label stroke color"
+msgid "Color"
+msgstr "Farwa"
+
+#: widgets/krichtextwidget.cpp:221
+#, kde-format
+msgctxt "@action"
+msgid "Text &Highlight..."
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:234
+#, kde-format
+msgctxt "@action"
+msgid "&Font"
+msgstr "&Fònt"
+
+#: widgets/krichtextwidget.cpp:244
+#, kde-format
+msgctxt "@action"
+msgid "Font &Size"
+msgstr "&Miara fònta"
+
+#: widgets/krichtextwidget.cpp:253
+#, kde-format
+msgctxt "@action boldify selected text"
+msgid "&Bold"
+msgstr "&Pògrëbiony"
+
+#: widgets/krichtextwidget.cpp:267
+#, kde-format
+msgctxt "@action italicize selected text"
+msgid "&Italic"
+msgstr "&Kùrsywa"
+
+#: widgets/krichtextwidget.cpp:281
+#, kde-format
+msgctxt "@action underline selected text"
+msgid "&Underline"
+msgstr "&Pòdsztrëchniãcé"
+
+#: widgets/krichtextwidget.cpp:294
+#, kde-format
+msgctxt "@action"
+msgid "&Strike Out"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:308
+#, kde-format
+msgctxt "@action"
+msgid "Align &Left"
+msgstr "Dpasëjë do &lewa"
+
+#: widgets/krichtextwidget.cpp:309
+#, kde-format
+msgctxt "@label left justify"
+msgid "Left"
+msgstr "Lewò"
+
+#: widgets/krichtextwidget.cpp:314
+#, kde-format
+msgctxt "@action"
+msgid "Align &Center"
+msgstr "Dopasëjë do &westrzódka"
+
+#: widgets/krichtextwidget.cpp:315
+#, kde-format
+msgctxt "@label center justify"
+msgid "Center"
+msgstr "Westrzódk"
+
+#: widgets/krichtextwidget.cpp:320
+#, kde-format
+msgctxt "@action"
+msgid "Align &Right"
+msgstr "Z &prawi"
+
+#: widgets/krichtextwidget.cpp:321
+#, kde-format
+msgctxt "@label right justify"
+msgid "Right"
+msgstr "Prawò"
+
+#: widgets/krichtextwidget.cpp:326
+#, kde-format
+msgctxt "@action"
+msgid "&Justify"
+msgstr "&Justëjë"
+
+#: widgets/krichtextwidget.cpp:327
+#, kde-format
+msgctxt "@label justify fill"
+msgid "Justify"
+msgstr "Justowanié"
+
+#: widgets/krichtextwidget.cpp:345
+#, kde-format
+msgctxt "@action"
+msgid "Left-to-Right"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:346
+#, kde-format
+msgctxt "@label left-to-right"
+msgid "Left-to-Right"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:351
+#, kde-format
+msgctxt "@action"
+msgid "Right-to-Left"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:352
+#, kde-format
+msgctxt "@label right-to-left"
+msgid "Right-to-Left"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:366
+#, kde-format
+msgctxt "@title:menu"
+msgid "List Style"
+msgstr "Sztél listë"
+
+#: widgets/krichtextwidget.cpp:369
+#, kde-format
+msgctxt "@item:inmenu no list style"
+msgid "None"
+msgstr "Felëjë"
+
+#: widgets/krichtextwidget.cpp:370
+#, kde-format
+msgctxt "@item:inmenu disc list style"
+msgid "Disc"
+msgstr "Disk"
+
+#: widgets/krichtextwidget.cpp:371
+#, kde-format
+msgctxt "@item:inmenu circle list style"
+msgid "Circle"
+msgstr "Kòło"
+
+#: widgets/krichtextwidget.cpp:372
+#, kde-format
+msgctxt "@item:inmenu square list style"
+msgid "Square"
+msgstr "Kwadrat"
+
+#: widgets/krichtextwidget.cpp:373
+#, kde-format
+msgctxt "@item:inmenu numbered lists"
+msgid "123"
+msgstr "123"
+
+#: widgets/krichtextwidget.cpp:374
+#, kde-format
+msgctxt "@item:inmenu lowercase abc lists"
+msgid "abc"
+msgstr "abc"
+
+#: widgets/krichtextwidget.cpp:375
+#, kde-format
+msgctxt "@item:inmenu uppercase abc lists"
+msgid "ABC"
+msgstr "ABC"
+
+#: widgets/krichtextwidget.cpp:376
+#, kde-format
+msgctxt "@item:inmenu lower case roman numerals"
+msgid "i ii iii"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:377
+#, kde-format
+msgctxt "@item:inmenu upper case roman numerals"
+msgid "I II III"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:397
+#, kde-format
+msgctxt "@action"
+msgid "Increase Indent"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:409
+#, kde-format
+msgctxt "@action"
+msgid "Decrease Indent"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:421
+#, kde-format
+msgctxt "@action"
+msgid "Insert Rule Line"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:430
+#, kde-format
+msgctxt "@action"
+msgid "Link"
+msgstr "Lënk"
+
+#: widgets/krichtextwidget.cpp:442
+#, kde-format
+msgctxt "@action"
+msgid "Format Painter"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:454
+#, kde-format
+msgctxt "@action"
+msgid "To Plain Text"
+msgstr "Do czëstégò tekstu"
+
+#: widgets/krichtextwidget.cpp:463
+#, kde-format
+msgctxt "@action"
+msgid "Subscript"
+msgstr "Subskribùjë"
+
+#: widgets/krichtextwidget.cpp:468
+#, kde-format
+msgctxt "@action"
+msgid "Superscript"
+msgstr "Superskript"
+
+#: widgets/krichtextwidget.cpp:480
+#, fuzzy, kde-format
+#| msgid "Loading Preview"
+msgctxt "@title:menu"
+msgid "Heading Level"
+msgstr "Ladëje pòdzérk"
+
+#: widgets/krichtextwidget.cpp:481
+#, fuzzy, kde-format
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Basic Latin"
+msgctxt "@item:inmenu no heading"
+msgid "Basic text"
+msgstr "Spòdlowi łacëzniany"
+
+#: widgets/krichtextwidget.cpp:482
+#, fuzzy, kde-format
+#| msgctxt "Title of the notified event"
+#| msgid "Title"
+msgctxt "@item:inmenu heading level 1 (largest)"
+msgid "Title"
+msgstr "Titel"
+
+#: widgets/krichtextwidget.cpp:483
+#, fuzzy, kde-format
+#| msgid "Untitled"
+msgctxt "@item:inmenu heading level 2"
+msgid "Subtitle"
+msgstr "Bez miona"
+
+#: widgets/krichtextwidget.cpp:484
+#, fuzzy, kde-format
+#| msgid "Action"
+msgctxt "@item:inmenu heading level 3"
+msgid "Section"
+msgstr "Dzejanié"
+
+#: widgets/krichtextwidget.cpp:485
+#, fuzzy, kde-format
+#| msgid "Question"
+msgctxt "@item:inmenu heading level 4"
+msgid "Subsection"
+msgstr "Pëtanié"
+
+#: widgets/krichtextwidget.cpp:486
+#, fuzzy, kde-format
+#| msgid "Separator, Paragraph"
+msgctxt "@item:inmenu heading level 5"
+msgid "Paragraph"
+msgstr "Separatora, akapit"
+
+#: widgets/krichtextwidget.cpp:487
+#, fuzzy, kde-format
+#| msgid "Separator, Paragraph"
+msgctxt "@item:inmenu heading level 6 (smallest)"
+msgid "Subparagraph"
+msgstr "Separatora, akapit"
+
+#: widgets/ktextedit.cpp:47
+#, kde-format
+msgid "Nothing to spell check."
+msgstr "NIe dô niczegò dze mòże sprôwdzëc pisënk."
+
+#: widgets/ktextedit.cpp:501
+#, kde-format
+msgid "Check Spelling..."
+msgstr "Sprôwdzë pisënk..."
+
+#: widgets/ktextedit.cpp:506
+#, fuzzy, kde-format
+#| msgid "Spell Checking"
+msgid "Spell Checking Language"
+msgstr "Sprôwdzanié pisënkù"
+
+#: widgets/ktextedit.cpp:527
+#, kde-format
+msgid "Auto Spell Check"
+msgstr "Aùtomatné sprôwdzanié pisënkù"
+
+#: widgets/ktextedit.cpp:533
+#, kde-format
+msgid "Allow Tabulations"
+msgstr "Dopùszczë tabùlacëjã"
+
+#: widgets/ktextedit.cpp:566
+#, kde-format
+msgid "Speak Text"
+msgstr "Gôdôj tekst"

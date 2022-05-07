@@ -1,0 +1,746 @@
+# translation of kdelibs4.po to
+# Malayalam translation of kdelibs4.
+# Copyright (C) 2007-2010 This_file_is_part_of_KDE
+# This file is distributed under the same license as the kdelibs package.
+# Anoop | അനൂപ് Panavalappil | പനവളപ്പില്‍ <gnuanu@gmail.com>, 2008.
+# ANI PETER|അനി പീറ്റര്‍ <peter.ani@gmail.com>, 2008.
+# Maxin B. John <maxinbjohn@gmail.com>, 2007.
+# Manu S Madhav | മനു എസ് മാധവ് <manusmad@gmail.com>, 2008.
+# Praveen Arimbrathodiyil <pravi.a@gmail.com>, 2007, 2008, 2009, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-11-24 00:25+0000\n"
+"PO-Revision-Date: 2010-12-29 15:32+0530\n"
+"Last-Translator: \n"
+"Language-Team: SMC <smc.org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: dialogs/klinkdialog.cpp:39
+#, kde-format
+msgid "Manage Link"
+msgstr "ലിങ്ക് പാലിക്കുക"
+
+#: dialogs/klinkdialog.cpp:46
+#, kde-format
+msgid "Link Text:"
+msgstr "ലിങ്ക് പദാവലി"
+
+#: dialogs/klinkdialog.cpp:49
+#, kde-format
+msgid "Link URL:"
+msgstr "ലിങ്ക് യുആര്‍എല്‍:"
+
+#: findreplace/kfind.cpp:52
+#, kde-format
+msgid "Find Next"
+msgstr "അടുത്തതു് കണ്ടുപിടിക്കുക"
+
+#: findreplace/kfind.cpp:56
+#, kde-format
+msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
+msgstr "<qt>'<b>%1</b>' എന്നതിന്റെ അടുത്ത സ്ഥലം കണ്ടെത്തട്ടെ?</qt>"
+
+#: findreplace/kfind.cpp:707 findreplace/kfind.cpp:728
+#, kde-format
+msgid "1 match found."
+msgid_plural "%1 matches found."
+msgstr[0] "ചേര്‍ച്ചയുള്ള ഒരെണ്ണം കിട്ടി."
+msgstr[1] "ചേര്‍ച്ചയുള്ള %1 എണ്ണം കിട്ടി."
+
+#: findreplace/kfind.cpp:709
+#, kde-format
+msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
+msgstr "<qt>'<b>%1</b>'-നു് ചേരുന്നതൊന്നും കിട്ടിയില്ല.</qt>"
+
+#: findreplace/kfind.cpp:730
+#, kde-format
+msgid "No matches found for '<b>%1</b>'."
+msgstr "'<b>%1</b>'-നു് ചേരുന്നതൊന്നും കിട്ടിയില്ല."
+
+#: findreplace/kfind.cpp:734 findreplace/kreplace.cpp:435
+#, kde-format
+msgid "Beginning of document reached."
+msgstr "രേഖയുടെ തുടക്കത്തിലെത്തി."
+
+#: findreplace/kfind.cpp:736 findreplace/kreplace.cpp:437
+#, kde-format
+msgid "End of document reached."
+msgstr "രേഖയുടെ അവസാനമെത്തി."
+
+#. i18n() of the first if() because of the plural form.
+#. Hope this word puzzle is ok, it's a different sentence
+#: findreplace/kfind.cpp:742
+#, kde-format
+msgid "Continue from the end?"
+msgstr "അവസാനഭാഗം മുതല്‍ തുടരണമോ?"
+
+#: findreplace/kfind.cpp:742
+#, kde-format
+msgid "Continue from the beginning?"
+msgstr "തുടക്കത്തില്‍ നിന്നും തുടരണമോ?"
+
+#: findreplace/kfinddialog.cpp:35
+#, kde-format
+msgid "Find Text"
+msgstr "വാചകം കണ്ടുപിടിക്കുക"
+
+#: findreplace/kfinddialog.cpp:76
+#, kde-format
+msgctxt "@title:group"
+msgid "Find"
+msgstr "കണ്ടുപിടിയ്ക്കുക"
+
+#: findreplace/kfinddialog.cpp:79
+#, kde-format
+msgid "&Text to find:"
+msgstr "കണ്ടുപിടിക്കുവാനുള്ള &വാചകം"
+
+#: findreplace/kfinddialog.cpp:83
+#, kde-format
+msgid "Regular e&xpression"
+msgstr "സാധാരണയായ &പദപ്രയോഗം"
+
+#: findreplace/kfinddialog.cpp:84
+#, kde-format
+msgid "&Edit..."
+msgstr "&മാറ്റം വരുത്തുക..."
+
+#: findreplace/kfinddialog.cpp:93
+#, kde-format
+msgid "Replace With"
+msgstr "ഇതുപയോഗിച്ച് മാറ്റി എഴുതുക"
+
+#: findreplace/kfinddialog.cpp:96
+#, kde-format
+msgid "Replace&ment text:"
+msgstr "മാറ്റി എഴുതാനുള്ള പദാവലി:"
+
+#: findreplace/kfinddialog.cpp:100
+#, kde-format
+msgid "Use p&laceholders"
+msgstr "&സ്ഥാനസൂചകങ്ങള്‍ ഉപയോഗിക്കുക"
+
+#: findreplace/kfinddialog.cpp:101
+#, kde-format
+msgid "Insert Place&holder"
+msgstr "സ്ഥാന&സൂചകം ഇടയ്ക്ക് ചേര്‍ക്കുക"
+
+#: findreplace/kfinddialog.cpp:110
+#, kde-format
+msgid "Options"
+msgstr "ഐച്ഛികങ്ങള്‍"
+
+#: findreplace/kfinddialog.cpp:113
+#, kde-format
+msgid "C&ase sensitive"
+msgstr "&വലിയക്ഷരചെറിയക്ഷര വ്യത്യാസമുള്ള"
+
+#: findreplace/kfinddialog.cpp:114
+#, kde-format
+msgid "&Whole words only"
+msgstr "&മുഴുവന്‍ വാക്കുകള്‍ മാത്രം"
+
+#: findreplace/kfinddialog.cpp:115
+#, kde-format
+msgid "From c&ursor"
+msgstr "&കഴ്സറില്‍ നിന്ന്"
+
+#: findreplace/kfinddialog.cpp:116
+#, kde-format
+msgid "Find &backwards"
+msgstr "&പുറകോട്ട് കണ്ടുപിടിക്കുക"
+
+#: findreplace/kfinddialog.cpp:117
+#, kde-format
+msgid "&Selected text"
+msgstr "&തെരഞ്ഞെടുത്ത വാചകം"
+
+#: findreplace/kfinddialog.cpp:124
+#, kde-format
+msgid "&Prompt on replace"
+msgstr "മാറ്റിവയ്ക്കുമ്പോള്‍ &ചോദിയ്ക്കുക"
+
+#: findreplace/kfinddialog.cpp:204
+#, kde-format
+msgid "&Replace"
+msgstr "മാറ്റുക &r"
+
+#: findreplace/kfinddialog.cpp:206
+#, kde-format
+msgid "Start replace"
+msgstr "മാറ്റിവയ്ക്കല്‍ തുടങ്ങുക"
+
+#: findreplace/kfinddialog.cpp:207
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Replace</b> button, the text you entered above is "
+"searched for within the document and any occurrence is replaced with the "
+"replacement text.</qt>"
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:212
+#, kde-format
+msgid "&Find"
+msgstr "കണ്ടുപിടിയ്ക്കുക &f"
+
+#: findreplace/kfinddialog.cpp:214
+#, kde-format
+msgid "Start searching"
+msgstr "തെരച്ചില്‍ ആരംഭിക്കുക"
+
+#: findreplace/kfinddialog.cpp:215
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Find</b> button, the text you entered above is "
+"searched for within the document.</qt>"
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:220
+#, kde-format
+msgid ""
+"Enter a pattern to search for, or select a previous pattern from the list."
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:221
+#, kde-format
+msgid "If enabled, search for a regular expression."
+msgstr "പ്രാവര്‍ത്തികമാക്കിയിട്ടുണ്ടെങ്കില്‍, റഗുലര്‍ എക്സ്പ്രഷനുവേണ്ടി തെരയുക."
+
+#: findreplace/kfinddialog.cpp:222
+#, kde-format
+msgid "Click here to edit your regular expression using a graphical editor."
+msgstr "റഗുലര്‍ എക്സ്പ്രഷനുവേണ്ടി"
+
+#: findreplace/kfinddialog.cpp:223
+#, kde-format
+msgid "Enter a replacement string, or select a previous one from the list."
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:225
+#, kde-format
+msgid ""
+"<qt>If enabled, any occurrence of <code><b>\\N</b></code>, where <code><b>N</"
+"b></code> is an integer number, will be replaced with the corresponding "
+"capture (\"parenthesized substring\") from the pattern.<p>To include (a "
+"literal <code><b>\\N</b></code> in your replacement, put an extra backslash "
+"in front of it, like <code><b>\\\\N</b></code>.</p></qt>"
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:231
+#, kde-format
+msgid "Click for a menu of available captures."
+msgstr "ലഭ്യമായ കൈക്കലാക്കിയവയുടെ വിഭവസൂചികയ്ക്കായി ക്ലിക്ക് ചെയ്യുക."
+
+#: findreplace/kfinddialog.cpp:232
+#, kde-format
+msgid "Require word boundaries in both ends of a match to succeed."
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:233
+#, kde-format
+msgid "Start searching at the current cursor location rather than at the top."
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:234
+#, kde-format
+msgid "Only search within the current selection."
+msgstr "നിലവിലുള്ള സെലക്ഷനില്‍ മാത്രം തെരയുക."
+
+#: findreplace/kfinddialog.cpp:235
+#, kde-format
+msgid ""
+"Perform a case sensitive search: entering the pattern 'Joe' will not match "
+"'joe' or 'JOE', only 'Joe'."
+msgstr ""
+
+#: findreplace/kfinddialog.cpp:236
+#, kde-format
+msgid "Search backwards."
+msgstr "പുറകോട്ടു് തെരയുക."
+
+#: findreplace/kfinddialog.cpp:237
+#, kde-format
+msgid "Ask before replacing each match found."
+msgstr "കണ്ടെത്തുന്ന ഓരോ പൊരുത്തവും മാറ്റിവയ്ക്കുന്നതിനുമുമ്പ് ചോദിയ്ക്കുക."
+
+#: findreplace/kfinddialog.cpp:459
+msgid "Any Character"
+msgstr "ഏതെങ്കിലും അക്ഷരരൂപം"
+
+#: findreplace/kfinddialog.cpp:460
+msgid "Start of Line"
+msgstr "വരിയുടെ തുടക്കം"
+
+#: findreplace/kfinddialog.cpp:461
+msgid "End of Line"
+msgstr "വരിയുടെ അവസാനം"
+
+#: findreplace/kfinddialog.cpp:462
+msgid "Set of Characters"
+msgstr "അക്ഷരരൂപങ്ങളുടെ കൂട്ടം"
+
+#: findreplace/kfinddialog.cpp:463
+msgid "Repeats, Zero or More Times"
+msgstr "പൂജ്യമോ അതിലേറെത്തവണയോ വീണ്ടുമുണ്ടാകുന്നു"
+
+#: findreplace/kfinddialog.cpp:464
+msgid "Repeats, One or More Times"
+msgstr "ഒന്നോ അതിലധികമോ ഉറവിടങ്ങള്‍ സിന്‍ക് ചെയ്യുന്നതില്‍ പരാജയം: %s"
+
+#: findreplace/kfinddialog.cpp:465
+msgid "Optional"
+msgstr "ഐച്ഛികമായ"
+
+#: findreplace/kfinddialog.cpp:466
+msgid "Escape"
+msgstr "Escape"
+
+#: findreplace/kfinddialog.cpp:467
+msgid "TAB"
+msgstr "TAB"
+
+#: findreplace/kfinddialog.cpp:468
+msgid "Newline"
+msgstr "ന്യൂലൈന്‍"
+
+#: findreplace/kfinddialog.cpp:469
+msgid "Carriage Return"
+msgstr "കാര്യേജ് റിട്ടേണ്‍"
+
+#: findreplace/kfinddialog.cpp:470
+msgid "White Space"
+msgstr "വൈറ്റ് സ്പെയിസ്"
+
+#: findreplace/kfinddialog.cpp:471
+msgid "Digit"
+msgstr "അക്കം"
+
+#: findreplace/kfinddialog.cpp:579
+#, kde-format
+msgid "Complete Match"
+msgstr "മുഴുവന്‍ പൊരുത്തം"
+
+#: findreplace/kfinddialog.cpp:583
+#, kde-format
+msgid "Captured Text (%1)"
+msgstr "കൈക്കലാക്കിയ പദാവലി (%1)"
+
+#: findreplace/kfinddialog.cpp:593
+#, kde-format
+msgid "You must enter some text to search for."
+msgstr "തെരയാന്‍ നിങ്ങള്‍ കുറച്ചു പദങ്ങള്‍ നല്‍കുക."
+
+#: findreplace/kfinddialog.cpp:600
+#, kde-format
+msgid "Invalid PCRE pattern syntax."
+msgstr ""
+
+#: findreplace/kreplace.cpp:52 findreplace/kreplace.cpp:63
+#, kde-format
+msgid "Replace"
+msgstr "മാറ്റുക"
+
+#: findreplace/kreplace.cpp:59
+#, kde-format
+msgctxt "@action:button Replace all occurrences"
+msgid "&All"
+msgstr "&എല്ലാം"
+
+#: findreplace/kreplace.cpp:61
+#, kde-format
+msgid "&Skip"
+msgstr "&ഉപേക്ഷിക്കുക"
+
+#: findreplace/kreplace.cpp:80
+#, kde-format
+msgid "Replace '%1' with '%2'?"
+msgstr "'%2' ഉപയോഗിച്ചു് '%1 മാറ്റണമോ?"
+
+#: findreplace/kreplace.cpp:182 findreplace/kreplace.cpp:429
+#, kde-format
+msgid "No text was replaced."
+msgstr "പദാവലിയൊന്നും മാറ്റിയില്ല."
+
+#: findreplace/kreplace.cpp:184 findreplace/kreplace.cpp:431
+#, kde-format
+msgid "1 replacement done."
+msgid_plural "%1 replacements done."
+msgstr[0] "ഒരു മാറ്റം വരുത്തി."
+msgstr[1] "%1 മാറ്റങ്ങള്‍ വരുത്തി."
+
+#: findreplace/kreplace.cpp:444
+#, kde-format
+msgid "Do you want to restart search from the end?"
+msgstr "രേഖയുടെ അവസാനം മുതല്‍ നിങ്ങള്‍ക്കു് തെരച്ചില്‍ വീണ്ടും ആരംഭിക്കണമോ?"
+
+#: findreplace/kreplace.cpp:444
+#, kde-format
+msgid "Do you want to restart search at the beginning?"
+msgstr "രേഖയുടെ തുടക്കം മുതല്‍ നിങ്ങള്‍ക്കു് തെരച്ചില്‍ വീണ്ടും ആരംഭിക്കണമോ?"
+
+#: findreplace/kreplace.cpp:449
+#, kde-format
+msgctxt "@action:button Restart find & replace"
+msgid "Restart"
+msgstr "വീണ്ടും ആരംഭിക്കുക"
+
+#: findreplace/kreplace.cpp:450
+#, kde-format
+msgctxt "@action:button Stop find & replace"
+msgid "Stop"
+msgstr "നിര്‍ത്തുക"
+
+#: findreplace/kreplacedialog.cpp:153
+#, kde-format
+msgid "Your replacement string is referencing a capture greater than '\\%1', "
+msgstr ""
+
+#: findreplace/kreplacedialog.cpp:154
+#, kde-format
+msgid "but your pattern only defines 1 capture."
+msgid_plural "but your pattern only defines %1 captures."
+msgstr[0] "പക്ഷേ നിങ്ങളുടെ മാതൃക 1 പിടിത്തത്തെയേ നിര്‍വചിക്കുന്നുള്ളൂ."
+msgstr[1] "പക്ഷേ നിങ്ങളുടെ മാതൃക %1 പിടിത്തങ്ങളെയേ നിര്‍വചിക്കുന്നുള്ളൂ."
+
+#: findreplace/kreplacedialog.cpp:155
+#, kde-format
+msgid "but your pattern defines no captures."
+msgstr "പക്ഷേ നിങ്ങളുടെ മാതൃക ഒരു പിടിത്തത്തേയും നിര്‍വചിക്കുന്നില്ല."
+
+#: findreplace/kreplacedialog.cpp:156
+#, kde-format
+msgid ""
+"\n"
+"Please correct."
+msgstr ""
+"\n"
+"ദയവായി തിരുത്തുക."
+
+#: widgets/krichtextwidget.cpp:207
+#, kde-format
+msgctxt "@action"
+msgid "Text &Color..."
+msgstr "വാചകത്തിന്റെ &നിറം"
+
+#: widgets/krichtextwidget.cpp:208
+#, kde-format
+msgctxt "@label stroke color"
+msgid "Color"
+msgstr "നിറം"
+
+#: widgets/krichtextwidget.cpp:221
+#, kde-format
+msgctxt "@action"
+msgid "Text &Highlight..."
+msgstr "പദാവലി എടുത്തുകാണിയ്ക്കുക"
+
+#: widgets/krichtextwidget.cpp:234
+#, kde-format
+msgctxt "@action"
+msgid "&Font"
+msgstr "&ലിപി"
+
+#: widgets/krichtextwidget.cpp:244
+#, kde-format
+msgctxt "@action"
+msgid "Font &Size"
+msgstr "ലിപിയുടെ &വലിപ്പം"
+
+#: widgets/krichtextwidget.cpp:253
+#, kde-format
+msgctxt "@action boldify selected text"
+msgid "&Bold"
+msgstr "&തടിച്ച"
+
+#: widgets/krichtextwidget.cpp:267
+#, kde-format
+msgctxt "@action italicize selected text"
+msgid "&Italic"
+msgstr "&ചരിഞ്ഞ"
+
+#: widgets/krichtextwidget.cpp:281
+#, kde-format
+msgctxt "@action underline selected text"
+msgid "&Underline"
+msgstr "&അടിവരയിടുക"
+
+#: widgets/krichtextwidget.cpp:294
+#, kde-format
+msgctxt "@action"
+msgid "&Strike Out"
+msgstr "&വെട്ടിമാറ്റുക"
+
+#: widgets/krichtextwidget.cpp:308
+#, kde-format
+msgctxt "@action"
+msgid "Align &Left"
+msgstr "ഇടത്തേക്കു് ക്രമീകരിക്കുക"
+
+#: widgets/krichtextwidget.cpp:309
+#, kde-format
+msgctxt "@label left justify"
+msgid "Left"
+msgstr "ഇടതു്"
+
+#: widgets/krichtextwidget.cpp:314
+#, kde-format
+msgctxt "@action"
+msgid "Align &Center"
+msgstr "മദ്ധ്യത്തിലേക്കു് ക്രമീകരിക്കുക"
+
+#: widgets/krichtextwidget.cpp:315
+#, kde-format
+msgctxt "@label center justify"
+msgid "Center"
+msgstr "മദ്ധ്യം"
+
+#: widgets/krichtextwidget.cpp:320
+#, kde-format
+msgctxt "@action"
+msgid "Align &Right"
+msgstr "വലത്തേക്കു് ക്രമീകരിക്കുക"
+
+#: widgets/krichtextwidget.cpp:321
+#, kde-format
+msgctxt "@label right justify"
+msgid "Right"
+msgstr "വലതു്"
+
+#: widgets/krichtextwidget.cpp:326
+#, kde-format
+msgctxt "@action"
+msgid "&Justify"
+msgstr "&സമമാക്കുക"
+
+#: widgets/krichtextwidget.cpp:327
+#, kde-format
+msgctxt "@label justify fill"
+msgid "Justify"
+msgstr "സമമാക്കുക"
+
+#: widgets/krichtextwidget.cpp:345
+#, kde-format
+msgctxt "@action"
+msgid "Left-to-Right"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:346
+#, kde-format
+msgctxt "@label left-to-right"
+msgid "Left-to-Right"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:351
+#, kde-format
+msgctxt "@action"
+msgid "Right-to-Left"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:352
+#, kde-format
+msgctxt "@label right-to-left"
+msgid "Right-to-Left"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:366
+#, kde-format
+msgctxt "@title:menu"
+msgid "List Style"
+msgstr "പട്ടിക രീതി"
+
+#: widgets/krichtextwidget.cpp:369
+#, kde-format
+msgctxt "@item:inmenu no list style"
+msgid "None"
+msgstr "ഒന്നുമല്ല"
+
+#: widgets/krichtextwidget.cpp:370
+#, kde-format
+msgctxt "@item:inmenu disc list style"
+msgid "Disc"
+msgstr "ഡിസ്ക്"
+
+#: widgets/krichtextwidget.cpp:371
+#, kde-format
+msgctxt "@item:inmenu circle list style"
+msgid "Circle"
+msgstr "വട്ടം"
+
+#: widgets/krichtextwidget.cpp:372
+#, kde-format
+msgctxt "@item:inmenu square list style"
+msgid "Square"
+msgstr "ചതുരം"
+
+#: widgets/krichtextwidget.cpp:373
+#, kde-format
+msgctxt "@item:inmenu numbered lists"
+msgid "123"
+msgstr "123"
+
+#: widgets/krichtextwidget.cpp:374
+#, kde-format
+msgctxt "@item:inmenu lowercase abc lists"
+msgid "abc"
+msgstr "abc"
+
+#: widgets/krichtextwidget.cpp:375
+#, kde-format
+msgctxt "@item:inmenu uppercase abc lists"
+msgid "ABC"
+msgstr "ABC"
+
+#: widgets/krichtextwidget.cpp:376
+#, kde-format
+msgctxt "@item:inmenu lower case roman numerals"
+msgid "i ii iii"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:377
+#, kde-format
+msgctxt "@item:inmenu upper case roman numerals"
+msgid "I II III"
+msgstr ""
+
+#: widgets/krichtextwidget.cpp:397
+#, kde-format
+msgctxt "@action"
+msgid "Increase Indent"
+msgstr "വിടവ് കൂട്ടുക"
+
+#: widgets/krichtextwidget.cpp:409
+#, kde-format
+msgctxt "@action"
+msgid "Decrease Indent"
+msgstr "വിടവ് കുറയ്ക്കുക"
+
+#: widgets/krichtextwidget.cpp:421
+#, kde-format
+msgctxt "@action"
+msgid "Insert Rule Line"
+msgstr "ഇടയില്‍ നിയമവരി ചേര്‍ക്കുക"
+
+#: widgets/krichtextwidget.cpp:430
+#, kde-format
+msgctxt "@action"
+msgid "Link"
+msgstr "ലിങ്ക്"
+
+#: widgets/krichtextwidget.cpp:442
+#, kde-format
+msgctxt "@action"
+msgid "Format Painter"
+msgstr "സമയ രൂപം"
+
+#: widgets/krichtextwidget.cpp:454
+#, kde-format
+msgctxt "@action"
+msgid "To Plain Text"
+msgstr "സാധാരണ പദാവലിയ്ക്കുവേണ്ടി"
+
+#: widgets/krichtextwidget.cpp:463
+#, kde-format
+msgctxt "@action"
+msgid "Subscript"
+msgstr "വരിയ്ക്കുതാഴെ"
+
+#: widgets/krichtextwidget.cpp:468
+#, kde-format
+msgctxt "@action"
+msgid "Superscript"
+msgstr "വരിയ്ക്കു് മുകളില്‍"
+
+#: widgets/krichtextwidget.cpp:480
+#, fuzzy, kde-format
+#| msgid "Loading Preview"
+msgctxt "@title:menu"
+msgid "Heading Level"
+msgstr "അച്ചടിയ്ക്കുന്നതിന് മുമ്പ് കണ്ടുനോക്കുന്നു"
+
+#: widgets/krichtextwidget.cpp:481
+#, fuzzy, kde-format
+#| msgctxt "KCharselect unicode block name"
+#| msgid "Basic Latin"
+msgctxt "@item:inmenu no heading"
+msgid "Basic text"
+msgstr "അടിസ്ഥാന ലാറ്റിന്‍"
+
+#
+#: widgets/krichtextwidget.cpp:482
+#, fuzzy, kde-format
+#| msgctxt "Title of the notified event"
+#| msgid "Title"
+msgctxt "@item:inmenu heading level 1 (largest)"
+msgid "Title"
+msgstr "തലക്കെട്ട്"
+
+#: widgets/krichtextwidget.cpp:483
+#, fuzzy, kde-format
+#| msgid "Untitled"
+msgctxt "@item:inmenu heading level 2"
+msgid "Subtitle"
+msgstr "തലക്കെട്ടില്ലാത്ത"
+
+#: widgets/krichtextwidget.cpp:484
+#, fuzzy, kde-format
+#| msgid "Action"
+msgctxt "@item:inmenu heading level 3"
+msgid "Section"
+msgstr "നടപടി"
+
+#: widgets/krichtextwidget.cpp:485
+#, fuzzy, kde-format
+#| msgid "Question"
+msgctxt "@item:inmenu heading level 4"
+msgid "Subsection"
+msgstr "ചോദ്യം"
+
+#: widgets/krichtextwidget.cpp:486
+#, fuzzy, kde-format
+#| msgid "Separator, Paragraph"
+msgctxt "@item:inmenu heading level 5"
+msgid "Paragraph"
+msgstr "വിടവടയാളം, ഖണ്ഡിക"
+
+#: widgets/krichtextwidget.cpp:487
+#, fuzzy, kde-format
+#| msgid "Separator, Paragraph"
+msgctxt "@item:inmenu heading level 6 (smallest)"
+msgid "Subparagraph"
+msgstr "വിടവടയാളം, ഖണ്ഡിക"
+
+#: widgets/ktextedit.cpp:47
+#, kde-format
+msgid "Nothing to spell check."
+msgstr "അക്ഷരത്തെറ്റു് പരിശോധിക്കുന്നതിനൊന്നുമില്ല."
+
+#: widgets/ktextedit.cpp:501
+#, kde-format
+msgid "Check Spelling..."
+msgstr "അക്ഷരത്തെറ്റു്ം പരിശോധിക്കുക..."
+
+#: widgets/ktextedit.cpp:506
+#, fuzzy, kde-format
+msgid "Spell Checking Language"
+msgstr "അക്ഷരവിന്യാസം പരിശോധിക്കുന്നു"
+
+#: widgets/ktextedit.cpp:527
+#, kde-format
+msgid "Auto Spell Check"
+msgstr "ലിപി പരിശോധന സ്വയം നടത്തല്‍"
+
+#: widgets/ktextedit.cpp:533
+#, kde-format
+msgid "Allow Tabulations"
+msgstr "ഒരിക്കല്‍ മാത്രം അനുവദിക്കുക (_O)"
+
+#: widgets/ktextedit.cpp:566
+#, kde-format
+msgid "Speak Text"
+msgstr "പദാവലി വായിയ്ക്കുക"
