@@ -93,7 +93,10 @@ void KReplaceTest::slotHighlight(const QString &str, int matchingIndex, int matc
         dlg->hide();
 
         QPushButton *button = dlg->findChild<QPushButton *>(m_buttonName);
-        QMetaObject::invokeMethod(button, "click", Qt::QueuedConnection);
+        auto clickFunc = [button]() {
+            button->click();
+        };
+        QMetaObject::invokeMethod(button, clickFunc, Qt::QueuedConnection);
 
         m_needEventLoop = true;
     }

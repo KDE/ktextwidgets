@@ -304,7 +304,10 @@ void KRichTextEdit::switchToPlainText()
     if (d->mMode == Rich) {
         d->mMode = Plain;
         // TODO: Warn the user about this?
-        QMetaObject::invokeMethod(this, "insertPlainTextImplementation");
+        auto insertPlainFunc = [this]() {
+            insertPlainTextImplementation();
+        };
+        QMetaObject::invokeMethod(this, insertPlainFunc);
         setAcceptRichText(false);
         Q_EMIT textModeChanged(d->mMode);
     }
