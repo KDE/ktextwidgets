@@ -102,7 +102,7 @@ ecm_generate_headers(KTextWidgets_HEADERS
   REQUIRED_HEADERS KTextWidgets_HEADERS
 )
 
-install(TARGETS KF5TextWidgets EXPORT KF5TextWidgetsTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF5TextWidgets EXPORT KF5TextWidgetsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/ktextwidgets_export.h
