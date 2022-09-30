@@ -741,9 +741,12 @@ bool KFind::shouldRestart(bool forceAsking, bool showNumMatches) const
     // Hope this word puzzle is ok, it's a different sentence
     message += (d->options & KFind::FindBackwards) ? i18n("Continue from the end?") : i18n("Continue from the beginning?");
 
-    int ret =
-        KMessageBox::questionYesNo(dialogsParent(), QStringLiteral("<qt>%1</qt>").arg(message), QString(), KStandardGuiItem::cont(), KStandardGuiItem::stop());
-    bool yes = (ret == KMessageBox::Yes);
+    int ret = KMessageBox::questionTwoActions(dialogsParent(),
+                                              QStringLiteral("<qt>%1</qt>").arg(message),
+                                              QString(),
+                                              KStandardGuiItem::cont(),
+                                              KStandardGuiItem::stop());
+    bool yes = (ret == KMessageBox::PrimaryAction);
     if (yes) {
         const_cast<KFindPrivate *>(d)->options &= ~KFind::FromCursor; // clear FromCursor option
     }

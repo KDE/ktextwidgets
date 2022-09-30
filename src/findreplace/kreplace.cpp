@@ -443,12 +443,12 @@ bool KReplace::shouldRestart(bool forceAsking, bool showNumMatches) const
     message +=
         (d->options & KFind::FindBackwards) ? i18n("Do you want to restart search from the end?") : i18n("Do you want to restart search at the beginning?");
 
-    int ret = KMessageBox::questionYesNo(parentWidget(),
-                                         message,
-                                         QString(),
-                                         KGuiItem(i18nc("@action:button Restart find & replace", "Restart")),
-                                         KGuiItem(i18nc("@action:button Stop find & replace", "Stop")));
-    return (ret == KMessageBox::Yes);
+    int ret = KMessageBox::questionTwoActions(parentWidget(),
+                                              message,
+                                              QString(),
+                                              KGuiItem(i18nc("@action:button Restart find & replace", "Restart")),
+                                              KGuiItem(i18nc("@action:button Stop find & replace", "Stop")));
+    return (ret == KMessageBox::PrimaryAction);
 }
 
 void KReplace::closeReplaceNextDialog()
