@@ -1,0 +1,764 @@
+# translation of kdelibs4.po to Slovenian
+# Translation of kdelibs4.po to Slovenian
+# KDELIBS translation to Slovenian language
+# $Id: kdelibs4.po 685926 2007-07-10 04:25:11Z scripty $
+# $Source$
+#
+# Copyright (C) 2002,2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
+# Roman Maurer <roman.maurer@amis.net>, 2002.
+# Gregor Rakar <gregor.rakar@kiss.uni-lj.si>, 2002,2003.
+# Gregor Rakar <gregor.rakar@kiss.si>, 2003, 2004, 2005.
+# Andrej Vernekar <andrej.vernekar@moj.net>, 2005, 2007, 2008, 2009, 2010.
+# Jure Repinc <jlp@holodeck1.com>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013.
+# Andrej Vernekar <andrej.vernerkar@moj.net>, 2008, 2011, 2012.
+# Andrej Mernik <andrejm@ubuntu.si>, 2012, 2013, 2014, 2015.
+# Matjaž Jeran <matjaz.jeran@amis.net>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: kdelibs4\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-11-24 00:25+0000\n"
+"PO-Revision-Date: 2020-05-19 10:37+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"X-Generator: Poedit 2.3\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+
+#: dialogs/klinkdialog.cpp:39
+#, kde-format
+msgid "Manage Link"
+msgstr "Upravljaj povezavo"
+
+#: dialogs/klinkdialog.cpp:46
+#, kde-format
+msgid "Link Text:"
+msgstr "Besedilo povezave:"
+
+#: dialogs/klinkdialog.cpp:49
+#, kde-format
+msgid "Link URL:"
+msgstr "Povezava URL:"
+
+#: findreplace/kfind.cpp:52
+#, kde-format
+msgid "Find Next"
+msgstr "Najdi naslednje"
+
+#: findreplace/kfind.cpp:56
+#, kde-format
+msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
+msgstr "<qt>Najdem naslednjo pojavitev '<b>%1</b>'?</qt>"
+
+#: findreplace/kfind.cpp:707 findreplace/kfind.cpp:728
+#, kde-format
+msgid "1 match found."
+msgid_plural "%1 matches found."
+msgstr[0] "Najden %1 zadetek."
+msgstr[1] "Najdena %1 zadetka."
+msgstr[2] "Najdeni %1 zadetki."
+msgstr[3] "Najdenih %1 zadetkov."
+
+#: findreplace/kfind.cpp:709
+#, kde-format
+msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
+msgstr "<qt>Ni zadetkov za '<b>%1</b>'.</qt>"
+
+#: findreplace/kfind.cpp:730
+#, kde-format
+msgid "No matches found for '<b>%1</b>'."
+msgstr "Ni zadetkov za '<b>%1</b>'."
+
+#: findreplace/kfind.cpp:734 findreplace/kreplace.cpp:435
+#, kde-format
+msgid "Beginning of document reached."
+msgstr "Dosežen je bil začetek dokumenta."
+
+#: findreplace/kfind.cpp:736 findreplace/kreplace.cpp:437
+#, kde-format
+msgid "End of document reached."
+msgstr "Dosežen je bil konec dokumenta."
+
+#. i18n() of the first if() because of the plural form.
+#. Hope this word puzzle is ok, it's a different sentence
+#: findreplace/kfind.cpp:742
+#, kde-format
+msgid "Continue from the end?"
+msgstr "Ali naj nadaljujem s konca?"
+
+#: findreplace/kfind.cpp:742
+#, kde-format
+msgid "Continue from the beginning?"
+msgstr "Ali naj nadaljujem od začetka?"
+
+#: findreplace/kfinddialog.cpp:35
+#, kde-format
+msgid "Find Text"
+msgstr "Najdi besedilo"
+
+#: findreplace/kfinddialog.cpp:76
+#, kde-format
+msgctxt "@title:group"
+msgid "Find"
+msgstr "Najdi"
+
+#: findreplace/kfinddialog.cpp:79
+#, kde-format
+msgid "&Text to find:"
+msgstr "Iskano besedilo:"
+
+#: findreplace/kfinddialog.cpp:83
+#, kde-format
+msgid "Regular e&xpression"
+msgstr "Regularni izraz"
+
+#: findreplace/kfinddialog.cpp:84
+#, kde-format
+msgid "&Edit..."
+msgstr "Ur&edi..."
+
+#: findreplace/kfinddialog.cpp:93
+#, kde-format
+msgid "Replace With"
+msgstr "Zamenjaj z"
+
+#: findreplace/kfinddialog.cpp:96
+#, kde-format
+msgid "Replace&ment text:"
+msgstr "Besedilo za zamenjavo:"
+
+#: findreplace/kfinddialog.cpp:100
+#, kde-format
+msgid "Use p&laceholders"
+msgstr "Uporabi vsebnike"
+
+#: findreplace/kfinddialog.cpp:101
+#, kde-format
+msgid "Insert Place&holder"
+msgstr "Vstavi vsebnik"
+
+#: findreplace/kfinddialog.cpp:110
+#, kde-format
+msgid "Options"
+msgstr "Možnosti"
+
+#: findreplace/kfinddialog.cpp:113
+#, kde-format
+msgid "C&ase sensitive"
+msgstr "Ločevanje velikosti črk"
+
+#: findreplace/kfinddialog.cpp:114
+#, kde-format
+msgid "&Whole words only"
+msgstr "Samo cele besede"
+
+#: findreplace/kfinddialog.cpp:115
+#, kde-format
+msgid "From c&ursor"
+msgstr "Od kazalke"
+
+#: findreplace/kfinddialog.cpp:116
+#, kde-format
+msgid "Find &backwards"
+msgstr "Najdi vzvratno"
+
+#: findreplace/kfinddialog.cpp:117
+#, kde-format
+msgid "&Selected text"
+msgstr "Izbrano besedilo"
+
+#: findreplace/kfinddialog.cpp:124
+#, kde-format
+msgid "&Prompt on replace"
+msgstr "Vprašaj ob zamenjavi"
+
+#: findreplace/kfinddialog.cpp:204
+#, kde-format
+msgid "&Replace"
+msgstr "Zamenjaj"
+
+#: findreplace/kfinddialog.cpp:206
+#, kde-format
+msgid "Start replace"
+msgstr "Začni zamenjavo"
+
+#: findreplace/kfinddialog.cpp:207
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Replace</b> button, the text you entered above is "
+"searched for within the document and any occurrence is replaced with the "
+"replacement text.</qt>"
+msgstr ""
+"<qt>Če kliknete gumb <b>Zamenjaj</b>, bo zgoraj vneseno besedilo poiskano "
+"znotraj dokumenta, vsaka pojavitev pa se bo zamenjala z zamenjalnim "
+"besedilom.</qt>"
+
+#: findreplace/kfinddialog.cpp:212
+#, kde-format
+msgid "&Find"
+msgstr "Najdi"
+
+#: findreplace/kfinddialog.cpp:214
+#, kde-format
+msgid "Start searching"
+msgstr "Začni iskanje"
+
+#: findreplace/kfinddialog.cpp:215
+#, kde-format
+msgid ""
+"<qt>If you press the <b>Find</b> button, the text you entered above is "
+"searched for within the document.</qt>"
+msgstr ""
+"<qt>Če kliknete gumb <b>Najdi</b>, bo zgoraj vneseno besedilo poiskano "
+"znotraj dokumenta.</qt>"
+
+#: findreplace/kfinddialog.cpp:220
+#, kde-format
+msgid ""
+"Enter a pattern to search for, or select a previous pattern from the list."
+msgstr ""
+"Vnesite vzorec, ki ga želite najti ali pa izberite prejšnjega s seznama."
+
+#: findreplace/kfinddialog.cpp:221
+#, kde-format
+msgid "If enabled, search for a regular expression."
+msgstr "Če je omogočeno, se išče po regularnih izrazih."
+
+#: findreplace/kfinddialog.cpp:222
+#, kde-format
+msgid "Click here to edit your regular expression using a graphical editor."
+msgstr ""
+"Kliknite tukaj za urejanje regularnega izraza z grafičnim urejevalnikom."
+
+#: findreplace/kfinddialog.cpp:223
+#, kde-format
+msgid "Enter a replacement string, or select a previous one from the list."
+msgstr "Vnesite niz za zamenjavo ali pa izberite prejšnjega s seznama."
+
+#: findreplace/kfinddialog.cpp:225
+#, kde-format
+msgid ""
+"<qt>If enabled, any occurrence of <code><b>\\N</b></code>, where <code><b>N</"
+"b></code> is an integer number, will be replaced with the corresponding "
+"capture (\"parenthesized substring\") from the pattern.<p>To include (a "
+"literal <code><b>\\N</b></code> in your replacement, put an extra backslash "
+"in front of it, like <code><b>\\\\N</b></code>.</p></qt>"
+msgstr ""
+"<qt>Če je omogočeno, bo vsaka pojavitev <code><b>\\N</b></code>, kjer je "
+"<code><b>N</b></code> celo število, zamenjana z ustreznim ujemanjem "
+"(\"oklepajni podniz\") iz vzorca.<p>Da bi vključili (dobesedno <code><b>\\N</"
+"b></code> v zamenjavi, dodajte dodatno nasprotno poševnico pred znak, kot "
+"<code><b>\\\\N</b></code>.</p></qt>"
+
+#: findreplace/kfinddialog.cpp:231
+#, kde-format
+msgid "Click for a menu of available captures."
+msgstr "Kliknite za meni razpoložljivih ujemanj."
+
+#: findreplace/kfinddialog.cpp:232
+#, kde-format
+msgid "Require word boundaries in both ends of a match to succeed."
+msgstr "Zahtevaj omejitve besed na obeh koncih, da ujemanje uspe."
+
+#: findreplace/kfinddialog.cpp:233
+#, kde-format
+msgid "Start searching at the current cursor location rather than at the top."
+msgstr "Začne iskanje na trenutnem mestu kazalke namesto na vrhu."
+
+#: findreplace/kfinddialog.cpp:234
+#, kde-format
+msgid "Only search within the current selection."
+msgstr "Išči samo znotraj trenutne izbire."
+
+#: findreplace/kfinddialog.cpp:235
+#, kde-format
+msgid ""
+"Perform a case sensitive search: entering the pattern 'Joe' will not match "
+"'joe' or 'JOE', only 'Joe'."
+msgstr ""
+"Opravi iskanje občutljivo na velikost črk: vzorec 'Janez' se ne bo ujemal z "
+"'janez' ali 'JANEZ', ampak samo z 'Janez'."
+
+#: findreplace/kfinddialog.cpp:236
+#, kde-format
+msgid "Search backwards."
+msgstr "Poišči vzvratno."
+
+#: findreplace/kfinddialog.cpp:237
+#, kde-format
+msgid "Ask before replacing each match found."
+msgstr "Vprašaj pred zamenjavo vsakega najdenega ujemanja."
+
+#: findreplace/kfinddialog.cpp:459
+msgid "Any Character"
+msgstr "Katerikoli znak"
+
+#: findreplace/kfinddialog.cpp:460
+msgid "Start of Line"
+msgstr "Začetek vrstice"
+
+#: findreplace/kfinddialog.cpp:461
+msgid "End of Line"
+msgstr "Konec vrstice"
+
+#: findreplace/kfinddialog.cpp:462
+msgid "Set of Characters"
+msgstr "Nabor znakov"
+
+#: findreplace/kfinddialog.cpp:463
+msgid "Repeats, Zero or More Times"
+msgstr "Ponovitve, nikoli ali večkrat"
+
+#: findreplace/kfinddialog.cpp:464
+msgid "Repeats, One or More Times"
+msgstr "Ponovitve, enkrat ali večkrat"
+
+#: findreplace/kfinddialog.cpp:465
+msgid "Optional"
+msgstr "Izbirno"
+
+#: findreplace/kfinddialog.cpp:466
+msgid "Escape"
+msgstr "Escape"
+
+#: findreplace/kfinddialog.cpp:467
+msgid "TAB"
+msgstr "TAB"
+
+#: findreplace/kfinddialog.cpp:468
+msgid "Newline"
+msgstr "Nova vrstica"
+
+#: findreplace/kfinddialog.cpp:469
+msgid "Carriage Return"
+msgstr "Znak za novo vrstico"
+
+#: findreplace/kfinddialog.cpp:470
+msgid "White Space"
+msgstr "Presledni znak"
+
+#: findreplace/kfinddialog.cpp:471
+msgid "Digit"
+msgstr "Števka"
+
+#: findreplace/kfinddialog.cpp:579
+#, kde-format
+msgid "Complete Match"
+msgstr "Popolno ujemanje"
+
+#: findreplace/kfinddialog.cpp:583
+#, kde-format
+msgid "Captured Text (%1)"
+msgstr "Zajeto besedilo (%1)"
+
+#: findreplace/kfinddialog.cpp:593
+#, kde-format
+msgid "You must enter some text to search for."
+msgstr "Vnesti morate nekaj besedila za iskanje."
+
+#: findreplace/kfinddialog.cpp:600
+#, kde-format
+msgid "Invalid PCRE pattern syntax."
+msgstr "Neveljavna sintaksa vzorca PCRE."
+
+#: findreplace/kreplace.cpp:52 findreplace/kreplace.cpp:63
+#, kde-format
+msgid "Replace"
+msgstr "Zamenjaj"
+
+#: findreplace/kreplace.cpp:59
+#, kde-format
+msgctxt "@action:button Replace all occurrences"
+msgid "&All"
+msgstr "Vse"
+
+#: findreplace/kreplace.cpp:61
+#, kde-format
+msgid "&Skip"
+msgstr "Pre&skoči"
+
+#: findreplace/kreplace.cpp:80
+#, kde-format
+msgid "Replace '%1' with '%2'?"
+msgstr "Zamenjam '%1' z '%2'?"
+
+#: findreplace/kreplace.cpp:182 findreplace/kreplace.cpp:429
+#, kde-format
+msgid "No text was replaced."
+msgstr "Ni bilo zamenjanega besedila."
+
+#: findreplace/kreplace.cpp:184 findreplace/kreplace.cpp:431
+#, kde-format
+msgid "1 replacement done."
+msgid_plural "%1 replacements done."
+msgstr[0] "Opravljenih %1 zamenjav."
+msgstr[1] "Opravljena %1 zamenjava."
+msgstr[2] "Opravljeni %1 zamenjavi."
+msgstr[3] "Opravljene %1 zamenjave."
+
+#: findreplace/kreplace.cpp:444
+#, kde-format
+msgid "Do you want to restart search from the end?"
+msgstr "Ali želite znova začeti iskanje od konca?"
+
+#: findreplace/kreplace.cpp:444
+#, kde-format
+msgid "Do you want to restart search at the beginning?"
+msgstr "Ali želite znova začeti iskanje na začetku?"
+
+#: findreplace/kreplace.cpp:449
+#, kde-format
+msgctxt "@action:button Restart find & replace"
+msgid "Restart"
+msgstr "Znova zaženi"
+
+#: findreplace/kreplace.cpp:450
+#, kde-format
+msgctxt "@action:button Stop find & replace"
+msgid "Stop"
+msgstr "Zaustavi"
+
+#: findreplace/kreplacedialog.cpp:153
+#, kde-format
+msgid "Your replacement string is referencing a capture greater than '\\%1', "
+msgstr "Niz za zamenjavo kaže na ujemanje, večje od '\\%1', "
+
+#: findreplace/kreplacedialog.cpp:154
+#, kde-format
+msgid "but your pattern only defines 1 capture."
+msgid_plural "but your pattern only defines %1 captures."
+msgstr[0] "vaš vzorec pa določa samo %1 ujemanje."
+msgstr[1] "vaš vzorec pa določa samo %1 ujemanji."
+msgstr[2] "vaš vzorec pa določa samo %1 ujemanja."
+msgstr[3] "vaš vzorec pa določa samo %1 ujemanj."
+
+#: findreplace/kreplacedialog.cpp:155
+#, kde-format
+msgid "but your pattern defines no captures."
+msgstr "vaš vzorec pa ne določa ujemanj."
+
+#: findreplace/kreplacedialog.cpp:156
+#, kde-format
+msgid ""
+"\n"
+"Please correct."
+msgstr ""
+"\n"
+"Popravite."
+
+#: widgets/krichtextwidget.cpp:207
+#, kde-format
+msgctxt "@action"
+msgid "Text &Color..."
+msgstr "Barva besedila..."
+
+#: widgets/krichtextwidget.cpp:208
+#, kde-format
+msgctxt "@label stroke color"
+msgid "Color"
+msgstr "Barva"
+
+#: widgets/krichtextwidget.cpp:221
+#, kde-format
+msgctxt "@action"
+msgid "Text &Highlight..."
+msgstr "Poudarjanje besedila..."
+
+#: widgets/krichtextwidget.cpp:234
+#, kde-format
+msgctxt "@action"
+msgid "&Font"
+msgstr "Pisava"
+
+#: widgets/krichtextwidget.cpp:244
+#, kde-format
+msgctxt "@action"
+msgid "Font &Size"
+msgstr "Veliko&st pisave"
+
+#: widgets/krichtextwidget.cpp:253
+#, kde-format
+msgctxt "@action boldify selected text"
+msgid "&Bold"
+msgstr "Krepko"
+
+#: widgets/krichtextwidget.cpp:267
+#, kde-format
+msgctxt "@action italicize selected text"
+msgid "&Italic"
+msgstr "Ležeče"
+
+#: widgets/krichtextwidget.cpp:281
+#, kde-format
+msgctxt "@action underline selected text"
+msgid "&Underline"
+msgstr "Podčrtaj"
+
+#: widgets/krichtextwidget.cpp:294
+#, kde-format
+msgctxt "@action"
+msgid "&Strike Out"
+msgstr "Prečrtaj"
+
+#: widgets/krichtextwidget.cpp:308
+#, kde-format
+msgctxt "@action"
+msgid "Align &Left"
+msgstr "Poravnaj &levo"
+
+#: widgets/krichtextwidget.cpp:309
+#, kde-format
+msgctxt "@label left justify"
+msgid "Left"
+msgstr "Levo"
+
+#: widgets/krichtextwidget.cpp:314
+#, kde-format
+msgctxt "@action"
+msgid "Align &Center"
+msgstr "Na sredino"
+
+#: widgets/krichtextwidget.cpp:315
+#, kde-format
+msgctxt "@label center justify"
+msgid "Center"
+msgstr "Sredinsko"
+
+#: widgets/krichtextwidget.cpp:320
+#, kde-format
+msgctxt "@action"
+msgid "Align &Right"
+msgstr "Poravnaj desno"
+
+#: widgets/krichtextwidget.cpp:321
+#, kde-format
+msgctxt "@label right justify"
+msgid "Right"
+msgstr "Desno"
+
+#: widgets/krichtextwidget.cpp:326
+#, kde-format
+msgctxt "@action"
+msgid "&Justify"
+msgstr "Poravnaj obojestransko"
+
+#: widgets/krichtextwidget.cpp:327
+#, kde-format
+msgctxt "@label justify fill"
+msgid "Justify"
+msgstr "Obojestransko"
+
+#: widgets/krichtextwidget.cpp:345
+#, kde-format
+msgctxt "@action"
+msgid "Left-to-Right"
+msgstr "Z leve proti desni"
+
+#: widgets/krichtextwidget.cpp:346
+#, kde-format
+msgctxt "@label left-to-right"
+msgid "Left-to-Right"
+msgstr "Z leve proti desni"
+
+#: widgets/krichtextwidget.cpp:351
+#, kde-format
+msgctxt "@action"
+msgid "Right-to-Left"
+msgstr "Z desne proti levi"
+
+#: widgets/krichtextwidget.cpp:352
+#, kde-format
+msgctxt "@label right-to-left"
+msgid "Right-to-Left"
+msgstr "Z desne proti levi"
+
+#: widgets/krichtextwidget.cpp:366
+#, kde-format
+msgctxt "@title:menu"
+msgid "List Style"
+msgstr "Slog seznama"
+
+#: widgets/krichtextwidget.cpp:369
+#, kde-format
+msgctxt "@item:inmenu no list style"
+msgid "None"
+msgstr "Brez"
+
+#: widgets/krichtextwidget.cpp:370
+#, kde-format
+msgctxt "@item:inmenu disc list style"
+msgid "Disc"
+msgstr "Zapolnjen krog"
+
+#: widgets/krichtextwidget.cpp:371
+#, kde-format
+msgctxt "@item:inmenu circle list style"
+msgid "Circle"
+msgstr "Krog"
+
+#: widgets/krichtextwidget.cpp:372
+#, kde-format
+msgctxt "@item:inmenu square list style"
+msgid "Square"
+msgstr "Kvadrat"
+
+#: widgets/krichtextwidget.cpp:373
+#, kde-format
+msgctxt "@item:inmenu numbered lists"
+msgid "123"
+msgstr "123"
+
+#: widgets/krichtextwidget.cpp:374
+#, kde-format
+msgctxt "@item:inmenu lowercase abc lists"
+msgid "abc"
+msgstr "abc"
+
+#: widgets/krichtextwidget.cpp:375
+#, kde-format
+msgctxt "@item:inmenu uppercase abc lists"
+msgid "ABC"
+msgstr "ABC"
+
+#: widgets/krichtextwidget.cpp:376
+#, kde-format
+msgctxt "@item:inmenu lower case roman numerals"
+msgid "i ii iii"
+msgstr "i ii iii"
+
+#: widgets/krichtextwidget.cpp:377
+#, kde-format
+msgctxt "@item:inmenu upper case roman numerals"
+msgid "I II III"
+msgstr "I II III"
+
+#: widgets/krichtextwidget.cpp:397
+#, kde-format
+msgctxt "@action"
+msgid "Increase Indent"
+msgstr "Povečaj zamik"
+
+#: widgets/krichtextwidget.cpp:409
+#, kde-format
+msgctxt "@action"
+msgid "Decrease Indent"
+msgstr "Zmanjšaj zamik"
+
+#: widgets/krichtextwidget.cpp:421
+#, kde-format
+msgctxt "@action"
+msgid "Insert Rule Line"
+msgstr "Vstavi črto"
+
+#: widgets/krichtextwidget.cpp:430
+#, kde-format
+msgctxt "@action"
+msgid "Link"
+msgstr "Povezava"
+
+#: widgets/krichtextwidget.cpp:442
+#, kde-format
+msgctxt "@action"
+msgid "Format Painter"
+msgstr "Preslikovalec oblike"
+
+#: widgets/krichtextwidget.cpp:454
+#, kde-format
+msgctxt "@action"
+msgid "To Plain Text"
+msgstr "V preprosto besedilo"
+
+#: widgets/krichtextwidget.cpp:463
+#, kde-format
+msgctxt "@action"
+msgid "Subscript"
+msgstr "Podpisano"
+
+#: widgets/krichtextwidget.cpp:468
+#, kde-format
+msgctxt "@action"
+msgid "Superscript"
+msgstr "Nadpisano"
+
+#: widgets/krichtextwidget.cpp:480
+#, kde-format
+msgctxt "@title:menu"
+msgid "Heading Level"
+msgstr "Nivo naslova"
+
+#: widgets/krichtextwidget.cpp:481
+#, kde-format
+msgctxt "@item:inmenu no heading"
+msgid "Basic text"
+msgstr "Osnovno besedilo"
+
+#: widgets/krichtextwidget.cpp:482
+#, kde-format
+msgctxt "@item:inmenu heading level 1 (largest)"
+msgid "Title"
+msgstr "Naslov"
+
+#: widgets/krichtextwidget.cpp:483
+#, kde-format
+msgctxt "@item:inmenu heading level 2"
+msgid "Subtitle"
+msgstr "Podnaslov"
+
+#: widgets/krichtextwidget.cpp:484
+#, kde-format
+msgctxt "@item:inmenu heading level 3"
+msgid "Section"
+msgstr "Razdelek"
+
+#: widgets/krichtextwidget.cpp:485
+#, kde-format
+msgctxt "@item:inmenu heading level 4"
+msgid "Subsection"
+msgstr "Podrazdelek"
+
+#: widgets/krichtextwidget.cpp:486
+#, kde-format
+msgctxt "@item:inmenu heading level 5"
+msgid "Paragraph"
+msgstr "Odstavek"
+
+#: widgets/krichtextwidget.cpp:487
+#, kde-format
+msgctxt "@item:inmenu heading level 6 (smallest)"
+msgid "Subparagraph"
+msgstr "Poodstavek"
+
+#: widgets/ktextedit.cpp:47
+#, kde-format
+msgid "Nothing to spell check."
+msgstr "Za preverjanje črkovanja ni ničesar."
+
+#: widgets/ktextedit.cpp:501
+#, kde-format
+msgid "Check Spelling..."
+msgstr "Preveri črkovanje ..."
+
+#: widgets/ktextedit.cpp:506
+#, kde-format
+msgid "Spell Checking Language"
+msgstr "Jezik preverjanja črkovanja"
+
+#: widgets/ktextedit.cpp:527
+#, kde-format
+msgid "Auto Spell Check"
+msgstr "Samodejno preverjanje črkovanja"
+
+#: widgets/ktextedit.cpp:533
+#, kde-format
+msgid "Allow Tabulations"
+msgstr "Dovoli tabulacije"
+
+#: widgets/ktextedit.cpp:566
+#, kde-format
+msgid "Speak Text"
+msgstr "Izgovori besedilo"
