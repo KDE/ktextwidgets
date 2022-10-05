@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ktextwidgets\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-11-24 00:25+0000\n"
-"PO-Revision-Date: 2022-09-12 20:31+0200\n"
+"PO-Revision-Date: 2022-10-04 05:32+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -75,12 +75,12 @@ msgstr ""
 #: findreplace/kfind.cpp:742
 #, kde-format
 msgid "Continue from the end?"
-msgstr ""
+msgstr "გავაგრძელო ბოლოდან?"
 
 #: findreplace/kfind.cpp:742
 #, kde-format
 msgid "Continue from the beginning?"
-msgstr ""
+msgstr "დავიწყო თავიდან?"
 
 #: findreplace/kfinddialog.cpp:35
 #, kde-format
@@ -151,7 +151,7 @@ msgstr "&კურსორიდან"
 #: findreplace/kfinddialog.cpp:116
 #, kde-format
 msgid "Find &backwards"
-msgstr ""
+msgstr "&უკუღმა ძებნა"
 
 #: findreplace/kfinddialog.cpp:117
 #, kde-format
@@ -171,7 +171,7 @@ msgstr "ჩანაცვლება"
 #: findreplace/kfinddialog.cpp:206
 #, kde-format
 msgid "Start replace"
-msgstr ""
+msgstr "ჩანაცვლების დაწყება"
 
 #: findreplace/kfinddialog.cpp:207
 #, kde-format
@@ -189,7 +189,7 @@ msgstr "&ძებნა"
 #: findreplace/kfinddialog.cpp:214
 #, kde-format
 msgid "Start searching"
-msgstr ""
+msgstr "ძებნის დაწყება"
 
 #: findreplace/kfinddialog.cpp:215
 #, kde-format
@@ -268,19 +268,19 @@ msgstr ""
 
 #: findreplace/kfinddialog.cpp:459
 msgid "Any Character"
-msgstr ""
+msgstr "ნებისმიერი სიმბოლო"
 
 #: findreplace/kfinddialog.cpp:460
 msgid "Start of Line"
-msgstr ""
+msgstr "ხაზის დასაწყისი"
 
 #: findreplace/kfinddialog.cpp:461
 msgid "End of Line"
-msgstr ""
+msgstr "ხაზის დასასრული"
 
 #: findreplace/kfinddialog.cpp:462
 msgid "Set of Characters"
-msgstr ""
+msgstr "სიმბოლოების ნაკრები"
 
 #: findreplace/kfinddialog.cpp:463
 msgid "Repeats, Zero or More Times"
@@ -316,7 +316,7 @@ msgstr ""
 
 #: findreplace/kfinddialog.cpp:471
 msgid "Digit"
-msgstr ""
+msgstr "ციფრი"
 
 #: findreplace/kfinddialog.cpp:579
 #, kde-format
@@ -417,7 +417,7 @@ msgid ""
 "Please correct."
 msgstr ""
 "\n"
-"გთხოვთ ჩაასწოროთ."
+"გთხოვთ, ჩაასწოროთ."
 
 #: widgets/krichtextwidget.cpp:207
 #, kde-format
@@ -687,7 +687,7 @@ msgstr "სექცია"
 #, kde-format
 msgctxt "@item:inmenu heading level 4"
 msgid "Subsection"
-msgstr ""
+msgstr "ქვესექცია"
 
 #: widgets/krichtextwidget.cpp:486
 #, kde-format
@@ -699,7 +699,7 @@ msgstr "პარაგრაფი"
 #, kde-format
 msgctxt "@item:inmenu heading level 6 (smallest)"
 msgid "Subparagraph"
-msgstr ""
+msgstr "ქვეპარაგრაფი"
 
 #: widgets/ktextedit.cpp:47
 #, kde-format
