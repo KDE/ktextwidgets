@@ -619,8 +619,11 @@ void KTextEdit::clearDecorator()
 {
     Q_D(KTextEdit);
 
-    delete d->decorator;
+    // Set pointer to null before deleting KTextDecorator as dtor will emit signal,
+    // which could call this code again and cause double delete/crash
+    auto decorator = d->decorator;
     d->decorator = nullptr;
+    delete decorator;
 }
 
 void KTextEdit::addTextDecorator(Sonnet::SpellCheckDecorator *decorator)
@@ -705,8 +708,11 @@ void KTextEdit::setReadOnly(bool readOnly)
     }
 
     if (readOnly) {
-        delete d->decorator;
+        // Set pointer to null before deleting KTextDecorator as dtor will emit signal,
+        // which could call this code again and cause double delete/crash
+        auto decorator = d->decorator;
         d->decorator = nullptr;
+        delete decorator;
 
         d->customPalette = testAttribute(Qt::WA_SetPalette);
         QPalette p = palette();
