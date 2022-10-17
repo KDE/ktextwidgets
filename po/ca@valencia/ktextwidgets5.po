@@ -104,7 +104,7 @@ msgstr "Busca"
 #: findreplace/kfinddialog.cpp:79
 #, kde-format
 msgid "&Text to find:"
-msgstr "&Text que cal buscar:"
+msgstr "&Text que s'ha de buscar:"
 
 #: findreplace/kfinddialog.cpp:83
 #, kde-format
@@ -217,7 +217,7 @@ msgstr ""
 msgid ""
 "Enter a pattern to search for, or select a previous pattern from the list."
 msgstr ""
-"Introduïu un patró per a buscar, o seleccioneu un patró anterior de la "
+"Introduïu un patró que es buscarà, o seleccioneu un patró anterior de la "
 "llista."
 
 #: findreplace/kfinddialog.cpp:221
@@ -360,7 +360,7 @@ msgstr "Text capturat (%1)"
 #: findreplace/kfinddialog.cpp:593
 #, kde-format
 msgid "You must enter some text to search for."
-msgstr "Heu d'introduir un text que cal buscar."
+msgstr "Heu d'introduir un text que es buscarà."
 
 #: findreplace/kfinddialog.cpp:600
 #, kde-format
