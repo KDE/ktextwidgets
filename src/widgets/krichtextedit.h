@@ -354,10 +354,14 @@ Q_SIGNALS:
      */
     void textModeChanged(KRichTextEdit::Mode mode);
 
+#if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 101)
     /**
      * Emitted whenever the user has finished making a selection. (on mouse up)
+     * @deprecated Since 4.1, no longer emitted.
      */
+    KTEXTWIDGETS_DEPRECATED_VERSION_BELATED(5, 101, 4, 1, "No longer emitted")
     void selectionFinished();
+#endif
 
 protected:
     /**
