@@ -6,20 +6,20 @@
 # Marcos <marcos@euskalgnu.org>, 2002,2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010.
 # Ion Gaztañaga <igaztanaga@gmail.com>, 2005.
 # Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2009.
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2010, 2011, 2012, 2013, 2014, 2017, 2020.
+# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2010, 2011, 2012, 2013, 2014, 2017, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktextwidgets\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-11-24 00:25+0000\n"
-"PO-Revision-Date: 2020-04-25 00:15+0200\n"
-"Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
+"PO-Revision-Date: 2022-11-13 08:58+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.04.0\n"
+"X-Generator: Lokalize 22.08.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: dialogs/klinkdialog.cpp:39
@@ -441,7 +441,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "Text &Color..."
-msgstr "Testu &kolorea..."
+msgstr "Testuaren &kolorea..."
 
 #: widgets/krichtextwidget.cpp:208
 #, kde-format
@@ -453,7 +453,7 @@ msgstr "Kolorea"
 #, kde-format
 msgctxt "@action"
 msgid "Text &Highlight..."
-msgstr "&Nabarmendu testua..."
+msgstr "Testua &nabarmentzea..."
 
 #: widgets/krichtextwidget.cpp:234
 #, kde-format
@@ -483,7 +483,7 @@ msgstr "&Etzana"
 #, kde-format
 msgctxt "@action underline selected text"
 msgid "&Underline"
-msgstr "&Azpimarratua"
+msgstr "&Azpimarra"
 
 #: widgets/krichtextwidget.cpp:294
 #, kde-format
@@ -495,37 +495,37 @@ msgstr "&Marratu"
 #, kde-format
 msgctxt "@action"
 msgid "Align &Left"
-msgstr "Lerrokatu e&zkerrera"
+msgstr "Lerrokatu e&zkerrean"
 
 #: widgets/krichtextwidget.cpp:309
 #, kde-format
 msgctxt "@label left justify"
 msgid "Left"
-msgstr "Ezkerra"
+msgstr "Ezkerrean"
 
 #: widgets/krichtextwidget.cpp:314
 #, kde-format
 msgctxt "@action"
 msgid "Align &Center"
-msgstr "&Erdiratu"
+msgstr "Lerrokatu er&dian"
 
 #: widgets/krichtextwidget.cpp:315
 #, kde-format
 msgctxt "@label center justify"
 msgid "Center"
-msgstr "Erdia"
+msgstr "Erdiratu"
 
 #: widgets/krichtextwidget.cpp:320
 #, kde-format
 msgctxt "@action"
 msgid "Align &Right"
-msgstr "Lerrokatu e&skuinera"
+msgstr "Lerrokatu e&skuinean"
 
 #: widgets/krichtextwidget.cpp:321
 #, kde-format
 msgctxt "@label right justify"
 msgid "Right"
-msgstr "Eskuinea"
+msgstr "Eskuinean"
 
 #: widgets/krichtextwidget.cpp:326
 #, kde-format
@@ -591,7 +591,7 @@ msgstr "Zirkulua"
 #, kde-format
 msgctxt "@item:inmenu square list style"
 msgid "Square"
-msgstr "Koadroa"
+msgstr "Karratua"
 
 #: widgets/krichtextwidget.cpp:373
 #, kde-format
@@ -722,7 +722,7 @@ msgstr "Azpiparagrafoa"
 #: widgets/ktextedit.cpp:47
 #, kde-format
 msgid "Nothing to spell check."
-msgstr "Ezer ez ortografia egiaztatzeko."
+msgstr "Ortografia egiaztatzekorik ez."
 
 #: widgets/ktextedit.cpp:501
 #, kde-format
