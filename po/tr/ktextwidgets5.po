@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-11-24 00:25+0000\n"
-"PO-Revision-Date: 2022-03-20 12:42+0300\n"
+"PO-Revision-Date: 2022-12-03 19:57+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #: dialogs/klinkdialog.cpp:39
 #, kde-format
@@ -151,7 +151,7 @@ msgstr "Seçenekler"
 #: findreplace/kfinddialog.cpp:113
 #, kde-format
 msgid "C&ase sensitive"
-msgstr "Bü&yük-küçük harfe duyarlı"
+msgstr "&BÜYÜK/küçük harf duyarlı"
 
 #: findreplace/kfinddialog.cpp:114
 #, kde-format
@@ -288,8 +288,8 @@ msgid ""
 "Perform a case sensitive search: entering the pattern 'Joe' will not match "
 "'joe' or 'JOE', only 'Joe'."
 msgstr ""
-"Aramayı küçük/BÜYÜK Harf duyarlı olarak yap: 'Ali' deseninde bir giriş, "
-"'ali' veya 'ALİ' ile uyuşmayacak, sadece 'Ali' yi bulacaktır."
+"Aramayı BÜYÜK/küçük Harf duyarlı olarak yap: 'Ali' dizgisi girişi, 'ali' "
+"veya 'ALİ' ile uyuşmayacak, yalnızca 'Ali' yi bulacaktır."
 
 #: findreplace/kfinddialog.cpp:236
 #, kde-format
