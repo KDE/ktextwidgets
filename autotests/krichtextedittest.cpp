@@ -133,8 +133,10 @@ void KRichTextEditTest::testHTMLLineBreaks()
     QVERIFY2(lines.size() == 7,
              "we can't perform this unit test: "
              "the html rendering has changed beyond recognition");
-#else
+#elif QT_VERSION < QT_VERSION_CHECK(6, 4, 0)
     QCOMPARE(lines.size(), 8);
+#else
+    QCOMPARE(lines.size(), 10);
 #endif
 
     const QString &line6 = lines.at(lines.size() - 2);
@@ -180,8 +182,10 @@ void KRichTextEditTest::testHTMLOrderedLists()
     QVERIFY2(lines.size() == 9,
              "we can't perform this unit test: "
              "the html rendering has changed beyond recognition");
-#else
+#elif QT_VERSION < QT_VERSION_CHECK(6, 4, 0)
     QCOMPARE(lines.size(), 10);
+#else
+    QCOMPARE(lines.size(), 13);
 #endif
 
     // this is the <ol> declaration line
@@ -228,8 +232,10 @@ void KRichTextEditTest::testHTMLUnorderedLists()
     QVERIFY2(lines.size() == 9,
              "we can't perform this unit test: "
              "the html rendering has changed beyond recognition");
-#else
+#elif QT_VERSION < QT_VERSION_CHECK(6, 4, 0)
     QCOMPARE(lines.size(), 10);
+#else
+    QCOMPARE(lines.size(), 13);
 #endif
 
     // this is the <ol> declaration line
