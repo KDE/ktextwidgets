@@ -15,14 +15,14 @@ msgstr ""
 "Project-Id-Version: ktextwidgets\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-11-24 00:25+0000\n"
-"PO-Revision-Date: 2022-03-23 23:12+0100\n"
-"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"PO-Revision-Date: 2022-12-30 23:04+0100\n"
+"Last-Translator: Antoni Bella <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Kate 22.08.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -267,8 +267,7 @@ msgstr ""
 #: findreplace/kfinddialog.cpp:233
 #, kde-format
 msgid "Start searching at the current cursor location rather than at the top."
-msgstr ""
-"Comença la busca a la posició actual del cursor en comptes de a l'inici."
+msgstr "Comença la busca a la posició actual del cursor en lloc de per dalt."
 
 #: findreplace/kfinddialog.cpp:234
 #, kde-format
