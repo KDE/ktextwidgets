@@ -13,8 +13,8 @@ deprecated: false
 release: true
 libraries:
  - qmake: KTextWidgets
-   cmake: "KF5::TextWidgets"
-cmakename: KF5TextWidgets
+   cmake: "KF6::TextWidgets"
+cmakename: KF6TextWidgets
 
 public_lib: true
 group: Frameworks

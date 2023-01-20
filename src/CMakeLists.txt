@@ -1,7 +1,7 @@
-add_library(KF5TextWidgets)
-add_library(KF5::TextWidgets ALIAS KF5TextWidgets)
+add_library(KF6TextWidgets)
+add_library(KF6::TextWidgets ALIAS KF6TextWidgets)
 
-target_sources(KF5TextWidgets PRIVATE
+target_sources(KF6TextWidgets PRIVATE
     dialogs/klinkdialog.cpp
     dialogs/klinkdialog_p.h
     findreplace/kfind.cpp
@@ -30,7 +30,7 @@ target_sources(KF5TextWidgets PRIVATE
 
 )
 
-ecm_generate_export_header(KF5TextWidgets
+ecm_generate_export_header(KF6TextWidgets
     BASE_NAME KTextWidgets
     GROUP_BASE_NAME KF
     VERSION ${KF_VERSION}
@@ -45,30 +45,30 @@ set(ktextwidgets_INCLUDES
   ${CMAKE_CURRENT_SOURCE_DIR}/kregexpeditor
   ${CMAKE_CURRENT_SOURCE_DIR}/widgets
 )
-target_include_directories(KF5TextWidgets PUBLIC "$<BUILD_INTERFACE:${ktextwidgets_INCLUDES}>"
+target_include_directories(KF6TextWidgets PUBLIC "$<BUILD_INTERFACE:${ktextwidgets_INCLUDES}>"
 )
 
-target_include_directories(KF5TextWidgets INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KTextWidgets>")
+target_include_directories(KF6TextWidgets INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/KTextWidgets>")
 
-target_link_libraries(KF5TextWidgets
+target_link_libraries(KF6TextWidgets
 PUBLIC
   Qt${QT_MAJOR_VERSION}::Widgets
-  KF5::SonnetUi
-  KF5::I18n
+  KF6::SonnetUi
+  KF6::I18n
 PRIVATE
-  KF5::SonnetCore
-  KF5::ConfigWidgets
-  KF5::Completion
+  KF6::SonnetCore
+  KF6::ConfigWidgets
+  KF6::Completion
 )
 
 if (Qt5TextToSpeech_FOUND)
-    target_link_libraries(KF5TextWidgets
+    target_link_libraries(KF6TextWidgets
 PRIVATE
         Qt5::TextToSpeech)
 endif()
 
 
-set_target_properties(KF5TextWidgets PROPERTIES VERSION ${KTEXTWIDGETS_VERSION}
+set_target_properties(KF6TextWidgets PROPERTIES VERSION ${KTEXTWIDGETS_VERSION}
                                                 SOVERSION ${KTEXTWIDGETS_SOVERSION}
                                                 EXPORT_NAME TextWidgets
 )
@@ -102,7 +102,7 @@ ecm_generate_headers(KTextWidgets_HEADERS
   REQUIRED_HEADERS KTextWidgets_HEADERS
 )
 
-install(TARGETS KF5TextWidgets EXPORT KF5TextWidgetsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF6TextWidgets EXPORT KF6TextWidgetsTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/ktextwidgets_export.h
@@ -116,9 +116,9 @@ endif()
 
 if (BUILD_QCH)
     ecm_add_qch(
-        KF5TextWidgets_QCH
+        KF6TextWidgets_QCH
         NAME KTextWidgets
-        BASE_NAME KF5TextWidgets
+        BASE_NAME KF6TextWidgets
         VERSION ${KF_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
@@ -127,8 +127,8 @@ if (BUILD_QCH)
         IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
         LINK_QCHS
             Qt5Widgets_QCH
-            KF5SonnetUi_QCH
-            KF5I18n_QCH
+            KF6SonnetUi_QCH
+            KF6I18n_QCH
         INCLUDE_DIRS
             ${CMAKE_CURRENT_BINARY_DIR}
             ${ktextwidgets_INCLUDES}
@@ -145,5 +145,5 @@ if (BUILD_QCH)
 endif()
 
 include(ECMGeneratePriFile)
-ecm_generate_pri_file(BASE_NAME KTextWidgets LIB_NAME KF5TextWidgets DEPS "widgets SonnetUi KI18n" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KTextWidgets)
+ecm_generate_pri_file(BASE_NAME KTextWidgets LIB_NAME KF6TextWidgets DEPS "widgets SonnetUi KI18n" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KTextWidgets)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})

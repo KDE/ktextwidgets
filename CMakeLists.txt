@@ -28,8 +28,8 @@ include(CMakeDependentOption)
 ecm_setup_version(PROJECT
                   VARIABLE_PREFIX KTEXTWIDGETS
                   VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/ktextwidgets_version.h"
-                  PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5TextWidgetsConfigVersion.cmake"
-                  SOVERSION 5)
+                  PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF6TextWidgetsConfigVersion.cmake"
+                  SOVERSION 6)
 
 # Dependencies
 set(REQUIRED_QT_VERSION 6.4.0)
@@ -46,12 +46,12 @@ else()
     add_definitions(-DHAVE_SPEECH)
 endif()
 
-find_package(KF5Completion ${KF_DEP_VERSION} REQUIRED)
-find_package(KF5Config ${KF_DEP_VERSION} REQUIRED)
-find_package(KF5ConfigWidgets ${KF_DEP_VERSION} REQUIRED)
-find_package(KF5I18n ${KF_DEP_VERSION} REQUIRED)
-find_package(KF5WidgetsAddons ${KF_DEP_VERSION} REQUIRED)
-find_package(KF5Sonnet ${KF_DEP_VERSION} REQUIRED)
+find_package(KF6Completion ${KF_DEP_VERSION} REQUIRED)
+find_package(KF6Config ${KF_DEP_VERSION} REQUIRED)
+find_package(KF6ConfigWidgets ${KF_DEP_VERSION} REQUIRED)
+find_package(KF6I18n ${KF_DEP_VERSION} REQUIRED)
+find_package(KF6WidgetsAddons ${KF_DEP_VERSION} REQUIRED)
+find_package(KF6Sonnet ${KF_DEP_VERSION} REQUIRED)
 
 set(EXCLUDE_DEPRECATED_BEFORE_AND_AT 0 CACHE STRING "Control the range of deprecated API excluded from the build [default=0].")
 
@@ -76,27 +76,27 @@ if (BUILD_TESTING)
 endif()
 
 # create a Config.cmake and a ConfigVersion.cmake file and install them
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5TextWidgets")
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6TextWidgets")
 
 if (BUILD_QCH)
     ecm_install_qch_export(
-        TARGETS KF5TextWidgets_QCH
-        FILE KF5TextWidgetsQchTargets.cmake
+        TARGETS KF6TextWidgets_QCH
+        FILE KF6TextWidgetsQchTargets.cmake
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
     )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5TextWidgetsQchTargets.cmake\")")
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF6TextWidgetsQchTargets.cmake\")")
 endif()
 
-configure_package_config_file("${CMAKE_CURRENT_SOURCE_DIR}/KF5TextWidgetsConfig.cmake.in"
-                              "${CMAKE_CURRENT_BINARY_DIR}/KF5TextWidgetsConfig.cmake"
+configure_package_config_file("${CMAKE_CURRENT_SOURCE_DIR}/KF6TextWidgetsConfig.cmake.in"
+                              "${CMAKE_CURRENT_BINARY_DIR}/KF6TextWidgetsConfig.cmake"
                               INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
                              )
 
-install(EXPORT KF5TextWidgetsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5TextWidgetsTargets.cmake NAMESPACE KF5:: )
+install(EXPORT KF6TextWidgetsTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF6TextWidgetsTargets.cmake NAMESPACE KF6:: )
 
-install(FILES "${CMAKE_CURRENT_BINARY_DIR}/KF5TextWidgetsConfig.cmake"
-              "${CMAKE_CURRENT_BINARY_DIR}/KF5TextWidgetsConfigVersion.cmake"
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/KF6TextWidgetsConfig.cmake"
+              "${CMAKE_CURRENT_BINARY_DIR}/KF6TextWidgetsConfigVersion.cmake"
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
        )
