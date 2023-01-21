@@ -43,9 +43,6 @@ public:
         data.clear();
         delete emptyMatch;
         emptyMatch = nullptr;
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
-        delete regExp;
-#endif
     }
 
     struct Match {
@@ -103,10 +100,6 @@ public:
     QHash<QString, Match> incrementalPath;
     Match *emptyMatch;
     QList<Data> data; // used like a vector, not like a linked-list
-
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
-    QRegExp *regExp;
-#endif
 
     QString pattern;
     QDialog *dialog;

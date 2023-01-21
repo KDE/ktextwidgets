@@ -11,10 +11,6 @@
 #include "kfind_p.h"
 #include "kreplacedialog.h"
 
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
-#include <QRegExp>
-#endif
-
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QPushButton>
@@ -185,29 +181,6 @@ void KReplace::displayFinalDialog() const
     }
 }
 
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
-static int replaceHelper(QString &text, const QString &replacement, int index, long options, int length, const QRegExp *regExp)
-{
-    QString rep(replacement);
-    if (options & KReplaceDialog::BackReference) {
-        // Backreferences: replace \0 with the right portion of 'text'
-        rep.replace(QLatin1String("\\0"), text.mid(index, length));
-
-        // Other backrefs
-        if (regExp) {
-            const QStringList caps = regExp->capturedTexts();
-            for (int i = 0; i < caps.count(); ++i) {
-                rep.replace(QLatin1String("\\") + QString::number(i), caps.at(i));
-            }
-        }
-    }
-
-    // Then replace rep into the text
-    text.replace(index, length, rep);
-    return rep.length();
-}
-#endif
-
 static int replaceHelper(QString &text, const QString &replacement, int index, long options, const QRegularExpressionMatch *match, int length)
 {
     QString rep(replacement);
@@ -268,9 +241,6 @@ KFind::Result KReplace::replace()
 
                     // Tell the world about the match we found, in case someone wants to
                     // highlight it.
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
-                    Q_EMIT highlight(d->text, d->index, d->matchedLength);
-#endif
                     Q_EMIT textFound(d->text, d->index, d->matchedLength);
 
                     d->lastResult = Match;
@@ -311,24 +281,6 @@ int KReplace::replace(QString &text, const QString &pattern, const QString &repl
     }
     return index;
 }
-
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
-int KReplace::replace(QString &text, const QRegExp &pattern, const QString &replacement, int index, long options, int *replacedLength)
-{
-    int matchedLength;
-
-    index = KFind::find(text, pattern, index, options, &matchedLength);
-    if (index != -1) {
-        *replacedLength = replaceHelper(text, replacement, index, options, matchedLength, &pattern);
-        if (options & KFind::FindBackwards) {
-            index--;
-        } else {
-            index += *replacedLength;
-        }
-    }
-    return index;
-}
-#endif
 
 void KReplacePrivate::slotReplaceAll()
 {
@@ -379,9 +331,6 @@ void KReplacePrivate::doReplace()
 
     // Tell the world about the replacement we made, in case someone wants to
     // highlight it.
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 83)
-    Q_EMIT q->replace(text, index, replacedLength, matchedLength);
-#endif
     Q_EMIT q->textReplaced(text, index, replacedLength, matchedLength);
 
 #ifdef DEBUG_REPLACE

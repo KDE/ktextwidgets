@@ -247,43 +247,6 @@ public:
      */
     virtual bool shouldRestart(bool forceAsking = false, bool showNumMatches = true) const;
 
-#if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 70)
-    /**
-     * Search the given string, and returns whether a match was found. If one is,
-     * the length of the string matched is also returned.
-     *
-     * A performance optimised version of the function is provided for use
-     * with regular expressions.
-     *
-     * @param text The string to search.
-     * @param pattern The pattern to look for.
-     * @param index The starting index into the string.
-     * @param options The options to use.
-     * @param matchedlength The length of the string that was matched
-     * @return The index at which a match was found, or -1 if no match was found.
-     *
-     * @deprecated Since 5.70
-     */
-    KTEXTWIDGETS_DEPRECATED_VERSION(5,
-                                    70,
-                                    "Use find(const QString &text, const QString &pattern, int index, long options, \
-                   int *matchedLength, QRegularExpressionMatch *rmatch).")
-    static int find(const QString &text, const QString &pattern, int index, long options, int *matchedlength);
-#endif
-
-#if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 70)
-    /**
-     * @deprecated Since 5.70, for lack of direct use
-     */
-    KTEXTWIDGETS_DEPRECATED_VERSION_BELATED(5,
-                                            71,
-                                            5,
-                                            70,
-                                            "Use find(const QString &, const QString &, int, long, \
-                   int *, QRegularExpressionMatch *).")
-    static int find(const QString &text, const QRegExp &pattern, int index, long options, int *matchedlength);
-#endif
-
     /**
      * Search @p text for @p pattern. If a match is found, the length of the matched
      * string will be stored in @p matchedLength and the index of the matched string
@@ -342,26 +305,6 @@ public:
     int index() const;
 
 Q_SIGNALS:
-#if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 81)
-    /**
-     * Connect to this signal to implement highlighting of found text during the find
-     * operation.
-     *
-     * If you've set data with setData(id, text), use the signal highlight(id,
-     * matchingIndex, matchedLength)
-     *
-     * WARNING: If you're using the FindIncremental option, the text argument
-     * passed by this signal is not necessarily the data last set through
-     * setData(), but can also be an earlier set data block.
-     *
-     * @see setData()
-     *
-     * @deprecated since 5.81, use the KFind::textFound(const QString &, int, int) signal instead.
-     */
-    KTEXTWIDGETS_DEPRECATED_VERSION(5, 81, "Use the KFind::textFound(const QString &, int, int) signal instead.")
-    void highlight(const QString &text, int matchingIndex, int matchedLength); // clazy:exclude=overloaded-signal
-#endif
-
     /**
      * Connect to this signal to implement highlighting of found text during the find
      * operation.
@@ -377,26 +320,6 @@ Q_SIGNALS:
      * @since 5.81
      */
     void textFound(const QString &text, int matchingIndex, int matchedLength);
-
-#if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 81)
-    /**
-     * Connect to this signal to implement highlighting of found text during the find
-     * operation.
-     *
-     * Use this signal if you've set your data with setData(id, text), otherwise
-     * use the textFound(text, matchingIndex, matchedLength) signal.
-     *
-     * WARNING: If you're using the FindIncremental option, the id argument
-     * passed by this signal is not necessarily the id of the data last set
-     * through setData(), but can also be of an earlier set data block.
-     *
-     * @see setData()
-     *
-     * @deprecated since 5.81, use the KFind::textFoundAtId(int id, int matchingIndex, int matchedLength) signal instead.
-     */
-    KTEXTWIDGETS_DEPRECATED_VERSION(5, 81, "Use the KFind::textFoundAtId(int id, int matchingIndex, int matchedLength) signal instead.")
-    void highlight(int id, int matchingIndex, int matchedLength); // clazy:exclude=overloaded-signal
-#endif
 
     /**
      * Connect to this signal to implement highlighting of found text during

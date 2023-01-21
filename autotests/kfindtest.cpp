@@ -42,11 +42,6 @@ void KFindRecorder::find(const QString &pattern, long options)
     // Prevent dialogs from popping up
     m_find->closeFindNextDialog();
 
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
-    connect(m_find.get(), qOverload<const QString &, int, int>(&KFind::highlight), this, qOverload<const QString &, int, int>(&KFindRecorder::slotHighlight));
-
-    connect(m_find.get(), qOverload<int, int, int>(&KFind::highlight), this, qOverload<int, int, int>(&KFindRecorder::slotHighlight));
-#else
     connect(m_find.get(), &KFind::textFound, this, [this](const QString &text, int matchingIndex, int matchedLength) {
         slotHighlight(text, matchingIndex, matchedLength);
     });
@@ -54,7 +49,6 @@ void KFindRecorder::find(const QString &pattern, long options)
     connect(m_find.get(), &KFind::textFoundAtId, this, [this](int id, int matchingIndex, int matchedLength) {
         slotHighlight(id, matchingIndex, matchedLength);
     });
-#endif
 
     m_line = 0;
     KFind::Result result = KFind::NoMatch;
@@ -130,64 +124,6 @@ TestKFind::TestKFind()
         + QLatin1String("    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,\n") + QLatin1String("    Boston, MA 02110-1301, USA.\n");
 }
 
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
-void TestKFind::testStaticFindString_data()
-{
-    // Tests for the core method "static KFind::find"
-    QTest::addColumn<QString>("text");
-    QTest::addColumn<QString>("pattern");
-    QTest::addColumn<int>("startIndex");
-    QTest::addColumn<int>("options");
-    QTest::addColumn<int>("expectedResult");
-    QTest::addColumn<int>("expectedMatchedLength");
-
-    /* clang-format off */
-    QTest::newRow("simple (0)") << "abc" << "a" << 0 << 0 << 0 << 1;
-    QTest::newRow("simple (1)") << "abc" << "b" << 0 << 0 << 1 << 1;
-    QTest::newRow("not found") << "abca" << "ba" << 0 << 0 << -1 << 0;
-    QTest::newRow("from index") << "abc bc" << "b" << 3 << 0 << 4 << 1;
-    QTest::newRow("from exact index") << "abc bc" << "b" << 4 << 0 << 4 << 1;
-    QTest::newRow("past index (not found)") << "abc bc" << "b" << 5 << 0 << -1 << 0;
-    QTest::newRow("dot") << "ab." << "b." << 0 << 0 << 1 << 2;
-    QTest::newRow("^should fail") << "text" << "^tex" << 0 << 0 << -1 << 0;
-    QTest::newRow("multiline with \\n") << "foo\nbar" << "o\nb" << 0 << 0 << 2 << 3;
-    QTest::newRow("whole words ok") << "abc bcbc bc bmore be" << "bc" << 0 << int(KFind::WholeWordsOnly) << 9 << 2;
-    QTest::newRow("whole words not found") << "abab abx" << "ab" << 0 << int(KFind::WholeWordsOnly) << -1 << 0;
-    QTest::newRow("whole words not found (_)") << "abab ab_" << "ab" << 0 << int(KFind::WholeWordsOnly) << -1 << 0;
-    QTest::newRow("whole words ok (.)") << "ab." << "ab" << 0 << int(KFind::WholeWordsOnly) << 0 << 2;
-    QTest::newRow("backwards") << "abc bcbc8bc" << "bc" << 10 << int(KFind::FindBackwards) << 9 << 2;
-    QTest::newRow("backwards again") << "abc bcbc8bc" << "bc" << 8 << int(KFind::FindBackwards) << 6 << 2;
-    QTest::newRow("backwards 2") << "abc bcbc8bc" << "bc" << 5 << int(KFind::FindBackwards) << 4 << 2;
-    QTest::newRow("backwards 3") << "abc bcbc8bc" << "bc" << 3 << int(KFind::FindBackwards) << 1 << 2;
-    QTest::newRow("empty (0)") << "a" << "" << 0 << int(0) << 0 << 0;
-    QTest::newRow("empty (1)") << "a" << "" << 1 << int(0) << 1 << 0; // kreplacetest testReplaceBlankSearch relies on this
-    QTest::newRow("at end, not found") << "a" << "b" << 1 << int(0) << -1 << 0; // just for catching the while(index<text.length()) bug
-    QTest::newRow("back, not found") << "a" << "b" << 0 << int(KFind::FindBackwards) << -1 << 0;
-    QTest::newRow("back, at begin, found") << "a" << "a" << 0 << int(KFind::FindBackwards) << 0 << 1;
-    QTest::newRow("back, at end, found") << "a" << "a" << 1 << int(KFind::FindBackwards) << 0 << 1;
-    QTest::newRow("back, text shorter than pattern") << "a" << "abcd" << 0 << int(KFind::FindBackwards) << -1 << 0;
-    /* clang-format on */
-}
-#endif
-
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
-void TestKFind::testStaticFindString()
-{
-    // Tests for the core method "static KFind::find(text, regexp)"
-    QFETCH(QString, text);
-    QFETCH(QString, pattern);
-    QFETCH(int, startIndex);
-    QFETCH(int, options);
-    QFETCH(int, expectedResult);
-    QFETCH(int, expectedMatchedLength);
-
-    int matchedLength;
-    const int result = KFind::find(text, pattern, startIndex, options, &matchedLength);
-    QCOMPARE(result, expectedResult);
-    QCOMPARE(matchedLength, expectedMatchedLength);
-}
-#endif
-
 void TestKFind::testStaticFindRegexp_data()
 {
     // Tests for the core method "static KFind::find"
@@ -243,13 +179,6 @@ void TestKFind::testStaticFindRegexp()
     QFETCH(int, expectedMatchedLength);
 
     int matchedLength = 0;
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
-    const int result = KFind::find(text, QRegExp(pattern), startIndex, options, &matchedLength);
-    QCOMPARE(result, expectedResult);
-    QCOMPARE(matchedLength, expectedMatchedLength);
-
-    matchedLength = 0;
-#endif
     const int result2 = KFind::find(text, pattern, startIndex, options | KFind::RegularExpression, &matchedLength, nullptr);
     QCOMPARE(result2, expectedResult);
     QCOMPARE(matchedLength, expectedMatchedLength);
@@ -312,25 +241,6 @@ void TestKFind::testSimpleRegexp()
     const QString output = QStringLiteral("line: \"    but WITHOUT ANY WARRANTY; without even the implied warranty of\", index: 20, length: 8\n");
     QCOMPARE(test.hits().join(QString()), output);
 }
-
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
-void TestKFind::testLineBeginRegexp()
-{
-    // Let's see what QRegExp can do on a big text (like in KTextEdit)
-    {
-        const QString foobar = QStringLiteral("foo\nbar");
-        const int idx = foobar.indexOf(QRegExp(QStringLiteral("^bar")));
-        QCOMPARE(idx, -1); // it doesn't find it. No /m support, as they say. Too bad.
-    }
-
-    // If we split, it works, but then looking for "foo\nbar" won't work...
-    KFindRecorder test(m_text.split(QLatin1Char('\n')));
-    test.find(QStringLiteral("^License"), KFind::RegularExpression);
-    while (test.findNext()) { }
-    const QString output = QStringLiteral("line: \"License version 2, as published by the Free Software Foundation.\", index: 0, length: 7\n");
-    QCOMPARE(test.hits().join(QString()), output);
-}
-#endif
 
 void TestKFind::testLineBeginRegularExpression()
 {

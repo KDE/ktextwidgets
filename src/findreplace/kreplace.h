@@ -160,23 +160,6 @@ public:
      */
     static int replace(QString &text, const QString &pattern, const QString &replacement, int index, long options, int *replacedLength);
 
-#if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 70)
-    /**
-     * This is an overloaded function provided for use with QRegExp regular expressions.
-     *
-     * @param text The string to search.
-     * @param pattern The QRegExp object used for searching.
-     * @param replacement The replacement string to insert into the text.
-     * @param index The starting index into the string.
-     * @param options The options to use.
-     * @param replacedLength Output parameter, contains the length of the replaced string.
-     * Not always the same as replacement.length(), when backreferences are used.
-     * @return The index at which a match was found, or -1 if no match was found.
-     * @deprecated Since 5.70, for lack of direct use
-     */
-    static int replace(QString &text, const QRegExp &pattern, const QString &replacement, int index, long options, int *replacedLength);
-#endif
-
     /**
      * Returns true if we should restart the search from scratch.
      * Can ask the user, or return false (if we already searched/replaced the
@@ -200,27 +183,6 @@ public:
     void displayFinalDialog() const override;
 
 Q_SIGNALS:
-#if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 83)
-    /**
-     * Connect to this slot to implement updating of replaced text during the replace
-     * operation.
-     *
-     * Extra care must be taken to properly implement the "no prompt-on-replace" case.
-     * For instance, the textFound() signal isn't emitted in that case (some code might
-     * rely on it), and for performance reasons one should repaint after replace() ONLY
-     * if prompt-on-replace was selected.
-     *
-     * @param text The text, in which the replacement has already been done.
-     * @param replacementIndex Starting index of the matched substring
-     * @param replacedLength Length of the replacement string
-     * @param matchedLength Length of the matched string
-     *
-     * @deprecated since 5.83, use the KReplace::textReplaced(const QString &, int, int, int) signal instead
-     */
-    KTEXTWIDGETS_DEPRECATED_VERSION(5, 83, "Use the KReplace::textReplaced(const QString &, int, int, int) signal instead.")
-    void replace(const QString &text, int replacementIndex, int replacedLength, int matchedLength); // clazy:exclude=overloaded-signal
-#endif
-
     /**
      * Connect to this signal to implement updating of replaced text during the replace
      * operation.
@@ -241,9 +203,5 @@ Q_SIGNALS:
 
 private:
     Q_DECLARE_PRIVATE_D(KFind::d, KReplace)
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 79)
-    // Unused, kept for ABI compatibility
-    const void *__ktextwidgets_d_do_not_use;
-#endif
 };
 #endif

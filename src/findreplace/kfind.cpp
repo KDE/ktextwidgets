@@ -16,10 +16,6 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
-#include <QRegExp>
-#endif
-
 #include <QDialog>
 #include <QDialogButtonBox>
 #include <QHash>
@@ -117,10 +113,6 @@ void KFindPrivate::init(const QString &_pattern)
     index = INDEX_NOMATCH;
     lastResult = KFind::NoMatch;
 
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
-    regExp = nullptr; // QRegExp
-
-#endif
     // TODO: KF6 change this comment once d->regExp is removed
     // set options and create d->regExp with the right options
     q->setOptions(options);
@@ -269,14 +261,8 @@ KFind::Result KFind::find()
                 // if the result is clean we can return it now
                 if (clean) {
                     if (d->customIds) {
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
-                        Q_EMIT highlight(d->currentId, d->index, d->matchedLength);
-#endif
                         Q_EMIT textFoundAtId(d->currentId, d->index, d->matchedLength);
                     } else {
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
-                        Q_EMIT highlight(d->text, d->index, d->matchedLength);
-#endif
                         Q_EMIT textFound(d->text, d->index, d->matchedLength);
                     }
 
@@ -369,14 +355,8 @@ KFind::Result KFind::find()
                     // Tell the world about the match we found, in case someone wants to
                     // highlight it.
                     if (d->customIds) {
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
-                        Q_EMIT highlight(d->currentId, d->index, d->matchedLength);
-#endif
                         Q_EMIT textFoundAtId(d->currentId, d->index, d->matchedLength);
                     } else {
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 81)
-                        Q_EMIT highlight(d->text, d->index, d->matchedLength);
-#endif
                         Q_EMIT textFound(d->text, d->index, d->matchedLength);
                     }
 
@@ -505,14 +485,6 @@ static int findRegex(const QString &text, const QString &pattern, int index, lon
     return index;
 }
 
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
-// static
-int KFind::find(const QString &text, const QString &pattern, int index, long options, int *matchedLength)
-{
-    return find(text, pattern, index, options, matchedLength, nullptr);
-}
-#endif
-
 // static
 int KFind::find(const QString &text, const QString &pattern, int index, long options, int *matchedLength, QRegularExpressionMatch *rmatch)
 {
@@ -570,112 +542,6 @@ int KFind::find(const QString &text, const QString &pattern, int index, long opt
     }
     return index;
 }
-
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
-// Core method for the regexp-based find
-static int doFind(const QString &text, const QRegExp &pattern, int index, long options, int *matchedLength)
-{
-    if (options & KFind::FindBackwards) {
-        // Backward search, until the beginning of the line...
-        while (index >= 0) {
-            // ...find the next match.
-            index = text.lastIndexOf(pattern, index);
-            if (index == -1) {
-                break;
-            }
-
-            /*int pos =*/pattern.indexIn(text.mid(index));
-            *matchedLength = pattern.matchedLength();
-            if (matchOk(text, index, *matchedLength, options)) {
-                break;
-            }
-            index--;
-        }
-    } else {
-        // Forward search, until the end of the line...
-        while (index <= text.length()) {
-            // ...find the next match.
-            index = text.indexOf(pattern, index);
-            if (index == -1) {
-                break;
-            }
-
-            /*int pos =*/pattern.indexIn(text.mid(index));
-            *matchedLength = pattern.matchedLength();
-            if (matchOk(text, index, *matchedLength, options)) {
-                break;
-            }
-            index++;
-        }
-        if (index > text.length()) { // end of line
-            index = -1; // not found
-        }
-    }
-    if (index == -1) {
-        *matchedLength = 0;
-    }
-    return index;
-}
-#endif
-
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
-// Since QRegExp doesn't support multiline searches (the equivalent of perl's /m)
-// we have to cut the text into lines if the pattern starts with ^ or ends with $.
-static int lineBasedFind(const QString &text, const QRegExp &pattern, int index, long options, int *matchedLength)
-{
-    const QStringList lines = text.split(QLatin1Char('\n'));
-    int offset = 0;
-    // Use "index" to find the first line we should start from
-    int startLineNumber = 0;
-    for (; startLineNumber < lines.count(); ++startLineNumber) {
-        const QString line = lines.at(startLineNumber);
-        if (index < offset + line.length()) {
-            break;
-        }
-        offset += line.length() + 1 /*newline*/;
-    }
-
-    if (options & KFind::FindBackwards) {
-        if (startLineNumber == lines.count()) {
-            // We went too far, go back to the last line
-            --startLineNumber;
-            offset -= lines.at(startLineNumber).length() + 1;
-        }
-
-        for (int lineNumber = startLineNumber; lineNumber >= 0; --lineNumber) {
-            const QString line = lines.at(lineNumber);
-            const int ret = doFind(line, pattern, lineNumber == startLineNumber ? index - offset : line.length(), options, matchedLength);
-            if (ret > -1) {
-                return ret + offset;
-            }
-            offset -= line.length() + 1 /*newline*/;
-        }
-
-    } else {
-        for (int lineNumber = startLineNumber; lineNumber < lines.count(); ++lineNumber) {
-            const QString line = lines.at(lineNumber);
-            const int ret = doFind(line, pattern, lineNumber == startLineNumber ? (index - offset) : 0, options, matchedLength);
-            if (ret > -1) {
-                return ret + offset;
-            }
-            offset += line.length() + 1 /*newline*/;
-        }
-    }
-    return -1;
-}
-#endif
-
-#if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 70)
-// static
-int KFind::find(const QString &text, const QRegExp &pattern, int index, long options, int *matchedLength)
-{
-    if (pattern.pattern().startsWith(QLatin1Char('^')) || pattern.pattern().endsWith(QLatin1Char('$'))) {
-        return lineBasedFind(text, pattern, index, options, matchedLength);
-    }
-
-    return doFind(text, pattern, index, options, matchedLength);
-}
-#endif
 
 void KFindPrivate::slotFindNext()
 {
@@ -765,16 +631,6 @@ void KFind::setOptions(long options)
     Q_D(KFind);
 
     d->options = options;
-
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 70)
-    delete d->regExp;
-    if (d->options & KFind::RegularExpression) {
-        Qt::CaseSensitivity caseSensitive = (d->options & KFind::CaseSensitive) ? Qt::CaseSensitive : Qt::CaseInsensitive;
-        d->regExp = new QRegExp(d->pattern, caseSensitive);
-    } else {
-        d->regExp = nullptr;
-    }
-#endif
 }
 
 void KFind::closeFindNextDialog()

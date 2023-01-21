@@ -45,9 +45,6 @@ class KTextEditPrivate;
 class KTEXTWIDGETS_EXPORT KTextEdit : public QTextEdit // krazy:exclude=qclasses
 {
     Q_OBJECT
-#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 0)
-    Q_PROPERTY(QString clickMessage READ clickMessage WRITE setClickMessage)
-#endif
     Q_PROPERTY(bool checkSpellingEnabled READ checkSpellingEnabled WRITE setCheckSpellingEnabled)
     Q_PROPERTY(QString spellCheckingLanguage READ spellCheckingLanguage WRITE setSpellCheckingLanguage)
 
@@ -180,32 +177,6 @@ public:
      * @since 4.2
      */
     const QString &spellCheckingLanguage() const;
-
-#if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * This makes the text edit display a grayed-out hinting text as long as
-     * the user didn't enter any text. It is often used as indication about
-     * the purpose of the text edit.
-     * @deprecated since 5.0, use QTextEdit::setPlaceholderText instead
-     */
-    KTEXTWIDGETS_DEPRECATED_VERSION(5, 0, "Use QTextEdit::setPlaceholderText(const QString&)")
-    inline void setClickMessage(const QString &msg)
-    {
-        setPlaceholderText(msg);
-    }
-#endif
-
-#if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(5, 0)
-    /**
-     * @return the message set with setClickMessage
-     * @deprecated since 5.0, use QTextEdit::placeholderText instead
-     */
-    KTEXTWIDGETS_DEPRECATED_VERSION(5, 0, "Use QTextEdit::placeholderText()")
-    inline QString clickMessage() const
-    {
-        return placeholderText();
-    }
-#endif
 
     /**
      * @since 4.10

@@ -14,7 +14,6 @@ target_sources(KF6TextWidgets PRIVATE
     findreplace/kreplacedialog.cpp
     findreplace/kreplacedialog.h
     findreplace/kreplace.h
-    kregexpeditor/kregexpeditorinterface.h
     widgets/kpluralhandlingspinbox.cpp
     widgets/kpluralhandlingspinbox.h
     widgets/krichtextedit.cpp
@@ -35,14 +34,13 @@ ecm_generate_export_header(KF6TextWidgets
     GROUP_BASE_NAME KF
     VERSION ${KF_VERSION}
     DEPRECATED_BASE_VERSION 0
-    DEPRECATION_VERSIONS 5.0 5.65 5.70 5.71 5.81 5.83 5.101
+    DEPRECATION_VERSIONS 5.101
     EXCLUDE_DEPRECATED_BEFORE_AND_AT ${EXCLUDE_DEPRECATED_BEFORE_AND_AT}
 )
 
 set(ktextwidgets_INCLUDES
   ${CMAKE_CURRENT_SOURCE_DIR}/dialogs
   ${CMAKE_CURRENT_SOURCE_DIR}/findreplace
-  ${CMAKE_CURRENT_SOURCE_DIR}/kregexpeditor
   ${CMAKE_CURRENT_SOURCE_DIR}/widgets
 )
 target_include_directories(KF6TextWidgets PUBLIC "$<BUILD_INTERFACE:${ktextwidgets_INCLUDES}>"
@@ -91,14 +89,6 @@ ecm_generate_headers(KTextWidgets_HEADERS
   KReplaceDialog
 
   RELATIVE findreplace
-  REQUIRED_HEADERS KTextWidgets_HEADERS
-)
-
-ecm_generate_headers(KTextWidgets_HEADERS
-  HEADER_NAMES
-  KRegExpEditorInterface
-
-  RELATIVE kregexpeditor
   REQUIRED_HEADERS KTextWidgets_HEADERS
 )
 
