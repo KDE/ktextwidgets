@@ -21,7 +21,7 @@ ecm_qtdesignerplugin_widget(KPluralHandlingSpinBox
 
 ecm_add_qtdesignerplugin(ktextwidgetswidgets
     NAME KTextWidgetsWidgets
-    OUTPUT_NAME ktextwidgets5widgets
+    OUTPUT_NAME ktextwidgets6widgets
     WIDGETS
         KRichTextEdit
         KRichTextWidget
