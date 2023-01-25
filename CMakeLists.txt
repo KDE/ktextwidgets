@@ -36,12 +36,9 @@ set(REQUIRED_QT_VERSION 6.4.0)
 
 find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets)
 
-# No QTextToSpeech in Qt6.2
-if (QT_MAJOR_VERSION STREQUAL "5")
-    find_package(Qt5 OPTIONAL_COMPONENTS TextToSpeech)
-endif()
-if (NOT Qt5TextToSpeech_FOUND)
-    message(STATUS "Qt5TextToSpeech not found, speech feature will be disabled")
+find_package(Qt6 OPTIONAL_COMPONENTS TextToSpeech)
+if (NOT Qt6TextToSpeech_FOUND)
+    message(STATUS "Qt6TextToSpeech not found, speech feature will be disabled")
 else()
     add_definitions(-DHAVE_SPEECH)
 endif()

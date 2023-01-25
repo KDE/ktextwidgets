@@ -59,10 +59,10 @@ PRIVATE
   KF6::Completion
 )
 
-if (Qt5TextToSpeech_FOUND)
+if (Qt6TextToSpeech_FOUND)
     target_link_libraries(KF6TextWidgets
-PRIVATE
-        Qt5::TextToSpeech)
+      PRIVATE
+        Qt6::TextToSpeech)
 endif()
 
 
