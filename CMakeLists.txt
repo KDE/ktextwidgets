@@ -34,7 +34,7 @@ ecm_setup_version(PROJECT
 # Dependencies
 set(REQUIRED_QT_VERSION 6.4.0)
 
-find_package(Qt${QT_MAJOR_VERSION} ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets)
+find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets)
 
 find_package(Qt6 OPTIONAL_COMPONENTS TextToSpeech)
 if (NOT Qt6TextToSpeech_FOUND)

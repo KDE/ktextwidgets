@@ -50,7 +50,7 @@ target_include_directories(KF6TextWidgets INTERFACE "$<INSTALL_INTERFACE:${KDE_I
 
 target_link_libraries(KF6TextWidgets
 PUBLIC
-  Qt${QT_MAJOR_VERSION}::Widgets
+  Qt6::Widgets
   KF6::SonnetUi
   KF6::I18n
 PRIVATE
