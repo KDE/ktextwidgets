@@ -269,7 +269,7 @@ void KRichTextEdit::setFontFamily(const QString &fontFamily)
     Q_D(KRichTextEdit);
 
     QTextCharFormat fmt;
-    fmt.setFontFamily(fontFamily);
+    fmt.setFontFamilies({fontFamily});
     d->mergeFormatOnWordOrSelection(fmt);
     setFocus();
     d->activateRichText();
