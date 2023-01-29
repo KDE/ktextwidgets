@@ -366,11 +366,11 @@ protected:
     KFind(KFindPrivate &dd, const QString &pattern, long options, QWidget *parent);
     KFind(KFindPrivate &dd, const QString &pattern, long options, QWidget *parent, QWidget *findDialog);
 
+protected:
+    std::unique_ptr<class KFindPrivate> const d_ptr;
+
 private:
-    friend class KReplace;
-    Q_DECLARE_PRIVATE_D(d, KFind)
-    std::unique_ptr<class KFindPrivate> const d;
-    // KF6 TODO: change private d to protected d_ptr, use normal Q_DECLARE_PRIVATE, remove friend
+    Q_DECLARE_PRIVATE(KFind)
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(KFind::SearchOptions)

@@ -221,11 +221,11 @@ protected:
                 bool hasSelection = false,
                 bool replaceDialog = false);
 
+protected:
+    std::unique_ptr<class KFindDialogPrivate> const d_ptr;
+
 private:
-    friend class KReplaceDialog;
-    Q_DECLARE_PRIVATE_D(d, KFindDialog)
-    std::unique_ptr<class KFindDialogPrivate> const d;
-    // KF6 TODO: change private d to protected d_ptr, use normal Q_DECLARE_PRIVATE, remove friend
+    Q_DECLARE_PRIVATE(KFindDialog)
 };
 
 #endif // KFINDDIALOG_H

@@ -37,7 +37,7 @@ KFindDialog::KFindDialog(QWidget *parent, long options, const QStringList &findS
 
 KFindDialog::KFindDialog(KFindDialogPrivate &dd, QWidget *parent, long options, const QStringList &findStrings, bool hasSelection, bool replaceDialog)
     : QDialog(parent)
-    , d(&dd)
+    , d_ptr(&dd)
 {
     Q_D(KFindDialog);
 

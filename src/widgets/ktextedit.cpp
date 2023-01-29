@@ -234,7 +234,7 @@ KTextEdit::KTextEdit(const QString &text, QWidget *parent)
 
 KTextEdit::KTextEdit(KTextEditPrivate &dd, const QString &text, QWidget *parent)
     : QTextEdit(text, parent)
-    , d(&dd)
+    , d_ptr(&dd)
 {
     Q_D(KTextEdit);
 
@@ -248,7 +248,7 @@ KTextEdit::KTextEdit(QWidget *parent)
 
 KTextEdit::KTextEdit(KTextEditPrivate &dd, QWidget *parent)
     : QTextEdit(parent)
-    , d(&dd)
+    , d_ptr(&dd)
 {
     Q_D(KTextEdit);
 

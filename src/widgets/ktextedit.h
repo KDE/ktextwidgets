@@ -359,12 +359,11 @@ protected:
     KTextEdit(KTextEditPrivate &dd, const QString &text, QWidget *parent);
     KTextEdit(KTextEditPrivate &dd, QWidget *parent);
 
+protected:
+    std::unique_ptr<class KTextEditPrivate> const d_ptr;
+
 private:
-    friend class KRichTextEdit;
-    friend class KRichTextWidget;
-    Q_DECLARE_PRIVATE_D(d, KTextEdit)
-    std::unique_ptr<class KTextEditPrivate> const d;
-    // KF6 TODO: change private d to protected d_ptr, use normal Q_DECLARE_PRIVATE, remove friend
+    Q_DECLARE_PRIVATE(KTextEdit)
 };
 
 #endif // KTEXTEDIT_H

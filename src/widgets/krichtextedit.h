@@ -367,7 +367,7 @@ protected:
 
 private:
     //@cond PRIVATE
-    Q_DECLARE_PRIVATE_D(KTextEdit::d, KRichTextEdit)
+    Q_DECLARE_PRIVATE(KRichTextEdit)
     //@endcond
 };
 

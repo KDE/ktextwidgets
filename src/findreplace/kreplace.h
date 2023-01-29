@@ -202,6 +202,6 @@ Q_SIGNALS:
     void textReplaced(const QString &text, int replacementIndex, int replacedLength, int matchedLength);
 
 private:
-    Q_DECLARE_PRIVATE_D(KFind::d, KReplace)
+    Q_DECLARE_PRIVATE(KReplace)
 };
 #endif

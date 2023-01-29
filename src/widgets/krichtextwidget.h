@@ -350,7 +350,7 @@ protected:
 
 private:
     //@cond PRIVATE
-    Q_DECLARE_PRIVATE_D(KTextEdit::d, KRichTextWidget)
+    Q_DECLARE_PRIVATE(KRichTextWidget)
     //@endcond
 };
 

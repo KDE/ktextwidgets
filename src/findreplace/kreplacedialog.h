@@ -126,7 +126,7 @@ protected:
     void showEvent(QShowEvent *) override;
 
 private:
-    Q_DECLARE_PRIVATE_D(KFindDialog::d, KReplaceDialog)
+    Q_DECLARE_PRIVATE(KReplaceDialog)
 };
 
 #endif // KREPLACEDIALOG_H

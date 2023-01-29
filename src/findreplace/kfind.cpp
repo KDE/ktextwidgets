@@ -78,7 +78,7 @@ KFind::KFind(const QString &pattern, long options, QWidget *parent)
 
 KFind::KFind(KFindPrivate &dd, const QString &pattern, long options, QWidget *parent)
     : QObject(parent)
-    , d(&dd)
+    , d_ptr(&dd)
 {
     Q_D(KFind);
 
@@ -93,7 +93,7 @@ KFind::KFind(const QString &pattern, long options, QWidget *parent, QWidget *fin
 
 KFind::KFind(KFindPrivate &dd, const QString &pattern, long options, QWidget *parent, QWidget *findDialog)
     : QObject(parent)
-    , d(&dd)
+    , d_ptr(&dd)
 {
     Q_D(KFind);
 
