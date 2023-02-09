@@ -129,15 +129,7 @@ void KRichTextEditTest::testHTMLLineBreaks()
     //    qDebug() << ( idx + 1 ) << " : " << lines.at( idx );
     //  }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 3, 0)
-    QVERIFY2(lines.size() == 7,
-             "we can't perform this unit test: "
-             "the html rendering has changed beyond recognition");
-#elif QT_VERSION < QT_VERSION_CHECK(6, 4, 0)
-    QCOMPARE(lines.size(), 8);
-#else
     QCOMPARE(lines.size(), 10);
-#endif
 
     const QString &line6 = lines.at(lines.size() - 2);
 
@@ -178,15 +170,7 @@ void KRichTextEditTest::testHTMLOrderedLists()
     //    qDebug() << ( idx + 1 ) << " : " << lines.at( idx );
     //  }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 3, 0)
-    QVERIFY2(lines.size() == 9,
-             "we can't perform this unit test: "
-             "the html rendering has changed beyond recognition");
-#elif QT_VERSION < QT_VERSION_CHECK(6, 4, 0)
-    QCOMPARE(lines.size(), 10);
-#else
     QCOMPARE(lines.size(), 13);
-#endif
 
     // this is the <ol> declaration line
     const QString &line6 = lines.at(lines.size() - 4);
@@ -228,15 +212,7 @@ void KRichTextEditTest::testHTMLUnorderedLists()
     //    qDebug() << ( idx + 1 ) << " : " << lines.at( idx );
     //  }
 
-#if QT_VERSION < QT_VERSION_CHECK(6, 3, 0)
-    QVERIFY2(lines.size() == 9,
-             "we can't perform this unit test: "
-             "the html rendering has changed beyond recognition");
-#elif QT_VERSION < QT_VERSION_CHECK(6, 4, 0)
-    QCOMPARE(lines.size(), 10);
-#else
     QCOMPARE(lines.size(), 13);
-#endif
 
     // this is the <ol> declaration line
     const QString &line6 = lines.at(lines.size() - 4);
