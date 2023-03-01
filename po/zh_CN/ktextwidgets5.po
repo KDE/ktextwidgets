@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-11-24 00:25+0000\n"
-"PO-Revision-Date: 2023-01-02 07:11\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"PO-Revision-Date: 2023-02-24 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -32,50 +32,50 @@ msgstr "链接文字："
 msgid "Link URL:"
 msgstr "链接 URL："
 
-#: findreplace/kfind.cpp:52
+#: findreplace/kfind.cpp:48
 #, kde-format
 msgid "Find Next"
 msgstr "查找下一个"
 
-#: findreplace/kfind.cpp:56
+#: findreplace/kfind.cpp:52
 #, kde-format
 msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
 msgstr "<qt>查找下一个包含“<b>%1</b>”的位置吗？</qt>"
 
-#: findreplace/kfind.cpp:707 findreplace/kfind.cpp:728
+#: findreplace/kfind.cpp:573 findreplace/kfind.cpp:594
 #, kde-format
 msgid "1 match found."
 msgid_plural "%1 matches found."
 msgstr[0] "找到 %1 个匹配项。"
 
-#: findreplace/kfind.cpp:709
+#: findreplace/kfind.cpp:575
 #, kde-format
 msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
 msgstr "<qt>没有找到“<b>%1</b>”的匹配项。</qt>"
 
-#: findreplace/kfind.cpp:730
+#: findreplace/kfind.cpp:596
 #, kde-format
 msgid "No matches found for '<b>%1</b>'."
 msgstr "没有找到“<b>%1</b>”的匹配项。"
 
-#: findreplace/kfind.cpp:734 findreplace/kreplace.cpp:435
+#: findreplace/kfind.cpp:600 findreplace/kreplace.cpp:384
 #, kde-format
 msgid "Beginning of document reached."
 msgstr "已查找到文档开头。"
 
-#: findreplace/kfind.cpp:736 findreplace/kreplace.cpp:437
+#: findreplace/kfind.cpp:602 findreplace/kreplace.cpp:386
 #, kde-format
 msgid "End of document reached."
 msgstr "已查找到文档结尾。"
 
 #. i18n() of the first if() because of the plural form.
 #. Hope this word puzzle is ok, it's a different sentence
-#: findreplace/kfind.cpp:742
+#: findreplace/kfind.cpp:608
 #, kde-format
 msgid "Continue from the end?"
 msgstr "从结尾开始继续查找吗？"
 
-#: findreplace/kfind.cpp:742
+#: findreplace/kfind.cpp:608
 #, kde-format
 msgid "Continue from the beginning?"
 msgstr "从头开始继续查找吗？"
@@ -343,55 +343,55 @@ msgstr "您必须输入要查找的文本。"
 msgid "Invalid PCRE pattern syntax."
 msgstr "无效的 PCRE 模式语法。"
 
-#: findreplace/kreplace.cpp:52 findreplace/kreplace.cpp:63
+#: findreplace/kreplace.cpp:48 findreplace/kreplace.cpp:59
 #, kde-format
 msgid "Replace"
 msgstr "替换"
 
-#: findreplace/kreplace.cpp:59
+#: findreplace/kreplace.cpp:55
 #, kde-format
 msgctxt "@action:button Replace all occurrences"
 msgid "&All"
 msgstr "全部替换(&A)"
 
-#: findreplace/kreplace.cpp:61
+#: findreplace/kreplace.cpp:57
 #, kde-format
 msgid "&Skip"
 msgstr "跳过(&S)"
 
-#: findreplace/kreplace.cpp:80
+#: findreplace/kreplace.cpp:76
 #, kde-format
 msgid "Replace '%1' with '%2'?"
 msgstr "将“%1”替换为“%2”吗？"
 
-#: findreplace/kreplace.cpp:182 findreplace/kreplace.cpp:429
+#: findreplace/kreplace.cpp:178 findreplace/kreplace.cpp:378
 #, kde-format
 msgid "No text was replaced."
 msgstr "没有替换任何文本。"
 
-#: findreplace/kreplace.cpp:184 findreplace/kreplace.cpp:431
+#: findreplace/kreplace.cpp:180 findreplace/kreplace.cpp:380
 #, kde-format
 msgid "1 replacement done."
 msgid_plural "%1 replacements done."
 msgstr[0] "已完成 %1 次替换。"
 
-#: findreplace/kreplace.cpp:444
+#: findreplace/kreplace.cpp:393
 #, kde-format
 msgid "Do you want to restart search from the end?"
 msgstr "您想要从结尾重新开始搜索吗？"
 
-#: findreplace/kreplace.cpp:444
+#: findreplace/kreplace.cpp:393
 #, kde-format
 msgid "Do you want to restart search at the beginning?"
 msgstr "您想要从开头重新开始搜索吗？"
 
-#: findreplace/kreplace.cpp:449
+#: findreplace/kreplace.cpp:398
 #, kde-format
 msgctxt "@action:button Restart find & replace"
 msgid "Restart"
 msgstr "重新开始"
 
-#: findreplace/kreplace.cpp:450
+#: findreplace/kreplace.cpp:399
 #, kde-format
 msgctxt "@action:button Stop find & replace"
 msgid "Stop"

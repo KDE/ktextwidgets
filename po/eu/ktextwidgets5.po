@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktextwidgets\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-11-24 00:25+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2022-11-13 08:58+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -37,51 +37,51 @@ msgstr "Estekatu testua:"
 msgid "Link URL:"
 msgstr "Estekatu URLa:"
 
-#: findreplace/kfind.cpp:52
+#: findreplace/kfind.cpp:48
 #, kde-format
 msgid "Find Next"
 msgstr "Bilatu hurrengoa"
 
-#: findreplace/kfind.cpp:56
+#: findreplace/kfind.cpp:52
 #, kde-format
 msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
 msgstr "<qt>Bilatu '<b>%1</b>'(r)en hurrengo agerpena?</qt>"
 
-#: findreplace/kfind.cpp:707 findreplace/kfind.cpp:728
+#: findreplace/kfind.cpp:573 findreplace/kfind.cpp:594
 #, kde-format
 msgid "1 match found."
 msgid_plural "%1 matches found."
 msgstr[0] "Parekatze %1 aurkitu da."
 msgstr[1] "%1 parekatze aurkitu dira."
 
-#: findreplace/kfind.cpp:709
+#: findreplace/kfind.cpp:575
 #, kde-format
 msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
 msgstr "<qt>Ez da '<b>%1</b>'(r)ekin bat datorrenik aurkitu.</qt>"
 
-#: findreplace/kfind.cpp:730
+#: findreplace/kfind.cpp:596
 #, kde-format
 msgid "No matches found for '<b>%1</b>'."
 msgstr "Ez da '<b>%1</b>'(r)ekin bat datorrenik aurkitu."
 
-#: findreplace/kfind.cpp:734 findreplace/kreplace.cpp:435
+#: findreplace/kfind.cpp:600 findreplace/kreplace.cpp:384
 #, kde-format
 msgid "Beginning of document reached."
 msgstr "Dokumentuaren hasierara iritsi da."
 
-#: findreplace/kfind.cpp:736 findreplace/kreplace.cpp:437
+#: findreplace/kfind.cpp:602 findreplace/kreplace.cpp:386
 #, kde-format
 msgid "End of document reached."
 msgstr "Dokumentuaren amaierara iritsi da."
 
 #. i18n() of the first if() because of the plural form.
 #. Hope this word puzzle is ok, it's a different sentence
-#: findreplace/kfind.cpp:742
+#: findreplace/kfind.cpp:608
 #, kde-format
 msgid "Continue from the end?"
 msgstr "Jarraitu amaieratik?"
 
-#: findreplace/kfind.cpp:742
+#: findreplace/kfind.cpp:608
 #, kde-format
 msgid "Continue from the beginning?"
 msgstr "Jarraitu hasieratik?"
@@ -356,56 +356,56 @@ msgstr "Testuren bat idatzi behar duzu bilatzeko."
 msgid "Invalid PCRE pattern syntax."
 msgstr "PCRE sintaxi egitura baliogabea."
 
-#: findreplace/kreplace.cpp:52 findreplace/kreplace.cpp:63
+#: findreplace/kreplace.cpp:48 findreplace/kreplace.cpp:59
 #, kde-format
 msgid "Replace"
 msgstr "Ordeztu"
 
-#: findreplace/kreplace.cpp:59
+#: findreplace/kreplace.cpp:55
 #, kde-format
 msgctxt "@action:button Replace all occurrences"
 msgid "&All"
 msgstr "&Dena"
 
-#: findreplace/kreplace.cpp:61
+#: findreplace/kreplace.cpp:57
 #, kde-format
 msgid "&Skip"
 msgstr "&Baztertu"
 
-#: findreplace/kreplace.cpp:80
+#: findreplace/kreplace.cpp:76
 #, kde-format
 msgid "Replace '%1' with '%2'?"
 msgstr "Ordeztu '%1' '%2'-(r)ekin?"
 
-#: findreplace/kreplace.cpp:182 findreplace/kreplace.cpp:429
+#: findreplace/kreplace.cpp:178 findreplace/kreplace.cpp:378
 #, kde-format
 msgid "No text was replaced."
 msgstr "Ez da testurik ordeztu."
 
-#: findreplace/kreplace.cpp:184 findreplace/kreplace.cpp:431
+#: findreplace/kreplace.cpp:180 findreplace/kreplace.cpp:380
 #, kde-format
 msgid "1 replacement done."
 msgid_plural "%1 replacements done."
 msgstr[0] "Ordezkapen %1 egin da."
 msgstr[1] "%1 ordezkapen egin dira."
 
-#: findreplace/kreplace.cpp:444
+#: findreplace/kreplace.cpp:393
 #, kde-format
 msgid "Do you want to restart search from the end?"
 msgstr "Bilaketa amaieratik jarraitzea nahi duzu?"
 
-#: findreplace/kreplace.cpp:444
+#: findreplace/kreplace.cpp:393
 #, kde-format
 msgid "Do you want to restart search at the beginning?"
 msgstr "Bilaketa hasieratik jarraitzea nahi duzu?"
 
-#: findreplace/kreplace.cpp:449
+#: findreplace/kreplace.cpp:398
 #, kde-format
 msgctxt "@action:button Restart find & replace"
 msgid "Restart"
 msgstr "Berrabiarazi"
 
-#: findreplace/kreplace.cpp:450
+#: findreplace/kreplace.cpp:399
 #, kde-format
 msgctxt "@action:button Stop find & replace"
 msgid "Stop"

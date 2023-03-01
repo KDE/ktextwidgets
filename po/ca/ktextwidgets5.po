@@ -1,12 +1,12 @@
 # Translation of ktextwidgets5.po to Catalan
-# Copyright (C) 1998-2022 This_file_is_part_of_KDE
+# Copyright (C) 1998-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Sebastià Pla i Sanz <sps@sastia.com>, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2003, 2006, 2011, 2012, 2013, 2014, 2015, 2019, 2020, 2022.
 # Albert Astals Cid <aacid@kde.org>, 2004, 2005, 2007.
-# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2020, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2020, 2022, 2023.
 # Robert Millan <rmh@aybabtu.com>, 2009.
 # Orestes Mas <orestes@tsc.upc.edu>, 2010.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
@@ -14,15 +14,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktextwidgets\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-11-24 00:25+0000\n"
-"PO-Revision-Date: 2022-12-30 23:04+0100\n"
-"Last-Translator: Antoni Bella <antonibella5@yahoo.com>\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"PO-Revision-Date: 2023-01-08 12:50+0100\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Kate 22.08.3\n"
+"X-Generator: Lokalize 20.12.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -41,51 +41,51 @@ msgstr "Text de l'enllaç:"
 msgid "Link URL:"
 msgstr "URL de l'enllaç:"
 
-#: findreplace/kfind.cpp:52
+#: findreplace/kfind.cpp:48
 #, kde-format
 msgid "Find Next"
 msgstr "Cerca la següent"
 
-#: findreplace/kfind.cpp:56
+#: findreplace/kfind.cpp:52
 #, kde-format
 msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
 msgstr "<qt>Cerco la següent ocurrència de «<b>%1</b>»?</qt>"
 
-#: findreplace/kfind.cpp:707 findreplace/kfind.cpp:728
+#: findreplace/kfind.cpp:573 findreplace/kfind.cpp:594
 #, kde-format
 msgid "1 match found."
 msgid_plural "%1 matches found."
 msgstr[0] "S'ha trobat 1 coincidència."
 msgstr[1] "S'han trobat %1 coincidències."
 
-#: findreplace/kfind.cpp:709
+#: findreplace/kfind.cpp:575
 #, kde-format
 msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
 msgstr "<qt>No s'ha trobat cap coincidència per a «<b>%1</b>».</qt>"
 
-#: findreplace/kfind.cpp:730
+#: findreplace/kfind.cpp:596
 #, kde-format
 msgid "No matches found for '<b>%1</b>'."
 msgstr "No s'ha trobat cap coincidència per a «<b>%1</b>»."
 
-#: findreplace/kfind.cpp:734 findreplace/kreplace.cpp:435
+#: findreplace/kfind.cpp:600 findreplace/kreplace.cpp:384
 #, kde-format
 msgid "Beginning of document reached."
 msgstr "S'ha arribat al començament del document."
 
-#: findreplace/kfind.cpp:736 findreplace/kreplace.cpp:437
+#: findreplace/kfind.cpp:602 findreplace/kreplace.cpp:386
 #, kde-format
 msgid "End of document reached."
 msgstr "S'ha arribat al final del document."
 
 #. i18n() of the first if() because of the plural form.
 #. Hope this word puzzle is ok, it's a different sentence
-#: findreplace/kfind.cpp:742
+#: findreplace/kfind.cpp:608
 #, kde-format
 msgid "Continue from the end?"
 msgstr "Continuo des del final?"
 
-#: findreplace/kfind.cpp:742
+#: findreplace/kfind.cpp:608
 #, kde-format
 msgid "Continue from the beginning?"
 msgstr "Continuo des del començament?"
@@ -265,7 +265,8 @@ msgstr ""
 #: findreplace/kfinddialog.cpp:233
 #, kde-format
 msgid "Start searching at the current cursor location rather than at the top."
-msgstr "Comença la cerca a la posició actual del cursor en lloc de per dalt."
+msgstr ""
+"Comença la cerca a la posició actual del cursor en lloc de la part superior."
 
 #: findreplace/kfinddialog.cpp:234
 #, kde-format
@@ -364,56 +365,56 @@ msgstr "Heu d'introduir un text a cercar."
 msgid "Invalid PCRE pattern syntax."
 msgstr "Sintaxi no vàlida del patró PCRE."
 
-#: findreplace/kreplace.cpp:52 findreplace/kreplace.cpp:63
+#: findreplace/kreplace.cpp:48 findreplace/kreplace.cpp:59
 #, kde-format
 msgid "Replace"
 msgstr "Substitueix"
 
-#: findreplace/kreplace.cpp:59
+#: findreplace/kreplace.cpp:55
 #, kde-format
 msgctxt "@action:button Replace all occurrences"
 msgid "&All"
 msgstr "&Totes"
 
-#: findreplace/kreplace.cpp:61
+#: findreplace/kreplace.cpp:57
 #, kde-format
 msgid "&Skip"
 msgstr "&Omet"
 
-#: findreplace/kreplace.cpp:80
+#: findreplace/kreplace.cpp:76
 #, kde-format
 msgid "Replace '%1' with '%2'?"
 msgstr "Substitueixo «%1» per «%2»?"
 
-#: findreplace/kreplace.cpp:182 findreplace/kreplace.cpp:429
+#: findreplace/kreplace.cpp:178 findreplace/kreplace.cpp:378
 #, kde-format
 msgid "No text was replaced."
 msgstr "No s'ha substituït cap text."
 
-#: findreplace/kreplace.cpp:184 findreplace/kreplace.cpp:431
+#: findreplace/kreplace.cpp:180 findreplace/kreplace.cpp:380
 #, kde-format
 msgid "1 replacement done."
 msgid_plural "%1 replacements done."
 msgstr[0] "S'ha fet una substitució."
 msgstr[1] "S'han fet %1 substitucions."
 
-#: findreplace/kreplace.cpp:444
+#: findreplace/kreplace.cpp:393
 #, kde-format
 msgid "Do you want to restart search from the end?"
 msgstr "Voleu tornar a començar la cerca des del final?"
 
-#: findreplace/kreplace.cpp:444
+#: findreplace/kreplace.cpp:393
 #, kde-format
 msgid "Do you want to restart search at the beginning?"
 msgstr "Voleu tornar a començar la cerca des del començament?"
 
-#: findreplace/kreplace.cpp:449
+#: findreplace/kreplace.cpp:398
 #, kde-format
 msgctxt "@action:button Restart find & replace"
 msgid "Restart"
 msgstr "Reinicia"
 
-#: findreplace/kreplace.cpp:450
+#: findreplace/kreplace.cpp:399
 #, kde-format
 msgctxt "@action:button Stop find & replace"
 msgid "Stop"
@@ -757,9 +758,3 @@ msgstr "Permet les tabulacions"
 #, kde-format
 msgid "Speak Text"
 msgstr "Pronuncia el text"
-
-#~ msgid "Invalid regular expression."
-#~ msgstr "Expressió regular no vàlida."
-
-#~ msgid "Starting Jovie Text-to-Speech Service Failed"
-#~ msgstr "Ha fallat en iniciar el servei Jovie de text a veu"

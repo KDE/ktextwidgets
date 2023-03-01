@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-11-24 00:25+0000\n"
+"POT-Creation-Date: 2023-03-01 21:29+0000\n"
 "PO-Revision-Date: 2010-12-29 15:32+0530\n"
 "Last-Translator: \n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -36,51 +36,51 @@ msgstr "ലിങ്ക് പദാവലി"
 msgid "Link URL:"
 msgstr "ലിങ്ക് യുആര്‍എല്‍:"
 
-#: findreplace/kfind.cpp:52
+#: findreplace/kfind.cpp:48
 #, kde-format
 msgid "Find Next"
 msgstr "അടുത്തതു് കണ്ടുപിടിക്കുക"
 
-#: findreplace/kfind.cpp:56
+#: findreplace/kfind.cpp:52
 #, kde-format
 msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
 msgstr "<qt>'<b>%1</b>' എന്നതിന്റെ അടുത്ത സ്ഥലം കണ്ടെത്തട്ടെ?</qt>"
 
-#: findreplace/kfind.cpp:707 findreplace/kfind.cpp:728
+#: findreplace/kfind.cpp:573 findreplace/kfind.cpp:594
 #, kde-format
 msgid "1 match found."
 msgid_plural "%1 matches found."
 msgstr[0] "ചേര്‍ച്ചയുള്ള ഒരെണ്ണം കിട്ടി."
 msgstr[1] "ചേര്‍ച്ചയുള്ള %1 എണ്ണം കിട്ടി."
 
-#: findreplace/kfind.cpp:709
+#: findreplace/kfind.cpp:575
 #, kde-format
 msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
 msgstr "<qt>'<b>%1</b>'-നു് ചേരുന്നതൊന്നും കിട്ടിയില്ല.</qt>"
 
-#: findreplace/kfind.cpp:730
+#: findreplace/kfind.cpp:596
 #, kde-format
 msgid "No matches found for '<b>%1</b>'."
 msgstr "'<b>%1</b>'-നു് ചേരുന്നതൊന്നും കിട്ടിയില്ല."
 
-#: findreplace/kfind.cpp:734 findreplace/kreplace.cpp:435
+#: findreplace/kfind.cpp:600 findreplace/kreplace.cpp:384
 #, kde-format
 msgid "Beginning of document reached."
 msgstr "രേഖയുടെ തുടക്കത്തിലെത്തി."
 
-#: findreplace/kfind.cpp:736 findreplace/kreplace.cpp:437
+#: findreplace/kfind.cpp:602 findreplace/kreplace.cpp:386
 #, kde-format
 msgid "End of document reached."
 msgstr "രേഖയുടെ അവസാനമെത്തി."
 
 #. i18n() of the first if() because of the plural form.
 #. Hope this word puzzle is ok, it's a different sentence
-#: findreplace/kfind.cpp:742
+#: findreplace/kfind.cpp:608
 #, kde-format
 msgid "Continue from the end?"
 msgstr "അവസാനഭാഗം മുതല്‍ തുടരണമോ?"
 
-#: findreplace/kfind.cpp:742
+#: findreplace/kfind.cpp:608
 #, kde-format
 msgid "Continue from the beginning?"
 msgstr "തുടക്കത്തില്‍ നിന്നും തുടരണമോ?"
@@ -341,56 +341,56 @@ msgstr "തെരയാന്‍ നിങ്ങള്‍ കുറച്ചു 
 msgid "Invalid PCRE pattern syntax."
 msgstr ""
 
-#: findreplace/kreplace.cpp:52 findreplace/kreplace.cpp:63
+#: findreplace/kreplace.cpp:48 findreplace/kreplace.cpp:59
 #, kde-format
 msgid "Replace"
 msgstr "മാറ്റുക"
 
-#: findreplace/kreplace.cpp:59
+#: findreplace/kreplace.cpp:55
 #, kde-format
 msgctxt "@action:button Replace all occurrences"
 msgid "&All"
 msgstr "&എല്ലാം"
 
-#: findreplace/kreplace.cpp:61
+#: findreplace/kreplace.cpp:57
 #, kde-format
 msgid "&Skip"
 msgstr "&ഉപേക്ഷിക്കുക"
 
-#: findreplace/kreplace.cpp:80
+#: findreplace/kreplace.cpp:76
 #, kde-format
 msgid "Replace '%1' with '%2'?"
 msgstr "'%2' ഉപയോഗിച്ചു് '%1 മാറ്റണമോ?"
 
-#: findreplace/kreplace.cpp:182 findreplace/kreplace.cpp:429
+#: findreplace/kreplace.cpp:178 findreplace/kreplace.cpp:378
 #, kde-format
 msgid "No text was replaced."
 msgstr "പദാവലിയൊന്നും മാറ്റിയില്ല."
 
-#: findreplace/kreplace.cpp:184 findreplace/kreplace.cpp:431
+#: findreplace/kreplace.cpp:180 findreplace/kreplace.cpp:380
 #, kde-format
 msgid "1 replacement done."
 msgid_plural "%1 replacements done."
 msgstr[0] "ഒരു മാറ്റം വരുത്തി."
 msgstr[1] "%1 മാറ്റങ്ങള്‍ വരുത്തി."
 
-#: findreplace/kreplace.cpp:444
+#: findreplace/kreplace.cpp:393
 #, kde-format
 msgid "Do you want to restart search from the end?"
 msgstr "രേഖയുടെ അവസാനം മുതല്‍ നിങ്ങള്‍ക്കു് തെരച്ചില്‍ വീണ്ടും ആരംഭിക്കണമോ?"
 
-#: findreplace/kreplace.cpp:444
+#: findreplace/kreplace.cpp:393
 #, kde-format
 msgid "Do you want to restart search at the beginning?"
 msgstr "രേഖയുടെ തുടക്കം മുതല്‍ നിങ്ങള്‍ക്കു് തെരച്ചില്‍ വീണ്ടും ആരംഭിക്കണമോ?"
 
-#: findreplace/kreplace.cpp:449
+#: findreplace/kreplace.cpp:398
 #, kde-format
 msgctxt "@action:button Restart find & replace"
 msgid "Restart"
 msgstr "വീണ്ടും ആരംഭിക്കുക"
 
-#: findreplace/kreplace.cpp:450
+#: findreplace/kreplace.cpp:399
 #, kde-format
 msgctxt "@action:button Stop find & replace"
 msgid "Stop"
