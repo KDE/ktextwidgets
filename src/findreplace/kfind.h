@@ -440,8 +440,8 @@ protected:
     QWidget *dialogsParent() const;
 
 protected:
-    KFind(KFindPrivate &dd, const QString &pattern, long options, QWidget *parent);
-    KFind(KFindPrivate &dd, const QString &pattern, long options, QWidget *parent, QWidget *findDialog);
+    KTEXTWIDGETS_NO_EXPORT KFind(KFindPrivate &dd, const QString &pattern, long options, QWidget *parent);
+    KTEXTWIDGETS_NO_EXPORT KFind(KFindPrivate &dd, const QString &pattern, long options, QWidget *parent, QWidget *findDialog);
 
 private:
     friend class KReplace;

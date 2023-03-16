@@ -385,8 +385,8 @@ protected:
     void contextMenuEvent(QContextMenuEvent *) override;
 
 protected:
-    KTextEdit(KTextEditPrivate &dd, const QString &text, QWidget *parent);
-    KTextEdit(KTextEditPrivate &dd, QWidget *parent);
+    KTEXTWIDGETS_NO_EXPORT KTextEdit(KTextEditPrivate &dd, const QString &text, QWidget *parent);
+    KTEXTWIDGETS_NO_EXPORT KTextEdit(KTextEditPrivate &dd, QWidget *parent);
 
 private:
     friend class KRichTextEdit;
