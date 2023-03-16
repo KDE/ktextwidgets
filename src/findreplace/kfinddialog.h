@@ -214,12 +214,12 @@ protected:
     void showEvent(QShowEvent *) override;
 
 protected:
-    KFindDialog(KFindDialogPrivate &dd,
-                QWidget *parent = nullptr,
-                long options = 0,
-                const QStringList &findStrings = QStringList(),
-                bool hasSelection = false,
-                bool replaceDialog = false);
+    KTEXTWIDGETS_NO_EXPORT explicit KFindDialog(KFindDialogPrivate &dd,
+                                                QWidget *parent = nullptr,
+                                                long options = 0,
+                                                const QStringList &findStrings = QStringList(),
+                                                bool hasSelection = false,
+                                                bool replaceDialog = false);
 
 protected:
     std::unique_ptr<class KFindDialogPrivate> const d_ptr;

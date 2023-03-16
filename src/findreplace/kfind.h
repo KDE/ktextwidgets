@@ -363,8 +363,8 @@ protected:
     QWidget *dialogsParent() const;
 
 protected:
-    KFind(KFindPrivate &dd, const QString &pattern, long options, QWidget *parent);
-    KFind(KFindPrivate &dd, const QString &pattern, long options, QWidget *parent, QWidget *findDialog);
+    KTEXTWIDGETS_NO_EXPORT KFind(KFindPrivate &dd, const QString &pattern, long options, QWidget *parent);
+    KTEXTWIDGETS_NO_EXPORT KFind(KFindPrivate &dd, const QString &pattern, long options, QWidget *parent, QWidget *findDialog);
 
 protected:
     std::unique_ptr<class KFindPrivate> const d_ptr;

@@ -362,8 +362,8 @@ protected:
     void keyPressEvent(QKeyEvent *event) override;
 
 protected:
-    KRichTextEdit(KRichTextEditPrivate &dd, const QString &text, QWidget *parent);
-    KRichTextEdit(KRichTextEditPrivate &dd, QWidget *parent);
+    KTEXTWIDGETS_NO_EXPORT KRichTextEdit(KRichTextEditPrivate &dd, const QString &text, QWidget *parent);
+    KTEXTWIDGETS_NO_EXPORT KRichTextEdit(KRichTextEditPrivate &dd, QWidget *parent);
 
 private:
     //@cond PRIVATE
