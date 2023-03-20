@@ -58,7 +58,7 @@ add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt 
 cmake_dependent_option(BUILD_DESIGNERPLUGIN "Build plugin for Qt Designer" ON "NOT CMAKE_CROSSCOMPILING" OFF)
 add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Designer")
 
-add_definitions(-DTRANSLATION_DOMAIN=\"ktextwidgets5\")
+add_definitions(-DTRANSLATION_DOMAIN=\"ktextwidgets6\")
 
 ecm_set_disabled_deprecation_versions(
     QT 6.4
