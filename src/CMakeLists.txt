@@ -1,6 +1,12 @@
 add_library(KF6TextWidgets)
 add_library(KF6::TextWidgets ALIAS KF6TextWidgets)
 
+set_target_properties(KF6TextWidgets PROPERTIES
+    VERSION     ${KTEXTWIDGETS_VERSION}
+    SOVERSION   ${KTEXTWIDGETS_SOVERSION}
+    EXPORT_NAME TextWidgets
+)
+
 target_sources(KF6TextWidgets PRIVATE
     dialogs/klinkdialog.cpp
     dialogs/klinkdialog_p.h
@@ -64,12 +70,6 @@ if (Qt6TextToSpeech_FOUND)
       PRIVATE
         Qt6::TextToSpeech)
 endif()
-
-
-set_target_properties(KF6TextWidgets PROPERTIES VERSION ${KTEXTWIDGETS_VERSION}
-                                                SOVERSION ${KTEXTWIDGETS_SOVERSION}
-                                                EXPORT_NAME TextWidgets
-)
 
 ecm_generate_headers(KTextWidgets_HEADERS
   HEADER_NAMES
