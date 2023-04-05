@@ -25,9 +25,10 @@ include(ECMAddQch)
 include(ECMDeprecationSettings)
 include(CMakeDependentOption)
 
+set(ktextwidgets_version_header "${CMAKE_CURRENT_BINARY_DIR}/src/ktextwidgets_version.h")
 ecm_setup_version(PROJECT
                   VARIABLE_PREFIX KTEXTWIDGETS
-                  VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/ktextwidgets_version.h"
+                  VERSION_HEADER "${ktextwidgets_version_header}"
                   PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF6TextWidgetsConfigVersion.cmake"
                   SOVERSION 6)
 
@@ -98,7 +99,7 @@ install(FILES "${CMAKE_CURRENT_BINARY_DIR}/KF6TextWidgetsConfig.cmake"
         COMPONENT Devel
        )
 
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/ktextwidgets_version.h
+install(FILES ${ktextwidgets_version_header}
         DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KTextWidgets COMPONENT Devel
        )
 
