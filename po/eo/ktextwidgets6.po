@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-01 21:29+0000\n"
-"PO-Revision-Date: 2023-01-05 05:00+0100\n"
+"PO-Revision-Date: 2023-04-15 20:54+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -356,7 +356,7 @@ msgstr "Vi devas doni serĉtekston."
 #: findreplace/kfinddialog.cpp:600
 #, kde-format
 msgid "Invalid PCRE pattern syntax."
-msgstr ""
+msgstr "Nevalida PCRE-ŝablonsintakso."
 
 #: findreplace/kreplace.cpp:48 findreplace/kreplace.cpp:59
 #, kde-format
@@ -618,13 +618,13 @@ msgstr "ABC"
 #, kde-format
 msgctxt "@item:inmenu lower case roman numerals"
 msgid "i ii iii"
-msgstr ""
+msgstr "i ii iii"
 
 #: widgets/krichtextwidget.cpp:377
 #, kde-format
 msgctxt "@item:inmenu upper case roman numerals"
 msgid "I II III"
-msgstr ""
+msgstr "I II III"
 
 #: widgets/krichtextwidget.cpp:397
 #, kde-format
@@ -642,7 +642,7 @@ msgstr "Malpligrandigi krommarĝenon"
 #, kde-format
 msgctxt "@action"
 msgid "Insert Rule Line"
-msgstr ""
+msgstr "Enmeti mezurillinion"
 
 #: widgets/krichtextwidget.cpp:430
 #, kde-format
@@ -654,7 +654,7 @@ msgstr "Ligilo"
 #, kde-format
 msgctxt "@action"
 msgid "Format Painter"
-msgstr ""
+msgstr "Formati pentrilon"
 
 #: widgets/krichtextwidget.cpp:454
 #, kde-format
