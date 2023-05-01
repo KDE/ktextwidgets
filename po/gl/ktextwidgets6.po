@@ -9,14 +9,14 @@
 # Xosé <xosecalvo@gmail.com>, 2010.
 # Marce Villarino <mvillarino@kde-espana.es>, 2011, 2012, 2013, 2014.
 # Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail.com>, 2015, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-01 21:29+0000\n"
-"PO-Revision-Date: 2019-11-17 09:55+0100\n"
+"PO-Revision-Date: 2023-04-30 11:13+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.03.70\n"
+"X-Generator: Lokalize 23.04.0\n"
 
 #: dialogs/klinkdialog.cpp:39
 #, kde-format
@@ -277,7 +277,7 @@ msgid ""
 "'joe' or 'JOE', only 'Joe'."
 msgstr ""
 "Fai unha busca que distingue maiúsculas de minúsculas: inserir o padrón "
-"«Mónica» non casará con «mónica» nin «MóNiCa», só con «Mónica»."
+"«Cousa» non casará con «cousa» nin con «COUSA», só con «Cousa»."
 
 #: findreplace/kfinddialog.cpp:236
 #, kde-format
@@ -359,7 +359,7 @@ msgstr "Debe inserir algún texto para buscar."
 #: findreplace/kfinddialog.cpp:600
 #, kde-format
 msgid "Invalid PCRE pattern syntax."
-msgstr ""
+msgstr "Sintaxe incorrecta de padrón de PCRE"
 
 #: findreplace/kreplace.cpp:48 findreplace/kreplace.cpp:59
 #, kde-format
@@ -656,7 +656,7 @@ msgstr "Ligazón"
 #, kde-format
 msgctxt "@action"
 msgid "Format Painter"
-msgstr "Formatar o debuxador"
+msgstr "Formatar o pintor"
 
 #: widgets/krichtextwidget.cpp:454
 #, kde-format
@@ -677,62 +677,52 @@ msgid "Superscript"
 msgstr "Superíndice"
 
 #: widgets/krichtextwidget.cpp:480
-#, fuzzy, kde-format
-#| msgid "Loading Preview"
+#, kde-format
 msgctxt "@title:menu"
 msgid "Heading Level"
-msgstr "Estase a cargar a vista previa"
+msgstr "Nivel de cabeceira"
 
 #: widgets/krichtextwidget.cpp:481
-#, fuzzy, kde-format
-#| msgctxt "KCharselect unicode block name"
-#| msgid "Basic Latin"
+#, kde-format
 msgctxt "@item:inmenu no heading"
 msgid "Basic text"
-msgstr "Latino básico"
+msgstr "Texto básico"
 
 #: widgets/krichtextwidget.cpp:482
-#, fuzzy, kde-format
-#| msgctxt "Title of the notified event"
-#| msgid "Title"
+#, kde-format
 msgctxt "@item:inmenu heading level 1 (largest)"
 msgid "Title"
 msgstr "Título"
 
 #: widgets/krichtextwidget.cpp:483
-#, fuzzy, kde-format
-#| msgid "Untitled"
+#, kde-format
 msgctxt "@item:inmenu heading level 2"
 msgid "Subtitle"
-msgstr "Sen título"
+msgstr "Subtítulo"
 
 #: widgets/krichtextwidget.cpp:484
-#, fuzzy, kde-format
-#| msgid "Action"
+#, kde-format
 msgctxt "@item:inmenu heading level 3"
 msgid "Section"
-msgstr "Acción"
+msgstr "Sección"
 
 #: widgets/krichtextwidget.cpp:485
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@item:inmenu heading level 4"
 msgid "Subsection"
-msgstr "Pregunta"
+msgstr "Subsección"
 
 #: widgets/krichtextwidget.cpp:486
-#, fuzzy, kde-format
-#| msgid "Separator, Paragraph"
+#, kde-format
 msgctxt "@item:inmenu heading level 5"
 msgid "Paragraph"
-msgstr "Separador, parágrafo"
+msgstr "Parágrafo"
 
 #: widgets/krichtextwidget.cpp:487
-#, fuzzy, kde-format
-#| msgid "Separator, Paragraph"
+#, kde-format
 msgctxt "@item:inmenu heading level 6 (smallest)"
 msgid "Subparagraph"
-msgstr "Separador, parágrafo"
+msgstr "Subparágrafo"
 
 #: widgets/ktextedit.cpp:47
 #, kde-format
