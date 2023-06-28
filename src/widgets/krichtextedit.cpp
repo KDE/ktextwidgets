@@ -657,3 +657,5 @@ QString KRichTextEdit::toCleanHtml() const
 
     return result;
 }
+
+#include "moc_krichtextedit.cpp"
