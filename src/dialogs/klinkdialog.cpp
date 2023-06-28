@@ -100,3 +100,5 @@ QString KLinkDialog::linkUrl() const
 {
     return d->linkUrlLineEdit->text();
 }
+
+#include "moc_klinkdialog_p.cpp"

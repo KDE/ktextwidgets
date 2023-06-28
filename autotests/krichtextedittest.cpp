@@ -476,3 +476,5 @@ void KRichTextEditTest::testNestedLists()
     // Make sure the selection is not dedentable anymore
     QVERIFY(!edit.canDedentList());
 }
+
+#include "moc_krichtextedittest.cpp"
