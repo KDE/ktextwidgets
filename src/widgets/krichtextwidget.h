@@ -352,8 +352,11 @@ private:
     //@cond PRIVATE
     Q_DECLARE_PRIVATE_D(KTextEdit::d, KRichTextWidget)
 #if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(5, 79)
+    QT_WARNING_PUSH
+    QT_WARNING_DISABLE_CLANG("-Wunused-private-field")
     // Unused, kept for ABI compatibility
     const void *__ktextwidgets_d_do_not_use;
+    QT_WARNING_POP
 #endif
     //@endcond
 };
