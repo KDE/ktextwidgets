@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.4\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: dialogs/klinkdialog.cpp:39
 #, kde-format
@@ -47,10 +47,11 @@ msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
 msgstr "<qt>رخداد بعدی «<b>%1</b>» یافت شد؟</qt>"
 
 #: findreplace/kfind.cpp:573 findreplace/kfind.cpp:594
-#, kde-format
+#, fuzzy, kde-format
 msgid "1 match found."
 msgid_plural "%1 matches found."
 msgstr[0] "%1 تطبیق یافت شد."
+msgstr[1] ""
 
 #: findreplace/kfind.cpp:575
 #, kde-format
@@ -379,10 +380,11 @@ msgid "No text was replaced."
 msgstr "هیچ متنی جایگزین نشد."
 
 #: findreplace/kreplace.cpp:180 findreplace/kreplace.cpp:380
-#, kde-format
+#, fuzzy, kde-format
 msgid "1 replacement done."
 msgid_plural "%1 replacements done."
 msgstr[0] "%1 جایگزینی انجام شد."
+msgstr[1] ""
 
 #: findreplace/kreplace.cpp:393
 #, kde-format
@@ -412,10 +414,11 @@ msgid "Your replacement string is referencing a capture greater than '\\%1', "
 msgstr "رشته جایگزین شما به گیرانداز بزرگ‌تر از »\\%1« مراجعه می‌کند."
 
 #: findreplace/kreplacedialog.cpp:154
-#, kde-format
+#, fuzzy, kde-format
 msgid "but your pattern only defines 1 capture."
 msgid_plural "but your pattern only defines %1 captures."
 msgstr[0] " ولی الگوی شما فقط  %1 گیرانداز را تعریف می‌کند."
+msgstr[1] ""
 
 #: findreplace/kreplacedialog.cpp:155
 #, kde-format
