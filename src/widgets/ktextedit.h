@@ -159,7 +159,7 @@ public:
      * @see createHighlighter()
      * @param highLighter the new highlighter which will be used now
      */
-    void setHighlighter(Sonnet::Highlighter *highLighter);
+    void setHighlighter(Sonnet::Highlighter *_highLighter);
 
     /**
      * Return standard KTextEdit popupMenu
