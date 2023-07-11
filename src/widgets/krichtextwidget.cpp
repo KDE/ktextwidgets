@@ -329,7 +329,7 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_align_justify->setObjectName(QStringLiteral("format_align_justify"));
         connect(d->action_align_justify, &QAction::triggered, this, &KRichTextEdit::alignJustify);
 
-        auto *alignmentGroup = new QActionGroup(this);
+        QActionGroup *alignmentGroup = new QActionGroup(this);
         alignmentGroup->addAction(d->action_align_left);
         alignmentGroup->addAction(d->action_align_center);
         alignmentGroup->addAction(d->action_align_right);
@@ -354,7 +354,7 @@ QList<QAction *> KRichTextWidget::createActions()
         d->action_direction_rtl->setObjectName(QStringLiteral("direction_rtl"));
         connect(d->action_direction_rtl, &QAction::triggered, this, &KRichTextEdit::makeRightToLeft);
 
-        auto *directionGroup = new QActionGroup(this);
+        QActionGroup *directionGroup = new QActionGroup(this);
         directionGroup->addAction(d->action_direction_ltr);
         directionGroup->addAction(d->action_direction_rtl);
     } else {
@@ -667,7 +667,7 @@ void KRichTextWidgetPrivate::_k_manageLink()
     Q_Q(KRichTextWidget);
 
     q->selectLinkText();
-    auto *linkDialog = new KLinkDialog(q);
+    KLinkDialog *linkDialog = new KLinkDialog(q);
     linkDialog->setLinkText(q->currentLinkText());
     linkDialog->setLinkUrl(q->currentLinkUrl());
     linkDialog->setAttribute(Qt::WA_DeleteOnClose);

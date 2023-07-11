@@ -92,7 +92,7 @@ void KReplaceTest::slotHighlight(const QString &str, int matchingIndex, int matc
         disconnect(dlg, &QDialog::finished, m_replace.get(), nullptr); // hack to avoid slotDialogClosed being called
         dlg->hide();
 
-        auto *button = dlg->findChild<QPushButton *>(m_buttonName);
+        QPushButton *button = dlg->findChild<QPushButton *>(m_buttonName);
         auto clickFunc = [button]() {
             button->click();
         };

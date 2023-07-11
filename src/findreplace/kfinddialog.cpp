@@ -71,12 +71,12 @@ void KFindDialogPrivate::init(bool forReplace, const QStringList &_findStrings, 
     Q_Q(KFindDialog);
 
     // Create common parts of dialog.
-    auto *topLayout = new QVBoxLayout(q);
+    QVBoxLayout *topLayout = new QVBoxLayout(q);
 
     findGrp = new QGroupBox(i18nc("@title:group", "Find"), q);
     findLayout = new QGridLayout(findGrp);
 
-    auto *findLabel = new QLabel(i18n("&Text to find:"), findGrp);
+    QLabel *findLabel = new QLabel(i18n("&Text to find:"), findGrp);
     find = new KHistoryComboBox(findGrp);
     find->setMaxCount(10);
     find->setDuplicatesEnabled(false);
@@ -93,7 +93,7 @@ void KFindDialogPrivate::init(bool forReplace, const QStringList &_findStrings, 
     replaceGrp = new QGroupBox(i18n("Replace With"), q);
     replaceLayout = new QGridLayout(replaceGrp);
 
-    auto *replaceLabel = new QLabel(i18n("Replace&ment text:"), replaceGrp);
+    QLabel *replaceLabel = new QLabel(i18n("Replace&ment text:"), replaceGrp);
     replace = new KHistoryComboBox(replaceGrp);
     replace->setMaxCount(10);
     replace->setDuplicatesEnabled(false);
@@ -107,8 +107,8 @@ void KFindDialogPrivate::init(bool forReplace, const QStringList &_findStrings, 
     replaceLayout->addWidget(backRefItem, 2, 1);
     topLayout->addWidget(replaceGrp);
 
-    auto *optionGrp = new QGroupBox(i18n("Options"), q);
-    auto *optionsLayout = new QGridLayout(optionGrp);
+    QGroupBox *optionGrp = new QGroupBox(i18n("Options"), q);
+    QGridLayout *optionsLayout = new QGridLayout(optionGrp);
 
     caseSensitive = new QCheckBox(i18n("C&ase sensitive"), optionGrp);
     wholeWordsOnly = new QCheckBox(i18n("&Whole words only"), optionGrp);
@@ -512,7 +512,7 @@ void KFindDialogPrivate::showPatterns()
     // Insert the selection into the edit control.
     QAction *action = patterns->exec(regExpItem->mapToGlobal(regExpItem->rect().bottomLeft()));
     if (action) {
-        auto *regExpAction = static_cast<RegExpAction *>(action);
+        RegExpAction *regExpAction = static_cast<RegExpAction *>(action);
         if (regExpAction) {
             QLineEdit *editor = find->lineEdit();
 
@@ -563,7 +563,7 @@ void KFindDialogPrivate::showPlaceholders()
     // Insert the selection into the edit control.
     QAction *action = placeholders->exec(backRefItem->mapToGlobal(backRefItem->rect().bottomLeft()));
     if (action) {
-        auto *placeHolderAction = static_cast<PlaceHolderAction *>(action);
+        PlaceHolderAction *placeHolderAction = static_cast<PlaceHolderAction *>(action);
         if (placeHolderAction) {
             QLineEdit *editor = replace->lineEdit();
             editor->insert(QStringLiteral("\\%1").arg(placeHolderAction->id()));

@@ -258,7 +258,7 @@ void NestedListHelper::handleOnBulletType(int styleIndex)
 {
     QTextCursor cursor = textEdit->textCursor();
     if (styleIndex != 0) {
-        auto style = static_cast<QTextListFormat::Style>(styleIndex);
+        QTextListFormat::Style style = static_cast<QTextListFormat::Style>(styleIndex);
         QTextList *currentList = cursor.currentList();
         QTextListFormat listFmt;
 
