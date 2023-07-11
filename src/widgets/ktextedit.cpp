@@ -264,18 +264,18 @@ const QString &KTextEdit::spellCheckingLanguage() const
     return d->spellCheckingLanguage;
 }
 
-void KTextEdit::setSpellCheckingLanguage(const QString &_language)
+void KTextEdit::setSpellCheckingLanguage(const QString &language)
 {
     Q_D(KTextEdit);
 
     if (highlighter()) {
-        highlighter()->setCurrentLanguage(_language);
+        highlighter()->setCurrentLanguage(language);
         highlighter()->rehighlight();
     }
 
-    if (_language != d->spellCheckingLanguage) {
-        d->spellCheckingLanguage = _language;
-        Q_EMIT languageChanged(_language);
+    if (language != d->spellCheckingLanguage) {
+        d->spellCheckingLanguage = language;
+        Q_EMIT languageChanged(language);
     }
 }
 
@@ -633,16 +633,16 @@ void KTextEdit::addTextDecorator(Sonnet::SpellCheckDecorator *decorator)
     d->decorator = decorator;
 }
 
-void KTextEdit::setHighlighter(Sonnet::Highlighter *_highLighter)
+void KTextEdit::setHighlighter(Sonnet::Highlighter *highLighter)
 {
     KTextDecorator *decorator = new KTextDecorator(this);
     // The old default highlighter must be manually deleted.
     delete decorator->highlighter();
-    decorator->setHighlighter(_highLighter);
+    decorator->setHighlighter(highLighter);
 
     // KTextEdit used to take ownership of the highlighter, Sonnet::SpellCheckDecorator does not.
     // so we reparent the highlighter so it will be deleted when the decorator is destroyed
-    _highLighter->setParent(decorator);
+    highLighter->setParent(decorator);
     addTextDecorator(decorator);
 }
 
