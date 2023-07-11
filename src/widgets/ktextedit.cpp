@@ -600,7 +600,12 @@ void KTextEdit::contextMenuEvent(QContextMenuEvent *event)
 
 void KTextEdit::createHighlighter()
 {
-    setHighlighter(new Sonnet::Highlighter(this));
+    // language might need to be set after a new highlighter is in place
+    auto sonnetHighlighter = new Sonnet::Highlighter(this);
+    if (!spellCheckingLanguage().isEmpty()) {
+        sonnetHighlighter->setCurrentLanguage(spellCheckingLanguage());
+    }
+    setHighlighter(sonnetHighlighter);
 }
 
 Sonnet::Highlighter *KTextEdit::highlighter() const
@@ -662,9 +667,6 @@ void KTextEdit::setCheckSpellingEnabled(bool check)
     if (check) {
         if (hasFocus()) {
             createHighlighter();
-            if (!spellCheckingLanguage().isEmpty()) {
-                setSpellCheckingLanguage(spellCheckingLanguage());
-            }
         }
     } else {
         clearDecorator();
