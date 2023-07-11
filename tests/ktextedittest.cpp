@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 {
     QApplication::setApplicationName(QStringLiteral("ktextedittest"));
     QApplication app(argc, argv);
-    KTextEdit *edit = new KTextEdit();
+    auto *edit = new KTextEdit();
 
     // QAction* action = new QAction("Select All", edit);
     // action->setShortcut( Qt::CTRL | Qt::Key_Underscore );

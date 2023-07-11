@@ -51,7 +51,7 @@ KReplaceNextDialog::KReplaceNextDialog(QWidget *parent)
     setModal(false);
     setWindowTitle(i18n("Replace"));
 
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    auto *layout = new QVBoxLayout(this);
 
     m_mainLabel = new QLabel(this);
     layout->addWidget(m_mainLabel);
@@ -64,7 +64,7 @@ KReplaceNextDialog::KReplaceNextDialog(QWidget *parent)
     m_replaceButton->setObjectName(QStringLiteral("replaceButton"));
     m_replaceButton->setDefault(true);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(this);
+    auto *buttonBox = new QDialogButtonBox(this);
     buttonBox->addButton(m_allButton, QDialogButtonBox::ActionRole);
     buttonBox->addButton(m_skipButton, QDialogButtonBox::ActionRole);
     buttonBox->addButton(m_replaceButton, QDialogButtonBox::ActionRole);

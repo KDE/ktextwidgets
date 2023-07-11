@@ -51,7 +51,7 @@ KFindNextDialog::KFindNextDialog(const QString &pattern, QWidget *parent)
     setModal(false);
     setWindowTitle(i18n("Find Next"));
 
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    auto *layout = new QVBoxLayout(this);
 
     layout->addWidget(new QLabel(i18n("<qt>Find next occurrence of '<b>%1</b>'?</qt>", pattern), this));
 
@@ -59,7 +59,7 @@ KFindNextDialog::KFindNextDialog(const QString &pattern, QWidget *parent)
     KGuiItem::assign(m_findButton, KStandardGuiItem::find());
     m_findButton->setDefault(true);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(this);
+    auto *buttonBox = new QDialogButtonBox(this);
     buttonBox->addButton(m_findButton, QDialogButtonBox::ActionRole);
     buttonBox->setStandardButtons(QDialogButtonBox::Close);
     layout->addWidget(buttonBox);
@@ -198,7 +198,7 @@ QDialog *KFind::findNextDialog(bool create)
     Q_D(KFind);
 
     if (!d->dialog && create) {
-        KFindNextDialog *dialog = new KFindNextDialog(d->pattern, parentWidget());
+        auto *dialog = new KFindNextDialog(d->pattern, parentWidget());
         connect(dialog->findButton(), &QPushButton::clicked, this, [d]() {
             d->slotFindNext();
         });

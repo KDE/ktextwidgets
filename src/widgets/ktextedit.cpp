@@ -50,11 +50,11 @@ void KTextEditPrivate::checkSpelling(bool force)
         }
         return;
     }
-    Sonnet::BackgroundChecker *backgroundSpellCheck = new Sonnet::BackgroundChecker;
+    auto *backgroundSpellCheck = new Sonnet::BackgroundChecker;
     if (!spellCheckingLanguage.isEmpty()) {
         backgroundSpellCheck->changeLanguage(spellCheckingLanguage);
     }
-    Sonnet::Dialog *spellDialog = new Sonnet::Dialog(backgroundSpellCheck, force ? q : nullptr);
+    auto *spellDialog = new Sonnet::Dialog(backgroundSpellCheck, force ? q : nullptr);
     backgroundSpellCheck->setParent(spellDialog);
     spellDialog->setAttribute(Qt::WA_DeleteOnClose, true);
     spellDialog->activeAutoCorrect(showAutoCorrectionButton);
@@ -300,7 +300,7 @@ bool KTextEdit::event(QEvent *ev)
     Q_D(KTextEdit);
 
     if (ev->type() == QEvent::ShortcutOverride) {
-        QKeyEvent *e = static_cast<QKeyEvent *>(ev);
+        auto *e = static_cast<QKeyEvent *>(ev);
         if (d->overrideShortcut(e)) {
             e->accept();
             return true;
@@ -504,7 +504,7 @@ QMenu *KTextEdit::mousePopupMenu()
             }
             if (checkSpellingEnabled()) {
                 d->languagesMenu = new QMenu(i18n("Spell Checking Language"), popup);
-                QActionGroup *languagesGroup = new QActionGroup(d->languagesMenu);
+                auto *languagesGroup = new QActionGroup(d->languagesMenu);
                 languagesGroup->setExclusive(true);
 
                 QMapIterator<QString, QString> i(d->speller->availableDictionaries());
@@ -635,7 +635,7 @@ void KTextEdit::addTextDecorator(Sonnet::SpellCheckDecorator *decorator)
 
 void KTextEdit::setHighlighter(Sonnet::Highlighter *highLighter)
 {
-    KTextDecorator *decorator = new KTextDecorator(this);
+    auto *decorator = new KTextDecorator(this);
     // The old default highlighter must be manually deleted.
     delete decorator->highlighter();
     decorator->setHighlighter(highLighter);
