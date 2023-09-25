@@ -35,12 +35,12 @@ ecm_setup_version(PROJECT
 # Dependencies
 set(REQUIRED_QT_VERSION 6.5.0)
 
+option(WITH_TEXT_TO_SPEECH "Build text-to-speech support" ON)
+
 find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED Widgets)
 
-find_package(Qt6 OPTIONAL_COMPONENTS TextToSpeech)
-if (NOT Qt6TextToSpeech_FOUND)
-    message(STATUS "Qt6TextToSpeech not found, speech feature will be disabled")
-else()
+if (WITH_TEXT_TO_SPEECH)
+    find_package(Qt6 ${REQUIRED_QT_VERSION} CONFIG REQUIRED TextToSpeech)
     add_definitions(-DHAVE_SPEECH)
 endif()
 
