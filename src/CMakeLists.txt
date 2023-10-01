@@ -135,6 +135,3 @@ if (BUILD_QCH)
     )
 endif()
 
-include(ECMGeneratePriFile)
-ecm_generate_pri_file(BASE_NAME KTextWidgets LIB_NAME KF6TextWidgets DEPS "widgets SonnetUi KI18n" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/KTextWidgets)
-install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
