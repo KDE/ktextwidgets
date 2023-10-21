@@ -31,7 +31,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Zanata 3.9.6\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
 
 #: dialogs/klinkdialog.cpp:39
 #, kde-format
@@ -59,11 +60,13 @@ msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
 msgstr "<qt>האם לחפש את המופע הבא של \"<b>%1</b>\"?</qt>"
 
 #: findreplace/kfind.cpp:573 findreplace/kfind.cpp:594
-#, kde-format
+#, fuzzy, kde-format
 msgid "1 match found."
 msgid_plural "%1 matches found."
 msgstr[0] "נמצאה התאמה אחת."
 msgstr[1] "נמצאו %1 התאמות."
+msgstr[2] ""
+msgstr[3] ""
 
 #: findreplace/kfind.cpp:575
 #, kde-format
@@ -390,11 +393,13 @@ msgid "No text was replaced."
 msgstr "לא הוחלף שום טקסט."
 
 #: findreplace/kreplace.cpp:180 findreplace/kreplace.cpp:380
-#, kde-format
+#, fuzzy, kde-format
 msgid "1 replacement done."
 msgid_plural "%1 replacements done."
 msgstr[0] "בוצעה החלפה אחת."
 msgstr[1] "בוצעו %1 החלפות."
+msgstr[2] ""
+msgstr[3] ""
 
 #: findreplace/kreplace.cpp:393
 #, kde-format
@@ -424,11 +429,13 @@ msgid "Your replacement string is referencing a capture greater than '\\%1', "
 msgstr "המחרוזת להחלפה מתייחסת ללכידה גדולה מ־‎\"\\%1\"‎, "
 
 #: findreplace/kreplacedialog.cpp:154
-#, kde-format
+#, fuzzy, kde-format
 msgid "but your pattern only defines 1 capture."
 msgid_plural "but your pattern only defines %1 captures."
 msgstr[0] "אך הטקסט לחיפוש מגדיר לכידה אחת בלבד."
 msgstr[1] "אך הטקסט לחיפוש מגדיר %1 לכידות בלבד."
+msgstr[2] ""
+msgstr[3] ""
 
 #: findreplace/kreplacedialog.cpp:155
 #, kde-format
