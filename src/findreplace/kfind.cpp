@@ -467,7 +467,7 @@ static int findRegex(const QString &text, const QString &pattern, int index, lon
     QRegularExpressionMatch match;
     if (options & KFind::FindBackwards) {
         // Backward search, until the beginning of the line...
-        text.lastIndexOf(re, index, &match);
+        (void)text.lastIndexOf(re, index, &match);
     } else {
         // Forward search, until the end of the line...
         match = re.match(text, index);
