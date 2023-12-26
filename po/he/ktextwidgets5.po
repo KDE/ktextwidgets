@@ -18,25 +18,26 @@
 # tahmar1900 <tahmar1900@gmail.com>, 2008, 2009.
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: ktextwidgets5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-05 12:25+0000\n"
-"PO-Revision-Date: 2017-05-16 06:50-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2023-12-25 08:45+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: dialogs/klinkdialog.cpp:39
 #, kde-format
 msgid "Manage Link"
-msgstr "ניהול דיו"
+msgstr "ניהול קישור"
 
 #: dialogs/klinkdialog.cpp:46
 #, kde-format
@@ -51,12 +52,12 @@ msgstr "כתובת הקישור:"
 #: findreplace/kfind.cpp:52
 #, kde-format
 msgid "Find Next"
-msgstr "חפש את הבא"
+msgstr "חיפוש הבא"
 
 #: findreplace/kfind.cpp:56
 #, kde-format
 msgid "<qt>Find next occurrence of '<b>%1</b>'?</qt>"
-msgstr "<qt>האם לחפש את המופע הבא של \"<b>%1</b>\"?</qt>"
+msgstr "<qt>לחפש את המופע הבא של ‚<b>%1</b>’?</qt>"
 
 #: findreplace/kfind.cpp:707 findreplace/kfind.cpp:728
 #, kde-format
@@ -68,12 +69,12 @@ msgstr[1] "נמצאו %1 התאמות."
 #: findreplace/kfind.cpp:709
 #, kde-format
 msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
-msgstr "<qt> לא נמצאו התאמות ל־\"<b>%1</b>\". </qt>"
+msgstr "<qt>לא נמצאו התאמות ל־‚<b>%1</b>’. </qt>"
 
 #: findreplace/kfind.cpp:730
 #, kde-format
 msgid "No matches found for '<b>%1</b>'."
-msgstr "לא נמצאו התאמות ל־\"<b>%1</b>\"."
+msgstr "לא נמצאו התאמות ל־‚<b>%1</b>’."
 
 #: findreplace/kfind.cpp:734 findreplace/kreplace.cpp:435
 #, kde-format
@@ -90,28 +91,28 @@ msgstr "החיפוש הגיע לסוף המסמך."
 #: findreplace/kfind.cpp:742
 #, kde-format
 msgid "Continue from the end?"
-msgstr "האם להמשיך מהסוף?"
+msgstr "להמשיך מהסוף?"
 
 #: findreplace/kfind.cpp:742
 #, kde-format
 msgid "Continue from the beginning?"
-msgstr "האם להמשיך בו מההתחלה?"
+msgstr "להמשיך מההתחלה?"
 
 #: findreplace/kfinddialog.cpp:35
 #, kde-format
 msgid "Find Text"
-msgstr "חיפוש טקסט"
+msgstr "איתור טקסט"
 
 #: findreplace/kfinddialog.cpp:76
 #, kde-format
 msgctxt "@title:group"
 msgid "Find"
-msgstr "חיפוש"
+msgstr "איתור"
 
 #: findreplace/kfinddialog.cpp:79
 #, kde-format
 msgid "&Text to find:"
-msgstr "&טקסט לחיפוש:"
+msgstr "&טקסט לאיתור:"
 
 #: findreplace/kfinddialog.cpp:83
 #, kde-format
@@ -121,12 +122,12 @@ msgstr "ביטוי ר&גולרי"
 #: findreplace/kfinddialog.cpp:84
 #, kde-format
 msgid "&Edit..."
-msgstr "&עריכה..."
+msgstr "&עריכה…"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
 msgid "Replace With"
-msgstr "החלף עם"
+msgstr "החלפה ב־"
 
 #: findreplace/kfinddialog.cpp:96
 #, kde-format
@@ -136,12 +137,12 @@ msgstr "ט&קסט להחלפה:"
 #: findreplace/kfinddialog.cpp:100
 #, kde-format
 msgid "Use p&laceholders"
-msgstr "השתמש בד&פוסים"
+msgstr "להשתמש ב&ממלאי מקום"
 
 #: findreplace/kfinddialog.cpp:101
 #, kde-format
 msgid "Insert Place&holder"
-msgstr "ה&וסף דפוס"
+msgstr "ה&וספת ממלא מקום"
 
 #: findreplace/kfinddialog.cpp:110
 #, kde-format
@@ -161,32 +162,32 @@ msgstr "&מילים שלמות בלבד"
 #: findreplace/kfinddialog.cpp:115
 #, kde-format
 msgid "From c&ursor"
-msgstr "ממיקום ה&סמן"
+msgstr "מה&סמן"
 
 #: findreplace/kfinddialog.cpp:116
 #, kde-format
 msgid "Find &backwards"
-msgstr "חיפוש &לאחור"
+msgstr "איתור&לאחור"
 
 #: findreplace/kfinddialog.cpp:117
 #, kde-format
 msgid "&Selected text"
-msgstr "&הטקסט הנבחר"
+msgstr "הטקסט ה&נבחר"
 
 #: findreplace/kfinddialog.cpp:124
 #, kde-format
 msgid "&Prompt on replace"
-msgstr "&שאל לפני החלפה"
+msgstr "ל&שאול לפני החלפה"
 
 #: findreplace/kfinddialog.cpp:204
 #, kde-format
 msgid "&Replace"
-msgstr "&החלף"
+msgstr "ה&חלפה"
 
 #: findreplace/kfinddialog.cpp:206
 #, kde-format
 msgid "Start replace"
-msgstr "התחל החלפה"
+msgstr "התחלת החלפה"
 
 #: findreplace/kfinddialog.cpp:207
 #, kde-format
@@ -195,18 +196,18 @@ msgid ""
 "searched for within the document and any occurrence is replaced with the "
 "replacement text.</qt>"
 msgstr ""
-"<qt>אם תלחץ על הכפתור <b>החלף</b>, התוכנית תחפש במסמך את הטקסט שהזנת לעיל "
-"ותחליף כל מופע שלו בטקסט ההחלפה.</qt>"
+"<qt>בלחיצה על <b>החלפה</b>, התוכנית תחפש במסמך את הטקסט שמילאת לעיל ותחליף "
+"כל מופע שלו בטקסט ההחלפה.</qt>"
 
 #: findreplace/kfinddialog.cpp:212
 #, kde-format
 msgid "&Find"
-msgstr "&חפש"
+msgstr "&איתור"
 
 #: findreplace/kfinddialog.cpp:214
 #, kde-format
 msgid "Start searching"
-msgstr "התחל בחיפוש"
+msgstr "התחלה באיתור"
 
 #: findreplace/kfinddialog.cpp:215
 #, kde-format
@@ -214,29 +215,28 @@ msgid ""
 "<qt>If you press the <b>Find</b> button, the text you entered above is "
 "searched for within the document.</qt>"
 msgstr ""
-"<qt>אם תלחץ על הכפתור <b>חפש</b>, התוכנית תחפש במסמך את הטקסט שהזנת לעיל.</"
-"qt>"
+"<qt>לחיצה על הכפתור <b>חיפוש</b>, תחפש במסמך את הטקסט שמילאת לעיל.</qt>"
 
 #: findreplace/kfinddialog.cpp:220
 #, kde-format
 msgid ""
 "Enter a pattern to search for, or select a previous pattern from the list."
-msgstr "הזן כאן תבנית לחיפוש, או בחר תבנית קודמת מתוך הרשימה."
+msgstr "נא למלא כאן תבנית לחיפוש, או לבחור תבנית קודמת מהרשימה."
 
 #: findreplace/kfinddialog.cpp:221
 #, kde-format
 msgid "If enabled, search for a regular expression."
-msgstr "אם אפשרות זו נבחרת, יתבצע חיפוש אחר ביטוי רגולרי."
+msgstr "אם אפשרות זו מסומנת, יתבצע חיפוש אחר ביטוי רגולרי."
 
 #: findreplace/kfinddialog.cpp:222
 #, kde-format
 msgid "Click here to edit your regular expression using a graphical editor."
-msgstr "לחץ כאן כדי לערוך את הביטוי הרגולרי שלך באמצעות עורך גרפי."
+msgstr "אפשר ללחוץ כאן כדי לערוך את הביטוי הרגולרי שלך עם עורך גרפי."
 
 #: findreplace/kfinddialog.cpp:223
 #, kde-format
 msgid "Enter a replacement string, or select a previous one from the list."
-msgstr "הזן מחרוזת להחלפה, או בחר מחרוזת קודמת מתוך הרשימה."
+msgstr "נא למלא מחרוזת להחלפה, או לבחור מחרוזת קודמת מתוך הרשימה."
 
 #: findreplace/kfinddialog.cpp:225
 #, kde-format
@@ -247,30 +247,30 @@ msgid ""
 "literal <code><b>\\N</b></code> in your replacement, put an extra backslash "
 "in front of it, like <code><b>\\\\N</b></code>.</p></qt>"
 msgstr ""
-"<qt>אם אפשרות זו נבחרת, כל מופע של <code><b>‎\\N</b></code>, כאשר <code><b>N</"
-"b></code> הוא מספר שלם, יוחלף בלכידה המתאימה (\"תת־מחרוזת בסוגריים\") מתוך "
-"הביטוי לחיפוש.<p>כדי לכלול <code><b>‎\\N</b></code> מפורש בטקסט להחלפה, הוסף "
-"לוכסן נוסף לפני הצירוף, כמו למשל <code><b>‎\\\\N</b></code>. </p></qt>"
+"<qt>אם האפשרות פעילה, המופעים של <code><b>\\N</b></code>, כאשר <code><b>N</"
+"b></code> הוא מספר שלם וחיובי, יוחלפו בלכידה התואמת (\"מחרוזת במירכאות\") "
+"מהתבנית.<p>כדי לכלול <code><b>\\N</b></code> במפורש בהחלפה שלך, יש להוסיף "
+"לוכסן שמאלי נוסף לפניו, באופן הזה: <code><b>\\\\N</b></code>.</p></qt>"
 
 #: findreplace/kfinddialog.cpp:231
 #, kde-format
 msgid "Click for a menu of available captures."
-msgstr "לחץ כאן כדי לקבל תפריט של לכידות זמינות."
+msgstr "יש ללחוץ כאן כדי לקבל תפריט של לכידות זמינות."
 
 #: findreplace/kfinddialog.cpp:232
 #, kde-format
 msgid "Require word boundaries in both ends of a match to succeed."
-msgstr "מחרוזת חייבת להסתיים בגבולות מילים בשני צידיה על מנת שההתאמה תצליח."
+msgstr "מחרוזת חייבת להסתיים בגבולות מילים בשני צידיה כדי שתימצא."
 
 #: findreplace/kfinddialog.cpp:233
 #, kde-format
 msgid "Start searching at the current cursor location rather than at the top."
-msgstr "התחלת החיפוש במיקום הסמן ולא בתחילת המסמך."
+msgstr "להתחיל את החיפוש במיקום הסמן ולא בתחילת המסמך."
 
 #: findreplace/kfinddialog.cpp:234
 #, kde-format
 msgid "Only search within the current selection."
-msgstr "חיפוש בתוך הבחירה הנוכחית בלבד."
+msgstr "לחפש בתוך הבחירה הנוכחית בלבד."
 
 #: findreplace/kfinddialog.cpp:235
 #, kde-format
@@ -278,18 +278,18 @@ msgid ""
 "Perform a case sensitive search: entering the pattern 'Joe' will not match "
 "'joe' or 'JOE', only 'Joe'."
 msgstr ""
-"ביצוע חיפוש תלוי רישיות. לדוגמה, הזנת הביטוי \"Joe\" לא תביא להתאמה של \"joe"
-"\" או \"JOE\", אלא רק של \"Joe\"."
+"חיפוש תלוי רישיות. לדוגמה, חיפוש אחר התבנית ‚Joe’ לא תמצא את ‚joe’או את "
+"‚JOE’, אלא רק את ‚Joe’."
 
 #: findreplace/kfinddialog.cpp:236
 #, kde-format
 msgid "Search backwards."
-msgstr "ביצוע חיפוש לאחור."
+msgstr "חיפוש לאחור."
 
 #: findreplace/kfinddialog.cpp:237
 #, kde-format
 msgid "Ask before replacing each match found."
-msgstr "הצגת בקשה לאישור לפני ביצוע ההחלפה עבור כל התאמה שנמצאה."
+msgstr "צריך לאשר כל החלפה של התאמה שנמצאה."
 
 #: findreplace/kfinddialog.cpp:459
 msgid "Any Character"
@@ -309,15 +309,15 @@ msgstr "קבוצת תווים"
 
 #: findreplace/kfinddialog.cpp:463
 msgid "Repeats, Zero or More Times"
-msgstr "חזרה, אפס פעמים או יותר"
+msgstr "חוזר, אפס פעמים או יותר"
 
 #: findreplace/kfinddialog.cpp:464
 msgid "Repeats, One or More Times"
-msgstr "חזרה, פעם אחת או יותר"
+msgstr "חוזר, פעם אחת או יותר"
 
 #: findreplace/kfinddialog.cpp:465
 msgid "Optional"
-msgstr "אופציונלי"
+msgstr "רשות"
 
 #: findreplace/kfinddialog.cpp:466
 msgid "Escape"
@@ -356,12 +356,12 @@ msgstr "הטקסט שנלכד (%1)"
 #: findreplace/kfinddialog.cpp:593
 #, kde-format
 msgid "You must enter some text to search for."
-msgstr "יש להזין טקסט לחיפוש."
+msgstr "יש למלא טקסט לחיפוש."
 
 #: findreplace/kfinddialog.cpp:600
 #, kde-format
 msgid "Invalid PCRE pattern syntax."
-msgstr ""
+msgstr "תחביר תבנית PCRE (ביטוי רגולרי תואם פרל) שגוי."
 
 #: findreplace/kreplace.cpp:52 findreplace/kreplace.cpp:63
 #, kde-format
@@ -372,17 +372,17 @@ msgstr "החלפה"
 #, kde-format
 msgctxt "@action:button Replace all occurrences"
 msgid "&All"
-msgstr "&הכל"
+msgstr "ה&כול"
 
 #: findreplace/kreplace.cpp:61
 #, kde-format
 msgid "&Skip"
-msgstr "&דלג"
+msgstr "&דילוג"
 
 #: findreplace/kreplace.cpp:80
 #, kde-format
 msgid "Replace '%1' with '%2'?"
-msgstr "האם להחליף את \"%1\" ב־\"%2\"?"
+msgstr "להחליף את ‚%1’ ב־‚%2’?"
 
 #: findreplace/kreplace.cpp:182 findreplace/kreplace.cpp:429
 #, kde-format
@@ -399,41 +399,41 @@ msgstr[1] "בוצעו %1 החלפות."
 #: findreplace/kreplace.cpp:444
 #, kde-format
 msgid "Do you want to restart search from the end?"
-msgstr "האם ברצונך להתחיל מחדש את החיפוש בסוף המסמך?"
+msgstr "להתחיל מחדש את החיפוש בסוף המסמך?"
 
 #: findreplace/kreplace.cpp:444
 #, kde-format
 msgid "Do you want to restart search at the beginning?"
-msgstr "האם ברצונך להתחיל מחדש את החיפוש בתחילת המסמך?"
+msgstr "להתחיל את החיפוש מחדש מתחילת המסמך?"
 
 #: findreplace/kreplace.cpp:449
 #, kde-format
 msgctxt "@action:button Restart find & replace"
 msgid "Restart"
-msgstr "התחל מחדש"
+msgstr "התחלה מחדש"
 
 #: findreplace/kreplace.cpp:450
 #, kde-format
 msgctxt "@action:button Stop find & replace"
 msgid "Stop"
-msgstr "עצור"
+msgstr "עצירה"
 
 #: findreplace/kreplacedialog.cpp:153
 #, kde-format
 msgid "Your replacement string is referencing a capture greater than '\\%1', "
-msgstr "המחרוזת להחלפה מתייחסת ללכידה גדולה מ־‎\"\\%1\"‎, "
+msgstr "המחרוזת להחלפה מתייחסת ללכידה גדולה מ־‚\\%1’, "
 
 #: findreplace/kreplacedialog.cpp:154
 #, kde-format
 msgid "but your pattern only defines 1 capture."
 msgid_plural "but your pattern only defines %1 captures."
-msgstr[0] "אך הטקסט לחיפוש מגדיר לכידה אחת בלבד."
-msgstr[1] "אך הטקסט לחיפוש מגדיר %1 לכידות בלבד."
+msgstr[0] "אך התבנית מגדירה לכידה אחת בלבד."
+msgstr[1] "אך התבנית מגדירה %1 לכידות בלבד."
 
 #: findreplace/kreplacedialog.cpp:155
 #, kde-format
 msgid "but your pattern defines no captures."
-msgstr "אך הטקסט לחיפוש לא מגדיר אף לכידה."
+msgstr "אך התבנית לא מגדירה אף לכידה."
 
 #: findreplace/kreplacedialog.cpp:156
 #, kde-format
@@ -442,13 +442,13 @@ msgid ""
 "Please correct."
 msgstr ""
 "\n"
-"יש לתקן זאת."
+"נא לתקן."
 
 #: widgets/krichtextwidget.cpp:207
 #, kde-format
 msgctxt "@action"
 msgid "Text &Color..."
-msgstr "צבע &טקסט..."
+msgstr "צבע &טקסט…"
 
 #: widgets/krichtextwidget.cpp:208
 #, kde-format
@@ -460,7 +460,7 @@ msgstr "צבע"
 #, kde-format
 msgctxt "@action"
 msgid "Text &Highlight..."
-msgstr "הדגשות &טקסט..."
+msgstr "ה&דגשות טקסט…"
 
 #: widgets/krichtextwidget.cpp:234
 #, kde-format
@@ -472,13 +472,13 @@ msgstr "&גופן"
 #, kde-format
 msgctxt "@action"
 msgid "Font &Size"
-msgstr "גודל &הגופן"
+msgstr "גודל ה&כתב"
 
 #: widgets/krichtextwidget.cpp:253
 #, kde-format
 msgctxt "@action boldify selected text"
 msgid "&Bold"
-msgstr "&מודגש"
+msgstr "מו&דגש"
 
 #: widgets/krichtextwidget.cpp:267
 #, kde-format
@@ -496,25 +496,25 @@ msgstr "&קו תחתי"
 #, kde-format
 msgctxt "@action"
 msgid "&Strike Out"
-msgstr "&קו חוצה"
+msgstr "קו &חוצה"
 
 #: widgets/krichtextwidget.cpp:308
 #, kde-format
 msgctxt "@action"
 msgid "Align &Left"
-msgstr "ישר &שמאלה"
+msgstr "יישור &שמאלה"
 
 #: widgets/krichtextwidget.cpp:309
 #, kde-format
 msgctxt "@label left justify"
 msgid "Left"
-msgstr "משמאל"
+msgstr "שמאל"
 
 #: widgets/krichtextwidget.cpp:314
 #, kde-format
 msgctxt "@action"
 msgid "Align &Center"
-msgstr "&מרכז"
+msgstr "מי&רכוז"
 
 #: widgets/krichtextwidget.cpp:315
 #, kde-format
@@ -526,7 +526,7 @@ msgstr "מרכז"
 #, kde-format
 msgctxt "@action"
 msgid "Align &Right"
-msgstr "ישר &ימינה"
+msgstr "יישור ימי&נה"
 
 #: widgets/krichtextwidget.cpp:321
 #, kde-format
@@ -538,37 +538,37 @@ msgstr "ימין"
 #, kde-format
 msgctxt "@action"
 msgid "&Justify"
-msgstr "&יישור"
+msgstr "&פיזור רווחים"
 
 #: widgets/krichtextwidget.cpp:327
 #, kde-format
 msgctxt "@label justify fill"
 msgid "Justify"
-msgstr "יישור"
+msgstr "פיזור רווחים"
 
 #: widgets/krichtextwidget.cpp:345
 #, kde-format
 msgctxt "@action"
 msgid "Left-to-Right"
-msgstr "שמאל־ימין"
+msgstr "שמאל־לימין"
 
 #: widgets/krichtextwidget.cpp:346
 #, kde-format
 msgctxt "@label left-to-right"
 msgid "Left-to-Right"
-msgstr "שמאל־ימין"
+msgstr "שמאל־לימין"
 
 #: widgets/krichtextwidget.cpp:351
 #, kde-format
 msgctxt "@action"
 msgid "Right-to-Left"
-msgstr "ימין־שמאל"
+msgstr "ימין־לשמאל"
 
 #: widgets/krichtextwidget.cpp:352
 #, kde-format
 msgctxt "@label right-to-left"
 msgid "Right-to-Left"
-msgstr "ימין־שמאל"
+msgstr "ימין־לשמאל"
 
 #: widgets/krichtextwidget.cpp:366
 #, kde-format
@@ -586,19 +586,19 @@ msgstr "ללא"
 #, kde-format
 msgctxt "@item:inmenu disc list style"
 msgid "Disc"
-msgstr "דיסק"
+msgstr "טבעת"
 
 #: widgets/krichtextwidget.cpp:371
 #, kde-format
 msgctxt "@item:inmenu circle list style"
 msgid "Circle"
-msgstr "מעגל"
+msgstr "עיגול"
 
 #: widgets/krichtextwidget.cpp:372
 #, kde-format
 msgctxt "@item:inmenu square list style"
 msgid "Square"
-msgstr "מרובע"
+msgstr "ריבוע"
 
 #: widgets/krichtextwidget.cpp:373
 #, kde-format
@@ -622,31 +622,31 @@ msgstr "ABC"
 #, kde-format
 msgctxt "@item:inmenu lower case roman numerals"
 msgid "i ii iii"
-msgstr ""
+msgstr "i ii iii"
 
 #: widgets/krichtextwidget.cpp:377
 #, kde-format
 msgctxt "@item:inmenu upper case roman numerals"
 msgid "I II III"
-msgstr ""
+msgstr "I II III"
 
 #: widgets/krichtextwidget.cpp:397
 #, kde-format
 msgctxt "@action"
 msgid "Increase Indent"
-msgstr "הגדל הזחה"
+msgstr "הגדלת הזחה"
 
 #: widgets/krichtextwidget.cpp:409
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Indent"
-msgstr "הקטן הזחה"
+msgstr "הקטנת הזחה"
 
 #: widgets/krichtextwidget.cpp:421
 #, kde-format
 msgctxt "@action"
 msgid "Insert Rule Line"
-msgstr "הוספת שורת חוק"
+msgstr "הוספת קו אופקי"
 
 #: widgets/krichtextwidget.cpp:430
 #, kde-format
@@ -658,7 +658,7 @@ msgstr "קישור"
 #, kde-format
 msgctxt "@action"
 msgid "Format Painter"
-msgstr "תבנית העיצוב"
+msgstr "צובע העיצוב"
 
 #: widgets/krichtextwidget.cpp:454
 #, kde-format
@@ -682,61 +682,59 @@ msgstr "כתב עילי"
 #, kde-format
 msgctxt "@title:menu"
 msgid "Heading Level"
-msgstr ""
+msgstr "רמת כותרת"
 
 #: widgets/krichtextwidget.cpp:481
 #, kde-format
 msgctxt "@item:inmenu no heading"
 msgid "Basic text"
-msgstr ""
+msgstr "טקסט בסיסי"
 
 #: widgets/krichtextwidget.cpp:482
 #, kde-format
 msgctxt "@item:inmenu heading level 1 (largest)"
 msgid "Title"
-msgstr ""
+msgstr "כותרת"
 
 #: widgets/krichtextwidget.cpp:483
 #, kde-format
 msgctxt "@item:inmenu heading level 2"
 msgid "Subtitle"
-msgstr ""
+msgstr "תת־כותרת"
 
 #: widgets/krichtextwidget.cpp:484
 #, kde-format
 msgctxt "@item:inmenu heading level 3"
 msgid "Section"
-msgstr ""
+msgstr "סעיף"
 
 #: widgets/krichtextwidget.cpp:485
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Subscript"
+#, kde-format
 msgctxt "@item:inmenu heading level 4"
 msgid "Subsection"
-msgstr "כתב תחתי"
+msgstr "תת־סעיף"
 
 #: widgets/krichtextwidget.cpp:486
 #, kde-format
 msgctxt "@item:inmenu heading level 5"
 msgid "Paragraph"
-msgstr ""
+msgstr "פרק"
 
 #: widgets/krichtextwidget.cpp:487
 #, kde-format
 msgctxt "@item:inmenu heading level 6 (smallest)"
 msgid "Subparagraph"
-msgstr ""
+msgstr "תת־פרק"
 
 #: widgets/ktextedit.cpp:47
 #, kde-format
 msgid "Nothing to spell check."
-msgstr "אין מה לבדוק איות."
+msgstr "אין על מה לבדוק איות."
 
 #: widgets/ktextedit.cpp:501
 #, kde-format
 msgid "Check Spelling..."
-msgstr "בדיקת איות..."
+msgstr "בדיקת איות…"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
@@ -746,17 +744,17 @@ msgstr "שפת בדיקת איות"
 #: widgets/ktextedit.cpp:527
 #, kde-format
 msgid "Auto Spell Check"
-msgstr "בדוק איות אוטומטית"
+msgstr "בדיקת איות אוטומטית"
 
 #: widgets/ktextedit.cpp:533
 #, kde-format
 msgid "Allow Tabulations"
-msgstr "אפשר טאבים"
+msgstr "לאפשר טאבים"
 
 #: widgets/ktextedit.cpp:566
 #, kde-format
 msgid "Speak Text"
-msgstr "הקרא טקסט"
+msgstr "הקראת טקסט"
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "ביטוי רגולרי לא תקף."
