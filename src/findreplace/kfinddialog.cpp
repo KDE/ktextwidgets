@@ -81,7 +81,7 @@ void KFindDialogPrivate::init(bool forReplace, const QStringList &_findStrings, 
     find->setMaxCount(10);
     find->setDuplicatesEnabled(false);
     regExp = new QCheckBox(i18n("Regular e&xpression"), findGrp);
-    regExpItem = new QPushButton(i18n("&Edit..."), findGrp);
+    regExpItem = new QPushButton(i18nc("@action:button", "&Edit…"), findGrp);
     regExpItem->setEnabled(false);
 
     findLayout->addWidget(findLabel, 0, 0);

@@ -498,7 +498,7 @@ QMenu *KTextEdit::mousePopupMenu()
             d->speller = new Sonnet::Speller();
         }
         if (!d->speller->availableBackends().isEmpty()) {
-            d->spellCheckAction = popup->addAction(QIcon::fromTheme(QStringLiteral("tools-check-spelling")), i18n("Check Spelling..."));
+            d->spellCheckAction = popup->addAction(QIcon::fromTheme(QStringLiteral("tools-check-spelling")), i18nc("@action:inmenu", "Check Spelling…"));
             if (emptyDocument) {
                 d->spellCheckAction->setEnabled(false);
             }

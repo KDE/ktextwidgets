@@ -204,7 +204,7 @@ QList<QAction *> KRichTextWidget::createActions()
 
     if (d->richTextSupport & SupportTextForegroundColor) {
         // Foreground Color
-        d->action_text_foreground_color = new QAction(QIcon::fromTheme(QStringLiteral("format-stroke-color")), i18nc("@action", "Text &Color..."), this);
+        d->action_text_foreground_color = new QAction(QIcon::fromTheme(QStringLiteral("format-stroke-color")), i18nc("@action", "Text &Color…"), this);
         d->action_text_foreground_color->setIconText(i18nc("@label stroke color", "Color"));
         d->richTextActionList.append((d->action_text_foreground_color));
         d->action_text_foreground_color->setObjectName(QStringLiteral("format_text_foreground_color"));
@@ -218,7 +218,7 @@ QList<QAction *> KRichTextWidget::createActions()
 
     if (d->richTextSupport & SupportTextBackgroundColor) {
         // Background Color
-        d->action_text_background_color = new QAction(QIcon::fromTheme(QStringLiteral("format-fill-color")), i18nc("@action", "Text &Highlight..."), this);
+        d->action_text_background_color = new QAction(QIcon::fromTheme(QStringLiteral("format-fill-color")), i18nc("@action", "Text &Highlight…"), this);
         d->richTextActionList.append((d->action_text_background_color));
         d->action_text_background_color->setObjectName(QStringLiteral("format_text_background_color"));
         connect(d->action_text_background_color, &QAction::triggered, this, [this]() {
