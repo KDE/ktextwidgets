@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2023-04-15 20:54+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -111,8 +111,10 @@ msgid "Regular e&xpression"
 msgstr "&Regula esprimo"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
+#, fuzzy, kde-format
+#| msgid "&Edit..."
+msgctxt "@action:button"
+msgid "&Edit…"
 msgstr "&Redakti..."
 
 #: findreplace/kfinddialog.cpp:93
@@ -441,9 +443,11 @@ msgstr ""
 "Bonvolu korekti."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "&Koloro de teksto..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -453,9 +457,11 @@ msgid "Color"
 msgstr "Koloro"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Mar&ko de teksto..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -728,8 +734,10 @@ msgid "Nothing to spell check."
 msgstr "Neniu literumenda."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling..."
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
 msgstr "Kontroli literumon..."
 
 #: widgets/ktextedit.cpp:506

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -103,9 +103,11 @@ msgid "Regular e&xpression"
 msgstr "مۇنتىزىم ئىپادە(&X)"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "تەھرىر(&E)…"
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "تەھرىر(&E)"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -434,9 +436,11 @@ msgstr ""
 "تۈزىتىڭ."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "تېكىست رېڭى(&C)…"
 
 #: widgets/krichtextwidget.cpp:208
@@ -446,9 +450,11 @@ msgid "Color"
 msgstr "رەڭ"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "تېكىستنى يورۇت(&H)…"
 
 #: widgets/krichtextwidget.cpp:234
@@ -731,9 +737,11 @@ msgid "Nothing to spell check."
 msgstr "ئىملاسى تەكشۈرۈلىدىغان نەرسە يوق."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "ئىملا تەكشۈرۈۋاتىدۇ…"
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "ئىملا تەكشۈر"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -755,6 +763,12 @@ msgstr "بەتكۈچلەنسۇن"
 #, kde-format
 msgid "Speak Text"
 msgstr "تېكىستنى ئوقۇ"
+
+#~ msgid "&Edit..."
+#~ msgstr "تەھرىر(&E)…"
+
+#~ msgid "Check Spelling..."
+#~ msgstr "ئىملا تەكشۈرۈۋاتىدۇ…"
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "ئىناۋەتسىز مۇنتىزىم ئىپادە"
@@ -1202,9 +1216,6 @@ msgstr "تېكىستنى ئوقۇ"
 
 #~ msgid "Spell Checker"
 #~ msgstr "ئىملا تەكشۈرگۈچ"
-
-#~ msgid "Check Spelling"
-#~ msgstr "ئىملا تەكشۈر"
 
 #~ msgid "&Finished"
 #~ msgstr "تامام(&F)"
@@ -6872,9 +6883,6 @@ msgstr "تېكىستنى ئوقۇ"
 
 #~ msgid "&Game"
 #~ msgstr "ئويۇن(&G)"
-
-#~ msgid "&Edit"
-#~ msgstr "تەھرىر(&E)"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

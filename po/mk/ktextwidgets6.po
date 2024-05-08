@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2010-01-27 10:39+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -116,9 +116,11 @@ msgid "Regular e&xpression"
 msgstr "&Регуларен израз"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Уреди..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Уредување"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -442,9 +444,11 @@ msgstr ""
 "Молам поправете."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "&Боја на текст..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -454,9 +458,11 @@ msgid "Color"
 msgstr "Боја"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Оз&начување текст..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -739,9 +745,11 @@ msgid "Nothing to spell check."
 msgstr "Нема ништо за проверка на правопис."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Провери правопис..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Провери правопис"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -763,6 +771,12 @@ msgstr "Дозволи табулатори"
 #, kde-format
 msgid "Speak Text"
 msgstr "Изговори текст"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Уреди..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Провери правопис..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Невалиден регуларен израз."
@@ -1203,9 +1217,6 @@ msgstr "Изговори текст"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Проверувач на правопис"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Провери правопис"
 
 #~ msgid "&Finished"
 #~ msgstr "&Завршено"
@@ -6964,9 +6975,6 @@ msgstr "Изговори текст"
 
 #~ msgid "&Game"
 #~ msgstr "&Игра"
-
-#~ msgid "&Edit"
-#~ msgstr "&Уредување"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

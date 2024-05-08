@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2014-11-05 13:40+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -111,8 +111,10 @@ msgid "Regular e&xpression"
 msgstr "Regulært &uttrykk"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
+#, fuzzy, kde-format
+#| msgid "&Edit..."
+msgctxt "@action:button"
+msgid "&Edit…"
 msgstr "&Rediger …"
 
 #: findreplace/kfinddialog.cpp:93
@@ -442,9 +444,11 @@ msgstr ""
 "Rett opp."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Tekst&farge …"
 
 #: widgets/krichtextwidget.cpp:208
@@ -454,9 +458,11 @@ msgid "Color"
 msgstr "Farge"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Tekstfram&heving …"
 
 #: widgets/krichtextwidget.cpp:234
@@ -729,8 +735,10 @@ msgid "Nothing to spell check."
 msgstr "Ingenting å stavekontrollere."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling..."
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
 msgstr "Kjør stavekontroll …"
 
 #: widgets/ktextedit.cpp:506

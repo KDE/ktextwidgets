@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2014-03-16 23:21-0500\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -110,9 +110,11 @@ msgid "Regular e&xpression"
 msgstr "ਰੈਗੂਲਰ ਸਮੀਕਰਨ(&x)"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "ਸੋਧ(&E)..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "ਸੋਧ(&E)"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -434,9 +436,11 @@ msgstr ""
 "ਠੀਕ ਕਰੋ ਜੀ।"
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "ਟੈਕਸਟ ਰੰਗ(&C)..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -446,9 +450,11 @@ msgid "Color"
 msgstr "ਰੰਗ"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "ਟੈਕਸਟ ਹਾਈਲਾਈਟ(&H)..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -731,9 +737,11 @@ msgid "Nothing to spell check."
 msgstr "ਸ਼ਬਦ-ਜੋੜ ਚੈੱਕ ਕਰਨ ਲਈ ਕੁਝ ਵੀ ਨਹੀਂ ਹੈ।"
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "ਸ਼ਬਦ ਜੋੜ ਚੈੱਕ ਕਰੋ..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "ਸ਼ਬਦ ਜੋੜ ਜਾਂਚ"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -755,6 +763,12 @@ msgstr "ਸਾਰਣੀ ਮਨਜ਼ੂਰ"
 #, kde-format
 msgid "Speak Text"
 msgstr "ਟੈਕਸਟ ਬੋਲੋ"
+
+#~ msgid "&Edit..."
+#~ msgstr "ਸੋਧ(&E)..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "ਸ਼ਬਦ ਜੋੜ ਚੈੱਕ ਕਰੋ..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "ਗਲਤ ਰੈਗੂਲਰ ਸਮੀਕਰਨ ਹੈ।"
@@ -1203,9 +1217,6 @@ msgstr "ਟੈਕਸਟ ਬੋਲੋ"
 
 #~ msgid "Spell Checker"
 #~ msgstr "ਸ਼ਬਦ-ਜੋੜ ਚੈੱਕ"
-
-#~ msgid "Check Spelling"
-#~ msgstr "ਸ਼ਬਦ ਜੋੜ ਜਾਂਚ"
 
 #~ msgid "&Finished"
 #~ msgstr "ਮੁਕੰਮਲ(&F)"
@@ -6786,9 +6797,6 @@ msgstr "ਟੈਕਸਟ ਬੋਲੋ"
 
 #~ msgid "&Game"
 #~ msgstr "ਖੇਡ(&G)"
-
-#~ msgid "&Edit"
-#~ msgstr "ਸੋਧ(&E)"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

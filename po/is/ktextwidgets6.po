@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2021-12-07 18:51+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -114,9 +114,11 @@ msgid "Regular e&xpression"
 msgstr "&Reglulega segð"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "Sýs&l..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "Sýs&l"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -443,9 +445,11 @@ msgstr ""
 "Vinsamlega leiðréttu."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Te&xtalitur..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -455,9 +459,11 @@ msgid "Color"
 msgstr "Litur"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Texti &upplitun..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -730,9 +736,11 @@ msgid "Nothing to spell check."
 msgstr "Ekkert til að yfirfara á stafsetningu."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Yfirfara stafsetningu..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Yfirfara stafsetningu"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
@@ -753,6 +761,12 @@ msgstr "Leyfa töflurit"
 #, kde-format
 msgid "Speak Text"
 msgstr "Lesa upp texta"
+
+#~ msgid "&Edit..."
+#~ msgstr "Sýs&l..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Yfirfara stafsetningu..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Ógild regluleg segð."
@@ -1204,9 +1218,6 @@ msgstr "Lesa upp texta"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Skoða stafsetningu"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Yfirfara stafsetningu"
 
 #~ msgid "&Finished"
 #~ msgstr "&Ljúka"
@@ -6889,9 +6900,6 @@ msgstr "Lesa upp texta"
 
 #~ msgid "&Game"
 #~ msgstr "&Leikur"
-
-#~ msgid "&Edit"
-#~ msgstr "Sýs&l"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

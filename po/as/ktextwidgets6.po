@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4_as\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2008-12-26 15:19+0530\n"
 "Last-Translator: Amitakhya Phukan <অমিতাক্ষ ফুকন>\n"
 "Language-Team: Assamese <fedora-trans-as@redhat.com>\n"
@@ -104,9 +104,11 @@ msgid "Regular e&xpression"
 msgstr "Regular e&xpression"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "সম্পাদনা...(&E)"
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "সম্পাদন (&E)"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -427,9 +429,11 @@ msgstr ""
 "অনুগ্ৰহ কৰি সংশোধন কৰক ।"
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "লিপিত ব্যৱহৃত ৰং...(&C)"
 
 #: widgets/krichtextwidget.cpp:208
@@ -439,9 +443,11 @@ msgid "Color"
 msgstr "ৰং"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "লিপি উজ্জ্বল কৰিবলৈ ব্যৱহৃত ৰং...(&H)"
 
 #: widgets/krichtextwidget.cpp:234
@@ -724,9 +730,11 @@ msgid "Nothing to spell check."
 msgstr "বানান পৰীক্ষা কৰাৰ বাবে একো নাই ।"
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "বানান পৰীক্ষণ..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "বানান পৰীক্ষা কৰা হ'ব"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -749,6 +757,12 @@ msgstr ""
 #| msgid "Speak custom text"
 msgid "Speak Text"
 msgstr "স্বনিৰ্ধাৰিত লিপি উচ্চাৰণ"
+
+#~ msgid "&Edit..."
+#~ msgstr "সম্পাদনা...(&E)"
+
+#~ msgid "Check Spelling..."
+#~ msgstr "বানান পৰীক্ষণ..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "regular expression বৈধ নহয় ।"
@@ -1157,9 +1171,6 @@ msgstr "স্বনিৰ্ধাৰিত লিপি উচ্চাৰণ"
 
 #~ msgid "Spell Checker"
 #~ msgstr "বানান পৰীক্ষণব্যৱস্থা"
-
-#~ msgid "Check Spelling"
-#~ msgstr "বানান পৰীক্ষা কৰা হ'ব"
 
 #~ msgid "&Finished"
 #~ msgstr "সমাপ্ত (&F)"
@@ -6603,9 +6614,6 @@ msgstr "স্বনিৰ্ধাৰিত লিপি উচ্চাৰণ"
 
 #~ msgid "&Game"
 #~ msgstr "ক্ৰীড়া (&G)"
-
-#~ msgid "&Edit"
-#~ msgstr "সম্পাদন (&E)"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

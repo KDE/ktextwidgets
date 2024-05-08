@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2020-09-19 15:29+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -106,9 +106,11 @@ msgid "Regular e&xpression"
 msgstr "&Expresie regulată"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Editează..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Editare"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -443,9 +445,11 @@ msgstr ""
 "Vă rog să-l corectați."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "&Culoare text"
 
 #: widgets/krichtextwidget.cpp:208
@@ -455,9 +459,11 @@ msgid "Color"
 msgstr "Culoare"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Text și &evidențiere..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -730,9 +736,11 @@ msgid "Nothing to spell check."
 msgstr "Nimic de verificat."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Verifică ortografia..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Verificare ortografică"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
@@ -753,6 +761,12 @@ msgstr "Permite tabularea"
 #, kde-format
 msgid "Speak Text"
 msgstr "Pronunță textul"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Editează..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Verifică ortografia..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Expresie regulată eronată."
@@ -1204,9 +1218,6 @@ msgstr "Pronunță textul"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Verificator ortografic"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Verificare ortografică"
 
 #~ msgid "&Finished"
 #~ msgstr "&Terminat"
@@ -6973,9 +6984,6 @@ msgstr "Pronunță textul"
 
 #~ msgid "&Game"
 #~ msgstr "&Joc"
-
-#~ msgid "&Edit"
-#~ msgstr "&Editare"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

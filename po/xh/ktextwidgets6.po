@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2002-12-13 17:20SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -119,9 +119,11 @@ msgid "Regular e&xpression"
 msgstr "&Inkcazo eqhelekileyo"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Hlela..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Hlela"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -439,7 +441,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Text Completion"
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Ugqibo Lombhalo"
 
 #: widgets/krichtextwidget.cpp:208
@@ -452,7 +454,7 @@ msgstr "Imibala Ebiziweyo"
 #: widgets/krichtextwidget.cpp:221
 #, kde-format
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr ""
 
 #: widgets/krichtextwidget.cpp:234
@@ -750,7 +752,8 @@ msgstr "Akukho thuba likhethiweyo"
 
 #: widgets/ktextedit.cpp:501
 #, fuzzy, kde-format
-msgid "Check Spelling..."
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
 msgstr "Khangela upelo"
 
 #: widgets/ktextedit.cpp:506
@@ -772,6 +775,13 @@ msgstr "&Iintshukumo ezikhoyo:"
 #, fuzzy, kde-format
 msgid "Speak Text"
 msgstr "Nceda ngenisa igama:"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Hlela..."
+
+#, fuzzy
+#~ msgid "Check Spelling..."
+#~ msgstr "Khangela upelo"
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Ukuzitsho okuthe rhoqo."
@@ -1180,10 +1190,6 @@ msgstr "Nceda ngenisa igama:"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Umkhangeli Wopelo"
-
-#, fuzzy
-#~ msgid "Check Spelling"
-#~ msgstr "Khangela upelo"
 
 #, fuzzy
 #~ msgid "&Finished"
@@ -6525,9 +6531,6 @@ msgstr "Nceda ngenisa igama:"
 
 #~ msgid "&Game"
 #~ msgstr "&Umdlalo"
-
-#~ msgid "&Edit"
-#~ msgstr "&Hlela"
 
 #, fuzzy
 #~| msgid "&Move"

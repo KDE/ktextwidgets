@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2012-07-04 17:33+0200\n"
 "Last-Translator: Jean Cayron <jean.cayron@base.be>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -108,9 +108,11 @@ msgid "Regular e&xpression"
 msgstr "Erîlêye ra&tourneure"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Candjî..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Candjî"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -424,9 +426,11 @@ msgstr ""
 "Coridjîz s' i vs plait"
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "&Coleur do tecse..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -436,9 +440,11 @@ msgid "Color"
 msgstr "Coleur"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "&Sorbriyance do tecse..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -721,9 +727,11 @@ msgid "Nothing to spell check."
 msgstr "I gn a nole fåte ortografike a coridjî."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Coridjî ortografeye..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Coridjî ortografeye"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -745,6 +753,12 @@ msgstr "Permete les tabulåcions"
 #, kde-format
 msgid "Speak Text"
 msgstr "Léré tecse"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Candjî..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Coridjî ortografeye..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Erîlêye ratourneure nén valide."
@@ -1180,9 +1194,6 @@ msgstr "Léré tecse"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Coridjeu d' ortografeye"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Coridjî ortografeye"
 
 #~ msgid "&Finished"
 #~ msgstr "&Fini"
@@ -6792,9 +6803,6 @@ msgstr "Léré tecse"
 
 #~ msgid "&Game"
 #~ msgstr "&Djeu"
-
-#~ msgid "&Edit"
-#~ msgstr "&Candjî"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2020-04-23 23:17+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -111,9 +111,11 @@ msgid "Regular e&xpression"
 msgstr "Reguljärt &uttryck"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "Re&digera..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Redigera"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -443,9 +445,11 @@ msgstr ""
 "Korrigera det här."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Text&färg..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -455,9 +459,11 @@ msgid "Color"
 msgstr "Färg"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Text&markering..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -730,9 +736,11 @@ msgid "Nothing to spell check."
 msgstr "Ingenting att stavningskontrollera."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Kontrollera stavning..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Kontrollera stavning"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
@@ -753,6 +761,12 @@ msgstr "Tillåt tabulatorer"
 #, kde-format
 msgid "Speak Text"
 msgstr "Läs upp text"
+
+#~ msgid "&Edit..."
+#~ msgstr "Re&digera..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Kontrollera stavning..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Ogiltigt reguljärt uttryck."
@@ -1205,9 +1219,6 @@ msgstr "Läs upp text"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Stavningskontroll"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Kontrollera stavning"
 
 #~ msgid "&Finished"
 #~ msgstr "&Klar"
@@ -6922,9 +6933,6 @@ msgstr "Läs upp text"
 
 #~ msgid "&Game"
 #~ msgstr "S&pel"
-
-#~ msgid "&Edit"
-#~ msgstr "&Redigera"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

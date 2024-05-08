@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde4libs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2012-01-19 00:20-0500\n"
 "Last-Translator: Agron Selimaj <as9902613@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -105,9 +105,11 @@ msgid "Regular e&xpression"
 msgstr "Shprehje e &rregullt"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Modifiko..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Modifiko"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -439,9 +441,11 @@ msgstr ""
 "Ju lutemi korrigjojeni."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Teksti &Ngjyra..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -451,9 +455,11 @@ msgid "Color"
 msgstr "Ngjyra"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Teksti &Përzgjedhja..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -737,9 +743,11 @@ msgid "Nothing to spell check."
 msgstr "Kontroll Automatik i Shqiptimit"
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Kontrollo Shqiptimin..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Kontrollo Drejtshkrimin"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -762,6 +770,12 @@ msgstr "Lejo Tabelat"
 #| msgid "&Copy Text"
 msgid "Speak Text"
 msgstr "&Kopjo Tekstin"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Modifiko..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Kontrollo Shqiptimin..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Shprehje e rregullt e pavlefshme."
@@ -1177,9 +1191,6 @@ msgstr "&Kopjo Tekstin"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Kontrolluesi i gërmëzimit"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Kontrollo Drejtshkrimin"
 
 #~ msgid "&Finished"
 #~ msgstr "&Përfunduar"
@@ -6217,9 +6228,6 @@ msgstr "&Kopjo Tekstin"
 
 #~ msgid "&Game"
 #~ msgstr "&Lojë"
-
-#~ msgid "&Edit"
-#~ msgstr "&Modifiko"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

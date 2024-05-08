@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2021-01-16 11:37+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -199,9 +199,11 @@ msgid "Regular e&xpression"
 msgstr "Wyrażenie &regularne"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Edycja..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Edycja"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -536,9 +538,11 @@ msgstr ""
 "Proszę poprawić."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Ko&lor tekstu..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -548,9 +552,11 @@ msgid "Color"
 msgstr "Kolor"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "&Podświetlenie tekstu..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -823,9 +829,11 @@ msgid "Nothing to spell check."
 msgstr "Nic do sprawdzenia pisowni."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Sprawdź pisownię..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Sprawdź pisownię"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
@@ -846,6 +854,12 @@ msgstr "Dopuść tabulację"
 #, kde-format
 msgid "Speak Text"
 msgstr "Powiedz tekst na głos"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Edycja..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Sprawdź pisownię..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Nieprawidłowe wyrażenie regularne."
@@ -1296,9 +1310,6 @@ msgstr "Powiedz tekst na głos"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Sprawdzanie pisowni"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Sprawdź pisownię"
 
 #~ msgid "&Finished"
 #~ msgstr "&Zakończ"
@@ -7021,9 +7032,6 @@ msgstr "Powiedz tekst na głos"
 
 #~ msgid "&Game"
 #~ msgstr "&Gra"
-
-#~ msgid "&Edit"
-#~ msgstr "&Edycja"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2020-04-20 11:08+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
@@ -117,9 +117,11 @@ msgid "Regular e&xpression"
 msgstr "Reguliere e&xpressie"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "Be&werken..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "Be&werken"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -453,9 +455,11 @@ msgstr ""
 "A.u.b. corrigeren."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Tekst&kleur..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -465,9 +469,11 @@ msgid "Color"
 msgstr "Kleur"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Tekst&accentuering..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -740,9 +746,11 @@ msgid "Nothing to spell check."
 msgstr "Niets om de spelling van te controleren."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Spelling controleren..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Spellingcontrole"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
@@ -763,6 +771,12 @@ msgstr "Tabs toestaan"
 #, kde-format
 msgid "Speak Text"
 msgstr "Tekst uitspreken"
+
+#~ msgid "&Edit..."
+#~ msgstr "Be&werken..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Spelling controleren..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Ongeldige reguliere expressie."
@@ -1219,9 +1233,6 @@ msgstr "Tekst uitspreken"
 #~ msgstr "Herstart het dialoogvenster om de wijzigingen te activeren"
 
 #~ msgid "Spell Checker"
-#~ msgstr "Spellingcontrole"
-
-#~ msgid "Check Spelling"
 #~ msgstr "Spellingcontrole"
 
 #~ msgid "&Finished"
@@ -6967,9 +6978,6 @@ msgstr "Tekst uitspreken"
 
 #~ msgid "&Game"
 #~ msgstr "&Spel"
-
-#~ msgid "&Edit"
-#~ msgstr "Be&werken"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

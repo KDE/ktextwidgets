@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2014-06-18 01:32+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -105,9 +105,11 @@ msgid "Regular e&xpression"
 msgstr "Reguleer &Utdruck"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Bewerken..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Bewerken"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -436,9 +438,11 @@ msgstr ""
 "Bitte verbeter dat."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Text&klöör..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -448,9 +452,11 @@ msgid "Color"
 msgstr "Klöör"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Text &rutheven..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -733,9 +739,11 @@ msgid "Nothing to spell check."
 msgstr "Nix dor, wat de Klookschriever pröven kann."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Klookschriever..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Klookschriever"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -757,6 +765,12 @@ msgstr "Tabelloortet Utrichten verlöven"
 #, kde-format
 msgid "Speak Text"
 msgstr "Text vörlesen"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Bewerken..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Klookschriever..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "De regulere Utdruck gellt nich."
@@ -1207,9 +1221,6 @@ msgstr "Text vörlesen"
 #~ "De Ännern warrt nich ümsett, ehr Du den Dialoog nich nochmaal startst"
 
 #~ msgid "Spell Checker"
-#~ msgstr "Klookschriever"
-
-#~ msgid "Check Spelling"
 #~ msgstr "Klookschriever"
 
 #~ msgid "&Finished"
@@ -6930,9 +6941,6 @@ msgstr "Text vörlesen"
 
 #~ msgid "&Game"
 #~ msgstr "&Speel"
-
-#~ msgid "&Edit"
-#~ msgstr "&Bewerken"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

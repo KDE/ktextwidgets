@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2005-01-28 17:54+0000\n"
 "Last-Translator: Kevin Donnelly <kevin@dotmon.com>\n"
 "Language-Team: Cymraeg\n"
@@ -122,9 +122,11 @@ msgid "Regular e&xpression"
 msgstr "&Mynegiad rheolaidd"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Golygu..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Golygu"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -453,7 +455,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Text Completion"
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Cwblhâd testun"
 
 #: widgets/krichtextwidget.cpp:208
@@ -466,7 +468,7 @@ msgstr "Lliwiau a Enwir"
 #: widgets/krichtextwidget.cpp:221
 #, kde-format
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr ""
 
 #: widgets/krichtextwidget.cpp:234
@@ -763,9 +765,11 @@ msgid "Nothing to spell check."
 msgstr "Nid oes darparwr wedi ei dewis."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Gwirio Sillafu..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Gwirio Sillafu"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -788,6 +792,12 @@ msgstr "Gadael Tablyddion"
 #| msgid "Please enter &name:"
 msgid "Speak Text"
 msgstr "Mewnosodwch &enw:"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Golygu..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Gwirio Sillafu..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Mynegiad rheolaidd annilys."
@@ -1250,9 +1260,6 @@ msgstr "Mewnosodwch &enw:"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Cywirydd Sillafu"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Gwirio Sillafu"
 
 #~ msgid "&Finished"
 #~ msgstr "Wedi'i Orffe&n"
@@ -7056,9 +7063,6 @@ msgstr "Mewnosodwch &enw:"
 
 #~ msgid "&Game"
 #~ msgstr "&Gêm"
-
-#~ msgid "&Edit"
-#~ msgstr "&Golygu"
 
 #, fuzzy
 #~| msgid "&Move"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2010-07-22 09:48+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: nl <kde-i18n-doc@lists.kde.org>\n"
@@ -112,9 +112,11 @@ msgid "Regular e&xpression"
 msgstr "Reguliere e&kspresje"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "Be&wurkje..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "Be&wurkje"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -445,9 +447,11 @@ msgstr ""
 "Ferbetterje"
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Tekst&kleur..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -457,9 +461,11 @@ msgid "Color"
 msgstr "Kleur"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Tekst &markearje..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -742,9 +748,11 @@ msgid "Nothing to spell check."
 msgstr "Neat om stavering te hifkjen"
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Stavering hifkje..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Staveringshifker"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -766,6 +774,12 @@ msgstr "Tabulaasjes tastean"
 #, kde-format
 msgid "Speak Text"
 msgstr "Tekst utsprekke"
+
+#~ msgid "&Edit..."
+#~ msgstr "Be&wurkje..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Stavering hifkje..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Net jildige reguliere ekspresje."
@@ -1202,9 +1216,6 @@ msgstr "Tekst utsprekke"
 #~ "aktyf te meitsjen"
 
 #~ msgid "Spell Checker"
-#~ msgstr "Staveringshifker"
-
-#~ msgid "Check Spelling"
 #~ msgstr "Staveringshifker"
 
 #~ msgid "&Finished"
@@ -6766,9 +6777,6 @@ msgstr "Tekst utsprekke"
 
 #~ msgid "&Game"
 #~ msgstr "&Spultsje"
-
-#~ msgid "&Edit"
-#~ msgstr "Be&wurkje"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

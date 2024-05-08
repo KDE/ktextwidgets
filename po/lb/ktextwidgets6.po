@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2006-06-22 16:29+0200\n"
 "Last-Translator: Michel Ludwig <michel.ludwig@kdemail.net>\n"
 "Language-Team: Luxembourgish <kde-i18n-lb@kde.org>\n"
@@ -106,9 +106,11 @@ msgid "Regular e&xpression"
 msgstr "Re&gulären Ausdrock"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "V&eränneren..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "V&eränneren"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -451,7 +453,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Text Completion"
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Ergänzung vum Text"
 
 #: widgets/krichtextwidget.cpp:208
@@ -465,7 +467,7 @@ msgstr "Web-Faarwen"
 #: widgets/krichtextwidget.cpp:221
 #, kde-format
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr ""
 
 #: widgets/krichtextwidget.cpp:234
@@ -762,9 +764,11 @@ msgid "Nothing to spell check."
 msgstr "Kee Provider gewielt."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Rechtschreifkontroll..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Rechtschreifkontroll"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -787,6 +791,12 @@ msgstr "Tabellarësch Unuerdnung zouloossen"
 #| msgid "Please enter &name:"
 msgid "Speak Text"
 msgstr "Gitt w.e.g. den &Numm an:"
+
+#~ msgid "&Edit..."
+#~ msgstr "V&eränneren..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Rechtschreifkontroll..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Ongültege regulären Ausdrock."
@@ -1252,9 +1262,6 @@ msgstr "Gitt w.e.g. den &Numm an:"
 #~ "Dir musst den Dialog nei opmaache fir dass d'Ännerunge virgeholl ginn"
 
 #~ msgid "Spell Checker"
-#~ msgstr "Rechtschreifkontroll"
-
-#~ msgid "Check Spelling"
 #~ msgstr "Rechtschreifkontroll"
 
 #~ msgid "&Finished"
@@ -7213,9 +7220,6 @@ msgstr "Gitt w.e.g. den &Numm an:"
 
 #~ msgid "&Game"
 #~ msgstr "S&pill"
-
-#~ msgid "&Edit"
-#~ msgstr "V&eränneren"
 
 #, fuzzy
 #~| msgid "&Move"

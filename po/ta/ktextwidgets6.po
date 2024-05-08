@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2022-04-14 19:32+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -106,9 +106,11 @@ msgid "Regular e&xpression"
 msgstr "சுருங்குறித் &தொடர்"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&தொகு..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&தொகுக்க"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -437,9 +439,11 @@ msgstr ""
 "தயவுசெய்து திருத்தவும்."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "உரை &நிறம்..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -449,9 +453,11 @@ msgid "Color"
 msgstr "நிறங்கள்"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "உரை &வெளிச்சம்..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -724,9 +730,11 @@ msgid "Nothing to spell check."
 msgstr "சொல்திருத்த எதுவுமில்லை"
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "சொற்களை சரிபார்..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "சொல்லை சரிபார்"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
@@ -747,6 +755,12 @@ msgstr "தத்தல்களை அனுமதி"
 #, kde-format
 msgid "Speak Text"
 msgstr "உரையைப் பேசுக"
+
+#~ msgid "&Edit..."
+#~ msgstr "&தொகு..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "சொற்களை சரிபார்..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "செல்லாத வழக்கமான கூற்று."
@@ -1196,9 +1210,6 @@ msgstr "உரையைப் பேசுக"
 
 #~ msgid "Spell Checker"
 #~ msgstr "சொல் திருத்தி "
-
-#~ msgid "Check Spelling"
-#~ msgstr "சொல்லை சரிபார்"
 
 #~ msgid "&Finished"
 #~ msgstr "&முடிவுற்றது"
@@ -6879,9 +6890,6 @@ msgstr "உரையைப் பேசுக"
 
 #~ msgid "&Game"
 #~ msgstr "&விளையாட்டு"
-
-#~ msgid "&Edit"
-#~ msgstr "&தொகுக்க"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

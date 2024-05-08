@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2020-04-25 10:42+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -122,9 +122,11 @@ msgid "Regular e&xpression"
 msgstr "&Регулярное выражение"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Изменить..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Правка"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -458,9 +460,11 @@ msgstr ""
 "Исправьте, пожалуйста."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "&Цвет текста..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -470,9 +474,11 @@ msgid "Color"
 msgstr "Цвет"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Подсветка текста..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -745,9 +751,11 @@ msgid "Nothing to spell check."
 msgstr "Нечего проверять."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Проверить орфографию..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Проверить орфографию"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
@@ -768,6 +776,12 @@ msgstr "Разрешить табуляцию"
 #, kde-format
 msgid "Speak Text"
 msgstr "Зачитать текст"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Изменить..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Проверить орфографию..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Неверное регулярное выражение."
@@ -1223,9 +1237,6 @@ msgstr "Зачитать текст"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Проверка орфографии"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Проверить орфографию"
 
 #~ msgid "&Finished"
 #~ msgstr "&Готово"
@@ -6953,9 +6964,6 @@ msgstr "Зачитать текст"
 
 #~ msgid "&Game"
 #~ msgstr "&Игра"
-
-#~ msgid "&Edit"
-#~ msgstr "&Правка"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

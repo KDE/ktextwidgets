@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2022-02-14 19:59+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -110,9 +110,11 @@ msgid "Regular e&xpression"
 msgstr "Regu&lárny výraz"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Upraviť..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Upraviť"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -442,9 +444,11 @@ msgstr ""
 "Prosím, opravte."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Farba &textu..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -454,9 +458,11 @@ msgid "Color"
 msgstr "Farba"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Zvýraznenie &textu..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -729,9 +735,11 @@ msgid "Nothing to spell check."
 msgstr "Nič ku kontrole pravopisu."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Kontrola pravopisu..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Kontrola pravopisu"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
@@ -752,6 +760,12 @@ msgstr "Povoliť tabulátory"
 #, kde-format
 msgid "Speak Text"
 msgstr "Povedať text"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Upraviť..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Kontrola pravopisu..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Neplatný regulárny výraz."
@@ -1202,9 +1216,6 @@ msgstr "Povedať text"
 #~ msgstr "Musíte dialóg znovu spustiť, aby sa zmeny prejavili"
 
 #~ msgid "Spell Checker"
-#~ msgstr "Kontrola pravopisu"
-
-#~ msgid "Check Spelling"
 #~ msgstr "Kontrola pravopisu"
 
 #~ msgid "&Finished"
@@ -6920,9 +6931,6 @@ msgstr "Povedať text"
 
 #~ msgid "&Game"
 #~ msgstr "&Hra"
-
-#~ msgid "&Edit"
-#~ msgstr "&Upraviť"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2012-07-16 14:27+0530\n"
 "Last-Translator: Deepayan Sarkar <deepayan.sarkar@gmail.com>\n"
 "Language-Team: American English <kde-translation@bengalinux.org>\n"
@@ -107,9 +107,11 @@ msgid "Regular e&xpression"
 msgstr "রেগুলার &এক্সপ্রেশন"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&সম্পাদন..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "সম্পা&দনা"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -438,9 +440,11 @@ msgstr ""
 "অনুগ্রহ করে সংশোধন করুন।"
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "লেখা&র রং..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -450,9 +454,11 @@ msgid "Color"
 msgstr "রং"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "লেখা হা&ইলাইট..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -735,9 +741,11 @@ msgid "Nothing to spell check."
 msgstr "বানান পরীক্ষা করার কিছু নেই।"
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "বানান পরীক্ষা করো..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "বানান পরীক্ষা করো"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -759,6 +767,12 @@ msgstr "Tabulations অনুমোদন করো"
 #, kde-format
 msgid "Speak Text"
 msgstr "লেখা পড়ে শোনাও"
+
+#~ msgid "&Edit..."
+#~ msgstr "&সম্পাদন..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "বানান পরীক্ষা করো..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "অবৈধ রেগুলার এক্সপ্রেশন"
@@ -1207,9 +1221,6 @@ msgstr "লেখা পড়ে শোনাও"
 
 #~ msgid "Spell Checker"
 #~ msgstr "বানান পরীক্ষক"
-
-#~ msgid "Check Spelling"
-#~ msgstr "বানান পরীক্ষা করো"
 
 #~ msgid "&Finished"
 #~ msgstr "শে&ষ"
@@ -6906,9 +6917,6 @@ msgstr "লেখা পড়ে শোনাও"
 
 #~ msgid "&Game"
 #~ msgstr "খেলা (&খ)"
-
-#~ msgid "&Edit"
-#~ msgstr "সম্পা&দনা"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktextwidgets\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2023-09-14 18:48+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -112,8 +112,10 @@ msgid "Regular e&xpression"
 msgstr "E&xpressió regular"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
+#, fuzzy, kde-format
+#| msgid "&Edit..."
+msgctxt "@action:button"
+msgid "&Edit…"
 msgstr "Edi&ta..."
 
 #: findreplace/kfinddialog.cpp:93
@@ -450,9 +452,11 @@ msgstr ""
 "Corregiu-ho, per favor."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "&Color del text..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -462,9 +466,11 @@ msgid "Color"
 msgstr "Color"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "&Ressalta el text..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -737,8 +743,10 @@ msgid "Nothing to spell check."
 msgstr "No hi ha res que s'haja de verificar ortogràficament."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling..."
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
 msgstr "Verifica l'ortografia..."
 
 #: widgets/ktextedit.cpp:506

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2020-04-20 11:45+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -106,9 +106,11 @@ msgid "Regular e&xpression"
 msgstr "&Regulaaravaldis"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Muuda..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Redigeerimine"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -433,9 +435,11 @@ msgstr ""
 "Palun korrigeeri seda."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Teksti &värv..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -445,9 +449,11 @@ msgid "Color"
 msgstr "Värv"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Teksti &esiletõstmine..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -720,9 +726,11 @@ msgid "Nothing to spell check."
 msgstr "Pole midagi kontrollida."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Õigekirja kontroll..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Õigekirja kontroll"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
@@ -743,6 +751,12 @@ msgstr "Tabeldusmärkide lubamine"
 #, kde-format
 msgid "Speak Text"
 msgstr "Kõnele teksti"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Muuda..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Õigekirja kontroll..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Vigane regulaaravaldis."
@@ -1187,9 +1201,6 @@ msgstr "Kõnele teksti"
 #~ msgstr "Muudatuste rakendamiseks tuleb dialoog uuesti käivitada"
 
 #~ msgid "Spell Checker"
-#~ msgstr "Õigekirja kontroll"
-
-#~ msgid "Check Spelling"
 #~ msgstr "Õigekirja kontroll"
 
 #~ msgid "&Finished"
@@ -6892,9 +6903,6 @@ msgstr "Kõnele teksti"
 
 #~ msgid "&Game"
 #~ msgstr "&Mäng"
-
-#~ msgid "&Edit"
-#~ msgstr "&Redigeerimine"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

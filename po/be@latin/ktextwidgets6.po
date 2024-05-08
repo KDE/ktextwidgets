@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2008-08-30 01:10+0300\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -107,9 +107,11 @@ msgid "Regular e&xpression"
 msgstr "&Rehularny vyraz"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Źmiani..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Redahuj"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -425,9 +427,11 @@ msgstr ""
 "Vypraŭ pamyłku."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "&Koler tekstu..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -437,9 +441,11 @@ msgid "Color"
 msgstr "Koler"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "&Padśviatleńnie tekstu..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -720,9 +726,11 @@ msgid "Nothing to spell check."
 msgstr "Niama čaho spraŭdžvać."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Spraŭdź pravapis..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Spraŭdź pravapis"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -744,6 +752,12 @@ msgstr "Dazvol tabulacyju"
 #, kde-format
 msgid "Speak Text"
 msgstr "Pramoŭ tekst"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Źmiani..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Spraŭdź pravapis..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Niapravilny rehularny vyraz."
@@ -1193,9 +1207,6 @@ msgstr "Pramoŭ tekst"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Spraŭdžvańnie pravapisu"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Spraŭdź pravapis"
 
 #~ msgid "&Finished"
 #~ msgstr "&Skončana"
@@ -6663,9 +6674,6 @@ msgstr "Pramoŭ tekst"
 
 #~ msgid "&Game"
 #~ msgstr "&Hulnia"
-
-#~ msgid "&Edit"
-#~ msgstr "&Redahuj"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

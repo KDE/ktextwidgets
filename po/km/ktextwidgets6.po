@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2012-06-27 10:04+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -101,9 +101,11 @@ msgid "Regular e&xpression"
 msgstr "កន្សោម​ធម្មតា"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "កែសម្រួល..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "កែសម្រួល"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -425,9 +427,11 @@ msgstr ""
 "សូម​កែតម្រូវ ។"
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "ពណ៌​អត្ថបទ..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -437,9 +441,11 @@ msgid "Color"
 msgstr "ពណ៌​"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "បន្លិច​អត្ថបទ..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -722,9 +728,11 @@ msgid "Nothing to spell check."
 msgstr "គ្មាន​អ្វី​ត្រូវ​ពិនិត្យ​អក្ខរាវិរុទ្ធ ។"
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "ពិនិត្យអក្ខរាវិរុទ្ធ..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "ពិនិត្យ​អក្ខរាវិរុទ្ធ"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -746,6 +754,12 @@ msgstr "អនុញ្ញាត​ឲ្យ​សង់​តារាង"
 #, kde-format
 msgid "Speak Text"
 msgstr "និយាយ​អត្ថបទ​"
+
+#~ msgid "&Edit..."
+#~ msgstr "កែសម្រួល..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "ពិនិត្យអក្ខរាវិរុទ្ធ..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "កន្សោម​ធម្មតា​មិន​ត្រឹមត្រូវ ។"
@@ -1193,9 +1207,6 @@ msgstr "និយាយ​អត្ថបទ​"
 
 #~ msgid "Spell Checker"
 #~ msgstr "កម្មវិធី​ពិនិត្យ​អក្ខរាវិរុទ្ធ"
-
-#~ msgid "Check Spelling"
-#~ msgstr "ពិនិត្យ​អក្ខរាវិរុទ្ធ"
 
 #~ msgid "&Finished"
 #~ msgstr "បាន​បញ្ចប់"
@@ -6796,9 +6807,6 @@ msgstr "និយាយ​អត្ថបទ​"
 
 #~ msgid "&Game"
 #~ msgstr "ល្បែង"
-
-#~ msgid "&Edit"
-#~ msgstr "កែសម្រួល"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

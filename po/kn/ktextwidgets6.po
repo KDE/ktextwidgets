@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2010-06-24 18:32+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn_IN <kde-i18n-doc@kde.org>\n"
@@ -107,9 +107,11 @@ msgid "Regular e&xpression"
 msgstr "ಕ್ರಮಬದ್ಧ ಗಣಿತೋಕ್ತಿ (regular e&xpression)"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "ಸಂಪಾದಿಸು(&E)..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "ಸಂಪಾದನೆ(&E)"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -438,9 +440,11 @@ msgstr ""
 "ದಯವಿಟ್ಟು ಸರಿಪಡಿಸಿ."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "ಪಠ್ಯದ ಬಣ್ಣ (&C)..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -450,9 +454,11 @@ msgid "Color"
 msgstr "ಬಣ್ಣ"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "ಪಠ್ಯ ಪ್ರಶಸ್ತಗೊಳಿಸುವಿಕೆ (&H)..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -735,9 +741,11 @@ msgid "Nothing to spell check."
 msgstr "ಕಾಗುಣಿತ ಪರೀಕ್ಷಿಸಲು ಏನೂ ಇಲ್ಲ."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "ಕಾಗುಣಿತವನ್ನು ಪರೀಕ್ಷಿಸು..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "ಕಾಗುಣಿತ ಪರೀಕ್ಷಣೆ"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -759,6 +767,12 @@ msgstr "ಕೋಷ್ಟಕೀಕರಣಗಳನ್ನು (tabulation) ಅನು�
 #, kde-format
 msgid "Speak Text"
 msgstr "ಪಠ್ಯವನ್ನು ವಾಚಿಸು"
+
+#~ msgid "&Edit..."
+#~ msgstr "ಸಂಪಾದಿಸು(&E)..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "ಕಾಗುಣಿತವನ್ನು ಪರೀಕ್ಷಿಸು..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "ಅನೂರ್ಜಿತ ಕ್ರಮಬದ್ಧ ಗಣಿತೋಕ್ತಿ (regular expression)."
@@ -1193,9 +1207,6 @@ msgstr "ಪಠ್ಯವನ್ನು ವಾಚಿಸು"
 
 #~ msgid "Spell Checker"
 #~ msgstr "ಕಾಗುಣಿತ ಪರೀಕ್ಷಕ"
-
-#~ msgid "Check Spelling"
-#~ msgstr "ಕಾಗುಣಿತ ಪರೀಕ್ಷಣೆ"
 
 #~ msgid "&Finished"
 #~ msgstr "ಮುಕ್ತಾಯ(&F)"
@@ -6813,9 +6824,6 @@ msgstr "ಪಠ್ಯವನ್ನು ವಾಚಿಸು"
 
 #~ msgid "&Game"
 #~ msgstr "ಆಟ(&G)"
-
-#~ msgid "&Edit"
-#~ msgstr "ಸಂಪಾದನೆ(&E)"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

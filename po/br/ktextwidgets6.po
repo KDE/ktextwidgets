@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4-1.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2007-10-15 22:19+0200\n"
 "Last-Translator: Jañ-Mai Drapier <jan-mai.drapier@mail.dotcom.fr>\n"
 "Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
@@ -108,9 +108,11 @@ msgid "Regular e&xpression"
 msgstr "T&roienn reolataet"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Aozañ ..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Aozañ"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -428,7 +430,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Text Completion"
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Klokadur skrid"
 
 #: widgets/krichtextwidget.cpp:208
@@ -442,7 +444,7 @@ msgstr "Livioù ar gwiad"
 #: widgets/krichtextwidget.cpp:221
 #, kde-format
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr ""
 
 #: widgets/krichtextwidget.cpp:234
@@ -743,9 +745,11 @@ msgid "Nothing to spell check."
 msgstr "N'eus tra ebet da lemel"
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Gwiriekaat ar reizhskrivadur ..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Gwiriekaat ar reizhskrivadur"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -768,6 +772,12 @@ msgstr "Chomlec'hioù postel hegerzh"
 #| msgid "Please enter &name:"
 msgid "Speak Text"
 msgstr "Skrivit un &anv mar plij :"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Aozañ ..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Gwiriekaat ar reizhskrivadur ..."
 
 #, fuzzy
 #~| msgid "1"
@@ -1148,9 +1158,6 @@ msgstr "Skrivit un &anv mar plij :"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Gwirieker ar skritur"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Gwiriekaat ar reizhskrivadur"
 
 #~ msgid "&Finished"
 #~ msgstr "&Disoc'het"
@@ -6019,9 +6026,6 @@ msgstr "Skrivit un &anv mar plij :"
 
 #~ msgid "&Game"
 #~ msgstr "&C'hoari"
-
-#~ msgid "&Edit"
-#~ msgstr "&Aozañ"
 
 #, fuzzy
 #~| msgid "&Move"

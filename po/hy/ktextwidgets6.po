@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2013-01-31 01:08+0400\n"
 "Last-Translator: Davit <nikdavnik@mail.ru>\n"
 "Language-Team: Armenian Language: hy\n"
@@ -109,9 +109,11 @@ msgid "Regular e&xpression"
 msgstr "&Մշտական արտահայտություն"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Փոփոխել..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Տեղեկություն"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -445,9 +447,11 @@ msgstr ""
 "Խնդրում եմ՝ ուղղեք։"
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "&Տեքստի գույնը..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -457,9 +461,11 @@ msgid "Color"
 msgstr "Գույն"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "ՏԵքստի ընդգծում..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -742,9 +748,11 @@ msgid "Nothing to spell check."
 msgstr "Ստուգելու համար ոչինչ չկա։"
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Ստուգել ուղղագրությունը..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Ստուգել ուղղագրությունը"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -766,6 +774,12 @@ msgstr "Թույլատրել տաբուլյացիա"
 #, kde-format
 msgid "Speak Text"
 msgstr "Կարդալ տեքստը"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Փոփոխել..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Ստուգել ուղղագրությունը..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Երևի կանոնավոր արտահայտություն"
@@ -1216,9 +1230,6 @@ msgstr "Կարդալ տեքստը"
 #~ msgstr "Փոփոխությունների հաստատման համար պետք է վերաթողարկել երկխոսությունը"
 
 #~ msgid "Spell Checker"
-#~ msgstr "Ստուգել ուղղագրությունը"
-
-#~ msgid "Check Spelling"
 #~ msgstr "Ստուգել ուղղագրությունը"
 
 #~ msgid "&Finished"
@@ -6931,9 +6942,6 @@ msgstr "Կարդալ տեքստը"
 
 #~ msgid "&Game"
 #~ msgstr "&Խաղ"
-
-#~ msgid "&Edit"
-#~ msgstr "&Տեղեկություն"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2021-10-19 11:31+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -103,9 +103,11 @@ msgid "Regular e&xpression"
 msgstr "Reg&uláris kifejezés"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "S&zerkesztés…"
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "S&zerkesztés"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -441,9 +443,11 @@ msgstr ""
 "Kérem javítsa ki."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "S&zövegszín…"
 
 #: widgets/krichtextwidget.cpp:208
@@ -453,9 +457,11 @@ msgid "Color"
 msgstr "Szín"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Szöveg&kiemelés…"
 
 #: widgets/krichtextwidget.cpp:234
@@ -728,9 +734,11 @@ msgid "Nothing to spell check."
 msgstr "Nincs ellenőrzendő szöveg."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Helyesírás-ellenőrzés…"
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Helyesírás-ellenőrzés"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
@@ -751,6 +759,12 @@ msgstr "Tabulátorok engedélyezése"
 #, kde-format
 msgid "Speak Text"
 msgstr "Szöveg felolvasása"
+
+#~ msgid "&Edit..."
+#~ msgstr "S&zerkesztés…"
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Helyesírás-ellenőrzés…"
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Érvénytelen reguláris kifejezés."
@@ -1201,9 +1215,6 @@ msgstr "Szöveg felolvasása"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Helyesírás-ellenőrző"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Helyesírás-ellenőrzés"
 
 #~ msgid "&Finished"
 #~ msgstr "Be&fejezve"
@@ -6913,9 +6924,6 @@ msgstr "Szöveg felolvasása"
 
 #~ msgid "&Game"
 #~ msgstr "Já&ték"
-
-#~ msgid "&Edit"
-#~ msgstr "S&zerkesztés"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

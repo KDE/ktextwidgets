@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2009-12-04 22:09+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -106,9 +106,11 @@ msgid "Regular e&xpression"
 msgstr "&Regùlarny wësłôw"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Edicëjô..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Edicëjô"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -441,9 +443,11 @@ msgstr ""
 "Proszã pòprawic."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "&Farwa tekstu..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -455,7 +459,7 @@ msgstr "Farwa"
 #: widgets/krichtextwidget.cpp:221
 #, kde-format
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr ""
 
 #: widgets/krichtextwidget.cpp:234
@@ -738,9 +742,11 @@ msgid "Nothing to spell check."
 msgstr "NIe dô niczegò dze mòże sprôwdzëc pisënk."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Sprôwdzë pisënk..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Sprôwdzë pisënk"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -762,6 +768,12 @@ msgstr "Dopùszczë tabùlacëjã"
 #, kde-format
 msgid "Speak Text"
 msgstr "Gôdôj tekst"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Edicëjô..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Sprôwdzë pisënk..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Lëchi regùlarny wësłôw."
@@ -1199,9 +1211,6 @@ msgstr "Gôdôj tekst"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Sprôwdzanié pisënkù"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Sprôwdzë pisënk"
 
 #~ msgid "&Finished"
 #~ msgstr "&Zakùńczë"
@@ -6953,9 +6962,6 @@ msgstr "Gôdôj tekst"
 
 #~ msgid "&Game"
 #~ msgstr "&Gra"
-
-#~ msgid "&Edit"
-#~ msgstr "&Edicëjô"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

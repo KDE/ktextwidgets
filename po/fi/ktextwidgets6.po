@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2020-06-26 17:10+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -123,9 +123,11 @@ msgid "Regular e&xpression"
 msgstr "&Säännöllinen lauseke"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Muokkaa…"
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Muokkaa"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -452,9 +454,11 @@ msgstr ""
 "Korjaa."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Tekstin &väri…"
 
 #: widgets/krichtextwidget.cpp:208
@@ -464,9 +468,11 @@ msgid "Color"
 msgstr "Väri"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Tekstin &korostus…"
 
 #: widgets/krichtextwidget.cpp:234
@@ -739,9 +745,11 @@ msgid "Nothing to spell check."
 msgstr "Ei mitään oikoluettavaa."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Tarkista oikeinkirjoitus…"
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Tarkista oikeinkirjoitus"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
@@ -762,6 +770,12 @@ msgstr "Salli sarkainsisennykset"
 #, kde-format
 msgid "Speak Text"
 msgstr "Puhu oma teksti"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Muokkaa…"
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Tarkista oikeinkirjoitus…"
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Virheellinen säännöllinen lauseke"
@@ -1217,9 +1231,6 @@ msgstr "Puhu oma teksti"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Oikeinkirjoitus"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Tarkista oikeinkirjoitus"
 
 #~ msgid "&Finished"
 #~ msgstr "&Valmis"
@@ -6922,9 +6933,6 @@ msgstr "Puhu oma teksti"
 
 #~ msgid "&Game"
 #~ msgstr "&Peli"
-
-#~ msgid "&Edit"
-#~ msgstr "&Muokkaa"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

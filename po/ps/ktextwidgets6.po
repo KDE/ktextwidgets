@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2008-08-16 16:01-0800\n"
 "Last-Translator: Zabeeh Khan <zabeehkhan@gmail.com>\n"
 "Language-Team: Pashto <pathanisation@googlegroups.com>\n"
@@ -105,9 +105,11 @@ msgid "Regular e&xpression"
 msgstr "ساده څ&رګندنه"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "...سمول"
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "سمون"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -425,9 +427,11 @@ msgstr ""
 ".لورينه وکړﺉ سم يې کړﺉ"
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "...د ليکنې &رنګ"
 
 #: widgets/krichtextwidget.cpp:208
@@ -437,9 +441,11 @@ msgid "Color"
 msgstr "رنګ"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "...د ليکنې &ځلول"
 
 #: widgets/krichtextwidget.cpp:234
@@ -724,9 +730,11 @@ msgid "Nothing to spell check."
 msgstr ".څه نشته چې ليکدود يې وکتل شي"
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "...ليکدود کتل"
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "ليکدود کتل"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -749,6 +757,12 @@ msgstr "لښتيالونه پرېښل"
 #| msgid "Speak custom text"
 msgid "Speak Text"
 msgstr "دوديزه ليکنه لوستل"
+
+#~ msgid "&Edit..."
+#~ msgstr "...سمول"
+
+#~ msgid "Check Spelling..."
+#~ msgstr "...ليکدود کتل"
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "ناسمه ساده څرګندنه."
@@ -1140,9 +1154,6 @@ msgstr "دوديزه ليکنه لوستل"
 
 #~ msgid "Spell Checker"
 #~ msgstr "ليکدود کتونکی"
-
-#~ msgid "Check Spelling"
-#~ msgstr "ليکدود کتل"
 
 #~ msgid "&Finished"
 #~ msgstr "بشپړ شو"
@@ -6143,9 +6154,6 @@ msgstr "دوديزه ليکنه لوستل"
 
 #~ msgid "&Game"
 #~ msgstr "لوبه"
-
-#~ msgid "&Edit"
-#~ msgstr "سمون"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

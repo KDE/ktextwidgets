@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2010-12-31 22:47+0700\n"
 "Last-Translator: Phuwanat Sakornsakolpat <narachai@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -106,9 +106,11 @@ msgid "Regular e&xpression"
 msgstr "เ&งื่อนไขการค้นหา"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "แ&ก้ไข..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "แ&ก้ไข"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -430,9 +432,11 @@ msgstr ""
 "โปรดแก้ไขให้ถูกต้อง"
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "&สีข้อความ..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -442,9 +446,11 @@ msgid "Color"
 msgstr "สี"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "เ&น้นข้อความ..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -727,9 +733,11 @@ msgid "Nothing to spell check."
 msgstr "ไม่มีอะไรให้ตรวจคำสะกด"
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "ตรวจคำสะกด..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "ตรวจคำสะกด"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -751,6 +759,12 @@ msgstr "อนุญาตการใช้แท็บ"
 #, kde-format
 msgid "Speak Text"
 msgstr "พูดออกเสียงข้อความ"
+
+#~ msgid "&Edit..."
+#~ msgstr "แ&ก้ไข..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "ตรวจคำสะกด..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "เงื่อนไขการค้นหาไม่ถูกต้อง"
@@ -1181,9 +1195,6 @@ msgstr "พูดออกเสียงข้อความ"
 
 #~ msgid "Spell Checker"
 #~ msgstr "ตัวตรวจคำสะกด"
-
-#~ msgid "Check Spelling"
-#~ msgstr "ตรวจคำสะกด"
 
 #~ msgid "&Finished"
 #~ msgstr "เสร็&จสิ้น"
@@ -6814,9 +6825,6 @@ msgstr "พูดออกเสียงข้อความ"
 
 #~ msgid "&Game"
 #~ msgstr "เ&กม"
-
-#~ msgid "&Edit"
-#~ msgstr "แ&ก้ไข"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

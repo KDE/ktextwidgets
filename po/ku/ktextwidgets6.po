@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2010-08-13 15:45+0200\n"
 "Last-Translator: Erdal Ronahî <erdal.ronahi@nospam.gmail.com>\n"
 "Language-Team: Kurdish Team http://pckurd.net\n"
@@ -112,9 +112,11 @@ msgid "Regular e&xpression"
 msgstr "Îfadeya &Sererast"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Sererastkirin..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "Sere&rastkirin"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -438,9 +440,11 @@ msgstr ""
 "Ji kerema xwe sererast bike."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "&Rengê Nivîsê..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -452,7 +456,7 @@ msgstr "Reng"
 #: widgets/krichtextwidget.cpp:221
 #, kde-format
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr ""
 
 #: widgets/krichtextwidget.cpp:234
@@ -735,9 +739,11 @@ msgid "Nothing to spell check."
 msgstr "Tu tiştekî ji bo kontrola rastnivîsînê tune."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Rastnivîsê Kontrol Bike..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Rastnivîsê Kontrol Bike"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -759,6 +765,12 @@ msgstr "Destûrê Bide Hilfirînan"
 #, kde-format
 msgid "Speak Text"
 msgstr "Nivîsa Axaftinê"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Sererastkirin..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Rastnivîsê Kontrol Bike..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "îfadeyeke sererast ya ne derbasdar."
@@ -1168,9 +1180,6 @@ msgstr "Nivîsa Axaftinê"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Kontrolkerê Rastnivîsê"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Rastnivîsê Kontrol Bike"
 
 #~ msgid "&Finished"
 #~ msgstr "&Bi Dawî Bû"
@@ -6432,9 +6441,6 @@ msgstr "Nivîsa Axaftinê"
 
 #~ msgid "&Game"
 #~ msgstr "&Lîstik"
-
-#~ msgid "&Edit"
-#~ msgstr "Sere&rastkirin"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

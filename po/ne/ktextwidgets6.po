@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2007-11-05 15:41+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -112,9 +112,11 @@ msgid "Regular e&xpression"
 msgstr "नियमित अभिव्यक्ति"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "सम्पादन गर्नुहोस्..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "सम्पादन"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -454,7 +456,7 @@ msgstr ""
 #| msgctxt "@action"
 #| msgid "Text Completion"
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "पाठ समापन"
 
 #: widgets/krichtextwidget.cpp:208
@@ -468,7 +470,7 @@ msgstr "वेब रङ"
 #: widgets/krichtextwidget.cpp:221
 #, kde-format
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr ""
 
 #: widgets/krichtextwidget.cpp:234
@@ -775,9 +777,11 @@ msgid "Nothing to spell check."
 msgstr "मेट्नुपर्ने केही छैन"
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "हिज्जे जाँच गर्नुहोस्..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "हिज्जे जाँच गर्नुहोस्"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -800,6 +804,12 @@ msgstr "तालिकीकरण अनुमति दिनुहोस्"
 #| msgid "&Break at Next Statement"
 msgid "Speak Text"
 msgstr "पछिल्लो कथनमा विच्छेद गर्नुहोस्"
+
+#~ msgid "&Edit..."
+#~ msgstr "सम्पादन गर्नुहोस्..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "हिज्जे जाँच गर्नुहोस्..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "अवैध नियमित अभिव्यक्ति ।"
@@ -1254,9 +1264,6 @@ msgstr "पछिल्लो कथनमा विच्छेद गर्न
 
 #~ msgid "Spell Checker"
 #~ msgstr "हिज्जे परीक्षक"
-
-#~ msgid "Check Spelling"
-#~ msgstr "हिज्जे जाँच गर्नुहोस्"
 
 #~ msgid "&Finished"
 #~ msgstr "समाप्त"
@@ -7316,9 +7323,6 @@ msgstr "पछिल्लो कथनमा विच्छेद गर्न
 
 #~ msgid "&Game"
 #~ msgstr "खेल"
-
-#~ msgid "&Edit"
-#~ msgstr "सम्पादन"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

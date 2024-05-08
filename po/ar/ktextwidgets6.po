@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2021-12-14 21:31+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -123,9 +123,11 @@ msgid "Regular e&xpression"
 msgstr "تعبير &نمطي"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&حرر..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&حرِّر"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -457,9 +459,11 @@ msgstr ""
 "المرجو التصحيح."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "ل&ونّ النص..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -469,9 +473,11 @@ msgid "Color"
 msgstr "اللون"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "إ&براز النص..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -744,9 +750,11 @@ msgid "Nothing to spell check."
 msgstr "لا يوجد شيء للتدقيق الإملائي"
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "تدقيق إملائي..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "افحص التّهجئة"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
@@ -767,6 +775,12 @@ msgstr "اسمح بالتبويبات"
 #, kde-format
 msgid "Speak Text"
 msgstr "انطق النص"
+
+#~ msgid "&Edit..."
+#~ msgstr "&حرر..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "تدقيق إملائي..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "التعبير النمطي غير صحيح."
@@ -1202,9 +1216,6 @@ msgstr "انطق النص"
 
 #~ msgid "Spell Checker"
 #~ msgstr "المدقق الإملائي"
-
-#~ msgid "Check Spelling"
-#~ msgstr "افحص التّهجئة"
 
 #~ msgid "&Finished"
 #~ msgstr "ا&نتهيت"
@@ -6903,9 +6914,6 @@ msgstr "انطق النص"
 
 #~ msgid "&Game"
 #~ msgstr "&لعبة"
-
-#~ msgid "&Edit"
-#~ msgstr "&حرِّر"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

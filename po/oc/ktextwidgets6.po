@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2008-08-06 00:07+0200\n"
 "Last-Translator: \n"
 "Language-Team: Occitan <oc@li.org>\n"
@@ -108,9 +108,11 @@ msgid "Regular e&xpression"
 msgstr "E&xpression racionala"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Edicion..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Edicion"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -446,7 +448,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Select Color"
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Seleccionar una color"
 
 #: widgets/krichtextwidget.cpp:208
@@ -459,7 +461,7 @@ msgstr "Color"
 #: widgets/krichtextwidget.cpp:221
 #, kde-format
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr ""
 
 #: widgets/krichtextwidget.cpp:234
@@ -762,9 +764,11 @@ msgid "Nothing to spell check."
 msgstr "Res a suprimir"
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Verificar l'ortografia..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Verificar l'ortografia"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -787,6 +791,12 @@ msgstr "Autorizar las tabulacions"
 #| msgid "Text:"
 msgid "Speak Text"
 msgstr "Tèxt :"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Edicion..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Verificar l'ortografia..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Expression racionala pas valabla."
@@ -1139,9 +1149,6 @@ msgstr "Tèxt :"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Verificator ortografic"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Verificar l'ortografia"
 
 #~ msgid "&Finished"
 #~ msgstr "&Acabat"
@@ -4778,9 +4785,6 @@ msgstr "Tèxt :"
 
 #~ msgid "&Game"
 #~ msgstr "&Jòc"
-
-#~ msgid "&Edit"
-#~ msgstr "&Edicion"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktextwidgets5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2016-04-29 19:48+0100\n"
 "Last-Translator: GunChleoc <fios@foramnagaidhlig.net>\n"
 "Language-Team: Fòram na Gàidhlig\n"
@@ -108,8 +108,10 @@ msgid "Regular e&xpression"
 msgstr "Eas-preisean &riaghailteach"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
+#, fuzzy, kde-format
+#| msgid "&Edit..."
+msgctxt "@action:button"
+msgid "&Edit…"
 msgstr "D&easaich..."
 
 #: findreplace/kfinddialog.cpp:93
@@ -448,9 +450,11 @@ msgstr ""
 "An cuir thu seo gu ceart?"
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "&Dath an teacsa..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -460,9 +464,11 @@ msgid "Color"
 msgstr "Dath"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "&Soillseachadh an teacsa..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -737,8 +743,10 @@ msgid "Nothing to spell check."
 msgstr "Chan eil dad ri dhearbhadh ann."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling..."
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
 msgstr "Dearbhaich an litreachadh..."
 
 #: widgets/ktextedit.cpp:506

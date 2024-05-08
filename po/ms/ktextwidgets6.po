@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2011-07-16 00:57+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -107,9 +107,11 @@ msgid "Regular e&xpression"
 msgstr "Ungkapan Nala&r (regexp)"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Edit."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Edit"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -439,9 +441,11 @@ msgstr ""
 "Sila betulkan."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "&Warna Teks..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -453,7 +457,7 @@ msgstr "Warna"
 #: widgets/krichtextwidget.cpp:221
 #, fuzzy, kde-format
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Teks."
 
 #: widgets/krichtextwidget.cpp:234
@@ -734,9 +738,11 @@ msgid "Nothing to spell check."
 msgstr "Tiada apa untuk diperiksa ejaan."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Memeriksa Ejaan..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Memeriksa ejaan"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -758,6 +764,12 @@ msgstr "Benarkan Penjadualan"
 #, kde-format
 msgid "Speak Text"
 msgstr "Teks Tutur"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Edit."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Memeriksa Ejaan..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Ungkapan Nalar tidak sah."
@@ -1210,9 +1222,6 @@ msgstr "Teks Tutur"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Penyemak ejaan"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Memeriksa ejaan"
 
 #~ msgid "&Finished"
 #~ msgstr "&Selesai"
@@ -6959,9 +6968,6 @@ msgstr "Teks Tutur"
 
 #~ msgid "&Game"
 #~ msgstr "&Permainan "
-
-#~ msgid "&Edit"
-#~ msgstr "&Edit"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

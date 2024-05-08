@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2011-07-25 07:45+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -104,9 +104,11 @@ msgid "Regular e&xpression"
 msgstr "ක්‍රමවත් ප්‍රකාශන (&x)"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "සැකසුම්... (&E)"
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "සැකසුම් (&E)"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -431,9 +433,11 @@ msgstr ""
 "කරුණාකර නිවැරදි කරන්න."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "පෙළ වර්‍ණය... (&C)"
 
 #: widgets/krichtextwidget.cpp:208
@@ -443,9 +447,11 @@ msgid "Color"
 msgstr "වර්‍ණය"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "පෙළ පද්දීපනය... (&H)"
 
 #: widgets/krichtextwidget.cpp:234
@@ -728,9 +734,11 @@ msgid "Nothing to spell check."
 msgstr "අක්‍ෂර වින්‍යාස පරික්‍ෂාවට කිසිවක් නොමැත."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "අක්‍ෂර වින්‍යාස පිරික්සමින්..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "අක්‍ෂර වින්‍යාසය පරීක්‍ෂා කරන්න"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -753,6 +761,12 @@ msgstr "වගුකිරීම"
 #| msgid "Speak custom text"
 msgid "Speak Text"
 msgstr "රිසිකළ පෙළ පවසන්න"
+
+#~ msgid "&Edit..."
+#~ msgstr "සැකසුම්... (&E)"
+
+#~ msgid "Check Spelling..."
+#~ msgstr "අක්‍ෂර වින්‍යාස පිරික්සමින්..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "අවලංගු ක්‍රමවත් ප්‍රකාශය."
@@ -1195,9 +1209,6 @@ msgstr "රිසිකළ පෙළ පවසන්න"
 
 #~ msgid "Spell Checker"
 #~ msgstr "අක්‍ෂර වින්‍යාස පරික්‍ෂාව"
-
-#~ msgid "Check Spelling"
-#~ msgstr "අක්‍ෂර වින්‍යාසය පරීක්‍ෂා කරන්න"
 
 #~ msgid "&Finished"
 #~ msgstr "නිම කළා (&F)"
@@ -6846,9 +6857,6 @@ msgstr "රිසිකළ පෙළ පවසන්න"
 
 #~ msgid "&Game"
 #~ msgstr "ක්‍රීඩා (&G)"
-
-#~ msgid "&Edit"
-#~ msgstr "සැකසුම් (&E)"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

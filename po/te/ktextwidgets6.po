@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2013-11-04 23:55+0630\n"
 "Last-Translator: Bhuvan Krishna <bhuvan@swecha.org>\n"
 "Language-Team: Telugu <kde-i18n-doc@kde.org>\n"
@@ -113,9 +113,11 @@ msgid "Regular e&xpression"
 msgstr "(&x) క్రమమైన సమీకరణము"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "(&E) సరిదిద్దు..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "(&E) సరిదిద్దు"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -440,9 +442,11 @@ msgstr ""
 " సరిదిద్దండి"
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "(&C) వచనము రంగు..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -452,9 +456,11 @@ msgid "Color"
 msgstr "రంగు"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "(&H) వచనము ఉద్దీపనము..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -737,9 +743,11 @@ msgid "Nothing to spell check."
 msgstr "అచ్చుతప్పులు సరిదిద్దుటకు ఏమీలేదు."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "అచ్చుతప్పులు సరిచూడు..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "అచ్చుతప్పులు సరిచూడు"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -761,6 +769,12 @@ msgstr "టాబ్యులేషన్లను అనుమతించు�
 #, kde-format
 msgid "Speak Text"
 msgstr "వచనము పలుకుము"
+
+#~ msgid "&Edit..."
+#~ msgstr "(&E) సరిదిద్దు..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "అచ్చుతప్పులు సరిచూడు..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "సరికాని క్రమమైన సమీకరణం"
@@ -1212,9 +1226,6 @@ msgstr "వచనము పలుకుము"
 
 #~ msgid "Spell Checker"
 #~ msgstr "అచ్చుతప్పులు సరిచూడునది"
-
-#~ msgid "Check Spelling"
-#~ msgstr "అచ్చుతప్పులు సరిచూడు"
 
 #~ msgid "&Finished"
 #~ msgstr "(&F) పూర్తైనది"
@@ -6750,9 +6761,6 @@ msgstr "వచనము పలుకుము"
 
 #~ msgid "&Game"
 #~ msgstr "(&G) ఆట"
-
-#~ msgid "&Edit"
-#~ msgstr "(&E) సరిదిద్దు"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

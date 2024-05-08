@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2013-11-08 01:24+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -108,9 +108,11 @@ msgid "Regular e&xpression"
 msgstr "Үлгі ө&рнегі"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Өңдеу..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Өңдеу"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -438,9 +440,11 @@ msgstr ""
 "Түзетіңіз."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "&Мәтін түсі..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -450,9 +454,11 @@ msgid "Color"
 msgstr "Түсі"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Мәтінді &белгілеу..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -735,9 +741,11 @@ msgid "Nothing to spell check."
 msgstr "Тексеретін ештеңе жоқ."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Емлені тексеру..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Емлесін тексеру"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -759,6 +767,12 @@ msgstr "Кестелеуді рұқсат ету"
 #, kde-format
 msgid "Speak Text"
 msgstr "Мәтінді дауыстау"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Өңдеу..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Емлені тексеру..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Жарамсыз үлгі өрнегі."
@@ -1205,9 +1219,6 @@ msgstr "Мәтінді дауыстау"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Емлені тексеру"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Емлесін тексеру"
 
 #~ msgid "&Finished"
 #~ msgstr "&Болды"
@@ -6857,9 +6868,6 @@ msgstr "Мәтінді дауыстау"
 
 #~ msgid "&Game"
 #~ msgstr "&Ойын"
-
-#~ msgid "&Edit"
-#~ msgstr "&Өңдеу"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

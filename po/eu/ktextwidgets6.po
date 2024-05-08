@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktextwidgets\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2022-11-13 08:58+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -108,9 +108,11 @@ msgid "Regular e&xpression"
 msgstr "Adierazpen &erregularra"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Editatu..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Editatu"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -438,9 +440,11 @@ msgstr ""
 "Zuzendu ezazu."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Testuaren &kolorea..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -450,9 +454,11 @@ msgid "Color"
 msgstr "Kolorea"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Testua &nabarmentzea..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -725,9 +731,11 @@ msgid "Nothing to spell check."
 msgstr "Ortografia egiaztatzekorik ez."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Egiaztatu ortografia..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Egiaztatu ortografia"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
@@ -748,6 +756,12 @@ msgstr "Baimendu tabulazioak"
 #, kde-format
 msgid "Speak Text"
 msgstr "Esan testua"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Editatu..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Egiaztatu ortografia..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Adierazpen erregularra baliogabea."
@@ -1197,9 +1211,6 @@ msgstr "Esan testua"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Ortografia zuzentzailea"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Egiaztatu ortografia"
 
 #~ msgid "&Finished"
 #~ msgstr "&Amaituta"
@@ -6920,9 +6931,6 @@ msgstr "Esan testua"
 
 #~ msgid "&Game"
 #~ msgstr "&Jokua"
-
-#~ msgid "&Edit"
-#~ msgstr "&Editatu"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2011-11-26 15:12+0400\n"
 "Last-Translator: Ainur Shakirov <ainur.shakirov.tt@gmail.com>\n"
 "Language-Team: Tatar <>\n"
@@ -103,9 +103,11 @@ msgid "Regular e&xpression"
 msgstr "&Регуляр гыйбарә"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Үзгәртү..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Үзгәртү"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -434,9 +436,11 @@ msgstr ""
 "Төзәтү кирәк."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "&Тестның төсе..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -446,9 +450,11 @@ msgid "Color"
 msgstr "Төс"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Текстның яктырую..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -731,9 +737,11 @@ msgid "Nothing to spell check."
 msgstr "Нечего проверять."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Дөрес язылышны тикшерү..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Дөрес язылышны тикшерү"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -755,6 +763,12 @@ msgstr "Табуляцияне рөхсәт итү"
 #, kde-format
 msgid "Speak Text"
 msgstr "Текстны уку"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Үзгәртү..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Дөрес язылышны тикшерү..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Дөрес булмаган регуляр гыйбарә."
@@ -1207,9 +1221,6 @@ msgstr "Текстны уку"
 #~ msgstr "Үзгәрешләр гамәлгә керсен өчен, диалогны яңача җибәрергә кирәк"
 
 #~ msgid "Spell Checker"
-#~ msgstr "Дөрес язылышны тикшерү"
-
-#~ msgid "Check Spelling"
 #~ msgstr "Дөрес язылышны тикшерү"
 
 #~ msgid "&Finished"
@@ -6933,9 +6944,6 @@ msgstr "Текстны уку"
 
 #~ msgid "&Game"
 #~ msgstr "&Уен"
-
-#~ msgid "&Edit"
-#~ msgstr "&Үзгәртү"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

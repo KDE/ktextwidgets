@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -107,9 +107,11 @@ msgid "Regular e&xpression"
 msgstr "रेगुलर एक्सप्रेशन (&x)"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "संपादन... (&E)"
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "संपादन (&E)"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -435,9 +437,11 @@ msgstr ""
 "कृपया ठीक करें"
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "पाठ रंग... (&C)"
 
 #: widgets/krichtextwidget.cpp:208
@@ -447,9 +451,11 @@ msgid "Color"
 msgstr "रंग"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "पाठ उभारें... (&H)"
 
 #: widgets/krichtextwidget.cpp:234
@@ -722,8 +728,10 @@ msgid "Nothing to spell check."
 msgstr "वर्तनी जाँच के लिए कुछ नहीं."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
 msgstr "वर्तनी जांचें"
 
 #: widgets/ktextedit.cpp:506
@@ -745,6 +753,12 @@ msgstr "सारणीकरण स्वीकारें"
 #, kde-format
 msgid "Speak Text"
 msgstr "पाठ बोलें"
+
+#~ msgid "&Edit..."
+#~ msgstr "संपादन... (&E)"
+
+#~ msgid "Check Spelling..."
+#~ msgstr "वर्तनी जांचें"
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "अवैध रेगुलर एक्सप्रेशन."
@@ -1157,9 +1171,6 @@ msgstr "पाठ बोलें"
 
 #~ msgid "Spell Checker"
 #~ msgstr "वर्तनी शोधक"
-
-#~ msgid "Check Spelling"
-#~ msgstr "वर्तनी जांचें"
 
 #~ msgid "&Finished"
 #~ msgstr "पूर्ण (&F)"
@@ -6279,9 +6290,6 @@ msgstr "पाठ बोलें"
 
 #~ msgid "&Game"
 #~ msgstr "खेल (&G)"
-
-#~ msgid "&Edit"
-#~ msgstr "संपादन (&E)"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

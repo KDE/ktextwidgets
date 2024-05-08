@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2009-01-02 17:37+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
@@ -109,9 +109,11 @@ msgid "Regular e&xpression"
 msgstr "ନିୟମିତ ଅଭିବ୍ୟକ୍ତି (&x)"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "ସମ୍ପାଦନ କରନ୍ତୁ (&E)..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "ସମ୍ପାଦନ କରନ୍ତୁ (&E)"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -425,9 +427,11 @@ msgstr ""
 "ଦୟାକରି ଠିକ କରନ୍ତୁ।"
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "ପାଠ୍ୟ ରଙ୍ଗ (&C)..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -437,9 +441,11 @@ msgid "Color"
 msgstr "ରଙ୍ଗ"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "ପାଠ୍ୟ ମୁଖ୍ୟାଂଶ (&H)..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -722,9 +728,11 @@ msgid "Nothing to spell check."
 msgstr "ବନାନ ଯାଞ୍ଚ କରିବାକୁ କିଛିନାହିଁ।"
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "ବନାନ ଯାଞ୍ଚକରନ୍ତୁ..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "ବନାନ ଯାଞ୍ଚ କରନ୍ତୁ"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -747,6 +755,12 @@ msgstr "ସାରଣୀକରଣକୁ ଅନୁମତି ଦିଅନ୍ତୁ"
 #| msgid "Speak custom text"
 msgid "Speak Text"
 msgstr "ଇଚ୍ଛାରୂପୀ ପାଠ୍ୟ କୁହନ୍ତୁ"
+
+#~ msgid "&Edit..."
+#~ msgstr "ସମ୍ପାଦନ କରନ୍ତୁ (&E)..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "ବନାନ ଯାଞ୍ଚକରନ୍ତୁ..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "ଅବୈଧ ନିୟମିତ ଅଭିବ୍ୟକ୍ତି।"
@@ -1162,9 +1176,6 @@ msgstr "ଇଚ୍ଛାରୂପୀ ପାଠ୍ୟ କୁହନ୍ତୁ"
 
 #~ msgid "Spell Checker"
 #~ msgstr "ବନାନ ଯାଞ୍ଚକାରି"
-
-#~ msgid "Check Spelling"
-#~ msgstr "ବନାନ ଯାଞ୍ଚ କରନ୍ତୁ"
 
 #~ msgid "&Finished"
 #~ msgstr "ସମାପ୍ତ ହେଲା (&F)"
@@ -6383,9 +6394,6 @@ msgstr "ଇଚ୍ଛାରୂପୀ ପାଠ୍ୟ କୁହନ୍ତୁ"
 
 #~ msgid "&Game"
 #~ msgstr "ଖେଳ (&G)"
-
-#~ msgid "&Edit"
-#~ msgstr "ସମ୍ପାଦନ କରନ୍ତୁ (&E)"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

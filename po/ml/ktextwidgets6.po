@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2010-12-29 15:32+0530\n"
 "Last-Translator: \n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -107,9 +107,11 @@ msgid "Regular e&xpression"
 msgstr "സാധാരണയായ &പദപ്രയോഗം"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&മാറ്റം വരുത്തുക..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&തിരുത്തുക"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -423,9 +425,11 @@ msgstr ""
 "ദയവായി തിരുത്തുക."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "വാചകത്തിന്റെ &നിറം"
 
 #: widgets/krichtextwidget.cpp:208
@@ -435,9 +439,11 @@ msgid "Color"
 msgstr "നിറം"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "പദാവലി എടുത്തുകാണിയ്ക്കുക"
 
 #: widgets/krichtextwidget.cpp:234
@@ -721,9 +727,11 @@ msgid "Nothing to spell check."
 msgstr "അക്ഷരത്തെറ്റു് പരിശോധിക്കുന്നതിനൊന്നുമില്ല."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "അക്ഷരത്തെറ്റു്ം പരിശോധിക്കുക..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "അക്ഷരത്തെറ്റു്ം പരിശോധിക്കുന്നു"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -744,6 +752,12 @@ msgstr "ഒരിക്കല്‍ മാത്രം അനുവദിക്�
 #, kde-format
 msgid "Speak Text"
 msgstr "പദാവലി വായിയ്ക്കുക"
+
+#~ msgid "&Edit..."
+#~ msgstr "&മാറ്റം വരുത്തുക..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "അക്ഷരത്തെറ്റു്ം പരിശോധിക്കുക..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "അസാധുവായ റെഗുലര്‍ എക്സ്‌പ്രഷന്‍."
@@ -1150,9 +1164,6 @@ msgstr "പദാവലി വായിയ്ക്കുക"
 
 #~ msgid "Spell Checker"
 #~ msgstr "അക്ഷരത്തെറ്റു്ം പരിശോധിക്കുന്നതിനുള്ള പ്രയോഗം"
-
-#~ msgid "Check Spelling"
-#~ msgstr "അക്ഷരത്തെറ്റു്ം പരിശോധിക്കുന്നു"
 
 #~ msgid "&Finished"
 #~ msgstr "&പൂര്‍ത്തിയായിരിക്കുന്നു"
@@ -6216,9 +6227,6 @@ msgstr "പദാവലി വായിയ്ക്കുക"
 
 #~ msgid "&Game"
 #~ msgstr "&കളി"
-
-#~ msgid "&Edit"
-#~ msgstr "&തിരുത്തുക"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2009-11-22 00:01+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <team@utkarsh.org>\n"
@@ -104,9 +104,11 @@ msgid "Regular e&xpression"
 msgstr "રેગ્યુલર એક્સપ્રેશન (&x)"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "ફેરફાર (&E)..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "ફેરફાર (&E)"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -431,9 +433,11 @@ msgstr ""
 "મહેરબાની કરી સુધારો."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "લખાણ રંગ (&C)..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -443,9 +447,11 @@ msgid "Color"
 msgstr "રંગ"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "લખાણ પ્રકાશિત (&H)..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -728,9 +734,11 @@ msgid "Nothing to spell check."
 msgstr "જોડણી તપાસ માટે કંઇ નથી."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "જોડણી ચકાસો..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "જોડણી ચકાસો"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -752,6 +760,12 @@ msgstr "ટેબ્યુલેશનોને પરવાનગી આપો"
 #, kde-format
 msgid "Speak Text"
 msgstr "લખાણ બોલો"
+
+#~ msgid "&Edit..."
+#~ msgstr "ફેરફાર (&E)..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "જોડણી ચકાસો..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "અયોગ્ય રેગ્યુલર એક્સપ્રેશન."
@@ -1195,9 +1209,6 @@ msgstr "લખાણ બોલો"
 
 #~ msgid "Spell Checker"
 #~ msgstr "જોડણી તપાસ"
-
-#~ msgid "Check Spelling"
-#~ msgstr "જોડણી ચકાસો"
 
 #~ msgid "&Finished"
 #~ msgstr "સમાપ્ત (&F)"
@@ -6925,9 +6936,6 @@ msgstr "લખાણ બોલો"
 
 #~ msgid "&Game"
 #~ msgstr "રમત (&G)"
-
-#~ msgid "&Edit"
-#~ msgstr "ફેરફાર (&E)"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

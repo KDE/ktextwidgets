@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2020-08-26 15:08+0300\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -117,9 +117,11 @@ msgid "Regular e&xpression"
 msgstr "Κανονική έκφ&ραση"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Επεξεργασία..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Επεξεργασία"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -454,9 +456,11 @@ msgstr ""
 "Παρακαλώ διορθώστε."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "&Χρώμα κειμένου..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -466,9 +470,11 @@ msgid "Color"
 msgstr "Χρώμα"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Χρώμα &τονισμού..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -741,9 +747,11 @@ msgid "Nothing to spell check."
 msgstr "Τίποτα για ορθογραφικό έλεγχο."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Έλεγχος ορθογραφίας..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Έλεγχος ορθογραφίας"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
@@ -764,6 +772,12 @@ msgstr "Να επιτρέπεται η δημιουργία Πινάκων"
 #, kde-format
 msgid "Speak Text"
 msgstr "Εκφώνηση κειμένου"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Επεξεργασία..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Έλεγχος ορθογραφίας..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Μη έγκυρη κανονική έκφραση."
@@ -1219,9 +1233,6 @@ msgstr "Εκφώνηση κειμένου"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Ελεγκτής ορθογραφίας"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Έλεγχος ορθογραφίας"
 
 #~ msgid "&Finished"
 #~ msgstr "Τέ&λος"
@@ -6994,9 +7005,6 @@ msgstr "Εκφώνηση κειμένου"
 
 #~ msgid "&Game"
 #~ msgstr "Παιχ&νίδι"
-
-#~ msgid "&Edit"
-#~ msgstr "&Επεξεργασία"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

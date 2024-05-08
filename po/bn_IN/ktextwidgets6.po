@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2009-12-28 14:35+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <anubad@lists.ankur.org.in>\n"
@@ -106,9 +106,11 @@ msgid "Regular e&xpression"
 msgstr "রেগুলার এক্সপ্রেশন (&x)"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "সম্পাদনা...(&E)"
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "সম্পাদনা (&E)"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -426,9 +428,11 @@ msgstr ""
 "অনুগ্রহ করে সংশোধন করুন।"
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "টেক্সটে ব্যবহৃত রং...(&C)"
 
 #: widgets/krichtextwidget.cpp:208
@@ -438,9 +442,11 @@ msgid "Color"
 msgstr "রঙ"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "টেক্সট উজ্জ্বল করতে ব্যবহৃত রং...(&H)"
 
 #: widgets/krichtextwidget.cpp:234
@@ -723,9 +729,11 @@ msgid "Nothing to spell check."
 msgstr "বানান পরীক্ষা করার জন্য কিছু উপস্থিত নেই।"
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "বানান পরীক্ষণ..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "বানান পরীক্ষা করা হবে"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -747,6 +755,12 @@ msgstr ""
 #, kde-format
 msgid "Speak Text"
 msgstr "টেক্সট উচ্চারণ"
+
+#~ msgid "&Edit..."
+#~ msgstr "সম্পাদনা...(&E)"
+
+#~ msgid "Check Spelling..."
+#~ msgstr "বানান পরীক্ষণ..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "রেগুলার এক্সপ্রেশন বৈধ নয়।"
@@ -1151,9 +1165,6 @@ msgstr "টেক্সট উচ্চারণ"
 
 #~ msgid "Spell Checker"
 #~ msgstr "বানান পরীক্ষণব্যবস্থা"
-
-#~ msgid "Check Spelling"
-#~ msgstr "বানান পরীক্ষা করা হবে"
 
 #~ msgid "&Finished"
 #~ msgstr "সমাপ্ত (&F)"
@@ -6441,9 +6452,6 @@ msgstr "টেক্সট উচ্চারণ"
 
 #~ msgid "&Game"
 #~ msgstr "খেলা (&G)"
-
-#~ msgid "&Edit"
-#~ msgstr "সম্পাদনা (&E)"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

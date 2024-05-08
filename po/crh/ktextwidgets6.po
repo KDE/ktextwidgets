@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2009-02-12 23:29-0600\n"
 "Last-Translator: Reşat SABIQ <tilde.birlik@gmail.com>\n"
 "Language-Team: Qırımtatarca (Qırım Türkçesi)\n"
@@ -104,9 +104,11 @@ msgid "Regular e&xpression"
 msgstr "Muntazam i&fade"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Tarir..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Tarir"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -428,9 +430,11 @@ msgstr ""
 "Lütfen tüzetiñiz."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Metin &Tüsü..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -442,7 +446,7 @@ msgstr ""
 #: widgets/krichtextwidget.cpp:221
 #, kde-format
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr ""
 
 #: widgets/krichtextwidget.cpp:234
@@ -725,9 +729,11 @@ msgid "Nothing to spell check."
 msgstr "İmlâsı teşkerilecek bir şey yoq."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "İmlâ Teşkerüvi..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "İmlâ Teşkerüvi"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -750,6 +756,12 @@ msgstr "Sekirmelemelerge İzin Ber"
 #| msgid "Speak custom text"
 msgid "Speak Text"
 msgstr "Mahsus metinni söyle"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Tarir..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "İmlâ Teşkerüvi..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Keçersiz muntazam ifade."
@@ -1089,9 +1101,6 @@ msgstr "Mahsus metinni söyle"
 #~ msgctxt "@item Spelling dictionary"
 #~ msgid "<application>Hunspell</application> Default"
 #~ msgstr "<application>Hspell</application>"
-
-#~ msgid "Check Spelling"
-#~ msgstr "İmlâ Teşkerüvi"
 
 #~ msgid "&Finished"
 #~ msgstr "&Tamam"
@@ -6273,9 +6282,6 @@ msgstr "Mahsus metinni söyle"
 
 #~ msgid "&Game"
 #~ msgstr "&Oyun"
-
-#~ msgid "&Edit"
-#~ msgstr "&Tarir"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

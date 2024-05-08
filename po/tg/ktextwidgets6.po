@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2019-08-21 20:46+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -107,9 +107,11 @@ msgid "Regular e&xpression"
 msgstr "&Ибораҳои оддӣ"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Таҳрир кардан..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Таҳрир"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -442,9 +444,11 @@ msgstr ""
 "Лутфан, ислоҳ кунед."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Ранги &матн..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -454,9 +458,11 @@ msgid "Color"
 msgstr "Ранг"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "&Равшанкунии матн..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -739,9 +745,11 @@ msgid "Nothing to spell check."
 msgstr "Барои санҷиши имло ягон калима нест."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Санҷиши имло..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Тафтиши Имло"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
@@ -762,6 +770,12 @@ msgstr "Иҷозати ҷадвалбандӣ"
 #, kde-format
 msgid "Speak Text"
 msgstr "Матнро ҳарф задан"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Таҳрир кардан..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Санҷиши имло..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Ибораҳои оддӣ нодурустанд."
@@ -1205,9 +1219,6 @@ msgstr "Матнро ҳарф задан"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Ғалати имлоӣ"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Тафтиши Имло"
 
 #~ msgid "&Finished"
 #~ msgstr "&Итмом кардан"
@@ -6917,9 +6928,6 @@ msgstr "Матнро ҳарф задан"
 
 #~ msgid "&Game"
 #~ msgstr "&Бозӣ"
-
-#~ msgid "&Edit"
-#~ msgstr "&Таҳрир"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

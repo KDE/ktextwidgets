@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2024-04-02 14:37+0300\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -113,9 +113,11 @@ msgid "Regular e&xpression"
 msgstr "&Regulārā izteiksme"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Labot..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "R&ediģēt"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -447,9 +449,11 @@ msgstr ""
 "Lūdzu, izlabojiet!"
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Teksta &krāsa..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -459,9 +463,11 @@ msgid "Color"
 msgstr "Krāsa"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Teksta &izcelšana..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -734,9 +740,11 @@ msgid "Nothing to spell check."
 msgstr "Nav, kam pārbaudīt pareizrakstību."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Pareizrakstības pārbaude..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Pārbaudīt pareizrakstību"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
@@ -757,6 +765,12 @@ msgstr "Atļaut tabulāciju"
 #, kde-format
 msgid "Speak Text"
 msgstr "Izrunāt tekstu"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Labot..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Pareizrakstības pārbaude..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Nepareiza regulārā izteiksme."
@@ -1210,9 +1224,6 @@ msgstr "Izrunāt tekstu"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Pareizrakstības pārbaudītājs"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Pārbaudīt pareizrakstību"
 
 #~ msgid "&Finished"
 #~ msgstr "&Pabeigts"
@@ -6915,9 +6926,6 @@ msgstr "Izrunāt tekstu"
 
 #~ msgid "&Game"
 #~ msgstr "&Spēle"
-
-#~ msgid "&Edit"
-#~ msgstr "R&ediģēt"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

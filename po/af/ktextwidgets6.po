@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4 stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2006-01-12 16:33+0200\n"
 "Last-Translator: JUANITA FRANZ <JUANITA.FRANZ@VR-WEB.DE>\n"
 "Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
@@ -103,9 +103,11 @@ msgid "Regular e&xpression"
 msgstr "Natuurlike uitdrukking"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "Redigeer..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "Redigeer"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -450,7 +452,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Text Completion"
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Teks Voltooiïng"
 
 #: widgets/krichtextwidget.cpp:208
@@ -464,7 +466,7 @@ msgstr "Web Kleure"
 #: widgets/krichtextwidget.cpp:221
 #, kde-format
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr ""
 
 #: widgets/krichtextwidget.cpp:234
@@ -761,9 +763,11 @@ msgid "Nothing to spell check."
 msgstr "Geen verskaffer gekies."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Gaan Spelling na..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Gaan Spelling na"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -786,6 +790,12 @@ msgstr "Laat 'Tabs' toe"
 #| msgid "Please enter &name:"
 msgid "Speak Text"
 msgstr "Voer asseblief 'n naam in:"
+
+#~ msgid "&Edit..."
+#~ msgstr "Redigeer..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Gaan Spelling na..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Ongeldige gewone uitdrukking."
@@ -1244,9 +1254,6 @@ msgstr "Voer asseblief 'n naam in:"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Spel Toetser"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Gaan Spelling na"
 
 #~ msgid "&Finished"
 #~ msgstr "Klaar"
@@ -7200,9 +7207,6 @@ msgstr "Voer asseblief 'n naam in:"
 
 #~ msgid "&Game"
 #~ msgstr "Speletjie"
-
-#~ msgid "&Edit"
-#~ msgstr "Redigeer"
 
 #, fuzzy
 #~| msgid "&Move"

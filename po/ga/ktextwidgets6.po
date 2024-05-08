@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2004-12-14 09:11-0600\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -109,9 +109,11 @@ msgid "Regular e&xpression"
 msgstr "S&lonn ionadaíochta"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Eagar..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Eagar"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -446,9 +448,11 @@ msgstr ""
 "Cuir ina cheart, le do thoil."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Dath Téa&cs..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -458,9 +462,11 @@ msgid "Color"
 msgstr "Dath"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Aibhsiú &Téacs..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -743,9 +749,11 @@ msgid "Nothing to spell check."
 msgstr "Faic le seiceáil."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Ceartaigh Litriú..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Ceartaigh Litriú"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -767,6 +775,12 @@ msgstr "Ceadaigh Táblúcháin"
 #, kde-format
 msgid "Speak Text"
 msgstr "Léigh an Téacs"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Eagar..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Ceartaigh Litriú..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Slonn ionadaíochta neamhbhailí."
@@ -1225,9 +1239,6 @@ msgstr "Léigh an Téacs"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Litreoir"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Ceartaigh Litriú"
 
 #~ msgid "&Finished"
 #~ msgstr "&Críochnaithe"
@@ -7078,9 +7089,6 @@ msgstr "Léigh an Téacs"
 
 #~ msgid "&Game"
 #~ msgstr "&Cluiche"
-
-#~ msgid "&Edit"
-#~ msgstr "&Eagar"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

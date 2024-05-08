@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2012-06-28 16:40+0430\n"
 "Last-Translator: Mohammad Reza Mirdamadi <mohi@linuxshop.ir>\n"
 "Language-Team: Farsi (Persian) <kde-i18n-fa@kde.org>\n"
@@ -107,9 +107,11 @@ msgid "Regular e&xpression"
 msgstr "&عبارت منظم‌"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&ویرایش...‌"
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&ویرایش‌"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -435,9 +437,11 @@ msgstr ""
 "لطفاً، اصلاح کنید."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "رنگ متن..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -447,9 +451,11 @@ msgid "Color"
 msgstr "رنگ"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "&برجسته‌سازی متن"
 
 #: widgets/krichtextwidget.cpp:234
@@ -735,9 +741,11 @@ msgid "Nothing to spell check."
 msgstr "چیزی برای غلط‌یابی نیست."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "غلط‌یابی..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "غلط‌یابی"
 
 #: widgets/ktextedit.cpp:506
 #, fuzzy, kde-format
@@ -760,6 +768,12 @@ msgstr "اجازه جدول‌بندی"
 #, kde-format
 msgid "Speak Text"
 msgstr "گفتن متن"
+
+#~ msgid "&Edit..."
+#~ msgstr "&ویرایش...‌"
+
+#~ msgid "Check Spelling..."
+#~ msgstr "غلط‌یابی..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "عبارت منظم نامعتبر."
@@ -1212,9 +1226,6 @@ msgstr "گفتن متن"
 
 #~ msgid "Spell Checker"
 #~ msgstr "غلط‌یاب"
-
-#~ msgid "Check Spelling"
-#~ msgstr "غلط‌یابی"
 
 #~ msgid "&Finished"
 #~ msgstr "&پایان یافت‌"
@@ -7034,9 +7045,6 @@ msgstr "گفتن متن"
 
 #~ msgid "&Game"
 #~ msgstr "&بازی‌"
-
-#~ msgid "&Edit"
-#~ msgstr "&ویرایش‌"
 
 #  msgid "&Move"
 #~ msgctxt "@title:menu Game move"

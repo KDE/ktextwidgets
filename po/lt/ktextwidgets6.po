@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2020-01-12 22:19+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -112,8 +112,10 @@ msgid "Regular e&xpression"
 msgstr "Į&prastoji išraiška"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
+#, fuzzy, kde-format
+#| msgid "&Edit..."
+msgctxt "@action:button"
+msgid "&Edit…"
 msgstr "&Keisti..."
 
 #: findreplace/kfinddialog.cpp:93
@@ -446,9 +448,11 @@ msgstr ""
 "Prašome pataisyti."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Tekstas ir &spalva..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -458,9 +462,11 @@ msgid "Color"
 msgstr "Spalva"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Tekstas ir žy&mėjimas..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -735,8 +741,10 @@ msgid "Nothing to spell check."
 msgstr "Nėra ką tikrinti."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling..."
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
 msgstr "Rašybos tikrinimas..."
 
 #: widgets/ktextedit.cpp:506

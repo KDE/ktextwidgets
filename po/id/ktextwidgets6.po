@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2020-04-29 20:33+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -104,9 +104,11 @@ msgid "Regular e&xpression"
 msgstr "E&kspresi reguler"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Edit..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Sunting"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -437,9 +439,11 @@ msgstr ""
 "Silakan koreksi."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Warna &Teks..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -449,9 +453,11 @@ msgid "Color"
 msgstr "Warna"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "&Sorot Teks..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -724,9 +730,11 @@ msgid "Nothing to spell check."
 msgstr "Tak ada apapun untuk pemeriksa ejaan."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Periksa Ejaan..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Pemeriksa Ejaan"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
@@ -747,6 +755,12 @@ msgstr "Perkenankan Tabulasi"
 #, kde-format
 msgid "Speak Text"
 msgstr "Teks Bicara"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Edit..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Periksa Ejaan..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Ekspresi reguler tidak absah."
@@ -1193,9 +1207,6 @@ msgstr "Teks Bicara"
 #~ msgstr "Anda harus start ulang dialog agar perubahan mempunyai efek"
 
 #~ msgid "Spell Checker"
-#~ msgstr "Pemeriksa Ejaan"
-
-#~ msgid "Check Spelling"
 #~ msgstr "Pemeriksa Ejaan"
 
 #~ msgid "&Finished"
@@ -6896,9 +6907,6 @@ msgstr "Teks Bicara"
 
 #~ msgid "&Game"
 #~ msgstr "&Permainan"
-
-#~ msgid "&Edit"
-#~ msgstr "&Sunting"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

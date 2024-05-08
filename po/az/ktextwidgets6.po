@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ktextwidgets\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2020-12-17 01:30+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -103,8 +103,10 @@ msgid "Regular e&xpression"
 msgstr "Müntə&zəm ifadə"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
+#, fuzzy, kde-format
+#| msgid "&Edit..."
+msgctxt "@action:button"
+msgid "&Edit…"
 msgstr "&Düzəliş etmək..."
 
 #: findreplace/kfinddialog.cpp:93
@@ -434,9 +436,11 @@ msgstr ""
 "Lütfən düzəliş edin"
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "Mətn &rəngi..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -446,9 +450,11 @@ msgid "Color"
 msgstr "Rəng"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Mətn &işıqlanması..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -721,8 +727,10 @@ msgid "Nothing to spell check."
 msgstr "Yoxlamağa heç nə yoxdu"
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling..."
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
 msgstr "Orfoqrafiya yoxlaması"
 
 #: widgets/ktextedit.cpp:506

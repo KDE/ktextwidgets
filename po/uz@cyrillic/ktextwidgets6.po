@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2009-10-17 00:34+0200\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -102,8 +102,10 @@ msgid "Regular e&xpression"
 msgstr "Доимий и&фода"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
 msgstr "&Таҳрирлаш"
 
 #: findreplace/kfinddialog.cpp:93
@@ -420,9 +422,11 @@ msgstr ""
 "Илтимос тузатинг."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "&Матннинг ранги..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -434,7 +438,7 @@ msgstr "Ранг"
 #: widgets/krichtextwidget.cpp:221
 #, kde-format
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr ""
 
 #: widgets/krichtextwidget.cpp:234
@@ -713,8 +717,10 @@ msgid "Nothing to spell check."
 msgstr "Ҳеч қандай провайдер танланмаган."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
 msgstr "Имлони текшириш"
 
 #: widgets/ktextedit.cpp:506
@@ -737,6 +743,12 @@ msgstr ""
 #, fuzzy, kde-format
 msgid "Speak Text"
 msgstr "Илтимос &номини киритинг:"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Таҳрирлаш"
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Имлони текшириш"
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Оддий ифода ҳақиқий эмас."
@@ -1090,9 +1102,6 @@ msgstr "Илтимос &номини киритинг:"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Имлони текширувчи"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Имлони текшириш"
 
 #~ msgid "&Finished"
 #~ msgstr "&Тугади"
@@ -6068,9 +6077,6 @@ msgstr "Илтимос &номини киритинг:"
 
 #~ msgid "&Game"
 #~ msgstr "&Ўйин"
-
-#~ msgid "&Edit"
-#~ msgstr "&Таҳрирлаш"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"

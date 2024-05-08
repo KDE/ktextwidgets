@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-01 21:29+0000\n"
+"POT-Creation-Date: 2024-05-08 00:36+0000\n"
 "PO-Revision-Date: 2023-01-05 09:31+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -124,9 +124,11 @@ msgid "Regular e&xpression"
 msgstr "E&xpression rationnelle"
 
 #: findreplace/kfinddialog.cpp:84
-#, kde-format
-msgid "&Edit..."
-msgstr "&Édition..."
+#, fuzzy, kde-format
+#| msgid "&Edit"
+msgctxt "@action:button"
+msgid "&Edit…"
+msgstr "&Édition"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -463,9 +465,11 @@ msgstr ""
 "Veuillez corriger."
 
 #: widgets/krichtextwidget.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Color..."
 msgctxt "@action"
-msgid "Text &Color..."
+msgid "Text &Color…"
 msgstr "&Couleur du texte..."
 
 #: widgets/krichtextwidget.cpp:208
@@ -475,9 +479,11 @@ msgid "Color"
 msgstr "Couleur"
 
 #: widgets/krichtextwidget.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Text &Highlight..."
 msgctxt "@action"
-msgid "Text &Highlight..."
+msgid "Text &Highlight…"
 msgstr "Mise en sur&brillance du texte..."
 
 #: widgets/krichtextwidget.cpp:234
@@ -750,9 +756,11 @@ msgid "Nothing to spell check."
 msgstr "Pas de vérification orthographique à effectuer."
 
 #: widgets/ktextedit.cpp:501
-#, kde-format
-msgid "Check Spelling..."
-msgstr "Vérifier l'orthographe..."
+#, fuzzy, kde-format
+#| msgid "Check Spelling"
+msgctxt "@action:inmenu"
+msgid "Check Spelling…"
+msgstr "Vérification de l'orthographe"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
@@ -773,6 +781,12 @@ msgstr "Autoriser les tabulations"
 #, kde-format
 msgid "Speak Text"
 msgstr "Énoncer du texte"
+
+#~ msgid "&Edit..."
+#~ msgstr "&Édition..."
+
+#~ msgid "Check Spelling..."
+#~ msgstr "Vérifier l'orthographe..."
 
 #~ msgid "Invalid regular expression."
 #~ msgstr "Expression rationnelle non valable."
@@ -1230,9 +1244,6 @@ msgstr "Énoncer du texte"
 
 #~ msgid "Spell Checker"
 #~ msgstr "Vérificateur orthographique"
-
-#~ msgid "Check Spelling"
-#~ msgstr "Vérification de l'orthographe"
 
 #~ msgid "&Finished"
 #~ msgstr "&Terminé"
@@ -7026,9 +7037,6 @@ msgstr "Énoncer du texte"
 
 #~ msgid "&Game"
 #~ msgstr "&Jeu"
-
-#~ msgid "&Edit"
-#~ msgstr "&Édition"
 
 #~ msgctxt "@title:menu Game move"
 #~ msgid "&Move"
