@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ktextwidgets\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:36+0000\n"
-"PO-Revision-Date: 2023-01-20 09:16+0100\n"
+"PO-Revision-Date: 2024-05-08 05:58+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: dialogs/klinkdialog.cpp:39
 #, kde-format
@@ -104,11 +104,10 @@ msgid "Regular e&xpression"
 msgstr "&მარტივი გამოსახულება"
 
 #: findreplace/kfinddialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&Edit..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Edit…"
-msgstr "&ჩასწორება..."
+msgstr "&ჩასწორება…"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -437,12 +436,10 @@ msgstr ""
 "გთხოვთ, ჩაასწოროთ."
 
 #: widgets/krichtextwidget.cpp:207
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Color..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Color…"
-msgstr "ტექსტის &ფერი..."
+msgstr "ტექსტის &ფერი…"
 
 #: widgets/krichtextwidget.cpp:208
 #, kde-format
@@ -451,12 +448,10 @@ msgid "Color"
 msgstr "ფერი"
 
 #: widgets/krichtextwidget.cpp:221
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Highlight..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Highlight…"
-msgstr "ტექსტის &გამოკვეთა..."
+msgstr "ტექსტის &გამოკვეთა…"
 
 #: widgets/krichtextwidget.cpp:234
 #, kde-format
@@ -728,11 +723,10 @@ msgid "Nothing to spell check."
 msgstr "შესამოწმებელი არაფერია."
 
 #: widgets/ktextedit.cpp:501
-#, fuzzy, kde-format
-#| msgid "Check Spelling..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Check Spelling…"
-msgstr "მართლწერის შემოწმება..."
+msgstr "მართლწერის შემოწმება…"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format

@@ -102,11 +102,10 @@ msgid "Regular e&xpression"
 msgstr "正则表达式(&X)"
 
 #: findreplace/kfinddialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&Edit..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Edit…"
-msgstr "编辑(&E)..."
+msgstr ""
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -425,12 +424,10 @@ msgstr ""
 "请纠正。"
 
 #: widgets/krichtextwidget.cpp:207
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Color..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Color…"
-msgstr "文本颜色(&C)..."
+msgstr ""
 
 #: widgets/krichtextwidget.cpp:208
 #, kde-format
@@ -439,12 +436,10 @@ msgid "Color"
 msgstr "颜色"
 
 #: widgets/krichtextwidget.cpp:221
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Highlight..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Highlight…"
-msgstr "文本加亮(&H)..."
+msgstr ""
 
 #: widgets/krichtextwidget.cpp:234
 #, kde-format
@@ -716,11 +711,10 @@ msgid "Nothing to spell check."
 msgstr "没有可供检查拼写的内容。"
 
 #: widgets/ktextedit.cpp:501
-#, fuzzy, kde-format
-#| msgid "Check Spelling..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Check Spelling…"
-msgstr "检查拼写..."
+msgstr ""
 
 #: widgets/ktextedit.cpp:506
 #, kde-format

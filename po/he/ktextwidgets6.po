@@ -18,21 +18,22 @@
 # tahmar1900 <tahmar1900@gmail.com>, 2008, 2009.
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: ktextwidgets5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:36+0000\n"
-"PO-Revision-Date: 2023-10-22 11:07+0300\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-05-08 09:07+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: dialogs/klinkdialog.cpp:39
 #, kde-format
@@ -122,8 +123,7 @@ msgid "Regular e&xpression"
 msgstr "ביטוי ר&גולרי"
 
 #: findreplace/kfinddialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&Edit..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Edit…"
 msgstr "&עריכה…"
@@ -452,9 +452,7 @@ msgstr ""
 "נא לתקן את זה."
 
 #: widgets/krichtextwidget.cpp:207
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Color..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Color…"
 msgstr "צבע &טקסט…"
@@ -466,9 +464,7 @@ msgid "Color"
 msgstr "צבע"
 
 #: widgets/krichtextwidget.cpp:221
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Highlight..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Highlight…"
 msgstr "הדגשת &טקסט…"
@@ -743,8 +739,7 @@ msgid "Nothing to spell check."
 msgstr "אין על מה לבדוק איות."
 
 #: widgets/ktextedit.cpp:501
-#, fuzzy, kde-format
-#| msgid "Check Spelling..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Check Spelling…"
 msgstr "בדיקת איות…"

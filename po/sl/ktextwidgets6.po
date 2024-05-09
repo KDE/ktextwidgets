@@ -18,17 +18,17 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:36+0000\n"
-"PO-Revision-Date: 2020-05-19 10:37+0200\n"
+"PO-Revision-Date: 2024-05-08 09:27+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 2.3\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
+"Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: dialogs/klinkdialog.cpp:39
 #, kde-format
@@ -118,11 +118,10 @@ msgid "Regular e&xpression"
 msgstr "Regularni izraz"
 
 #: findreplace/kfinddialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Edit…"
-msgstr "&Uredi"
+msgstr "Ur&edi…"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -132,7 +131,7 @@ msgstr "Zamenjaj z"
 #: findreplace/kfinddialog.cpp:96
 #, kde-format
 msgid "Replace&ment text:"
-msgstr "Besedilo za zamenjavo:"
+msgstr "Besedilo za za&menjavo:"
 
 #: findreplace/kfinddialog.cpp:100
 #, kde-format
@@ -152,7 +151,7 @@ msgstr "Možnosti"
 #: findreplace/kfinddialog.cpp:113
 #, kde-format
 msgid "C&ase sensitive"
-msgstr "Ločevanje velikosti črk"
+msgstr "Ločev&anje velikosti črk"
 
 #: findreplace/kfinddialog.cpp:114
 #, kde-format
@@ -454,12 +453,10 @@ msgstr ""
 "Popravite."
 
 #: widgets/krichtextwidget.cpp:207
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Color..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Color…"
-msgstr "Barva besedila..."
+msgstr "Barva besedila…"
 
 #: widgets/krichtextwidget.cpp:208
 #, kde-format
@@ -468,12 +465,10 @@ msgid "Color"
 msgstr "Barva"
 
 #: widgets/krichtextwidget.cpp:221
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Highlight..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Highlight…"
-msgstr "Poudarjanje besedila..."
+msgstr "Poudarjanje besedila…"
 
 #: widgets/krichtextwidget.cpp:234
 #, kde-format
@@ -745,11 +740,10 @@ msgid "Nothing to spell check."
 msgstr "Za preverjanje črkovanja ni ničesar."
 
 #: widgets/ktextedit.cpp:501
-#, fuzzy, kde-format
-#| msgid "Check Spelling"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Check Spelling…"
-msgstr "Preveri črkovanje"
+msgstr "Preveri črkovanje…"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
