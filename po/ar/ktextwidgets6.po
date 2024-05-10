@@ -12,7 +12,7 @@
 # Mohamed SAAD <metehyi@free.fr>, 2006.
 # Khaled Hosny <khaledhosny@eglug.org>, 2007.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
-# zayed <zayed.alsaidi@gmail.com>, 2008, 2009.
+# SPDX-FileCopyrightText: 2008, 2009, 2024 zayed <zayed.alsaidi@gmail.com>
 # Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2009, 2021.
 # hanny <hannysabbagh@hotmail.com>, 2012.
 # Abderrahim Kitouni <a.kitouni@gmail.com>, 2012.
@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:36+0000\n"
-"PO-Revision-Date: 2021-12-14 21:31+0400\n"
+"PO-Revision-Date: 2024-05-09 09:56+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.07.70\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: dialogs/klinkdialog.cpp:39
 #, kde-format
@@ -123,11 +123,10 @@ msgid "Regular e&xpression"
 msgstr "تعبير &نمطي"
 
 #: findreplace/kfinddialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Edit…"
-msgstr "&حرِّر"
+msgstr "&حرِّر…"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -459,12 +458,10 @@ msgstr ""
 "المرجو التصحيح."
 
 #: widgets/krichtextwidget.cpp:207
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Color..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Color…"
-msgstr "ل&ونّ النص..."
+msgstr "&لون النّصّ…"
 
 #: widgets/krichtextwidget.cpp:208
 #, kde-format
@@ -473,12 +470,10 @@ msgid "Color"
 msgstr "اللون"
 
 #: widgets/krichtextwidget.cpp:221
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Highlight..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Highlight…"
-msgstr "إ&براز النص..."
+msgstr "إ&براز النص…"
 
 #: widgets/krichtextwidget.cpp:234
 #, kde-format
@@ -750,11 +745,10 @@ msgid "Nothing to spell check."
 msgstr "لا يوجد شيء للتدقيق الإملائي"
 
 #: widgets/ktextedit.cpp:501
-#, fuzzy, kde-format
-#| msgid "Check Spelling"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Check Spelling…"
-msgstr "افحص التّهجئة"
+msgstr "دقّق الإملاء…"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format

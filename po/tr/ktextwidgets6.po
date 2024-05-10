@@ -23,7 +23,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:36+0000\n"
-"PO-Revision-Date: 2024-03-01 15:56+0300\n"
+"PO-Revision-Date: 2024-05-09 19:09+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -31,7 +31,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: dialogs/klinkdialog.cpp:39
 #, kde-format
@@ -41,12 +41,12 @@ msgstr "Bağlantıyı Yönet"
 #: dialogs/klinkdialog.cpp:46
 #, kde-format
 msgid "Link Text:"
-msgstr "Bağlantı Metni:"
+msgstr "Bağlantı metni:"
 
 #: dialogs/klinkdialog.cpp:49
 #, kde-format
 msgid "Link URL:"
-msgstr "Bağlantı URL'si:"
+msgstr "Bağlantı URL’si:"
 
 #: findreplace/kfind.cpp:48
 #, kde-format
@@ -68,12 +68,12 @@ msgstr[1] "%1 eşleşme bulundu."
 #: findreplace/kfind.cpp:575
 #, kde-format
 msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
-msgstr "<qt>'<b>%1</b>' için eşleşme bulunamadı.</qt>"
+msgstr "<qt>“<b>%1</b>” için eşleşme bulunamadı.</qt>"
 
 #: findreplace/kfind.cpp:596
 #, kde-format
 msgid "No matches found for '<b>%1</b>'."
-msgstr "'<b>%1</b> için eşleşme bulunamadı."
+msgstr "“<b>%1</b>” için eşleşme bulunamadı."
 
 #: findreplace/kfind.cpp:600 findreplace/kreplace.cpp:384
 #, kde-format
@@ -119,11 +119,10 @@ msgid "Regular e&xpression"
 msgstr "Dü&zenli ifade"
 
 #: findreplace/kfinddialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&Edit..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Edit…"
-msgstr "Dü&zenle..."
+msgstr "Dü&zenle…"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -255,7 +254,7 @@ msgid ""
 "literal <code><b>\\N</b></code> in your replacement, put an extra backslash "
 "in front of it, like <code><b>\\\\N</b></code>.</p></qt>"
 msgstr ""
-"<qt>Etkinleştirildiğinde, <code><b>N</b></code>'nin sayı olduğu her <code><b>"
+"<qt>Etkinleştirildiğinde, <code><b>N</b></code>’nin sayı olduğu her <code><b>"
 "\\N</b></code> ifadesi, eşlenen (parantezli gruplar) ilgili ifadeyle "
 "değiştirilecektir.<p>Yer değiştirirken gerçekten <code><b>\\N</b></code> "
 "ifadesini kullanmak için önüne fazladan bir ters bölü koyun: <code><b>\\\\N</"
@@ -290,8 +289,8 @@ msgid ""
 "Perform a case sensitive search: entering the pattern 'Joe' will not match "
 "'joe' or 'JOE', only 'Joe'."
 msgstr ""
-"Aramayı BÜYÜK/küçük Harf duyarlı yap: 'Ali' dizgisi girişi, 'ali' veya 'ALİ' "
-"ile uyuşmayacak, yalnızca 'Ali' yi bulacaktır."
+"Aramayı BÜYÜK/küçük harf duyarlı yap: “Ali” dizgisi girişi, “ali” veya “ALİ” "
+"ile eşleşmeyecek, yalnızca “Ali”yi bulacaktır."
 
 #: findreplace/kfinddialog.cpp:236
 #, kde-format
@@ -394,7 +393,7 @@ msgstr "A&tla"
 #: findreplace/kreplace.cpp:76
 #, kde-format
 msgid "Replace '%1' with '%2'?"
-msgstr " '%1', '%2' ile değiştirilsin mi?"
+msgstr "“%1”, “%2” ile değiştirilsin mi?"
 
 #: findreplace/kreplace.cpp:178 findreplace/kreplace.cpp:378
 #, kde-format
@@ -434,8 +433,7 @@ msgstr "Durdur"
 #, kde-format
 msgid "Your replacement string is referencing a capture greater than '\\%1', "
 msgstr ""
-"Yerine koyma dizginiz '\\%1' ifadesinden daha geniş bir eşleşmeye  referans "
-"veriyor."
+"Yerine koyma diziniz “\\%1” ifadesinden daha geniş bir eşleşmeye başvuruyor."
 
 #: findreplace/kreplacedialog.cpp:154
 #, kde-format
@@ -459,12 +457,10 @@ msgstr ""
 "Lütfen düzelt."
 
 #: widgets/krichtextwidget.cpp:207
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Color..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Color…"
-msgstr "Metin &Rengi..."
+msgstr "Metin &Rengi…"
 
 #: widgets/krichtextwidget.cpp:208
 #, kde-format
@@ -473,12 +469,10 @@ msgid "Color"
 msgstr "Renk"
 
 #: widgets/krichtextwidget.cpp:221
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Highlight..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Highlight…"
-msgstr "Metin &Vurgulaması..."
+msgstr "Metin &Vurgulaması…"
 
 #: widgets/krichtextwidget.cpp:234
 #, kde-format
@@ -750,11 +744,10 @@ msgid "Nothing to spell check."
 msgstr "Yazım denetimi yapılacak bir şey yok."
 
 #: widgets/ktextedit.cpp:501
-#, fuzzy, kde-format
-#| msgid "Check Spelling..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Check Spelling…"
-msgstr "Yazım Denetimi Yap..."
+msgstr "Yazım Denetimi Yap…"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format

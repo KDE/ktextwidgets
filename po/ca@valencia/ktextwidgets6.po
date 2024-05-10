@@ -1,12 +1,12 @@
 # Translation of ktextwidgets6.po to Catalan (Valencian)
-# Copyright (C) 1998-2023 This_file_is_part_of_KDE
+# Copyright (C) 1998-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Sebastià Pla i Sanz <sps@sastia.com>, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2003, 2006, 2011, 2012, 2013, 2014, 2015, 2019, 2020, 2022.
 # Albert Astals Cid <aacid@kde.org>, 2004, 2005, 2007.
-# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2020, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2017, 2018, 2020, 2022, 2023, 2024.
 # Robert Millan <rmh@aybabtu.com>, 2009.
 # Orestes Mas <orestes@tsc.upc.edu>, 2010.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: ktextwidgets\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:36+0000\n"
-"PO-Revision-Date: 2023-09-14 18:48+0200\n"
+"PO-Revision-Date: 2024-05-08 19:41+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -112,11 +112,10 @@ msgid "Regular e&xpression"
 msgstr "E&xpressió regular"
 
 #: findreplace/kfinddialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&Edit..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Edit…"
-msgstr "Edi&ta..."
+msgstr "&Edita…"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -452,12 +451,10 @@ msgstr ""
 "Corregiu-ho, per favor."
 
 #: widgets/krichtextwidget.cpp:207
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Color..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Color…"
-msgstr "&Color del text..."
+msgstr "&Color del text…"
 
 #: widgets/krichtextwidget.cpp:208
 #, kde-format
@@ -466,12 +463,10 @@ msgid "Color"
 msgstr "Color"
 
 #: widgets/krichtextwidget.cpp:221
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Highlight..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Highlight…"
-msgstr "&Ressalta el text..."
+msgstr "&Ressaltat de text…"
 
 #: widgets/krichtextwidget.cpp:234
 #, kde-format
@@ -743,11 +738,10 @@ msgid "Nothing to spell check."
 msgstr "No hi ha res que s'haja de verificar ortogràficament."
 
 #: widgets/ktextedit.cpp:501
-#, fuzzy, kde-format
-#| msgid "Check Spelling..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Check Spelling…"
-msgstr "Verifica l'ortografia..."
+msgstr "Verifica l'ortografia…"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
