@@ -438,7 +438,7 @@ msgstr "颜色"
 #, kde-format
 msgctxt "@action"
 msgid "Text &Highlight..."
-msgstr "文本加亮(&H)..."
+msgstr "文本高亮(&H)..."
 
 #: widgets/krichtextwidget.cpp:234
 #, kde-format
