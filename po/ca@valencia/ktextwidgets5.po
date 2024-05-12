@@ -114,7 +114,7 @@ msgstr "E&xpressió regular"
 #: findreplace/kfinddialog.cpp:84
 #, kde-format
 msgid "&Edit..."
-msgstr "Edi&ta..."
+msgstr "Edi&ta…"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -453,7 +453,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "Text &Color..."
-msgstr "&Color del text..."
+msgstr "&Color del text…"
 
 #: widgets/krichtextwidget.cpp:208
 #, kde-format
@@ -465,7 +465,7 @@ msgstr "Color"
 #, kde-format
 msgctxt "@action"
 msgid "Text &Highlight..."
-msgstr "&Ressalta el text..."
+msgstr "&Ressalta el text…"
 
 #: widgets/krichtextwidget.cpp:234
 #, kde-format
@@ -739,7 +739,7 @@ msgstr "No hi ha res que s'haja de verificar ortogràficament."
 #: widgets/ktextedit.cpp:501
 #, kde-format
 msgid "Check Spelling..."
-msgstr "Verifica l'ortografia..."
+msgstr "Verifica l'ortografia…"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
