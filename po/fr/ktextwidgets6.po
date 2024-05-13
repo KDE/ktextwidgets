@@ -1,5 +1,6 @@
 # translation of kdelibs4.po to Français
 # translation of kdelibs4.po to
+# SPDX-FileCopyrightText: 2020, 2021, 2024 Xavier Besnard <xavier.besnard@kde.org>
 # Matthieu Robin <kde@macolu.org>, 2002,2003, 2004.
 # Robert Jacolin <rjacolin@ifrance.com>, 2003,2004.
 # Gilles Caulier <caulier.gilles@free.fr>, 2003.
@@ -18,22 +19,21 @@
 # Sebastien Renard <renard@kde.org>, 2013, 2014.
 # Vincent Pinon <vpinon@kde.org>, 2016, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2020.
-# Xavier Besnard <xavier.besnard@kde.org>, 2020, 2021.
 # Xavier Besnard <xavier.besnard@kde.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:36+0000\n"
-"PO-Revision-Date: 2023-01-05 09:31+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2024-05-08 19:36+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.08.5\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -124,11 +124,10 @@ msgid "Regular e&xpression"
 msgstr "E&xpression rationnelle"
 
 #: findreplace/kfinddialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Edit…"
-msgstr "&Édition"
+msgstr "&Édition..."
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -465,9 +464,7 @@ msgstr ""
 "Veuillez corriger."
 
 #: widgets/krichtextwidget.cpp:207
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Color..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Color…"
 msgstr "&Couleur du texte..."
@@ -479,9 +476,7 @@ msgid "Color"
 msgstr "Couleur"
 
 #: widgets/krichtextwidget.cpp:221
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Highlight..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Highlight…"
 msgstr "Mise en sur&brillance du texte..."
@@ -756,11 +751,10 @@ msgid "Nothing to spell check."
 msgstr "Pas de vérification orthographique à effectuer."
 
 #: widgets/ktextedit.cpp:501
-#, fuzzy, kde-format
-#| msgid "Check Spelling"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Check Spelling…"
-msgstr "Vérification de l'orthographe"
+msgstr "Vérification de l'orthographe…"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format

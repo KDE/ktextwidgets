@@ -4,13 +4,13 @@
 # Sivakumar Shanmugasundaram <sshanmu@yahoo.com>, 2000.
 # Thuraiappah Vaseeharan <t_vasee@yahoo.com>, 2000-2001.
 # ம. ஸ்ரீ ராமதாஸ் | Sri Ramadoss M <amachu@yavarkkum.org>, 2007-2012.
-# Kishore G <kishore96@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:36+0000\n"
-"PO-Revision-Date: 2022-04-14 19:32+0530\n"
+"PO-Revision-Date: 2024-05-12 12:44+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.03.90\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: dialogs/klinkdialog.cpp:39
 #, kde-format
@@ -106,11 +106,10 @@ msgid "Regular e&xpression"
 msgstr "சுருங்குறித் &தொடர்"
 
 #: findreplace/kfinddialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Edit…"
-msgstr "&தொகுக்க"
+msgstr "&திருத்து…"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -439,44 +438,40 @@ msgstr ""
 "தயவுசெய்து திருத்தவும்."
 
 #: widgets/krichtextwidget.cpp:207
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Color..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Color…"
-msgstr "உரை &நிறம்..."
+msgstr "உரையின் &நிறம்…"
 
 #: widgets/krichtextwidget.cpp:208
 #, kde-format
 msgctxt "@label stroke color"
 msgid "Color"
-msgstr "நிறங்கள்"
+msgstr "நிறம்"
 
 #: widgets/krichtextwidget.cpp:221
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Highlight..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Highlight…"
-msgstr "உரை &வெளிச்சம்..."
+msgstr "உரை &முன்னிலைப்பாடு…"
 
 #: widgets/krichtextwidget.cpp:234
 #, kde-format
 msgctxt "@action"
 msgid "&Font"
-msgstr "&மின்னெழுத்து"
+msgstr "&எழுத்துரு"
 
 #: widgets/krichtextwidget.cpp:244
 #, kde-format
 msgctxt "@action"
 msgid "Font &Size"
-msgstr "சின்னத்தின் &அளவு"
+msgstr "எழுத்துருவின் &அளவு"
 
 #: widgets/krichtextwidget.cpp:253
 #, kde-format
 msgctxt "@action boldify selected text"
 msgid "&Bold"
-msgstr "&தடித்த"
+msgstr "&தடித்தது"
 
 #: widgets/krichtextwidget.cpp:267
 #, kde-format
@@ -730,11 +725,10 @@ msgid "Nothing to spell check."
 msgstr "சொல்திருத்த எதுவுமில்லை"
 
 #: widgets/ktextedit.cpp:501
-#, fuzzy, kde-format
-#| msgid "Check Spelling"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Check Spelling…"
-msgstr "சொல்லை சரிபார்"
+msgstr "எழுத்தாக்கத்தை சரிபார்…"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
