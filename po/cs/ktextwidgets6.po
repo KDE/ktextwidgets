@@ -109,11 +109,10 @@ msgid "Regular e&xpression"
 msgstr "Re&gulární výraz"
 
 #: findreplace/kfinddialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&Edit..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Edit…"
-msgstr "&Upravit..."
+msgstr ""
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -441,12 +440,10 @@ msgstr ""
 "Prosím opravte."
 
 #: widgets/krichtextwidget.cpp:207
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Color..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Color…"
-msgstr "Barva te&xtu..."
+msgstr ""
 
 #: widgets/krichtextwidget.cpp:208
 #, kde-format
@@ -455,12 +452,10 @@ msgid "Color"
 msgstr "Barva"
 
 #: widgets/krichtextwidget.cpp:221
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Highlight..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Highlight…"
-msgstr "Zvý&raznění textu..."
+msgstr ""
 
 #: widgets/krichtextwidget.cpp:234
 #, kde-format
@@ -732,11 +727,10 @@ msgid "Nothing to spell check."
 msgstr "Nic ke kontrole pravopisu."
 
 #: widgets/ktextedit.cpp:501
-#, fuzzy, kde-format
-#| msgid "Check Spelling..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Check Spelling…"
-msgstr "Zkontrolovat pravopis..."
+msgstr ""
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
