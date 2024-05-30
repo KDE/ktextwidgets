@@ -3,14 +3,14 @@
 # Lukáš Tinkl <lukas@kde.org>, 2010, 2011, 2012.
 # Vít Pelčák <vit@pelcak.org>, 2011, 2012, 2013, 2014, 2015, 2017, 2020.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012, 2013.
-# Vit Pelcak <vit@pelcak.org>, 2021.
+# SPDX-FileCopyrightText: 2021, 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:36+0000\n"
-"PO-Revision-Date: 2021-08-13 10:10+0200\n"
+"PO-Revision-Date: 2024-05-29 11:25+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.04.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -112,7 +112,7 @@ msgstr "Re&gulární výraz"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Edit…"
-msgstr ""
+msgstr "&Upravit…"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -443,7 +443,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "Text &Color…"
-msgstr ""
+msgstr "Barva te&xtu…"
 
 #: widgets/krichtextwidget.cpp:208
 #, kde-format
@@ -455,7 +455,7 @@ msgstr "Barva"
 #, kde-format
 msgctxt "@action"
 msgid "Text &Highlight…"
-msgstr ""
+msgstr "Zvý&raznění textu…"
 
 #: widgets/krichtextwidget.cpp:234
 #, kde-format
@@ -730,7 +730,7 @@ msgstr "Nic ke kontrole pravopisu."
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Check Spelling…"
-msgstr ""
+msgstr "Zkontrolovat pravopis…"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
