@@ -1,25 +1,26 @@
 # Translation of ktextwidgets5.po to Euskara/Basque (eu).
 # Copyright (C) 1999-2017, Free Software Foundation, Inc.
-# Copyright (C) 2018-2020, This file is copyright:
+# Copyright (C) 2018-2024 This file is copyright:
 # This file is distributed under the same license as the ktextwidgets package.
+# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Marcos <marcos@euskalgnu.org>, 2002,2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010.
 # Ion Gaztañaga <igaztanaga@gmail.com>, 2005.
 # Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>, 2009.
-# Iñigo Salvador Azurmendi <xalba@euskalnet.net>, 2010, 2011, 2012, 2013, 2014, 2017, 2020, 2022.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2011, 2012, 2013, 2014, 2017, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: ktextwidgets\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:36+0000\n"
-"PO-Revision-Date: 2022-11-13 08:58+0100\n"
+"PO-Revision-Date: 2024-07-09 11:32+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: dialogs/klinkdialog.cpp:39
@@ -108,11 +109,10 @@ msgid "Regular e&xpression"
 msgstr "Adierazpen &erregularra"
 
 #: findreplace/kfinddialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Edit…"
-msgstr "&Editatu"
+msgstr "&Editatu..."
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -440,9 +440,7 @@ msgstr ""
 "Zuzendu ezazu."
 
 #: widgets/krichtextwidget.cpp:207
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Color..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Color…"
 msgstr "Testuaren &kolorea..."
@@ -454,9 +452,7 @@ msgid "Color"
 msgstr "Kolorea"
 
 #: widgets/krichtextwidget.cpp:221
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Highlight..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Highlight…"
 msgstr "Testua &nabarmentzea..."
@@ -731,11 +727,10 @@ msgid "Nothing to spell check."
 msgstr "Ortografia egiaztatzekorik ez."
 
 #: widgets/ktextedit.cpp:501
-#, fuzzy, kde-format
-#| msgid "Check Spelling"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Check Spelling…"
-msgstr "Egiaztatu ortografia"
+msgstr "Ortografia aztertzea..."
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
