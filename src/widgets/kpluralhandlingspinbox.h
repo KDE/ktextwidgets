@@ -9,6 +9,7 @@
 
 #include <ktextwidgets_export.h>
 
+#if KTEXTWIDGETS_ENABLE_DEPRECATED_SINCE(6, 6)
 #include <KLocalizedString>
 
 #include <QSpinBox>
@@ -23,7 +24,10 @@
  * @author Laurent Montel <montel@kde.org>
  *
  * @since 5.0
+ * @deprecated since 6.6, use KLocalization::setupSpinBoxFormatString() from KF6::I18n instead,
+ * which is more powerful and does not require inheriting from a specific QSpinBox subclass.
  */
+KTEXTWIDGETS_DEPRECATED_VERSION(6, 6, "use KLocalization::setupSpinBoxFormatString() from KF6::I18n instead")
 class KTEXTWIDGETS_EXPORT KPluralHandlingSpinBox : public QSpinBox
 {
     Q_OBJECT
@@ -47,5 +51,6 @@ private:
 
     Q_DISABLE_COPY(KPluralHandlingSpinBox)
 };
+#endif
 
 #endif // KPLURALHANDLINGSPINBOX_H

@@ -6,6 +6,8 @@
 
 #include "kpluralhandlingspinbox.h"
 
+#if KTEXTWIDGETS_BUILD_DEPRECATED_SINCE(6, 6)
+
 class KPluralHandlingSpinBoxPrivate
 {
 public:
@@ -47,3 +49,5 @@ void KPluralHandlingSpinBox::setSuffix(const KLocalizedString &suffix)
     }
 }
 #include "moc_kpluralhandlingspinbox.cpp"
+
+#endif
