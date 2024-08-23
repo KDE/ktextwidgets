@@ -573,9 +573,8 @@ QMenu *KTextEdit::mousePopupMenu()
 
 void KTextEdit::slotSpeakText()
 {
-    Q_D(KTextEdit);
-
 #ifdef HAVE_SPEECH
+    Q_D(KTextEdit);
     QString text;
     if (textCursor().hasSelection()) {
         text = textCursor().selectedText();
