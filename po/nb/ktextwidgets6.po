@@ -112,7 +112,6 @@ msgstr "Regulært &uttrykk"
 
 #: findreplace/kfinddialog.cpp:84
 #, fuzzy, kde-format
-#| msgid "&Edit..."
 msgctxt "@action:button"
 msgid "&Edit…"
 msgstr "&Rediger …"
@@ -445,8 +444,6 @@ msgstr ""
 
 #: widgets/krichtextwidget.cpp:207
 #, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Color..."
 msgctxt "@action"
 msgid "Text &Color…"
 msgstr "Tekst&farge …"
@@ -459,8 +456,6 @@ msgstr "Farge"
 
 #: widgets/krichtextwidget.cpp:221
 #, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Highlight..."
 msgctxt "@action"
 msgid "Text &Highlight…"
 msgstr "Tekstfram&heving …"
@@ -736,7 +731,6 @@ msgstr "Ingenting å stavekontrollere."
 
 #: widgets/ktextedit.cpp:501
 #, fuzzy, kde-format
-#| msgid "Check Spelling..."
 msgctxt "@action:inmenu"
 msgid "Check Spelling…"
 msgstr "Kjør stavekontroll …"

@@ -107,7 +107,6 @@ msgstr "&Virolaš cealkka"
 
 #: findreplace/kfinddialog.cpp:84
 #, fuzzy, kde-format
-#| msgid "&Edit..."
 msgctxt "@action:button"
 msgid "&Edit…"
 msgstr "&Doaimmat …"
@@ -437,8 +436,6 @@ msgstr ""
 
 #: widgets/krichtextwidget.cpp:207
 #, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Color..."
 msgctxt "@action"
 msgid "Text &Color…"
 msgstr "Teaksta&ivdni …"
@@ -451,8 +448,6 @@ msgstr "Ivdni"
 
 #: widgets/krichtextwidget.cpp:221
 #, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Highlight..."
 msgctxt "@action"
 msgid "Text &Highlight…"
 msgstr "Teaksta&merken …"
@@ -731,7 +726,6 @@ msgstr "Ii mihkkige maid dárkkistit."
 
 #: widgets/ktextedit.cpp:501
 #, fuzzy, kde-format
-#| msgid "Check Spelling..."
 msgctxt "@action:inmenu"
 msgid "Check Spelling…"
 msgstr "Dárkkis riektačállima …"
