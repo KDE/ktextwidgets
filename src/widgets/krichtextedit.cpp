@@ -630,7 +630,7 @@ QString KRichTextEdit::toCleanHtml() const
 
     // Qt inserts various style properties based on the current mode of the editor (underline,
     // bold, etc), but only empty paragraphs *also* have qt-paragraph-type set to 'empty'.
-    static const QString EMPTYLINEREGEX = QStringLiteral("<p style=\"-qt-paragraph-type:empty;(.*?)</p>");
+    static const QRegularExpression EMPTYLINEREGEX(QStringLiteral("<p style=\"-qt-paragraph-type:empty;(.*?)</p>"));
 
     static const QString OLLISTPATTERNQT = QStringLiteral("<ol style=\"margin-top: 0px; margin-bottom: 0px; margin-left: 0px;");
 
@@ -645,7 +645,7 @@ QString KRichTextEdit::toCleanHtml() const
     // Although we can simply remove the margin-top style property, we still get unwanted results
     // if you have three or more empty lines. It's best to replace empty <p> elements with <p>&nbsp;</p>.
     // replace all occurrences with the new line text
-    result.replace(QRegularExpression(EMPTYLINEREGEX), EMPTYLINEHTML);
+    result.replace(EMPTYLINEREGEX, EMPTYLINEHTML);
 
     // fix 2a - ordered lists - MS Outlook treats margin-left:0px; as
     // a non-existing number; e.g: "1. First item" turns into "First Item"

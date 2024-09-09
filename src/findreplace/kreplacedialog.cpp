@@ -144,7 +144,7 @@ void KReplaceDialogPrivate::slotOk()
         const int caps = re.captureCount();
 
         const QString rep = q->replacement();
-        const QRegularExpression check(QStringLiteral("((?:\\\\)+)(\\d+)"));
+        const static QRegularExpression check(QStringLiteral("((?:\\\\)+)(\\d+)"));
         auto iter = check.globalMatch(rep);
         while (iter.hasNext()) {
             const QRegularExpressionMatch match = iter.next();
