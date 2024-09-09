@@ -541,8 +541,6 @@ void KRichTextWidgetPrivate::_k_setHeadingLevel(int level)
 
 void KRichTextWidgetPrivate::updateCharFormatActions(const QTextCharFormat &format)
 {
-    Q_Q(KRichTextWidget);
-
     QFont f = format.font();
 
     if (richTextSupport & KRichTextWidget::SupportFontFamily) {
