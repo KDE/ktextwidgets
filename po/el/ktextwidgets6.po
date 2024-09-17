@@ -130,7 +130,7 @@ msgstr "Αντικατάσταση με"
 #: findreplace/kfinddialog.cpp:96
 #, kde-format
 msgid "Replace&ment text:"
-msgstr "Κείμενο αντικατ&άστασης:"
+msgstr "Κείμενο αντικατάστασ&ης:"
 
 #: findreplace/kfinddialog.cpp:100
 #, kde-format
