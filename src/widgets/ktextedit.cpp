@@ -23,7 +23,7 @@
 #include <KCursor>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <KStandardAction>
+#include <KStandardActions>
 #include <KStandardShortcut>
 #include <sonnet/backgroundchecker.h>
 #include <sonnet/configdialog.h>
@@ -484,7 +484,7 @@ QMenu *KTextEdit::mousePopupMenu()
         };
 
         if (separatorAction) {
-            QAction *clearAllAction = KStandardAction::clear(this, undoableClearSlot, popup);
+            QAction *clearAllAction = KStandardActions::clear(this, undoableClearSlot, popup);
             if (emptyDocument) {
                 clearAllAction->setEnabled(false);
             }
@@ -537,9 +537,9 @@ QMenu *KTextEdit::mousePopupMenu()
     }
 
     if (d->findReplaceEnabled) {
-        QAction *findAction = KStandardAction::find(this, &KTextEdit::slotFind, popup);
-        QAction *findNextAction = KStandardAction::findNext(this, &KTextEdit::slotFindNext, popup);
-        QAction *findPrevAction = KStandardAction::findPrev(this, &KTextEdit::slotFindPrevious, popup);
+        QAction *findAction = KStandardActions::find(this, &KTextEdit::slotFind, popup);
+        QAction *findNextAction = KStandardActions::findNext(this, &KTextEdit::slotFindNext, popup);
+        QAction *findPrevAction = KStandardActions::findPrev(this, &KTextEdit::slotFindPrevious, popup);
         if (emptyDocument) {
             findAction->setEnabled(false);
             findNextAction->setEnabled(false);
@@ -554,7 +554,7 @@ QMenu *KTextEdit::mousePopupMenu()
         popup->addAction(findPrevAction);
 
         if (!isReadOnly()) {
-            QAction *replaceAction = KStandardAction::replace(this, &KTextEdit::slotReplace, popup);
+            QAction *replaceAction = KStandardActions::replace(this, &KTextEdit::slotReplace, popup);
             if (emptyDocument) {
                 replaceAction->setEnabled(false);
             }
