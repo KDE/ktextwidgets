@@ -8,6 +8,7 @@ Dependencies:
     'frameworks/ki18n' : '@same'
     'frameworks/kwidgetsaddons' : '@same'
     'frameworks/sonnet' : '@same'
+    'frameworks/kcolorscheme' : '@same'
 
 Options:
   test-before-installing: True

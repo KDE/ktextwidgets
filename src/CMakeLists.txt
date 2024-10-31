@@ -63,6 +63,8 @@ PUBLIC
 PRIVATE
   KF6::SonnetCore
   KF6::ConfigWidgets
+  KF6::WidgetsAddons
+  KF6::ColorScheme
   KF6::Completion
 )
 

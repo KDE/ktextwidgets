@@ -50,6 +50,7 @@ find_package(KF6ConfigWidgets ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6I18n ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6WidgetsAddons ${KF_DEP_VERSION} REQUIRED)
 find_package(KF6Sonnet ${KF_DEP_VERSION} REQUIRED)
+find_package(KF6ColorScheme ${KF_DEP_VERSION} REQUIRED)
 
 set(EXCLUDE_DEPRECATED_BEFORE_AND_AT 0 CACHE STRING "Control the range of deprecated API excluded from the build [default=0].")
 
