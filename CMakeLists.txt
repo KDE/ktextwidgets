@@ -33,7 +33,7 @@ ecm_setup_version(PROJECT
                   SOVERSION 6)
 
 # Dependencies
-set(REQUIRED_QT_VERSION 6.5.0)
+set(REQUIRED_QT_VERSION 6.6.0)
 
 option(WITH_TEXT_TO_SPEECH "Build text-to-speech support" ON)
 
