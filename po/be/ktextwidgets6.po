@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:36+0000\n"
-"PO-Revision-Date: 2024-02-11 18:54\n"
+"PO-Revision-Date: 2024-11-11 19:00\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -118,11 +118,10 @@ msgid "Regular e&xpression"
 msgstr "Рэгулярны в&ыраз"
 
 #: findreplace/kfinddialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&Edit"
+#, kde-format
 msgctxt "@action:button"
 msgid "&Edit…"
-msgstr "&Змяніць"
+msgstr "&Рэдагаванне…"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -454,12 +453,10 @@ msgstr ""
 "Калі ласка, выпраўце."
 
 #: widgets/krichtextwidget.cpp:207
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Color..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Color…"
-msgstr "Колер &тэксту..."
+msgstr "Колер &тэксту…"
 
 #: widgets/krichtextwidget.cpp:208
 #, kde-format
@@ -468,12 +465,10 @@ msgid "Color"
 msgstr "Колер"
 
 #: widgets/krichtextwidget.cpp:221
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Highlight..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Highlight…"
-msgstr "&Падсвятленне тэксту..."
+msgstr "&Падсвятленне тэксту…"
 
 #: widgets/krichtextwidget.cpp:234
 #, kde-format
@@ -745,11 +740,10 @@ msgid "Nothing to spell check."
 msgstr "Няма чаго правяраць."
 
 #: widgets/ktextedit.cpp:501
-#, fuzzy, kde-format
-#| msgid "Check Spelling"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Check Spelling…"
-msgstr "Праверыць правапіс"
+msgstr "Правяранне правапісу…"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
