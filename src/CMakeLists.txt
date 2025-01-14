@@ -107,33 +107,4 @@ if (BUILD_DESIGNERPLUGIN)
     add_subdirectory(designer)
 endif()
 
-if (BUILD_QCH)
-    ecm_add_qch(
-        KF6TextWidgets_QCH
-        NAME KTextWidgets
-        BASE_NAME KF6TextWidgets
-        VERSION ${KF_VERSION}
-        ORG_DOMAIN org.kde
-        SOURCES # using only public headers, to cover only public API
-            ${KTextWidgets_HEADERS}
-        MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
-        IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
-        LINK_QCHS
-            Qt6Widgets_QCH
-            KF6SonnetUi_QCH
-            KF6I18n_QCH
-        INCLUDE_DIRS
-            ${CMAKE_CURRENT_BINARY_DIR}
-            ${ktextwidgets_INCLUDES}
-        BLANK_MACROS
-            KTEXTWIDGETS_EXPORT
-            KTEXTWIDGETS_DEPRECATED_EXPORT
-            KTEXTWIDGETS_DEPRECATED
-            "KTEXTWIDGETS_DEPRECATED_VERSION(x, y, t)"
-            "KTEXTWIDGETS_DEPRECATED_VERSION_BELATED(x, y, xt, yt, t)"
-        TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        COMPONENT Devel
-    )
-endif()
-
+ecm_generate_qdoc(KF6TextWidgets ktextwidgets.qdocconf)

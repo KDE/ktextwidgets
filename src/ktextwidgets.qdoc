@@ -1,0 +1,12 @@
+/*!
+    \module KTextWidgets
+    \title KTextWidgets C++ Classes
+    \ingroup modules
+    \cmakepackage KF6
+    \cmakecomponent TextWidgets
+
+    \brief KTextWidgets is a collection of text editing widgets.
+
+    KTextWidgets provides widgets for displaying and editing text. It supports
+    rich text as well as plain text.
+*/

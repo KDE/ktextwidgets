@@ -1,0 +1,21 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = KTextWidgets
+description = Text editing widgets
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+
+imagedirs = ../docs/pics
+
+depends += kde qtcore qtwidgets sonnetui
+
+qhp.projects = KTextWidgets
+
+qhp.KTextWidgets.file = ktextwidgets.qhp
+qhp.KTextWidgets.namespace = org.kde.ktextwidgets.$QT_VERSION_TAG
+qhp.KTextWidgets.virtualFolder = ktextwidgets
+qhp.KTextWidgets.indexTitle = KTextWidgets
+qhp.KTextWidgets.indexRoot = 

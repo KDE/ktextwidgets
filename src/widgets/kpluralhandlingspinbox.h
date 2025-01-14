@@ -16,15 +16,15 @@
 
 #include <memory>
 
-/**
- * @class KPluralHandlingSpinBox kpluralhandlingspinbox.h <KPluralHandlingSpinBox>
+/*!
+ * \class KPluralHandlingSpinBox
+ * \inmodule KTextWidgets
  *
- * @brief A QSpinBox with plural handling for the suffix.
+ * \brief A QSpinBox with plural handling for the suffix.
  *
- * @author Laurent Montel <montel@kde.org>
- *
- * @since 5.0
- * @deprecated since 6.6, use KLocalization::setupSpinBoxFormatString() from KF6::I18n instead,
+ * \since 5.0
+ * \deprecated[6.6]
+ * Use KLocalization::setupSpinBoxFormatString() from KF6::I18n instead,
  * which is more powerful and does not require inheriting from a specific QSpinBox subclass.
  */
 KTEXTWIDGETS_DEPRECATED_VERSION(6, 6, "use KLocalization::setupSpinBoxFormatString() from KF6::I18n instead")
@@ -32,15 +32,14 @@ class KTEXTWIDGETS_EXPORT KPluralHandlingSpinBox : public QSpinBox
 {
     Q_OBJECT
 public:
-    /**
+    /*!
      * Default constructor
      */
-
     explicit KPluralHandlingSpinBox(QWidget *parent = nullptr);
     ~KPluralHandlingSpinBox() override;
 
-    /**
-     * Sets the suffix to @p suffix.
+    /*!
+     * Sets the suffix to \a suffix.
      * Use this to add a plural-aware suffix, e.g. by using ki18np("singular", "plural").
      */
     void setSuffix(const KLocalizedString &suffix);

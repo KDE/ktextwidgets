@@ -2,6 +2,7 @@
     This file is part of the KDE project
     SPDX-FileCopyrightText: 2001 S.R. Haque <srhaque@iee.org>.
     SPDX-FileCopyrightText: 2002 David Faure <david@mandrakesoft.com>
+    SPDX-FileCopyrightText: 2004 Arend van Beelen jr. <arend@auton.nl>
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
@@ -17,13 +18,11 @@
 class QDialog;
 class KFindPrivate;
 
-/**
- * @class KFind kfind.h <KFind>
+/*!
+ * \class KFind
+ * \inmodule KTextWidgets
  *
- * @brief A generic implementation of the "find" function.
- *
- * @author S.R.Haque <srhaque@iee.org>, David Faure <faure@kde.org>,
- *         Arend van Beelen jr. <arend@auton.nl>
+ * \brief A generic implementation of the "find" function.
  *
  * \b Detail:
  *
@@ -95,33 +94,45 @@ class KTEXTWIDGETS_EXPORT KFind : public QObject
     Q_OBJECT
 
 public:
-    /**
-     * @see SearchOptions
+    /*!
+     * \enum KFind::Options
+     *
+     * \value WholeWordsOnly
+     *        Match whole words only.
+     * \value FromCursor
+     *        Start from current cursor position.
+     * \value SelectedText
+     *        Only search selected area.
+     * \value CaseSensitive
+     *        Consider case when matching.
+     * \value FindBackwards
+     *        Go backwards.
+     * \value RegularExpression
+     *        Interpret the pattern as a regular expression.
+     * \value FindIncremental
+     *        Find incremental.
+     * \value MinimumUserOption
+     *        User options start with this bit
      */
     enum Options {
-        WholeWordsOnly = 1, ///< Match whole words only.
-        FromCursor = 2, ///< Start from current cursor position.
-        SelectedText = 4, ///< Only search selected area.
-        CaseSensitive = 8, ///< Consider case when matching.
-        FindBackwards = 16, ///< Go backwards.
-        RegularExpression = 32, ///< Interpret the pattern as a regular expression.
-        FindIncremental = 64, ///< Find incremental.
-        // Note that KReplaceDialog uses 256 and 512
-        // User extensions can use boolean options above this value.
-        MinimumUserOption = 65536, ///< user options start with this bit
+        WholeWordsOnly = 1,
+        FromCursor = 2,
+        SelectedText = 4,
+        CaseSensitive = 8,
+        FindBackwards = 16,
+        RegularExpression = 32,
+        FindIncremental = 64,
+        MinimumUserOption = 65536,
     };
-    /**
-     * Stores a combination of #Options values.
-     */
     Q_DECLARE_FLAGS(SearchOptions, Options)
 
-    /**
+    /*!
      * Only use this constructor if you don't use KFindDialog, or if
      * you use it as a modal dialog.
      */
     KFind(const QString &pattern, long options, QWidget *parent);
 
-    /**
+    /*!
      * This is the recommended constructor if you also use KFindDialog (non-modal).
      * You should pass the pointer to it here, so that when a message box
      * appears it has the right parent. Don't worry about deletion, KFind
@@ -130,36 +141,46 @@ public:
     KFind(const QString &pattern, long options, QWidget *parent, QWidget *findDialog);
     ~KFind() override;
 
+    /*!
+     * \value NoMatch
+     * \value Match
+     */
     enum Result {
         NoMatch,
         Match,
     };
 
-    /**
-     * @return true if the application must supply a new text fragment
+    /*!
+     * Returns true if the application must supply a new text fragment
      * It also means the last call returned "NoMatch". But by storing this here
      * the application doesn't have to store it in a member variable (between
      * calls to slotFindNext()).
      */
     bool needData() const;
 
-    /**
+    /*!
      * Call this when needData returns true, before calling find().
-     * @param data the text fragment (line)
-     * @param startPos if set, the index at which the search should start.
-     * This is only necessary for the very first call to setData usually,
-     * for the 'find in selection' feature. A value of -1 (the default value)
+     *
+     * \a data is the text fragment (line).
+     *
+     * \a startPos if set, the index at which the search should start.
+     *
+     * Usually \a startPos is only necessary for the very first call to setData,
+     * for the 'find in selection' feature. The default value of -1
      * means "process all the data", i.e. either 0 or data.length()-1 depending
      * on FindBackwards.
      */
     void setData(const QString &data, int startPos = -1);
 
-    /**
+    /*!
      * Call this when needData returns true, before calling find(). The use of
      * ID's is especially useful if you're using the FindIncremental option.
-     * @param id the id of the text fragment
-     * @param data the text fragment (line)
-     * @param startPos if set, the index at which the search should start.
+     *
+     * \a id the id of the text fragment.
+     *
+     * \a data the text fragment (line).
+     *
+     * \a startPos if set, the index at which the search should start.
      * This is only necessary for the very first call to setData usually,
      * for the 'find in selection' feature. A value of -1 (the default value)
      * means "process all the data", i.e. either 0 or data.length()-1 depending
@@ -167,7 +188,7 @@ public:
      */
     void setData(int id, const QString &data, int startPos = -1);
 
-    /**
+    /*!
      * Walk the text fragment (e.g. in a text-processor line or spreadsheet
      * cell ...etc) looking for matches.
      * For each match, emits the textFound() signal and displays the find-again
@@ -175,36 +196,36 @@ public:
      */
     Result find();
 
-    /**
+    /*!
      * Return the current options.
      *
      * Warning: this is usually the same value as the one passed to the constructor,
      * but options might change _during_ the replace operation:
      * e.g. the "All" button resets the PromptOnReplace flag.
      *
-     * @see KFind::Options
+     * \sa KFind::Options
      */
     long options() const;
 
-    /**
-     * Set new options. Usually this is used for setting or clearing the
+    /*!
+     * Set new \a options. Usually this is used for setting or clearing the
      * FindBackwards options.
      *
-     * @see KFind::Options
+     * \sa KFind::Options
      */
     virtual void setOptions(long options);
 
-    /**
-     * @return the pattern we're currently looking for
+    /*!
+     * Returns the pattern we're currently looking for
      */
     QString pattern() const;
 
-    /**
-     * Change the pattern we're looking for
+    /*!
+     * Sets the \a pattern to look for
      */
     void setPattern(const QString &pattern);
 
-    /**
+    /*!
      * Returns the number of matches found (i.e. the number of times the textFound()
      * signal was emitted).
      * If 0, can be used in a dialog box to tell the user "no match was found".
@@ -212,7 +233,7 @@ public:
      */
     int numMatches() const;
 
-    /**
+    /*!
      * Call this to reset the numMatches count
      * (and the numReplacements count for a KReplace).
      * Can be useful if reusing the same KReplace for different operations,
@@ -220,26 +241,30 @@ public:
      */
     virtual void resetCounts();
 
-    /**
+    /*!
      * Virtual method, which allows applications to add extra checks for
      * validating a candidate match. It's only necessary to reimplement this
      * if the find dialog extension has been used to provide additional
      * criteria.
      *
-     * @param text  The current text fragment
-     * @param index The starting index where the candidate match was found
-     * @param matchedlength The length of the candidate match
+     * \a text  The current text fragment
+     *
+     * \a index The starting index where the candidate match was found
+     *
+     * \a matchedlength The length of the candidate match
+     *
+     * Returns true if the candidate matches.
      */
     virtual bool validateMatch(const QString &text, int index, int matchedlength);
 
-    /**
+    /*!
      * Returns true if we should restart the search from scratch.
      * Can ask the user, or return false (if we already searched the whole document).
      *
-     * @param forceAsking set to true if the user modified the document during the
+     * \a forceAsking set to true if the user modified the document during the
      * search. In that case it makes sense to restart the search again.
      *
-     * @param showNumMatches set to true if the dialog should show the number of
+     * \a showNumMatches set to true if the dialog should show the number of
      * matches. Set to false if the application provides a "find previous" action,
      * in which case the match count will be erroneous when hitting the end,
      * and we could even be hitting the beginning of the document (so not all
@@ -247,38 +272,44 @@ public:
      */
     virtual bool shouldRestart(bool forceAsking = false, bool showNumMatches = true) const;
 
-    /**
-     * Search @p text for @p pattern. If a match is found, the length of the matched
-     * string will be stored in @p matchedLength and the index of the matched string
+    /*!
+     * Search \a text for \a pattern. If a match is found, the length of the matched
+     * string will be stored in \a matchedLength and the index of the matched string
      * will be returned. If no match is found -1 is returned.
      *
-     * If the KFind::RegularExpression flag is set, the @p pattern will be iterpreted
+     * If the KFind::RegularExpression flag is set, the \a pattern will be iterpreted
      * as a regular expression (using QRegularExpression).
      *
-     * @note Unicode support is always enabled (by setting the QRegularExpression::UseUnicodePropertiesOption flag).
+     * \note Unicode support is always enabled (by setting the QRegularExpression::UseUnicodePropertiesOption flag).
      *
-     * @param text The string to search in
-     * @param pattern The pattern to search for
-     * @param index  The index in @p text from which to start the search
-     * @param options The options to use
-     * @param matchedlength If there is a match, its length will be stored in this parameter
-     * @param rmatch If there is a regular expression match (implies that the KFind::RegularExpression
-     *               flag is set) and @p rmatch is not a nullptr the match result will be stored
-     *               in this QRegularExpressionMatch object
-     * @return The index at which a match was found otherwise -1
+     * \a text The string to search in
      *
-     * @since 5.70
+     * \a pattern The pattern to search for
+     *
+     * \a index  The index in \a text from which to start the search
+     *
+     * \a options The options to use
+     *
+     * \a matchedLength If there is a match, its length will be stored in this parameter
+     *
+     * \a rmatch If there is a regular expression match (implies that the KFind::RegularExpression
+     * flag is set) and \a rmatch is not a nullptr the match result will be stored
+     * in this QRegularExpressionMatch object
+     *
+     * Returns The index at which a match was found otherwise -1
+     *
+     * \since 5.70
      */
     static int find(const QString &text, const QString &pattern, int index, long options, int *matchedLength, QRegularExpressionMatch *rmatch);
 
-    /**
+    /*!
      * Displays the final dialog saying "no match was found", if that was the case.
      * Call either this or shouldRestart().
      */
     virtual void displayFinalDialog() const;
 
-    /**
-     * Return (or create) the dialog that shows the "find next?" prompt.
+    /*!
+     * Returns (or creates if \a create is true) the dialog that shows the "find next?" prompt.
      * Usually you don't need to call this.
      * One case where it can be useful, is when the user selects the "Find"
      * menu item while a find operation is under way. In that case, the
@@ -286,7 +317,7 @@ public:
      */
     QDialog *findNextDialog(bool create = false);
 
-    /**
+    /*!
      * Close the "find next?" dialog. The application should do this when
      * the last match was hit. If the application deletes the KFind, then
      * "find previous" won't be possible anymore.
@@ -296,8 +327,8 @@ public:
      */
     void closeFindNextDialog();
 
-    /**
-     * @return the current matching index (or -1).
+    /*!
+     * Returns the current matching index (or -1).
      * Same as the matchingIndex parameter passed to the textFound() signal.
      * You usually don't need to use this, except maybe when updating the current data,
      * so you need to call setData(newData, index()).
@@ -305,7 +336,7 @@ public:
     int index() const;
 
 Q_SIGNALS:
-    /**
+    /*!
      * Connect to this signal to implement highlighting of found text during the find
      * operation.
      *
@@ -315,26 +346,36 @@ Q_SIGNALS:
      * passed by this signal is not necessarily the data last set through
      * setData(), but can also be an earlier set data block.
      *
-     * @see setData()
+     * \a text is the text that was found
      *
-     * @since 5.81
+     * \a matchingIndex is the index of the start of the matched text
+     *
+     * \a matchedLength is the length of the matched text
+     *
+     * \sa setData()
+     *
+     * \since 5.81
      */
     void textFound(const QString &text, int matchingIndex, int matchedLength);
 
-    /**
+    /*!
      * Connect to this signal to implement highlighting of found text during
      * the find operation.
      *
      * Use this signal if you've set your data with setData(id, text),
      * otherwise use the textFound(text, matchingIndex, matchedLength) signal.
      *
-     * WARNING: If you're using the FindIncremental option, the id argument
+     * WARNING: If you're using the FindIncremental option, the \a id
      * passed by this signal is not necessarily the id of the data last set
      * through setData(), but can also be of an earlier set data block.
      *
-     * @see setData()
+     * \a matchingIndex is the index of the start of the matched text
      *
-     * @since 5.81
+     * \a matchedLength is the length of the matched text
+     *
+     * \sa setData()
+     *
+     * \since 5.81
      */
     void textFoundAtId(int id, int matchingIndex, int matchedLength);
 
@@ -343,14 +384,14 @@ Q_SIGNALS:
     // of FindBackwards
     void findNext();
 
-    /**
+    /*!
      * Emitted when the options have changed.
      * This can happen e.g. with "Replace All", or if our 'find next' dialog
      * gets a "find previous" one day.
      */
     void optionsChanged();
 
-    /**
+    /*!
      * Emitted when the 'find next' dialog is being closed.
      * Some apps might want to remove the highlighted text when this happens.
      * Apps without support for "Find Next" can also do m_find->deleteLater()

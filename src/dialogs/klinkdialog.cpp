@@ -16,11 +16,6 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 
-/**
-  Private class that helps to provide binary compatibility between releases.
-  @internal
-*/
-//@cond PRIVATE
 class KLinkDialogPrivate
 {
 public:
@@ -30,7 +25,6 @@ public:
     QLineEdit *linkUrlLineEdit = nullptr;
     QDialogButtonBox *buttonBox = nullptr;
 };
-//@endcond
 
 KLinkDialog::KLinkDialog(QWidget *parent)
     : QDialog(parent)
