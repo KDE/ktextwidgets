@@ -1,0 +1,23 @@
+/*!
+    \page ktextwidgets-index.html
+    \title KTextWidgets
+
+    KTextWidgets is a collection of text editing widgets.
+
+    \section1 Using the Module
+
+    \include {module-use.qdocinc} {using the c++ api}
+
+    \section2 Building with CMake
+
+
+    \section1 API Reference
+
+    \list
+        \li \l{KTextWidgets C++ Classes}
+    \endlist
+
+    \section1 Licenses
+
+    TODO
+*/

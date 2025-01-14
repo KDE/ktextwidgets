@@ -18,6 +18,7 @@ include(KDECMakeSettings)
 include(KDEGitCommitHooks)
 
 include(ECMGenerateExportHeader)
+include(ECMGenerateQDoc)
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 include(CMakePackageConfigHelpers)
@@ -107,3 +108,5 @@ include(ECMFeatureSummary)
 ecm_feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
+
+ecm_generate_qdoc(KF6TextWidgets ktextwidgets.qdocconf)

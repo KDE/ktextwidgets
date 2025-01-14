@@ -2,6 +2,7 @@
     This file is part of the KDE project
     SPDX-FileCopyrightText: 2001 S.R. Haque <srhaque@iee.org>.
     SPDX-FileCopyrightText: 2002 David Faure <david@mandrakesoft.com>
+    SPDX-FileCopyrightText: 2004 Arend van Beelen jr. <arend@auton.nl>
 
     SPDX-License-Identifier: LGPL-2.0-only
 */
@@ -15,12 +16,11 @@
 
 class KReplacePrivate;
 
-/**
- * @class KReplace kreplace.h <KReplace>
+/*!
+ * \class KReplace
+ * \inmodule KTextWidgets
  *
- * @brief A generic implementation of the "replace" function.
- *
- * @author S.R.Haque <srhaque@iee.org>, David Faure <faure@kde.org>
+ * \brief A generic implementation of the "replace" function.
  *
  * \b Detail:
  *
@@ -91,12 +91,12 @@ class KTEXTWIDGETS_EXPORT KReplace : public KFind
     Q_OBJECT
 
 public:
-    /**
+    /*!
      * Only use this constructor if you don't use KFindDialog, or if
      * you use it as a modal dialog.
      */
     KReplace(const QString &pattern, const QString &replacement, long options, QWidget *parent = nullptr);
-    /**
+    /*!
      * This is the recommended constructor if you also use KReplaceDialog (non-modal).
      * You should pass the pointer to it here, so that when a message box
      * appears it has the right parent. Don't worry about deletion, KReplace
@@ -106,7 +106,7 @@ public:
 
     ~KReplace() override;
 
-    /**
+    /*!
      * Return the number of replacements made (i.e. the number of times
      * the textReplaced() signal was emitted).
      *
@@ -115,22 +115,22 @@ public:
      */
     int numReplacements() const;
 
-    /**
+    /*!
      * Call this to reset the numMatches & numReplacements counts.
      * Can be useful if reusing the same KReplace for different operations,
      * or when restarting from the beginning of the document.
      */
     void resetCounts() override;
 
-    /**
+    /*!
      * Walk the text fragment (e.g. kwrite line, kspread cell) looking for matches.
      * For each match, if prompt-on-replace is specified, emits the textFound() signal
      * and displays the prompt-for-replace dialog before doing the replace.
      */
     Result replace();
 
-    /**
-     * Return (or create) the dialog that shows the "find next?" prompt.
+    /*!
+     * Returns (or creates if \a create is true) the dialog that shows the "find next?" prompt.
      * Usually you don't need to call this.
      * One case where it can be useful, is when the user selects the "Find"
      * menu item while a find operation is under way. In that case, the
@@ -138,37 +138,43 @@ public:
      */
     QDialog *replaceNextDialog(bool create = false);
 
-    /**
+    /*!
      * Close the "replace next?" dialog. The application should do this when
      * the last match was hit. If the application deletes the KReplace, then
      * "find previous" won't be possible anymore.
      */
     void closeReplaceNextDialog();
 
-    /**
-     * Searches the given @p text for @p pattern; if a match is found it is replaced
-     * with @p replacement and the index of the replacement string is returned.
+    /*!
+     * Searches the given \a text for \a pattern; if a match is found it is replaced
+     * with \a replacement and the index of the replacement string is returned.
      *
-     * @param text The string to search
-     * @param pattern The pattern to search for
-     * @param replacement The replacement string to insert into the text
-     * @param index The starting index into the string
-     * @param options The options to use
-     * @param replacedLength Output parameter, contains the length of the replaced string
+     * \a text The string to search
+     *
+     * \a pattern The pattern to search for
+     *
+     * \a replacement The replacement string to insert into the text
+     *
+     * \a index The starting index into the string
+     *
+     * \a options The options to use
+     *
+     * \a replacedLength Output parameter, contains the length of the replaced string
      *        Not always the same as replacement.length(), when backreferences are used
-     * @return The index at which a match was found, or -1 otherwise
+     *
+     * Returns The index at which a match was found, or -1 otherwise
      */
     static int replace(QString &text, const QString &pattern, const QString &replacement, int index, long options, int *replacedLength);
 
-    /**
+    /*!
      * Returns true if we should restart the search from scratch.
      * Can ask the user, or return false (if we already searched/replaced the
      * whole document without the PromptOnReplace option).
      *
-     * @param forceAsking set to true if the user modified the document during the
+     * \a forceAsking set to true if the user modified the document during the
      * search. In that case it makes sense to restart the search again.
      *
-     * @param showNumMatches set to true if the dialog should show the number of
+     * \a showNumMatches set to true if the dialog should show the number of
      * matches. Set to false if the application provides a "find previous" action,
      * in which case the match count will be erroneous when hitting the end,
      * and we could even be hitting the beginning of the document (so not all
@@ -176,14 +182,14 @@ public:
      */
     bool shouldRestart(bool forceAsking = false, bool showNumMatches = true) const override;
 
-    /**
+    /*!
      * Displays the final dialog telling the user how many replacements were made.
      * Call either this or shouldRestart().
      */
     void displayFinalDialog() const override;
 
 Q_SIGNALS:
-    /**
+    /*!
      * Connect to this signal to implement updating of replaced text during the replace
      * operation.
      *
@@ -192,12 +198,15 @@ Q_SIGNALS:
      * might rely on it), and for performance reasons one should repaint after
      * replace() ONLY if prompt-on-replace was selected.
      *
-     * @param text The text, in which the replacement has already been done
-     * @param replacementIndex Starting index of the matched substring
-     * @param replacedLength Length of the replacement string
-     * @param matchedLength Length of the matched string
+     * \a text The text, in which the replacement has already been done
      *
-     * @since 5.83
+     * \a replacementIndex Starting index of the matched substring
+     *
+     * \a replacedLength Length of the replacement string
+     *
+     * \a matchedLength Length of the matched string
+     *
+     * \since 5.83
      */
     void textReplaced(const QString &text, int replacementIndex, int replacedLength, int matchedLength);
 
