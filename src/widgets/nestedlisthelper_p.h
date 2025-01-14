@@ -8,8 +8,6 @@
 #ifndef NESTEDLISTHELPER_H
 #define NESTEDLISTHELPER_H
 
-//@cond PRIVATE
-
 class QTextEdit;
 
 class QKeyEvent;
@@ -18,31 +16,28 @@ class QTextCursor;
 class QTextList;
 class QTextBlock;
 
-/**
+/*!
+ * \brief Helper class for automatic handling of nested lists in a text edit
  *
- * @short Helper class for automatic handling of nested lists in a text edit
- *
- *
- * @author Stephen Kelly
- * @since 4.1
- * @internal
+ * \since 4.1
+ * \internal
  */
 class NestedListHelper
 {
 public:
-    /**
+    /*!
      * Create a helper
      *
-     * @param te The text edit object to handle lists in.
+     * \a The text edit object to handle lists in.
      */
     explicit NestedListHelper(QTextEdit *te);
 
-    /**
+    /*!
      * Destructor
      */
     ~NestedListHelper();
 
-    /**
+    /*!
      *
      * Handles a key press before it is processed by the text edit widget.
      *
@@ -52,50 +47,51 @@ public:
      *   3. Tab at the beginning of a line OR with a multi-line selection
      * increases nesting level
      *
-     * @param event The event to be handled
-     * @return Whether the event was completely handled by this method.
+     * \a event The event to be handled
+     *
+     * Returns Whether the event was completely handled by this method.
      */
     bool handleKeyPressEvent(QKeyEvent *event);
 
     bool handleAfterDropEvent(QDropEvent *event);
 
-    /**
+    /*!
      * Changes the indent (nesting level) on a current list item or selection
-     * by the value @p delta (typically, +1 or -1)
+     * by the value \a delta (typically, +1 or -1)
      */
     void changeIndent(int delta);
 
-    /**
+    /*!
      * Changes the style of the current list or creates a new list with
      * the specified style.
      *
-     * @param styleIndex The QTextListStyle of the list.
+     * \a styleIndex The QTextListStyle of the list.
      */
     void handleOnBulletType(int styleIndex);
 
-    /**
-     * @brief Check whether the current item in the list may be indented.
+    /*!
+     * \brief Check whether the current item in the list may be indented.
      *
      * An list item must have an item above it on the same or greater level
      * if it can be indented.
      *
      * Also, a block which is currently part of a list can be indented.
      *
-     * @sa canDedent
+     * \sa canDedent
      *
-     * @return Whether the item can be indented.
+     * Returns Whether the item can be indented.
      */
     bool canIndent() const;
 
-    /**
+    /*!
      * \brief Check whether the current item in the list may be dedented.
      *
      * An item may be dedented if it is part of a list.
      * The next item must be at the same or lesser level.
      *
-     * @sa canIndent
+     * \sa canIndent
      *
-     * @return Whether the item can be dedented.
+     * Returns Whether the item can be dedented.
      */
     bool canDedent() const;
 
@@ -108,7 +104,5 @@ private:
 
     QTextEdit *const textEdit;
 };
-
-//@endcond
 
 #endif

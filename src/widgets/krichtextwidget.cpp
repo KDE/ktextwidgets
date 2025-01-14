@@ -26,11 +26,6 @@
 
 // TODO: Add i18n context
 
-/**
-  Private class that helps to provide binary compatibility between releases.
-  @internal
-*/
-//@cond PRIVATE
 class KRichTextWidgetPrivate : public KRichTextEditPrivate
 {
     Q_DECLARE_PUBLIC(KRichTextWidget)
@@ -93,17 +88,17 @@ public:
     // Slots
     //
 
-    /**
-     * @brief Opens a dialog to allow the user to select a foreground color.
+    /*
+     * Opens a dialog to allow the user to select a foreground color.
      */
     void _k_setTextForegroundColor();
 
-    /**
-     * @brief Opens a dialog to allow the user to select a background color.
+    /*
+     * Opens a dialog to allow the user to select a background color.
      */
     void _k_setTextBackgroundColor();
 
-    /**
+    /*
      * Opens a dialog which lets the user turn the currently selected text into
      * a link.
      * If no text is selected, the word under the cursor will be taken.
@@ -112,35 +107,34 @@ public:
      */
     void _k_manageLink();
 
-    /**
+    /*
      * Activates a format painter to allow the user to copy font/text formatting
      * to different parts of the document.
      *
      */
     void _k_formatPainter(bool active);
 
-    /**
-     * @brief Update actions relating to text format (bold, size etc.).
+    /*
+     * Update actions relating to text format (bold, size etc.).
      */
     void updateCharFormatActions(const QTextCharFormat &format);
 
-    /**
+    /*
      * Update actions not covered by text formatting, such as alignment,
      * list style and level.
      */
     void updateMiscActions();
 
-    /**
+    /*
      * Change the style of the current list or create a new list with the style given by @a index.
      */
     void _k_setListStyle(int index);
 
-    /**
-     * Change the heading level of a current line to a level given by @a level
+    /*
+     * Change the heading level of a current line to a level given by level
      */
     void _k_setHeadingLevel(int level);
 };
-//@endcond
 
 void KRichTextWidgetPrivate::init()
 {

@@ -55,13 +55,13 @@ public:
 #endif
     }
 
-    /**
+    /*!
      * Checks whether we should/should not consume a key used as a shortcut.
      * This makes it possible to handle shortcuts in the focused widget before any
      * window-global QAction is triggered.
      */
     bool overrideShortcut(const QKeyEvent *e);
-    /**
+    /*!
      * Actually handle a shortcut event.
      */
     bool handleShortcut(const QKeyEvent *e);
@@ -76,7 +76,7 @@ public:
     void slotFindHighlight(const QString &text, int matchingIndex, int matchingLength);
     void slotReplaceText(const QString &text, int replacementIndex, int /*replacedLength*/, int matchedLength);
 
-    /**
+    /*!
      * Similar to QTextEdit::clear(), only that it is possible to undo this
      * action.
      */
