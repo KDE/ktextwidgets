@@ -17,7 +17,6 @@ class QTextList;
 class QTextBlock;
 
 /*!
- *
  * \brief Helper class for automatic handling of nested lists in a text edit
  *
  * \since 4.1

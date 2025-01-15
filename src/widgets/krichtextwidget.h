@@ -133,12 +133,12 @@ public:
      * \value SupportDirection
      *        Action to change direction of text to Right-To-Left or
      *        Left-To-Right.
-     * \value SupportHeading
+     * \value [since 5.70] SupportHeading
      *        Action to make the current line a heading (up to six levels,
      *        corresponding to HTML h1...h6 tags).  Displayed as a combobox
      *        when inserted into a toolbar.  This is a KSelectAction. The
      *        status is automatically updated when the text cursor is
-     *        moved. \since 5.70
+     *        moved.
      * \value FullSupport
      *        Includes all above actions for full rich text support
      */
@@ -348,10 +348,6 @@ public Q_SLOTS:
     void setActionsEnabled(bool enabled);
 
 protected:
-    /*!
-     * Reimplemented.
-     * Catches a mouse release \a event. Used to know when a selection has been completed.
-     */
     void mouseReleaseEvent(QMouseEvent *event) override;
 
 private:

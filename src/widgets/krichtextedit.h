@@ -29,13 +29,15 @@ class KRichTextEditPrivate;
  * It offers several additional rich text editing functions to KTextEdit and makes
  * them easier to access including:
  *
- * @li Changing fonts, sizes.
- * @li Font formatting, such as bold, underline, italic, foreground and
+ * \list
+ * \li Changing fonts, sizes.
+ * \li Font formatting, such as bold, underline, italic, foreground and
  *     background color.
- * @li Paragraph alignment
- * @li Ability to edit and remove hyperlinks
- * @li Nested list handling
- * @li Simple actions to insert tables. TODO
+ * \li Paragraph alignment
+ * \li Ability to edit and remove hyperlinks
+ * \li Nested list handling
+ * \li Simple actions to insert tables. TODO
+ * \endlist
  *
  * The KRichTextEdit can be in two modes: Rich text mode and plain text mode.
  * Calling functions which modify the format/style of the text will automatically
@@ -87,9 +89,6 @@ public:
      */
     explicit KRichTextEdit(QWidget *parent = nullptr);
 
-    /*!
-     * Destructor.
-     */
     ~KRichTextEdit() override;
 
     /*!
@@ -99,12 +98,12 @@ public:
     void enableRichTextMode();
 
     /*!
-     * Returns The current text mode
+     * Returns the current text mode
      */
     Mode textMode() const;
 
     /*!
-     * Returns The plain text string if in plain text mode or the HTML code
+     * Returns the plain text string if in plain text mode or the HTML code
      *         if in rich text mode. The text is not word-wrapped.
      */
     QString textOrHtml() const;
@@ -123,7 +122,6 @@ public:
      * if the cursor is not on a link.
      *
      * \sa currentLinkUrl
-     * Returns The link text
      */
     QString currentLinkText() const;
 
@@ -132,13 +130,12 @@ public:
      * empty string if the cursor is not on a link.
      *
      * \sa currentLinkText
-     * Returns The link target URL
      */
     QString currentLinkUrl() const;
 
     /*!
-     * If the cursor is on a link, sets the @a cursor to a selection of the
-     * text of the link. If the @a cursor is not on a link, selects the current word
+     * If the cursor is on a link, sets the \a cursor to a selection of the
+     * text of the link. If the \a cursor is not on a link, selects the current word
      * or existing selection.
      *
      * \a cursor The cursor to use to select the text.
@@ -155,8 +152,8 @@ public:
     void selectLinkText() const;
 
     /*!
-     * Replaces the current selection with a hyperlink with the link URL @a linkUrl
-     * and the link text @a linkText.
+     * Replaces the current selection with a hyperlink with the link URL \a linkUrl
+     * and the link text \a linkText.
      *
      * \sa selectLinkText
      * \sa currentLinkUrl
@@ -221,7 +218,7 @@ public Q_SLOTS:
 
     /*!
      * Sets the list style of the current list, or creates a new list using the
-     * current block. The @a _styleindex corresponds to the QTextListFormat::Style
+     * current block. The \a _styleindex corresponds to the QTextListFormat::Style
      *
      * \a _styleIndex The list will get this style
      */
@@ -242,21 +239,21 @@ public Q_SLOTS:
     void indentListLess();
 
     /*!
-     * Sets the current word or selection to the font family @a fontFamily
+     * Sets the current word or selection to the font family \a fontFamily
      *
      * \a fontFamily The text's font family will be changed to this one
      */
     void setFontFamily(const QString &fontFamily);
 
     /*!
-     * Sets the current word or selection to the font size @a size
+     * Sets the current word or selection to the font size \a size
      *
      * \a size The text's font will get this size
      */
     void setFontSize(int size);
 
     /*!
-     * Sets the current word or selection to the font @a font
+     * Sets the current word or selection to the font \a font
      *
      * \a font the font of the text will be set to this font
      */
@@ -295,14 +292,14 @@ public Q_SLOTS:
     void setTextStrikeOut(bool strikeOut);
 
     /*!
-     * Sets the foreground color of the current word or selection to @a color.
+     * Sets the foreground color of the current word or selection to \a color.
      *
      * \a color The text will get this background color
      */
     void setTextForegroundColor(const QColor &color);
 
     /*!
-     * Sets the background color of the current word or selection to @a color.
+     * Sets the background color of the current word or selection to \a color.
      *
      * \a color The text will get this foreground color
      */
@@ -369,10 +366,6 @@ Q_SIGNALS:
     void textModeChanged(KRichTextEdit::Mode mode);
 
 protected:
-    /*!
-     * Reimplemented.
-     * Catches a key press \a event. Used to handle some key presses on lists.
-     */
     void keyPressEvent(QKeyEvent *event) override;
 
 protected:

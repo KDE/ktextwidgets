@@ -43,7 +43,15 @@ class KTextEditPrivate;
 class KTEXTWIDGETS_EXPORT KTextEdit : public QTextEdit // krazy:exclude=qclasses
 {
     Q_OBJECT
+
+    /*!
+     * \property KTextEdit::checkSpellingEnabled
+     */
     Q_PROPERTY(bool checkSpellingEnabled READ checkSpellingEnabled WRITE setCheckSpellingEnabled)
+
+    /*!
+     * \property KTextEdit::spellCheckingLanguage
+     */
     Q_PROPERTY(QString spellCheckingLanguage READ spellCheckingLanguage WRITE setSpellCheckingLanguage)
 
 public:
@@ -301,40 +309,20 @@ public Q_SLOTS:
     void clearDecorator();
 
 protected Q_SLOTS:
-    /*!
-     * \since 4.1
-     */
     void slotDoReplace();
     void slotReplaceNext();
     void slotDoFind();
     void slotFind();
     void slotFindNext();
-    /*!
-     * \since 5.11
-     */
     void slotFindPrevious();
     void slotReplace();
-    /*!
-     * \since 4.3
-     */
     void slotSpeakText();
 
 protected:
-    /*!
-     * Reimplemented to catch "delete word" shortcut events.
-     * Returns true if the event was recognized and processed.
-     */
     bool event(QEvent *) override;
 
-    /*!
-     * Reimplemented for internal reasons
-     */
     void keyPressEvent(QKeyEvent *) override;
 
-    /*!
-     * Reimplemented to instantiate a KDictSpellingHighlighter, if
-     * spellchecking is enabled.
-     */
     void focusInEvent(QFocusEvent *) override;
 
     /*!
@@ -349,10 +337,6 @@ protected:
      */
     virtual void deleteWordForward();
 
-    /*!
-     * Reimplemented from QTextEdit to add spelling related items
-     * when appropriate.
-     */
     void contextMenuEvent(QContextMenuEvent *) override;
 
 protected:
