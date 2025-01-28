@@ -12,7 +12,7 @@ portingAid: false
 deprecated: false
 release: true
 libraries:
- - cmake: "KF6::TextWidgets"
+    - cmake: "KF6::TextWidgets"
 cmakename: KF6TextWidgets
 
 public_lib: true
