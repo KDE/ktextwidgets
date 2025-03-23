@@ -62,7 +62,7 @@ add_feature_info(DESIGNERPLUGIN ${BUILD_DESIGNERPLUGIN} "Build plugin for Qt Des
 add_definitions(-DTRANSLATION_DOMAIN=\"ktextwidgets6\")
 
 ecm_set_disabled_deprecation_versions(
-    QT 6.8
+    QT 6.9
     KF 6.12
 )
 
