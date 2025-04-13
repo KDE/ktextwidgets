@@ -14,7 +14,6 @@
 #include "klinkdialog_p.h"
 
 // kdelibs includes
-#include <KColorScheme>
 #include <KCursor>
 
 // Qt includes
@@ -507,8 +506,8 @@ void KRichTextEdit::updateLink(const QString &linkUrl, const QString &linkText)
         // Link formatting does not get applied immediately when setAnchor(true)
         // is called.  So the formatting needs to be applied manually.
         format.setUnderlineStyle(QTextCharFormat::SingleUnderline);
-        format.setUnderlineColor(KColorScheme(QPalette::Active, KColorScheme::View).foreground(KColorScheme::LinkText).color());
-        format.setForeground(KColorScheme(QPalette::Active, KColorScheme::View).foreground(KColorScheme::LinkText).color());
+        format.setUnderlineColor(palette().link().color());
+        format.setForeground(palette().link());
         d->activateRichText();
     } else {
         // Remove link details

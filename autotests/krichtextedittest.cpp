@@ -7,7 +7,6 @@
 
 #include "krichtextedittest.h"
 
-#include <KColorScheme>
 #include <krichtextedit.h>
 
 #include <QFont>
@@ -64,8 +63,8 @@ void KRichTextEditTest::testUpdateLinkAdd()
     QCOMPARE(edit.fontWeight(), static_cast<int>(QFont::Bold));
     QCOMPARE(edit.fontUnderline(), true);
     charFormat = cursor.charFormat();
-    QCOMPARE(charFormat.foreground(), QBrush(KColorScheme(QPalette::Active, KColorScheme::View).foreground(KColorScheme::LinkText).color()));
-    QCOMPARE(charFormat.underlineColor(), KColorScheme(QPalette::Active, KColorScheme::View).foreground(KColorScheme::LinkText).color());
+    QCOMPARE(charFormat.foreground(), edit.palette().link());
+    QCOMPARE(charFormat.underlineColor(), edit.palette().link().color());
     QCOMPARE(charFormat.underlineStyle(), QTextCharFormat::SingleUnderline);
 }
 

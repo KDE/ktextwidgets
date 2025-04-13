@@ -11,7 +11,6 @@
 #include "krichtextedit_p.h"
 
 // KDE includes
-#include <KColorScheme>
 #include <KFontAction>
 #include <KFontSizeAction>
 #include <KLocalizedString>
@@ -632,7 +631,7 @@ void KRichTextWidgetPrivate::_k_setTextForegroundColor()
     Q_Q(KRichTextWidget);
 
     const QColor currentColor = q->textColor();
-    const QColor defaultColor = KColorScheme(QPalette::Active, KColorScheme::View).foreground().color();
+    const QColor defaultColor = q->palette().color(QPalette::Active, QPalette::Text);
 
     const QColor selectedColor = QColorDialog::getColor(currentColor.isValid() ? currentColor : defaultColor, q);
 
@@ -649,7 +648,7 @@ void KRichTextWidgetPrivate::_k_setTextBackgroundColor()
 
     QTextCharFormat fmt = q->textCursor().charFormat();
     const QColor currentColor = fmt.background().color();
-    const QColor defaultColor = KColorScheme(QPalette::Active, KColorScheme::View).foreground().color();
+    const QColor defaultColor = q->palette().color(QPalette::Active, QPalette::Text);
 
     const QColor selectedColor = QColorDialog::getColor(currentColor.isValid() ? currentColor : defaultColor, q);
 
