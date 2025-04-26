@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-08 00:36+0000\n"
+"POT-Creation-Date: 2025-04-26 00:39+0000\n"
 "PO-Revision-Date: 2006-01-04 13:32+0800\n"
 "Last-Translator: Abel Cheung <abel@oaka.org>\n"
 "Language-Team: Chinese (Hong Kong) <community@linuxhall.org>\n"
@@ -459,14 +459,14 @@ msgstr ""
 "\n"
 "請更正。"
 
-#: widgets/krichtextwidget.cpp:207
+#: widgets/krichtextwidget.cpp:206
 #, fuzzy, kde-format
 #| msgid "Text Completion"
 msgctxt "@action"
 msgid "Text &Color…"
 msgstr "文字完成"
 
-#: widgets/krichtextwidget.cpp:208
+#: widgets/krichtextwidget.cpp:207
 #, fuzzy, kde-format
 #| msgctxt "palette name"
 #| msgid "Web Colors"
@@ -474,74 +474,74 @@ msgctxt "@label stroke color"
 msgid "Color"
 msgstr "網頁色彩"
 
-#: widgets/krichtextwidget.cpp:221
+#: widgets/krichtextwidget.cpp:220
 #, kde-format
 msgctxt "@action"
 msgid "Text &Highlight…"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:234
+#: widgets/krichtextwidget.cpp:233
 #, fuzzy, kde-format
 #| msgid "&Font"
 msgctxt "@action"
 msgid "&Font"
 msgstr "字型(&F)"
 
-#: widgets/krichtextwidget.cpp:244
+#: widgets/krichtextwidget.cpp:243
 #, fuzzy, kde-format
 #| msgid "Font Size"
 msgctxt "@action"
 msgid "Font &Size"
 msgstr "字型大小"
 
-#: widgets/krichtextwidget.cpp:253
+#: widgets/krichtextwidget.cpp:252
 #, fuzzy, kde-format
 #| msgid "Bold"
 msgctxt "@action boldify selected text"
 msgid "&Bold"
 msgstr "粗體"
 
-#: widgets/krichtextwidget.cpp:267
+#: widgets/krichtextwidget.cpp:266
 #, fuzzy, kde-format
 #| msgid "Italic"
 msgctxt "@action italicize selected text"
 msgid "&Italic"
 msgstr "斜體"
 
-#: widgets/krichtextwidget.cpp:281
+#: widgets/krichtextwidget.cpp:280
 #, fuzzy, kde-format
 #| msgid "&Underline"
 msgctxt "@action underline selected text"
 msgid "&Underline"
 msgstr "底線(&U)"
 
-#: widgets/krichtextwidget.cpp:294
+#: widgets/krichtextwidget.cpp:293
 #, fuzzy, kde-format
 msgctxt "@action"
 msgid "&Strike Out"
 msgstr "單步執行"
 
-#: widgets/krichtextwidget.cpp:308
+#: widgets/krichtextwidget.cpp:307
 #, fuzzy, kde-format
 #| msgid "Align"
 msgctxt "@action"
 msgid "Align &Left"
 msgstr "排列"
 
-#: widgets/krichtextwidget.cpp:309
+#: widgets/krichtextwidget.cpp:308
 #, fuzzy, kde-format
 #| msgid "Left"
 msgctxt "@label left justify"
 msgid "Left"
 msgstr "左"
 
-#: widgets/krichtextwidget.cpp:314
+#: widgets/krichtextwidget.cpp:313
 #, kde-format
 msgctxt "@action"
 msgid "Align &Center"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:315
+#: widgets/krichtextwidget.cpp:314
 #, fuzzy, kde-format
 #| msgctxt "QAccel"
 #| msgid "Enter"
@@ -549,179 +549,179 @@ msgctxt "@label center justify"
 msgid "Center"
 msgstr "Enter"
 
-#: widgets/krichtextwidget.cpp:320
+#: widgets/krichtextwidget.cpp:319
 #, kde-format
 msgctxt "@action"
 msgid "Align &Right"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:321
+#: widgets/krichtextwidget.cpp:320
 #, fuzzy, kde-format
 #| msgid "Right"
 msgctxt "@label right justify"
 msgid "Right"
 msgstr "右"
 
-#: widgets/krichtextwidget.cpp:326
+#: widgets/krichtextwidget.cpp:325
 #, kde-format
 msgctxt "@action"
 msgid "&Justify"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:327
+#: widgets/krichtextwidget.cpp:326
 #, kde-format
 msgctxt "@label justify fill"
 msgid "Justify"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:345
+#: widgets/krichtextwidget.cpp:344
 #, kde-format
 msgctxt "@action"
 msgid "Left-to-Right"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:346
+#: widgets/krichtextwidget.cpp:345
 #, kde-format
 msgctxt "@label left-to-right"
 msgid "Left-to-Right"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:351
+#: widgets/krichtextwidget.cpp:350
 #, kde-format
 msgctxt "@action"
 msgid "Right-to-Left"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:352
+#: widgets/krichtextwidget.cpp:351
 #, kde-format
 msgctxt "@label right-to-left"
 msgid "Right-to-Left"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:366
+#: widgets/krichtextwidget.cpp:365
 #, kde-format
 msgctxt "@title:menu"
 msgid "List Style"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:369
+#: widgets/krichtextwidget.cpp:368
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "@item:inmenu no list style"
 msgid "None"
 msgstr "無"
 
-#: widgets/krichtextwidget.cpp:370
+#: widgets/krichtextwidget.cpp:369
 #, fuzzy, kde-format
 #| msgid "Discard"
 msgctxt "@item:inmenu disc list style"
 msgid "Disc"
 msgstr "丟棄"
 
-#: widgets/krichtextwidget.cpp:371
+#: widgets/krichtextwidget.cpp:370
 #, fuzzy, kde-format
 #| msgid "File"
 msgctxt "@item:inmenu circle list style"
 msgid "Circle"
 msgstr "檔案"
 
-#: widgets/krichtextwidget.cpp:372
+#: widgets/krichtextwidget.cpp:371
 #, fuzzy, kde-format
 msgctxt "@item:inmenu square list style"
 msgid "Square"
 msgstr "資源"
 
-#: widgets/krichtextwidget.cpp:373
+#: widgets/krichtextwidget.cpp:372
 #, kde-format
 msgctxt "@item:inmenu numbered lists"
 msgid "123"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:374
+#: widgets/krichtextwidget.cpp:373
 #, fuzzy, kde-format
 #| msgid "Sab"
 msgctxt "@item:inmenu lowercase abc lists"
 msgid "abc"
 msgstr "Sab"
 
-#: widgets/krichtextwidget.cpp:375
+#: widgets/krichtextwidget.cpp:374
 #, fuzzy, kde-format
 #| msgid "TAB"
 msgctxt "@item:inmenu uppercase abc lists"
 msgid "ABC"
 msgstr "跳格"
 
-#: widgets/krichtextwidget.cpp:376
+#: widgets/krichtextwidget.cpp:375
 #, kde-format
 msgctxt "@item:inmenu lower case roman numerals"
 msgid "i ii iii"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:377
+#: widgets/krichtextwidget.cpp:376
 #, kde-format
 msgctxt "@item:inmenu upper case roman numerals"
 msgid "I II III"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:397
+#: widgets/krichtextwidget.cpp:396
 #, kde-format
 msgctxt "@action"
 msgid "Increase Indent"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:409
+#: widgets/krichtextwidget.cpp:408
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Indent"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:421
+#: widgets/krichtextwidget.cpp:420
 #, kde-format
 msgctxt "@action"
 msgid "Insert Rule Line"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:430
+#: widgets/krichtextwidget.cpp:429
 #, fuzzy, kde-format
 #| msgid "Line up"
 msgctxt "@action"
 msgid "Link"
 msgstr "對齊"
 
-#: widgets/krichtextwidget.cpp:442
+#: widgets/krichtextwidget.cpp:441
 #, fuzzy, kde-format
 #| msgid "Formatted Name"
 msgctxt "@action"
 msgid "Format Painter"
 msgstr "正式名稱"
 
-#: widgets/krichtextwidget.cpp:454
+#: widgets/krichtextwidget.cpp:453
 #, fuzzy, kde-format
 #| msgid "Find Text"
 msgctxt "@action"
 msgid "To Plain Text"
 msgstr "尋找文字"
 
-#: widgets/krichtextwidget.cpp:463
+#: widgets/krichtextwidget.cpp:462
 #, fuzzy, kde-format
 msgctxt "@action"
 msgid "Subscript"
 msgstr "語文(&I)"
 
-#: widgets/krichtextwidget.cpp:468
+#: widgets/krichtextwidget.cpp:467
 #, fuzzy, kde-format
 msgctxt "@action"
 msgid "Superscript"
 msgstr "語文(&I)"
 
-#: widgets/krichtextwidget.cpp:480
+#: widgets/krichtextwidget.cpp:479
 #, fuzzy, kde-format
 #| msgid "Headline"
 msgctxt "@title:menu"
 msgid "Heading Level"
 msgstr "大標題"
 
-#: widgets/krichtextwidget.cpp:481
+#: widgets/krichtextwidget.cpp:480
 #, fuzzy, kde-format
 #| msgctxt "QFont"
 #| msgid "Latin"
@@ -729,40 +729,40 @@ msgctxt "@item:inmenu no heading"
 msgid "Basic text"
 msgstr "拉丁文"
 
-#: widgets/krichtextwidget.cpp:482
+#: widgets/krichtextwidget.cpp:481
 #, fuzzy, kde-format
 msgctxt "@item:inmenu heading level 1 (largest)"
 msgid "Title"
 msgstr "泰米爾文"
 
-#: widgets/krichtextwidget.cpp:483
+#: widgets/krichtextwidget.cpp:482
 #, fuzzy, kde-format
 #| msgid "Untitled"
 msgctxt "@item:inmenu heading level 2"
 msgid "Subtitle"
 msgstr "未命名"
 
-#: widgets/krichtextwidget.cpp:484
+#: widgets/krichtextwidget.cpp:483
 #, fuzzy, kde-format
 #| msgid "Action"
 msgctxt "@item:inmenu heading level 3"
 msgid "Section"
 msgstr "動作"
 
-#: widgets/krichtextwidget.cpp:485
+#: widgets/krichtextwidget.cpp:484
 #, fuzzy, kde-format
 #| msgid "Question"
 msgctxt "@item:inmenu heading level 4"
 msgid "Subsection"
 msgstr "問題"
 
-#: widgets/krichtextwidget.cpp:486
+#: widgets/krichtextwidget.cpp:485
 #, kde-format
 msgctxt "@item:inmenu heading level 5"
 msgid "Paragraph"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:487
+#: widgets/krichtextwidget.cpp:486
 #, kde-format
 msgctxt "@item:inmenu heading level 6 (smallest)"
 msgid "Subparagraph"

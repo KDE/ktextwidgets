@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-08 00:36+0000\n"
+"POT-Creation-Date: 2025-04-26 00:39+0000\n"
 "PO-Revision-Date: 2020-01-12 22:19+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -447,7 +447,7 @@ msgstr ""
 "\n"
 "Prašome pataisyti."
 
-#: widgets/krichtextwidget.cpp:207
+#: widgets/krichtextwidget.cpp:206
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Text &Color..."
@@ -455,13 +455,13 @@ msgctxt "@action"
 msgid "Text &Color…"
 msgstr "Tekstas ir &spalva..."
 
-#: widgets/krichtextwidget.cpp:208
+#: widgets/krichtextwidget.cpp:207
 #, kde-format
 msgctxt "@label stroke color"
 msgid "Color"
 msgstr "Spalva"
 
-#: widgets/krichtextwidget.cpp:221
+#: widgets/krichtextwidget.cpp:220
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Text &Highlight..."
@@ -469,253 +469,253 @@ msgctxt "@action"
 msgid "Text &Highlight…"
 msgstr "Tekstas ir žy&mėjimas..."
 
-#: widgets/krichtextwidget.cpp:234
+#: widgets/krichtextwidget.cpp:233
 #, kde-format
 msgctxt "@action"
 msgid "&Font"
 msgstr "Š&riftas"
 
-#: widgets/krichtextwidget.cpp:244
+#: widgets/krichtextwidget.cpp:243
 #, kde-format
 msgctxt "@action"
 msgid "Font &Size"
 msgstr "Šrifto &dydis"
 
-#: widgets/krichtextwidget.cpp:253
+#: widgets/krichtextwidget.cpp:252
 #, kde-format
 msgctxt "@action boldify selected text"
 msgid "&Bold"
 msgstr "&Juodas"
 
-#: widgets/krichtextwidget.cpp:267
+#: widgets/krichtextwidget.cpp:266
 #, kde-format
 msgctxt "@action italicize selected text"
 msgid "&Italic"
 msgstr "&Kursyvas"
 
-#: widgets/krichtextwidget.cpp:281
+#: widgets/krichtextwidget.cpp:280
 #, kde-format
 msgctxt "@action underline selected text"
 msgid "&Underline"
 msgstr "&Pabrauktas"
 
-#: widgets/krichtextwidget.cpp:294
+#: widgets/krichtextwidget.cpp:293
 #, kde-format
 msgctxt "@action"
 msgid "&Strike Out"
 msgstr "&Išbrauktas"
 
-#: widgets/krichtextwidget.cpp:308
+#: widgets/krichtextwidget.cpp:307
 #, kde-format
 msgctxt "@action"
 msgid "Align &Left"
 msgstr "Lygiuoti &kairėje"
 
-#: widgets/krichtextwidget.cpp:309
+#: widgets/krichtextwidget.cpp:308
 #, kde-format
 msgctxt "@label left justify"
 msgid "Left"
 msgstr "Kairėn"
 
-#: widgets/krichtextwidget.cpp:314
+#: widgets/krichtextwidget.cpp:313
 #, kde-format
 msgctxt "@action"
 msgid "Align &Center"
 msgstr "Lygiuoti &centre"
 
-#: widgets/krichtextwidget.cpp:315
+#: widgets/krichtextwidget.cpp:314
 #, kde-format
 msgctxt "@label center justify"
 msgid "Center"
 msgstr "Centre"
 
-#: widgets/krichtextwidget.cpp:320
+#: widgets/krichtextwidget.cpp:319
 #, kde-format
 msgctxt "@action"
 msgid "Align &Right"
 msgstr "Lygiuoti d&ešinėje"
 
-#: widgets/krichtextwidget.cpp:321
+#: widgets/krichtextwidget.cpp:320
 #, kde-format
 msgctxt "@label right justify"
 msgid "Right"
 msgstr "Dešinėn"
 
-#: widgets/krichtextwidget.cpp:326
+#: widgets/krichtextwidget.cpp:325
 #, kde-format
 msgctxt "@action"
 msgid "&Justify"
 msgstr "&Abipusė lygiuotė"
 
-#: widgets/krichtextwidget.cpp:327
+#: widgets/krichtextwidget.cpp:326
 #, kde-format
 msgctxt "@label justify fill"
 msgid "Justify"
 msgstr "Abipusė lygiuotė"
 
-#: widgets/krichtextwidget.cpp:345
+#: widgets/krichtextwidget.cpp:344
 #, kde-format
 msgctxt "@action"
 msgid "Left-to-Right"
 msgstr "Iš kairės į dešinę"
 
-#: widgets/krichtextwidget.cpp:346
+#: widgets/krichtextwidget.cpp:345
 #, kde-format
 msgctxt "@label left-to-right"
 msgid "Left-to-Right"
 msgstr "Iš kairės į dešinę"
 
-#: widgets/krichtextwidget.cpp:351
+#: widgets/krichtextwidget.cpp:350
 #, kde-format
 msgctxt "@action"
 msgid "Right-to-Left"
 msgstr "Iš dešinės į kairę"
 
-#: widgets/krichtextwidget.cpp:352
+#: widgets/krichtextwidget.cpp:351
 #, kde-format
 msgctxt "@label right-to-left"
 msgid "Right-to-Left"
 msgstr "Iš dešinės į kairę"
 
-#: widgets/krichtextwidget.cpp:366
+#: widgets/krichtextwidget.cpp:365
 #, kde-format
 msgctxt "@title:menu"
 msgid "List Style"
 msgstr "Sąrašo stilius"
 
-#: widgets/krichtextwidget.cpp:369
+#: widgets/krichtextwidget.cpp:368
 #, kde-format
 msgctxt "@item:inmenu no list style"
 msgid "None"
 msgstr "Jokio"
 
-#: widgets/krichtextwidget.cpp:370
+#: widgets/krichtextwidget.cpp:369
 #, kde-format
 msgctxt "@item:inmenu disc list style"
 msgid "Disc"
 msgstr "Diskas"
 
-#: widgets/krichtextwidget.cpp:371
+#: widgets/krichtextwidget.cpp:370
 #, kde-format
 msgctxt "@item:inmenu circle list style"
 msgid "Circle"
 msgstr "Apskritimas"
 
-#: widgets/krichtextwidget.cpp:372
+#: widgets/krichtextwidget.cpp:371
 #, kde-format
 msgctxt "@item:inmenu square list style"
 msgid "Square"
 msgstr "Kvadratas"
 
-#: widgets/krichtextwidget.cpp:373
+#: widgets/krichtextwidget.cpp:372
 #, kde-format
 msgctxt "@item:inmenu numbered lists"
 msgid "123"
 msgstr "123"
 
-#: widgets/krichtextwidget.cpp:374
+#: widgets/krichtextwidget.cpp:373
 #, kde-format
 msgctxt "@item:inmenu lowercase abc lists"
 msgid "abc"
 msgstr "abc"
 
-#: widgets/krichtextwidget.cpp:375
+#: widgets/krichtextwidget.cpp:374
 #, kde-format
 msgctxt "@item:inmenu uppercase abc lists"
 msgid "ABC"
 msgstr "ABC"
 
-#: widgets/krichtextwidget.cpp:376
+#: widgets/krichtextwidget.cpp:375
 #, kde-format
 msgctxt "@item:inmenu lower case roman numerals"
 msgid "i ii iii"
 msgstr "i ii iii"
 
-#: widgets/krichtextwidget.cpp:377
+#: widgets/krichtextwidget.cpp:376
 #, kde-format
 msgctxt "@item:inmenu upper case roman numerals"
 msgid "I II III"
 msgstr "I II III"
 
-#: widgets/krichtextwidget.cpp:397
+#: widgets/krichtextwidget.cpp:396
 #, kde-format
 msgctxt "@action"
 msgid "Increase Indent"
 msgstr "Didinti atitraukimą"
 
-#: widgets/krichtextwidget.cpp:409
+#: widgets/krichtextwidget.cpp:408
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Indent"
 msgstr "Sumažinti atitraukimą"
 
-#: widgets/krichtextwidget.cpp:421
+#: widgets/krichtextwidget.cpp:420
 #, kde-format
 msgctxt "@action"
 msgid "Insert Rule Line"
 msgstr "Įterpti liniuotės liniją"
 
-#: widgets/krichtextwidget.cpp:430
+#: widgets/krichtextwidget.cpp:429
 #, kde-format
 msgctxt "@action"
 msgid "Link"
 msgstr "Nuoroda"
 
-#: widgets/krichtextwidget.cpp:442
+#: widgets/krichtextwidget.cpp:441
 #, kde-format
 msgctxt "@action"
 msgid "Format Painter"
 msgstr "Formato teptukas"
 
-#: widgets/krichtextwidget.cpp:454
+#: widgets/krichtextwidget.cpp:453
 #, kde-format
 msgctxt "@action"
 msgid "To Plain Text"
 msgstr "Į paprastą tekstą"
 
-#: widgets/krichtextwidget.cpp:463
+#: widgets/krichtextwidget.cpp:462
 #, kde-format
 msgctxt "@action"
 msgid "Subscript"
 msgstr "Apat. indeksas"
 
-#: widgets/krichtextwidget.cpp:468
+#: widgets/krichtextwidget.cpp:467
 #, kde-format
 msgctxt "@action"
 msgid "Superscript"
 msgstr "Virš. indeksas"
 
-#: widgets/krichtextwidget.cpp:480
+#: widgets/krichtextwidget.cpp:479
 #, kde-format
 msgctxt "@title:menu"
 msgid "Heading Level"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:481
+#: widgets/krichtextwidget.cpp:480
 #, kde-format
 msgctxt "@item:inmenu no heading"
 msgid "Basic text"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:482
+#: widgets/krichtextwidget.cpp:481
 #, kde-format
 msgctxt "@item:inmenu heading level 1 (largest)"
 msgid "Title"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:483
+#: widgets/krichtextwidget.cpp:482
 #, kde-format
 msgctxt "@item:inmenu heading level 2"
 msgid "Subtitle"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:484
+#: widgets/krichtextwidget.cpp:483
 #, kde-format
 msgctxt "@item:inmenu heading level 3"
 msgid "Section"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:485
+#: widgets/krichtextwidget.cpp:484
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Subscript"
@@ -723,13 +723,13 @@ msgctxt "@item:inmenu heading level 4"
 msgid "Subsection"
 msgstr "Apat. indeksas"
 
-#: widgets/krichtextwidget.cpp:486
+#: widgets/krichtextwidget.cpp:485
 #, kde-format
 msgctxt "@item:inmenu heading level 5"
 msgid "Paragraph"
 msgstr ""
 
-#: widgets/krichtextwidget.cpp:487
+#: widgets/krichtextwidget.cpp:486
 #, kde-format
 msgctxt "@item:inmenu heading level 6 (smallest)"
 msgid "Subparagraph"
