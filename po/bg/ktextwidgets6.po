@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-26 00:39+0000\n"
+"POT-Creation-Date: 2025-05-05 00:39+0000\n"
 "PO-Revision-Date: 2024-11-09 20:09+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -19,17 +19,17 @@ msgstr ""
 "X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: dialogs/klinkdialog.cpp:39
+#: dialogs/klinkdialog.cpp:33
 #, kde-format
 msgid "Manage Link"
 msgstr "Запис на адреса"
 
-#: dialogs/klinkdialog.cpp:46
+#: dialogs/klinkdialog.cpp:40
 #, kde-format
 msgid "Link Text:"
 msgstr "Текст на връзката:"
 
-#: dialogs/klinkdialog.cpp:49
+#: dialogs/klinkdialog.cpp:43
 #, kde-format
 msgid "Link URL:"
 msgstr "Адрес на връзката:"
@@ -431,283 +431,283 @@ msgstr ""
 "\n"
 "Моля, поправете грешката."
 
-#: widgets/krichtextwidget.cpp:206
+#: widgets/krichtextwidget.cpp:200
 #, kde-format
 msgctxt "@action"
 msgid "Text &Color…"
 msgstr "Цвят на &текст…"
 
-#: widgets/krichtextwidget.cpp:207
+#: widgets/krichtextwidget.cpp:201
 #, kde-format
 msgctxt "@label stroke color"
 msgid "Color"
 msgstr "Цвят"
 
-#: widgets/krichtextwidget.cpp:220
+#: widgets/krichtextwidget.cpp:214
 #, kde-format
 msgctxt "@action"
 msgid "Text &Highlight…"
 msgstr "&Открояване на текст…"
 
-#: widgets/krichtextwidget.cpp:233
+#: widgets/krichtextwidget.cpp:227
 #, kde-format
 msgctxt "@action"
 msgid "&Font"
 msgstr "&Шрифт"
 
-#: widgets/krichtextwidget.cpp:243
+#: widgets/krichtextwidget.cpp:237
 #, kde-format
 msgctxt "@action"
 msgid "Font &Size"
 msgstr "Ра&змер на иконите"
 
-#: widgets/krichtextwidget.cpp:252
+#: widgets/krichtextwidget.cpp:246
 #, kde-format
 msgctxt "@action boldify selected text"
 msgid "&Bold"
 msgstr "&Получер"
 
-#: widgets/krichtextwidget.cpp:266
+#: widgets/krichtextwidget.cpp:260
 #, kde-format
 msgctxt "@action italicize selected text"
 msgid "&Italic"
 msgstr "&Курсив"
 
-#: widgets/krichtextwidget.cpp:280
+#: widgets/krichtextwidget.cpp:274
 #, kde-format
 msgctxt "@action underline selected text"
 msgid "&Underline"
 msgstr "&Подчертаване"
 
-#: widgets/krichtextwidget.cpp:293
+#: widgets/krichtextwidget.cpp:287
 #, kde-format
 msgctxt "@action"
 msgid "&Strike Out"
 msgstr "&Зачертан"
 
-#: widgets/krichtextwidget.cpp:307
+#: widgets/krichtextwidget.cpp:301
 #, kde-format
 msgctxt "@action"
 msgid "Align &Left"
 msgstr "&Ляво подравняване"
 
-#: widgets/krichtextwidget.cpp:308
+#: widgets/krichtextwidget.cpp:302
 #, kde-format
 msgctxt "@label left justify"
 msgid "Left"
 msgstr "Ляво"
 
-#: widgets/krichtextwidget.cpp:313
+#: widgets/krichtextwidget.cpp:307
 #, kde-format
 msgctxt "@action"
 msgid "Align &Center"
 msgstr "&Центрирано"
 
-#: widgets/krichtextwidget.cpp:314
+#: widgets/krichtextwidget.cpp:308
 #, kde-format
 msgctxt "@label center justify"
 msgid "Center"
 msgstr "Център"
 
-#: widgets/krichtextwidget.cpp:319
+#: widgets/krichtextwidget.cpp:313
 #, kde-format
 msgctxt "@action"
 msgid "Align &Right"
 msgstr "&Дясно подравняване"
 
-#: widgets/krichtextwidget.cpp:320
+#: widgets/krichtextwidget.cpp:314
 #, kde-format
 msgctxt "@label right justify"
 msgid "Right"
 msgstr "Дясно"
 
-#: widgets/krichtextwidget.cpp:325
+#: widgets/krichtextwidget.cpp:319
 #, kde-format
 msgctxt "@action"
 msgid "&Justify"
 msgstr "&Двустранно подравняване"
 
-#: widgets/krichtextwidget.cpp:326
+#: widgets/krichtextwidget.cpp:320
 #, kde-format
 msgctxt "@label justify fill"
 msgid "Justify"
 msgstr "Двустранно"
 
-#: widgets/krichtextwidget.cpp:344
+#: widgets/krichtextwidget.cpp:338
 #, kde-format
 msgctxt "@action"
 msgid "Left-to-Right"
 msgstr "Отляво надясно"
 
-#: widgets/krichtextwidget.cpp:345
+#: widgets/krichtextwidget.cpp:339
 #, kde-format
 msgctxt "@label left-to-right"
 msgid "Left-to-Right"
 msgstr "Отляво надясно"
 
-#: widgets/krichtextwidget.cpp:350
+#: widgets/krichtextwidget.cpp:344
 #, kde-format
 msgctxt "@action"
 msgid "Right-to-Left"
 msgstr "Отдясно наляво"
 
-#: widgets/krichtextwidget.cpp:351
+#: widgets/krichtextwidget.cpp:345
 #, kde-format
 msgctxt "@label right-to-left"
 msgid "Right-to-Left"
 msgstr "Отдясно наляво"
 
-#: widgets/krichtextwidget.cpp:365
+#: widgets/krichtextwidget.cpp:359
 #, kde-format
 msgctxt "@title:menu"
 msgid "List Style"
 msgstr "Стил на списък"
 
-#: widgets/krichtextwidget.cpp:368
+#: widgets/krichtextwidget.cpp:362
 #, kde-format
 msgctxt "@item:inmenu no list style"
 msgid "None"
 msgstr "Без"
 
-#: widgets/krichtextwidget.cpp:369
+#: widgets/krichtextwidget.cpp:363
 #, kde-format
 msgctxt "@item:inmenu disc list style"
 msgid "Disc"
 msgstr "Точки"
 
-#: widgets/krichtextwidget.cpp:370
+#: widgets/krichtextwidget.cpp:364
 #, kde-format
 msgctxt "@item:inmenu circle list style"
 msgid "Circle"
 msgstr "Кръгове"
 
-#: widgets/krichtextwidget.cpp:371
+#: widgets/krichtextwidget.cpp:365
 #, kde-format
 msgctxt "@item:inmenu square list style"
 msgid "Square"
 msgstr "Квадрати"
 
-#: widgets/krichtextwidget.cpp:372
+#: widgets/krichtextwidget.cpp:366
 #, kde-format
 msgctxt "@item:inmenu numbered lists"
 msgid "123"
 msgstr "123"
 
-#: widgets/krichtextwidget.cpp:373
+#: widgets/krichtextwidget.cpp:367
 #, kde-format
 msgctxt "@item:inmenu lowercase abc lists"
 msgid "abc"
 msgstr "абв"
 
-#: widgets/krichtextwidget.cpp:374
+#: widgets/krichtextwidget.cpp:368
 #, kde-format
 msgctxt "@item:inmenu uppercase abc lists"
 msgid "ABC"
 msgstr "АБВ"
 
-#: widgets/krichtextwidget.cpp:375
+#: widgets/krichtextwidget.cpp:369
 #, kde-format
 msgctxt "@item:inmenu lower case roman numerals"
 msgid "i ii iii"
 msgstr "i ii iii"
 
-#: widgets/krichtextwidget.cpp:376
+#: widgets/krichtextwidget.cpp:370
 #, kde-format
 msgctxt "@item:inmenu upper case roman numerals"
 msgid "I II III"
 msgstr "I II III"
 
-#: widgets/krichtextwidget.cpp:396
+#: widgets/krichtextwidget.cpp:390
 #, kde-format
 msgctxt "@action"
 msgid "Increase Indent"
 msgstr "Увеличаване на отстъпа"
 
-#: widgets/krichtextwidget.cpp:408
+#: widgets/krichtextwidget.cpp:402
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Indent"
 msgstr "Намаляване на отстъпа"
 
-#: widgets/krichtextwidget.cpp:420
+#: widgets/krichtextwidget.cpp:414
 #, kde-format
 msgctxt "@action"
 msgid "Insert Rule Line"
 msgstr "Вмъкване на водеща линия"
 
-#: widgets/krichtextwidget.cpp:429
+#: widgets/krichtextwidget.cpp:423
 #, kde-format
 msgctxt "@action"
 msgid "Link"
 msgstr "Създаване на връзка"
 
-#: widgets/krichtextwidget.cpp:441
+#: widgets/krichtextwidget.cpp:435
 #, kde-format
 msgctxt "@action"
 msgid "Format Painter"
 msgstr "Форматиране"
 
-#: widgets/krichtextwidget.cpp:453
+#: widgets/krichtextwidget.cpp:447
 #, kde-format
 msgctxt "@action"
 msgid "To Plain Text"
 msgstr "В обикновен текст"
 
-#: widgets/krichtextwidget.cpp:462
+#: widgets/krichtextwidget.cpp:456
 #, kde-format
 msgctxt "@action"
 msgid "Subscript"
 msgstr "Доен индекс"
 
-#: widgets/krichtextwidget.cpp:467
+#: widgets/krichtextwidget.cpp:461
 #, kde-format
 msgctxt "@action"
 msgid "Superscript"
 msgstr "Горен индекс"
 
-#: widgets/krichtextwidget.cpp:479
+#: widgets/krichtextwidget.cpp:473
 #, kde-format
 msgctxt "@title:menu"
 msgid "Heading Level"
 msgstr "Заглавно ниво"
 
-#: widgets/krichtextwidget.cpp:480
+#: widgets/krichtextwidget.cpp:474
 #, kde-format
 msgctxt "@item:inmenu no heading"
 msgid "Basic text"
 msgstr "Основен текст"
 
-#: widgets/krichtextwidget.cpp:481
+#: widgets/krichtextwidget.cpp:475
 #, kde-format
 msgctxt "@item:inmenu heading level 1 (largest)"
 msgid "Title"
 msgstr "Заглавие"
 
-#: widgets/krichtextwidget.cpp:482
+#: widgets/krichtextwidget.cpp:476
 #, kde-format
 msgctxt "@item:inmenu heading level 2"
 msgid "Subtitle"
 msgstr "Подзаглавие"
 
-#: widgets/krichtextwidget.cpp:483
+#: widgets/krichtextwidget.cpp:477
 #, kde-format
 msgctxt "@item:inmenu heading level 3"
 msgid "Section"
 msgstr "Раздел"
 
-#: widgets/krichtextwidget.cpp:484
+#: widgets/krichtextwidget.cpp:478
 #, kde-format
 msgctxt "@item:inmenu heading level 4"
 msgid "Subsection"
 msgstr "Подраздел"
 
-#: widgets/krichtextwidget.cpp:485
+#: widgets/krichtextwidget.cpp:479
 #, kde-format
 msgctxt "@item:inmenu heading level 5"
 msgid "Paragraph"
 msgstr "Параграф"
 
-#: widgets/krichtextwidget.cpp:486
+#: widgets/krichtextwidget.cpp:480
 #, kde-format
 msgctxt "@item:inmenu heading level 6 (smallest)"
 msgid "Subparagraph"
