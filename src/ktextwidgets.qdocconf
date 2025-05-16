@@ -10,6 +10,8 @@ sourcedirs += .
 
 imagedirs = ../docs/pics
 
+navigation.landingpage = "KTextWidgets"
+
 depends += kde qtcore qtwidgets sonnetui
 
 qhp.projects = KTextWidgets
