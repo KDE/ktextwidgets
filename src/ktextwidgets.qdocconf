@@ -14,10 +14,16 @@ navigation.landingpage = "KTextWidgets"
 
 depends += kde qtcore qtwidgets sonnetui
 
-qhp.projects = KTextWidgets
+qhp.projects            = KTextWidgets
 
-qhp.KTextWidgets.file = ktextwidgets.qhp
-qhp.KTextWidgets.namespace = org.kde.ktextwidgets.$QT_VERSION_TAG
-qhp.KTextWidgets.virtualFolder = ktextwidgets
-qhp.KTextWidgets.indexTitle = KTextWidgets
-qhp.KTextWidgets.indexRoot = 
+qhp.KTextWidgets.file                = ktextwidgets.qhp
+qhp.KTextWidgets.namespace           = org.kde.ktextwidgets.$QT_VERSION_TAG
+qhp.KTextWidgets.virtualFolder       = ktextwidgets
+qhp.KTextWidgets.indexTitle          = KTextWidgets
+qhp.KTextWidgets.indexRoot           =
+
+qhp.KTextWidgets.subprojects         = classes
+qhp.KTextWidgets.subprojects.classes.title = C++ Classes
+qhp.KTextWidgets.subprojects.classes.indexTitle = KTextWidgets C++ Classes
+qhp.KTextWidgets.subprojects.classes.selectors = class fake:headerfile
+qhp.KTextWidgets.subprojects.classes.sortPages = true
