@@ -27,3 +27,5 @@ qhp.KTextWidgets.subprojects.classes.title = C++ Classes
 qhp.KTextWidgets.subprojects.classes.indexTitle = KTextWidgets C++ Classes
 qhp.KTextWidgets.subprojects.classes.selectors = class fake:headerfile
 qhp.KTextWidgets.subprojects.classes.sortPages = true
+
+tagfile = ktextwidgets.tags
