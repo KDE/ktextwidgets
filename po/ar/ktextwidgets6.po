@@ -22,7 +22,7 @@ msgstr ""
 "Project-Id-Version: kdelibs4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-05 00:39+0000\n"
-"PO-Revision-Date: 2025-08-03 12:18+0400\n"
+"PO-Revision-Date: 2025-08-09 14:01+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -72,7 +72,7 @@ msgstr[5] "وجدت %1 مطابقة."
 #: findreplace/kfind.cpp:575
 #, kde-format
 msgid "<qt>No matches found for '<b>%1</b>'.</qt>"
-msgstr "<qt>لم يتم العثور على أي تطابق ل '<b>%1</b>'.</qt>"
+msgstr "<qt>لم يعثر على أي تطابق ل '<b>%1</b>'.</qt>"
 
 #: findreplace/kfind.cpp:596
 #, kde-format
@@ -200,8 +200,8 @@ msgid ""
 "searched for within the document and any occurrence is replaced with the "
 "replacement text.</qt>"
 msgstr ""
-"<qt>إذا ضغطت زر<b> استبدل</b> ، فإن النص الذي أدخلته أعلاه سيبحث عنه في "
-"الوثيقة و سيتم استبدال أي حدوث له بالنص البديل.</qt>"
+"<qt>إذا ضغطت زر<b> استبدل</b> ،فإن النص الذي أدخلته أعلاه سيبحث عنه في "
+"الوثيقة و سيُستبدل أي حدوث له بالنص البديل.</qt>"
 
 #: findreplace/kfinddialog.cpp:212
 #, kde-format
@@ -219,14 +219,13 @@ msgid ""
 "<qt>If you press the <b>Find</b> button, the text you entered above is "
 "searched for within the document.</qt>"
 msgstr ""
-"<qt>بضغطك على الزر <b>اعثر</b>، سيبحث عن النص المكتوب أعلاه داخل الوثيقة.</"
-"qt>"
+"<qt>بضغطك على الزر <b>اعثر</b>،سيبحث عن النص المكتوب أعلاه داخل الوثيقة.</qt>"
 
 #: findreplace/kfinddialog.cpp:220
 #, kde-format
 msgid ""
 "Enter a pattern to search for, or select a previous pattern from the list."
-msgstr "أدخل النص الذي تريد البحث عنه ، أو حدد نمطا سابقا من القائمة."
+msgstr "أدخل النص الذي تريد البحث عنه ،أو حدد نمطا سابقا من القائمة."
 
 #: findreplace/kfinddialog.cpp:221
 #, kde-format
@@ -241,7 +240,7 @@ msgstr "انقر هنا لتحرير عبارتك النمطية باستعما�
 #: findreplace/kfinddialog.cpp:223
 #, kde-format
 msgid "Enter a replacement string, or select a previous one from the list."
-msgstr "أدخل الجملة المستبدل بها، أو حدد واحدة من القائمة."
+msgstr "أدخل الجملة المستبدل بها،أو حدد واحدة من القائمة."
 
 #: findreplace/kfinddialog.cpp:225
 #, kde-format
@@ -252,9 +251,9 @@ msgid ""
 "literal <code><b>\\N</b></code> in your replacement, put an extra backslash "
 "in front of it, like <code><b>\\\\N</b></code>.</p></qt>"
 msgstr ""
-"<qt>إذا فعل ، فإن أي تكرار لـ<code><b>\\N</b></code>، حيث أن<code><b>N</b></"
-"code>هي رقم صحيح ، فإنها سوف تستبدل بـ (\"parenthesized substring\")من النمط."
-"<p>لضم (  <code><b>\\N</b></code> حرفي في استبدالك، ضع شرطة مائلة أخرى "
+"<qt>إذا فعل ،فإن أي تكرار لـ<code><b>\\N</b></code>،حيث أن<code><b>N</b></"
+"code>هي رقم صحيح ،فإنها سوف تستبدل بـ (\"parenthesized substring\")من النمط."
+"<p>لضم (  <code><b>\\N</b></code> حرفي في استبدالك،ضع شرطة مائلة أخرى "
 "أمامها  هكذا<code><b>\\\\N</b></code>.</p></qt>"
 
 #: findreplace/kfinddialog.cpp:231
@@ -284,7 +283,7 @@ msgid ""
 "'joe' or 'JOE', only 'Joe'."
 msgstr ""
 "أجر بحثا يراعي كبر الأحرف: أي أن النموذج 'Joe' لن يوافق خلال البحث 'joe'  أو "
-"'JOE' مثلا، بل فقط 'Joe'."
+"'JOE' مثلا،بل فقط 'Joe'."
 
 #: findreplace/kfinddialog.cpp:236
 #, kde-format
@@ -314,11 +313,11 @@ msgstr "مجموعة محارف"
 
 #: findreplace/kfinddialog.cpp:463
 msgid "Repeats, Zero or More Times"
-msgstr "التكرار ، صفر أو أكثر"
+msgstr "التكرار ،صفر أو أكثر"
 
 #: findreplace/kfinddialog.cpp:464
 msgid "Repeats, One or More Times"
-msgstr "التكرار ، مرة واحدة أو أكثر"
+msgstr "التكرار ،مرة واحدة أو أكثر"
 
 #: findreplace/kfinddialog.cpp:465
 msgid "Optional"
@@ -398,12 +397,12 @@ msgstr "لم يستبدل أي نص."
 #, kde-format
 msgid "1 replacement done."
 msgid_plural "%1 replacements done."
-msgstr[0] "لم يتم أي استبدال."
-msgstr[1] "تم استبدال واحد."
-msgstr[2] "تم استبدالان."
-msgstr[3] "تمت %1 استبدالات."
-msgstr[4] "تم %1  استبدالا."
-msgstr[5] "تمت %1 استبدالات."
+msgstr[0] "لم يستبدل أي شيء."
+msgstr[1] "استبدال واحد."
+msgstr[2] "استبدالان."
+msgstr[3] "%1 استبدالات."
+msgstr[4] "%1  استبدالا."
+msgstr[5] "%1 استبدالات."
 
 #: findreplace/kreplace.cpp:393
 #, kde-format
