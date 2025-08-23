@@ -5,7 +5,7 @@
 # Lisiane Sztoltz <lisiane@conectiva.com.br>, 2002, 2003, 2004.
 # Lisiane Sztoltz Teixeira <lisiane@kdemail.net>, 2003, 2004, 2005.
 # Henrique Pinto <stampede@coltec.ufmg.br>, 2003.
-# Marcus Gama <marcus.gama@gmail.com>, 2006.
+# SPDX-FileCopyrightText: 2006, 2025 Marcus Gama <marcus.gama@gmail.com>
 # Diniz Bortolotto <diniz.bortolotto@gmail.com>, 2007, 2008.
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2008, 2009, 2010, 2012, 2019, 2020, 2021.
@@ -18,15 +18,15 @@ msgstr ""
 "Project-Id-Version: ktextwidgets5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-05 00:39+0000\n"
-"PO-Revision-Date: 2021-10-26 14:44-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
-"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"PO-Revision-Date: 2025-08-22 12:27-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: dialogs/klinkdialog.cpp:33
 #, kde-format
@@ -114,11 +114,10 @@ msgid "Regular e&xpression"
 msgstr "E&xpressão regular"
 
 #: findreplace/kfinddialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "&Edit..."
+#, kde-format
 msgctxt "@action:button"
 msgid "&Edit…"
-msgstr "&Editar..."
+msgstr "&Editar…"
 
 #: findreplace/kfinddialog.cpp:93
 #, kde-format
@@ -454,12 +453,10 @@ msgstr ""
 "Corrija."
 
 #: widgets/krichtextwidget.cpp:200
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Color..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Color…"
-msgstr "&Cor do texto..."
+msgstr "&Cor do texto…"
 
 #: widgets/krichtextwidget.cpp:201
 #, kde-format
@@ -468,12 +465,10 @@ msgid "Color"
 msgstr "Cor"
 
 #: widgets/krichtextwidget.cpp:214
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Text &Highlight..."
+#, kde-format
 msgctxt "@action"
 msgid "Text &Highlight…"
-msgstr "Realce do &texto..."
+msgstr "Realce do &texto…"
 
 #: widgets/krichtextwidget.cpp:227
 #, kde-format
@@ -745,11 +740,10 @@ msgid "Nothing to spell check."
 msgstr "Nenhuma ortografia a ser verificada."
 
 #: widgets/ktextedit.cpp:501
-#, fuzzy, kde-format
-#| msgid "Check Spelling..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Check Spelling…"
-msgstr "Verificar ortografia..."
+msgstr "Verificar ortografia…"
 
 #: widgets/ktextedit.cpp:506
 #, kde-format
