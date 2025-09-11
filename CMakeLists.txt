@@ -59,7 +59,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"ktextwidgets6\")
 
 ecm_set_disabled_deprecation_versions(
     QT 6.10
-    KF 6.17
+    KF 6.18
 )
 
 ki18n_install(po)
