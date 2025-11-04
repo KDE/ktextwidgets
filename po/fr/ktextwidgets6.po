@@ -248,7 +248,7 @@ msgstr ""
 #, kde-format
 msgid "Enter a replacement string, or select a previous one from the list."
 msgstr ""
-"Saisissez une chaîne de remplacement ou sélectionnez une chaîne précédente "
+"Saisissez une chaine de remplacement ou sélectionnez une chaine précédente "
 "dans la liste."
 
 #: findreplace/kfinddialog.cpp:225
@@ -262,15 +262,15 @@ msgid ""
 msgstr ""
 "<qt>Si cette option est cochée, toute occurrence de <code><b>\\N</b></code>, "
 "où <code><b>N</b></code> est un nombre entier, sera remplacée par la capture "
-"correspondante (« sous-chaîne entre parenthèses ») à partir du motif.<p>Pour "
-"inclure un <code><b>\\N</b></code> littéral dans votre chaîne de "
+"correspondante (« sous-chaine entre parenthèses ») à partir du motif.<p>Pour "
+"inclure un <code><b>\\N</b></code> littéral dans votre chaine de "
 "remplacement, placez une barre oblique inverse supplémentaire au début de "
 "celle-ci, comme <code><b>\\\\N</b></code>.</p></qt>"
 
 #: findreplace/kfinddialog.cpp:231
 #, kde-format
 msgid "Click for a menu of available captures."
-msgstr "Cliquez pour faire apparaître un menu des captures disponibles."
+msgstr "Cliquez pour faire apparaitre un menu des captures disponibles."
 
 #: findreplace/kfinddialog.cpp:232
 #, kde-format
@@ -440,7 +440,7 @@ msgstr "Arrêter"
 #, kde-format
 msgid "Your replacement string is referencing a capture greater than '\\%1', "
 msgstr ""
-"Votre chaîne de remplacement référence une capture plus grande que « \\%1 », "
+"Votre chaine de remplacement référence une capture plus grande que « \\%1 », "
 
 #: findreplace/kreplacedialog.cpp:154
 #, kde-format
