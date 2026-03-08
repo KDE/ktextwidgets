@@ -25,7 +25,7 @@ msgstr "管理链接"
 #: dialogs/klinkdialog.cpp:40
 #, kde-format
 msgid "Link Text:"
-msgstr "链接文字："
+msgstr "链接文本："
 
 #: dialogs/klinkdialog.cpp:43
 #, kde-format
@@ -427,7 +427,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action"
 msgid "Text &Color…"
-msgstr "文字颜色(&C)…"
+msgstr "文本颜色(&C)…"
 
 #: widgets/krichtextwidget.cpp:201
 #, kde-format
