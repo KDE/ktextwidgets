@@ -27,8 +27,8 @@
  * Use KLocalization::setupSpinBoxFormatString() from KF6::I18n instead,
  * which is more powerful and does not require inheriting from a specific QSpinBox subclass.
  */
-KTEXTWIDGETS_DEPRECATED_VERSION(6, 6, "use KLocalization::setupSpinBoxFormatString() from KF6::I18n instead")
-class KTEXTWIDGETS_EXPORT KPluralHandlingSpinBox : public QSpinBox
+class KTEXTWIDGETS_EXPORT KTEXTWIDGETS_DEPRECATED_VERSION(6, 6, "use KLocalization::setupSpinBoxFormatString() from KF6::I18n instead") KPluralHandlingSpinBox
+    : public QSpinBox
 {
     Q_OBJECT
 public:
