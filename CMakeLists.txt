@@ -23,6 +23,7 @@ include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 include(CMakePackageConfigHelpers)
 include(ECMDeprecationSettings)
+include(ECMInstalledLibraryCheck)
 include(CMakeDependentOption)
 
 set(ktextwidgets_version_header "${CMAKE_CURRENT_BINARY_DIR}/src/ktextwidgets_version.h")

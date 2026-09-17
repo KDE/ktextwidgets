@@ -73,7 +73,7 @@ if (Qt6TextToSpeech_FOUND)
         Qt6::TextToSpeech)
 endif()
 
-ecm_generate_headers(KTextWidgets_HEADERS
+ecm_generate_headers(KTextWidgets_CamelCase_HEADERS
   HEADER_NAMES
   KRichTextEdit
   KRichTextWidget
@@ -83,7 +83,7 @@ ecm_generate_headers(KTextWidgets_HEADERS
   RELATIVE widgets
   REQUIRED_HEADERS KTextWidgets_HEADERS
 )
-ecm_generate_headers(KTextWidgets_HEADERS
+ecm_generate_headers(KTextWidgets_CamelCase_HEADERS
   HEADER_NAMES
   KFind
   KFindDialog
@@ -99,6 +99,7 @@ install(TARGETS KF6TextWidgets EXPORT KF6TextWidgetsTargets ${KF_INSTALL_TARGETS
 install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/ktextwidgets_export.h
   ${KTextWidgets_HEADERS}
+  ${KTextWidgets_CamelCase_HEADERS}
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/KTextWidgets COMPONENT Devel
 )
 
@@ -107,3 +108,16 @@ if (BUILD_DESIGNERPLUGIN)
 endif()
 
 ecm_generate_qdoc(KF6TextWidgets ktextwidgets.qdocconf)
+
+ecm_add_installed_library_check(KF6TextWidgets
+    PACKAGE_NAME "KF6TextWidgets"
+    PACKAGE_TARGET_NAMESPACE "KF6::"
+)
+
+ecm_installed_library_check_include_strings(KF6TextWidgets
+    HEADERS ${KTextWidgets_CamelCase_HEADERS}
+)
+
+ecm_installed_library_check_version_preprocessor_macros(KF6TextWidgets
+    PREFIX KTEXTWIDGETS
+)
