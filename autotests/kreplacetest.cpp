@@ -374,8 +374,10 @@ int main(int argc, char **argv)
     test.replace(QStringLiteral("This"), QStringLiteral("THIS*"), KFind::FindBackwards);
 
     test.print();
-    // return app.exec();
-    return 0;
+
+    // have the event loop at least run once to process deferred deletions
+    QMetaObject::invokeMethod(&app, &QCoreApplication::quit, Qt::QueuedConnection);
+    return app.exec();
 }
 
 #include "moc_kreplacetest.cpp"
