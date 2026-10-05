@@ -38,7 +38,7 @@ msgstr ""
 #: dialogs/klinkdialog.cpp:33
 #, kde-format
 msgid "Manage Link"
-msgstr "Ссылка"
+msgstr "Управление ссылкой"
 
 #: dialogs/klinkdialog.cpp:40
 #, kde-format
@@ -200,9 +200,9 @@ msgid ""
 "searched for within the document and any occurrence is replaced with the "
 "replacement text.</qt>"
 msgstr ""
-"<qt>Если вы нажмёте копку <b>Заменить</b>, будет произведён поиск введённого "
-"вами выражения, а затем замена каждого из найденных совпадений на текст "
-"замены </qt>"
+"<qt>Если вы нажмёте кнопку <b>Заменить</b>, будет произведён поиск "
+"введённого вами выражения, а затем замена каждого из найденных совпадений на "
+"текст замены.</qt>"
 
 #: findreplace/kfinddialog.cpp:212
 #, kde-format
@@ -227,7 +227,7 @@ msgstr ""
 #, kde-format
 msgid ""
 "Enter a pattern to search for, or select a previous pattern from the list."
-msgstr "Введите шаблон для поиска, или выберите предыдущий шаблон из списка."
+msgstr "Введите шаблон для поиска или выберите предыдущий шаблон из списка."
 
 #: findreplace/kfinddialog.cpp:221
 #, kde-format
@@ -244,7 +244,7 @@ msgstr ""
 #: findreplace/kfinddialog.cpp:223
 #, kde-format
 msgid "Enter a replacement string, or select a previous one from the list."
-msgstr "Введите строку для замены, или выберите предыдущую из списка."
+msgstr "Введите строку для замены или выберите предыдущую из списка."
 
 #: findreplace/kfinddialog.cpp:225
 #, kde-format
@@ -328,7 +328,7 @@ msgstr "Повторы, один или более раз"
 
 #: findreplace/kfinddialog.cpp:465
 msgid "Optional"
-msgstr "Дополнительно"
+msgstr "Необязательно"
 
 #: findreplace/kfinddialog.cpp:466
 msgid "Escape"
@@ -601,7 +601,7 @@ msgstr "Нет"
 #, kde-format
 msgctxt "@item:inmenu disc list style"
 msgid "Disc"
-msgstr "Диски"
+msgstr "Закрашенные кружки"
 
 #: widgets/krichtextwidget.cpp:364
 #, kde-format
@@ -673,7 +673,7 @@ msgstr "Ссылка"
 #, kde-format
 msgctxt "@action"
 msgid "Format Painter"
-msgstr "Преобразовать в текст с форматированием"
+msgstr "Копировать форматирование"
 
 #: widgets/krichtextwidget.cpp:447
 #, kde-format
