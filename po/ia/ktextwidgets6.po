@@ -300,11 +300,11 @@ msgstr "Insimul de Characteres"
 
 #: findreplace/kfinddialog.cpp:463
 msgid "Repeats, Zero or More Times"
-msgstr "Repite, Zero o Multe Vices"
+msgstr "Repete, Zero o Multe Vices"
 
 #: findreplace/kfinddialog.cpp:464
 msgid "Repeats, One or More Times"
-msgstr "Il Repite, uno o multe Vices"
+msgstr "Il Repete, uno o multe Vices"
 
 #: findreplace/kfinddialog.cpp:465
 msgid "Optional"
