@@ -33,11 +33,6 @@ public:
     // Normal functions
     //
 
-    // If the text under the cursor is a link, the cursor's selection is set to
-    // the complete link text. Otherwise selects the current word if there is no
-    // selection.
-    void selectLinkText() const;
-
     void init();
 
     // Switches to rich text mode and emits the mode changed signal if the
