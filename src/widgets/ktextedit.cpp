@@ -517,7 +517,7 @@ QMenu *KTextEdit::mousePopupMenu()
                     languageAction->setChecked(language == i.value() || (language.isEmpty() && d->speller->defaultLanguage() == i.value()));
                     languageAction->setData(i.value());
                     languageAction->setActionGroup(languagesGroup);
-                    connect(languageAction, &QAction::triggered, [this, languageAction]() {
+                    connect(languageAction, &QAction::triggered, this, [this, languageAction]() {
                         setSpellCheckingLanguage(languageAction->data().toString());
                     });
                 }
