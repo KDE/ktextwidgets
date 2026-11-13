@@ -507,15 +507,13 @@ QMenu *KTextEdit::mousePopupMenu()
                 QActionGroup *languagesGroup = new QActionGroup(d->languagesMenu);
                 languagesGroup->setExclusive(true);
 
-                QMapIterator<QString, QString> i(d->speller->availableDictionaries());
+                const auto dictionaries = d->speller->availableDictionaries();
                 const QString language = spellCheckingLanguage();
-                while (i.hasNext()) {
-                    i.next();
-
-                    QAction *languageAction = d->languagesMenu->addAction(i.key());
+                for (const auto &[language, code] : dictionaries.asKeyValueRange()) {
+                    QAction *languageAction = d->languagesMenu->addAction(language);
                     languageAction->setCheckable(true);
-                    languageAction->setChecked(language == i.value() || (language.isEmpty() && d->speller->defaultLanguage() == i.value()));
-                    languageAction->setData(i.value());
+                    languageAction->setChecked(language == code || (language.isEmpty() && d->speller->defaultLanguage() == code));
+                    languageAction->setData(code);
                     languageAction->setActionGroup(languagesGroup);
                     connect(languageAction, &QAction::triggered, this, [this, languageAction]() {
                         setSpellCheckingLanguage(languageAction->data().toString());
